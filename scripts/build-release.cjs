@@ -76,7 +76,12 @@ function sourceEntries(){
  let tracked;
  try{tracked=execFileSync("git",["ls-files","-z"],{cwd:root}).toString("utf8").split("\0").filter(Boolean)}
  catch(e){throw Error("The source package is built from Git-tracked files; run inside the repository.")}
- const audio=walk("audio/narration").filter(f=>/\.mp3$/i.test(f)); // Git-ignored but part of the program
+ // Git-ignored but part of the program or of the owner's audit trail (the tests verify them):
+ // approved narration, the original audition MP3s and the owner's own review record.
+ // PRIVATE_* signed-link files are never packaged (see RUNTIME.exclude).
+ const optional=p=>fs.existsSync(path.join(root,p))?walk(p):[];
+ const audio=[...optional("audio/narration"),...optional("audio-audition")].filter(f=>/\.mp3$/i.test(f))
+  .concat(fs.existsSync(path.join(root,"docs/audio/owner-original-review-2026-11-07.json"))?["docs/audio/owner-original-review-2026-11-07.json"]:[]);
  const names=[...new Set([...tracked,...audio])].filter(f=>fs.existsSync(path.join(root,f))&&!RUNTIME.exclude.some(r=>r.test(f))).sort();
  return names.map(f=>{const abs=path.join(root,f);return {name:f,data:fs.readFileSync(abs),mode:(fs.statSync(abs).mode&0o111)?0o755:0o644}});
 }

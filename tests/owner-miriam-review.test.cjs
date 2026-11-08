@@ -27,5 +27,9 @@ for(const item of trials.retries){
 assert(html.includes('OWNER_IMPORTED_REVIEW'),'Owner decisions must initialize the offline standalone page');
 assert(html.includes('id="show-eleanor"'),'Rejected Eleanor archive should be hidden unless explicitly revealed');
 assert(fixes.includes('id="export"'),'Five new trials must export separate owner verdicts');
-assert(fs.existsSync(path.join(root,'audio-audition/PRIVATE_MIRIAM_IPA_V2_RUNWAY_LINKS.json')));
+// The signed Runway links are private and never packaged (expired, and must not be published).
+// Check them only in the owner's working copy, where they exist; a clean source package omits them.
+const privateLinks=path.join(root,'audio-audition/PRIVATE_MIRIAM_IPA_V2_RUNWAY_LINKS.json');
+if(fs.existsSync(privateLinks))JSON.parse(fs.readFileSync(privateLinks,'utf8'));
+else console.log('NOTE: private Runway link file absent (expected in a packaged source copy)');
 console.log('Owner Miriam review PASS: 12 accepted, 5 rejected, Eleanor 17/17 rejected; 5 unapproved IPA trials; no reader audio installed');
