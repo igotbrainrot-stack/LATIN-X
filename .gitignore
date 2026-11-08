@@ -14,3 +14,6 @@ audio/narration/**/LOCAL_INSTALL_RECORD.json
 /artifacts/
 /dist/
 node_modules/
+
+# Owner-private Runway signed links (temporary tokens): never commit.
+/audio-audition/PRIVATE_*.json
