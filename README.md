@@ -29,6 +29,6 @@ Content status: the eight legacy chapters are the playable course. The eight Boo
 - [HANDOVER.md](HANDOVER.md) — architecture, build, tests, constraints, open issues (start here as a developer or AI agent).
 - [docs/REFINEMENT_REPORT_20261108.md](docs/REFINEMENT_REPORT_20261108.md) — the November 2026 polish and audit pass.
 - [docs/FEATURE_INVENTORY.md](docs/FEATURE_INVENTORY.md) — every feature with its regression coverage.
-- [docs/audio/APPROVED_NARRATION.md](docs/audio/APPROVED_NARRATION.md) — Miriam recordings and the six missing approved takes.
+- [docs/audio/APPROVED_NARRATION.md](docs/audio/APPROVED_NARRATION.md) — Miriam recordings, including the five regenerated takes.
 - [ATTRIBUTION.md](ATTRIBUTION.md) — sources, font and licence notes.
 - [docs/history/](docs/history/) — earlier phase handovers and the previous README.

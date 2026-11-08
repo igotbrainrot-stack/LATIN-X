@@ -11,13 +11,21 @@ const sha=f=>crypto.createHash("sha256").update(fs.readFileSync(f)).digest("hex"
 assert.deepEqual([cat.voice,cat.model,cat.speed],["Miriam","eleven_v3",0.9]);
 assert.equal(cat.review_status,"owner_accepted_listening_quality_not_latinist_verified");
 const byId=Object.fromEntries(cat.sentences.map(s=>[s.sentence_id,s]));
-assert.deepEqual(byId["legacy-ch01-s007"].takes.map(t=>[t.clip_id,t.role,t.runway_task_id]),[
+// Five approved takes were regenerated on 2026-11-08 (original bytes unrecoverable): the approved task stays on record.
+const tid=t=>t.approved_task_id||t.runway_task_id;
+assert.deepEqual(byId["legacy-ch01-s007"].takes.map(t=>[t.clip_id,t.role,tid(t)]),[
  ["s007-v6b","default","7dbe3810-0cb9-435d-a1d6-bdf978821d95"],["s007-v6a","alternative","2331d77d-7aa5-400b-9084-a6593a6666c3"]],"Sentence 7: V6b default, V6a alternative (never V5b)");
-assert.deepEqual(byId["legacy-ch01-s009"].takes.map(t=>[t.clip_id,t.runway_task_id]),[["s009-v5a","68a14597-2f02-42a9-9c65-12419d7dda73"]]);
+assert.deepEqual(byId["legacy-ch01-s009"].takes.map(t=>[t.clip_id,tid(t)]),[["s009-v5a","68a14597-2f02-42a9-9c65-12419d7dda73"]]);
 const word=Object.fromEntries(cat.words.map(w=>[w.canonical_text,w]));
-assert.equal(word.quoque.runway_task_id,"8060b628-3555-4da4-b5de-499d80fdbc85");
+assert.equal(tid(word.quoque),"8060b628-3555-4da4-b5de-499d80fdbc85");
 assert.equal(word["vīlla"].clip_id,"voiceA__test-villa__v2");assert.equal(word["vīlla"].runway_task_id,"d0e9f755-d72c-4195-ae74-4aa84c8699c7");
-assert.equal(word.aqua.clip_id,"voiceA__test-aqua__v3");assert.equal(word.aqua.runway_task_id,"56c069b3-6746-4400-be64-29fe0597ba3c");
+assert.equal(word["vīlla"].regenerated,undefined,"vīlla V2 is the retrieved original");
+assert.equal(word.aqua.clip_id,"voiceA__test-aqua__v3");assert.equal(tid(word.aqua),"56c069b3-6746-4400-be64-29fe0597ba3c");
+const regen={"s007-v6b":"d5e56be3-5245-4a20-bcf4-fd7774aac9f8","s007-v6a":"51e15135-b26d-4ce0-a3ec-7cada1f77a80","s009-v5a":"77fb7257-a9ab-4130-83b2-c62b0df15c02",
+ "quoque-v4-approved":"b22171b7-df88-471a-a2c9-fc0abf63a2db","voiceA__test-aqua__v3":"3c4763d0-784c-4519-b935-7a6f4b7a0a3b"};
+const regenTakes=[...cat.sentences.flatMap(s=>s.takes),...cat.words].filter(t=>t.regenerated);
+assert.deepEqual(Object.fromEntries(regenTakes.map(t=>[t.clip_id,t.runway_task_id])),regen,"Exactly the five regenerated takes carry their new task IDs");
+for(const t of regenTakes){assert.notEqual(t.runway_task_id,t.approved_task_id);assert.equal(t.owner_listening,"pending");assert(t.tts_input)}
 // 2. Every v1 take used is one the owner accepted; no rejected take is wired.
 const review=JSON.parse(read("docs/audio/owner-original-review-2026-11-07.json")).reviews;
 const accepted=new Set(review.filter(r=>r.voice_name==="Miriam"&&r.decision==="accept").map(r=>r.clip_id));
@@ -53,6 +61,12 @@ for(const t of allTakes){
  }
 }
 assert(present>=12);
+// The six formerly missing takes ship as real audio, pinned to the bytes verified on 2026-11-08.
+const pinned={"s007-v6b.mp3":"52e8bdd751f4a4f03f52240f747492c63de14ff72b6f999961aea0271ff1b725","s007-v6a.mp3":"6e65651d0be42dfccaa1e2978e63f2f99fdaebb0d3973982ef3156c5c00d699a",
+ "s009-v5a.mp3":"ed154eca1fd7d10901dcab5e3fcef10b359ae19904cf334d34758ef33a79ed81","word-quoque-v4.mp3":"f44a776316fd4e4f90e6cf9d9c3044734447e9336dd402a1039ad67156ffb56b",
+ "word-villa-v2.mp3":"de406f5a0acc914657c1ef85e28d5b63cb816891c0a619be4b8ad01e236ebb7e","word-aqua-v3.mp3":"15fa561f56952305093548ef9109962efafcd4fa1872a8af858f8dcc93e20df7"};
+for(const [f,h] of Object.entries(pinned)){const p=path.join(root,cat.base_path,f);assert(fs.existsSync(p),"Approved take missing: "+f);assert.equal(sha(p),h,"Take differs from verified bytes: "+f)}
+assert.equal(present,allTakes.length,"Every catalogued take is present");
 assert(!/_jwt=|cloudfront\.net/.test(read("content/narration.js")),"No signed URLs in the catalogue");
 // 5. Engine behaviour with a mock Audio element.
 function engine(){

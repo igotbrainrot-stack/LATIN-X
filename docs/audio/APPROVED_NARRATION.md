@@ -38,9 +38,13 @@
 - **Present, 12:** sentences s001–s006 and s008, plus words cēna, Gāius, magna, pecūnia, laeta. These are the owner-accepted Miriam v1 clips from
   `docs/audio/owner-original-review-2026-11-07.json`. They are byte-identical to `audio-audition/voiceA__*__v1.mp3`,
   their SHA-256 matches `docs/audio/OWNER_UPLOADED_MP3_BINARY_VERIFICATION.json`, and ffprobe and Chromium decode them.
-- **Absent, 6:** s007-v6b, s007-v6a, s009-v5a, quoque V4, vīlla V2 (task d0e9f755…), aqua V3 (task 56c069b3…).
-  This build environment cannot reach Runway's CDN or API (proxy refuses both), and no Runway connector is available, so they couldn't be
-  retrieved from their task IDs. Nothing was regenerated, and no placeholder audio was added.
+- **Added 2026-11-08, 6** (all real MP3s; size, MP3 header, full ffmpeg decode and SHA-256 checked; pinned in `tests/approved-narration.test.cjs`):
+  - vīlla V2 (`word-villa-v2.mp3`): the **original** approved take, task d0e9f755…, downloaded from its still-valid signed link.
+  - s007-v6b, s007-v6a, s009-v5a, quoque V4, aqua V3: **regenerated**. Their original bytes couldn't be retrieved (links expired, Runway connector
+    unavailable in the build environment), so the owner asked for regeneration. ChatGPT made them through Runway with the same voice (Miriam),
+    model (eleven_v3), speed (0.9) and input text. Each catalogue entry keeps the approved `clip_id`/role, carries the new `runway_task_id`,
+    records the approved original as `approved_task_id`, and is marked `owner_listening: "pending"` until the owner re-listens.
+  - None of the six matches any earlier audition or rejected clip (compared by decoded-audio MD5).
 - vīlla V2 and aqua V3 task IDs come from `docs/audio/miriam-ipa-retries-2026-11-07.json` and `miriam-alias-v3-2026-11-07.json`.
   The accept decisions come from the two owner review JSONs next to them.
 
@@ -55,6 +59,6 @@
 - **Not done:** a real Windows GUI run of `Start Tablinum.cmd`, and hearing it through speakers.
 
 ## Next
-1. Add the six missing takes, by the owner via the downloaders or by an agent with Runway access, using the existing task IDs only. Run `Install Approved Narration.cmd`, then `npm run test:narration`.
+1. Owner re-listens to the five regenerated takes. If one is rejected, replace that MP3 (same filename), update its pinned SHA-256 and task ID, and run `npm run test:narration`.
 2. `AUDIO_MANIFEST.json` describes this ZIP as shipped; after installing, `audio/narration/miriam/LOCAL_INSTALL_RECORD.json` (written by the installer) is the current record.
 3. The polish/launcher work in a parallel project thread builds on this tree.

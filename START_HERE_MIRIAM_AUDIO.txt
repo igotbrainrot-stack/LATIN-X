@@ -12,22 +12,14 @@ WHAT IS INCLUDED
 - Chapter I sentences 1, 2, 3, 4, 5, 6 and 8: Miriam, your accepted takes.
 - Words cena, Gaius, magna, pecunia, laeta: Miriam, your accepted takes.
 
-WHAT IS NOT INCLUDED YET (approved, but the files could not be downloaded)
-- Sentence 7 V6b (default) and V6a (alternative)
-- Sentence 9 V5a
-- Words quoque V4, villa V2, aqua V3
-For these, the reader says so and uses the browser voice, labelled
-"Browser voice - not Miriam". Nothing was regenerated or faked.
+ADDED 8 NOVEMBER 2026
+- Word villa V2: your original accepted take.
+- Sentence 7 V6b (default) and V6a (alternative), sentence 9 V5a, and words
+  quoque V4 and aqua V3: NEW recordings made with the same voice and settings,
+  because the original files could not be downloaded. Please listen to them.
 
-TO ADD THE MISSING SIX
-1. While online, run AUDIO_OWNER_PACKAGE\DOWNLOAD_APPROVED_MP3S.cmd (sentence 7,
-   sentence 9, quoque), plus DOWNLOAD_MIRIAM_IPA_TRIALS.cmd (villa V2) and
-   DOWNLOAD_MIRIAM_ALIAS_V3.cmd (aqua V3) from this folder. If a link has expired,
-   download the existing Runway task by its ID (listed in
-   audio\narration\miriam\AUDIO_MANIFEST.json) - do not generate a new take.
-2. Double-click "Install Approved Narration.cmd" and give it the folder holding
-   the downloaded files. It checks each file is a real MP3 and prints its SHA-256.
-   (It needs Node.js 22, like the other review tools.)
+IF YOU DON'T LIKE A NEW RECORDING
+Say which one. It can be replaced with another take; nothing else changes.
 
 Your listening approval is recorded as an owner preference, not as a Latin
 specialist's verification. Details for developers: CLAUDE_HANDOVER\CLAUDE_HANDOVER_MIRIAM_AUDIO_20261109.md

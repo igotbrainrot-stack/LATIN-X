@@ -15,10 +15,11 @@ KEEP YOUR PROGRESS
   copy. Extract new versions to a new folder; do not mix old and new files.
 
 AUDIO
-  Approved Miriam recordings are in audio\narration\miriam. Six approved takes
-  are not included yet; those sentences use the browser voice, labelled
-  "not Miriam". To add them later, run "Install Approved Narration.cmd"
-  (needs Node.js 22) and point it at the folder with the downloaded MP3s.
+  All approved Miriam recordings are in audio\narration\miriam, including
+  sentences 7 and 9 and the words quoque, vīlla and aqua.
+  Five of them (sentence 7 V6b and V6a, sentence 9 V5a, quoque V4, aqua V3) are
+  new recordings with the same voice and settings, made because the originals
+  could not be downloaded; vīlla V2 is the original.
 
 FONT
   The reader uses Palatino Linotype, which Windows already has. A bundled

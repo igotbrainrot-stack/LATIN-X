@@ -97,11 +97,10 @@ function extract(entries,dir){
    await page.locator("img[data-art-image]").first().waitFor();
    await page.goto(pathToFileURL(path.join(appDir,"Art Review.html")).href);
    await page.waitForLoadState("load");
-   // A narration probe for an approved-but-absent take is an expected, labelled fallback.
-   const unexpected=failed.filter(u=>!/audio\/narration\/miriam\/(s007-v6[ab]|s009-v5a|word-(quoque-v4|villa-v2|aqua-v3))\.mp3$/.test(decodeURI(u)));
-   assert.deepEqual(unexpected,[],label+": every requested file is in the package");
+   // All approved narration now ships, so any failed request (including a narration MP3) is a packaging defect.
+   assert.deepEqual(failed,[],label+": every requested file is in the package");
    assert.deepEqual(network,[],label+": no network access");
-   assert.deepEqual(errors.filter(e=>!/ERR_FILE_NOT_FOUND/.test(e)),[],label+": no page errors");
+   assert.deepEqual(errors,[],label+": no page errors");
    await page.close();
   }
  }finally{await browser.close();fs.rmSync(temp,{recursive:true,force:true})}

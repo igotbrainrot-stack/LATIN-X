@@ -88,7 +88,7 @@ Deliberately minimal. The runtime and lesson data are byte-locked by tests, so p
 
 ## Known limitations
 
-- Six approved Miriam takes are still missing (s007 V6b/V6a, s009 V5a, quoque V4, vīlla V2, aqua V3); those items use the labelled browser voice. See `docs/audio/APPROVED_NARRATION.md`.
+- Update 2026-11-08: the six formerly missing Miriam takes now ship. vīlla V2 is the original; s007 V6b/V6a, s009 V5a, quoque V4 and aqua V3 were regenerated with identical settings because the originals were unrecoverable, and await the owner's re-listen. See `docs/audio/APPROVED_NARRATION.md`.
 - `Start Tablinum.cmd` necessarily flashes a console for an instant; `Tablinum.html` is the console-free route. A native `.exe` launcher was rejected: unsigned executables trigger SmartScreen warnings, which is worse.
 - Browser progress is tied to the folder path. Moving the folder means exporting and restoring a backup (documented in both READMEs).
 - Picture-region chip labels show the region IDs (e.g. `arbor-magna`); they come from the approved region data and were left unchanged.
