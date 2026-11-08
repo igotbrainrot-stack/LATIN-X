@@ -1,0 +1,71 @@
+{
+  "schema": "latin-x-miriam-provenance-recovery-v1",
+  "as_of": "2026-11-09",
+  "status": "metadata_only_no_mp3_bytes",
+  "voice": "Miriam",
+  "model": "eleven_v3",
+  "speed": 0.9,
+  "owner_review_tier": "owner_not_latinist",
+  "approved_originals": [
+    {
+      "id": "legacy-ch01-s007",
+      "canonical_text": "Līvia arborem videt.",
+      "version": "v6b",
+      "task_id": "7dbe3810-0cb9-435d-a1d6-bdf978821d95",
+      "default": true
+    },
+    {
+      "id": "legacy-ch01-s007",
+      "version": "v6a",
+      "task_id": "2331d77d-7aa5-400b-9084-a6593a6666c3",
+      "default": false
+    },
+    {
+      "id": "legacy-ch01-s009",
+      "canonical_text": "Līvia laeta est.",
+      "version": "v5a",
+      "task_id": "68a14597-2f02-42a9-9c65-12419d7dda73"
+    },
+    {
+      "id": "test-quoque",
+      "canonical_text": "quoque",
+      "version": "v4",
+      "task_id": "8060b628-3555-4da4-b5de-499d80fdbc85"
+    },
+    {
+      "id": "test-aqua",
+      "canonical_text": "aqua",
+      "version": "v3",
+      "task_id": "56c069b3-6746-4400-be64-29fe0597ba3c"
+    },
+    {
+      "id": "test-villa",
+      "canonical_text": "vīlla",
+      "version": "v2",
+      "task_id": "d0e9f755-d72c-4195-ae74-4aa84c8699c7"
+    }
+  ],
+  "regenerated_unreviewed": [
+    {
+      "filename": "s007-v6b-REGENERATED.mp3",
+      "task_id": "d5e56be3-5245-4a20-bcf4-fd7774aac9f8"
+    },
+    {
+      "filename": "s007-v6a-REGENERATED.mp3",
+      "task_id": "51e15135-b26d-4ce0-a3ec-7cada1f77a80"
+    },
+    {
+      "filename": "s009-v5a-REGENERATED.mp3",
+      "task_id": "77fb7257-a9ab-4130-83b2-c62b0df15c02"
+    },
+    {
+      "filename": "word-quoque-v4-REGENERATED.mp3",
+      "task_id": "b22171b7-df88-471a-a2c9-fc0abf63a2db"
+    },
+    {
+      "filename": "word-aqua-v3-REGENERATED.mp3",
+      "task_id": "3c4763d0-784c-4519-b935-7a6f4b7a0a3b"
+    }
+  ],
+  "note": "No binary MP3s are committed. Approval of an original take does not imply a separately regenerated take is identical."
+}
