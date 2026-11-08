@@ -47,5 +47,8 @@
     "test:regions": "node tests/art-replacement-regions.test.cjs",
     "test:owner-voice": "node tests/owner-miriam-review.test.cjs",
     "test:narration": "node tests/approved-narration.test.cjs && node scripts/install-narration.cjs --check"
+  },
+  "devDependencies": {
+    "axe-core": "^4.10.3"
   }
 }

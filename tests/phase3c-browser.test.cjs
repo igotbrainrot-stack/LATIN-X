@@ -13,6 +13,9 @@ async function run(){
   fs.copyFileSync(path.join(root,"index.html"),path.join(temp,"index.html"));
   fs.cpSync(path.join(root,"app"),path.join(temp,"app"),{recursive:true});
   fs.cpSync(path.join(root,"content"),path.join(temp,"content"),{recursive:true});
+  // vendor/ (pinned FSRS, Phase 6) and assets/ are runtime folders too; without
+  // vendor/ the Progress page cannot render its recovery controls.
+  for(const dir of ["vendor","assets"])fs.cpSync(path.join(root,dir),path.join(temp,dir),{recursive:true});
   browser=await chromium.launch({headless:true});
   const context=await browser.newContext(),page=await context.newPage();
   const url=pathToFileURL(path.join(temp,"index.html")).href;

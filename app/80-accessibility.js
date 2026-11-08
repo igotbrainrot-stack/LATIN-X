@@ -10,6 +10,13 @@
    const el=doc.getElementById(id);
    if(el&&!el.getAttribute("aria-label"))el.setAttribute("aria-label",label);
   }
+  // The voice dock sits outside the landmarks; expose it as a named region.
+  const dock=doc.querySelector&&doc.querySelector(".dock");
+  if(dock&&!dock.getAttribute("role")){dock.setAttribute("role","region");dock.setAttribute("aria-label","Reading voice controls")}
+  // The guidance column's h3 follows the page h1 directly; announce it as level 2
+  // so the heading outline does not skip a level (visual size unchanged).
+  const guide=doc.querySelector&&doc.querySelector("#help > h3:not([aria-level])");
+  if(guide)guide.setAttribute("aria-level","2");
   const fields=[["notes","Personal notes for this chapter"],
    ["customText","Your Latin text"],["customSegments","Corrected Latin sentence boundaries"]];
   for(const [id,label]of fields){

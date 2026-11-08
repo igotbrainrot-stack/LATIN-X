@@ -32,7 +32,7 @@ const {pathToFileURL}=require("node:url"),{chromium}=require("playwright");
   await page.locator(".sentence").first().waitFor();
   assert.equal(await page.locator("img[data-art-image]").count(),1,"Main reader shows a linked, owner-approved Book I scene as a visual preview");
   await page.waitForFunction(()=>{const i=document.querySelector("img[data-art-image]");return !!i&&i.complete&&i.naturalWidth>0&&i.style.display!=="none"});
-  assert.equal(await page.locator("[data-art-scene=\"b01-c001-scene\"]").count(),1,"Only signed garden preview for legacy first chapter");
+  assert.equal(await page.locator("figure[data-art-scene=\"b01-c001-scene\"]").count(),1,"Only signed garden preview for legacy first chapter");
   assert.equal(await page.locator("[data-art-scene=\"b01-c001-scene\"] .art-fallback").isHidden(),true,"Signed image replaces SVG, but SVG stays as load-error fallback");
   assert.deepEqual(errors,[]);
   console.log("PASS Phase8 Chromium file://: art review protection/owner export, signed garden preview loads in legacy reader, SVG error fallback retained, no CDN.");
