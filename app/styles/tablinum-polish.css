@@ -1,0 +1,197 @@
+/* TABLINVM — refinement layer for the Manuscript Edition (November 2026 polish pass).
+ *
+ * Why a separate file: index.html is byte-locked (tests/phase3a-relocation.test.cjs)
+ * so its original manuscript stylesheet stays untouched. This file loads after it
+ * and only *refines* that design: same palette tokens, same typefaces, same layout.
+ * It never hides or removes a control. Presentation only — no behaviour lives here.
+ *
+ * Sections
+ *   1. Tokens (font stacks with the bundled fallback face, shared radii/motion)
+ *   2. Header and sound controls
+ *   3. Links, selection, scrollbars
+ *   4. Buttons: pressed, disabled and keyboard focus states
+ *   5. Illustration captions and picture-region chips
+ *   6. Forms: native file pickers and range sliders
+ *   7. Progress page: ledger tiles and course map
+ *   8. Library page details
+ *   9. Control dock
+ *  10. Small screens
+ */
+
+/* 1. Tokens ---------------------------------------------------------------- */
+:root {
+  /* Designated faces are unchanged; "Tablinum Book" (bundled Gentium Book Plus)
+     replaces the generic Linux fallback so macrons and weights stay consistent. */
+  --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Baskerville", "Tablinum Book", Georgia, serif;
+  --display: "Palatino Linotype", "Book Antiqua", "Tablinum Book", Georgia, serif;
+  --radius: 2px;
+  --ease: .15s ease;
+  --focus: 3px solid var(--olive);
+}
+
+/* 2. Header and sound controls --------------------------------------------- */
+/* The three header items (title, edition note, sound controls) previously sat
+   on one flex line, which left the edition note floating mid-page and the
+   sliders' text labels sitting below the button baseline. */
+header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas: "title controls" "title note";
+  align-items: end;
+  column-gap: 24px;
+  row-gap: 8px;
+}
+header > div:first-child { grid-area: title; }
+header .edition-note { grid-area: note; justify-self: end; max-width: none; padding-bottom: 8px; }
+#ambience-controls {
+  grid-area: controls;
+  justify-self: end;
+  display: flex !important;
+  align-items: center !important;
+  flex-wrap: wrap !important;
+  gap: 6px !important;
+  max-width: none !important;
+}
+/* The sliders already carry aria-labels and real <label for> elements; the
+   visible words duplicated the button text, so they are kept for assistive
+   technology but removed from the visual line. */
+#ambience-controls label {
+  position: absolute !important;
+  width: 1px; height: 1px; margin: -1px; padding: 0;
+  overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%);
+  white-space: nowrap; border: 0;
+}
+#ambience-controls .btn { min-height: 32px; padding: 6px 11px; font-size: 12px; }
+#ambience-controls .btn[aria-pressed="false"] { color: var(--ink-muted); background: var(--paper-inset); }
+#ambience-controls input[type="range"] { width: 72px !important; margin: 0 4px 0 2px; }
+#sfx-toggle { margin-left: 12px; }
+
+/* 3. Links, selection, scrollbars ------------------------------------------ */
+a { color: var(--burgundy); text-decoration-color: rgba(114,60,58,.5); text-underline-offset: 3px; }
+a:visited { color: var(--burgundy); }
+a:hover { color: #4c2626; text-decoration-color: currentColor; }
+::selection { background: rgba(165,92,69,.22); color: inherit; }
+#tabs, aside.chapters, .question-list { scrollbar-color: var(--rule) transparent; }
+
+/* 4. Buttons -------------------------------------------------------------- */
+.btn, .option, #tabs button, .ch, .link { -webkit-tap-highlight-color: transparent; }
+.btn:active:not(:disabled) {
+  background: linear-gradient(#eadbc1, #f3e8d4);
+  box-shadow: inset 0 1px 2px rgba(73,52,37,.16);
+}
+.btn.primary:active:not(:disabled), .primary:active:not(:disabled) { background: #5a302e; }
+.btn[aria-pressed="true"]:not(.primary):not([data-audio-music]):not([data-audio-sfx]) {
+  border-color: var(--burgundy);
+  background: var(--paper-bright);
+  box-shadow: inset 0 0 0 1px var(--burgundy);
+}
+.option { transition: background var(--ease), border-color var(--ease); }
+.option:focus-visible { outline: var(--focus); outline-offset: 2px; }
+.ch:focus-visible, #tabs button:focus-visible { outline-offset: -3px; }
+
+/* 5. Illustration captions and picture-region chips ------------------------ */
+.legacy-art-preview > p.subtle { color: var(--ink-muted); line-height: 1.5; }
+.art-figure { margin: 14px 0 18px !important; }
+.art-figure figcaption {
+  padding: 10px 2px 0;
+  color: var(--ink);
+  font: italic 15px/1.5 var(--serif);
+}
+.art-figure figcaption small { color: var(--ink-soft); font-size: 13px; }
+.art-figure figcaption .tools { margin: 10px 0 0; gap: 6px; }
+/* Region buttons were rendered with browser-default styling (system font,
+   bright blue border). They now match the manuscript controls. */
+.art-figure figcaption .tools button {
+  min-height: 30px;
+  padding: 4px 11px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: var(--paper-bright);
+  color: var(--umber);
+  font: normal 14px/1.3 var(--serif);
+  transition: background var(--ease), border-color var(--ease), color var(--ease);
+}
+.art-figure figcaption .tools button:hover { border-color: var(--terracotta); color: var(--burgundy); }
+.art-figure figcaption .tools button[aria-pressed="true"] {
+  border-color: var(--burgundy);
+  background: var(--burgundy);
+  color: #fff8e9;
+}
+
+/* 6. Forms ---------------------------------------------------------------- */
+input[type="file"].field { color: var(--ink-soft); }
+input[type="file"]::file-selector-button {
+  margin-right: 12px;
+  padding: 6px 12px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: linear-gradient(#fcf4e5, #eedfc6);
+  color: var(--umber);
+  font: 600 13px/1.3 var(--serif);
+  cursor: pointer;
+}
+input[type="file"]::file-selector-button:hover { border-color: var(--terracotta); background: var(--paper-bright); }
+textarea.field + .tools, input.field + .tools { margin-top: 12px; }
+/* The recording seek bar used the text-field box, drawing an empty framed strip. */
+input[type="range"].field {
+  padding: 0;
+  height: 28px;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+textarea::placeholder, input::placeholder { color: var(--ink-muted); opacity: .85; }
+
+/* 7. Progress page --------------------------------------------------------- */
+/* Four measures in a three-column grid left "Productive" stranded on its own row. */
+.stats:has(> .stat:nth-child(4):last-child) { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+/* Course map rows: chapter link and score now share one baseline and the rule
+   colour comes from the manuscript palette instead of the old green-grey. */
+#main > div[style*="padding:8px 0"] {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  column-gap: 12px;
+  border-bottom-color: var(--rule-light) !important;
+}
+#main > div[style*="padding:8px 0"] > small { float: none !important; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+#main > div[style*="padding:8px 0"] > .bar { grid-column: 1 / -1; margin-top: 6px; }
+#main > div[style*="padding:8px 0"] > .link { justify-self: start; padding-left: 0; font-size: 14px; }
+.stat b { font-variant-numeric: lining-nums tabular-nums; }
+
+/* 8. Library page ---------------------------------------------------------- */
+.panel > .btn + small { display: inline-block; margin-left: 12px; vertical-align: middle; }
+.panel > small { line-height: 1.5; }
+.panel > h2 + p.subtle { margin-top: 0; }
+
+/* 9. Control dock ---------------------------------------------------------- */
+.dock .btn { white-space: nowrap; }
+#audioMode { letter-spacing: .01em; }
+
+/* 10. Small screens -------------------------------------------------------- */
+@media (max-width: 1120px) {
+  header { column-gap: 16px; }
+}
+@media (max-width: 860px) {
+  header { grid-template-columns: minmax(0, 1fr); grid-template-areas: "title" "controls" "note"; }
+  #ambience-controls, header .edition-note { justify-self: start; }
+  .stats:has(> .stat:nth-child(4):last-child) { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 720px) {
+  header { display: grid; grid-template-areas: "title" "controls"; row-gap: 8px; padding-bottom: 16px; }
+  #ambience-controls { flex-wrap: nowrap !important; width: 100%; gap: 4px !important; }
+  #ambience-controls .btn { min-height: 30px; padding: 4px 8px; font-size: 11px; flex: 0 0 auto; }
+  #ambience-controls input[type="range"] { width: auto !important; min-width: 36px; flex: 1 1 60px; margin: 0 2px; }
+  #sfx-toggle { margin-left: 6px; }
+  /* Dock: flexible row so a fifth control (the narration "Alt take" button)
+     fits, and the longest label is never clipped mid-word. */
+  .dock .tools { display: flex !important; flex-wrap: nowrap; }
+  .dock .tools .btn { flex: 1 1 0; min-width: 0; padding: 6px 3px; overflow: hidden; text-overflow: ellipsis; }
+  .dock .tools .btn.primary { flex-grow: 1.7; }
+  .art-figure figcaption { font-size: 14px; }
+  .art-figure figcaption .tools button { font-size: 13px; padding: 3px 9px; min-height: 30px; }
+  .panel > .btn + small { display: block; margin: 8px 0 0; }
+}
+@media print {
+  #ambience-controls, .art-figure figcaption .tools { display: none !important; }
+}

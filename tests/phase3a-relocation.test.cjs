@@ -11,8 +11,16 @@ const inline=original.match(/<script>([\s\S]*?)<\/script>/);
 assert(inline,"Archived v0.4.2 inline script missing");
 const files=["content/catalogue.js","content/lexicon.js",...Array.from({length:8},(_,i)=>"content/legacy/ch"+String(i+1).padStart(2,"0")+".js"),"content/migration-maps.js","app/20-state-v5.js","app/30-content-loader.js","app/50-exercises.js","vendor/ts-fsrs.umd.js","app/55-review-deck.js","content/illustrations.js","app/64-art-scenes.js","content/music.js","app/58-music-score.js","app/60-audio-ambience.js","content/narration.js","app/62-narration.js","app/70-user-media.js","app/legacy-runtime.js","app/80-accessibility.js"];
 const scriptTags=files.map(file=>'<script src="'+file+'"></script>').join("\n");
-assert.equal(html,original.replace(inline[0],scriptTags),
+// Polish pass (Nov 2026): presentation-only <link> tags may follow the original
+// inline stylesheet. They are enumerated here; no script, logic or data may change.
+const headLinks=['<link rel="icon" href="assets/icons/tablinum.svg" type="image/svg+xml">',
+ '<link rel="icon" href="assets/icons/tablinum-48.png" sizes="48x48" type="image/png">',
+ '<link rel="stylesheet" href="app/styles/tablinum-fonts.css">',
+ '<link rel="stylesheet" href="app/styles/tablinum-polish.css">'];
+for(const link of headLinks){const target=link.match(/href="([^"]+)"/)[1];assert(fs.existsSync(path.join(root,target)),"Missing linked presentation asset "+target)}
+assert.equal(html,original.replace(inline[0],scriptTags).replace("</style>\n</head>","</style>\n"+headLinks.join("\n")+"\n</head>"),
  "Phase12 may append only the explicitly enumerated classic accessibility script to the original script replacement");
+assert.equal((html.match(/<link\b/g)||[]).length,headLinks.length,"Only the enumerated presentation links are allowed");
 assert.equal((html.match(/<script\b/g)||[]).length,files.length);
 assert(!html.includes('type="module"')&&!html.includes("fetch("));
 assert(runtime.includes("const L=Array.from({length:8}"),"Runtime should use compiled legacy data");
