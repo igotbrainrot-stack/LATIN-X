@@ -1,0 +1,4 @@
+audio count 34 audio source len 37419
+audio playback result {'currentTime': 0.47836, 'paused': False, 'duration': 1.68, 'readyState': 4, 'error': None}
+second clip playback {'currentTime': 0.324066, 'paused': False, 'error': None}
+export verified 34 rows; errors []

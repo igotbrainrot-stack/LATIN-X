@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tablinum — Quaestiōnēs pictae</title>
+<style>
+:root{color-scheme:light;font-family:Georgia,'Palatino Linotype',serif;background:#eee1c9;color:#382b21}
+*{box-sizing:border-box}body{margin:0 auto;padding:12px 16px 40px;max-width:1250px;line-height:1.5}
+header{border-bottom:3px double #997a58;padding:12px 0 16px}h1{font-size:2rem;margin:0}h2{margin:18px 0 8px}h3{margin:0 0 10px}p{margin:6px 0 13px}
+a{color:#59402c;font-weight:bold}button{font:inherit;cursor:pointer;border:1px solid #9e8163;background:#fff8ec;color:#382b21;border-radius:7px;padding:7px 10px}
+button:focus-visible,a:focus-visible{outline:3px solid #76531d;outline-offset:3px}
+button[aria-current="page"],.question-link[aria-pressed="true"]{background:#6d593f;color:white}
+#picture-chapters{display:flex;gap:6px;flex-wrap:wrap;margin-top:15px}#picture-chapters button{flex:1 1 135px}
+.notice{background:#fff7e8;border-left:4px solid #895b3b;padding:10px 13px}
+.practice-grid{display:grid;grid-template-columns:minmax(0,3fr) minmax(250px,1.1fr);gap:18px;align-items:start}
+.art-figure{background:transparent;max-width:100%}.art-figure img{border-radius:4px}.art-figure figcaption .tools{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+.art-figure button[aria-pressed="true"]{background:#6d593f;color:white}.question-panel{border:1px solid #bba383;background:#f8eedc;padding:13px;border-radius:8px}
+.question-list{display:grid;gap:7px;max-height:350px;overflow:auto}.question-link{display:flex;gap:10px;text-align:left}
+.selected-prompt{font-size:1.25rem;font-weight:bold;padding:15px 6px;margin-top:12px;border-top:1px solid #beac91}
+#picture-feedback{padding:12px 15px;background:#f7eee0;border:1px solid #bca582;border-radius:8px;min-height:50px;margin-top:15px}
+.mini{font-size:.9rem;color:#584a39}
+@media(max-width:800px){.practice-grid{grid-template-columns:minmax(0,1fr)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header><p><a href="index.html">← Back to Tablinum reader</a></p><h1>Quaestiōnēs pictae</h1><p>Book I · Picture practice · Unsigned Latin draft</p></header>
+<nav id="picture-chapters" aria-label="Choose Book I picture chapter"></nav>
+<main id="picture-root" aria-label="Picture exercises"></main>
+<div id="picture-feedback" role="status" aria-live="polite">Select a chapter and an illustration region.</div>
+<footer><p class="mini">All images are owner-approved. The new Latin exercise questions and keys have <strong>not</strong> been reviewed or approved, and cannot generate grades. No internet, installation, or server is required.</p></footer>
+<script src="content/illustrations.js"></script>
+<script src="app/50-exercises.js"></script>
+<script src="app/20-state-v5.js"></script>
+<script src="app/64-art-scenes.js"></script>
+<script src="content/picture-exercises.js"></script>
+<script src="app/65-picture-practice.js"></script>
+</body>
+</html>

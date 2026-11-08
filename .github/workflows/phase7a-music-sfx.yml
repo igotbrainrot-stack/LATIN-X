@@ -1,0 +1,86 @@
+name: LATIN X Phase 7a original lyre ambience and clicks
+on:
+  push:
+    branches: [feature/phase7a-music-sfx-20261106]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - name: Install exact locally vendored FSRS package for provenance comparison
+        run: npm install --no-save ts-fsrs@5.4.2
+      - name: Test original score, gesture and v5 state without sound hardware
+        run: |
+          npm run test:vendor-fsrs
+          npm test
+          npm run test:phase7a
+          npm run test:phase6
+          npm run test:phase5
+          npm run test:phase3c
+          npm run test:phase2
+          npm run test:pilot
+          npm run test:lexemes
+          npm run test:illustrations
+          npm run test:package
+          python3 scripts/check-claude-pilot.py
+      - name: Keep vocabulary signoffs and 1500/3000 gates strictly RED
+        shell: bash
+        run: |
+          if node scripts/validate-lexemes.cjs --require-review-ready > review-gate.txt 2>&1; then exit 1; fi
+          for n in 1500 3000; do
+            if node curriculum/validate-roadmap-130.cjs --require-introduced-$n > gate-$n.txt 2>&1; then exit 1; fi
+            grep -q 'GATE NOT MET' gate-$n.txt
+          done
+      - name: Produce complete offline runnable Claude ZIP with checksums
+        shell: bash
+        run: |
+          mkdir -p dist
+          git archive --format=zip --output=dist/LATIN_X_PHASE7A_COMPLETE_CLAUDE_REVIEW.zip HEAD
+          unzip -t dist/LATIN_X_PHASE7A_COMPLETE_CLAUDE_REVIEW.zip | tail -n 1
+          for f in index.html 'Start Tablinum.cmd' vendor/ts-fsrs.umd.js vendor/ts-fsrs.LICENSE content/music.js app/60-audio-ambience.js curriculum/music.json curriculum/illustrations.json PHASE7A_CLAUDE_HANDOVER.md docs/owner/AUDIO_AND_ART_REQUIREMENTS.md; do
+            unzip -Z1 dist/LATIN_X_PHASE7A_COMPLETE_CLAUDE_REVIEW.zip | grep -Fx "$f"
+          done
+          sha256sum dist/LATIN_X_PHASE7A_COMPLETE_CLAUDE_REVIEW.zip > dist/SHA256SUMS.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: LATIN_X_PHASE7A_COMPLETE_CLAUDE_REVIEW
+          path: dist/
+          if-no-files-found: error
+          retention-days: 30
+  windows:
+    runs-on: windows-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - name: Install pinned FSRS and published Playwright for Windows
+        run: |
+          npm install --no-save ts-fsrs@5.4.2 playwright@1.64.1
+          npx playwright install chromium
+      - name: Run complete source, audio and old progress checks on Windows
+        run: |
+          npm test
+          npm run test:phase7a
+          npm run test:phase6
+          npm run test:phase3c
+      - name: Real Chromium file URL music SFX no-autoplay and persistence
+        run: npm run test:phase7a-browser
+      - name: Real Edge file URL music SFX no-autoplay and persistence
+        env:
+          TABLINUM_BROWSER_CHANNEL: msedge
+        run: npm run test:phase7a-browser
+      - name: Original legacy Windows file URL and backup restore
+        run: npm run test:file
+      - name: Current signed-only FSRS file URL and keyboard review
+        run: npm run test:phase6-browser
+      - name: Offline vocabulary owner editor
+        run: npm run test:review-browser
+      - name: Layout and original HTTP browser smoke
+        run: npm run test:browser

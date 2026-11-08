@@ -1,0 +1,14 @@
+LATIN X research and round4 review local verification:
+- npm test: PASS
+- npm run test:art: PASS
+- npm run test:picture: PASS
+- npm run test:music: PASS
+- npm run test:package: PASS
+- node scripts/build-illustrations.cjs --check: PASS
+- Source byte comparison: index.html, app scripts, curriculum and compiled artwork, original launchers all unchanged: PASS
+- Original real MP3 count: 34/34: PASS
+- Round3 owner verdicts: two Livia rejects, aqua accept, quoque reject: PASS
+- Runway round4 experiments: 3/3 returned completed task IDs and provider durations; new MP3 bytes NOT embedded in ZIP, SHA256 pending owner local downloads.
+- Browser: Chromium set_content fallback with actual embedded v1 audio advanced playback time, 3 review cards/6 players present, export JSON valid: PASS
+- Direct file:// Chromium navigation blocked by runner policy: NOT TESTED on Windows for this new page
+- Latinist phonological validation: NOT PERFORMED

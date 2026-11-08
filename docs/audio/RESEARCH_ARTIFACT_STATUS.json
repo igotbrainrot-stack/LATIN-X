@@ -1,0 +1,15 @@
+{
+  "baseline_zip": "LATIN_X_MORE_BLENDED_GLOW_COMPLETE_CLAUDE_20261107.zip",
+  "baseline_zip_sha256": "bd02c306da9059d3646048d4cdab56180b0b1271653ba948e13b67e4943f0bcb",
+  "baseline_content_unchanged": true,
+  "changes": "Add-on research documentation and read-only pilot manifest generator only",
+  "narration_generated": false,
+  "music_generated": false,
+  "latin_tts_supported_officially": false,
+  "new_owner_approvals": false,
+  "tests": {
+    "npm test": "PASS",
+    "npm run test:package": "PASS",
+    "npm run test:music": "PASS"
+  }
+}

@@ -1,0 +1,277 @@
+{
+  "method": "ffmpeg decoded 16kHz float, measured peak/RMS and approximate 10ms RMS silence threshold -40dBFS; auditory review still required",
+  "clips": [
+    {
+      "filename": "voiceA__legacy-ch01-s001__v1.mp3",
+      "peak_dbfs": -1.0,
+      "rms_dbfs": -17.0,
+      "leading_silence_estimate_seconds": 0.05,
+      "trailing_silence_estimate_seconds": 0.04,
+      "clipped_samples": 0
+    },
+    {
+      "filename": "voiceA__legacy-ch01-s002__v1.mp3",
+      "peak_dbfs": -0.5,
+      "rms_dbfs": -15.7,
+      "leading_silence_estimate_seconds": 0.05,
+      "trailing_silence_estimate_seconds": 0.0,
+      "clipped_samples": 0
+    },
+    {
+      "filename": "voiceA__legacy-ch01-s003__v1.mp3",
+      "peak_dbfs": -3.0,
+      "rms_dbfs": -14.6,
+      "leading_silence_estimate_seconds": 0.04,
+      "trailing_silence_estimate_seconds": 0.0,
+      "clipped_samples": 0
+    },
+    {
+      "filename": "voiceA__legacy-ch01-s004__v1.mp3",
+      "peak_dbfs": -3.6,
+      "rms_dbfs": -14.1,
+      "leading_silence_estimate_seconds": 0.1,
+      "trailing_silence_estimate_seconds": 0.0,
+      "clipped_samples": 0
+    },
+    {
+      "filename": "voiceA__legacy-ch01-s005__v1.mp3",
+      "peak_dbfs": -2.8,
+      "rms_dbfs": -14.6,
+      "leading_silence_estimate_seconds": 0.07,
+      "trailing_silence_estimate_seconds": 0.02,
+      "clipped_samples": 0
+    },
+    {
+      "filename": "voiceA__legacy-ch01-s006__v1.mp3",
+      "peak_dbfs": -2.6,
+      "rms_dbfs": -15.0,
+      "leading_silence_estimate_seconds": 0.06,
+      "trailing_silence_estimate_seconds": 0.03,
+      "clipped_samples": 0
+    },
+    {
+      "filename": "voiceA__legacy-ch01-s007__v1.mp3",
+      "peak_dbfs": -0.9,
+      "rms_dbfs": -14.1,
+      "leading_silence_estimate_seconds": 0.0,
+      "trailing_silence_estimate_seconds": 0.0,
+      "clipped_samples": 0
+    },
+    {
+      "filename": "voiceA__legacy-ch01-s008__v1.mp3",
+      "peak_dbfs": -2.0,
+      "rms_dbfs": -14.8,
+      "leading_silence_estimate_seconds": 0.04,
+      "trailing_silence_estimate_seconds": 0.02,
+      "clipped_samples": 0
+    },
+    {
+      "filename": "voiceA__legacy-ch01-s009__v1.mp3",
+      "peak_dbfs": -1.8,
+      "rms_dbfs": -14.6,
+      "leading_silence_estimate_seconds": 0.0,
+      "trailing_silence_estimate_seconds": 0.0,
+      "clipped_samples": 0
+    },
+    {
+      "filename": "voiceA__test-aqua__v1.mp3",
+      "peak_dbfs": -2.5,
+      "rms_dbfs": -22.3,
+      "leading_silence_estimate_seconds": 0.1,
+      "trailing_silence_estimate_seconds": 1.23,
+      "clipped_samples": 0
+    },
+    {
+      "filename": "voiceA__test-cena__v1.mp3",
+      "peak_dbfs": -3.6,
+      "rms_dbfs": -18.8,
+      "leading_silence_estimate_seconds": 0.04,
+      "trailing_silence_estimate_seconds": 0.0,
+      "clipped_samples": 0
+    },
+    {
+      "filename": "voiceA__test-gaius__v1.mp3",
+      "peak_dbfs": -1.2,
+      "rms_dbfs": -14.0,
+      "leading_silence_estimate_seconds": 0.04,
+      "trailing_silence_estimate_seconds": 0.09,
+      "clipped_samples": 0
+    },
+    {
+      "filename": "voiceA__test-laeta__v1.mp3",
+      "peak_dbfs": -4.3,
+      "rms_dbfs": -20.2,
+      "leading_silence_estimate_seconds": 0.06,
+      "trailing_silence_estimate_seconds": 1.16,
+      "clipped_samples": 0
+    },
+    {
+      "filename": "voiceA__test-magna__v1.mp3",
+      "peak_dbfs": -3.9,
+      "rms_dbfs": -19.4,
+      "leading_silence_estimate_seconds": 0.0,
+      "trailing_silence_estimate_seconds": 1.16,
+      "clipped_samples": 0
+    },
+    {
+      "filename": "voiceA__test-pecunia__v1.mp3",
+      "peak_dbfs": -1.9,
+      "rms_dbfs": -17.1,
+      "leading_silence_estimate_seconds": 0.08,
+      "trailing_silence_estimate_seconds": 0.0,
+      "clipped_samples": 0
+    },
+    {
+      "filename": "voiceA__test-quoque__v1.mp3",
+      "peak_dbfs": -1.7,
+      "rms_dbfs": -19.4,
+      "leading_silence_estimate_seconds": 0.01,
+      "trailing_silence_estimate_seconds": 1.04,
+      "clipped_samples": 0
+    },
+    {
+      "filename": "voiceA__test-villa__v1.mp3",
+      "peak_dbfs": -2.0,
+      "rms_dbfs": -19.3,
+      "leading_silence_estimate_seconds": 0.03,
+      "trailing_silence_estimate_seconds": 1.33,
+      "clipped_samples": 0
+    },
+    {
+      "filename": "voiceB__legacy-ch01-s001__v1.mp3",
+      "peak_dbfs": -1.7,
+      "rms_dbfs": -20.9,
+      "leading_silence_estimate_seconds": 0.07,
+      "trailing_silence_estimate_seconds": 0.03,
+      "clipped_samples": 0
+    },
+    {
+      "filename": "voiceB__legacy-ch01-s002__v1.mp3",
+      "peak_dbfs": -3.4,
+      "rms_dbfs": -20.3,
+      "leading_silence_estimate_seconds": 0.12,
+      "trailing_silence_estimate_seconds": 0.0,
+      "clipped_samples": 0
+    },
+    {
+      "filename": "voiceB__legacy-ch01-s003__v1.mp3",
+      "peak_dbfs": -1.6,
+      "rms_dbfs": -20.3,
+      "leading_silence_estimate_seconds": 0.07,
+      "trailing_silence_estimate_seconds": 0.0,
+      "clipped_samples": 0
+    },
+    {
+      "filename": "voiceB__legacy-ch01-s004__v1.mp3",
+      "peak_dbfs": -3.6,
+      "rms_dbfs": -22.9,
+      "leading_silence_estimate_seconds": 0.07,
+      "trailing_silence_estimate_seconds": 0.02,
+      "clipped_samples": 0
+    },
+    {
+      "filename": "voiceB__legacy-ch01-s005__v1.mp3",
+      "peak_dbfs": -4.6,
+      "rms_dbfs": -20.9,
+      "leading_silence_estimate_seconds": 0.09,
+      "trailing_silence_estimate_seconds": 0.0,
+      "clipped_samples": 0
+    },
+    {
+      "filename": "voiceB__legacy-ch01-s006__v1.mp3",
+      "peak_dbfs": -3.6,
+      "rms_dbfs": -21.4,
+      "leading_silence_estimate_seconds": 0.08,
+      "trailing_silence_estimate_seconds": 0.17,
+      "clipped_samples": 0
+    },
+    {
+      "filename": "voiceB__legacy-ch01-s007__v1.mp3",
+      "peak_dbfs": -2.0,
+      "rms_dbfs": -20.4,
+      "leading_silence_estimate_seconds": 0.12,
+      "trailing_silence_estimate_seconds": 0.15,
+      "clipped_samples": 0
+    },
+    {
+      "filename": "voiceB__legacy-ch01-s008__v1.mp3",
+      "peak_dbfs": -1.3,
+      "rms_dbfs": -19.4,
+      "leading_silence_estimate_seconds": 0.03,
+      "trailing_silence_estimate_seconds": 0.0,
+      "clipped_samples": 0
+    },
+    {
+      "filename": "voiceB__legacy-ch01-s009__v1.mp3",
+      "peak_dbfs": -2.7,
+      "rms_dbfs": -18.8,
+      "leading_silence_estimate_seconds": 0.05,
+      "trailing_silence_estimate_seconds": 0.08,
+      "clipped_samples": 0
+    },
+    {
+      "filename": "voiceB__test-aqua__v1.mp3",
+      "peak_dbfs": -2.2,
+      "rms_dbfs": -21.4,
+      "leading_silence_estimate_seconds": 0.0,
+      "trailing_silence_estimate_seconds": 0.0,
+      "clipped_samples": 0
+    },
+    {
+      "filename": "voiceB__test-cena__v1.mp3",
+      "peak_dbfs": -3.3,
+      "rms_dbfs": -22.0,
+      "leading_silence_estimate_seconds": 0.05,
+      "trailing_silence_estimate_seconds": 0.0,
+      "clipped_samples": 0
+    },
+    {
+      "filename": "voiceB__test-gaius__v1.mp3",
+      "peak_dbfs": -1.2,
+      "rms_dbfs": -19.7,
+      "leading_silence_estimate_seconds": 0.06,
+      "trailing_silence_estimate_seconds": 0.05,
+      "clipped_samples": 0
+    },
+    {
+      "filename": "voiceB__test-laeta__v1.mp3",
+      "peak_dbfs": -6.5,
+      "rms_dbfs": -27.2,
+      "leading_silence_estimate_seconds": 0.04,
+      "trailing_silence_estimate_seconds": 0.0,
+      "clipped_samples": 0
+    },
+    {
+      "filename": "voiceB__test-magna__v1.mp3",
+      "peak_dbfs": -4.9,
+      "rms_dbfs": -27.3,
+      "leading_silence_estimate_seconds": 0.02,
+      "trailing_silence_estimate_seconds": 0.3,
+      "clipped_samples": 0
+    },
+    {
+      "filename": "voiceB__test-pecunia__v1.mp3",
+      "peak_dbfs": -5.1,
+      "rms_dbfs": -30.2,
+      "leading_silence_estimate_seconds": 0.09,
+      "trailing_silence_estimate_seconds": 0.0,
+      "clipped_samples": 0
+    },
+    {
+      "filename": "voiceB__test-quoque__v1.mp3",
+      "peak_dbfs": -1.1,
+      "rms_dbfs": -22.8,
+      "leading_silence_estimate_seconds": 0.02,
+      "trailing_silence_estimate_seconds": 0.0,
+      "clipped_samples": 0
+    },
+    {
+      "filename": "voiceB__test-villa__v1.mp3",
+      "peak_dbfs": -9.3,
+      "rms_dbfs": -27.7,
+      "leading_silence_estimate_seconds": 0.0,
+      "trailing_silence_estimate_seconds": 0.36,
+      "clipped_samples": 0
+    }
+  ]
+}

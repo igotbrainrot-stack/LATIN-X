@@ -1,0 +1,22 @@
+
+> latin-x-tablinum-review@0.4.2 test:pilot
+> node scripts/import-claude-pilot.cjs --check && node scripts/pilot-metrics.cjs --check && node tests/pilot-text.test.cjs
+
+b01-c001: 52 reading lines, 275 tokens, 2 segments
+b01-c002: 40 reading lines, 284 tokens, 2 segments
+b01-c003: 45 reading lines, 256 tokens, 2 segments
+b01-c004: 49 reading lines, 267 tokens, 3 segments
+b01-c005: 43 reading lines, 288 tokens, 3 segments
+b01-c006: 49 reading lines, 279 tokens, 3 segments
+b01-c007: 46 reading lines, 271 tokens, 3 segments
+b01-c008: 55 reading lines, 306 tokens, 3 segments
+PASS: manuscript metrics unchanged
+PASS b01-c001: 52 distinct manuscript lines; 275 reading tokens; annotations unsigned
+PASS b01-c002: 40 distinct manuscript lines; 284 reading tokens; annotations unsigned
+PASS b01-c003: 45 distinct manuscript lines; 256 reading tokens; annotations unsigned
+PASS b01-c004: 49 distinct manuscript lines; 267 reading tokens; annotations unsigned
+PASS b01-c005: 43 distinct manuscript lines; 288 reading tokens; annotations unsigned
+PASS b01-c006: 49 distinct manuscript lines; 279 reading tokens; annotations unsigned
+PASS b01-c007: 46 distinct manuscript lines; 271 reading tokens; annotations unsigned
+PASS b01-c008: 55 distinct manuscript lines; 306 reading tokens; annotations unsigned
+PASS Claude pilot manuscript lock, negative chapter forms, duplicates and explicit morph-first_chapter gate.

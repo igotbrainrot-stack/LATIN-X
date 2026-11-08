@@ -1,0 +1,77 @@
+name: LATIN X Phase 5 exercises and offline compatibility
+on:
+  push:
+    branches:
+      - feature/phase5-exercises-20261106
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Original app and reviewed exercise unit suite
+        run: |
+          npm test
+          npm run test:phase5
+          npm run test:phase3c
+          npm run test:phase2
+          npm run test:pilot
+          npm run test:lexemes
+          npm run test:package
+      - name: Independently compare Claude manuscript with draft JSON in Python
+        run: python3 scripts/check-claude-pilot.py
+      - name: Strict milestones and owner approvals still fail closed
+        shell: bash
+        run: |
+          if node scripts/validate-lexemes.cjs --require-review-ready > gate-review.txt 2>&1; then exit 1; fi
+          for n in 1500 3000; do
+            if node curriculum/validate-roadmap-130.cjs --require-introduced-$n > gate-$n.txt 2>&1; then exit 1; fi
+            grep -q 'GATE NOT MET' gate-$n.txt
+          done
+      - name: Package FULL current source and Claude review handover
+        shell: bash
+        run: |
+          mkdir -p dist
+          git archive --format=zip --output=dist/LATIN_X_PHASE5_COMPLETE_CLAUDE_REVIEW.zip HEAD
+          unzip -t dist/LATIN_X_PHASE5_COMPLETE_CLAUDE_REVIEW.zip | tail -n 1
+          for f in index.html Start\ Tablinum.cmd app/50-exercises.js scripts/lib/exercise-distractors.cjs tests/exercise-engine.test.cjs tests/phase5-keyboard-browser.test.cjs lessons/b01/c001.json lessons/b01/c008.json PHASE5_CLAUDE_HANDOVER.md docs/claude/PHASE4_IMPORT_REVIEW_FOR_GPT.md; do
+            unzip -Z1 dist/LATIN_X_PHASE5_COMPLETE_CLAUDE_REVIEW.zip | grep -Fx "$f"
+          done
+          sha256sum dist/LATIN_X_PHASE5_COMPLETE_CLAUDE_REVIEW.zip > dist/SHA256SUMS.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: LATIN_X_PHASE5_COMPLETE_CLAUDE_REVIEW
+          path: dist/
+          if-no-files-found: error
+          retention-days: 30
+  windows:
+    runs-on: windows-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify old quiz, full state migration and Phase5 registry
+        run: |
+          npm test
+          npm run test:phase5
+          npm run test:phase3c
+      - name: Install known published browser-test version
+        run: |
+          npm install --no-save playwright@1.64.1
+          npx playwright install chromium
+      - name: Browser Phase5 keyboard-only and synthetic review-gated exercises
+        run: npm run test:phase5-browser
+      - name: Original offline Windows quiz and historical backup
+        run: npm run test:file
+      - name: Test original app responsive view over HTTP
+        run: npm run test:browser
+      - name: Ensure owner vocabulary-review UI still works
+        run: npm run test:review-browser

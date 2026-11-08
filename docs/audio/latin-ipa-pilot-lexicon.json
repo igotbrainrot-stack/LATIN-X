@@ -1,0 +1,26 @@
+{
+  "schema": "latin-x-ipa-lexicon-v1",
+  "status": "claude_draft_not_latinist_verified",
+  "convention": "Restored Classical (Allen, Vox Latina). Long vowels tense with length mark; short vowels lax. v=/w/, c=/k/, g=/ɡ/, qu=/kʷ/, gn=/ŋn/. No elision across words; light final -m. Stress mark ˈ before the stressed syllable.",
+  "sentences": [
+    {"id": "legacy-ch01-s001", "text": "Hic est hortus.", "ipa": "hɪk ɛst ˈhɔr.tʊs", "note": "hic before a vowel was classically said with doubled c: hɪk.kɛst is also accepted"},
+    {"id": "legacy-ch01-s002", "text": "In hortō est arbor.", "ipa": "ɪn ˈhɔr.toː ɛst ˈar.bɔr"},
+    {"id": "legacy-ch01-s003", "text": "In hortō est puella.", "ipa": "ɪn ˈhɔr.toː ɛst pʊˈɛl.la"},
+    {"id": "legacy-ch01-s004", "text": "Puella Līvia est.", "ipa": "pʊˈɛl.la ˈliː.wɪ.a ɛst"},
+    {"id": "legacy-ch01-s005", "text": "Arbor magna est.", "ipa": "ˈar.bɔr ˈmaŋ.na ɛst"},
+    {"id": "legacy-ch01-s006", "text": "Līvia parva est.", "ipa": "ˈliː.wɪ.a ˈpar.wa ɛst"},
+    {"id": "legacy-ch01-s007", "text": "Līvia arborem videt.", "ipa": "ˈliː.wɪ.a ˈar.bɔ.rɛm ˈwɪ.dɛt"},
+    {"id": "legacy-ch01-s008", "text": "Līvia sub arbore sedet.", "ipa": "ˈliː.wɪ.a sʊb ˈar.bɔ.rɛ ˈsɛ.dɛt"},
+    {"id": "legacy-ch01-s009", "text": "Līvia laeta est.", "ipa": "ˈliː.wɪ.a ˈlae̯.ta ɛst"}
+  ],
+  "words": {
+    "hortus": "ˈhɔr.tʊs", "hortō": "ˈhɔr.toː", "arbor": "ˈar.bɔr", "arborem": "ˈar.bɔ.rɛm", "arbore": "ˈar.bɔ.rɛ",
+    "puella": "pʊˈɛl.la", "Līvia": "ˈliː.wɪ.a", "magna": "ˈmaŋ.na", "parva": "ˈpar.wa", "videt": "ˈwɪ.dɛt",
+    "sedet": "ˈsɛ.dɛt", "laeta": "ˈlae̯.ta", "est": "ɛst", "sub": "sʊb", "in": "ɪn", "hic": "hɪk",
+    "Tītus": "ˈtiː.tʊs", "vīlla": "ˈwiːl.la", "rosa": "ˈrɔ.sa", "Mārcus": "ˈmaːr.kʊs", "Flāvia": "ˈflaː.wɪ.a",
+    "Gāius": "ˈɡaː.jʊs", "Gāī": "ˈɡaː.iː", "cēna": "ˈkeː.na", "cibus": "ˈkɪ.bʊs", "pecūnia": "pɛˈkuː.nɪ.a",
+    "aqua": "ˈa.kʷa", "quoque": "ˈkʷɔ.kʷɛ", "quō": "kʷoː", "canis": "ˈka.nɪs", "caelum": "ˈkae̯.lʊm",
+    "familia": "faˈmɪ.lɪ.a", "māla": "ˈmaː.la", "ōva": "ˈoː.wa", "via": "ˈwɪ.a", "porta": "ˈpɔr.ta",
+    "fenestra": "fɛˈnɛs.tra", "pluvia": "ˈplʊ.wɪ.a", "ventus": "ˈwɛn.tʊs", "sōl": "soːl"
+  }
+}

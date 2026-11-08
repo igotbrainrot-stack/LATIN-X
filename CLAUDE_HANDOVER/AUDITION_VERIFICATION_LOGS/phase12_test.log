@@ -1,0 +1,6 @@
+
+> latin-x-tablinum-review@0.4.2 test:phase12
+> node tests/phase12-accessibility.test.cjs && node tests/phase12-long-profile.test.cjs
+
+PASS Phase 12 static A11y: landmarks, input labels, Latin lang, results, focus, reduced motion and 8 manuscript palette contrasts >= 4.5:1.
+PASS Phase 12: 160 detailed notes, 820 legacy cards, imported sentences, non-mapped keys, v4 byte lock, snapshot, reopen and v5 backup roundtrip.

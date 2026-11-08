@@ -1,0 +1,19 @@
+LATIN X — RUNWAY TWO-VOICE CLASSICAL LATIN AUDITION (34 ORIGINAL MP3S INCLUDED)
+
+1. Extract the entire ZIP into a NEW folder on Windows.
+2. Open Latin-X and double-click Start Audio Audition.cmd (or Audio Audition.html). Audio is now embedded in the HTML itself, so the audition page works even if separated from the rest of the files.
+3. Compare Voice A (Miriam) and Voice B (Eleanor) for all 9 In horto lesson sentences and the 8 pronunciation test words.
+4. Mark Accept or Reject for each clip, note exact pronunciation problems, select preferred voice or Neither.
+5. Click Export my review JSON. Give that exported review file to Claude or ChatGPT along with the full package.
+6. Optional: run VERIFY_AUDITION_MP3S.cmd to check the original files against their saved SHA-256 hashes.
+
+All 34 original MP3s remain in audio-audition/ AND are separately embedded as base64 data URIs in Audio Audition.html for guaranteed standalone playback. NO download helper or internet is necessary.
+Six test-word clips have automated warnings about potentially excessive trailing silence. This is an advisory technical check, NOT an owner/Latinist review.
+No audio is installed in the main learner reader. The existing music, artwork, lessons, and saved state are unchanged.
+
+Claude handover: CLAUDE_HANDOVER/00_START_HERE_RECEIVED_RUNWAY_AUDIO.md
+Verified clip manifest: docs/audio/audition-2026-11.json
+Numerical signal QA: docs/audio/audition-signal-qa-2026-11.json
+
+PLAYBACK CONNECTION FIX 2026-11-07:
+The old review page loaded external docs/audio/audition-data-2026-11.js and 34 audio-audition/*.mp3 URLs. This failed if the HTML was opened directly from a compressed archive or copied without dependencies. The repaired page embeds both the manifest and exact 34 MP3 bytes; playback tested in Chromium (two clips, progress, review export). The main learner reader deliberately still uses its prior audio until owner review. A separate Start Audio Audition.cmd launcher is provided at the program root.

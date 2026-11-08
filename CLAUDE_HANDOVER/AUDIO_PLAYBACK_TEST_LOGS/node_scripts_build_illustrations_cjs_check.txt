@@ -1,0 +1,1 @@
+PASS illustration catalogue is exact and loads as a classic file:// script

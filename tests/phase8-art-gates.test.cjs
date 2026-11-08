@@ -1,0 +1,45 @@
+"use strict";
+const assert=require("node:assert/strict"),fs=require("node:fs"),path=require("node:path"),vm=require("node:vm");
+const root=path.resolve(__dirname,"..");
+const data=JSON.parse(fs.readFileSync(path.join(root,"curriculum/illustrations.json"),"utf8"));
+const context={};context.globalThis=context;
+const source=fs.readFileSync(path.join(root,"content/illustrations.js"),"utf8");
+vm.runInNewContext(source,context,{filename:"content/illustrations.js"});
+assert.equal(context.TablinumIllustrationsData.scenes.length,9);
+const clone=x=>JSON.parse(JSON.stringify(x));
+// All nine pilot scenes are owner-approved; an unsigned copy of c006 exercises the fail-closed gates.
+const unsigned=clone(data);{const u=unsigned.scenes.find(s=>s.id==="b01-c006-scene");Object.assign(u,{status:"planned_owner_unapproved",asset:null,thumbnail:null,polygons:{},provenance:null,tool:null,generation_prompt:null,licence_status:"not generated or approved",approval:{by:null,at:null}});}
+globalThis.TablinumIllustrationsData=unsigned;
+const art=require("../app/64-art-scenes.js"),{check}=require("../scripts/check-illustrations.cjs");
+const fallback='<svg role="img"><circle r="12"/></svg>';
+assert.equal(art.renderChapter("b01-c006",fallback),fallback,"No unapproved image may replace original SVG");
+for(const ch of ["b01-c001","b01-c002","b01-c003","b01-c004","b01-c005","b01-c007","b01-c008"]){const out=art.renderChapter(ch,fallback);assert(out.includes('data-art-image=')&&out.includes('.webp')&&out.includes("<polygon"),ch+" owner-approved scene renders WebP with region polygons")}
+assert.deepEqual(data.scenes.filter(s=>s.status==="approved").map(s=>s.id).sort(),["b01-c001-scene","b01-c002-scene","b01-c003-scene","b01-c004-scene","b01-c005-scene","b01-c006-scene","b01-c007-scene","b01-c008-scene-storm","b01-c008-scene-sun"],"All nine owner-approved scenes are approved");
+assert(art.renderChapter("b01-c008",fallback).includes("b01-c008-scene-sun.webp"),"Chapter 8 renders both approved scenes");
+assert.equal(art.renderChapter("legacy-ch01",fallback),fallback,"Original eight legacy scene images must remain untouched");
+assert.deepEqual(check(data),[]);
+const d=clone(unsigned),c=d.scenes.find(s=>s.id==="b01-c006-scene");
+c.status="approved";
+assert(check(d).some(x=>x.includes("missing actual owner review signature")));
+assert(check(d).some(x=>x.includes("approved without required region")));
+c.approval={by:"SYNTHETIC TEST OWNER",at:"2026-11-06"};
+c.asset="assets/art/b01/test.webp";c.thumbnail="assets/art/b01/test-thumb.webp";
+c.tool="Synthetic test";c.generation_prompt="Test only, not a real picture";c.licence_status="synthetic";
+c.provenance={source:"synthetic-test"};
+for(const id of c.required_region_ids)c.polygons[id]=[[0,0],[30,0],[0,30]];
+assert.equal(art.approved(c),true,"Gate checks explicit signed review fields for a synthetic only");
+assert(art.renderChapter("b01-c006",fallback)===fallback,"Original unsigned manifest is still unapproved");
+assert(check(d).some(x=>x.includes("image is missing")),"Real files must exist after purported owner signoff");
+const h=art.regionHit([[0,0],[40,0],[0,40]],8,8);
+assert.equal(h,true);
+assert.equal(art.regionHit([[0,0],[40,0],[0,40]],90,90),false);
+const actor=clone(c);actor.approval={by:null,at:null};
+assert.equal(art.approved(actor),false);
+const html=fs.readFileSync(path.join(root,"Art Review.html"),"utf8");
+assert(html.includes('id="manifest"')&&html.includes('id="source"')&&html.includes('id="thumb"'));
+assert(html.includes("I checked historical accuracy")&&html.includes("polygons"));
+assert(!/fetch\s*\(/.test(html),"Owner review must remain offline with file pickers");
+const scripts=[...html.matchAll(/<script>([\s\S]*?)<\/script>/g)].map(x=>x[1]);
+assert.equal(scripts.length,1);
+new vm.Script(scripts[0],{filename:"Art Review inline.js"});
+console.log("PASS Phase8: 9 owner-approved art scenes, unsigned-copy fail-closed gates, exact static JS manifest, owner-review tool parse, SVG fallback, and polygon geometry.");

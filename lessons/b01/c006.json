@@ -1,0 +1,2891 @@
+{
+  "schema": "tablinum-lesson-v1",
+  "id": "b01-c006",
+  "chapter": 6,
+  "book": 1,
+  "status": "draft",
+  "drafted_by": "claude-draft-2026-11-05",
+  "manuscript_title": "Forum",
+  "source_manuscript": "docs/pilot/CLAUDE_PILOT_B01_C001_C008.md",
+  "source_line": 423,
+  "review": {
+    "latin": {
+      "by": null,
+      "at": null,
+      "tier": null
+    },
+    "pedagogy": {
+      "by": null,
+      "at": null
+    }
+  },
+  "new_lexemes_declared": [],
+  "grammar_new": [],
+  "proposed_new_lemmas_raw": "**New (proposed, unsigned):** forum, mālum, ōvum, mercātor, pecūnia, pretium, multus, ūnus, duo, trēs, quot, emit (emō), vendit (vendō), numerat (numerō).",
+  "proposed_grammar_raw": "**Grammar (new):** neuter plural nominative and accusative in `-a`; predicate adjectives in `-a`; the numbers ūnum, duo, tria; the question `Quot?`",
+  "proposed_margin_raw": "**Margin:** mālum → māla · ōvum → ōva · dōnum → dōna · pōculum → pōcula · ūnum 🍎 · duo 🍎🍎 · tria 🍎🍎🍎 · multa = 🍎🍎🍎🍎🍎🍎 · vendit ↔ emit · pretium = 💰 → 🍎 · [pictūra: mercātor, mēnsa, māla, ōva, pecūnia]",
+  "reviewer_notes": [
+    "> Note for the reviewer: `alia māla` uses `alius` (ch 4) in the newly taught neuter plural. **Please check `Pecūnia est pretium`**: it works as an equation for inferring the word from the picture, but a Latinist may prefer another wording. `mercātōrī` is a 3rd-declension dative, the same pattern as `patrī`, which ch 4 teaches."
+  ],
+  "segments": [
+    {
+      "id": "b01-c006-l1",
+      "title_la": "Lēctiō 1 — In forō",
+      "source_line": 429,
+      "sentences": [
+        {
+          "id": "b01-c006-s001",
+          "text_la": "Ecce forum.",
+          "source_line": 431,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Ecce",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "forum",
+              "start": 5,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s002",
+          "text_la": "Forum magnum est.",
+          "source_line": 432,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Forum",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "magnum",
+              "start": 6,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 13,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s003",
+          "text_la": "Mārcus et Līvia in forō sunt.",
+          "source_line": 433,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Mārcus",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 7,
+              "end": 9,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līvia",
+              "start": 10,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 16,
+              "end": 18,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "forō",
+              "start": 19,
+              "end": 23,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sunt",
+              "start": 24,
+              "end": 28,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s004",
+          "text_la": "In forō est mercātor.",
+          "source_line": 434,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "In",
+              "start": 0,
+              "end": 2,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "forō",
+              "start": 3,
+              "end": 7,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 8,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mercātor",
+              "start": 12,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s005",
+          "text_la": "Mercātor mēnsam habet.",
+          "source_line": 435,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Mercātor",
+              "start": 0,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mēnsam",
+              "start": 9,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "habet",
+              "start": 16,
+              "end": 21,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s006",
+          "text_la": "In mēnsā sunt māla.",
+          "source_line": 436,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "In",
+              "start": 0,
+              "end": 2,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mēnsā",
+              "start": 3,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sunt",
+              "start": 9,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "māla",
+              "start": 14,
+              "end": 18,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s007",
+          "text_la": "Māla rubra sunt.",
+          "source_line": 437,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Māla",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "rubra",
+              "start": 5,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sunt",
+              "start": 11,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s008",
+          "text_la": "Quot māla in mēnsā sunt? Multa māla in mēnsā sunt.",
+          "source_line": 438,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Quot",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "māla",
+              "start": 5,
+              "end": 9,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 10,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mēnsā",
+              "start": 13,
+              "end": 18,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sunt",
+              "start": 19,
+              "end": 23,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Multa",
+              "start": 25,
+              "end": 30,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "māla",
+              "start": 31,
+              "end": 35,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 36,
+              "end": 38,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mēnsā",
+              "start": 39,
+              "end": 44,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sunt",
+              "start": 45,
+              "end": 49,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s009",
+          "text_la": "In mēnsā sunt quoque ōva.",
+          "source_line": 439,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "In",
+              "start": 0,
+              "end": 2,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mēnsā",
+              "start": 3,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sunt",
+              "start": 9,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "quoque",
+              "start": 14,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ōva",
+              "start": 21,
+              "end": 24,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s010",
+          "text_la": "Ōva nōn rubra sunt.",
+          "source_line": 440,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Ōva",
+              "start": 0,
+              "end": 3,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōn",
+              "start": 4,
+              "end": 7,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "rubra",
+              "start": 8,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sunt",
+              "start": 14,
+              "end": 18,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s011",
+          "text_la": "Mercātor māla et ōva vendit.",
+          "source_line": 441,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Mercātor",
+              "start": 0,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "māla",
+              "start": 9,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 14,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ōva",
+              "start": 17,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "vendit",
+              "start": 21,
+              "end": 27,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s012",
+          "text_la": "Quid mercātor vendit? Māla et ōva vendit.",
+          "source_line": 442,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Quid",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mercātor",
+              "start": 5,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "vendit",
+              "start": 14,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Māla",
+              "start": 22,
+              "end": 26,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 27,
+              "end": 29,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ōva",
+              "start": 30,
+              "end": 33,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "vendit",
+              "start": 34,
+              "end": 40,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s013",
+          "text_la": "In forō nōn est arbor, nōn est rosa.",
+          "source_line": 443,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "In",
+              "start": 0,
+              "end": 2,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "forō",
+              "start": 3,
+              "end": 7,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōn",
+              "start": 8,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 12,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "arbor",
+              "start": 16,
+              "end": 21,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōn",
+              "start": 23,
+              "end": 26,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 27,
+              "end": 30,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "rosa",
+              "start": 31,
+              "end": 35,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s014",
+          "text_la": "Sed in forō sunt multa māla et multa ōva.",
+          "source_line": 444,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Sed",
+              "start": 0,
+              "end": 3,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 4,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "forō",
+              "start": 7,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sunt",
+              "start": 12,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "multa",
+              "start": 17,
+              "end": 22,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "māla",
+              "start": 23,
+              "end": 27,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 28,
+              "end": 30,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "multa",
+              "start": 31,
+              "end": 36,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ōva",
+              "start": 37,
+              "end": 40,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s015",
+          "text_la": "Mārcus mercātōrem spectat; Līvia māla spectat.",
+          "source_line": 445,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Mārcus",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mercātōrem",
+              "start": 7,
+              "end": 17,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "spectat",
+              "start": 18,
+              "end": 25,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līvia",
+              "start": 27,
+              "end": 32,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "māla",
+              "start": 33,
+              "end": 37,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "spectat",
+              "start": 38,
+              "end": 45,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s016",
+          "text_la": "Estne mālum rubrum? Ita: māla rubra sunt.",
+          "source_line": 446,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Estne",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mālum",
+              "start": 6,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "rubrum",
+              "start": 12,
+              "end": 18,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Ita",
+              "start": 20,
+              "end": 23,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "māla",
+              "start": 25,
+              "end": 29,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "rubra",
+              "start": 30,
+              "end": 35,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sunt",
+              "start": 36,
+              "end": 40,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s017",
+          "text_la": "Ōva parva sunt, sed māla magna sunt.",
+          "source_line": 447,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Ōva",
+              "start": 0,
+              "end": 3,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "parva",
+              "start": 4,
+              "end": 9,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sunt",
+              "start": 10,
+              "end": 14,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sed",
+              "start": 16,
+              "end": 19,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "māla",
+              "start": 20,
+              "end": 24,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "magna",
+              "start": 25,
+              "end": 30,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sunt",
+              "start": 31,
+              "end": 35,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b01-c006-l2",
+      "title_la": "Lēctiō 2 — Quot māla?",
+      "source_line": 449,
+      "sentences": [
+        {
+          "id": "b01-c006-s018",
+          "text_la": "Līvia māla numerat.",
+          "source_line": 451,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Līvia",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "māla",
+              "start": 6,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "numerat",
+              "start": 11,
+              "end": 18,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s019",
+          "text_la": "«Ūnum, duo, tria…»",
+          "source_line": 452,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Ūnum",
+              "start": 1,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "duo",
+              "start": 7,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "tria",
+              "start": 12,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s020",
+          "text_la": "Līvia tria māla magna spectat.",
+          "source_line": 453,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Līvia",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "tria",
+              "start": 6,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "māla",
+              "start": 11,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "magna",
+              "start": 16,
+              "end": 21,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "spectat",
+              "start": 22,
+              "end": 29,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s021",
+          "text_la": "Tria māla magna sunt; alia māla parva sunt.",
+          "source_line": 454,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Tria",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "māla",
+              "start": 5,
+              "end": 9,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "magna",
+              "start": 10,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sunt",
+              "start": 16,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "alia",
+              "start": 22,
+              "end": 26,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "māla",
+              "start": 27,
+              "end": 31,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "parva",
+              "start": 32,
+              "end": 37,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sunt",
+              "start": 38,
+              "end": 42,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s022",
+          "text_la": "Mārcus māla emit.",
+          "source_line": 455,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Mārcus",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "māla",
+              "start": 7,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "emit",
+              "start": 12,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s023",
+          "text_la": "Quot māla Mārcus emit? Mārcus duo māla emit.",
+          "source_line": 456,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Quot",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "māla",
+              "start": 5,
+              "end": 9,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Mārcus",
+              "start": 10,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "emit",
+              "start": 17,
+              "end": 21,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Mārcus",
+              "start": 23,
+              "end": 29,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "duo",
+              "start": 30,
+              "end": 33,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "māla",
+              "start": 34,
+              "end": 38,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "emit",
+              "start": 39,
+              "end": 43,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s024",
+          "text_la": "Mārcus nōn tria, sed duo māla capit.",
+          "source_line": 457,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Mārcus",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōn",
+              "start": 7,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "tria",
+              "start": 11,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sed",
+              "start": 17,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "duo",
+              "start": 21,
+              "end": 24,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "māla",
+              "start": 25,
+              "end": 29,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "capit",
+              "start": 30,
+              "end": 35,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s025",
+          "text_la": "Līvia: «Estne pretium magnum?»",
+          "source_line": 458,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Līvia",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Estne",
+              "start": 8,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pretium",
+              "start": 14,
+              "end": 21,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "magnum",
+              "start": 22,
+              "end": 28,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s026",
+          "text_la": "Mercātor: «Pretium nōn magnum est.»",
+          "source_line": 459,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Mercātor",
+              "start": 0,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Pretium",
+              "start": 11,
+              "end": 18,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōn",
+              "start": 19,
+              "end": 22,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "magnum",
+              "start": 23,
+              "end": 29,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 30,
+              "end": 33,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s027",
+          "text_la": "Mārcus mercātōrī pecūniam dat.",
+          "source_line": 460,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Mārcus",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mercātōrī",
+              "start": 7,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pecūniam",
+              "start": 17,
+              "end": 25,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "dat",
+              "start": 26,
+              "end": 29,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s028",
+          "text_la": "Pecūnia est pretium.",
+          "source_line": 461,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Pecūnia",
+              "start": 0,
+              "end": 7,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 8,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pretium",
+              "start": 12,
+              "end": 19,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s029",
+          "text_la": "Mercātor pecūniam accipit.",
+          "source_line": 462,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Mercātor",
+              "start": 0,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pecūniam",
+              "start": 9,
+              "end": 17,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "accipit",
+              "start": 18,
+              "end": 25,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s030",
+          "text_la": "Nunc Mārcus duo māla habet.",
+          "source_line": 463,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Nunc",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Mārcus",
+              "start": 5,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "duo",
+              "start": 12,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "māla",
+              "start": 16,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "habet",
+              "start": 21,
+              "end": 26,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b01-c006-l3",
+      "title_la": "Lēctiō 3 — Dōna",
+      "source_line": 465,
+      "sentences": [
+        {
+          "id": "b01-c006-s031",
+          "text_la": "Habetne Līvia mālum? Līvia mālum nōn habet.",
+          "source_line": 467,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Habetne",
+              "start": 0,
+              "end": 7,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līvia",
+              "start": 8,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mālum",
+              "start": 14,
+              "end": 19,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līvia",
+              "start": 21,
+              "end": 26,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mālum",
+              "start": 27,
+              "end": 32,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōn",
+              "start": 33,
+              "end": 36,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "habet",
+              "start": 37,
+              "end": 42,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s032",
+          "text_la": "Sed mercātor Līviam spectat.",
+          "source_line": 468,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Sed",
+              "start": 0,
+              "end": 3,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mercātor",
+              "start": 4,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līviam",
+              "start": 13,
+              "end": 19,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "spectat",
+              "start": 20,
+              "end": 27,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s033",
+          "text_la": "Mercātor puellae ūnum mālum parvum dat.",
+          "source_line": 469,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Mercātor",
+              "start": 0,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "puellae",
+              "start": 9,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ūnum",
+              "start": 17,
+              "end": 21,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mālum",
+              "start": 22,
+              "end": 27,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "parvum",
+              "start": 28,
+              "end": 34,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "dat",
+              "start": 35,
+              "end": 38,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s034",
+          "text_la": "Līvia mālum accipit et mercātōrī grātiās agit.",
+          "source_line": 470,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Līvia",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mālum",
+              "start": 6,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "accipit",
+              "start": 12,
+              "end": 19,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 20,
+              "end": 22,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mercātōrī",
+              "start": 23,
+              "end": 32,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "grātiās",
+              "start": 33,
+              "end": 40,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "agit",
+              "start": 41,
+              "end": 45,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s035",
+          "text_la": "Nunc Mārcus duo māla habet, et Līvia ūnum mālum habet.",
+          "source_line": 471,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Nunc",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Mārcus",
+              "start": 5,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "duo",
+              "start": 12,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "māla",
+              "start": 16,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "habet",
+              "start": 21,
+              "end": 26,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 28,
+              "end": 30,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līvia",
+              "start": 31,
+              "end": 36,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ūnum",
+              "start": 37,
+              "end": 41,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mālum",
+              "start": 42,
+              "end": 47,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "habet",
+              "start": 48,
+              "end": 53,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s036",
+          "text_la": "Quot māla sunt? Tria māla sunt!",
+          "source_line": 472,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Quot",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "māla",
+              "start": 5,
+              "end": 9,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sunt",
+              "start": 10,
+              "end": 14,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tria",
+              "start": 16,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "māla",
+              "start": 21,
+              "end": 25,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sunt",
+              "start": 26,
+              "end": 30,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s037",
+          "text_la": "Mārcus quoque ōva emit: Mārcus duo ōva capit.",
+          "source_line": 473,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Mārcus",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "quoque",
+              "start": 7,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ōva",
+              "start": 14,
+              "end": 17,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "emit",
+              "start": 18,
+              "end": 22,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Mārcus",
+              "start": 24,
+              "end": 30,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "duo",
+              "start": 31,
+              "end": 34,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ōva",
+              "start": 35,
+              "end": 38,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "capit",
+              "start": 39,
+              "end": 44,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s038",
+          "text_la": "Ōva parva sunt.",
+          "source_line": 474,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Ōva",
+              "start": 0,
+              "end": 3,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "parva",
+              "start": 4,
+              "end": 9,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sunt",
+              "start": 10,
+              "end": 14,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s039",
+          "text_la": "Līvia ōva et māla portat.",
+          "source_line": 475,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Līvia",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ōva",
+              "start": 6,
+              "end": 9,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 10,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "māla",
+              "start": 13,
+              "end": 17,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "portat",
+              "start": 18,
+              "end": 24,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s040",
+          "text_la": "Māla et ōva sunt dōna: dōna Flāviae et Tītī.",
+          "source_line": 476,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Māla",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 5,
+              "end": 7,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ōva",
+              "start": 8,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sunt",
+              "start": 12,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "dōna",
+              "start": 17,
+              "end": 21,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "dōna",
+              "start": 23,
+              "end": 27,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Flāviae",
+              "start": 28,
+              "end": 35,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 36,
+              "end": 38,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītī",
+              "start": 39,
+              "end": 43,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s041",
+          "text_la": "In vīllā Līvia Flāviae ōva dat, et Tītō ūnum mālum dat.",
+          "source_line": 477,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "In",
+              "start": 0,
+              "end": 2,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "vīllā",
+              "start": 3,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līvia",
+              "start": 9,
+              "end": 14,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Flāviae",
+              "start": 15,
+              "end": 22,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ōva",
+              "start": 23,
+              "end": 26,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "dat",
+              "start": 27,
+              "end": 30,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 32,
+              "end": 34,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītō",
+              "start": 35,
+              "end": 39,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ūnum",
+              "start": 40,
+              "end": 44,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mālum",
+              "start": 45,
+              "end": 50,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "dat",
+              "start": 51,
+              "end": 54,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s042",
+          "text_la": "Tītus mālum accipit et edit.",
+          "source_line": 478,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Tītus",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mālum",
+              "start": 6,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "accipit",
+              "start": 12,
+              "end": 19,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 20,
+              "end": 22,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "edit",
+              "start": 23,
+              "end": 27,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s043",
+          "text_la": "Nunc in mēnsā sunt duo māla et duo ōva.",
+          "source_line": 479,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Nunc",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 5,
+              "end": 7,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mēnsā",
+              "start": 8,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sunt",
+              "start": 14,
+              "end": 18,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "duo",
+              "start": 19,
+              "end": 22,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "māla",
+              "start": 23,
+              "end": 27,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 28,
+              "end": 30,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "duo",
+              "start": 31,
+              "end": 34,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ōva",
+              "start": 35,
+              "end": 38,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s044",
+          "text_la": "Dōna parva sunt, sed bona.",
+          "source_line": 480,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Dōna",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "parva",
+              "start": 5,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sunt",
+              "start": 11,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sed",
+              "start": 17,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "bona",
+              "start": 21,
+              "end": 25,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s045",
+          "text_la": "Flāvia ōva accipit et Līviae grātiās agit.",
+          "source_line": 481,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Flāvia",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ōva",
+              "start": 7,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "accipit",
+              "start": 11,
+              "end": 18,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 19,
+              "end": 21,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līviae",
+              "start": 22,
+              "end": 28,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "grātiās",
+              "start": 29,
+              "end": 36,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "agit",
+              "start": 37,
+              "end": 41,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s046",
+          "text_la": "Flāvia ōva in mēnsā pōnit.",
+          "source_line": 482,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Flāvia",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ōva",
+              "start": 7,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 11,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mēnsā",
+              "start": 14,
+              "end": 19,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pōnit",
+              "start": 20,
+              "end": 25,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s047",
+          "text_la": "In mēnsā sunt quoque pōcula.",
+          "source_line": 483,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "In",
+              "start": 0,
+              "end": 2,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mēnsā",
+              "start": 3,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sunt",
+              "start": 9,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "quoque",
+              "start": 14,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pōcula",
+              "start": 21,
+              "end": 27,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s048",
+          "text_la": "Pōcula parva sunt.",
+          "source_line": 484,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Pōcula",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "parva",
+              "start": 7,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sunt",
+              "start": 13,
+              "end": 17,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c006-s049",
+          "text_la": "Quot pōcula in mēnsā sunt? Tria pōcula in mēnsā sunt.",
+          "source_line": 485,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Quot",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pōcula",
+              "start": 5,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 12,
+              "end": 14,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mēnsā",
+              "start": 15,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sunt",
+              "start": 21,
+              "end": 25,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tria",
+              "start": 27,
+              "end": 31,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pōcula",
+              "start": 32,
+              "end": 38,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 39,
+              "end": 41,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mēnsā",
+              "start": 42,
+              "end": 47,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sunt",
+              "start": 48,
+              "end": 52,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "b01-c006-q001",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 491,
+      "text_original": "1. Quid mercātor vendit? — Mercātor māla et ōva vendit.",
+      "prompt_text": "Quid mercātor vendit?",
+      "model_answer_raw": "Mercātor māla et ōva vendit.",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    },
+    {
+      "id": "b01-c006-q002",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 492,
+      "text_original": "2. Quot māla Mārcus emit? — Mārcus duo māla emit.",
+      "prompt_text": "Quot māla Mārcus emit?",
+      "model_answer_raw": "Mārcus duo māla emit.",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    },
+    {
+      "id": "b01-c006-q003",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 493,
+      "text_original": "3. Quid Mārcus mercātōrī dat? — Mārcus mercātōrī pecūniam dat.",
+      "prompt_text": "Quid Mārcus mercātōrī dat?",
+      "model_answer_raw": "Mārcus mercātōrī pecūniam dat.",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    },
+    {
+      "id": "b01-c006-q004",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 494,
+      "text_original": "4. Cui mercātor ūnum mālum dat? — Mercātor Līviae (puellae) ūnum mālum dat.",
+      "prompt_text": "Cui mercātor ūnum mālum dat?",
+      "model_answer_raw": "Mercātor Līviae (puellae) ūnum mālum dat.",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    },
+    {
+      "id": "b01-c006-q005",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 495,
+      "text_original": "5. Quot ōva Mārcus emit? — Duo ōva.",
+      "prompt_text": "Quot ōva Mārcus emit?",
+      "model_answer_raw": "Duo ōva.",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    },
+    {
+      "id": "b01-c006-q006",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 496,
+      "text_original": "6. Ending: dōnum → dōn___ (plural) — dōna.",
+      "prompt_text": "Ending: dōnum → dōn___ (plural)",
+      "model_answer_raw": "dōna.",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    },
+    {
+      "id": "b01-c006-q007",
+      "type": "pic",
+      "status": "proposed_ungraded",
+      "scoring_enabled": false,
+      "prompt_la": "Ubi est mercātor?",
+      "scene_id": "b01-c006-scene",
+      "region_id": "mercātor",
+      "answer": "mercātor",
+      "review": {
+        "by": null,
+        "at": null
+      },
+      "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+    },
+    {
+      "id": "b01-c006-q008",
+      "type": "pic",
+      "status": "proposed_ungraded",
+      "scoring_enabled": false,
+      "prompt_la": "Ubi sunt multa māla?",
+      "scene_id": "b01-c006-scene",
+      "region_id": "māla",
+      "answer": "māla",
+      "review": {
+        "by": null,
+        "at": null
+      },
+      "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+    },
+    {
+      "id": "b01-c006-q009",
+      "type": "pic",
+      "status": "proposed_ungraded",
+      "scoring_enabled": false,
+      "prompt_la": "Ubi sunt ōva?",
+      "scene_id": "b01-c006-scene",
+      "region_id": "ōva",
+      "answer": "ōva",
+      "review": {
+        "by": null,
+        "at": null
+      },
+      "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+    },
+    {
+      "id": "b01-c006-q010",
+      "type": "pic",
+      "status": "proposed_ungraded",
+      "scoring_enabled": false,
+      "prompt_la": "Ubi est pecūnia?",
+      "scene_id": "b01-c006-scene",
+      "region_id": "pecūnia",
+      "answer": "pecūnia",
+      "review": {
+        "by": null,
+        "at": null
+      },
+      "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+    },
+    {
+      "id": "b01-c006-q011",
+      "type": "pic",
+      "status": "proposed_ungraded",
+      "scoring_enabled": false,
+      "prompt_la": "Ubi est ūnum mālum?",
+      "scene_id": "b01-c006-scene",
+      "region_id": "mālum-1",
+      "answer": "mālum-1",
+      "review": {
+        "by": null,
+        "at": null
+      },
+      "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+    },
+    {
+      "id": "b01-c006-q012",
+      "type": "pic",
+      "status": "proposed_ungraded",
+      "scoring_enabled": false,
+      "prompt_la": "Ubi sunt duo māla?",
+      "scene_id": "b01-c006-scene",
+      "region_id": "māla-2",
+      "answer": "māla-2",
+      "review": {
+        "by": null,
+        "at": null
+      },
+      "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+    },
+    {
+      "id": "b01-c006-q013",
+      "type": "pic",
+      "status": "proposed_ungraded",
+      "scoring_enabled": false,
+      "prompt_la": "Ubi sunt tria māla?",
+      "scene_id": "b01-c006-scene",
+      "region_id": "māla-3",
+      "answer": "māla-3",
+      "review": {
+        "by": null,
+        "at": null
+      },
+      "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+    }
+  ],
+  "speaking": [
+    {
+      "id": "b01-c006-sp001",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 500,
+      "text_original": "- Count the objects in the picture aloud: `Ūnum mālum, duo māla, tria māla.`",
+      "prompt_text": "Count the objects in the picture aloud: `Ūnum mālum, duo māla, tria māla.`",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    },
+    {
+      "id": "b01-c006-sp002",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 501,
+      "text_original": "- Answer aloud: `Quot māla in mēnsā sunt?`",
+      "prompt_text": "Answer aloud: `Quot māla in mēnsā sunt?`",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    }
+  ],
+  "title": "Forum",
+  "is_review": false,
+  "budget_ref": "curriculum/vocabulary-budgets-130.json#6",
+  "lesson_segments": 3,
+  "target_running_tokens": [
+    300,
+    410
+  ],
+  "reading_sentence_count": 49,
+  "reading_token_count": 279,
+  "notes_for_reviewer": "UNSIGNED DRAFT. All lexical and grammar annotations remain unverified. Proposed word budget: 11\n> Note for the reviewer: `alia māla` uses `alius` (ch 4) in the newly taught neuter plural. **Please check `Pecūnia est pretium`**: it works as an equation for inferring the word from the picture, but a Latinist may prefer another wording. `mercātōrī` is a 3rd-declension dative, the same pattern as `patrī`, which ch 4 teaches."
+}

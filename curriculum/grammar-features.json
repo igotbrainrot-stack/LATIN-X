@@ -1,0 +1,922 @@
+{
+  "schema": "tablinum.strict-grammar-features.v1",
+  "status": "editorial_provisional_not_owner_approved",
+  "rule": "No unknown morphology is permitted. Null first_chapter means not introduced anywhere in the approved 130-chapter outline; manual exception needs a cited preview.",
+  "source": "curriculum/vocabulary-budgets-130.json grammar_focus, 2026-11-05",
+  "features": [
+    {
+      "id": "n.nom.sg",
+      "first_chapter": 1,
+      "source_chapter": 1
+    },
+    {
+      "id": "n.nom.pl",
+      "first_chapter": 1,
+      "source_chapter": 1
+    },
+    {
+      "id": "n.gen.sg",
+      "first_chapter": 2,
+      "source_chapter": 2
+    },
+    {
+      "id": "n.gen.pl",
+      "first_chapter": 53,
+      "source_chapter": 53
+    },
+    {
+      "id": "n.dat.sg",
+      "first_chapter": 4,
+      "source_chapter": 4
+    },
+    {
+      "id": "n.dat.pl",
+      "first_chapter": 96,
+      "source_chapter": 96
+    },
+    {
+      "id": "n.acc.sg",
+      "first_chapter": 3,
+      "source_chapter": 3
+    },
+    {
+      "id": "n.acc.pl",
+      "first_chapter": 6,
+      "source_chapter": 6
+    },
+    {
+      "id": "n.abl.sg",
+      "first_chapter": 12,
+      "source_chapter": 12
+    },
+    {
+      "id": "n.abl.pl",
+      "first_chapter": 51,
+      "source_chapter": 51
+    },
+    {
+      "id": "n.voc.sg",
+      "first_chapter": 18,
+      "source_chapter": 18
+    },
+    {
+      "id": "n.voc.pl",
+      "first_chapter": 54,
+      "source_chapter": 54
+    },
+    {
+      "id": "adj.nom.sg",
+      "first_chapter": 14,
+      "source_chapter": 14
+    },
+    {
+      "id": "adj.nom.pl",
+      "first_chapter": 14,
+      "source_chapter": 14
+    },
+    {
+      "id": "adj.gen.sg",
+      "first_chapter": 14,
+      "source_chapter": 14
+    },
+    {
+      "id": "adj.gen.pl",
+      "first_chapter": 53,
+      "source_chapter": 53
+    },
+    {
+      "id": "adj.dat.sg",
+      "first_chapter": 14,
+      "source_chapter": 14
+    },
+    {
+      "id": "adj.dat.pl",
+      "first_chapter": 96,
+      "source_chapter": 96
+    },
+    {
+      "id": "adj.acc.sg",
+      "first_chapter": 14,
+      "source_chapter": 14
+    },
+    {
+      "id": "adj.acc.pl",
+      "first_chapter": 14,
+      "source_chapter": 14
+    },
+    {
+      "id": "adj.abl.sg",
+      "first_chapter": 14,
+      "source_chapter": 14
+    },
+    {
+      "id": "adj.abl.pl",
+      "first_chapter": 51,
+      "source_chapter": 51
+    },
+    {
+      "id": "adj.voc.sg",
+      "first_chapter": 18,
+      "source_chapter": 18
+    },
+    {
+      "id": "adj.voc.pl",
+      "first_chapter": 54,
+      "source_chapter": 54
+    },
+    {
+      "id": "pron.ego.nom",
+      "first_chapter": 11,
+      "source_chapter": 11
+    },
+    {
+      "id": "pron.ego.gen",
+      "first_chapter": 81,
+      "source_chapter": 81
+    },
+    {
+      "id": "pron.ego.acc",
+      "first_chapter": 11,
+      "source_chapter": 11
+    },
+    {
+      "id": "pron.ego.abl",
+      "first_chapter": 81,
+      "source_chapter": 81
+    },
+    {
+      "id": "pron.tu.nom",
+      "first_chapter": 11,
+      "source_chapter": 11
+    },
+    {
+      "id": "pron.tu.gen",
+      "first_chapter": 81,
+      "source_chapter": 81
+    },
+    {
+      "id": "pron.tu.acc",
+      "first_chapter": 11,
+      "source_chapter": 11
+    },
+    {
+      "id": "pron.tu.abl",
+      "first_chapter": 81,
+      "source_chapter": 81
+    },
+    {
+      "id": "pron.nos.nom",
+      "first_chapter": 16,
+      "source_chapter": 16
+    },
+    {
+      "id": "pron.nos.gen",
+      "first_chapter": 81,
+      "source_chapter": 81
+    },
+    {
+      "id": "pron.nos.acc",
+      "first_chapter": 16,
+      "source_chapter": 16
+    },
+    {
+      "id": "pron.nos.abl",
+      "first_chapter": 81,
+      "source_chapter": 81
+    },
+    {
+      "id": "pron.vos.nom",
+      "first_chapter": 16,
+      "source_chapter": 16
+    },
+    {
+      "id": "pron.vos.gen",
+      "first_chapter": 81,
+      "source_chapter": 81
+    },
+    {
+      "id": "pron.vos.acc",
+      "first_chapter": 16,
+      "source_chapter": 16
+    },
+    {
+      "id": "pron.vos.abl",
+      "first_chapter": 81,
+      "source_chapter": 81
+    },
+    {
+      "id": "pron.is.nom",
+      "first_chapter": 20,
+      "source_chapter": 20
+    },
+    {
+      "id": "pron.is.gen",
+      "first_chapter": 20,
+      "source_chapter": 20
+    },
+    {
+      "id": "pron.is.acc",
+      "first_chapter": 20,
+      "source_chapter": 20
+    },
+    {
+      "id": "pron.is.abl",
+      "first_chapter": 20,
+      "source_chapter": 20
+    },
+    {
+      "id": "pron.relative.nom",
+      "first_chapter": 36,
+      "source_chapter": 36
+    },
+    {
+      "id": "pron.relative.gen",
+      "first_chapter": 72,
+      "source_chapter": 72
+    },
+    {
+      "id": "pron.relative.acc",
+      "first_chapter": 72,
+      "source_chapter": 72
+    },
+    {
+      "id": "pron.relative.abl",
+      "first_chapter": 72,
+      "source_chapter": 72
+    },
+    {
+      "id": "pron.hic.nom",
+      "first_chapter": 71,
+      "source_chapter": 71
+    },
+    {
+      "id": "pron.hic.gen",
+      "first_chapter": 71,
+      "source_chapter": 71
+    },
+    {
+      "id": "pron.hic.acc",
+      "first_chapter": 71,
+      "source_chapter": 71
+    },
+    {
+      "id": "pron.hic.abl",
+      "first_chapter": 71,
+      "source_chapter": 71
+    },
+    {
+      "id": "pron.ille.nom",
+      "first_chapter": 71,
+      "source_chapter": 71
+    },
+    {
+      "id": "pron.ille.gen",
+      "first_chapter": 71,
+      "source_chapter": 71
+    },
+    {
+      "id": "pron.ille.acc",
+      "first_chapter": 71,
+      "source_chapter": 71
+    },
+    {
+      "id": "pron.ille.abl",
+      "first_chapter": 71,
+      "source_chapter": 71
+    },
+    {
+      "id": "v.ind.pres.act.3sg",
+      "first_chapter": 8,
+      "source_chapter": 8
+    },
+    {
+      "id": "v.ind.impf.act.3sg",
+      "first_chapter": 23,
+      "source_chapter": 23
+    },
+    {
+      "id": "v.ind.perf.act.3sg",
+      "first_chapter": 26,
+      "source_chapter": 26
+    },
+    {
+      "id": "v.ind.plup.act.3sg",
+      "first_chapter": 28,
+      "source_chapter": 28
+    },
+    {
+      "id": "v.ind.fut.act.3sg",
+      "first_chapter": 30,
+      "source_chapter": 30,
+      "conjugations": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "id": "v.ind.fut.act.3sg",
+      "first_chapter": 31,
+      "source_chapter": 31,
+      "conjugations": [
+        "3",
+        "3io",
+        "4"
+      ]
+    },
+    {
+      "id": "v.ind.futperf.act.3sg",
+      "first_chapter": 32,
+      "source_chapter": 32
+    },
+    {
+      "id": "v.ind.pres.pass.3sg",
+      "first_chapter": 38,
+      "source_chapter": 38
+    },
+    {
+      "id": "v.ind.impf.pass.3sg",
+      "first_chapter": 59,
+      "source_chapter": 59
+    },
+    {
+      "id": "v.ind.perf.pass.3sg",
+      "first_chapter": 39,
+      "source_chapter": 39
+    },
+    {
+      "id": "v.ind.plup.pass.3sg",
+      "first_chapter": 64,
+      "source_chapter": 64
+    },
+    {
+      "id": "v.ind.fut.pass.3sg",
+      "first_chapter": 61,
+      "source_chapter": 61
+    },
+    {
+      "id": "v.ind.futperf.pass.3sg",
+      "first_chapter": null,
+      "source_chapter": null
+    },
+    {
+      "id": "v.ind.pres.act.3pl",
+      "first_chapter": 8,
+      "source_chapter": 8
+    },
+    {
+      "id": "v.ind.impf.act.3pl",
+      "first_chapter": 23,
+      "source_chapter": 23
+    },
+    {
+      "id": "v.ind.perf.act.3pl",
+      "first_chapter": 26,
+      "source_chapter": 26
+    },
+    {
+      "id": "v.ind.plup.act.3pl",
+      "first_chapter": 28,
+      "source_chapter": 28
+    },
+    {
+      "id": "v.ind.fut.act.3pl",
+      "first_chapter": 30,
+      "source_chapter": 30,
+      "conjugations": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "id": "v.ind.fut.act.3pl",
+      "first_chapter": 31,
+      "source_chapter": 31,
+      "conjugations": [
+        "3",
+        "3io",
+        "4"
+      ]
+    },
+    {
+      "id": "v.ind.futperf.act.3pl",
+      "first_chapter": 32,
+      "source_chapter": 32
+    },
+    {
+      "id": "v.ind.pres.pass.3pl",
+      "first_chapter": 38,
+      "source_chapter": 38
+    },
+    {
+      "id": "v.ind.impf.pass.3pl",
+      "first_chapter": 59,
+      "source_chapter": 59
+    },
+    {
+      "id": "v.ind.perf.pass.3pl",
+      "first_chapter": 39,
+      "source_chapter": 39
+    },
+    {
+      "id": "v.ind.plup.pass.3pl",
+      "first_chapter": 64,
+      "source_chapter": 64
+    },
+    {
+      "id": "v.ind.fut.pass.3pl",
+      "first_chapter": 61,
+      "source_chapter": 61
+    },
+    {
+      "id": "v.ind.futperf.pass.3pl",
+      "first_chapter": null,
+      "source_chapter": null
+    },
+    {
+      "id": "v.ind.pres.act.1sg",
+      "first_chapter": 10,
+      "source_chapter": 10
+    },
+    {
+      "id": "v.ind.impf.act.1sg",
+      "first_chapter": 23,
+      "source_chapter": 23
+    },
+    {
+      "id": "v.ind.perf.act.1sg",
+      "first_chapter": 26,
+      "source_chapter": 26
+    },
+    {
+      "id": "v.ind.plup.act.1sg",
+      "first_chapter": 28,
+      "source_chapter": 28
+    },
+    {
+      "id": "v.ind.fut.act.1sg",
+      "first_chapter": 30,
+      "source_chapter": 30,
+      "conjugations": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "id": "v.ind.fut.act.1sg",
+      "first_chapter": 31,
+      "source_chapter": 31,
+      "conjugations": [
+        "3",
+        "3io",
+        "4"
+      ]
+    },
+    {
+      "id": "v.ind.futperf.act.1sg",
+      "first_chapter": 32,
+      "source_chapter": 32
+    },
+    {
+      "id": "v.ind.pres.pass.1sg",
+      "first_chapter": 38,
+      "source_chapter": 38
+    },
+    {
+      "id": "v.ind.impf.pass.1sg",
+      "first_chapter": 59,
+      "source_chapter": 59
+    },
+    {
+      "id": "v.ind.perf.pass.1sg",
+      "first_chapter": 39,
+      "source_chapter": 39
+    },
+    {
+      "id": "v.ind.plup.pass.1sg",
+      "first_chapter": 64,
+      "source_chapter": 64
+    },
+    {
+      "id": "v.ind.fut.pass.1sg",
+      "first_chapter": 61,
+      "source_chapter": 61
+    },
+    {
+      "id": "v.ind.futperf.pass.1sg",
+      "first_chapter": null,
+      "source_chapter": null
+    },
+    {
+      "id": "v.ind.pres.act.2sg",
+      "first_chapter": 11,
+      "source_chapter": 11
+    },
+    {
+      "id": "v.ind.impf.act.2sg",
+      "first_chapter": 23,
+      "source_chapter": 23
+    },
+    {
+      "id": "v.ind.perf.act.2sg",
+      "first_chapter": 26,
+      "source_chapter": 26
+    },
+    {
+      "id": "v.ind.plup.act.2sg",
+      "first_chapter": 28,
+      "source_chapter": 28
+    },
+    {
+      "id": "v.ind.fut.act.2sg",
+      "first_chapter": 30,
+      "source_chapter": 30,
+      "conjugations": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "id": "v.ind.fut.act.2sg",
+      "first_chapter": 31,
+      "source_chapter": 31,
+      "conjugations": [
+        "3",
+        "3io",
+        "4"
+      ]
+    },
+    {
+      "id": "v.ind.futperf.act.2sg",
+      "first_chapter": 32,
+      "source_chapter": 32
+    },
+    {
+      "id": "v.ind.pres.pass.2sg",
+      "first_chapter": 38,
+      "source_chapter": 38
+    },
+    {
+      "id": "v.ind.impf.pass.2sg",
+      "first_chapter": 59,
+      "source_chapter": 59
+    },
+    {
+      "id": "v.ind.perf.pass.2sg",
+      "first_chapter": 39,
+      "source_chapter": 39
+    },
+    {
+      "id": "v.ind.plup.pass.2sg",
+      "first_chapter": 64,
+      "source_chapter": 64
+    },
+    {
+      "id": "v.ind.fut.pass.2sg",
+      "first_chapter": 61,
+      "source_chapter": 61
+    },
+    {
+      "id": "v.ind.futperf.pass.2sg",
+      "first_chapter": null,
+      "source_chapter": null
+    },
+    {
+      "id": "v.ind.pres.act.1pl",
+      "first_chapter": 16,
+      "source_chapter": 16
+    },
+    {
+      "id": "v.ind.impf.act.1pl",
+      "first_chapter": 23,
+      "source_chapter": 23
+    },
+    {
+      "id": "v.ind.perf.act.1pl",
+      "first_chapter": 26,
+      "source_chapter": 26
+    },
+    {
+      "id": "v.ind.plup.act.1pl",
+      "first_chapter": 28,
+      "source_chapter": 28
+    },
+    {
+      "id": "v.ind.fut.act.1pl",
+      "first_chapter": 30,
+      "source_chapter": 30,
+      "conjugations": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "id": "v.ind.fut.act.1pl",
+      "first_chapter": 31,
+      "source_chapter": 31,
+      "conjugations": [
+        "3",
+        "3io",
+        "4"
+      ]
+    },
+    {
+      "id": "v.ind.futperf.act.1pl",
+      "first_chapter": 32,
+      "source_chapter": 32
+    },
+    {
+      "id": "v.ind.pres.pass.1pl",
+      "first_chapter": 38,
+      "source_chapter": 38
+    },
+    {
+      "id": "v.ind.impf.pass.1pl",
+      "first_chapter": 59,
+      "source_chapter": 59
+    },
+    {
+      "id": "v.ind.perf.pass.1pl",
+      "first_chapter": 39,
+      "source_chapter": 39
+    },
+    {
+      "id": "v.ind.plup.pass.1pl",
+      "first_chapter": 64,
+      "source_chapter": 64
+    },
+    {
+      "id": "v.ind.fut.pass.1pl",
+      "first_chapter": 61,
+      "source_chapter": 61
+    },
+    {
+      "id": "v.ind.futperf.pass.1pl",
+      "first_chapter": null,
+      "source_chapter": null
+    },
+    {
+      "id": "v.ind.pres.act.2pl",
+      "first_chapter": 16,
+      "source_chapter": 16
+    },
+    {
+      "id": "v.ind.impf.act.2pl",
+      "first_chapter": 23,
+      "source_chapter": 23
+    },
+    {
+      "id": "v.ind.perf.act.2pl",
+      "first_chapter": 26,
+      "source_chapter": 26
+    },
+    {
+      "id": "v.ind.plup.act.2pl",
+      "first_chapter": 28,
+      "source_chapter": 28
+    },
+    {
+      "id": "v.ind.fut.act.2pl",
+      "first_chapter": 30,
+      "source_chapter": 30,
+      "conjugations": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "id": "v.ind.fut.act.2pl",
+      "first_chapter": 31,
+      "source_chapter": 31,
+      "conjugations": [
+        "3",
+        "3io",
+        "4"
+      ]
+    },
+    {
+      "id": "v.ind.futperf.act.2pl",
+      "first_chapter": 32,
+      "source_chapter": 32
+    },
+    {
+      "id": "v.ind.pres.pass.2pl",
+      "first_chapter": 38,
+      "source_chapter": 38
+    },
+    {
+      "id": "v.ind.impf.pass.2pl",
+      "first_chapter": 59,
+      "source_chapter": 59
+    },
+    {
+      "id": "v.ind.perf.pass.2pl",
+      "first_chapter": 39,
+      "source_chapter": 39
+    },
+    {
+      "id": "v.ind.plup.pass.2pl",
+      "first_chapter": 64,
+      "source_chapter": 64
+    },
+    {
+      "id": "v.ind.fut.pass.2pl",
+      "first_chapter": 61,
+      "source_chapter": 61
+    },
+    {
+      "id": "v.ind.futperf.pass.2pl",
+      "first_chapter": null,
+      "source_chapter": null
+    },
+    {
+      "id": "v.subj.pres.act",
+      "first_chapter": 50,
+      "source_chapter": 50
+    },
+    {
+      "id": "v.subj.pres.pass",
+      "first_chapter": 99,
+      "source_chapter": 99
+    },
+    {
+      "id": "v.subj.impf.act",
+      "first_chapter": 68,
+      "source_chapter": 68
+    },
+    {
+      "id": "v.subj.impf.pass",
+      "first_chapter": 99,
+      "source_chapter": 99
+    },
+    {
+      "id": "v.subj.perf.act",
+      "first_chapter": 67,
+      "source_chapter": 67
+    },
+    {
+      "id": "v.subj.perf.pass",
+      "first_chapter": 99,
+      "source_chapter": 99
+    },
+    {
+      "id": "v.subj.plup.act",
+      "first_chapter": 79,
+      "source_chapter": 79
+    },
+    {
+      "id": "v.subj.plup.pass",
+      "first_chapter": 116,
+      "source_chapter": 116
+    },
+    {
+      "id": "v.imp.pres.act.sg",
+      "first_chapter": 18,
+      "source_chapter": 18
+    },
+    {
+      "id": "v.imp.pres.pass.sg",
+      "first_chapter": null,
+      "source_chapter": null
+    },
+    {
+      "id": "v.imp.pres.act.pl",
+      "first_chapter": 54,
+      "source_chapter": 54
+    },
+    {
+      "id": "v.imp.pres.pass.pl",
+      "first_chapter": null,
+      "source_chapter": null
+    },
+    {
+      "id": "v.inf.pres.act",
+      "first_chapter": 19,
+      "source_chapter": 19
+    },
+    {
+      "id": "v.inf.pres.pass",
+      "first_chapter": 84,
+      "source_chapter": 84
+    },
+    {
+      "id": "v.inf.perf.act",
+      "first_chapter": 82,
+      "source_chapter": 82
+    },
+    {
+      "id": "v.inf.perf.pass",
+      "first_chapter": 116,
+      "source_chapter": 116
+    },
+    {
+      "id": "v.inf.fut.act",
+      "first_chapter": 83,
+      "source_chapter": 83
+    },
+    {
+      "id": "v.inf.fut.pass",
+      "first_chapter": null,
+      "source_chapter": null
+    },
+    {
+      "id": "v.sum.pres.3sg",
+      "first_chapter": 1,
+      "source_chapter": 1
+    },
+    {
+      "id": "v.sum.pres.3pl",
+      "first_chapter": 1,
+      "source_chapter": 1
+    },
+    {
+      "id": "v.sum.impf",
+      "first_chapter": 22,
+      "source_chapter": 22
+    },
+    {
+      "id": "v.part.pres.act",
+      "first_chapter": 40,
+      "source_chapter": 40
+    },
+    {
+      "id": "v.part.perf.pass",
+      "first_chapter": 39,
+      "source_chapter": 39
+    },
+    {
+      "id": "v.part.fut.act",
+      "first_chapter": 43,
+      "source_chapter": 43
+    },
+    {
+      "id": "v.part.fut.pass",
+      "first_chapter": 87,
+      "source_chapter": 87
+    },
+    {
+      "id": "v.gerund",
+      "first_chapter": 86,
+      "source_chapter": 86
+    },
+    {
+      "id": "v.gerundive",
+      "first_chapter": 87,
+      "source_chapter": 87
+    },
+    {
+      "id": "v.supine",
+      "first_chapter": 107,
+      "source_chapter": 107
+    },
+    {
+      "id": "adj.comp",
+      "first_chapter": 46,
+      "source_chapter": 46
+    },
+    {
+      "id": "adj.sup",
+      "first_chapter": 47,
+      "source_chapter": 47
+    },
+    {
+      "id": "adv.pos",
+      "first_chapter": 58,
+      "source_chapter": 58
+    },
+    {
+      "id": "adv.comp",
+      "first_chapter": 112,
+      "source_chapter": 112
+    },
+    {
+      "id": "adv.sup",
+      "first_chapter": 112,
+      "source_chapter": 112
+    },
+    {
+      "id": "pron.reflexive",
+      "first_chapter": 81,
+      "source_chapter": 81
+    },
+    {
+      "id": "pron.suus",
+      "first_chapter": 81,
+      "source_chapter": 81
+    },
+    {
+      "id": "pron.meus",
+      "first_chapter": 14,
+      "source_chapter": 14
+    },
+    {
+      "id": "pron.tuus",
+      "first_chapter": 14,
+      "source_chapter": 14
+    },
+    {
+      "id": "pron.relative.oblique",
+      "first_chapter": 72,
+      "source_chapter": 72
+    }
+  ]
+}

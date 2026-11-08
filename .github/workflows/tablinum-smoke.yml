@@ -1,0 +1,126 @@
+name: Tablinum source and visual checks
+
+on:
+  pull_request:
+  push:
+    branches:
+      - fix/tablinum-v04-review-20261104
+      - design/classical-manuscript-20261104
+      - test/phase0-safety-net
+
+jobs:
+  node-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      statuses: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run Tablinum behavior and design-integrity checks
+        run: npm test
+      - name: Verify offline lexical audit snapshots on Linux
+        run: node scripts/build-legacy-lexeme-audit.cjs --check
+      - name: Validate 130-chapter roadmap and v3 outline
+        run: |
+          node curriculum/validate-roadmap-130.cjs
+          node curriculum/validate-outline-v3.cjs
+      - name: Verify 1500 and 3000 completion gates remain honestly unmet
+        run: |
+          for level in 1500 3000; do
+            if node curriculum/validate-roadmap-130.cjs --require-introduced-$level >/tmp/strict-$level.log 2>&1; then
+              echo "ERROR: $level unverified lemmas were falsely reported complete" >&2
+              exit 1
+            fi
+            grep -q "GATE NOT MET" /tmp/strict-$level.log
+          done
+          echo "PASS: 1500 and 3000 gates reject unverified vocabulary"
+
+      - name: Publish commit verification status
+        if: always() && github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TEST_RESULT: ${{ job.status }}
+        run: |
+          if [ "$TEST_RESULT" = "success" ]; then result=success; else result=failure; fi
+          gh api --method POST "repos/$GITHUB_REPOSITORY/statuses/$GITHUB_SHA" -f state="$result" -f context="tablinum/node-smoke" -f description="Node 22 smoke and visual-only checks" -f target_url="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+
+  browser-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      statuses: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install browser smoke test tool
+        run: npm install --no-save playwright@1.64.1
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Run responsive layout and interaction smoke test
+        run: npm run test:browser
+      - name: Test actual file:// offline browser launch and restored progress
+        run: npm run test:file
+      - name: Save manuscript screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tablinum-manuscript-preview
+          path: artifacts/*.png
+          if-no-files-found: ignore
+      - name: Publish commit verification status
+        if: always() && github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TEST_RESULT: ${{ job.status }}
+        run: |
+          if [ "$TEST_RESULT" = "success" ]; then result=success; else result=failure; fi
+          gh api --method POST "repos/$GITHUB_REPOSITORY/statuses/$GITHUB_SHA" -f state="$result" -f context="tablinum/browser-smoke" -f description="Chromium desktop/mobile visual smoke" -f target_url="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"
+
+  windows-offline:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+      statuses: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run original app and Phase 0 safety-net tests in PowerShell
+        run: npm test
+      - name: Check lexical snapshots are byte-identical on Windows
+        run: node scripts/build-legacy-lexeme-audit.cjs --check
+      - name: Install browser-testing library
+        run: npm install --no-save playwright@1.64.1
+      - name: Install Chromium for Windows file URL smoke
+        run: npx playwright install chromium
+      - name: Chromium file URL launch and backup restore on Windows
+        run: npm run test:file
+      - name: Edge file URL launch and backup restore on Windows
+        env:
+          TABLINUM_BROWSER_CHANNEL: msedge
+        run: npm run test:file
+      - name: Upload Windows offline screenshot
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tablinum-phase0-windows-file-url
+          path: artifacts/file-url-desktop.png
+          if-no-files-found: ignore
+      - name: Publish Windows Phase 0 status
+        if: always() && github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TEST_RESULT: ${{ job.status }}
+        shell: bash
+        run: |
+          if [ "$TEST_RESULT" = "success" ]; then result=success; else result=failure; fi
+          gh api --method POST "repos/$GITHUB_REPOSITORY/statuses/$GITHUB_SHA" -f state="$result" -f context="tablinum/windows-offline" -f description="Windows Edge/Chromium file:// app, backup and v4 progress" -f target_url="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"

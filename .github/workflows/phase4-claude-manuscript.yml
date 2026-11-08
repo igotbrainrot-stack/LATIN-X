@@ -1,0 +1,92 @@
+name: LATIN X original Claude pilot importer and full package
+on:
+  push:
+    branches:
+      - content/pilot-b01-c001-c008
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  generate-and-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Generate eight exact drafts from Claude manuscript
+        run: npm run build:pilot
+      - name: Verify source locks and grammar negative cases
+        run: npm run test:pilot
+      - name: All existing and pilot tests
+        run: npm test
+      - name: Verify compiler and unchanged strict approvals
+        run: |
+          npm run test:phase2
+          npm run test:phase3c
+          npm run test:lexemes
+          npm run test:package
+      - name: Confirm strict lexical milestones remain unmet
+        shell: bash
+        run: |
+          if node scripts/validate-lexemes.cjs --require-review-ready > gate-review.txt 2>&1; then exit 1; fi
+          for n in 1500 3000; do
+            if node curriculum/validate-roadmap-130.cjs --require-introduced-$n > gate-$n.txt 2>&1; then exit 1; fi
+            grep -q 'GATE NOT MET' gate-$n.txt
+          done
+      - name: Commit generated drafts and metrics after successful tests
+        shell: bash
+        run: |
+          git config user.name 'LATIN X CI'
+          git config user.email 'actions@users.noreply.github.com'
+          git add lessons/b01/c001.json lessons/b01/c002.json lessons/b01/c003.json lessons/b01/c004.json lessons/b01/c005.json lessons/b01/c006.json lessons/b01/c007.json lessons/b01/c008.json reports/pilot-metrics.md
+          if ! git diff --cached --quiet; then
+            git commit -m "build(pilot): derive eight unsigned lesson drafts and metrics from Claude manuscript"
+            git push origin HEAD:content/pilot-b01-c001-c008
+          fi
+      - name: Package full current runnable source and Claude review instructions
+        shell: bash
+        run: |
+          mkdir -p dist
+          git archive --format=zip --output=dist/LATIN_X_PHASE4_CLAUDE_MANUSCRIPT_FULL.zip HEAD
+          unzip -t dist/LATIN_X_PHASE4_CLAUDE_MANUSCRIPT_FULL.zip | tail -n 1
+          for p in index.html PHASE4_PILOT_CLAUDE_HANDOVER.md docs/pilot/CLAUDE_PILOT_B01_C001_C008.md lessons/b01/c001.json lessons/b01/c008.json reports/pilot-metrics.md scripts/import-claude-pilot.cjs tests/pilot-text.test.cjs; do
+            unzip -Z1 dist/LATIN_X_PHASE4_CLAUDE_MANUSCRIPT_FULL.zip | grep -Fx "$p"
+          done
+          sha256sum dist/LATIN_X_PHASE4_CLAUDE_MANUSCRIPT_FULL.zip > dist/SHA256SUMS.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: LATIN_X_PHASE4_CLAUDE_MANUSCRIPT_FULL
+          path: dist/
+          if-no-files-found: error
+          retention-days: 30
+  windows:
+    needs: generate-and-test
+    runs-on: windows-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: content/pilot-b01-c001-c008
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test importer, compiler and historical state on Windows
+        run: |
+          npm run test:pilot
+          npm test
+          npm run test:phase3c
+      - name: Install Chromium
+        run: |
+          npm install --no-save playwright@1.64.1
+          npx playwright install chromium
+      - name: Test original offline app and restored progress
+        run: npm run test:file
+      - name: Test saved course reopening and unreadable v4 recovery
+        run: npm run test:phase3c-review-browser
+      - name: Test owner vocabulary editor
+        run: npm run test:review-browser

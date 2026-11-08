@@ -1,0 +1,2859 @@
+{
+  "schema": "tablinum-lesson-v1",
+  "id": "b01-c001",
+  "chapter": 1,
+  "book": 1,
+  "status": "draft",
+  "drafted_by": "claude-draft-2026-11-05",
+  "manuscript_title": "In hortō",
+  "source_manuscript": "docs/pilot/CLAUDE_PILOT_B01_C001_C008.md",
+  "source_line": 42,
+  "review": {
+    "latin": {
+      "by": null,
+      "at": null,
+      "tier": null
+    },
+    "pedagogy": {
+      "by": null,
+      "at": null
+    }
+  },
+  "new_lexemes_declared": [],
+  "grammar_new": [],
+  "proposed_new_lemmas_raw": "**New (proposed, unsigned):** hortus, arbor, rosa, vīlla, puella, puer, Līvia, Tītus, magnus, parvus, pulcher, sum, in, et, sed, nōn, quoque, ecce, quis, ubi, ita, nunc, hīc, ibi.",
+  "proposed_grammar_raw": "**Grammar:** nominative subjects; `est`/`sunt`; the questions `Quis?`, `Ubi?` and `-ne?`; `in hortō`/`in vīllā`/`in arbore` as pictured place chunks.",
+  "proposed_margin_raw": "**Margin:** magnus ↔ parvus · puella ♀ = Līvia · puer ♂ = Tītus · hīc ↔ ibi · ita ↔ nōn · [pictūra: hortus, arbor magna, arbor parva, rosa, vīlla]",
+  "reviewer_notes": [],
+  "segments": [
+    {
+      "id": "b01-c001-l1",
+      "title_la": "Lēctiō 1 — Hortus",
+      "source_line": 48,
+      "sentences": [
+        {
+          "id": "b01-c001-s001",
+          "text_la": "Ecce hortus.",
+          "source_line": 50,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Ecce",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "hortus",
+              "start": 5,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s002",
+          "text_la": "Hortus magnus est.",
+          "source_line": 51,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Hortus",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "magnus",
+              "start": 7,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 14,
+              "end": 17,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s003",
+          "text_la": "In hortō est arbor.",
+          "source_line": 52,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "In",
+              "start": 0,
+              "end": 2,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "hortō",
+              "start": 3,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 9,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "arbor",
+              "start": 13,
+              "end": 18,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s004",
+          "text_la": "Arbor magna est.",
+          "source_line": 53,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Arbor",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "magna",
+              "start": 6,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 12,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s005",
+          "text_la": "In hortō est quoque rosa.",
+          "source_line": 54,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "In",
+              "start": 0,
+              "end": 2,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "hortō",
+              "start": 3,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 9,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "quoque",
+              "start": 13,
+              "end": 19,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "rosa",
+              "start": 20,
+              "end": 24,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s006",
+          "text_la": "Rosa parva est.",
+          "source_line": 55,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Rosa",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "parva",
+              "start": 5,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 11,
+              "end": 14,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s007",
+          "text_la": "Arbor magna est, sed rosa parva est.",
+          "source_line": 56,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Arbor",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "magna",
+              "start": 6,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 12,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sed",
+              "start": 17,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "rosa",
+              "start": 21,
+              "end": 25,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "parva",
+              "start": 26,
+              "end": 31,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 32,
+              "end": 35,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s008",
+          "text_la": "Rosa nōn magna est.",
+          "source_line": 57,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Rosa",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōn",
+              "start": 5,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "magna",
+              "start": 9,
+              "end": 14,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 15,
+              "end": 18,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s009",
+          "text_la": "Arbor nōn parva est.",
+          "source_line": 58,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Arbor",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōn",
+              "start": 6,
+              "end": 9,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "parva",
+              "start": 10,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 16,
+              "end": 19,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s010",
+          "text_la": "Rosa pulchra est.",
+          "source_line": 59,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Rosa",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pulchra",
+              "start": 5,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 13,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s011",
+          "text_la": "Ecce puella.",
+          "source_line": 60,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Ecce",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "puella",
+              "start": 5,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s012",
+          "text_la": "Puella in hortō est.",
+          "source_line": 61,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Puella",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 7,
+              "end": 9,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "hortō",
+              "start": 10,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 16,
+              "end": 19,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s013",
+          "text_la": "Quis est puella?",
+          "source_line": 62,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Quis",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 5,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "puella",
+              "start": 9,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s014",
+          "text_la": "Puella est Līvia.",
+          "source_line": 63,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Puella",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 7,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līvia",
+              "start": 11,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s015",
+          "text_la": "Līvia nōn magna est; Līvia parva est.",
+          "source_line": 64,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Līvia",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōn",
+              "start": 6,
+              "end": 9,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "magna",
+              "start": 10,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 16,
+              "end": 19,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līvia",
+              "start": 21,
+              "end": 26,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "parva",
+              "start": 27,
+              "end": 32,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 33,
+              "end": 36,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s016",
+          "text_la": "Ubi est Līvia?",
+          "source_line": 65,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Ubi",
+              "start": 0,
+              "end": 3,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 4,
+              "end": 7,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līvia",
+              "start": 8,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s017",
+          "text_la": "Līvia in hortō est.",
+          "source_line": 66,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Līvia",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 6,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "hortō",
+              "start": 9,
+              "end": 14,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 15,
+              "end": 18,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s018",
+          "text_la": "Līvia et rosa in hortō sunt.",
+          "source_line": 67,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Līvia",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 6,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "rosa",
+              "start": 9,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 14,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "hortō",
+              "start": 17,
+              "end": 22,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sunt",
+              "start": 23,
+              "end": 27,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s019",
+          "text_la": "Ecce vīlla.",
+          "source_line": 68,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Ecce",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "vīlla",
+              "start": 5,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s020",
+          "text_la": "Vīlla quoque magna est.",
+          "source_line": 69,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Vīlla",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "quoque",
+              "start": 6,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "magna",
+              "start": 13,
+              "end": 18,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 19,
+              "end": 22,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s021",
+          "text_la": "Hortus est hīc; vīlla est ibi.",
+          "source_line": 70,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Hortus",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 7,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "hīc",
+              "start": 11,
+              "end": 14,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "vīlla",
+              "start": 16,
+              "end": 21,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 22,
+              "end": 25,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ibi",
+              "start": 26,
+              "end": 29,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s022",
+          "text_la": "Ecce puer.",
+          "source_line": 71,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Ecce",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "puer",
+              "start": 5,
+              "end": 9,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s023",
+          "text_la": "Puer quoque parvus est.",
+          "source_line": 72,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Puer",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "quoque",
+              "start": 5,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "parvus",
+              "start": 12,
+              "end": 18,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 19,
+              "end": 22,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s024",
+          "text_la": "Quis est puer?",
+          "source_line": 73,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Quis",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 5,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "puer",
+              "start": 9,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s025",
+          "text_la": "Puer est Tītus.",
+          "source_line": 74,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Puer",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 5,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 9,
+              "end": 14,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s026",
+          "text_la": "Ubi est Tītus?",
+          "source_line": 75,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Ubi",
+              "start": 0,
+              "end": 3,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 4,
+              "end": 7,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 8,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s027",
+          "text_la": "Tītus in vīllā est.",
+          "source_line": 76,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Tītus",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 6,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "vīllā",
+              "start": 9,
+              "end": 14,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 15,
+              "end": 18,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s028",
+          "text_la": "Līvia in hortō est, sed Tītus in vīllā est.",
+          "source_line": 77,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Līvia",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 6,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "hortō",
+              "start": 9,
+              "end": 14,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 15,
+              "end": 18,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sed",
+              "start": 20,
+              "end": 23,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 24,
+              "end": 29,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 30,
+              "end": 32,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "vīllā",
+              "start": 33,
+              "end": 38,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 39,
+              "end": 42,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s029",
+          "text_la": "Estne Tītus in hortō?",
+          "source_line": 78,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Estne",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 6,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 12,
+              "end": 14,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "hortō",
+              "start": 15,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s030",
+          "text_la": "Nōn, Tītus nōn in hortō est.",
+          "source_line": 79,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Nōn",
+              "start": 0,
+              "end": 3,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 5,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōn",
+              "start": 11,
+              "end": 14,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 15,
+              "end": 17,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "hortō",
+              "start": 18,
+              "end": 23,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 24,
+              "end": 27,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b01-c001-l2",
+      "title_la": "Lēctiō 2 — Ubi est Tītus?",
+      "source_line": 81,
+      "sentences": [
+        {
+          "id": "b01-c001-s031",
+          "text_la": "Nunc Tītus nōn in vīllā est.",
+          "source_line": 83,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Nunc",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 5,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōn",
+              "start": 11,
+              "end": 14,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 15,
+              "end": 17,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "vīllā",
+              "start": 18,
+              "end": 23,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 24,
+              "end": 27,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s032",
+          "text_la": "Ubi est puer?",
+          "source_line": 84,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Ubi",
+              "start": 0,
+              "end": 3,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 4,
+              "end": 7,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "puer",
+              "start": 8,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s033",
+          "text_la": "Līvia: «Ubi est puer Tītus? Estne Tītus in vīllā?»",
+          "source_line": 85,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Līvia",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Ubi",
+              "start": 8,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 12,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "puer",
+              "start": 16,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 21,
+              "end": 26,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Estne",
+              "start": 28,
+              "end": 33,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 34,
+              "end": 39,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 40,
+              "end": 42,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "vīllā",
+              "start": 43,
+              "end": 48,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s034",
+          "text_la": "Nōn est. Vīlla magna est, sed Tītus ibi nōn est.",
+          "source_line": 86,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Nōn",
+              "start": 0,
+              "end": 3,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 4,
+              "end": 7,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Vīlla",
+              "start": 9,
+              "end": 14,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "magna",
+              "start": 15,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 21,
+              "end": 24,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sed",
+              "start": 26,
+              "end": 29,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 30,
+              "end": 35,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ibi",
+              "start": 36,
+              "end": 39,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōn",
+              "start": 40,
+              "end": 43,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 44,
+              "end": 47,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s035",
+          "text_la": "«Estne puer in hortō?»",
+          "source_line": 87,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Estne",
+              "start": 1,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "puer",
+              "start": 7,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 12,
+              "end": 14,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "hortō",
+              "start": 15,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s036",
+          "text_la": "Ita, Tītus in hortō est.",
+          "source_line": 88,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Ita",
+              "start": 0,
+              "end": 3,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 5,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 11,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "hortō",
+              "start": 14,
+              "end": 19,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 20,
+              "end": 23,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s037",
+          "text_la": "Sed ubi in hortō?",
+          "source_line": 89,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Sed",
+              "start": 0,
+              "end": 3,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ubi",
+              "start": 4,
+              "end": 7,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 8,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "hortō",
+              "start": 11,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s038",
+          "text_la": "Rosa hīc est, sed puer hīc nōn est.",
+          "source_line": 90,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Rosa",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "hīc",
+              "start": 5,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 9,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sed",
+              "start": 14,
+              "end": 17,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "puer",
+              "start": 18,
+              "end": 22,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "hīc",
+              "start": 23,
+              "end": 26,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōn",
+              "start": 27,
+              "end": 30,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 31,
+              "end": 34,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s039",
+          "text_la": "In hortō sunt arbor magna et arbor parva.",
+          "source_line": 91,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "In",
+              "start": 0,
+              "end": 2,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "hortō",
+              "start": 3,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sunt",
+              "start": 9,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "arbor",
+              "start": 14,
+              "end": 19,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "magna",
+              "start": 20,
+              "end": 25,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 26,
+              "end": 28,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "arbor",
+              "start": 29,
+              "end": 34,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "parva",
+              "start": 35,
+              "end": 40,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s040",
+          "text_la": "Estne Tītus in arbore parvā?",
+          "source_line": 92,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Estne",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 6,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 12,
+              "end": 14,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "arbore",
+              "start": 15,
+              "end": 21,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "parvā",
+              "start": 22,
+              "end": 27,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s041",
+          "text_la": "Nōn: arbor parva nōn magna est, et puer ibi nōn est.",
+          "source_line": 93,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Nōn",
+              "start": 0,
+              "end": 3,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "arbor",
+              "start": 5,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "parva",
+              "start": 11,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōn",
+              "start": 17,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "magna",
+              "start": 21,
+              "end": 26,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 27,
+              "end": 30,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 32,
+              "end": 34,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "puer",
+              "start": 35,
+              "end": 39,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ibi",
+              "start": 40,
+              "end": 43,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōn",
+              "start": 44,
+              "end": 47,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 48,
+              "end": 51,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s042",
+          "text_la": "Ecce! In arbore magnā est puer!",
+          "source_line": 94,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Ecce",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "In",
+              "start": 6,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "arbore",
+              "start": 9,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "magnā",
+              "start": 16,
+              "end": 21,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 22,
+              "end": 25,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "puer",
+              "start": 26,
+              "end": 30,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s043",
+          "text_la": "Quis est puer in arbore?",
+          "source_line": 95,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Quis",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 5,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "puer",
+              "start": 9,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 14,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "arbore",
+              "start": 17,
+              "end": 23,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s044",
+          "text_la": "Puer in arbore est Tītus!",
+          "source_line": 96,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Puer",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 5,
+              "end": 7,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "arbore",
+              "start": 8,
+              "end": 14,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 15,
+              "end": 18,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 19,
+              "end": 24,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s045",
+          "text_la": "Tītus parvus est, sed arbor magna est.",
+          "source_line": 97,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Tītus",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "parvus",
+              "start": 6,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 13,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sed",
+              "start": 18,
+              "end": 21,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "arbor",
+              "start": 22,
+              "end": 27,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "magna",
+              "start": 28,
+              "end": 33,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 34,
+              "end": 37,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s046",
+          "text_la": "Līvia: «Ecce Tītus! Tītus in arbore est!»",
+          "source_line": 98,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Līvia",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Ecce",
+              "start": 8,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 13,
+              "end": 18,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 20,
+              "end": 25,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 26,
+              "end": 28,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "arbore",
+              "start": 29,
+              "end": 35,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 36,
+              "end": 39,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s047",
+          "text_la": "Nunc Līvia et Tītus in hortō sunt.",
+          "source_line": 99,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Nunc",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līvia",
+              "start": 5,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 11,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 14,
+              "end": 19,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 20,
+              "end": 22,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "hortō",
+              "start": 23,
+              "end": 28,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sunt",
+              "start": 29,
+              "end": 33,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s048",
+          "text_la": "Līvia est hīc, et Tītus est ibi.",
+          "source_line": 100,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Līvia",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 6,
+              "end": 9,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "hīc",
+              "start": 10,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 15,
+              "end": 17,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 18,
+              "end": 23,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 24,
+              "end": 27,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ibi",
+              "start": 28,
+              "end": 31,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s049",
+          "text_la": "Et ubi est Līvia? Līvia in hortō est, et rosa quoque.",
+          "source_line": 101,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Et",
+              "start": 0,
+              "end": 2,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ubi",
+              "start": 3,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 7,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līvia",
+              "start": 11,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līvia",
+              "start": 18,
+              "end": 23,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 24,
+              "end": 26,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "hortō",
+              "start": 27,
+              "end": 32,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 33,
+              "end": 36,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 38,
+              "end": 40,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "rosa",
+              "start": 41,
+              "end": 45,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "quoque",
+              "start": 46,
+              "end": 52,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s050",
+          "text_la": "Et Tītus? Tītus nōn in vīllā, sed in arbore est.",
+          "source_line": 102,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Et",
+              "start": 0,
+              "end": 2,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 3,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 10,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōn",
+              "start": 16,
+              "end": 19,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 20,
+              "end": 22,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "vīllā",
+              "start": 23,
+              "end": 28,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sed",
+              "start": 30,
+              "end": 33,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 34,
+              "end": 36,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "arbore",
+              "start": 37,
+              "end": 43,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 44,
+              "end": 47,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s051",
+          "text_la": "Hortus magnus et pulcher est.",
+          "source_line": 103,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Hortus",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "magnus",
+              "start": 7,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 14,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pulcher",
+              "start": 17,
+              "end": 24,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 25,
+              "end": 28,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c001-s052",
+          "text_la": "Arbor magna est, rosa parva est, puella parva est, puer parvus est.",
+          "source_line": 104,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Arbor",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "magna",
+              "start": 6,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 12,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "rosa",
+              "start": 17,
+              "end": 21,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "parva",
+              "start": 22,
+              "end": 27,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 28,
+              "end": 31,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "puella",
+              "start": 33,
+              "end": 39,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "parva",
+              "start": 40,
+              "end": 45,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 46,
+              "end": 49,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "puer",
+              "start": 51,
+              "end": 55,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "parvus",
+              "start": 56,
+              "end": 62,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 63,
+              "end": 66,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "b01-c001-q001",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 108,
+      "text_original": "1. Quis est puella? — Puella est Līvia.",
+      "prompt_text": "Quis est puella?",
+      "model_answer_raw": "Puella est Līvia.",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    },
+    {
+      "id": "b01-c001-q002",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 109,
+      "text_original": "2. Estne rosa magna? — Nōn, rosa parva est.",
+      "prompt_text": "Estne rosa magna?",
+      "model_answer_raw": "Nōn, rosa parva est.",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    },
+    {
+      "id": "b01-c001-q003",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 110,
+      "text_original": "3. Ubi est vīlla? — Vīlla ibi est. / Vīlla nōn in hortō est.",
+      "prompt_text": "Ubi est vīlla?",
+      "model_answer_raw": "Vīlla ibi est. / Vīlla nōn in hortō est.",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    },
+    {
+      "id": "b01-c001-q004",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 111,
+      "text_original": "4. Estne Tītus in vīllā? (Lēctiō 2) — Nōn, Tītus in hortō est.",
+      "prompt_text": "Estne Tītus in vīllā? (Lēctiō 2)",
+      "model_answer_raw": "Nōn, Tītus in hortō est.",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    },
+    {
+      "id": "b01-c001-q005",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 112,
+      "text_original": "5. Ubi est Tītus? — Tītus in arbore magnā est.",
+      "prompt_text": "Ubi est Tītus?",
+      "model_answer_raw": "Tītus in arbore magnā est.",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    },
+    {
+      "id": "b01-c001-q006",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 113,
+      "text_original": "6. Estne arbor magna an parva? *(picture choice)* — Arbor magna est.",
+      "prompt_text": "Estne arbor magna an parva? *(picture choice)*",
+      "model_answer_raw": "Arbor magna est.",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    },
+    {
+      "id": "b01-c001-q007",
+      "type": "pic",
+      "status": "proposed_ungraded",
+      "scoring_enabled": false,
+      "prompt_la": "Ubi est arbor magna?",
+      "scene_id": "b01-c001-scene",
+      "region_id": "arbor-magna",
+      "answer": "arbor-magna",
+      "review": {
+        "by": null,
+        "at": null
+      },
+      "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+    },
+    {
+      "id": "b01-c001-q008",
+      "type": "pic",
+      "status": "proposed_ungraded",
+      "scoring_enabled": false,
+      "prompt_la": "Ubi est arbor parva?",
+      "scene_id": "b01-c001-scene",
+      "region_id": "arbor-parva",
+      "answer": "arbor-parva",
+      "review": {
+        "by": null,
+        "at": null
+      },
+      "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+    },
+    {
+      "id": "b01-c001-q009",
+      "type": "pic",
+      "status": "proposed_ungraded",
+      "scoring_enabled": false,
+      "prompt_la": "Ubi est rosa?",
+      "scene_id": "b01-c001-scene",
+      "region_id": "rosa",
+      "answer": "rosa",
+      "review": {
+        "by": null,
+        "at": null
+      },
+      "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+    },
+    {
+      "id": "b01-c001-q010",
+      "type": "pic",
+      "status": "proposed_ungraded",
+      "scoring_enabled": false,
+      "prompt_la": "Ubi est vīlla?",
+      "scene_id": "b01-c001-scene",
+      "region_id": "vīlla",
+      "answer": "vīlla",
+      "review": {
+        "by": null,
+        "at": null
+      },
+      "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+    },
+    {
+      "id": "b01-c001-q011",
+      "type": "pic",
+      "status": "proposed_ungraded",
+      "scoring_enabled": false,
+      "prompt_la": "Ubi est Līvia?",
+      "scene_id": "b01-c001-scene",
+      "region_id": "Līvia",
+      "answer": "Līvia",
+      "review": {
+        "by": null,
+        "at": null
+      },
+      "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+    },
+    {
+      "id": "b01-c001-q012",
+      "type": "pic",
+      "status": "proposed_ungraded",
+      "scoring_enabled": false,
+      "prompt_la": "Ubi est Tītus?",
+      "scene_id": "b01-c001-scene",
+      "region_id": "Tītus",
+      "answer": "Tītus",
+      "review": {
+        "by": null,
+        "at": null
+      },
+      "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+    }
+  ],
+  "speaking": [
+    {
+      "id": "b01-c001-sp001",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 117,
+      "text_original": "- Point to the picture and say what is big and what is small: `Arbor magna est. Rosa parva est.`",
+      "prompt_text": "Point to the picture and say what is big and what is small: `Arbor magna est. Rosa parva est.`",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    },
+    {
+      "id": "b01-c001-sp002",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 118,
+      "text_original": "- Answer aloud: `Ubi est Līvia?` `Ubi est Tītus?`",
+      "prompt_text": "Answer aloud: `Ubi est Līvia?` `Ubi est Tītus?`",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    }
+  ],
+  "title": "In hortō",
+  "is_review": false,
+  "budget_ref": "curriculum/vocabulary-budgets-130.json#1",
+  "lesson_segments": 2,
+  "target_running_tokens": [
+    250,
+    360
+  ],
+  "reading_sentence_count": 52,
+  "reading_token_count": 275,
+  "notes_for_reviewer": "UNSIGNED DRAFT. All lexical and grammar annotations remain unverified. Proposed word budget: 6\n"
+}

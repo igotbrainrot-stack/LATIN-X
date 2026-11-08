@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tablinum — Vocabulary Review</title>
+<style>
+:root{color-scheme:light;--paper:#f7f1e5;--ink:#2b302d;--muted:#5a675f;--edge:#d3c5a9;--gold:#a6752d;--blue:#244d5d;--light:#fffdf7;--green:#226044;--red:#9b3e36}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,"Times New Roman",serif}
+header{background:#263a36;color:#fff9e8;padding:1.1rem max(1.2rem,calc((100vw - 1280px)/2))}h1{font-size:1.7rem;margin:.1rem 0}.sub{opacity:.85;font:14px system-ui,sans-serif}
+main{max-width:1280px;margin:1.1rem auto;padding:0 1rem}h2{font-size:1.25rem;margin:.3rem 0 .8rem}
+.notice{background:#fbf0d4;padding:.8rem 1rem;border-left:4px solid var(--gold);margin-bottom:1rem;font:14px/1.45 system-ui,sans-serif}
+.toolbar{display:flex;gap:.6rem;align-items:center;flex-wrap:wrap;margin:1rem 0}
+button,.file-label{cursor:pointer;border:1px solid #8d8169;background:#fff9eb;color:var(--ink);padding:.55rem .8rem;font:600 13px system-ui,sans-serif;border-radius:5px}
+button:hover,.file-label:hover{background:#e9dfc8}button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible{outline:3px solid #698eaa;outline-offset:2px}
+button.primary{background:var(--blue);color:#fff;border-color:var(--blue)}button.primary:hover{background:#133847}
+input[type=file]{max-width:275px}.small{font-size:12px;color:var(--muted);font-family:system-ui,sans-serif}
+.metrics{display:flex;gap:.7rem;flex-wrap:wrap;margin:.7rem 0}.metric{border:1px solid var(--edge);border-radius:6px;background:#fffcf5;padding:.6rem .85rem;min-width:117px}
+.metric strong{display:block;font:700 22px system-ui,sans-serif}.metric span{font:12px system-ui,sans-serif;color:var(--muted)}
+.content{display:grid;grid-template-columns:minmax(280px,380px) minmax(0,1fr);gap:1rem}
+.panel{background:var(--light);border:1px solid var(--edge);border-radius:7px;padding:.85rem;min-width:0}
+.filters{display:flex;gap:.45rem;margin:.65rem 0}input,textarea,select{font:14px system-ui,sans-serif;border:1px solid #baa98e;border-radius:4px;padding:.45rem;background:#fff;width:100%}
+#itemList{list-style:none;margin:.6rem 0 0;padding:0;overflow:auto;max-height:65vh}
+#itemList button{display:block;width:100%;text-align:left;border-radius:0;border:0;border-bottom:1px solid #e8dfcf;background:#fffdf7;padding:.6rem}
+#itemList button[aria-current=true]{background:#e0eceb;border-left:4px solid var(--blue);padding-left:calc(.6rem - 4px)}
+.item-title{font-size:15px;font-family:Georgia,serif}.item-meta{display:block;font:11px system-ui,sans-serif;color:var(--muted);margin-top:.1rem}
+.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.65rem}
+.fields label{display:block;font:600 12px system-ui,sans-serif;color:#344842}
+.fields input,.fields textarea,.fields select{margin-top:.25rem;font-weight:400;color:#202d2a}
+.fields .wide{grid-column:1/-1}.fields textarea{min-height:65px;resize:vertical}
+.readonly{background:#f1ede4;white-space:pre-wrap;overflow-wrap:anywhere;padding:.5rem;border:1px solid #e1d7c5;margin:.1rem 0 .7rem}
+details{font:13px/1.5 system-ui,sans-serif;margin:.7rem 0;border-top:1px solid #e1d7c5;padding-top:.5rem}
+#status{min-height:1.5rem;margin-top:.65rem;font:600 13px system-ui,sans-serif}
+footer{font:12px system-ui,sans-serif;color:var(--muted);padding:1.4rem 0}
+@media(max-width:800px){.content{grid-template-columns:1fr}#itemList{max-height:260px}.fields{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><h1>Tablinum · Vocabulary Review</h1><div class="sub">Offline owner review · 128 legacy glossary candidates · no automatic approvals</div></header>
+<main>
+<div class="notice"><strong>Claude drafted; only you can sign.</strong> Choose the default
+<code>curriculum/lexicon/review-sheets/legacy-candidates-claude-draft-32col.csv</code>
+using “Choose File” below. Browser security prevents automatically opening a local CSV. Save/export a new CSV after making edits; changes are not silently written to disk. Owner review is not Latinist verification.</div>
+<div class="toolbar">
+<input id="file" type="file" accept=".csv,text/csv" aria-label="Choose vocabulary CSV">
+<button class="primary" id="download" disabled>Export edited CSV</button>
+<button id="previous" disabled>Previous</button><button id="next" disabled>Next</button>
+<span class="small">Export after each review session. Never import unreviewed proposals as approved.</span>
+</div>
+<div class="metrics" role="status" aria-label="Review progress">
+<div class="metric"><strong id="total">0</strong><span>loaded</span></div>
+<div class="metric"><strong id="approved">0</strong><span>approved by owner</span></div>
+<div class="metric"><strong id="rejected">0</strong><span>rejected</span></div>
+<div class="metric"><strong id="pending">0</strong><span>pending / deferred</span></div>
+</div>
+<div class="content">
+<section class="panel" aria-label="Candidates"><h2>Review queue</h2>
+<div class="filters"><input id="search" placeholder="Search Latin or English" aria-label="Search candidates">
+<select id="filter" aria-label="Filter review state"><option value="all">All</option><option value="pending">Pending</option><option value="approved">Approved</option><option value="rejected">Rejected</option></select></div>
+<ul id="itemList"></ul>
+</section>
+<section class="panel" aria-label="Candidate editor"><h2 id="rowTitle">Choose a CSV to begin</h2>
+<div id="context" class="small" aria-live="polite"></div><div id="details" hidden>
+<div class="fields" id="fields"></div>
+<details><summary>Immutable source evidence</summary><div id="source"></div></details>
+<div class="toolbar"><button class="primary" id="save">Save row in this session</button><button id="revert">Revert unsaved edits</button></div>
+</div><div id="status" role="status" aria-live="polite"></div>
+</section>
+</div>
+<footer>Data stays in this browser session until export. The CLI validator is authoritative. After export, run <code>Validate Vocabulary CSV.cmd</code>. The Phase 1 registry and Latin course are unchanged until a separate signed import.</footer>
+</main>
+<script>
+"use strict";
+(function(){
+var HEADERS="priority,candidate_id,legacy_head,legacy_gloss,legacy_forms,source_rows,ambiguous_sentence_tokens,dcc_headword_hint,dcc_rank_hint,proposed_lemma,proposed_id,pos,principal_parts,conjugation,declension,gender,sense_id,gloss_en,gloss_la,source_id,source_locator,license_id,macron_authority,macron_reviewed,homograph_of,review_tier,drafted_by,decision,reviewer,reviewed_at,second_reviewer,notes".split(",");
+var EDIT=["proposed_lemma","proposed_id","pos","principal_parts","conjugation","declension","gender","sense_id","gloss_en","gloss_la","source_id","source_locator","license_id","macron_authority","macron_reviewed","homograph_of","review_tier","drafted_by","decision","reviewer","reviewed_at","second_reviewer","notes"];
+var LONG=new Set(["principal_parts","gloss_en","gloss_la","source_locator","macron_authority","notes"]);
+var rows=[],current=-1,dirty=false,unexported=false,original="",filename="vocabulary-owner-reviewed.csv";
+function el(id){return document.getElementById(id)}
+function message(s,problem){el("status").textContent=s;el("status").style.color=problem?"#9b3e36":"#226044"}
+function parseCSV(s){
+ var out=[],r=[],v="",quote=false,atStart=true;
+ for(var i=0;i<s.length;i++){
+  var ch=s[i];
+  if(quote){if(ch==='"'&&s[i+1]==='"'){v+='"';i++}else if(ch==='"'){quote=false}else{v+=ch}}
+  else if(ch==='"'&&atStart){quote=true;atStart=false}
+  else if(ch===','){r.push(v);v="";atStart=true}
+  else if(ch==='\n'||ch==='\r'){if(ch==='\r'&&s[i+1]==='\n')i++;r.push(v);if(r.some(Boolean))out.push(r);r=[];v="";atStart=true}
+  else {if(ch==='"')throw Error("Unexpected quote in CSV");v+=ch;atStart=false}
+ }
+ if(quote)throw Error("Unclosed quoted CSV value");
+ r.push(v);if(r.some(Boolean))out.push(r);
+ if(!out.length)throw Error("Empty CSV");
+ if(JSON.stringify(out[0])!==JSON.stringify(HEADERS))throw Error("Expected exact 32-column review sheet");
+ var header=out.shift();if(out.length!==128)throw Error("Expected 128 candidates, found "+out.length);
+ var ids=new Set();
+ return out.map(function(values,ix){
+  if(values.length!==32)throw Error("CSV row "+(ix+2)+" has "+values.length+" columns");
+  var obj={};header.forEach(function(h,j){obj[h]=values[j]});
+  if(!obj.candidate_id||ids.has(obj.candidate_id))throw Error("Duplicate or missing candidate ID at row "+(ix+2));
+  ids.add(obj.candidate_id);return obj;
+ });
+}
+function csvEscape(v){var s=String(v||"");return '"'+s.replace(/"/g,'""')+'"'}
+function serialize(rs){return [HEADERS.map(csvEscape).join(",")].concat(rs.map(function(r){return HEADERS.map(function(h){return csvEscape(r[h])}).join(",")})).join("\r\n")+"\r\n"}
+function state(r){var d=(r.decision||"").toLowerCase().trim();return d==="approve"?"approved":d==="reject"?"rejected":"pending"}
+function matches(r){var f=el("filter").value,q=el("search").value.toLocaleLowerCase().trim();return (f==="all"||state(r)===f)&&(!q||[r.legacy_head,r.legacy_gloss,r.proposed_lemma,r.proposed_id,r.gloss_en].join(" ").toLocaleLowerCase().includes(q))}
+function updateStats(){el("total").textContent=rows.length;["approved","rejected","pending"].forEach(function(s){el(s).textContent=rows.filter(function(r){return state(r)===s}).length})}
+function renderList(){var list=el("itemList");list.replaceChildren();rows.forEach(function(r,i){if(!matches(r))return;var li=document.createElement("li"),btn=document.createElement("button");btn.type="button";btn.setAttribute("aria-current",i===current?"true":"false");var strong=document.createElement("span");strong.className="item-title";strong.textContent=r.legacy_head+" → "+(r.proposed_lemma||"undrafted");var meta=document.createElement("span");meta.className="item-meta";meta.textContent=state(r)+" · "+r.legacy_gloss+" · "+r.candidate_id;btn.append(strong,meta);btn.addEventListener("click",function(){selectRow(i)});li.append(btn);list.append(li)})}
+function label(h){return h.replace(/_/g," ").replace(/^./,function(a){return a.toUpperCase()})}
+function createInput(name,value){
+ var container=document.createElement("label");container.className=LONG.has(name)?"wide":"";container.append(document.createTextNode(label(name)));
+ var field;if(name==="decision"||name==="review_tier"||name==="macron_reviewed"){
+  field=document.createElement("select");var choices=name==="decision"?["","approve","reject","needs_review","defer"]:name==="review_tier"?["","owner","latinist"]:["","yes","no"];
+  choices.forEach(function(c){var option=document.createElement("option");option.value=c;option.textContent=c||"— not selected —";field.append(option)})
+ }else if(LONG.has(name)){field=document.createElement("textarea")}else{field=document.createElement("input");field.type="text"}
+ field.name=name;field.value=value||"";field.addEventListener("input",function(){dirty=true;message("Unsaved edits. Click Save row, then Export edited CSV.",true)});container.append(field);return container;
+}
+function display(){
+ var r=rows[current];el("details").hidden=!r;
+ if(!r){el("rowTitle").textContent="Choose a CSV to begin";el("context").textContent="";return}
+ el("rowTitle").textContent=(current+1)+"/"+rows.length+" · "+r.legacy_head;
+ el("context").textContent="Original gloss: "+r.legacy_gloss+" | Candidate: "+r.candidate_id;
+ var dest=el("fields");dest.replaceChildren();EDIT.forEach(function(h){dest.append(createInput(h,r[h]))});
+ var source=el("source");source.replaceChildren();
+ ["priority","legacy_forms","source_rows","ambiguous_sentence_tokens","dcc_headword_hint","dcc_rank_hint"].forEach(function(h){var p=document.createElement("p"),s=document.createElement("strong");s.textContent=label(h)+": ";p.append(s,document.createTextNode(r[h]||"—"));source.append(p)});
+ el("previous").disabled=current<=0;el("next").disabled=current>=rows.length-1;dirty=false;
+}
+function save(){
+ if(current<0)return;
+ var values={};el("fields").querySelectorAll("input,textarea,select").forEach(function(e){values[e.name]=e.value});
+ var d=values.decision.trim().toLowerCase();
+ if(d==="approve"&&(["proposed_lemma","proposed_id","pos","sense_id","gloss_en","source_id","source_locator","license_id","reviewer","reviewed_at","macron_authority"].some(function(k){return !values[k].trim()})||!["owner","latinist"].includes(values.review_tier)||values.macron_reviewed!=="yes"||(values.review_tier==="owner"&&(!values.drafted_by.trim()||values.drafted_by.trim()===values.reviewer.trim())))){
+  message("Approval requires checked lemma/sense, evidence licence, real signer/date, tier and macron review. Owner signer must differ from drafter. No decision saved.",true);return
+ }
+ if(d==="reject"&&(!values.reviewer.trim()||!values.reviewed_at.trim()||!values.notes.trim())){
+  message("A rejection requires reviewer, date and a reason.",true);return
+ }
+ Object.assign(rows[current],values);dirty=false;unexported=true;updateStats();renderList();message("Row saved in memory. Export edited CSV to retain your changes.",false)
+}
+function selectRow(i){if(dirty&&!confirm("Discard unsaved edits to this row?"))return;current=i;display();renderList();message("")}
+el("save").addEventListener("click",save);
+el("revert").addEventListener("click",function(){display();message("Unsaved edits discarded")});
+el("search").addEventListener("input",renderList);el("filter").addEventListener("change",renderList);
+el("previous").addEventListener("click",function(){if(current>0)selectRow(current-1)});
+el("next").addEventListener("click",function(){if(current<rows.length-1)selectRow(current+1)});
+el("file").addEventListener("change",function(ev){
+ var file=ev.target.files[0];if(!file)return;var reader=new FileReader();
+ reader.onload=function(){try{var loaded=parseCSV(String(reader.result).replace(/^\uFEFF/,""));rows=loaded;current=0;dirty=false;unexported=false;original=reader.result;filename="vocabulary-owner-reviewed.csv";updateStats();display();renderList();el("download").disabled=false;message("Loaded 128 source candidates. No approval was created by importing.",false)}
+ catch(err){message("Could not load: "+err.message,true)}};reader.onerror=function(){message("Could not read the chosen file",true)};reader.readAsText(file,"UTF-8")
+});
+el("download").addEventListener("click",function(){
+ if(dirty){message("Save row before exporting.",true);return}
+ if(!rows.length)return;
+ var blob=new Blob(["\uFEFF",serialize(rows)],{type:"text/csv;charset=utf-8"});
+ var a=document.createElement("a"),u=URL.createObjectURL(blob);
+ a.href=u;a.download=filename;document.body.append(a);a.click();a.remove();
+ setTimeout(function(){URL.revokeObjectURL(u)},1000);unexported=false;message("CSV exported. Validate it before a signed import.",false)
+});
+window.addEventListener("beforeunload",function(e){if(dirty||unexported){e.preventDefault();e.returnValue=""}});
+})();
+</script></body></html>

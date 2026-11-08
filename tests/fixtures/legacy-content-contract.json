@@ -1,0 +1,59 @@
+{
+  "schema": "tablinum-legacy-content-contract-v1",
+  "source": "index.html source arrays at v0.4.2",
+  "chapterCount": 8,
+  "sentenceCount": 67,
+  "questionCount": 24,
+  "clozeCount": 8,
+  "sharedGlossaryFnv32": "9d3b413b",
+  "chapters": [
+    {
+      "legacyId": "legacy-ch01",
+      "allLessonDataFnv32": "014641a9",
+      "questionDataFnv32": "a903a64b",
+      "clozeDataFnv32": "2f35cf8c"
+    },
+    {
+      "legacyId": "legacy-ch02",
+      "allLessonDataFnv32": "62d138c8",
+      "questionDataFnv32": "251b13c9",
+      "clozeDataFnv32": "982375f9"
+    },
+    {
+      "legacyId": "legacy-ch03",
+      "allLessonDataFnv32": "7f84f366",
+      "questionDataFnv32": "7ce14a19",
+      "clozeDataFnv32": "905bd51a"
+    },
+    {
+      "legacyId": "legacy-ch04",
+      "allLessonDataFnv32": "4e3d6fc6",
+      "questionDataFnv32": "e8758235",
+      "clozeDataFnv32": "bd753c1e"
+    },
+    {
+      "legacyId": "legacy-ch05",
+      "allLessonDataFnv32": "1178ea02",
+      "questionDataFnv32": "d3ada3a1",
+      "clozeDataFnv32": "b2f3d817"
+    },
+    {
+      "legacyId": "legacy-ch06",
+      "allLessonDataFnv32": "32792e21",
+      "questionDataFnv32": "c23eace2",
+      "clozeDataFnv32": "94183a2a"
+    },
+    {
+      "legacyId": "legacy-ch07",
+      "allLessonDataFnv32": "91aa1b37",
+      "questionDataFnv32": "67bc6ce1",
+      "clozeDataFnv32": "0e0c36ba"
+    },
+    {
+      "legacyId": "legacy-ch08",
+      "allLessonDataFnv32": "f2fb8c63",
+      "questionDataFnv32": "136fcdcc",
+      "clozeDataFnv32": "867d07aa"
+    }
+  ]
+}

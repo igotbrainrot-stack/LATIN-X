@@ -1,0 +1,5 @@
+pairs 17
+voice panels 34
+first accepted: accept
+winner: voiceA
+PASS headless Chromium offline UI smoke

@@ -1,0 +1,1 @@
+LATIN X Miriam single-word pronunciation retries (v3): four ORIGINAL Runway clips created, but hosted bytes cannot be transferred into this ZIP by the available tools. Run DOWNLOAD_MIRIAM_ALIAS_V3.cmd once with internet to download exact binaries, then Start Miriam Alias Review v3.cmd. Owner review required. Existing MP3s unchanged. NEVER COMMIT PRIVATE signed URL file.

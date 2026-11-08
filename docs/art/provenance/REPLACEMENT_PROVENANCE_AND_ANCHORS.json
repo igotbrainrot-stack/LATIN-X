@@ -1,0 +1,121 @@
+[
+  {
+    "scene_id": "b01-c002-scene",
+    "generation_id": "cf6f71f8-6cb4-414b-ab2e-bd53c31e7c62",
+    "source_png_sha256": "1a411becc54ba599f399782c18b67b9f73b4f0b02b43a83bac94e69840f225f7",
+    "source_native_size_px": [
+      1672,
+      941
+    ],
+    "original_asset_sha256": "b761f7f73966fab1161365aa34f4d3d16fe666c2fabc9181fd1d1efb9b7876bc",
+    "new_webp_sha256": "e041713849d0932c2c3b0e805f1e52f03689b9a7db9747c79086482af0e6d348",
+    "new_webp_size_bytes": 238604,
+    "new_webp_dimensions_px": [
+      1360,
+      765
+    ],
+    "new_thumbnail_sha256": "8a0ea98b9547bb23c61503170a54b56617be5d792cb9e1d2d054040047fe6c55",
+    "selection_region_status": "assistant_retraced_needs_owner_visual_confirmation",
+    "region_anchors_pct": {
+      "Mārcus": [
+        29,
+        38
+      ],
+      "Flāvia": [
+        43,
+        42
+      ],
+      "Līvia": [
+        55,
+        47
+      ],
+      "Tītus": [
+        66,
+        47
+      ],
+      "vīlla": [
+        85,
+        45
+      ]
+    },
+    "old_polygons_archived_in_handover": true
+  },
+  {
+    "scene_id": "b01-c005-scene",
+    "generation_id": "4601b10e-db81-4ab5-8e98-322a1abeddc0",
+    "source_png_sha256": "32c7fee21cdecac588b8dbfee3dcba260d7f0718cc5dd5badb2f3bd767d52737",
+    "source_native_size_px": [
+      1672,
+      941
+    ],
+    "original_asset_sha256": "a336cc3bc194a65ba28f4599c0f58a4ff2f2addc78ba8099b27eb99d5861626b",
+    "new_webp_sha256": "6d933ce0629bf85b76b31e0c7f2cc03316bd67eb58f35e9d81b1250547d6203b",
+    "new_webp_size_bytes": 251494,
+    "new_webp_dimensions_px": [
+      1440,
+      810
+    ],
+    "new_thumbnail_sha256": "12a8deab9c8c29ead7be33b7eee3de068a925ee646f16ba06e0557f9a1f36856",
+    "selection_region_status": "assistant_retraced_needs_owner_visual_confirmation",
+    "region_anchors_pct": {
+      "Mārcus": [
+        24,
+        43
+      ],
+      "Flāvia": [
+        69,
+        28
+      ],
+      "Līvia": [
+        46,
+        65
+      ],
+      "Tītus": [
+        70,
+        63
+      ],
+      "vīlla": [
+        93,
+        26
+      ]
+    },
+    "old_polygons_archived_in_handover": true
+  },
+  {
+    "scene_id": "b01-c008-scene-storm",
+    "generation_id": "9f90d863-4f53-499a-a329-2613b3662db2",
+    "source_png_sha256": "35cd804107bf718fa8760425a7bb16d8367c56de6f3fab128103f44766acd860",
+    "source_native_size_px": [
+      1672,
+      941
+    ],
+    "original_asset_sha256": "7f75ab97784ad7b6fbb4a2b620fad11c69df3290642615d6447e63d72c129f86",
+    "new_webp_sha256": "769bdc1b1d542e93e4740c4725aca577687a1b5b537002dd36bc12e54c60e7c4",
+    "new_webp_size_bytes": 237038,
+    "new_webp_dimensions_px": [
+      1600,
+      900
+    ],
+    "new_thumbnail_sha256": "5caa13e3d549f42fa61896a139cc6f6f18c0a54596705db09a5b12f88ff2a53d",
+    "selection_region_status": "assistant_retraced_needs_owner_visual_confirmation",
+    "region_anchors_pct": {
+      "arbor": [
+        30,
+        32
+      ],
+      "ventus": [
+        25,
+        25
+      ],
+      "pluvia": [
+        70,
+        49
+      ],
+      "fenestra": [
+        13.5,
+        14.5
+      ]
+    },
+    "old_polygons_archived_in_handover": true
+  }
+]

@@ -1,0 +1,683 @@
+{
+  "schema": "tablinum-picture-exercises-draft-v1",
+  "owner_approval": "pending",
+  "source": "Original Book I lessons, art manifest and owner request; no approvals inferred",
+  "chapters": {
+    "b01-c001": [
+      {
+        "id": "b01-c001-q007",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est arbor magna?",
+        "scene_id": "b01-c001-scene",
+        "region_id": "arbor-magna",
+        "answer": "arbor-magna",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      },
+      {
+        "id": "b01-c001-q008",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est arbor parva?",
+        "scene_id": "b01-c001-scene",
+        "region_id": "arbor-parva",
+        "answer": "arbor-parva",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      },
+      {
+        "id": "b01-c001-q009",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est rosa?",
+        "scene_id": "b01-c001-scene",
+        "region_id": "rosa",
+        "answer": "rosa",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      },
+      {
+        "id": "b01-c001-q010",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est vīlla?",
+        "scene_id": "b01-c001-scene",
+        "region_id": "vīlla",
+        "answer": "vīlla",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      },
+      {
+        "id": "b01-c001-q011",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est Līvia?",
+        "scene_id": "b01-c001-scene",
+        "region_id": "Līvia",
+        "answer": "Līvia",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      },
+      {
+        "id": "b01-c001-q012",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est Tītus?",
+        "scene_id": "b01-c001-scene",
+        "region_id": "Tītus",
+        "answer": "Tītus",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      }
+    ],
+    "b01-c002": [
+      {
+        "id": "b01-c002-q007",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est Mārcus?",
+        "scene_id": "b01-c002-scene",
+        "region_id": "Mārcus",
+        "answer": "Mārcus",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      },
+      {
+        "id": "b01-c002-q008",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est Flāvia?",
+        "scene_id": "b01-c002-scene",
+        "region_id": "Flāvia",
+        "answer": "Flāvia",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      },
+      {
+        "id": "b01-c002-q009",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est Līvia?",
+        "scene_id": "b01-c002-scene",
+        "region_id": "Līvia",
+        "answer": "Līvia",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      },
+      {
+        "id": "b01-c002-q010",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est Tītus?",
+        "scene_id": "b01-c002-scene",
+        "region_id": "Tītus",
+        "answer": "Tītus",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      },
+      {
+        "id": "b01-c002-q011",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est vīlla?",
+        "scene_id": "b01-c002-scene",
+        "region_id": "vīlla",
+        "answer": "vīlla",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      }
+    ],
+    "b01-c003": [
+      {
+        "id": "b01-c003-q007",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est mēnsa?",
+        "scene_id": "b01-c003-scene",
+        "region_id": "mēnsa",
+        "answer": "mēnsa",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      },
+      {
+        "id": "b01-c003-q008",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est pānis?",
+        "scene_id": "b01-c003-scene",
+        "region_id": "pānis",
+        "answer": "pānis",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      },
+      {
+        "id": "b01-c003-q009",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est pōculum?",
+        "scene_id": "b01-c003-scene",
+        "region_id": "pōculum",
+        "answer": "pōculum",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      },
+      {
+        "id": "b01-c003-q010",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est liber?",
+        "scene_id": "b01-c003-scene",
+        "region_id": "liber",
+        "answer": "liber",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      },
+      {
+        "id": "b01-c003-q011",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est cibus?",
+        "scene_id": "b01-c003-scene",
+        "region_id": "cibus",
+        "answer": "cibus",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      }
+    ],
+    "b01-c004": [
+      {
+        "id": "b01-c004-q007",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est rosa rubra?",
+        "scene_id": "b01-c004-scene",
+        "region_id": "rosa-rubra",
+        "answer": "rosa-rubra",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      },
+      {
+        "id": "b01-c004-q008",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est liber?",
+        "scene_id": "b01-c004-scene",
+        "region_id": "liber",
+        "answer": "liber",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      },
+      {
+        "id": "b01-c004-q009",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est pōculum rubrum?",
+        "scene_id": "b01-c004-scene",
+        "region_id": "pōculum-rubrum",
+        "answer": "pōculum-rubrum",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      },
+      {
+        "id": "b01-c004-q010",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est Gāius?",
+        "scene_id": "b01-c004-scene",
+        "region_id": "Gāius",
+        "answer": "Gāius",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      }
+    ],
+    "b01-c005": [
+      {
+        "id": "b01-c005-q007",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est vīlla?",
+        "scene_id": "b01-c005-scene",
+        "region_id": "vīlla",
+        "answer": "vīlla",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      },
+      {
+        "id": "b01-c005-q008",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est Mārcus?",
+        "scene_id": "b01-c005-scene",
+        "region_id": "Mārcus",
+        "answer": "Mārcus",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      },
+      {
+        "id": "b01-c005-q009",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est Flāvia?",
+        "scene_id": "b01-c005-scene",
+        "region_id": "Flāvia",
+        "answer": "Flāvia",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      },
+      {
+        "id": "b01-c005-q010",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est Līvia?",
+        "scene_id": "b01-c005-scene",
+        "region_id": "Līvia",
+        "answer": "Līvia",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      },
+      {
+        "id": "b01-c005-q011",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est Tītus?",
+        "scene_id": "b01-c005-scene",
+        "region_id": "Tītus",
+        "answer": "Tītus",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      }
+    ],
+    "b01-c006": [
+      {
+        "id": "b01-c006-q007",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est mercātor?",
+        "scene_id": "b01-c006-scene",
+        "region_id": "mercātor",
+        "answer": "mercātor",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      },
+      {
+        "id": "b01-c006-q008",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi sunt multa māla?",
+        "scene_id": "b01-c006-scene",
+        "region_id": "māla",
+        "answer": "māla",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      },
+      {
+        "id": "b01-c006-q009",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi sunt ōva?",
+        "scene_id": "b01-c006-scene",
+        "region_id": "ōva",
+        "answer": "ōva",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      },
+      {
+        "id": "b01-c006-q010",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est pecūnia?",
+        "scene_id": "b01-c006-scene",
+        "region_id": "pecūnia",
+        "answer": "pecūnia",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      },
+      {
+        "id": "b01-c006-q011",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est ūnum mālum?",
+        "scene_id": "b01-c006-scene",
+        "region_id": "mālum-1",
+        "answer": "mālum-1",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      },
+      {
+        "id": "b01-c006-q012",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi sunt duo māla?",
+        "scene_id": "b01-c006-scene",
+        "region_id": "māla-2",
+        "answer": "māla-2",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      },
+      {
+        "id": "b01-c006-q013",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi sunt tria māla?",
+        "scene_id": "b01-c006-scene",
+        "region_id": "māla-3",
+        "answer": "māla-3",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      }
+    ],
+    "b01-c007": [
+      {
+        "id": "b01-c007-q007",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est via?",
+        "scene_id": "b01-c007-scene",
+        "region_id": "via",
+        "answer": "via",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      },
+      {
+        "id": "b01-c007-q008",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Quō canis currit?",
+        "scene_id": "b01-c007-scene",
+        "region_id": "porta",
+        "answer": "porta",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      },
+      {
+        "id": "b01-c007-q009",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est canis?",
+        "scene_id": "b01-c007-scene",
+        "region_id": "canis",
+        "answer": "canis",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      },
+      {
+        "id": "b01-c007-q010",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est puer?",
+        "scene_id": "b01-c007-scene",
+        "region_id": "puer",
+        "answer": "puer",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      },
+      {
+        "id": "b01-c007-q011",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est Līvia?",
+        "scene_id": "b01-c007-scene",
+        "region_id": "Līvia",
+        "answer": "Līvia",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      }
+    ],
+    "b01-c008": [
+      {
+        "id": "b01-c008-q007",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Quid arborem movet?",
+        "scene_id": "b01-c008-scene-storm",
+        "region_id": "ventus",
+        "answer": "ventus",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      },
+      {
+        "id": "b01-c008-q008",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est pluvia?",
+        "scene_id": "b01-c008-scene-storm",
+        "region_id": "pluvia",
+        "answer": "pluvia",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      },
+      {
+        "id": "b01-c008-q009",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Quō Līvia currit?",
+        "scene_id": "b01-c008-scene-storm",
+        "region_id": "fenestra",
+        "answer": "fenestra",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      },
+      {
+        "id": "b01-c008-q010",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est arbor?",
+        "scene_id": "b01-c008-scene-storm",
+        "region_id": "arbor",
+        "answer": "arbor",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      },
+      {
+        "id": "b01-c008-q011",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est sōl?",
+        "scene_id": "b01-c008-scene-sun",
+        "region_id": "sōl",
+        "answer": "sōl",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      },
+      {
+        "id": "b01-c008-q012",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est arbor?",
+        "scene_id": "b01-c008-scene-sun",
+        "region_id": "arbor",
+        "answer": "arbor",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      },
+      {
+        "id": "b01-c008-q013",
+        "type": "pic",
+        "status": "proposed_ungraded",
+        "scoring_enabled": false,
+        "prompt_la": "Ubi est hortus?",
+        "scene_id": "b01-c008-scene-sun",
+        "region_id": "hortus",
+        "answer": "hortus",
+        "review": {
+          "by": null,
+          "at": null
+        },
+        "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      }
+    ]
+  }
+}

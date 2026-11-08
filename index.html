@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tablinum — Prima Via</title>
+<style>
+/* TABLINVM — MANUSCRIPT EDITION / presentation-only theme.
+   No remote fonts, external images, scripts, or changes to course data. */
+:root {
+  color-scheme: light;
+  --parchment: #eee1c9;
+  --parchment-deep: #dfcdb0;
+  --vellum: #e9dcc4;
+  --paper: #faf3e5;
+  --paper-bright: #fff8ea;
+  --paper-inset: #f4e9d4;
+  --ink: #382b21;
+  --ink-soft: #59483a;
+  --ink-muted: #685748;
+  --umber: #493425;
+  --rule: #b9a284;
+  --rule-light: #d9c8ad;
+  --terracotta: #a55c45;
+  --ochre: #765a2a;
+  --olive: #586342;
+  --burgundy: #723c3a;
+  --good-ink: #39462b;
+  --good-paper: #e9eddf;
+  --bad-ink: #703c37;
+  --bad-paper: #f2e4dc;
+  --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Baskerville", Georgia, serif;
+  --display: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-family: var(--serif);
+  color: var(--ink);
+  background: var(--parchment);
+}
+* { box-sizing: border-box; }
+html { min-width: 320px; background: var(--parchment); }
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: var(--serif);
+  font-size: 15px;
+  line-height: 1.58;
+  letter-spacing: .004em;
+  color: var(--ink);
+  background:
+    radial-gradient(ellipse at 8% 10%, rgba(255,255,250,.53), transparent 42%),
+    radial-gradient(ellipse at 94% 73%, rgba(128,86,45,.085), transparent 45%),
+    repeating-linear-gradient(90deg, rgba(107,79,49,.012) 0px, transparent 2px, transparent 6px),
+    var(--parchment);
+}
+/* Restrained fibre grain; entirely CSS so the application stays offline. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: .22;
+  background:
+    repeating-linear-gradient(4deg, transparent 0 16px, rgba(77,55,35,.035) 17px, transparent 18px 35px),
+    repeating-linear-gradient(103deg, transparent 0 37px, rgba(255,255,255,.13) 38px, transparent 39px 70px);
+}
+header, .codex, .dock, footer, .app-status { position: relative; z-index: 1; }
+button, input, textarea, select { font: inherit; }
+button { cursor: pointer; }
+button[hidden], [hidden] { display: none !important; }
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+summary:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--olive);
+  outline-offset: 3px;
+}
+button:disabled { cursor: not-allowed; opacity: .72; }
+
+/* Title leaf: inscription typography over parchment, not a SaaS banner. */
+header {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 30px 34px 27px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 20px;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+header::after {
+  position: absolute;
+  content: "";
+  bottom: 10px;
+  left: 34px;
+  right: 34px;
+  height: 4px;
+  border-top: 1px solid var(--ochre);
+  border-bottom: 1px solid var(--rule);
+}
+.logo {
+  color: var(--umber);
+  font-family: var(--display);
+  font-size: clamp(34px, 4vw, 48px);
+  font-weight: 600;
+  font-variant: small-caps;
+  letter-spacing: .09em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+.tag {
+  margin-top: 7px;
+  color: var(--burgundy);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+}
+header .edition-note {
+  max-width: 290px;
+  padding-bottom: 6px;
+  color: var(--ink-soft);
+  text-align: right;
+  font-size: 12px;
+  font-style: italic;
+  letter-spacing: .035em;
+  line-height: 1.45;
+}
+
+/* The entire study area is one folio with ruled sections. */
+.codex {
+  width: min(1420px, calc(100% - 46px));
+  margin: 10px auto 16px;
+  overflow: clip;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  box-shadow: 0 1px 0 rgba(255,255,255,.65) inset, 0 8px 27px rgba(57,41,28,.10);
+}
+#tabs {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  padding: 0 16px;
+  background: linear-gradient(#f2e9d8, #e9dbc3);
+  border-bottom: 3px double var(--rule);
+}
+#tabs button {
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 15px 18px 13px;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: var(--ink-soft);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .11em;
+  white-space: nowrap;
+  transition: color .15s ease, background .15s ease, border-color .15s ease;
+}
+#tabs button:hover { color: var(--burgundy); background: rgba(255,248,232,.42); }
+#tabs button.active, #tabs button[aria-current="page"] {
+  color: var(--burgundy);
+  background: rgba(255,251,241,.67);
+  border-bottom-color: var(--burgundy);
+}
+.layout {
+  display: grid;
+  grid-template-columns: 202px minmax(0, 1fr) 245px;
+  min-height: 670px;
+  max-width: none;
+  margin: 0;
+  background: var(--paper);
+}
+aside {
+  min-width: 0;
+  background: linear-gradient(110deg, var(--vellum), #efe3cd);
+  padding: 26px 17px;
+  color: var(--ink);
+}
+aside.chapters { border-right: 1px solid var(--rule-light); }
+aside.help-aside {
+  border-left: 1px solid var(--rule-light);
+  border-right: 0;
+  background: linear-gradient(100deg, #f2e7d4, #ecdec5);
+}
+#main {
+  min-width: 0;
+  padding: 28px clamp(22px, 3.2vw, 54px) 40px;
+  background:
+    linear-gradient(90deg, rgba(117,85,48,.024), transparent 8%, transparent 92%, rgba(117,85,48,.023)),
+    var(--paper);
+}
+
+/* Section typesetting */
+h1, h2, h3 {
+  margin: 0 0 11px;
+  color: var(--umber);
+  font-family: var(--display);
+  font-weight: 600;
+  line-height: 1.23;
+}
+h1 { margin: 3px 0 7px; font-size: clamp(30px, 3.2vw, 40px); letter-spacing: -.025em; }
+h2 { font-size: 25px; }
+h3 { font-size: 20px; }
+.mini {
+  color: var(--burgundy);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+}
+.subtle, small { color: var(--ink-soft); }
+.subtle { font-size: 14px; }
+small { font-size: 12px; }
+
+/* Book index in the left margin */
+.chapters > .mini {
+  display: block;
+  padding: 0 3px 12px;
+  margin: 0 0 10px !important;
+  border-bottom: 1px solid var(--rule);
+}
+.ch {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 10px 7px 11px;
+  margin-bottom: 2px;
+  text-align: left;
+  border: 0;
+  border-left: 2px solid transparent;
+  border-radius: 0;
+  color: var(--ink-soft);
+  background: transparent;
+}
+.ch > strong {
+  min-width: 17px;
+  flex: 0 0 auto;
+  color: var(--ochre);
+  font-family: var(--display);
+  font-size: 16px;
+  font-weight: 600;
+}
+.ch span { min-width: 0; }
+.ch span strong {
+  display: block;
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.ch small { display: block; margin-top: 3px; font-size: 11px; line-height: 1.32; color: var(--ink-muted); }
+.ch:hover { background: rgba(255,255,248,.34); color: var(--burgundy); }
+.ch.active, .ch[aria-current="true"] {
+  background: rgba(255,250,239,.63);
+  border-left-color: var(--terracotta);
+}
+.ch.active > strong, .ch.active span strong { color: var(--burgundy); }
+
+/* Illustration as a lightly toned plate, not a bright flat cartoon card. */
+.scene {
+  position: relative;
+  margin: 22px 0;
+  overflow: hidden;
+  background: #e7dac2;
+  border: 1px solid var(--rule);
+  border-radius: 0;
+  box-shadow: inset 0 0 0 5px rgba(255,249,235,.55);
+}
+.scene::after {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px solid rgba(103,73,45,.28);
+  background: rgba(110,75,43,.025);
+  pointer-events: none;
+}
+.scene svg {
+  display: block;
+  width: 100%;
+  height: 200px;
+  background: #e7ddc9;
+  filter: none; /* Narrative colour (e.g. rosam rubram) is semantic content. */
+}
+.caption {
+  padding: 10px 17px;
+  border-top: 1px solid var(--rule-light);
+  background: var(--paper-inset);
+  color: var(--ink-soft);
+  font: italic 15px/1.5 var(--serif);
+}
+
+/* Ruled passages: separate sentences like paragraphs, not floating cards. */
+.sentence {
+  margin: 0;
+  padding: 16px 15px 18px;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--rule-light);
+  border-left: 3px solid transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+.sentence + .sentence { margin-top: 0; }
+.sentence.selected {
+  background: linear-gradient(90deg, rgba(171,117,71,.085), rgba(171,117,71,0) 82%);
+  border-color: var(--rule-light);
+  border-left-color: var(--burgundy);
+  box-shadow: none;
+}
+.sentence .mini { color: var(--ink-muted); font-size: 10px; letter-spacing: .13em; }
+.words {
+  margin: 7px 0;
+  color: var(--ink);
+  font: normal 22px/1.8 var(--serif);
+  cursor: text;
+  overflow-wrap: anywhere;
+}
+.word {
+  display: inline;
+  padding: 0 1px;
+  border: 0;
+  border-bottom: 1px dotted rgba(114,60,58,.42);
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  text-align: inherit;
+  text-decoration: none;
+}
+.word:hover { color: var(--burgundy); border-bottom-color: var(--burgundy); background: rgba(175,124,62,.11); }
+.word:focus-visible { background: #f4e1c0; outline-offset: 1px; }
+.hint-words { font-size: 16px; line-height: 1.7; }
+.hint-words .word { font: inherit; border-bottom-color: rgba(114,60,58,.3); }
+.sentence .tools { margin: 10px 0 0; }
+.help {
+  margin: 13px 0 0;
+  padding: 12px 14px;
+  border: 1px solid var(--rule-light);
+  border-left: 3px solid var(--olive);
+  border-radius: 0;
+  background: var(--paper-inset);
+  color: var(--ink-soft);
+  font-size: 13px;
+  line-height: 1.65;
+}
+.help strong { color: var(--umber); font-family: var(--display); font-size: 15px; }
+
+/* All controls are modest rectangular engraved furniture. */
+.tools { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 13px 0; }
+.btn {
+  padding: 9px 13px;
+  min-height: 36px;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  background: linear-gradient(#fcf4e5, #eedfc6);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.62);
+  color: var(--umber);
+  font-family: var(--serif);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.3;
+  transition: background .15s ease, border-color .15s ease;
+}
+.btn:hover { border-color: var(--terracotta); background: var(--paper-bright); }
+.btn.primary, .primary {
+  border-color: #643431;
+  background: linear-gradient(#854d46, var(--burgundy));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.13);
+  color: #fff8e9;
+}
+.btn.primary:hover, .primary:hover { background: #603433; color: #fff8e9; }
+.link {
+  padding: 5px 3px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--burgundy);
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(114,60,58,.55);
+  text-underline-offset: 3px;
+}
+.link:hover { color: #4c2626; text-decoration-color: currentColor; }
+
+/* Study notes, workbook exercises and marginal scholia */
+.note {
+  padding: 12px 15px;
+  margin: 14px 0;
+  border: 1px solid var(--rule-light);
+  border-left: 3px solid var(--ochre);
+  border-radius: 0;
+  background: #f1e7d4;
+  color: var(--ink-soft);
+  font-size: 13px;
+}
+.panel {
+  margin: 16px 0;
+  padding: 15px 16px;
+  background: rgba(255,250,239,.55);
+  border: 1px solid var(--rule-light);
+  border-radius: 0;
+  box-shadow: none;
+}
+.panel h2 { font-size: 23px; }
+#help .panel { background: rgba(255,252,244,.55); padding: 14px 12px; }
+#help h3 { margin-top: 5px; }
+#help .tools { gap: 5px; }
+#help .btn { font-size: 12px; }
+.quiz {
+  margin: 15px 0 19px;
+  padding: 19px 20px 20px;
+  border: 1px solid var(--rule-light);
+  border-top: 2px solid var(--ochre);
+  border-radius: 0;
+  background: rgba(255,250,239,.7);
+  box-shadow: none;
+}
+.question { margin: 11px 0 15px; color: var(--ink); font: normal 20px/1.55 var(--serif); }
+.option {
+  display: block;
+  width: 100%;
+  padding: 11px 13px;
+  margin: 7px 0;
+  text-align: left;
+  border: 1px solid var(--rule-light);
+  border-radius: 2px;
+  background: var(--paper-bright);
+  color: var(--ink);
+  font: normal 15px/1.5 var(--serif);
+}
+.option:hover { border-color: var(--ochre); background: #f2e7d5; }
+.option:disabled { opacity: 1; }
+.option.is-correct, .good {
+  background: var(--good-paper);
+  border-color: #8b9779;
+  color: var(--good-ink);
+}
+.option.is-wrong, .bad {
+  background: var(--bad-paper);
+  border-color: #bb9288;
+  color: var(--bad-ink);
+}
+.good, .bad { margin-top: 10px; padding: 10px 12px; border-width: 1px; border-style: solid; border-radius: 0; font-size: 13px; }
+
+/* The learner's ledger; slim rather than dashboard-style cards. */
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 9px; margin: 20px 0; }
+.stat {
+  min-width: 0;
+  padding: 13px 11px;
+  border: 1px solid var(--rule-light);
+  border-radius: 0;
+  background: var(--paper-inset);
+}
+.stat b { display: block; color: var(--burgundy); font: normal 29px/1.25 var(--display); }
+.stat small { display: block; margin-top: 5px; color: var(--ink-soft); font-size: 11px; }
+.bar { height: 6px; margin-top: 9px; overflow: hidden; border-radius: 0; background: #e2d3b8; }
+.bar > div { height: 100%; background: var(--olive); }
+
+/* Text, audio and archive inputs, kept easy to operate. */
+.field, input[type="text"], textarea, select {
+  width: 100%;
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  background: var(--paper-bright);
+  box-shadow: inset 0 1px 2px rgba(75,50,28,.035);
+  color: var(--ink);
+}
+textarea.field { min-height: 110px; resize: vertical; line-height: 1.58; }
+input[type="file"].field { display: block; padding: 10px 9px; font-size: 13px; }
+input[type="range"] { width: 100%; accent-color: var(--burgundy); }
+label[for] { display: block; margin-top: 12px; color: var(--ink-soft); font-size: 13px; font-weight: 600; }
+details {
+  margin: 13px 0;
+  padding: 11px 13px;
+  border: 1px solid var(--rule-light);
+  border-radius: 0;
+  background: var(--paper-inset);
+}
+summary { color: var(--burgundy); cursor: pointer; font-weight: 600; }
+pre {
+  overflow: auto;
+  max-width: 100%;
+  padding: 12px;
+  background: #e9ddc6;
+  border: 1px solid var(--rule-light);
+  color: var(--ink);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* A paper-coloured control strip follows the folio while scrolling. */
+.dock {
+  position: sticky;
+  bottom: 0;
+  z-index: 4;
+  width: min(1420px, calc(100% - 46px));
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  border: 1px solid var(--rule);
+  border-top: 3px double var(--ochre);
+  border-radius: 0;
+  background: linear-gradient(#f3e8d5, #e8d8bf);
+  box-shadow: 0 -3px 15px rgba(61,44,25,.10);
+}
+.dock > div:first-child { min-width: 175px; flex: 1 1 185px; }
+.dock > div:first-child b { display: block; color: var(--umber); font-size: 13px; }
+.dock small { display: block; margin-top: 2px; font-size: 11px; color: var(--ink-soft); }
+.dock .tools { margin: 0; }
+.app-status {
+  width: min(1420px, calc(100% - 46px));
+  min-height: 27px;
+  margin: 0 auto;
+  padding: 5px 14px;
+  background: var(--paper-inset);
+  border: 1px solid var(--rule-light);
+  border-top: 0;
+  color: var(--bad-ink);
+  font-size: 12px;
+}
+.app-status:empty {
+  min-height: 0;
+  height: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  /* Keep the aria-live status element in the accessibility tree. */
+}
+footer {
+  width: min(1420px, calc(100% - 46px));
+  margin: 0 auto 28px;
+  padding: 13px 4px 0;
+  border: 0;
+  border-top: 1px solid var(--rule);
+  background: transparent;
+  color: var(--ink-soft);
+  font-size: 11px;
+  font-style: italic;
+}
+
+/* Intermediate tablets: glossary moves beneath the reader. */
+@media (max-width: 1120px) {
+  .layout { grid-template-columns: 190px minmax(0,1fr); }
+  #main { padding: 25px 30px 33px; }
+  aside.help-aside {
+    grid-column: 2;
+    border-top: 1px solid var(--rule-light);
+    border-left: 0;
+    background: var(--paper-inset);
+    padding: 20px 28px;
+  }
+  #help .panel { max-width: 100%; }
+}
+
+/* Small screens are a single narrow folio; chapter strip scrolls horizontally. */
+@media (max-width: 720px) {
+  /* Compact title page: surface the first Latin sentence without scrolling. */
+  header { display: block; padding: 10px 14px 14px; }
+  header::after { left: 14px; right: 14px; bottom: 6px; height: 3px; }
+  header .logo { font-size: 28px; line-height: 1; letter-spacing: .075em; }
+  header .tag, header .edition-note { display: none; }
+  .codex, .dock, footer, .app-status { width: calc(100% - 18px); }
+  .codex { margin-top: 5px; }
+  #tabs { padding: 0 6px; }
+  #tabs button { padding: 9px 10px 8px; font-size: 11px; letter-spacing: .05em; line-height: 1.2; }
+  .layout { display: block; min-height: 0; }
+  aside.chapters {
+    display: flex;
+    gap: 5px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    padding: 5px 8px;
+    border-right: 0;
+    border-bottom: 1px solid var(--rule);
+    scrollbar-width: thin;
+  }
+  .chapters > .mini { display: none; }
+  .chapters .ch { flex: 0 0 132px; min-width: 0; margin: 0; padding: 5px 7px; }
+  .chapters .ch span strong { font-size: 13px; line-height: 1.12; }
+  .chapters .ch small { font-size: 10px; line-height: 1.15; margin-top: 2px; }
+  #main { padding: 10px 14px 24px; }
+  #main h1 { font-size: 27px; margin: 2px 0 3px; }
+  #main > .mini { font-size: 10px; }
+  #main > .subtle { font-size: 12px; }
+  #main .note { padding: 8px 10px; margin: 8px 0; font-size: 12px; line-height: 1.35; }
+  #main .tools { gap: 5px; margin: 8px 0; }
+  #main > .tools .btn { min-height: 33px; padding: 6px 9px; font-size: 12px; }
+  .scene { margin: 8px 0 9px; }
+  .scene svg { height: 108px; }
+  .scene .caption { padding: 5px 10px; font-size: 12px; line-height: 1.35; }
+  .words { font-size: 20px; line-height: 1.75; }
+  .sentence { padding: 10px 8px 12px 11px; }
+  .quiz { padding: 15px 13px; }
+  .question { font-size: 19px; }
+  aside.help-aside { padding: 18px 16px; border-top: 1px solid var(--rule); }
+  .dock { display: grid; grid-template-columns: minmax(0, 1fr); padding: 5px 8px; gap: 3px; }
+  .dock > div:first-child { min-width: 0; display: flex; gap: 7px; align-items: center; }
+  .dock > div:first-child b { font-size: 11px; flex: 0 0 auto; white-space: nowrap; }
+  .dock small { min-width: 0; max-width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; margin: 0; font-size: 10px; }
+  .dock .tools { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); width: 100%; gap: 4px; margin: 0; }
+  .dock .btn { min-width: 0; padding: 6px 4px; min-height: 32px; font-size: 11px; white-space: nowrap; }
+  footer { padding-top: 10px; margin-bottom: 14px; }
+}
+@media (max-width: 420px) {
+  .stats { grid-template-columns: repeat(3, minmax(0,1fr)); gap: 5px; }
+  .stat { padding: 10px 7px; }
+  .stat b { font-size: 24px; }
+  .stat small { font-size: 10px; }
+  .words { font-size: 19px; }
+  .dock .btn { font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0s !important; scroll-behavior: auto !important; }
+}
+@media print {
+  body { background: #fff; }
+  body::before, .dock, .tools { display: none !important; }
+  header, .codex, footer { width: 100%; box-shadow: none; }
+  .layout { display: block; }
+  aside { display: none; }
+  #main { padding: 15px 0; }
+  .sentence { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<header><div><div class="logo">Tablinum</div><div class="tag">Prima Via · Discere legendo</div></div><small class="edition-note">An original Latin learning course · v0.4.2</small></header>
+<div class="codex">
+<nav id="tabs" aria-label="Study sections"></nav>
+<div class="layout">
+<aside class="chapters" id="chapters"></aside>
+<main id="main"></main>
+<aside class="help-aside" id="help"></aside>
+</div>
+</div>
+<div class="dock">
+<div><b id="audioMode">Browser voice</b><small id="audioNote">Voice pronunciation depends on browser voices.</small></div>
+<div class="tools"><button class="btn" data-action="previous">← Prev</button><button class="btn primary" data-action="play">▶ Play</button><button class="btn" data-action="pause">Ⅱ Pause</button><button class="btn" data-action="forward">Next →</button></div>
+</div>
+<footer>Version 0.4.2 Manuscript Edition review build · Latin content is unreviewed original draft material · No copyrighted textbook included.</footer>
+<script src="content/catalogue.js"></script>
+<script src="content/lexicon.js"></script>
+<script src="content/legacy/ch01.js"></script>
+<script src="content/legacy/ch02.js"></script>
+<script src="content/legacy/ch03.js"></script>
+<script src="content/legacy/ch04.js"></script>
+<script src="content/legacy/ch05.js"></script>
+<script src="content/legacy/ch06.js"></script>
+<script src="content/legacy/ch07.js"></script>
+<script src="content/legacy/ch08.js"></script>
+<script src="content/migration-maps.js"></script>
+<script src="app/20-state-v5.js"></script>
+<script src="app/30-content-loader.js"></script>
+<script src="app/50-exercises.js"></script>
+<script src="vendor/ts-fsrs.umd.js"></script>
+<script src="app/55-review-deck.js"></script>
+<script src="content/illustrations.js"></script>
+<script src="app/64-art-scenes.js"></script>
+<script src="content/music.js"></script>
+<script src="app/58-music-score.js"></script>
+<script src="app/60-audio-ambience.js"></script>
+<script src="content/narration.js"></script>
+<script src="app/62-narration.js"></script>
+<script src="app/70-user-media.js"></script>
+<script src="app/legacy-runtime.js"></script>
+<script src="app/80-accessibility.js"></script>
+</body>
+</html>

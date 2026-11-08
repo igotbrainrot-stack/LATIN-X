@@ -1,0 +1,44 @@
+name: LATIN X full Claude review package
+
+on:
+  push:
+    branches:
+      - fix/phase2-review-restoration-20261105
+  workflow_dispatch:
+
+jobs:
+  build-full-claude-package:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify all required program and Claude-review source files
+        run: node scripts/verify-claude-package.cjs
+      - name: Run original program and vocabulary/grammar/paradigm regression tests
+        run: npm test
+      - name: Validate signed-data safety and original lexicon
+        run: npm run test:lexemes
+      - name: Create complete reproducible source ZIP from this exact commit
+        shell: bash
+        run: |
+          mkdir -p dist
+          git archive --format=zip --output=dist/LATIN_X_CLAUDE_REVIEW_FULL_20261106.zip HEAD
+          unzip -t dist/LATIN_X_CLAUDE_REVIEW_FULL_20261106.zip | tail -n 1
+          unzip -Z1 dist/LATIN_X_CLAUDE_REVIEW_FULL_20261106.zip | grep -Fx 'index.html'
+          unzip -Z1 dist/LATIN_X_CLAUDE_REVIEW_FULL_20261106.zip | grep -Fx 'CLAUDE_REVIEW_PACKAGE/00_START_HERE.md'
+          unzip -Z1 dist/LATIN_X_CLAUDE_REVIEW_FULL_20261106.zip | grep -Fx 'Vocabulary Review.html'
+          sha256sum dist/LATIN_X_CLAUDE_REVIEW_FULL_20261106.zip | tee dist/SHA256SUMS.txt
+      - name: Upload complete Claude program package
+        uses: actions/upload-artifact@v4
+        with:
+          name: LATIN_X_CLAUDE_REVIEW_FULL_20261106
+          path: |
+            dist/LATIN_X_CLAUDE_REVIEW_FULL_20261106.zip
+            dist/SHA256SUMS.txt
+          if-no-files-found: error
+          retention-days: 30

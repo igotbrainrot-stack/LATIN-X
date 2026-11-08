@@ -1,0 +1,2822 @@
+{
+  "schema": "tablinum-lesson-v1",
+  "id": "b01-c002",
+  "chapter": 2,
+  "book": 1,
+  "status": "draft",
+  "drafted_by": "claude-draft-2026-11-05",
+  "manuscript_title": "Familia",
+  "source_manuscript": "docs/pilot/CLAUDE_PILOT_B01_C001_C008.md",
+  "source_line": 122,
+  "review": {
+    "latin": {
+      "by": null,
+      "at": null,
+      "tier": null
+    },
+    "pedagogy": {
+      "by": null,
+      "at": null
+    }
+  },
+  "new_lexemes_declared": [],
+  "grammar_new": [],
+  "proposed_new_lemmas_raw": "**New (proposed, unsigned):** familia, pater, māter, fīlius, fīlia, frāter, soror, Mārcus, Flāvia, vir, fēmina, nōmen, cuius, Rōmānus.",
+  "proposed_grammar_raw": "**Grammar (new):** genitive singular `-ae`/`-ī`, showing possession and relationship; the question `Cuius?`",
+  "proposed_margin_raw": "**Margin:** pater ♂ + māter ♀ → fīlius ♂, fīlia ♀ · frāter ↔ soror · [pictūra: arbor familiae, the family tree] · Mārcus → Mārcī · Flāvia → Flāviae · Līvia → Līviae · Tītus → Tītī",
+  "reviewer_notes": [
+    "> Note for the reviewer: there are 14 new lemmas, against a budget of 8. The extras are `vir`, `fēmina`, `nōmen` and `Rōmānus`; `vir` and `fēmina` are there so that pater and māter can be inferred from the picture. The owner should keep them or cut them. There are no 3rd-declension genitives (`patris`, `mātris`) on purpose."
+  ],
+  "segments": [
+    {
+      "id": "b01-c002-l1",
+      "title_la": "Lēctiō 1 — Ecce familia",
+      "source_line": 128,
+      "sentences": [
+        {
+          "id": "b01-c002-s001",
+          "text_la": "Ecce vīlla magna.",
+          "source_line": 130,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Ecce",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "vīlla",
+              "start": 5,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "magna",
+              "start": 11,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s002",
+          "text_la": "In vīllā est familia Rōmāna.",
+          "source_line": 131,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "In",
+              "start": 0,
+              "end": 2,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "vīllā",
+              "start": 3,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 9,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "familia",
+              "start": 13,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Rōmāna",
+              "start": 21,
+              "end": 27,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s003",
+          "text_la": "Ecce vir: nōmen virī est Mārcus.",
+          "source_line": 132,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Ecce",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "vir",
+              "start": 5,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōmen",
+              "start": 10,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "virī",
+              "start": 16,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 21,
+              "end": 24,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Mārcus",
+              "start": 25,
+              "end": 31,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s004",
+          "text_la": "Mārcus pater est.",
+          "source_line": 133,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Mārcus",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pater",
+              "start": 7,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 13,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s005",
+          "text_la": "Ecce fēmina: nōmen fēminae est Flāvia.",
+          "source_line": 134,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Ecce",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "fēmina",
+              "start": 5,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōmen",
+              "start": 13,
+              "end": 18,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "fēminae",
+              "start": 19,
+              "end": 26,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 27,
+              "end": 30,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Flāvia",
+              "start": 31,
+              "end": 37,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s006",
+          "text_la": "Flāvia māter est.",
+          "source_line": 135,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Flāvia",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "māter",
+              "start": 7,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 13,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s007",
+          "text_la": "Mārcus pater Līviae est.",
+          "source_line": 136,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Mārcus",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pater",
+              "start": 7,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līviae",
+              "start": 13,
+              "end": 19,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 20,
+              "end": 23,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s008",
+          "text_la": "Flāvia māter Līviae est.",
+          "source_line": 137,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Flāvia",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "māter",
+              "start": 7,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līviae",
+              "start": 13,
+              "end": 19,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 20,
+              "end": 23,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s009",
+          "text_la": "Līvia fīlia Mārcī est.",
+          "source_line": 138,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Līvia",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "fīlia",
+              "start": 6,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Mārcī",
+              "start": 12,
+              "end": 17,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 18,
+              "end": 21,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s010",
+          "text_la": "Līvia quoque fīlia Flāviae est.",
+          "source_line": 139,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Līvia",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "quoque",
+              "start": 6,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "fīlia",
+              "start": 13,
+              "end": 18,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Flāviae",
+              "start": 19,
+              "end": 26,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 27,
+              "end": 30,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s011",
+          "text_la": "Tītus fīlius Mārcī et Flāviae est.",
+          "source_line": 140,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Tītus",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "fīlius",
+              "start": 6,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Mārcī",
+              "start": 13,
+              "end": 18,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 19,
+              "end": 21,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Flāviae",
+              "start": 22,
+              "end": 29,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 30,
+              "end": 33,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s012",
+          "text_la": "Quis est Tītus? Tītus frāter Līviae est.",
+          "source_line": 141,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Quis",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 5,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 9,
+              "end": 14,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 16,
+              "end": 21,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "frāter",
+              "start": 22,
+              "end": 28,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līviae",
+              "start": 29,
+              "end": 35,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 36,
+              "end": 39,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s013",
+          "text_la": "Quis est Līvia? Līvia soror Tītī est.",
+          "source_line": 142,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Quis",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 5,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līvia",
+              "start": 9,
+              "end": 14,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līvia",
+              "start": 16,
+              "end": 21,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "soror",
+              "start": 22,
+              "end": 27,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītī",
+              "start": 28,
+              "end": 32,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 33,
+              "end": 36,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s014",
+          "text_la": "Cuius frāter est Tītus? Tītus est frāter Līviae.",
+          "source_line": 143,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Cuius",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "frāter",
+              "start": 6,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 13,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 17,
+              "end": 22,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 24,
+              "end": 29,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 30,
+              "end": 33,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "frāter",
+              "start": 34,
+              "end": 40,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līviae",
+              "start": 41,
+              "end": 47,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s015",
+          "text_la": "Cuius soror est Līvia? Līvia est soror Tītī.",
+          "source_line": 144,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Cuius",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "soror",
+              "start": 6,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 12,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līvia",
+              "start": 16,
+              "end": 21,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līvia",
+              "start": 23,
+              "end": 28,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 29,
+              "end": 32,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "soror",
+              "start": 33,
+              "end": 38,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītī",
+              "start": 39,
+              "end": 43,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s016",
+          "text_la": "Cuius fīlius est Tītus? Tītus est fīlius Mārcī.",
+          "source_line": 145,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Cuius",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "fīlius",
+              "start": 6,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 13,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 17,
+              "end": 22,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 24,
+              "end": 29,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 30,
+              "end": 33,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "fīlius",
+              "start": 34,
+              "end": 40,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Mārcī",
+              "start": 41,
+              "end": 46,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s017",
+          "text_la": "Familia Mārcī nōn magna est: pater, māter, fīlius, fīlia.",
+          "source_line": 146,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Familia",
+              "start": 0,
+              "end": 7,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Mārcī",
+              "start": 8,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōn",
+              "start": 14,
+              "end": 17,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "magna",
+              "start": 18,
+              "end": 23,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 24,
+              "end": 27,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pater",
+              "start": 29,
+              "end": 34,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "māter",
+              "start": 36,
+              "end": 41,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "fīlius",
+              "start": 43,
+              "end": 49,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "fīlia",
+              "start": 51,
+              "end": 56,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s018",
+          "text_la": "Vīlla familiae magna est, et hortus vīllae quoque magnus est.",
+          "source_line": 147,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Vīlla",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "familiae",
+              "start": 6,
+              "end": 14,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "magna",
+              "start": 15,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 21,
+              "end": 24,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 26,
+              "end": 28,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "hortus",
+              "start": 29,
+              "end": 35,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "vīllae",
+              "start": 36,
+              "end": 42,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "quoque",
+              "start": 43,
+              "end": 49,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "magnus",
+              "start": 50,
+              "end": 56,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 57,
+              "end": 60,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b01-c002-l2",
+      "title_la": "Lēctiō 2 — Cuius est hortus?",
+      "source_line": 149,
+      "sentences": [
+        {
+          "id": "b01-c002-s019",
+          "text_la": "Hortus est hortus familiae.",
+          "source_line": 151,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Hortus",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 7,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "hortus",
+              "start": 11,
+              "end": 17,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "familiae",
+              "start": 18,
+              "end": 26,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s020",
+          "text_la": "Sed in hortō est rosa pulchra. Cuius est rosa?",
+          "source_line": 152,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Sed",
+              "start": 0,
+              "end": 3,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 4,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "hortō",
+              "start": 7,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 13,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "rosa",
+              "start": 17,
+              "end": 21,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pulchra",
+              "start": 22,
+              "end": 29,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Cuius",
+              "start": 31,
+              "end": 36,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 37,
+              "end": 40,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "rosa",
+              "start": 41,
+              "end": 45,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s021",
+          "text_la": "Tītus: «Rosa est rosa Līviae.»",
+          "source_line": 153,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Tītus",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Rosa",
+              "start": 8,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 13,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "rosa",
+              "start": 17,
+              "end": 21,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līviae",
+              "start": 22,
+              "end": 28,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s022",
+          "text_la": "Ita, rosa Līviae est.",
+          "source_line": 154,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Ita",
+              "start": 0,
+              "end": 3,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "rosa",
+              "start": 5,
+              "end": 9,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līviae",
+              "start": 10,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 17,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s023",
+          "text_la": "Ecce arbor magna. Cuius est arbor?",
+          "source_line": 155,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Ecce",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "arbor",
+              "start": 5,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "magna",
+              "start": 11,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Cuius",
+              "start": 18,
+              "end": 23,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 24,
+              "end": 27,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "arbor",
+              "start": 28,
+              "end": 33,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s024",
+          "text_la": "Arbor nōn est Līviae; arbor est Tītī.",
+          "source_line": 156,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Arbor",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōn",
+              "start": 6,
+              "end": 9,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 10,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līviae",
+              "start": 14,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "arbor",
+              "start": 22,
+              "end": 27,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 28,
+              "end": 31,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītī",
+              "start": 32,
+              "end": 36,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s025",
+          "text_la": "Arbor Tītī magna est, sed rosa Līviae parva est.",
+          "source_line": 157,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Arbor",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītī",
+              "start": 6,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "magna",
+              "start": 11,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 17,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sed",
+              "start": 22,
+              "end": 25,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "rosa",
+              "start": 26,
+              "end": 30,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līviae",
+              "start": 31,
+              "end": 37,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "parva",
+              "start": 38,
+              "end": 43,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 44,
+              "end": 47,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s026",
+          "text_la": "Ubi est Mārcus? Mārcus in hortō est.",
+          "source_line": 158,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Ubi",
+              "start": 0,
+              "end": 3,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 4,
+              "end": 7,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Mārcus",
+              "start": 8,
+              "end": 14,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Mārcus",
+              "start": 16,
+              "end": 22,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 23,
+              "end": 25,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "hortō",
+              "start": 26,
+              "end": 31,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 32,
+              "end": 35,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s027",
+          "text_la": "Ubi est Flāvia? Flāvia nōn in hortō, sed in vīllā est.",
+          "source_line": 159,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Ubi",
+              "start": 0,
+              "end": 3,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 4,
+              "end": 7,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Flāvia",
+              "start": 8,
+              "end": 14,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Flāvia",
+              "start": 16,
+              "end": 22,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōn",
+              "start": 23,
+              "end": 26,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 27,
+              "end": 29,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "hortō",
+              "start": 30,
+              "end": 35,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sed",
+              "start": 37,
+              "end": 40,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 41,
+              "end": 43,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "vīllā",
+              "start": 44,
+              "end": 49,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 50,
+              "end": 53,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s028",
+          "text_la": "Ecce puella in vīllā: estne puella fīlia Flāviae?",
+          "source_line": 160,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Ecce",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "puella",
+              "start": 5,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 12,
+              "end": 14,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "vīllā",
+              "start": 15,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "estne",
+              "start": 22,
+              "end": 27,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "puella",
+              "start": 28,
+              "end": 34,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "fīlia",
+              "start": 35,
+              "end": 40,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Flāviae",
+              "start": 41,
+              "end": 48,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s029",
+          "text_la": "Ita est: puella in vīllā est Līvia, fīlia Flāviae.",
+          "source_line": 161,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Ita",
+              "start": 0,
+              "end": 3,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 4,
+              "end": 7,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "puella",
+              "start": 9,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 16,
+              "end": 18,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "vīllā",
+              "start": 19,
+              "end": 24,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 25,
+              "end": 28,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līvia",
+              "start": 29,
+              "end": 34,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "fīlia",
+              "start": 36,
+              "end": 41,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Flāviae",
+              "start": 42,
+              "end": 49,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s030",
+          "text_la": "Ecce puer in arbore: estne puer fīlius Mārcī?",
+          "source_line": 162,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Ecce",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "puer",
+              "start": 5,
+              "end": 9,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 10,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "arbore",
+              "start": 13,
+              "end": 19,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "estne",
+              "start": 21,
+              "end": 26,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "puer",
+              "start": 27,
+              "end": 31,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "fīlius",
+              "start": 32,
+              "end": 38,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Mārcī",
+              "start": 39,
+              "end": 44,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s031",
+          "text_la": "Ita est: puer in arbore est Tītus, fīlius Mārcī.",
+          "source_line": 163,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Ita",
+              "start": 0,
+              "end": 3,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 4,
+              "end": 7,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "puer",
+              "start": 9,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 14,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "arbore",
+              "start": 17,
+              "end": 23,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 24,
+              "end": 27,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 28,
+              "end": 33,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "fīlius",
+              "start": 35,
+              "end": 41,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Mārcī",
+              "start": 42,
+              "end": 47,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s032",
+          "text_la": "Mārcus et Tītus in hortō sunt.",
+          "source_line": 164,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Mārcus",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 7,
+              "end": 9,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 10,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 16,
+              "end": 18,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "hortō",
+              "start": 19,
+              "end": 24,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sunt",
+              "start": 25,
+              "end": 29,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s033",
+          "text_la": "Flāvia et Līvia in vīllā sunt.",
+          "source_line": 165,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Flāvia",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 7,
+              "end": 9,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līvia",
+              "start": 10,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 16,
+              "end": 18,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "vīllā",
+              "start": 19,
+              "end": 24,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sunt",
+              "start": 25,
+              "end": 29,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s034",
+          "text_la": "Nōmen virī est Mārcus; nōmen fēminae est Flāvia.",
+          "source_line": 166,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Nōmen",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "virī",
+              "start": 6,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 11,
+              "end": 14,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Mārcus",
+              "start": 15,
+              "end": 21,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōmen",
+              "start": 23,
+              "end": 28,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "fēminae",
+              "start": 29,
+              "end": 36,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 37,
+              "end": 40,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Flāvia",
+              "start": 41,
+              "end": 47,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s035",
+          "text_la": "Nōmen puellae est Līvia; nōmen puerī est Tītus.",
+          "source_line": 167,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Nōmen",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "puellae",
+              "start": 6,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 14,
+              "end": 17,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līvia",
+              "start": 18,
+              "end": 23,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōmen",
+              "start": 25,
+              "end": 30,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "puerī",
+              "start": 31,
+              "end": 36,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 37,
+              "end": 40,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 41,
+              "end": 46,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s036",
+          "text_la": "Estne Mārcus frāter Līviae? Nōn: Mārcus pater Līviae est.",
+          "source_line": 168,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Estne",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Mārcus",
+              "start": 6,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "frāter",
+              "start": 13,
+              "end": 19,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līviae",
+              "start": 20,
+              "end": 26,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Nōn",
+              "start": 28,
+              "end": 31,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Mārcus",
+              "start": 33,
+              "end": 39,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pater",
+              "start": 40,
+              "end": 45,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līviae",
+              "start": 46,
+              "end": 52,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 53,
+              "end": 56,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s037",
+          "text_la": "Estne Flāvia soror Tītī? Nōn: Flāvia māter Tītī est.",
+          "source_line": 169,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Estne",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Flāvia",
+              "start": 6,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "soror",
+              "start": 13,
+              "end": 18,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītī",
+              "start": 19,
+              "end": 23,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Nōn",
+              "start": 25,
+              "end": 28,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Flāvia",
+              "start": 30,
+              "end": 36,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "māter",
+              "start": 37,
+              "end": 42,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītī",
+              "start": 43,
+              "end": 47,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 48,
+              "end": 51,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s038",
+          "text_la": "Estne Līvia fīlia Mārcī? Ita, Līvia est fīlia Mārcī et Flāviae.",
+          "source_line": 170,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Estne",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līvia",
+              "start": 6,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "fīlia",
+              "start": 12,
+              "end": 17,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Mārcī",
+              "start": 18,
+              "end": 23,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Ita",
+              "start": 25,
+              "end": 28,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līvia",
+              "start": 30,
+              "end": 35,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 36,
+              "end": 39,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "fīlia",
+              "start": 40,
+              "end": 45,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Mārcī",
+              "start": 46,
+              "end": 51,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 52,
+              "end": 54,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Flāviae",
+              "start": 55,
+              "end": 62,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s039",
+          "text_la": "Vir et fēmina nōn in hortō sunt: vir in hortō est, fēmina in vīllā.",
+          "source_line": 171,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Vir",
+              "start": 0,
+              "end": 3,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 4,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "fēmina",
+              "start": 7,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōn",
+              "start": 14,
+              "end": 17,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 18,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "hortō",
+              "start": 21,
+              "end": 26,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sunt",
+              "start": 27,
+              "end": 31,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "vir",
+              "start": 33,
+              "end": 36,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 37,
+              "end": 39,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "hortō",
+              "start": 40,
+              "end": 45,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 46,
+              "end": 49,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "fēmina",
+              "start": 51,
+              "end": 57,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 58,
+              "end": 60,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "vīllā",
+              "start": 61,
+              "end": 66,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c002-s040",
+          "text_la": "Familia Rōmāna parva est, sed vīlla familiae magna et pulchra est.",
+          "source_line": 172,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Familia",
+              "start": 0,
+              "end": 7,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Rōmāna",
+              "start": 8,
+              "end": 14,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "parva",
+              "start": 15,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 21,
+              "end": 24,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sed",
+              "start": 26,
+              "end": 29,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "vīlla",
+              "start": 30,
+              "end": 35,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "familiae",
+              "start": 36,
+              "end": 44,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "magna",
+              "start": 45,
+              "end": 50,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 51,
+              "end": 53,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pulchra",
+              "start": 54,
+              "end": 61,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 62,
+              "end": 65,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "b01-c002-q001",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 178,
+      "text_original": "1. Quis est pater Līviae? — Mārcus pater Līviae est.",
+      "prompt_text": "Quis est pater Līviae?",
+      "model_answer_raw": "Mārcus pater Līviae est.",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    },
+    {
+      "id": "b01-c002-q002",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 179,
+      "text_original": "2. Cuius fīlia est Līvia? — Līvia fīlia Mārcī et Flāviae est.",
+      "prompt_text": "Cuius fīlia est Līvia?",
+      "model_answer_raw": "Līvia fīlia Mārcī et Flāviae est.",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    },
+    {
+      "id": "b01-c002-q003",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 180,
+      "text_original": "3. Cuius frāter est Tītus? — Tītus frāter Līviae est.",
+      "prompt_text": "Cuius frāter est Tītus?",
+      "model_answer_raw": "Tītus frāter Līviae est.",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    },
+    {
+      "id": "b01-c002-q004",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 181,
+      "text_original": "4. Cuius est rosa? — Rosa est Līviae.",
+      "prompt_text": "Cuius est rosa?",
+      "model_answer_raw": "Rosa est Līviae.",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    },
+    {
+      "id": "b01-c002-q005",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 182,
+      "text_original": "5. Cuius est arbor? — Arbor est Tītī.",
+      "prompt_text": "Cuius est arbor?",
+      "model_answer_raw": "Arbor est Tītī.",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    },
+    {
+      "id": "b01-c002-q006",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 183,
+      "text_original": "6. Ubi est Flāvia? — Flāvia in vīllā est.",
+      "prompt_text": "Ubi est Flāvia?",
+      "model_answer_raw": "Flāvia in vīllā est.",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    },
+    {
+      "id": "b01-c002-q007",
+      "type": "pic",
+      "status": "proposed_ungraded",
+      "scoring_enabled": false,
+      "prompt_la": "Ubi est Mārcus?",
+      "scene_id": "b01-c002-scene",
+      "region_id": "Mārcus",
+      "answer": "Mārcus",
+      "review": {
+        "by": null,
+        "at": null
+      },
+      "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+    },
+    {
+      "id": "b01-c002-q008",
+      "type": "pic",
+      "status": "proposed_ungraded",
+      "scoring_enabled": false,
+      "prompt_la": "Ubi est Flāvia?",
+      "scene_id": "b01-c002-scene",
+      "region_id": "Flāvia",
+      "answer": "Flāvia",
+      "review": {
+        "by": null,
+        "at": null
+      },
+      "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+    },
+    {
+      "id": "b01-c002-q009",
+      "type": "pic",
+      "status": "proposed_ungraded",
+      "scoring_enabled": false,
+      "prompt_la": "Ubi est Līvia?",
+      "scene_id": "b01-c002-scene",
+      "region_id": "Līvia",
+      "answer": "Līvia",
+      "review": {
+        "by": null,
+        "at": null
+      },
+      "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+    },
+    {
+      "id": "b01-c002-q010",
+      "type": "pic",
+      "status": "proposed_ungraded",
+      "scoring_enabled": false,
+      "prompt_la": "Ubi est Tītus?",
+      "scene_id": "b01-c002-scene",
+      "region_id": "Tītus",
+      "answer": "Tītus",
+      "review": {
+        "by": null,
+        "at": null
+      },
+      "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+    },
+    {
+      "id": "b01-c002-q011",
+      "type": "pic",
+      "status": "proposed_ungraded",
+      "scoring_enabled": false,
+      "prompt_la": "Ubi est vīlla?",
+      "scene_id": "b01-c002-scene",
+      "region_id": "vīlla",
+      "answer": "vīlla",
+      "review": {
+        "by": null,
+        "at": null
+      },
+      "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+    }
+  ],
+  "speaking": [
+    {
+      "id": "b01-c002-sp001",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 187,
+      "text_original": "- Name each person in the family-tree picture: `Mārcus pater est. Līvia fīlia Flāviae est.`",
+      "prompt_text": "Name each person in the family-tree picture: `Mārcus pater est. Līvia fīlia Flāviae est.`",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    },
+    {
+      "id": "b01-c002-sp002",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 188,
+      "text_original": "- Say who owns what: `Rosa est Līviae. Arbor est Tītī.`",
+      "prompt_text": "Say who owns what: `Rosa est Līviae. Arbor est Tītī.`",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    }
+  ],
+  "title": "Familia",
+  "is_review": false,
+  "budget_ref": "curriculum/vocabulary-budgets-130.json#2",
+  "lesson_segments": 2,
+  "target_running_tokens": [
+    260,
+    370
+  ],
+  "reading_sentence_count": 40,
+  "reading_token_count": 284,
+  "notes_for_reviewer": "UNSIGNED DRAFT. All lexical and grammar annotations remain unverified. Proposed word budget: 8\n> Note for the reviewer: there are 14 new lemmas, against a budget of 8. The extras are `vir`, `fēmina`, `nōmen` and `Rōmānus`; `vir` and `fēmina` are there so that pater and māter can be inferred from the picture. The owner should keep them or cut them. There are no 3rd-declension genitives (`patris`, `mātris`) on purpose."
+}

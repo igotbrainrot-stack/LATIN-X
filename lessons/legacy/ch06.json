@@ -1,0 +1,603 @@
+{
+  "schema": "tablinum-lesson-v1",
+  "id": "legacy-ch06",
+  "legacy": true,
+  "status": "legacy_unreviewed",
+  "original_zero_based_index": 5,
+  "legacy_source_fingerprint_fnv32": "32792e21",
+  "title": "Canis",
+  "legacy_source": {
+    "name": "Canis",
+    "sub": "In viā",
+    "scene": "dog",
+    "context": "Canis currit. Puer canem vocat.",
+    "explain": "Canis is the subject and canem is the object. Ad Līviam indicates movement to Livia.",
+    "sent": [
+      [
+        "Canis in viā currit.",
+        "A dog runs in the road."
+      ],
+      [
+        "Puer canem videt.",
+        "A boy sees the dog."
+      ],
+      [
+        "Puer canem vocat.",
+        "The boy calls the dog."
+      ],
+      [
+        "Sed canis nōn audit.",
+        "But the dog does not hear."
+      ],
+      [
+        "Līvia prope portam stat.",
+        "Livia stands near the gate."
+      ],
+      [
+        "Canis ad Līviam currit.",
+        "The dog runs to Livia."
+      ],
+      [
+        "Līvia rīdet; puer quoque rīdet.",
+        "Livia laughs; the boy also laughs."
+      ],
+      [
+        "Nunc canis cum puerō ambulat.",
+        "Now the dog walks with the boy."
+      ]
+    ],
+    "v": [
+      [
+        "canis",
+        "dog",
+        "canem"
+      ],
+      [
+        "via",
+        "road",
+        "viā"
+      ],
+      [
+        "puer",
+        "boy",
+        "puerō"
+      ],
+      [
+        "currere",
+        "to run",
+        "currit"
+      ],
+      [
+        "vocāre",
+        "to call",
+        "vocat"
+      ],
+      [
+        "audīre",
+        "to hear",
+        "audit"
+      ],
+      [
+        "nōn",
+        "not",
+        ""
+      ],
+      [
+        "porta",
+        "gate",
+        "portam"
+      ],
+      [
+        "prope",
+        "near",
+        ""
+      ],
+      [
+        "rīdēre",
+        "to laugh",
+        "rīdet"
+      ],
+      [
+        "nunc",
+        "now",
+        ""
+      ],
+      [
+        "cum",
+        "with",
+        ""
+      ],
+      [
+        "stāre",
+        "to stand",
+        "stat"
+      ]
+    ],
+    "q": [
+      [
+        "Quis in viā currit?",
+        [
+          "canis",
+          "Mārcus",
+          "Flāvia"
+        ],
+        "canis",
+        "Canis in viā currit."
+      ],
+      [
+        "Quō canis currit?",
+        [
+          "ad Mārcum",
+          "ad Līviam",
+          "ad Tītum"
+        ],
+        "ad Līviam",
+        "Canis ad Līviam currit."
+      ],
+      [
+        "Ubi Līvia stat?",
+        null,
+        [
+          "prope portam",
+          "prope portam stat",
+          "Līvia stat prope portam"
+        ],
+        "Līvia prope portam stat."
+      ]
+    ]
+  },
+  "cloze_source": {
+    "text": "Canis in viā ____.",
+    "answers": [
+      "currit"
+    ],
+    "clue": "Canis nōn sedet.",
+    "proof": "Canis in viā currit."
+  },
+  "sentences": [
+    {
+      "id": "legacy-ch06-s001",
+      "text_la": "Canis in viā currit.",
+      "en": "A dog runs in the road.",
+      "tokens": [
+        {
+          "t": "Canis",
+          "start": 0,
+          "end": 5,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-canis-e668bd09"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "in",
+          "start": 6,
+          "end": 8,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-in-41387a9e"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "viā",
+          "start": 9,
+          "end": 12,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-via-3d1fcc9b"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "currit",
+          "start": 13,
+          "end": 19,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-currere-5837bda9"
+          ],
+          "review_status": "unreviewed"
+        }
+      ]
+    },
+    {
+      "id": "legacy-ch06-s002",
+      "text_la": "Puer canem videt.",
+      "en": "A boy sees the dog.",
+      "tokens": [
+        {
+          "t": "Puer",
+          "start": 0,
+          "end": 4,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-puer-71c67fc5"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "canem",
+          "start": 5,
+          "end": 10,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-canis-e668bd09"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "videt",
+          "start": 11,
+          "end": 16,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-videre-c98e6807"
+          ],
+          "review_status": "unreviewed"
+        }
+      ]
+    },
+    {
+      "id": "legacy-ch06-s003",
+      "text_la": "Puer canem vocat.",
+      "en": "The boy calls the dog.",
+      "tokens": [
+        {
+          "t": "Puer",
+          "start": 0,
+          "end": 4,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-puer-71c67fc5"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "canem",
+          "start": 5,
+          "end": 10,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-canis-e668bd09"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "vocat",
+          "start": 11,
+          "end": 16,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-vocare-4ee5164c"
+          ],
+          "review_status": "unreviewed"
+        }
+      ]
+    },
+    {
+      "id": "legacy-ch06-s004",
+      "text_la": "Sed canis nōn audit.",
+      "en": "But the dog does not hear.",
+      "tokens": [
+        {
+          "t": "Sed",
+          "start": 0,
+          "end": 3,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-sed-60d56f8c"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "canis",
+          "start": 4,
+          "end": 9,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-canis-e668bd09"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "nōn",
+          "start": 10,
+          "end": 13,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-non-29b19c8a"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "audit",
+          "start": 14,
+          "end": 19,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-audire-04a32024"
+          ],
+          "review_status": "unreviewed"
+        }
+      ]
+    },
+    {
+      "id": "legacy-ch06-s005",
+      "text_la": "Līvia prope portam stat.",
+      "en": "Livia stands near the gate.",
+      "tokens": [
+        {
+          "t": "Līvia",
+          "start": 0,
+          "end": 5,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "prope",
+          "start": 6,
+          "end": 11,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-prope-54f3570f"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "portam",
+          "start": 12,
+          "end": 18,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-porta-1660eb12"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "stat",
+          "start": 19,
+          "end": 23,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-stare-00b7110c"
+          ],
+          "review_status": "unreviewed"
+        }
+      ]
+    },
+    {
+      "id": "legacy-ch06-s006",
+      "text_la": "Canis ad Līviam currit.",
+      "en": "The dog runs to Livia.",
+      "tokens": [
+        {
+          "t": "Canis",
+          "start": 0,
+          "end": 5,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-canis-e668bd09"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "ad",
+          "start": 6,
+          "end": 8,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-ad-11c63447",
+            "legacy-lex-ad-87331a6f"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "Līviam",
+          "start": 9,
+          "end": 15,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "currit",
+          "start": 16,
+          "end": 22,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-currere-5837bda9"
+          ],
+          "review_status": "unreviewed"
+        }
+      ]
+    },
+    {
+      "id": "legacy-ch06-s007",
+      "text_la": "Līvia rīdet; puer quoque rīdet.",
+      "en": "Livia laughs; the boy also laughs.",
+      "tokens": [
+        {
+          "t": "Līvia",
+          "start": 0,
+          "end": 5,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "rīdet",
+          "start": 6,
+          "end": 11,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-ridere-71c8c8c5"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "puer",
+          "start": 13,
+          "end": 17,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-puer-71c67fc5"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "quoque",
+          "start": 18,
+          "end": 24,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-quoque-cec76752"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "rīdet",
+          "start": 25,
+          "end": 30,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-ridere-71c8c8c5"
+          ],
+          "review_status": "unreviewed"
+        }
+      ]
+    },
+    {
+      "id": "legacy-ch06-s008",
+      "text_la": "Nunc canis cum puerō ambulat.",
+      "en": "Now the dog walks with the boy.",
+      "tokens": [
+        {
+          "t": "Nunc",
+          "start": 0,
+          "end": 4,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-nunc-28b19af7"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "canis",
+          "start": 5,
+          "end": 10,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-canis-e668bd09"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "cum",
+          "start": 11,
+          "end": 14,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-cum-0c4afe69"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "puerō",
+          "start": 15,
+          "end": 20,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-puer-71c67fc5"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "ambulat",
+          "start": 21,
+          "end": 28,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-ambulare-100d243d"
+          ],
+          "review_status": "unreviewed"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "legacy-ch06-q001",
+      "legacy_source": [
+        "Quis in viā currit?",
+        [
+          "canis",
+          "Mārcus",
+          "Flāvia"
+        ],
+        "canis",
+        "Canis in viā currit."
+      ]
+    },
+    {
+      "id": "legacy-ch06-q002",
+      "legacy_source": [
+        "Quō canis currit?",
+        [
+          "ad Mārcum",
+          "ad Līviam",
+          "ad Tītum"
+        ],
+        "ad Līviam",
+        "Canis ad Līviam currit."
+      ]
+    },
+    {
+      "id": "legacy-ch06-q003",
+      "legacy_source": [
+        "Ubi Līvia stat?",
+        null,
+        [
+          "prope portam",
+          "prope portam stat",
+          "Līvia stat prope portam"
+        ],
+        "Līvia prope portam stat."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+name: Tablinum Phase 2 offline lesson compiler
+on:
+  push:
+    branches:
+      - feature/phase2-lesson-compiler-20261105
+  pull_request:
+  workflow_dispatch:
+jobs:
+  compile-check:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 12
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Existing eight-chapter application and Phase 1 regression suite
+        run: npm test
+      - name: Phase 1 source and review snapshot
+        run: npm run test:lexemes
+      - name: Deterministic Phase 2 lesson compiler and 130 chapter plan
+        run: npm run test:phase2
+      - name: Roadmap and grammar planning checks
+        run: |
+          node curriculum/validate-roadmap-130.cjs
+          node curriculum/validate-outline-v3.cjs
+      - name: Verify signed-review gates have not been bypassed
+        shell: bash
+        run: |
+          if node scripts/validate-lexemes.cjs --require-review-ready >/dev/null 2>&1; then
+            echo 'ERROR: unsigned Phase 1 records reported reviewed'; exit 1
+          fi
+          for n in 1500 3000; do
+            if node curriculum/validate-roadmap-130.cjs --require-introduced-$n >/dev/null 2>&1; then
+              echo "ERROR: $n-word gate passed without authored content"; exit 1
+            fi
+          done
+          echo 'PASS: review and course completion gates remain pending'

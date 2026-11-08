@@ -1,0 +1,2638 @@
+{
+  "schema": "tablinum-lesson-v1",
+  "id": "b01-c003",
+  "chapter": 3,
+  "book": 1,
+  "status": "draft",
+  "drafted_by": "claude-draft-2026-11-05",
+  "manuscript_title": "Cēna",
+  "source_manuscript": "docs/pilot/CLAUDE_PILOT_B01_C001_C008.md",
+  "source_line": 192,
+  "review": {
+    "latin": {
+      "by": null,
+      "at": null,
+      "tier": null
+    },
+    "pedagogy": {
+      "by": null,
+      "at": null
+    }
+  },
+  "new_lexemes_declared": [],
+  "grammar_new": [],
+  "proposed_new_lemmas_raw": "**New (proposed, unsigned):** cēna, mēnsa, aqua, cibus, pānis, liber, pōculum, bonus, habet (habeō), portat (portō), bibit (bibō), edit (edō), pōnit (pōnō), legit (legō), spectat (spectō), capit (capiō), respondet (respondeō), quid, tum, iam.",
+  "proposed_grammar_raw": "**Grammar (new):** accusative singular (`-am`, `-um`, `-em`); third-person singular present in `-t`; the question `Quid?`",
+  "proposed_margin_raw": "**Margin:** aqua → aquam · cibus → cibum · pānis → pānem · Quid habet? → pānem habet · [pictūra: mēnsa, pānis, pōculum aquae, liber] · bibit = 💧→👄 · edit = 🍞→👄",
+  "reviewer_notes": [
+    "> Note for the reviewer: there are 20 new lemmas, against a budget of 9. All are concrete, pictured objects or simple actions. If the owner wants the count nearer the budget, the best candidates to move to a later chapter are `legit`, `respondet` and `bonus`."
+  ],
+  "segments": [
+    {
+      "id": "b01-c003-l1",
+      "title_la": "Lēctiō 1 — Mēnsa",
+      "source_line": 198,
+      "sentences": [
+        {
+          "id": "b01-c003-s001",
+          "text_la": "Nunc est cēna in vīllā.",
+          "source_line": 200,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Nunc",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 5,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "cēna",
+              "start": 9,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 14,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "vīllā",
+              "start": 17,
+              "end": 22,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s002",
+          "text_la": "In vīllā est mēnsa magna.",
+          "source_line": 201,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "In",
+              "start": 0,
+              "end": 2,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "vīllā",
+              "start": 3,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 9,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mēnsa",
+              "start": 13,
+              "end": 18,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "magna",
+              "start": 19,
+              "end": 24,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s003",
+          "text_la": "Flāvia cibum portat.",
+          "source_line": 202,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Flāvia",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "cibum",
+              "start": 7,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "portat",
+              "start": 13,
+              "end": 19,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s004",
+          "text_la": "Quid Flāvia portat? Cibum portat.",
+          "source_line": 203,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Quid",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Flāvia",
+              "start": 5,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "portat",
+              "start": 12,
+              "end": 18,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Cibum",
+              "start": 20,
+              "end": 25,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "portat",
+              "start": 26,
+              "end": 32,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s005",
+          "text_la": "Flāvia cibum in mēnsā pōnit.",
+          "source_line": 204,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Flāvia",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "cibum",
+              "start": 7,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 13,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mēnsā",
+              "start": 16,
+              "end": 21,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pōnit",
+              "start": 22,
+              "end": 27,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s006",
+          "text_la": "Tum Flāvia pānem portat.",
+          "source_line": 205,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Tum",
+              "start": 0,
+              "end": 3,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Flāvia",
+              "start": 4,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pānem",
+              "start": 11,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "portat",
+              "start": 17,
+              "end": 23,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s007",
+          "text_la": "Pānis magnus est.",
+          "source_line": 206,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Pānis",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "magnus",
+              "start": 6,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 13,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s008",
+          "text_la": "Flāvia pānem quoque in mēnsā pōnit.",
+          "source_line": 207,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Flāvia",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pānem",
+              "start": 7,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "quoque",
+              "start": 13,
+              "end": 19,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 20,
+              "end": 22,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mēnsā",
+              "start": 23,
+              "end": 28,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pōnit",
+              "start": 29,
+              "end": 34,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s009",
+          "text_la": "Ecce pōculum. In pōculō est aqua.",
+          "source_line": 208,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Ecce",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pōculum",
+              "start": 5,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "In",
+              "start": 14,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pōculō",
+              "start": 17,
+              "end": 23,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 24,
+              "end": 27,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "aqua",
+              "start": 28,
+              "end": 32,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s010",
+          "text_la": "Līvia pōculum portat.",
+          "source_line": 209,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Līvia",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pōculum",
+              "start": 6,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "portat",
+              "start": 14,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s011",
+          "text_la": "Quid Līvia portat? Līvia nōn pānem, sed pōculum portat.",
+          "source_line": 210,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Quid",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līvia",
+              "start": 5,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "portat",
+              "start": 11,
+              "end": 17,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līvia",
+              "start": 19,
+              "end": 24,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōn",
+              "start": 25,
+              "end": 28,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pānem",
+              "start": 29,
+              "end": 34,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sed",
+              "start": 36,
+              "end": 39,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pōculum",
+              "start": 40,
+              "end": 47,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "portat",
+              "start": 48,
+              "end": 54,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s012",
+          "text_la": "Līvia pōculum in mēnsā pōnit.",
+          "source_line": 211,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Līvia",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pōculum",
+              "start": 6,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 14,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mēnsā",
+              "start": 17,
+              "end": 22,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pōnit",
+              "start": 23,
+              "end": 28,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s013",
+          "text_la": "Iam cibus, pānis, aqua in mēnsā sunt.",
+          "source_line": 212,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Iam",
+              "start": 0,
+              "end": 3,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "cibus",
+              "start": 4,
+              "end": 9,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pānis",
+              "start": 11,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "aqua",
+              "start": 18,
+              "end": 22,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 23,
+              "end": 25,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mēnsā",
+              "start": 26,
+              "end": 31,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sunt",
+              "start": 32,
+              "end": 36,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s014",
+          "text_la": "Ubi est Mārcus? Mārcus in hortō est.",
+          "source_line": 213,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Ubi",
+              "start": 0,
+              "end": 3,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 4,
+              "end": 7,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Mārcus",
+              "start": 8,
+              "end": 14,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Mārcus",
+              "start": 16,
+              "end": 22,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 23,
+              "end": 25,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "hortō",
+              "start": 26,
+              "end": 31,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 32,
+              "end": 35,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s015",
+          "text_la": "Mārcus librum habet.",
+          "source_line": 214,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Mārcus",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "librum",
+              "start": 7,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "habet",
+              "start": 14,
+              "end": 19,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s016",
+          "text_la": "Quid Mārcus habet? Librum habet.",
+          "source_line": 215,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Quid",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Mārcus",
+              "start": 5,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "habet",
+              "start": 12,
+              "end": 17,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Librum",
+              "start": 19,
+              "end": 25,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "habet",
+              "start": 26,
+              "end": 31,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s017",
+          "text_la": "Mārcus librum legit.",
+          "source_line": 216,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Mārcus",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "librum",
+              "start": 7,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "legit",
+              "start": 14,
+              "end": 19,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s018",
+          "text_la": "Ubi est Tītus? Tītus in hortō nōn est; Tītus iam in vīllā est!",
+          "source_line": 217,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Ubi",
+              "start": 0,
+              "end": 3,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 4,
+              "end": 7,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 8,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 15,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 21,
+              "end": 23,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "hortō",
+              "start": 24,
+              "end": 29,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōn",
+              "start": 30,
+              "end": 33,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 34,
+              "end": 37,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 39,
+              "end": 44,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "iam",
+              "start": 45,
+              "end": 48,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 49,
+              "end": 51,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "vīllā",
+              "start": 52,
+              "end": 57,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 58,
+              "end": 61,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b01-c003-l2",
+      "title_la": "Lēctiō 2 — Tītus et pānis",
+      "source_line": 219,
+      "sentences": [
+        {
+          "id": "b01-c003-s019",
+          "text_la": "Tītus mēnsam spectat.",
+          "source_line": 221,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Tītus",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mēnsam",
+              "start": 6,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "spectat",
+              "start": 13,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s020",
+          "text_la": "Tītus pānem in mēnsā spectat.",
+          "source_line": 222,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Tītus",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pānem",
+              "start": 6,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 12,
+              "end": 14,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mēnsā",
+              "start": 15,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "spectat",
+              "start": 21,
+              "end": 28,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s021",
+          "text_la": "Pānis Tītī nōn est; pānis familiae est.",
+          "source_line": 223,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Pānis",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītī",
+              "start": 6,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōn",
+              "start": 11,
+              "end": 14,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 15,
+              "end": 18,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pānis",
+              "start": 20,
+              "end": 25,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "familiae",
+              "start": 26,
+              "end": 34,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 35,
+              "end": 38,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s022",
+          "text_la": "Sed Tītus pānem capit.",
+          "source_line": 224,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Sed",
+              "start": 0,
+              "end": 3,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 4,
+              "end": 9,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pānem",
+              "start": 10,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "capit",
+              "start": 16,
+              "end": 21,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s023",
+          "text_la": "Quid Tītus capit? Tītus pānem capit!",
+          "source_line": 225,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Quid",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 5,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "capit",
+              "start": 11,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 18,
+              "end": 23,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pānem",
+              "start": 24,
+              "end": 29,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "capit",
+              "start": 30,
+              "end": 35,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s024",
+          "text_la": "Tītus pānem edit.",
+          "source_line": 226,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Tītus",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pānem",
+              "start": 6,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "edit",
+              "start": 12,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s025",
+          "text_la": "Flāvia Tītum spectat.",
+          "source_line": 227,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Flāvia",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītum",
+              "start": 7,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "spectat",
+              "start": 13,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s026",
+          "text_la": "Flāvia: «Ubi est pānis?»",
+          "source_line": 228,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Flāvia",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Ubi",
+              "start": 9,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 13,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pānis",
+              "start": 17,
+              "end": 22,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s027",
+          "text_la": "Tītus nōn respondet; Tītus pānem edit.",
+          "source_line": 229,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Tītus",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōn",
+              "start": 6,
+              "end": 9,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "respondet",
+              "start": 10,
+              "end": 19,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 21,
+              "end": 26,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pānem",
+              "start": 27,
+              "end": 32,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "edit",
+              "start": 33,
+              "end": 37,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s028",
+          "text_la": "Līvia pōculum habet. Līvia aquam bibit.",
+          "source_line": 230,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Līvia",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pōculum",
+              "start": 6,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "habet",
+              "start": 14,
+              "end": 19,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līvia",
+              "start": 21,
+              "end": 26,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "aquam",
+              "start": 27,
+              "end": 32,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "bibit",
+              "start": 33,
+              "end": 38,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s029",
+          "text_la": "Quid Līvia bibit? Aquam bibit.",
+          "source_line": 231,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Quid",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līvia",
+              "start": 5,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "bibit",
+              "start": 11,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Aquam",
+              "start": 18,
+              "end": 23,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "bibit",
+              "start": 24,
+              "end": 29,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s030",
+          "text_la": "Quid Tītus edit? Pānem edit.",
+          "source_line": 232,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Quid",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 5,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "edit",
+              "start": 11,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Pānem",
+              "start": 17,
+              "end": 22,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "edit",
+              "start": 23,
+              "end": 27,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s031",
+          "text_la": "Mārcus librum in mēnsā pōnit.",
+          "source_line": 233,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Mārcus",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "librum",
+              "start": 7,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 14,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mēnsā",
+              "start": 17,
+              "end": 22,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pōnit",
+              "start": 23,
+              "end": 28,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s032",
+          "text_la": "Mārcus cibum capit et edit.",
+          "source_line": 234,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Mārcus",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "cibum",
+              "start": 7,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "capit",
+              "start": 13,
+              "end": 18,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 19,
+              "end": 21,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "edit",
+              "start": 22,
+              "end": 26,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s033",
+          "text_la": "Flāvia quoque cibum edit et aquam bibit.",
+          "source_line": 235,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Flāvia",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "quoque",
+              "start": 7,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "cibum",
+              "start": 14,
+              "end": 19,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "edit",
+              "start": 20,
+              "end": 24,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 25,
+              "end": 27,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "aquam",
+              "start": 28,
+              "end": 33,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "bibit",
+              "start": 34,
+              "end": 39,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s034",
+          "text_la": "Nunc familia cēnam habet.",
+          "source_line": 236,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Nunc",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "familia",
+              "start": 5,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "cēnam",
+              "start": 13,
+              "end": 18,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "habet",
+              "start": 19,
+              "end": 24,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s035",
+          "text_la": "Cēna bona est.",
+          "source_line": 237,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Cēna",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "bona",
+              "start": 5,
+              "end": 9,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 10,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s036",
+          "text_la": "Tītus pānem nōn iam habet, sed Tītus cibum habet.",
+          "source_line": 238,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Tītus",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pānem",
+              "start": 6,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōn",
+              "start": 12,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "iam",
+              "start": 16,
+              "end": 19,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "habet",
+              "start": 20,
+              "end": 25,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sed",
+              "start": 27,
+              "end": 30,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 31,
+              "end": 36,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "cibum",
+              "start": 37,
+              "end": 42,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "habet",
+              "start": 43,
+              "end": 48,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s037",
+          "text_la": "Tum Flāvia mēnsam spectat: cibus nōn iam in mēnsā est.",
+          "source_line": 239,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Tum",
+              "start": 0,
+              "end": 3,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Flāvia",
+              "start": 4,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mēnsam",
+              "start": 11,
+              "end": 17,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "spectat",
+              "start": 18,
+              "end": 25,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "cibus",
+              "start": 27,
+              "end": 32,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōn",
+              "start": 33,
+              "end": 36,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "iam",
+              "start": 37,
+              "end": 40,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 41,
+              "end": 43,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mēnsā",
+              "start": 44,
+              "end": 49,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 50,
+              "end": 53,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s038",
+          "text_la": "Pānis quoque nōn iam in mēnsā est.",
+          "source_line": 240,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Pānis",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "quoque",
+              "start": 6,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōn",
+              "start": 13,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "iam",
+              "start": 17,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 21,
+              "end": 23,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mēnsā",
+              "start": 24,
+              "end": 29,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 30,
+              "end": 33,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s039",
+          "text_la": "Quid in mēnsā est? Liber Mārcī et pōculum Līviae in mēnsā sunt.",
+          "source_line": 241,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Quid",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 5,
+              "end": 7,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mēnsā",
+              "start": 8,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 14,
+              "end": 17,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Liber",
+              "start": 19,
+              "end": 24,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Mārcī",
+              "start": 25,
+              "end": 30,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 31,
+              "end": 33,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pōculum",
+              "start": 34,
+              "end": 41,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līviae",
+              "start": 42,
+              "end": 48,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 49,
+              "end": 51,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mēnsā",
+              "start": 52,
+              "end": 57,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sunt",
+              "start": 58,
+              "end": 62,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s040",
+          "text_la": "Mārcus librum capit et in hortō legit.",
+          "source_line": 242,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Mārcus",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "librum",
+              "start": 7,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "capit",
+              "start": 14,
+              "end": 19,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 20,
+              "end": 22,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 23,
+              "end": 25,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "hortō",
+              "start": 26,
+              "end": 31,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "legit",
+              "start": 32,
+              "end": 37,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s041",
+          "text_la": "Quid Mārcus legit? Librum legit.",
+          "source_line": 243,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Quid",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Mārcus",
+              "start": 5,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "legit",
+              "start": 12,
+              "end": 17,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Librum",
+              "start": 19,
+              "end": 25,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "legit",
+              "start": 26,
+              "end": 31,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s042",
+          "text_la": "Sed ubi est Tītus? Tītus nōn legit; Tītus in arbore est.",
+          "source_line": 244,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Sed",
+              "start": 0,
+              "end": 3,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ubi",
+              "start": 4,
+              "end": 7,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 8,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 12,
+              "end": 17,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 19,
+              "end": 24,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōn",
+              "start": 25,
+              "end": 28,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "legit",
+              "start": 29,
+              "end": 34,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 36,
+              "end": 41,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 42,
+              "end": 44,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "arbore",
+              "start": 45,
+              "end": 51,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 52,
+              "end": 55,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s043",
+          "text_la": "Flāvia Tītum in arbore spectat.",
+          "source_line": 245,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Flāvia",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītum",
+              "start": 7,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 13,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "arbore",
+              "start": 16,
+              "end": 22,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "spectat",
+              "start": 23,
+              "end": 30,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s044",
+          "text_la": "Tītus in arbore est, et Tītus pānem habet!",
+          "source_line": 246,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Tītus",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 6,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "arbore",
+              "start": 9,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 16,
+              "end": 19,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 21,
+              "end": 23,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 24,
+              "end": 29,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pānem",
+              "start": 30,
+              "end": 35,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "habet",
+              "start": 36,
+              "end": 41,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c003-s045",
+          "text_la": "Flāvia: «Ecce pānis familiae!»",
+          "source_line": 247,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Flāvia",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Ecce",
+              "start": 9,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pānis",
+              "start": 14,
+              "end": 19,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "familiae",
+              "start": 20,
+              "end": 28,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "b01-c003-q001",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 253,
+      "text_original": "1. Quid Flāvia portat? — Flāvia cibum portat.",
+      "prompt_text": "Quid Flāvia portat?",
+      "model_answer_raw": "Flāvia cibum portat.",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    },
+    {
+      "id": "b01-c003-q002",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 254,
+      "text_original": "2. Ubi Flāvia pānem pōnit? — Flāvia pānem in mēnsā pōnit.",
+      "prompt_text": "Ubi Flāvia pānem pōnit?",
+      "model_answer_raw": "Flāvia pānem in mēnsā pōnit.",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    },
+    {
+      "id": "b01-c003-q003",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 255,
+      "text_original": "3. Quid Līvia bibit? — Līvia aquam bibit.",
+      "prompt_text": "Quid Līvia bibit?",
+      "model_answer_raw": "Līvia aquam bibit.",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    },
+    {
+      "id": "b01-c003-q004",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 256,
+      "text_original": "4. Quid Mārcus habet? — Mārcus librum habet.",
+      "prompt_text": "Quid Mārcus habet?",
+      "model_answer_raw": "Mārcus librum habet.",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    },
+    {
+      "id": "b01-c003-q005",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 257,
+      "text_original": "5. Quid Tītus capit? — Tītus pānem capit.",
+      "prompt_text": "Quid Tītus capit?",
+      "model_answer_raw": "Tītus pānem capit.",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    },
+    {
+      "id": "b01-c003-q006",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 258,
+      "text_original": "6. Ending: aqu___ (Līvia aqu___ bibit) — aquam.",
+      "prompt_text": "Ending: aqu___ (Līvia aqu___ bibit)",
+      "model_answer_raw": "aquam.",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    },
+    {
+      "id": "b01-c003-q007",
+      "type": "pic",
+      "status": "proposed_ungraded",
+      "scoring_enabled": false,
+      "prompt_la": "Ubi est mēnsa?",
+      "scene_id": "b01-c003-scene",
+      "region_id": "mēnsa",
+      "answer": "mēnsa",
+      "review": {
+        "by": null,
+        "at": null
+      },
+      "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+    },
+    {
+      "id": "b01-c003-q008",
+      "type": "pic",
+      "status": "proposed_ungraded",
+      "scoring_enabled": false,
+      "prompt_la": "Ubi est pānis?",
+      "scene_id": "b01-c003-scene",
+      "region_id": "pānis",
+      "answer": "pānis",
+      "review": {
+        "by": null,
+        "at": null
+      },
+      "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+    },
+    {
+      "id": "b01-c003-q009",
+      "type": "pic",
+      "status": "proposed_ungraded",
+      "scoring_enabled": false,
+      "prompt_la": "Ubi est pōculum?",
+      "scene_id": "b01-c003-scene",
+      "region_id": "pōculum",
+      "answer": "pōculum",
+      "review": {
+        "by": null,
+        "at": null
+      },
+      "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+    },
+    {
+      "id": "b01-c003-q010",
+      "type": "pic",
+      "status": "proposed_ungraded",
+      "scoring_enabled": false,
+      "prompt_la": "Ubi est liber?",
+      "scene_id": "b01-c003-scene",
+      "region_id": "liber",
+      "answer": "liber",
+      "review": {
+        "by": null,
+        "at": null
+      },
+      "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+    },
+    {
+      "id": "b01-c003-q011",
+      "type": "pic",
+      "status": "proposed_ungraded",
+      "scoring_enabled": false,
+      "prompt_la": "Ubi est cibus?",
+      "scene_id": "b01-c003-scene",
+      "region_id": "cibus",
+      "answer": "cibus",
+      "review": {
+        "by": null,
+        "at": null
+      },
+      "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+    }
+  ],
+  "speaking": [
+    {
+      "id": "b01-c003-sp001",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 262,
+      "text_original": "- Point to the table and say what each person has: `Mārcus librum habet.`",
+      "prompt_text": "Point to the table and say what each person has: `Mārcus librum habet.`",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    },
+    {
+      "id": "b01-c003-sp002",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 263,
+      "text_original": "- Answer aloud: `Quid Tītus edit?`",
+      "prompt_text": "Answer aloud: `Quid Tītus edit?`",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    }
+  ],
+  "title": "Cēna",
+  "is_review": false,
+  "budget_ref": "curriculum/vocabulary-budgets-130.json#3",
+  "lesson_segments": 2,
+  "target_running_tokens": [
+    270,
+    380
+  ],
+  "reading_sentence_count": 45,
+  "reading_token_count": 256,
+  "notes_for_reviewer": "UNSIGNED DRAFT. All lexical and grammar annotations remain unverified. Proposed word budget: 9\n> Note for the reviewer: there are 20 new lemmas, against a budget of 9. All are concrete, pictured objects or simple actions. If the owner wants the count nearer the budget, the best candidates to move to a later chapter are `legit`, `respondet` and `bonus`."
+}

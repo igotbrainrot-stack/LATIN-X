@@ -1,0 +1,23 @@
+LATIN X RECEIVED RUNWAY AUDIO — VERIFICATION 2026-11-07
+
+- Source uploaded: audio-audition.zip
+- ZIP integrity: PASS (38 entries including folder and helper files)
+- MP3 original files: 34 / 34; exact filename match with audition manifest
+- Original binaries copied byte-for-byte; each measured SHA-256 in docs/audio/audition-2026-11.json
+- All MP3s parsed by ffprobe; 44.1kHz; unique SHA-256 values
+- Max measured MP3 container duration delta vs provider metadata <0.05 seconds
+- Automated ffmpeg decode check: no decoded samples at >= 0.999 amplitude
+- Flagged potential long trailing silence (>0.3 seconds at approximate -40 dBFS block RMS): 6 clips, see docs/audio/audition-signal-qa-2026-11.json
+- Browser (Chromium): 17 comparison pairs, 34 audio controls, 6 advisory warnings, real original MP3 decoding, select/review state and JSON export PASS using local classic-script inlining and original MP3 data URI.
+- Direct file:// browser test: NOT RUN; sandbox browser blocks file:// by policy.
+- No human listening, restored Latin pronunciation verification, or owner approval performed.
+- No audio recordings wired into reader. All approved artwork and source files unchanged.
+
+TESTS:
+  regression_test.log: PASS; final: PASS new watercolor art: 9 published replacement WebPs and 9 thumbs, native PNG and former art rollback, unchanged polygon maps, provenance/SHA/size/alpha/aspect gates, 14 anchors,
+  art_test.log: PASS; final: PASS new watercolor art: 9 published replacement WebPs and 9 thumbs, native PNG and former art rollback, unchanged polygon maps, provenance/SHA/size/alpha/aspect gates, 14 anchors,
+  picture_test.log: PASS; final: PASS picture exercises: 44 unsigned keys cover all 9 scene region maps; cumulative Latin forms, inside/outside hit tests, future signed grade, storm overlapping-polygon clicks and 
+  music_test.log: PASS; final: PASS Phase7a: original 3x 2–4m modal scores; no audio before gesture, one lazy AudioContext, duck, settings, microphone pause, hidden-tab pause, v5 backup.
+  package_test.log: PASS; final: PASS: reconciled Phase 2 compiler and reviewed-source catalogue are included alongside the owner-review tools.
+  art_compiler_check.log: PASS; final: PASS illustration catalogue is exact and loads as a classic file:// script
+  audition_browser_smoke.log: PASS; final: NOTE: file:// navigation is blocked in this Linux browser environment; exercised same page with inline local classic-script data and original MP3 binary as data URL.

@@ -1,0 +1,33 @@
+LATIN X - MIRIAM AUDIO IN THE READER (9 November 2026)
+
+1. Extract this whole ZIP into a new folder (keep your old folder; your saved
+   progress lives in the browser and is not touched).
+2. Double-click "Start Tablinum.cmd".
+3. Open Chapter I (In horto). Press "Select / listen" on sentence 1.
+   Miriam reads it. When a sentence ends, the reader moves to the next one and
+   keeps reading while Miriam has a recording for it.
+4. Click a word such as "magna" and press "Miriam" in the side panel to hear the word.
+
+WHAT IS INCLUDED
+- Chapter I sentences 1, 2, 3, 4, 5, 6 and 8: Miriam, your accepted takes.
+- Words cena, Gaius, magna, pecunia, laeta: Miriam, your accepted takes.
+
+WHAT IS NOT INCLUDED YET (approved, but the files could not be downloaded)
+- Sentence 7 V6b (default) and V6a (alternative)
+- Sentence 9 V5a
+- Words quoque V4, villa V2, aqua V3
+For these, the reader says so and uses the browser voice, labelled
+"Browser voice - not Miriam". Nothing was regenerated or faked.
+
+TO ADD THE MISSING SIX
+1. While online, run AUDIO_OWNER_PACKAGE\DOWNLOAD_APPROVED_MP3S.cmd (sentence 7,
+   sentence 9, quoque), plus DOWNLOAD_MIRIAM_IPA_TRIALS.cmd (villa V2) and
+   DOWNLOAD_MIRIAM_ALIAS_V3.cmd (aqua V3) from this folder. If a link has expired,
+   download the existing Runway task by its ID (listed in
+   audio\narration\miriam\AUDIO_MANIFEST.json) - do not generate a new take.
+2. Double-click "Install Approved Narration.cmd" and give it the folder holding
+   the downloaded files. It checks each file is a real MP3 and prints its SHA-256.
+   (It needs Node.js 22, like the other review tools.)
+
+Your listening approval is recorded as an owner preference, not as a Latin
+specialist's verification. Details for developers: CLAUDE_HANDOVER\CLAUDE_HANDOVER_MIRIAM_AUDIO_20261109.md

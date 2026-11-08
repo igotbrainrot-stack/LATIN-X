@@ -1,0 +1,19 @@
+name: Tablinum 50-chapter curriculum structure
+on:
+  push:
+    branches:
+      - plan/latin-course-outline-50-20261105
+  workflow_dispatch:
+jobs:
+  validate-outline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check 50-chapter outline, vocabulary cap, alias matching, and grammar coverage
+        run: node curriculum/validate-outline-50.cjs

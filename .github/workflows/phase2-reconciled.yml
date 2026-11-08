@@ -1,0 +1,110 @@
+name: LATIN X reconciled Phase 2 compiler and review tools
+on:
+  push:
+    branches:
+      - fix/phase2-reconciled-20261105
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  compile-and-verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Generate deterministic compiler output from reviewed-source state
+        run: node scripts/compile-content.cjs
+      - name: Render unsigned owner paradigm approval tables
+        run: node scripts/render-paradigm-samples.cjs
+      - name: Verify rendered forms are reproducible
+        run: node scripts/render-paradigm-samples.cjs --check
+      - name: Test original, review, grammar, paradigm and compiler code
+        run: npm test
+      - name: Verify compiler outputs are repeatable
+        run: npm run test:phase2
+      - name: Verify source traceability and 128 unsigned review candidates
+        run: npm run test:lexemes
+      - name: Verify no signatures or introduced course words were invented
+        run: npm run test:package
+      - name: Check index.html unchanged
+        shell: bash
+        run: |
+          git diff --exit-code -- index.html
+          sha1sum index.html
+      - name: Confirm strict completion gates still reject unapproved work
+        shell: bash
+        run: |
+          for n in 1500 3000; do
+            if node curriculum/validate-roadmap-130.cjs --require-introduced-$n > "strict-$n.log" 2>&1; then
+              echo "ERROR: false $n milestone reported"; exit 1
+            fi
+            grep -q 'GATE NOT MET' "strict-$n.log"
+          done
+          if node scripts/validate-lexemes.cjs --require-review-ready > review-ready.log 2>&1; then
+            echo "ERROR: false review-ready status"; exit 1
+          fi
+      - name: Commit only regenerated Phase 2 outputs after tests pass
+        if: success()
+        shell: bash
+        run: |
+          git config user.name 'LATIN X CI'
+          git config user.email 'actions@users.noreply.github.com'
+          git add -A content curriculum/vocabulary-introductions-130.json reports docs/owner/PARADIGM_SAMPLES.md
+          if ! git diff --cached --quiet; then
+            git commit -m "build(phase2): refresh deterministic compiled catalogue and ledger"
+            git push origin HEAD:fix/phase2-reconciled-20261105
+          fi
+      - name: Package complete runnable app with Claude handover
+        if: success()
+        shell: bash
+        run: |
+          mkdir -p dist
+          git archive --format=zip --output=dist/LATIN_X_PHASE2_RECONCILED_FULL.zip HEAD
+          unzip -t dist/LATIN_X_PHASE2_RECONCILED_FULL.zip | tail -n 1
+          sha256sum dist/LATIN_X_PHASE2_RECONCILED_FULL.zip | tee dist/SHA256SUMS.txt
+      - uses: actions/upload-artifact@v4
+        if: success()
+        with:
+          name: LATIN_X_PHASE2_RECONCILED_FULL
+          path: dist/
+          if-no-files-found: error
+          retention-days: 30
+
+  windows-offline:
+    runs-on: windows-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Regenerate compiler outputs and owner samples on Windows
+        run: |
+          node scripts/compile-content.cjs
+          node scripts/render-paradigm-samples.cjs
+      - name: All Node regression tests on Windows
+        run: npm test
+      - name: Check reproducible Phase 2 compiler on Windows
+        run: npm run test:phase2
+      - name: Check source and owner review on Windows
+        run: |
+          npm run test:lexemes
+          npm run test:package
+      - name: Install Chromium Playwright
+        run: |
+          npm install --no-save playwright
+          npx playwright install chromium
+      - name: Test original Windows file URL and backup compatibility
+        run: npm run test:file
+      - name: Test vocabulary editor from Windows file URL
+        run: npm run test:review-browser
+      - name: Test Edge original app file URL
+        env:
+          TABLINUM_BROWSER_CHANNEL: msedge
+        run: npm run test:file

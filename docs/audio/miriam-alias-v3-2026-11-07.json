@@ -1,0 +1,92 @@
+{
+  "schema": "latin-x-miriam-alias-audition-v3",
+  "date": "2026-11-07",
+  "origin_review": "docs/audio/owner-miriam-ipa-v2-review-2026-11-07.json",
+  "prior_original_review": "docs/audio/owner-original-review-2026-11-07.json",
+  "voice": "Miriam",
+  "model": "eleven_v3",
+  "speed": 0.9,
+  "language_code": null,
+  "approvals": {
+    "original_miriam_v1": {
+      "accept": 12,
+      "reject": 5
+    },
+    "eleanor_v1": "all 17 rejected",
+    "villa_v2": "owner accepted (audio not included in this archive)",
+    "s007_v2": "undecided, negative note",
+    "v3": "unreviewed"
+  },
+  "changed": "speech_input aliases only; no Latin source, lesson, state, art or reader change",
+  "classical_caution": "Owner note quoque Kwo Kee differs from drafted restored Classical /ˈkʷɔ.kʷɛ/ (KWO-kweh); this v3 follows guide, owner/Latinist must adjudicate.",
+  "items": [
+    {
+      "id": "legacy-ch01-s007",
+      "display": "Līvia arborem videt.",
+      "alias": "LEE-wih-ah arborem videt.",
+      "word": "Līvia",
+      "cue": "LEE-wih-ah (approx. /ˈliː.wɪ.a/)",
+      "task": "cc2722e3-2e33-4d5a-a1e3-f2e7594a9ce6",
+      "duration": 3.04,
+      "filename": "voiceA__legacy-ch01-s007__v3.mp3",
+      "owner_v2_decision": null,
+      "owner_v2_note": "does not say it like Li W ia",
+      "v1filename": "voiceA__legacy-ch01-s007__v1.mp3",
+      "v1sha": "c4074fe617a36d2212390fcb43e990a013bad41b7f4ae786faf54b3f58387d7d",
+      "sha256": null,
+      "owner_v3_decision": null,
+      "status": "generated_in_runway_original_binary_not_downloaded"
+    },
+    {
+      "id": "legacy-ch01-s009",
+      "display": "Līvia laeta est.",
+      "alias": "LEE-wih-ah laeta est.",
+      "word": "Līvia",
+      "cue": "LEE-wih-ah (approx. /ˈliː.wɪ.a/)",
+      "task": "84c2aab8-6d6c-4564-9bd1-619b704f7bbf",
+      "duration": 2.56,
+      "filename": "voiceA__legacy-ch01-s009__v3.mp3",
+      "owner_v2_decision": "reject",
+      "owner_v2_note": "does not say it like Li W ia",
+      "v1filename": "voiceA__legacy-ch01-s009__v1.mp3",
+      "v1sha": "d1814cdc97c55aaffb9c3ffa7422354bdea43ff65de1eb28ec53f5bc90bb6868",
+      "sha256": null,
+      "owner_v3_decision": null,
+      "status": "generated_in_runway_original_binary_not_downloaded"
+    },
+    {
+      "id": "test-aqua",
+      "display": "aqua",
+      "alias": "AH-kwah",
+      "word": "aqua",
+      "cue": "AH-kwah (approx. /ˈa.kʷa/)",
+      "task": "56c069b3-6746-4400-be64-29fe0597ba3c",
+      "duration": 1.2,
+      "filename": "voiceA__test-aqua__v3.mp3",
+      "owner_v2_decision": "reject",
+      "owner_v2_note": "does not make the Akwa sound. ",
+      "v1filename": "voiceA__test-aqua__v1.mp3",
+      "v1sha": "beefe8a1010f7ade7cfc40c6322276a4a2a2ed13bb0e1aabb40ef3df7b5fc340",
+      "sha256": null,
+      "owner_v3_decision": null,
+      "status": "generated_in_runway_original_binary_not_downloaded"
+    },
+    {
+      "id": "test-quoque",
+      "display": "quoque",
+      "alias": "KWO-kweh",
+      "word": "quoque",
+      "cue": "KWO-kweh (approx. /ˈkʷɔ.kʷɛ/)",
+      "task": "612d3b11-596b-49d6-912c-9c73788d7d0f",
+      "duration": 1.44,
+      "filename": "voiceA__test-quoque__v3.mp3",
+      "owner_v2_decision": "reject",
+      "owner_v2_note": "doesnt say it like Kwo Kee\n",
+      "v1filename": "voiceA__test-quoque__v1.mp3",
+      "v1sha": "dcb1077abc76490e65817fc3a8c73032a2cc3be2f1b313d0e557d64749abf281",
+      "sha256": null,
+      "owner_v3_decision": null,
+      "status": "generated_in_runway_original_binary_not_downloaded"
+    }
+  ]
+}

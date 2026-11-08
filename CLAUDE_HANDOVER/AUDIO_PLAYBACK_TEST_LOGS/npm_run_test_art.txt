@@ -1,0 +1,10 @@
+
+> latin-x-tablinum-review@0.4.2 test:art
+> node scripts/build-illustrations.cjs --check && node scripts/check-illustrations.cjs && node tests/phase8-art-gates.test.cjs && node tests/legacy-main-art.test.cjs && node tests/art-replacement-regions.test.cjs
+
+PASS illustration catalogue is exact and loads as a classic file:// script
+PASS: 9 draft scenes have grounded region plans and SVG fallback; no unapproved image asset is published.
+PASS: 9 draft scenes have grounded region plans and SVG fallback; no unapproved image asset is published.
+PASS Phase8: 9 owner-approved art scenes, unsigned-copy fail-closed gates, exact static JS manifest, owner-review tool parse, SVG fallback, and polygon geometry.
+PASS main-reader artwork preview: all eight topics mapped to nine approved WebPs, two weather pictures, related-scene warning, SVG fallback and unsigned gate.
+PASS new watercolor art: 9 published replacement WebPs and 9 thumbs, native PNG and former art rollback, unchanged polygon maps, provenance/SHA/size/alpha/aspect gates, 14 anchors, storm overlap and unsigned grading gate.

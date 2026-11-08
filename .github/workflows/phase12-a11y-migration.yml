@@ -1,0 +1,67 @@
+name: LATIN X Phase12 preparation - offline accessibility and long profile
+on:
+  push:
+    branches: [feature/phase12-accessibility-migration-20261106]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - name: Historical content and migration checks
+        run: |
+          npm test
+          npm run test:phase12
+          npm run test:phase2
+          npm run test:music
+          npm run test:art
+          npm run test:package
+      - name: Strict approval and lexeme gates remain RED
+        shell: bash
+        run: |
+          if node scripts/validate-lexemes.cjs --require-review-ready > review-gate.txt 2>&1; then exit 1; fi
+          for n in 1500 3000; do
+            if node curriculum/validate-roadmap-130.cjs --require-introduced-$n > gate-$n.txt 2>&1; then exit 1; fi
+            grep -q 'GATE NOT MET' gate-$n.txt
+          done
+      - name: Complete review handover, app, source, tests, and licence ZIP
+        shell: bash
+        run: |
+          mkdir -p dist
+          git archive --format=zip --output=dist/LATIN_X_PHASE12_PREPARATION_FULL.zip HEAD
+          unzip -t dist/LATIN_X_PHASE12_PREPARATION_FULL.zip | tail -n 1
+          for f in 'Start Tablinum.cmd' index.html app/legacy-runtime.js app/80-accessibility.js tests/phase12-long-profile.test.cjs tests/phase12-accessibility.test.cjs tests/phase12-accessibility-browser.test.cjs docs/PHASE12_ACCESSIBILITY_AUDIT.md PHASE12_PREPARATION_CLAUDE_HANDOVER.md vendor/ts-fsrs.LICENSE; do
+            unzip -Z1 dist/LATIN_X_PHASE12_PREPARATION_FULL.zip | grep -Fx "$f"
+          done
+          sha256sum dist/LATIN_X_PHASE12_PREPARATION_FULL.zip > dist/SHA256SUMS.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: LATIN_X_PHASE12_PREPARATION_FULL
+          path: dist/
+          retention-days: 30
+  windows-browser:
+    runs-on: windows-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chromium, chrome, msedge, firefox]
+    env:
+      TABLINUM_BROWSER_NAME: ${{ matrix.browser }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - name: Install pinned browser test harness
+        run: |
+          npm install --no-save ts-fsrs@5.4.2 playwright@1.64.1
+          npx playwright install chromium firefox
+      - name: Run all Node checks and Windows file:// accessibility smoke
+        run: |
+          npm test
+          npm run test:phase12-browser

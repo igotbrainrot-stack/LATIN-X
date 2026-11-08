@@ -1,0 +1,11 @@
+# Owner-only Runway audition audio, generated binaries and temporary signed URLs.
+/audio-audition/*.mp3
+/audio-audition/PRIVATE_MIRIAM_IPA_V2_RUNWAY_LINKS.json
+/audio-audition/PRIVATE_Runway_Download_Links.json
+/audio-audition/MIRIAM_IPA_V2_LOCAL_SHA256.json
+/docs/audio/owner-original-review-2026-11-07.json
+
+# Approved narration: local install record. The MP3s ship in the owner ZIP; keep them out of public Git.
+audio/narration/**/*.mp3
+audio/narration/**/LOCAL_INSTALL_RECORD.json
+**/PRIVATE_AUDIO_LINKS.json

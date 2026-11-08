@@ -1,0 +1,2773 @@
+{
+  "schema": "tablinum-lesson-v1",
+  "id": "b01-c007",
+  "chapter": 7,
+  "book": 1,
+  "status": "draft",
+  "drafted_by": "claude-draft-2026-11-05",
+  "manuscript_title": "Canis in viā",
+  "source_manuscript": "docs/pilot/CLAUDE_PILOT_B01_C001_C008.md",
+  "source_line": 505,
+  "review": {
+    "latin": {
+      "by": null,
+      "at": null,
+      "tier": null
+    },
+    "pedagogy": {
+      "by": null,
+      "at": null
+    }
+  },
+  "new_lexemes_declared": [],
+  "grammar_new": [],
+  "proposed_new_lemmas_raw": "**New (proposed, unsigned):** canis, via, porta, ad, prope, currit (currō), vocat (vocō), ambulat (ambulō), lātrat (lātrō), stat (stō), immōtus, quō, subitō, statim.",
+  "proposed_grammar_raw": "**Grammar (new):** `ad` + accusative for motion, contrasted with `in` + ablative for place; `prope` + accusative; the question `Quō?`",
+  "proposed_margin_raw": "**Margin:** in viā = ● on the road · ad portam = → to the gate · Ubi? → in viā · Quō? → ad portam · currit = ambulat, but fast · lātrat = what a dog says · [pictūra: via, porta vīllae, canis, puer]",
+  "reviewer_notes": [
+    "> Note for the reviewer: `immōtus` is one extra pictured word, and it can be cut. Please check these three forms. `Gāī` is the classical genitive of Gāius (`Gāiī` is the later spelling). `Canis! Canis!` is a call whose vocative form is identical to the nominative. `canī` is a 3rd-declension dative, the same pattern as `patrī`."
+  ],
+  "segments": [
+    {
+      "id": "b01-c007-l1",
+      "title_la": "Lēctiō 1 — Canis",
+      "source_line": 511,
+      "sentences": [
+        {
+          "id": "b01-c007-s001",
+          "text_la": "Ecce via.",
+          "source_line": 513,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Ecce",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "via",
+              "start": 5,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s002",
+          "text_la": "Via magna est.",
+          "source_line": 514,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Via",
+              "start": 0,
+              "end": 3,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "magna",
+              "start": 4,
+              "end": 9,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 10,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s003",
+          "text_la": "In viā est canis.",
+          "source_line": 515,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "In",
+              "start": 0,
+              "end": 2,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "viā",
+              "start": 3,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 7,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "canis",
+              "start": 11,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s004",
+          "text_la": "Canis parvus est.",
+          "source_line": 516,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Canis",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "parvus",
+              "start": 6,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 13,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s005",
+          "text_la": "Ubi est canis? Canis in viā est.",
+          "source_line": 517,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Ubi",
+              "start": 0,
+              "end": 3,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 4,
+              "end": 7,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "canis",
+              "start": 8,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Canis",
+              "start": 15,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 21,
+              "end": 23,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "viā",
+              "start": 24,
+              "end": 27,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 28,
+              "end": 31,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s006",
+          "text_la": "Canis nōn stat; canis currit.",
+          "source_line": 518,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Canis",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōn",
+              "start": 6,
+              "end": 9,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "stat",
+              "start": 10,
+              "end": 14,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "canis",
+              "start": 16,
+              "end": 21,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "currit",
+              "start": 22,
+              "end": 28,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s007",
+          "text_la": "Quō canis currit? Canis ad forum currit.",
+          "source_line": 519,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Quō",
+              "start": 0,
+              "end": 3,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "canis",
+              "start": 4,
+              "end": 9,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "currit",
+              "start": 10,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Canis",
+              "start": 18,
+              "end": 23,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ad",
+              "start": 24,
+              "end": 26,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "forum",
+              "start": 27,
+              "end": 32,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "currit",
+              "start": 33,
+              "end": 39,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s008",
+          "text_la": "Prope forum est puer.",
+          "source_line": 520,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Prope",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "forum",
+              "start": 6,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 12,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "puer",
+              "start": 16,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s009",
+          "text_la": "Puer canem spectat.",
+          "source_line": 521,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Puer",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "canem",
+              "start": 5,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "spectat",
+              "start": 11,
+              "end": 18,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s010",
+          "text_la": "Puer canem vocat.",
+          "source_line": 522,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Puer",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "canem",
+              "start": 5,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "vocat",
+              "start": 11,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s011",
+          "text_la": "Sed canis ad puerum nōn currit.",
+          "source_line": 523,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Sed",
+              "start": 0,
+              "end": 3,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "canis",
+              "start": 4,
+              "end": 9,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ad",
+              "start": 10,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "puerum",
+              "start": 13,
+              "end": 19,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōn",
+              "start": 20,
+              "end": 23,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "currit",
+              "start": 24,
+              "end": 30,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s012",
+          "text_la": "Canis lātrat et currit.",
+          "source_line": 524,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Canis",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "lātrat",
+              "start": 6,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 13,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "currit",
+              "start": 16,
+              "end": 22,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s013",
+          "text_la": "Canis ad mēnsam currit; in mēnsā sunt māla et ōva.",
+          "source_line": 525,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Canis",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ad",
+              "start": 6,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mēnsam",
+              "start": 9,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "currit",
+              "start": 16,
+              "end": 22,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 24,
+              "end": 26,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mēnsā",
+              "start": 27,
+              "end": 32,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sunt",
+              "start": 33,
+              "end": 37,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "māla",
+              "start": 38,
+              "end": 42,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 43,
+              "end": 45,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ōva",
+              "start": 46,
+              "end": 49,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s014",
+          "text_la": "Mercātor canem spectat: «Nōn! Nōn!»",
+          "source_line": 526,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Mercātor",
+              "start": 0,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "canem",
+              "start": 9,
+              "end": 14,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "spectat",
+              "start": 15,
+              "end": 22,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Nōn",
+              "start": 25,
+              "end": 28,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Nōn",
+              "start": 30,
+              "end": 33,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s015",
+          "text_la": "Canis ōvum nōn capit; canis ad viam currit.",
+          "source_line": 527,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Canis",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ōvum",
+              "start": 6,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōn",
+              "start": 11,
+              "end": 14,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "capit",
+              "start": 15,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "canis",
+              "start": 22,
+              "end": 27,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ad",
+              "start": 28,
+              "end": 30,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "viam",
+              "start": 31,
+              "end": 35,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "currit",
+              "start": 36,
+              "end": 42,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b01-c007-l2",
+      "title_la": "Lēctiō 2 — Ad portam",
+      "source_line": 529,
+      "sentences": [
+        {
+          "id": "b01-c007-s016",
+          "text_la": "Līvia prope portam vīllae stat.",
+          "source_line": 531,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Līvia",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "prope",
+              "start": 6,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "portam",
+              "start": 12,
+              "end": 18,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "vīllae",
+              "start": 19,
+              "end": 25,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "stat",
+              "start": 26,
+              "end": 30,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s017",
+          "text_la": "Ubi est Līvia? Līvia prope portam est.",
+          "source_line": 532,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Ubi",
+              "start": 0,
+              "end": 3,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 4,
+              "end": 7,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līvia",
+              "start": 8,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līvia",
+              "start": 15,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "prope",
+              "start": 21,
+              "end": 26,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "portam",
+              "start": 27,
+              "end": 33,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 34,
+              "end": 37,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s018",
+          "text_la": "Canis subitō ad portam currit.",
+          "source_line": 533,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Canis",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "subitō",
+              "start": 6,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ad",
+              "start": 13,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "portam",
+              "start": 16,
+              "end": 22,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "currit",
+              "start": 23,
+              "end": 29,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s019",
+          "text_la": "Quō nunc currit canis? Ad portam currit, ad Līviam!",
+          "source_line": 534,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Quō",
+              "start": 0,
+              "end": 3,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nunc",
+              "start": 4,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "currit",
+              "start": 9,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "canis",
+              "start": 16,
+              "end": 21,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Ad",
+              "start": 23,
+              "end": 25,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "portam",
+              "start": 26,
+              "end": 32,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "currit",
+              "start": 33,
+              "end": 39,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ad",
+              "start": 41,
+              "end": 43,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līviam",
+              "start": 44,
+              "end": 50,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s020",
+          "text_la": "Līvia canem spectat.",
+          "source_line": 535,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Līvia",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "canem",
+              "start": 6,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "spectat",
+              "start": 12,
+              "end": 19,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s021",
+          "text_la": "Canis Līviam spectat.",
+          "source_line": 536,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Canis",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līviam",
+              "start": 6,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "spectat",
+              "start": 13,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s022",
+          "text_la": "Līvia nōn currit; Līvia stat.",
+          "source_line": 537,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Līvia",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōn",
+              "start": 6,
+              "end": 9,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "currit",
+              "start": 10,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līvia",
+              "start": 18,
+              "end": 23,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "stat",
+              "start": 24,
+              "end": 28,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s023",
+          "text_la": "Canis lātrat, sed Līvia stat immōta.",
+          "source_line": 538,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Canis",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "lātrat",
+              "start": 6,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sed",
+              "start": 14,
+              "end": 17,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līvia",
+              "start": 18,
+              "end": 23,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "stat",
+              "start": 24,
+              "end": 28,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "immōta",
+              "start": 29,
+              "end": 35,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s024",
+          "text_la": "Puer ad portam currit.",
+          "source_line": 539,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Puer",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ad",
+              "start": 5,
+              "end": 7,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "portam",
+              "start": 8,
+              "end": 14,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "currit",
+              "start": 15,
+              "end": 21,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s025",
+          "text_la": "Quis est puer? Puer est fīlius Gāī.",
+          "source_line": 540,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Quis",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 5,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "puer",
+              "start": 9,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Puer",
+              "start": 15,
+              "end": 19,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 20,
+              "end": 23,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "fīlius",
+              "start": 24,
+              "end": 30,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Gāī",
+              "start": 31,
+              "end": 34,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s026",
+          "text_la": "Puer canem vocat: «Canis! Canis!»",
+          "source_line": 541,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Puer",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "canem",
+              "start": 5,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "vocat",
+              "start": 11,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Canis",
+              "start": 19,
+              "end": 24,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Canis",
+              "start": 26,
+              "end": 31,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s027",
+          "text_la": "Nunc canis ad puerum currit.",
+          "source_line": 542,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Nunc",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "canis",
+              "start": 5,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ad",
+              "start": 11,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "puerum",
+              "start": 14,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "currit",
+              "start": 21,
+              "end": 27,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "b01-c007-l3",
+      "title_la": "Lēctiō 3 — In viā",
+      "source_line": 544,
+      "sentences": [
+        {
+          "id": "b01-c007-s028",
+          "text_la": "Tītus ad portam ambulat.",
+          "source_line": 546,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Tītus",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ad",
+              "start": 6,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "portam",
+              "start": 9,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ambulat",
+              "start": 16,
+              "end": 23,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s029",
+          "text_la": "Tītus Līviam et puerum et canem spectat.",
+          "source_line": 547,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Tītus",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līviam",
+              "start": 6,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 13,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "puerum",
+              "start": 16,
+              "end": 22,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 23,
+              "end": 25,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "canem",
+              "start": 26,
+              "end": 31,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "spectat",
+              "start": 32,
+              "end": 39,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s030",
+          "text_la": "Tītus: «Quis est puer?» Līvia Tītō respondet: «Puer est fīlius Gāī.»",
+          "source_line": 548,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Tītus",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Quis",
+              "start": 8,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 13,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "puer",
+              "start": 17,
+              "end": 21,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līvia",
+              "start": 24,
+              "end": 29,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītō",
+              "start": 30,
+              "end": 34,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "respondet",
+              "start": 35,
+              "end": 44,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Puer",
+              "start": 47,
+              "end": 51,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 52,
+              "end": 55,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "fīlius",
+              "start": 56,
+              "end": 62,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Gāī",
+              "start": 63,
+              "end": 66,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s031",
+          "text_la": "Fīlius Gāī Tītō ūnum mālum dat.",
+          "source_line": 549,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Fīlius",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Gāī",
+              "start": 7,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītō",
+              "start": 11,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ūnum",
+              "start": 16,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mālum",
+              "start": 21,
+              "end": 26,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "dat",
+              "start": 27,
+              "end": 30,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s032",
+          "text_la": "Tītus mālum capit et canī dat.",
+          "source_line": 550,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Tītus",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mālum",
+              "start": 6,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "capit",
+              "start": 12,
+              "end": 17,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 18,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "canī",
+              "start": 21,
+              "end": 25,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "dat",
+              "start": 26,
+              "end": 29,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s033",
+          "text_la": "Canis mālum nōn edit!",
+          "source_line": 551,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Canis",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "mālum",
+              "start": 6,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōn",
+              "start": 12,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "edit",
+              "start": 16,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s034",
+          "text_la": "Canis ad Tītum currit, et Tītus ad viam currit.",
+          "source_line": 552,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Canis",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ad",
+              "start": 6,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītum",
+              "start": 9,
+              "end": 14,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "currit",
+              "start": 15,
+              "end": 21,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 23,
+              "end": 25,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 26,
+              "end": 31,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ad",
+              "start": 32,
+              "end": 34,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "viam",
+              "start": 35,
+              "end": 39,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "currit",
+              "start": 40,
+              "end": 46,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s035",
+          "text_la": "Nunc Tītus et canis in viā sunt.",
+          "source_line": 553,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Nunc",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 5,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 11,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "canis",
+              "start": 14,
+              "end": 19,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 20,
+              "end": 22,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "viā",
+              "start": 23,
+              "end": 26,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sunt",
+              "start": 27,
+              "end": 31,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s036",
+          "text_la": "Flāvia ad portam ambulat.",
+          "source_line": 554,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Flāvia",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ad",
+              "start": 7,
+              "end": 9,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "portam",
+              "start": 10,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ambulat",
+              "start": 17,
+              "end": 24,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s037",
+          "text_la": "Ubi est Tītus? Tītus in viā est.",
+          "source_line": 555,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Ubi",
+              "start": 0,
+              "end": 3,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 4,
+              "end": 7,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 8,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 15,
+              "end": 20,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 21,
+              "end": 23,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "viā",
+              "start": 24,
+              "end": 27,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 28,
+              "end": 31,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s038",
+          "text_la": "Flāvia Tītum vocat.",
+          "source_line": 556,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Flāvia",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītum",
+              "start": 7,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "vocat",
+              "start": 13,
+              "end": 18,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s039",
+          "text_la": "Tītus statim ad portam currit; canis quoque currit.",
+          "source_line": 557,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Tītus",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "statim",
+              "start": 6,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ad",
+              "start": 13,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "portam",
+              "start": 16,
+              "end": 22,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "currit",
+              "start": 23,
+              "end": 29,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "canis",
+              "start": 31,
+              "end": 36,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "quoque",
+              "start": 37,
+              "end": 43,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "currit",
+              "start": 44,
+              "end": 50,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s040",
+          "text_la": "Nunc canis prope portam stat, et fīlius Gāī canem vocat.",
+          "source_line": 558,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Nunc",
+              "start": 0,
+              "end": 4,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "canis",
+              "start": 5,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "prope",
+              "start": 11,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "portam",
+              "start": 17,
+              "end": 23,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "stat",
+              "start": 24,
+              "end": 28,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 30,
+              "end": 32,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "fīlius",
+              "start": 33,
+              "end": 39,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Gāī",
+              "start": 40,
+              "end": 43,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "canem",
+              "start": 44,
+              "end": 49,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "vocat",
+              "start": 50,
+              "end": 55,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s041",
+          "text_la": "Fīlius Gāī ad forum ambulat, et canis quoque.",
+          "source_line": 559,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Fīlius",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Gāī",
+              "start": 7,
+              "end": 10,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ad",
+              "start": 11,
+              "end": 13,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "forum",
+              "start": 14,
+              "end": 19,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ambulat",
+              "start": 20,
+              "end": 27,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 29,
+              "end": 31,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "canis",
+              "start": 32,
+              "end": 37,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "quoque",
+              "start": 38,
+              "end": 44,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s042",
+          "text_la": "Tītus prope portam stat et canem spectat.",
+          "source_line": 560,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Tītus",
+              "start": 0,
+              "end": 5,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "prope",
+              "start": 6,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "portam",
+              "start": 12,
+              "end": 18,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "stat",
+              "start": 19,
+              "end": 23,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 24,
+              "end": 26,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "canem",
+              "start": 27,
+              "end": 32,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "spectat",
+              "start": 33,
+              "end": 40,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s043",
+          "text_la": "Quō Līvia ambulat? Līvia ad hortum ambulat.",
+          "source_line": 561,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Quō",
+              "start": 0,
+              "end": 3,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līvia",
+              "start": 4,
+              "end": 9,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ambulat",
+              "start": 10,
+              "end": 17,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līvia",
+              "start": 19,
+              "end": 24,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ad",
+              "start": 25,
+              "end": 27,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "hortum",
+              "start": 28,
+              "end": 34,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "ambulat",
+              "start": 35,
+              "end": 42,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s044",
+          "text_la": "Ubi est nunc Līvia? In hortō est.",
+          "source_line": 562,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Ubi",
+              "start": 0,
+              "end": 3,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 4,
+              "end": 7,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nunc",
+              "start": 8,
+              "end": 12,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Līvia",
+              "start": 13,
+              "end": 18,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "In",
+              "start": 20,
+              "end": 22,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "hortō",
+              "start": 23,
+              "end": 28,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 29,
+              "end": 32,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s045",
+          "text_la": "Et Tītus? Tītus nōn iam in viā, sed in vīllā est.",
+          "source_line": 563,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Et",
+              "start": 0,
+              "end": 2,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 3,
+              "end": 8,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 10,
+              "end": 15,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "nōn",
+              "start": 16,
+              "end": 19,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "iam",
+              "start": 20,
+              "end": 23,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 24,
+              "end": 26,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "viā",
+              "start": 27,
+              "end": 30,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sed",
+              "start": 32,
+              "end": 35,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "in",
+              "start": 36,
+              "end": 38,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "vīllā",
+              "start": 39,
+              "end": 44,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 45,
+              "end": 48,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        },
+        {
+          "id": "b01-c007-s046",
+          "text_la": "Flāvia Tītō pānem dat, et Tītus edit.",
+          "source_line": 564,
+          "annotation_status": "draft_unverified",
+          "tokens": [
+            {
+              "t": "Flāvia",
+              "start": 0,
+              "end": 6,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītō",
+              "start": 7,
+              "end": 11,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "pānem",
+              "start": 12,
+              "end": 17,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "dat",
+              "start": 18,
+              "end": 21,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "et",
+              "start": 23,
+              "end": 25,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "Tītus",
+              "start": 26,
+              "end": 31,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "edit",
+              "start": 32,
+              "end": 36,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "exercises": [
+    {
+      "id": "b01-c007-q001",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 570,
+      "text_original": "1. Ubi est canis? — Canis in viā est.",
+      "prompt_text": "Ubi est canis?",
+      "model_answer_raw": "Canis in viā est.",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    },
+    {
+      "id": "b01-c007-q002",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 571,
+      "text_original": "2. Quō canis subitō currit? — Canis ad portam (ad Līviam) currit.",
+      "prompt_text": "Quō canis subitō currit?",
+      "model_answer_raw": "Canis ad portam (ad Līviam) currit.",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    },
+    {
+      "id": "b01-c007-q003",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 572,
+      "text_original": "3. Quis canem vocat? — Puer (fīlius Gāiī) canem vocat.",
+      "prompt_text": "Quis canem vocat?",
+      "model_answer_raw": "Puer (fīlius Gāiī) canem vocat.",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    },
+    {
+      "id": "b01-c007-q004",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 573,
+      "text_original": "4. Ubi stat Līvia? — Līvia prope portam stat.",
+      "prompt_text": "Ubi stat Līvia?",
+      "model_answer_raw": "Līvia prope portam stat.",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    },
+    {
+      "id": "b01-c007-q005",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 574,
+      "text_original": "5. Quō Tītus currit? — Tītus ad viam currit; tum ad portam.",
+      "prompt_text": "Quō Tītus currit?",
+      "model_answer_raw": "Tītus ad viam currit; tum ad portam.",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    },
+    {
+      "id": "b01-c007-q006",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 575,
+      "text_original": "6. Ubi or Quō? Choose: ___ est canis? / ___ currit canis? — Ubi / Quō.",
+      "prompt_text": "Ubi or Quō? Choose: ___ est canis? / ___ currit canis?",
+      "model_answer_raw": "Ubi / Quō.",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    },
+    {
+      "id": "b01-c007-q007",
+      "type": "pic",
+      "status": "proposed_ungraded",
+      "scoring_enabled": false,
+      "prompt_la": "Ubi est via?",
+      "scene_id": "b01-c007-scene",
+      "region_id": "via",
+      "answer": "via",
+      "review": {
+        "by": null,
+        "at": null
+      },
+      "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+    },
+    {
+      "id": "b01-c007-q008",
+      "type": "pic",
+      "status": "proposed_ungraded",
+      "scoring_enabled": false,
+      "prompt_la": "Quō canis currit?",
+      "scene_id": "b01-c007-scene",
+      "region_id": "porta",
+      "answer": "porta",
+      "review": {
+        "by": null,
+        "at": null
+      },
+      "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+    },
+    {
+      "id": "b01-c007-q009",
+      "type": "pic",
+      "status": "proposed_ungraded",
+      "scoring_enabled": false,
+      "prompt_la": "Ubi est canis?",
+      "scene_id": "b01-c007-scene",
+      "region_id": "canis",
+      "answer": "canis",
+      "review": {
+        "by": null,
+        "at": null
+      },
+      "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+    },
+    {
+      "id": "b01-c007-q010",
+      "type": "pic",
+      "status": "proposed_ungraded",
+      "scoring_enabled": false,
+      "prompt_la": "Ubi est puer?",
+      "scene_id": "b01-c007-scene",
+      "region_id": "puer",
+      "answer": "puer",
+      "review": {
+        "by": null,
+        "at": null
+      },
+      "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+    },
+    {
+      "id": "b01-c007-q011",
+      "type": "pic",
+      "status": "proposed_ungraded",
+      "scoring_enabled": false,
+      "prompt_la": "Ubi est Līvia?",
+      "scene_id": "b01-c007-scene",
+      "region_id": "Līvia",
+      "answer": "Līvia",
+      "review": {
+        "by": null,
+        "at": null
+      },
+      "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+    }
+  ],
+  "speaking": [
+    {
+      "id": "b01-c007-sp001",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 579,
+      "text_original": "- Move a token on the picture and say `Canis ad portam currit.` / `Canis in viā est.`",
+      "prompt_text": "Move a token on the picture and say `Canis ad portam currit.` / `Canis in viā est.`",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    },
+    {
+      "id": "b01-c007-sp002",
+      "type": "proposed_ungraded",
+      "status": "proposed_ungraded",
+      "source_line": 580,
+      "text_original": "- Answer aloud: `Quō Tītus currit?`",
+      "prompt_text": "Answer aloud: `Quō Tītus currit?`",
+      "reviewed_by": null,
+      "reviewed_at": null,
+      "scoring_enabled": false
+    }
+  ],
+  "title": "Canis in viā",
+  "is_review": false,
+  "budget_ref": "curriculum/vocabulary-budgets-130.json#7",
+  "lesson_segments": 3,
+  "target_running_tokens": [
+    310,
+    420
+  ],
+  "reading_sentence_count": 46,
+  "reading_token_count": 271,
+  "notes_for_reviewer": "UNSIGNED DRAFT. All lexical and grammar annotations remain unverified. Proposed word budget: 12\n> Note for the reviewer: `immōtus` is one extra pictured word, and it can be cut. Please check these three forms. `Gāī` is the classical genitive of Gāius (`Gāiī` is the later spelling). `Canis! Canis!` is a call whose vocative form is identical to the nominative. `canī` is a 3rd-declension dative, the same pattern as `patrī`."
+}

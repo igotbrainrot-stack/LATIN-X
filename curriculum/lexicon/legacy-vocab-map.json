@@ -1,0 +1,2463 @@
+{
+  "schema": "tablinum-legacy-vocab-map-v1",
+  "source": "Original v0.4.2 dict() first-wins normalised forms; collisions are not silently approved",
+  "total_keys": 204,
+  "approved_keys": 0,
+  "ambiguous_keys": 3,
+  "keys": [
+    {
+      "key": "accipere",
+      "first_match_candidate_id": "legacy-lex-accipere-70a8f601",
+      "candidate_ids": [
+        "legacy-lex-accipere-70a8f601"
+      ],
+      "form_examples": [
+        "accipere"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "accipit",
+      "first_match_candidate_id": "legacy-lex-accipere-70a8f601",
+      "candidate_ids": [
+        "legacy-lex-accipere-70a8f601"
+      ],
+      "form_examples": [
+        "accipit"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "ad",
+      "first_match_candidate_id": "legacy-lex-ad-87331a6f",
+      "candidate_ids": [
+        "legacy-lex-ad-87331a6f",
+        "legacy-lex-ad-11c63447"
+      ],
+      "form_examples": [
+        "ad"
+      ],
+      "status": "ambiguous",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "agere",
+      "first_match_candidate_id": "legacy-lex-agere-ec67818d",
+      "candidate_ids": [
+        "legacy-lex-agere-ec67818d"
+      ],
+      "form_examples": [
+        "agere"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "ago",
+      "first_match_candidate_id": "legacy-lex-agere-ec67818d",
+      "candidate_ids": [
+        "legacy-lex-agere-ec67818d"
+      ],
+      "form_examples": [
+        "agō"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "ambulare",
+      "first_match_candidate_id": "legacy-lex-ambulare-100d243d",
+      "candidate_ids": [
+        "legacy-lex-ambulare-100d243d"
+      ],
+      "form_examples": [
+        "ambulāre"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "ambulat",
+      "first_match_candidate_id": "legacy-lex-ambulare-100d243d",
+      "candidate_ids": [
+        "legacy-lex-ambulare-100d243d"
+      ],
+      "form_examples": [
+        "ambulat"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "amicum",
+      "first_match_candidate_id": "legacy-lex-amicus-cba09f8d",
+      "candidate_ids": [
+        "legacy-lex-amicus-cba09f8d"
+      ],
+      "form_examples": [
+        "amīcum"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "amicus",
+      "first_match_candidate_id": "legacy-lex-amicus-cba09f8d",
+      "candidate_ids": [
+        "legacy-lex-amicus-cba09f8d"
+      ],
+      "form_examples": [
+        "amīcus"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "an",
+      "first_match_candidate_id": "legacy-lex-an-99644957",
+      "candidate_ids": [
+        "legacy-lex-an-99644957"
+      ],
+      "form_examples": [
+        "an"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "aqua",
+      "first_match_candidate_id": "legacy-lex-aqua-49c69a10",
+      "candidate_ids": [
+        "legacy-lex-aqua-49c69a10"
+      ],
+      "form_examples": [
+        "aqua"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "aquam",
+      "first_match_candidate_id": "legacy-lex-aqua-49c69a10",
+      "candidate_ids": [
+        "legacy-lex-aqua-49c69a10"
+      ],
+      "form_examples": [
+        "aquam"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "arbor",
+      "first_match_candidate_id": "legacy-lex-arbor-6d8b34d5",
+      "candidate_ids": [
+        "legacy-lex-arbor-6d8b34d5"
+      ],
+      "form_examples": [
+        "arbor"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "arbore",
+      "first_match_candidate_id": "legacy-lex-arbor-6d8b34d5",
+      "candidate_ids": [
+        "legacy-lex-arbor-6d8b34d5"
+      ],
+      "form_examples": [
+        "arbore"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "arborem",
+      "first_match_candidate_id": "legacy-lex-arbor-6d8b34d5",
+      "candidate_ids": [
+        "legacy-lex-arbor-6d8b34d5"
+      ],
+      "form_examples": [
+        "arborem"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "audire",
+      "first_match_candidate_id": "legacy-lex-audire-04a32024",
+      "candidate_ids": [
+        "legacy-lex-audire-04a32024"
+      ],
+      "form_examples": [
+        "audīre"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "audit",
+      "first_match_candidate_id": "legacy-lex-audire-04a32024",
+      "candidate_ids": [
+        "legacy-lex-audire-04a32024"
+      ],
+      "form_examples": [
+        "audit"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "bibere",
+      "first_match_candidate_id": "legacy-lex-bibere-f552d5de",
+      "candidate_ids": [
+        "legacy-lex-bibere-f552d5de"
+      ],
+      "form_examples": [
+        "bibere"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "bibit",
+      "first_match_candidate_id": "legacy-lex-bibere-f552d5de",
+      "candidate_ids": [
+        "legacy-lex-bibere-f552d5de"
+      ],
+      "form_examples": [
+        "bibit"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "canem",
+      "first_match_candidate_id": "legacy-lex-canis-e668bd09",
+      "candidate_ids": [
+        "legacy-lex-canis-e668bd09"
+      ],
+      "form_examples": [
+        "canem"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "canis",
+      "first_match_candidate_id": "legacy-lex-canis-e668bd09",
+      "candidate_ids": [
+        "legacy-lex-canis-e668bd09"
+      ],
+      "form_examples": [
+        "canis"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "cenabimus",
+      "first_match_candidate_id": "legacy-lex-cenabimus-0183683f",
+      "candidate_ids": [
+        "legacy-lex-cenabimus-0183683f"
+      ],
+      "form_examples": [
+        "cēnābimus"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "cenant",
+      "first_match_candidate_id": "legacy-lex-cenare-c6193636",
+      "candidate_ids": [
+        "legacy-lex-cenare-c6193636"
+      ],
+      "form_examples": [
+        "cēnant"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "cenare",
+      "first_match_candidate_id": "legacy-lex-cenare-c6193636",
+      "candidate_ids": [
+        "legacy-lex-cenare-c6193636"
+      ],
+      "form_examples": [
+        "cēnāre"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "cibus",
+      "first_match_candidate_id": "legacy-lex-cibus-3d5073c9",
+      "candidate_ids": [
+        "legacy-lex-cibus-3d5073c9"
+      ],
+      "form_examples": [
+        "cibus"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "cras",
+      "first_match_candidate_id": "legacy-lex-cras-ac3c2a26",
+      "candidate_ids": [
+        "legacy-lex-cras-ac3c2a26"
+      ],
+      "form_examples": [
+        "crās"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "cui",
+      "first_match_candidate_id": "legacy-lex-cui-dd5b9f33",
+      "candidate_ids": [
+        "legacy-lex-cui-dd5b9f33"
+      ],
+      "form_examples": [
+        "cui"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "cuius",
+      "first_match_candidate_id": "legacy-lex-cuius-d599e703",
+      "candidate_ids": [
+        "legacy-lex-cuius-d599e703"
+      ],
+      "form_examples": [
+        "cuius"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "cum",
+      "first_match_candidate_id": "legacy-lex-cum-0c4afe69",
+      "candidate_ids": [
+        "legacy-lex-cum-0c4afe69"
+      ],
+      "form_examples": [
+        "cum"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "currere",
+      "first_match_candidate_id": "legacy-lex-currere-5837bda9",
+      "candidate_ids": [
+        "legacy-lex-currere-5837bda9"
+      ],
+      "form_examples": [
+        "currere"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "currit",
+      "first_match_candidate_id": "legacy-lex-currere-5837bda9",
+      "candidate_ids": [
+        "legacy-lex-currere-5837bda9"
+      ],
+      "form_examples": [
+        "currit"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "dare",
+      "first_match_candidate_id": "legacy-lex-dare-6df0682d",
+      "candidate_ids": [
+        "legacy-lex-dare-6df0682d"
+      ],
+      "form_examples": [
+        "dare"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "dat",
+      "first_match_candidate_id": "legacy-lex-dare-6df0682d",
+      "candidate_ids": [
+        "legacy-lex-dare-6df0682d"
+      ],
+      "form_examples": [
+        "dat"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "deinde",
+      "first_match_candidate_id": "legacy-lex-deinde-e522e976",
+      "candidate_ids": [
+        "legacy-lex-deinde-e522e976"
+      ],
+      "form_examples": [
+        "deinde"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "dicere",
+      "first_match_candidate_id": "legacy-lex-dicere-b598d5e7",
+      "candidate_ids": [
+        "legacy-lex-dicere-b598d5e7"
+      ],
+      "form_examples": [
+        "dīcere"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "dicit",
+      "first_match_candidate_id": "legacy-lex-dicere-b598d5e7",
+      "candidate_ids": [
+        "legacy-lex-dicere-b598d5e7"
+      ],
+      "form_examples": [
+        "dīcit"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "dixit",
+      "first_match_candidate_id": "legacy-lex-dixit-bc03351c",
+      "candidate_ids": [
+        "legacy-lex-dixit-bc03351c"
+      ],
+      "form_examples": [
+        "dīxit"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "domum",
+      "first_match_candidate_id": "legacy-lex-domus-d2c8c28e",
+      "candidate_ids": [
+        "legacy-lex-domus-d2c8c28e"
+      ],
+      "form_examples": [
+        "domum"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "domus",
+      "first_match_candidate_id": "legacy-lex-domus-d2c8c28e",
+      "candidate_ids": [
+        "legacy-lex-domus-d2c8c28e"
+      ],
+      "form_examples": [
+        "domus"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "duo",
+      "first_match_candidate_id": "legacy-lex-duo-be248829",
+      "candidate_ids": [
+        "legacy-lex-duo-be248829"
+      ],
+      "form_examples": [
+        "duo"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "e",
+      "first_match_candidate_id": "legacy-lex-e-95cd8075",
+      "candidate_ids": [
+        "legacy-lex-e-95cd8075"
+      ],
+      "form_examples": [
+        "ē"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "edere",
+      "first_match_candidate_id": "legacy-lex-edere-61635c1e",
+      "candidate_ids": [
+        "legacy-lex-edere-61635c1e"
+      ],
+      "form_examples": [
+        "edere"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "edit",
+      "first_match_candidate_id": "legacy-lex-edere-61635c1e",
+      "candidate_ids": [
+        "legacy-lex-edere-61635c1e"
+      ],
+      "form_examples": [
+        "edit"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "emere",
+      "first_match_candidate_id": "legacy-lex-emere-793fbd5c",
+      "candidate_ids": [
+        "legacy-lex-emere-793fbd5c"
+      ],
+      "form_examples": [
+        "emere"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "emit",
+      "first_match_candidate_id": "legacy-lex-emere-793fbd5c",
+      "candidate_ids": [
+        "legacy-lex-emere-793fbd5c"
+      ],
+      "form_examples": [
+        "emit"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "erat",
+      "first_match_candidate_id": "legacy-lex-erat-16e2c1f2",
+      "candidate_ids": [
+        "legacy-lex-erat-16e2c1f2"
+      ],
+      "form_examples": [
+        "erat"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "est",
+      "first_match_candidate_id": "legacy-lex-est-4e388f15",
+      "candidate_ids": [
+        "legacy-lex-est-4e388f15"
+      ],
+      "form_examples": [
+        "est"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "et",
+      "first_match_candidate_id": "legacy-lex-et-0f29c2a6",
+      "candidate_ids": [
+        "legacy-lex-et-0f29c2a6"
+      ],
+      "form_examples": [
+        "et"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "facere",
+      "first_match_candidate_id": "legacy-lex-facere-cde515b5",
+      "candidate_ids": [
+        "legacy-lex-facere-cde515b5"
+      ],
+      "form_examples": [
+        "facere"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "faciemus",
+      "first_match_candidate_id": "legacy-lex-facere-cde515b5",
+      "candidate_ids": [
+        "legacy-lex-facere-cde515b5"
+      ],
+      "form_examples": [
+        "faciēmus"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "familia",
+      "first_match_candidate_id": "legacy-lex-familia-521d0429",
+      "candidate_ids": [
+        "legacy-lex-familia-521d0429"
+      ],
+      "form_examples": [
+        "familia"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "familiae",
+      "first_match_candidate_id": "legacy-lex-familia-521d0429",
+      "candidate_ids": [
+        "legacy-lex-familia-521d0429"
+      ],
+      "form_examples": [
+        "familiae"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "fenestra",
+      "first_match_candidate_id": "legacy-lex-fenestra-a172b7dd",
+      "candidate_ids": [
+        "legacy-lex-fenestra-a172b7dd"
+      ],
+      "form_examples": [
+        "fenestra"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "fenestram",
+      "first_match_candidate_id": "legacy-lex-fenestra-a172b7dd",
+      "candidate_ids": [
+        "legacy-lex-fenestra-a172b7dd"
+      ],
+      "form_examples": [
+        "fenestram"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "feret",
+      "first_match_candidate_id": "legacy-lex-ferre-f0720340",
+      "candidate_ids": [
+        "legacy-lex-ferre-f0720340"
+      ],
+      "form_examples": [
+        "feret"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "ferre",
+      "first_match_candidate_id": "legacy-lex-ferre-f0720340",
+      "candidate_ids": [
+        "legacy-lex-ferre-f0720340"
+      ],
+      "form_examples": [
+        "ferre"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "flavia",
+      "first_match_candidate_id": "legacy-lex-flavia-219eb1d2",
+      "candidate_ids": [
+        "legacy-lex-flavia-219eb1d2"
+      ],
+      "form_examples": [
+        "Flāvia"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "flaviae",
+      "first_match_candidate_id": "legacy-lex-flavia-219eb1d2",
+      "candidate_ids": [
+        "legacy-lex-flavia-219eb1d2"
+      ],
+      "form_examples": [
+        "Flāviae"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "foro",
+      "first_match_candidate_id": "legacy-lex-forum-b5f82e71",
+      "candidate_ids": [
+        "legacy-lex-forum-b5f82e71"
+      ],
+      "form_examples": [
+        "forō"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "forum",
+      "first_match_candidate_id": "legacy-lex-forum-b5f82e71",
+      "candidate_ids": [
+        "legacy-lex-forum-b5f82e71"
+      ],
+      "form_examples": [
+        "forum"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "frater",
+      "first_match_candidate_id": "legacy-lex-frater-35bc1205",
+      "candidate_ids": [
+        "legacy-lex-frater-35bc1205"
+      ],
+      "form_examples": [
+        "frāter"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "gratias",
+      "first_match_candidate_id": "legacy-lex-gratias-beed41b0",
+      "candidate_ids": [
+        "legacy-lex-gratias-beed41b0"
+      ],
+      "form_examples": [
+        "grātiās"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "habemus",
+      "first_match_candidate_id": "legacy-lex-habemus-bc4c856d",
+      "candidate_ids": [
+        "legacy-lex-habemus-bc4c856d"
+      ],
+      "form_examples": [
+        "habēmus"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "habere",
+      "first_match_candidate_id": "legacy-lex-habere-b846d382",
+      "candidate_ids": [
+        "legacy-lex-habere-b846d382"
+      ],
+      "form_examples": [
+        "habēre"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "habet",
+      "first_match_candidate_id": "legacy-lex-habet-edbf0fe3",
+      "candidate_ids": [
+        "legacy-lex-habet-edbf0fe3",
+        "legacy-lex-habere-b846d382"
+      ],
+      "form_examples": [
+        "habet"
+      ],
+      "status": "ambiguous",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "habitant",
+      "first_match_candidate_id": "legacy-lex-habitare-a3d47b26",
+      "candidate_ids": [
+        "legacy-lex-habitare-a3d47b26"
+      ],
+      "form_examples": [
+        "habitant"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "habitare",
+      "first_match_candidate_id": "legacy-lex-habitare-a3d47b26",
+      "candidate_ids": [
+        "legacy-lex-habitare-a3d47b26"
+      ],
+      "form_examples": [
+        "habitāre"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "habitat",
+      "first_match_candidate_id": "legacy-lex-habitare-a3d47b26",
+      "candidate_ids": [
+        "legacy-lex-habitare-a3d47b26"
+      ],
+      "form_examples": [
+        "habitat"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "haec",
+      "first_match_candidate_id": "legacy-lex-haec-dbe8eb71",
+      "candidate_ids": [
+        "legacy-lex-haec-dbe8eb71"
+      ],
+      "form_examples": [
+        "haec"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "heri",
+      "first_match_candidate_id": "legacy-lex-heri-63fe3327",
+      "candidate_ids": [
+        "legacy-lex-heri-63fe3327"
+      ],
+      "form_examples": [
+        "herī"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "hic",
+      "first_match_candidate_id": "legacy-lex-hic-f0e6bbd9",
+      "candidate_ids": [
+        "legacy-lex-hic-f0e6bbd9"
+      ],
+      "form_examples": [
+        "hic"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "hodie",
+      "first_match_candidate_id": "legacy-lex-hodie-420372be",
+      "candidate_ids": [
+        "legacy-lex-hodie-420372be"
+      ],
+      "form_examples": [
+        "hodiē"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "homines",
+      "first_match_candidate_id": "legacy-lex-homo-d397b280",
+      "candidate_ids": [
+        "legacy-lex-homo-d397b280"
+      ],
+      "form_examples": [
+        "hominēs"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "homo",
+      "first_match_candidate_id": "legacy-lex-homo-d397b280",
+      "candidate_ids": [
+        "legacy-lex-homo-d397b280"
+      ],
+      "form_examples": [
+        "homō"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "horto",
+      "first_match_candidate_id": "legacy-lex-hortus-775718f4",
+      "candidate_ids": [
+        "legacy-lex-hortus-775718f4"
+      ],
+      "form_examples": [
+        "hortō"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "hortum",
+      "first_match_candidate_id": "legacy-lex-hortus-775718f4",
+      "candidate_ids": [
+        "legacy-lex-hortus-775718f4"
+      ],
+      "form_examples": [
+        "hortum"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "hortus",
+      "first_match_candidate_id": "legacy-lex-hortus-775718f4",
+      "candidate_ids": [
+        "legacy-lex-hortus-775718f4"
+      ],
+      "form_examples": [
+        "hortus"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "iam",
+      "first_match_candidate_id": "legacy-lex-iam-8467c7f7",
+      "candidate_ids": [
+        "legacy-lex-iam-8467c7f7"
+      ],
+      "form_examples": [
+        "iam"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "ibimus",
+      "first_match_candidate_id": "legacy-lex-ibimus-3fcb340b",
+      "candidate_ids": [
+        "legacy-lex-ibimus-3fcb340b"
+      ],
+      "form_examples": [
+        "ībimus"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "in",
+      "first_match_candidate_id": "legacy-lex-in-41387a9e",
+      "candidate_ids": [
+        "legacy-lex-in-41387a9e"
+      ],
+      "form_examples": [
+        "in"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "interrogare",
+      "first_match_candidate_id": "legacy-lex-interrogare-fe94d5c5",
+      "candidate_ids": [
+        "legacy-lex-interrogare-fe94d5c5"
+      ],
+      "form_examples": [
+        "interrogāre"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "interrogat",
+      "first_match_candidate_id": "legacy-lex-interrogare-fe94d5c5",
+      "candidate_ids": [
+        "legacy-lex-interrogare-fe94d5c5"
+      ],
+      "form_examples": [
+        "interrogat"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "ire",
+      "first_match_candidate_id": "legacy-lex-ire-cded647a",
+      "candidate_ids": [
+        "legacy-lex-ire-cded647a"
+      ],
+      "form_examples": [
+        "īre"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "it",
+      "first_match_candidate_id": "legacy-lex-ire-cded647a",
+      "candidate_ids": [
+        "legacy-lex-ire-cded647a"
+      ],
+      "form_examples": [
+        "it"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "laeta",
+      "first_match_candidate_id": "legacy-lex-laetus-99863551",
+      "candidate_ids": [
+        "legacy-lex-laetus-99863551"
+      ],
+      "form_examples": [
+        "laeta"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "laeti",
+      "first_match_candidate_id": "legacy-lex-laeti-16377dfe",
+      "candidate_ids": [
+        "legacy-lex-laeti-16377dfe"
+      ],
+      "form_examples": [
+        "laetī"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "laetus",
+      "first_match_candidate_id": "legacy-lex-laetus-99863551",
+      "candidate_ids": [
+        "legacy-lex-laetus-99863551"
+      ],
+      "form_examples": [
+        "laetus"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "legebat",
+      "first_match_candidate_id": "legacy-lex-legebat-e8a07aa2",
+      "candidate_ids": [
+        "legacy-lex-legebat-e8a07aa2"
+      ],
+      "form_examples": [
+        "legēbat"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "legere",
+      "first_match_candidate_id": "legacy-lex-legere-68034180",
+      "candidate_ids": [
+        "legacy-lex-legere-68034180"
+      ],
+      "form_examples": [
+        "legere"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "legit",
+      "first_match_candidate_id": "legacy-lex-legere-68034180",
+      "candidate_ids": [
+        "legacy-lex-legere-68034180"
+      ],
+      "form_examples": [
+        "legit"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "liber",
+      "first_match_candidate_id": "legacy-lex-liber-c1948a38",
+      "candidate_ids": [
+        "legacy-lex-liber-c1948a38"
+      ],
+      "form_examples": [
+        "liber"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "librum",
+      "first_match_candidate_id": "legacy-lex-liber-c1948a38",
+      "candidate_ids": [
+        "legacy-lex-liber-c1948a38"
+      ],
+      "form_examples": [
+        "librum"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "livia",
+      "first_match_candidate_id": "legacy-lex-livia-0abb9e0e",
+      "candidate_ids": [
+        "legacy-lex-livia-0abb9e0e"
+      ],
+      "form_examples": [
+        "Līvia"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "liviae",
+      "first_match_candidate_id": "legacy-lex-livia-0abb9e0e",
+      "candidate_ids": [
+        "legacy-lex-livia-0abb9e0e"
+      ],
+      "form_examples": [
+        "Līviae"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "liviam",
+      "first_match_candidate_id": "legacy-lex-livia-0abb9e0e",
+      "candidate_ids": [
+        "legacy-lex-livia-0abb9e0e"
+      ],
+      "form_examples": [
+        "Līviam"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "lucere",
+      "first_match_candidate_id": "legacy-lex-lucere-0e0a5ef3",
+      "candidate_ids": [
+        "legacy-lex-lucere-0e0a5ef3"
+      ],
+      "form_examples": [
+        "lūcēre"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "lucet",
+      "first_match_candidate_id": "legacy-lex-lucere-0e0a5ef3",
+      "candidate_ids": [
+        "legacy-lex-lucere-0e0a5ef3"
+      ],
+      "form_examples": [
+        "lūcet"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "magna",
+      "first_match_candidate_id": "legacy-lex-magnus-53cacdb9",
+      "candidate_ids": [
+        "legacy-lex-magnus-53cacdb9"
+      ],
+      "form_examples": [
+        "magna"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "magnus",
+      "first_match_candidate_id": "legacy-lex-magnus-53cacdb9",
+      "candidate_ids": [
+        "legacy-lex-magnus-53cacdb9"
+      ],
+      "form_examples": [
+        "magnus"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "mala",
+      "first_match_candidate_id": "legacy-lex-malum-10bc2abf",
+      "candidate_ids": [
+        "legacy-lex-malum-10bc2abf"
+      ],
+      "form_examples": [
+        "māla"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "malum",
+      "first_match_candidate_id": "legacy-lex-malum-10bc2abf",
+      "candidate_ids": [
+        "legacy-lex-malum-10bc2abf"
+      ],
+      "form_examples": [
+        "mālum"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "manebat",
+      "first_match_candidate_id": "legacy-lex-manere-05aea655",
+      "candidate_ids": [
+        "legacy-lex-manere-05aea655"
+      ],
+      "form_examples": [
+        "manēbat"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "manere",
+      "first_match_candidate_id": "legacy-lex-manere-05aea655",
+      "candidate_ids": [
+        "legacy-lex-manere-05aea655"
+      ],
+      "form_examples": [
+        "manēre"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "marce",
+      "first_match_candidate_id": "legacy-lex-marcus-fb60fc2c",
+      "candidate_ids": [
+        "legacy-lex-marcus-fb60fc2c"
+      ],
+      "form_examples": [
+        "Mārce"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "marci",
+      "first_match_candidate_id": "legacy-lex-marcus-fb60fc2c",
+      "candidate_ids": [
+        "legacy-lex-marcus-fb60fc2c"
+      ],
+      "form_examples": [
+        "Mārcī"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "marcum",
+      "first_match_candidate_id": "legacy-lex-marcus-fb60fc2c",
+      "candidate_ids": [
+        "legacy-lex-marcus-fb60fc2c"
+      ],
+      "form_examples": [
+        "Mārcum"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "marcus",
+      "first_match_candidate_id": "legacy-lex-marcus-fb60fc2c",
+      "candidate_ids": [
+        "legacy-lex-marcus-fb60fc2c"
+      ],
+      "form_examples": [
+        "Mārcus"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "mater",
+      "first_match_candidate_id": "legacy-lex-mater-23e3d71a",
+      "candidate_ids": [
+        "legacy-lex-mater-23e3d71a"
+      ],
+      "form_examples": [
+        "māter"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "matrem",
+      "first_match_candidate_id": "legacy-lex-mater-23e3d71a",
+      "candidate_ids": [
+        "legacy-lex-mater-23e3d71a"
+      ],
+      "form_examples": [
+        "mātrem"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "matri",
+      "first_match_candidate_id": "legacy-lex-mater-23e3d71a",
+      "candidate_ids": [
+        "legacy-lex-mater-23e3d71a"
+      ],
+      "form_examples": [
+        "mātrī"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "mensa",
+      "first_match_candidate_id": "legacy-lex-mensa-4a9c9bdf",
+      "candidate_ids": [
+        "legacy-lex-mensa-4a9c9bdf"
+      ],
+      "form_examples": [
+        "mēnsa",
+        "mēnsā"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "mensam",
+      "first_match_candidate_id": "legacy-lex-mensa-4a9c9bdf",
+      "candidate_ids": [
+        "legacy-lex-mensa-4a9c9bdf"
+      ],
+      "form_examples": [
+        "mēnsam"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "mercator",
+      "first_match_candidate_id": "legacy-lex-mercator-1a2d0ed5",
+      "candidate_ids": [
+        "legacy-lex-mercator-1a2d0ed5"
+      ],
+      "form_examples": [
+        "mercātor"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "mercatores",
+      "first_match_candidate_id": "legacy-lex-mercator-1a2d0ed5",
+      "candidate_ids": [
+        "legacy-lex-mercator-1a2d0ed5"
+      ],
+      "form_examples": [
+        "mercātōrēs"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "multi",
+      "first_match_candidate_id": "legacy-lex-multus-e1978fa2",
+      "candidate_ids": [
+        "legacy-lex-multus-e1978fa2"
+      ],
+      "form_examples": [
+        "multī"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "multus",
+      "first_match_candidate_id": "legacy-lex-multus-e1978fa2",
+      "candidate_ids": [
+        "legacy-lex-multus-e1978fa2"
+      ],
+      "form_examples": [
+        "multus"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "noli",
+      "first_match_candidate_id": "legacy-lex-noli-650f4d48",
+      "candidate_ids": [
+        "legacy-lex-noli-650f4d48"
+      ],
+      "form_examples": [
+        "nōlī"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "non",
+      "first_match_candidate_id": "legacy-lex-non-29b19c8a",
+      "candidate_ids": [
+        "legacy-lex-non-29b19c8a"
+      ],
+      "form_examples": [
+        "nōn"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "nunc",
+      "first_match_candidate_id": "legacy-lex-nunc-28b19af7",
+      "candidate_ids": [
+        "legacy-lex-nunc-28b19af7"
+      ],
+      "form_examples": [
+        "nunc"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "omnes",
+      "first_match_candidate_id": "legacy-lex-omnes-d378dd78",
+      "candidate_ids": [
+        "legacy-lex-omnes-d378dd78",
+        "legacy-lex-omnis-13254bc4"
+      ],
+      "form_examples": [
+        "omnēs"
+      ],
+      "status": "ambiguous",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "omnis",
+      "first_match_candidate_id": "legacy-lex-omnis-13254bc4",
+      "candidate_ids": [
+        "legacy-lex-omnis-13254bc4"
+      ],
+      "form_examples": [
+        "omnis"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "panem",
+      "first_match_candidate_id": "legacy-lex-panis-c8647fe5",
+      "candidate_ids": [
+        "legacy-lex-panis-c8647fe5"
+      ],
+      "form_examples": [
+        "pānem"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "panis",
+      "first_match_candidate_id": "legacy-lex-panis-c8647fe5",
+      "candidate_ids": [
+        "legacy-lex-panis-c8647fe5"
+      ],
+      "form_examples": [
+        "pānis"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "paramus",
+      "first_match_candidate_id": "legacy-lex-parare-c152e7a7",
+      "candidate_ids": [
+        "legacy-lex-parare-c152e7a7"
+      ],
+      "form_examples": [
+        "parāmus"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "parare",
+      "first_match_candidate_id": "legacy-lex-parare-c152e7a7",
+      "candidate_ids": [
+        "legacy-lex-parare-c152e7a7"
+      ],
+      "form_examples": [
+        "parāre"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "parat",
+      "first_match_candidate_id": "legacy-lex-parare-c152e7a7",
+      "candidate_ids": [
+        "legacy-lex-parare-c152e7a7"
+      ],
+      "form_examples": [
+        "parat"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "parentes",
+      "first_match_candidate_id": "legacy-lex-parentes-3044938a",
+      "candidate_ids": [
+        "legacy-lex-parentes-3044938a"
+      ],
+      "form_examples": [
+        "parentēs"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "parva",
+      "first_match_candidate_id": "legacy-lex-parvus-a2c4f48c",
+      "candidate_ids": [
+        "legacy-lex-parvus-a2c4f48c"
+      ],
+      "form_examples": [
+        "parva"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "parvus",
+      "first_match_candidate_id": "legacy-lex-parvus-a2c4f48c",
+      "candidate_ids": [
+        "legacy-lex-parvus-a2c4f48c"
+      ],
+      "form_examples": [
+        "parvus"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "pater",
+      "first_match_candidate_id": "legacy-lex-pater-b0fee263",
+      "candidate_ids": [
+        "legacy-lex-pater-b0fee263"
+      ],
+      "form_examples": [
+        "pater"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "patrem",
+      "first_match_candidate_id": "legacy-lex-pater-b0fee263",
+      "candidate_ids": [
+        "legacy-lex-pater-b0fee263"
+      ],
+      "form_examples": [
+        "patrem"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "patri",
+      "first_match_candidate_id": "legacy-lex-pater-b0fee263",
+      "candidate_ids": [
+        "legacy-lex-pater-b0fee263"
+      ],
+      "form_examples": [
+        "patrī"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "per",
+      "first_match_candidate_id": "legacy-lex-per-fd8fc87a",
+      "candidate_ids": [
+        "legacy-lex-per-fd8fc87a"
+      ],
+      "form_examples": [
+        "per"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "pluvia",
+      "first_match_candidate_id": "legacy-lex-pluvia-89a3b5d3",
+      "candidate_ids": [
+        "legacy-lex-pluvia-89a3b5d3"
+      ],
+      "form_examples": [
+        "pluvia"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "porta",
+      "first_match_candidate_id": "legacy-lex-porta-1660eb12",
+      "candidate_ids": [
+        "legacy-lex-porta-1660eb12"
+      ],
+      "form_examples": [
+        "porta"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "portabit",
+      "first_match_candidate_id": "legacy-lex-portabit-6495bbba",
+      "candidate_ids": [
+        "legacy-lex-portabit-6495bbba"
+      ],
+      "form_examples": [
+        "portābit"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "portam",
+      "first_match_candidate_id": "legacy-lex-porta-1660eb12",
+      "candidate_ids": [
+        "legacy-lex-porta-1660eb12"
+      ],
+      "form_examples": [
+        "portam"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "portare",
+      "first_match_candidate_id": "legacy-lex-portare-b922f51b",
+      "candidate_ids": [
+        "legacy-lex-portare-b922f51b"
+      ],
+      "form_examples": [
+        "portāre"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "portat",
+      "first_match_candidate_id": "legacy-lex-portare-b922f51b",
+      "candidate_ids": [
+        "legacy-lex-portare-b922f51b"
+      ],
+      "form_examples": [
+        "portat"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "primum",
+      "first_match_candidate_id": "legacy-lex-primum-4881d841",
+      "candidate_ids": [
+        "legacy-lex-primum-4881d841"
+      ],
+      "form_examples": [
+        "prīmum"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "prope",
+      "first_match_candidate_id": "legacy-lex-prope-54f3570f",
+      "candidate_ids": [
+        "legacy-lex-prope-54f3570f"
+      ],
+      "form_examples": [
+        "prope"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "puella",
+      "first_match_candidate_id": "legacy-lex-puella-a25535a3",
+      "candidate_ids": [
+        "legacy-lex-puella-a25535a3"
+      ],
+      "form_examples": [
+        "puella"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "puer",
+      "first_match_candidate_id": "legacy-lex-puer-71c67fc5",
+      "candidate_ids": [
+        "legacy-lex-puer-71c67fc5"
+      ],
+      "form_examples": [
+        "puer"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "puero",
+      "first_match_candidate_id": "legacy-lex-puer-71c67fc5",
+      "candidate_ids": [
+        "legacy-lex-puer-71c67fc5"
+      ],
+      "form_examples": [
+        "puerō"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "pulcher",
+      "first_match_candidate_id": "legacy-lex-pulcher-1f951fd4",
+      "candidate_ids": [
+        "legacy-lex-pulcher-1f951fd4"
+      ],
+      "form_examples": [
+        "pulcher"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "pulchra",
+      "first_match_candidate_id": "legacy-lex-pulcher-1f951fd4",
+      "candidate_ids": [
+        "legacy-lex-pulcher-1f951fd4"
+      ],
+      "form_examples": [
+        "pulchra"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "quam",
+      "first_match_candidate_id": "legacy-lex-quam-e1a4fe4e",
+      "candidate_ids": [
+        "legacy-lex-quam-e1a4fe4e"
+      ],
+      "form_examples": [
+        "quam"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "quattuor",
+      "first_match_candidate_id": "legacy-lex-quattuor-2f69f5a5",
+      "candidate_ids": [
+        "legacy-lex-quattuor-2f69f5a5"
+      ],
+      "form_examples": [
+        "quattuor"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "quid",
+      "first_match_candidate_id": "legacy-lex-quid-856e942f",
+      "candidate_ids": [
+        "legacy-lex-quid-856e942f"
+      ],
+      "form_examples": [
+        "quid"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "quis",
+      "first_match_candidate_id": "legacy-lex-quis-2af42a8f",
+      "candidate_ids": [
+        "legacy-lex-quis-2af42a8f"
+      ],
+      "form_examples": [
+        "quis"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "quo",
+      "first_match_candidate_id": "legacy-lex-quo-bb0e3221",
+      "candidate_ids": [
+        "legacy-lex-quo-bb0e3221"
+      ],
+      "form_examples": [
+        "quō"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "quoque",
+      "first_match_candidate_id": "legacy-lex-quoque-cec76752",
+      "candidate_ids": [
+        "legacy-lex-quoque-cec76752"
+      ],
+      "form_examples": [
+        "quoque"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "quot",
+      "first_match_candidate_id": "legacy-lex-quot-c6d16c30",
+      "candidate_ids": [
+        "legacy-lex-quot-c6d16c30"
+      ],
+      "form_examples": [
+        "quot"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "redire",
+      "first_match_candidate_id": "legacy-lex-redire-00912b52",
+      "candidate_ids": [
+        "legacy-lex-redire-00912b52"
+      ],
+      "form_examples": [
+        "redīre"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "redit",
+      "first_match_candidate_id": "legacy-lex-redire-00912b52",
+      "candidate_ids": [
+        "legacy-lex-redire-00912b52"
+      ],
+      "form_examples": [
+        "redit"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "respondere",
+      "first_match_candidate_id": "legacy-lex-respondere-b571b74e",
+      "candidate_ids": [
+        "legacy-lex-respondere-b571b74e"
+      ],
+      "form_examples": [
+        "respondēre"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "respondet",
+      "first_match_candidate_id": "legacy-lex-respondere-b571b74e",
+      "candidate_ids": [
+        "legacy-lex-respondere-b571b74e"
+      ],
+      "form_examples": [
+        "respondet"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "ridere",
+      "first_match_candidate_id": "legacy-lex-ridere-71c8c8c5",
+      "candidate_ids": [
+        "legacy-lex-ridere-71c8c8c5"
+      ],
+      "form_examples": [
+        "rīdēre"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "ridet",
+      "first_match_candidate_id": "legacy-lex-ridere-71c8c8c5",
+      "candidate_ids": [
+        "legacy-lex-ridere-71c8c8c5"
+      ],
+      "form_examples": [
+        "rīdet"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "rosa",
+      "first_match_candidate_id": "legacy-lex-rosa-10421806",
+      "candidate_ids": [
+        "legacy-lex-rosa-10421806"
+      ],
+      "form_examples": [
+        "rosa"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "rosam",
+      "first_match_candidate_id": "legacy-lex-rosa-10421806",
+      "candidate_ids": [
+        "legacy-lex-rosa-10421806"
+      ],
+      "form_examples": [
+        "rosam"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "rosas",
+      "first_match_candidate_id": "legacy-lex-rosa-10421806",
+      "candidate_ids": [
+        "legacy-lex-rosa-10421806"
+      ],
+      "form_examples": [
+        "rosās"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "ruber",
+      "first_match_candidate_id": "legacy-lex-ruber-40f480dc",
+      "candidate_ids": [
+        "legacy-lex-ruber-40f480dc"
+      ],
+      "form_examples": [
+        "ruber"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "rubram",
+      "first_match_candidate_id": "legacy-lex-ruber-40f480dc",
+      "candidate_ids": [
+        "legacy-lex-ruber-40f480dc"
+      ],
+      "form_examples": [
+        "rubram"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "se",
+      "first_match_candidate_id": "legacy-lex-se-fcbde32e",
+      "candidate_ids": [
+        "legacy-lex-se-fcbde32e"
+      ],
+      "form_examples": [
+        "sē"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "sed",
+      "first_match_candidate_id": "legacy-lex-sed-60d56f8c",
+      "candidate_ids": [
+        "legacy-lex-sed-60d56f8c"
+      ],
+      "form_examples": [
+        "sed"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "sedere",
+      "first_match_candidate_id": "legacy-lex-sedere-b88552e8",
+      "candidate_ids": [
+        "legacy-lex-sedere-b88552e8"
+      ],
+      "form_examples": [
+        "sedēre"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "sedet",
+      "first_match_candidate_id": "legacy-lex-sedere-b88552e8",
+      "candidate_ids": [
+        "legacy-lex-sedere-b88552e8"
+      ],
+      "form_examples": [
+        "sedet"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "sol",
+      "first_match_candidate_id": "legacy-lex-sol-e04e3f61",
+      "candidate_ids": [
+        "legacy-lex-sol-e04e3f61"
+      ],
+      "form_examples": [
+        "sōl"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "sonuit",
+      "first_match_candidate_id": "legacy-lex-sonuit-d2e8c905",
+      "candidate_ids": [
+        "legacy-lex-sonuit-d2e8c905"
+      ],
+      "form_examples": [
+        "sonuit"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "soror",
+      "first_match_candidate_id": "legacy-lex-soror-fe691321",
+      "candidate_ids": [
+        "legacy-lex-soror-fe691321"
+      ],
+      "form_examples": [
+        "soror"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "spectabat",
+      "first_match_candidate_id": "legacy-lex-spectabat-18a9f473",
+      "candidate_ids": [
+        "legacy-lex-spectabat-18a9f473"
+      ],
+      "form_examples": [
+        "spectābat"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "spectare",
+      "first_match_candidate_id": "legacy-lex-spectare-e0d12f5f",
+      "candidate_ids": [
+        "legacy-lex-spectare-e0d12f5f"
+      ],
+      "form_examples": [
+        "spectāre"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "spectat",
+      "first_match_candidate_id": "legacy-lex-spectare-e0d12f5f",
+      "candidate_ids": [
+        "legacy-lex-spectare-e0d12f5f"
+      ],
+      "form_examples": [
+        "spectat"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "stare",
+      "first_match_candidate_id": "legacy-lex-stare-00b7110c",
+      "candidate_ids": [
+        "legacy-lex-stare-00b7110c"
+      ],
+      "form_examples": [
+        "stāre"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "stat",
+      "first_match_candidate_id": "legacy-lex-stare-00b7110c",
+      "candidate_ids": [
+        "legacy-lex-stare-00b7110c"
+      ],
+      "form_examples": [
+        "stat"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "sub",
+      "first_match_candidate_id": "legacy-lex-sub-89193acd",
+      "candidate_ids": [
+        "legacy-lex-sub-89193acd"
+      ],
+      "form_examples": [
+        "sub"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "subito",
+      "first_match_candidate_id": "legacy-lex-subito-c73993f1",
+      "candidate_ids": [
+        "legacy-lex-subito-c73993f1"
+      ],
+      "form_examples": [
+        "subitō"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "sunt",
+      "first_match_candidate_id": "legacy-lex-sunt-406f344d",
+      "candidate_ids": [
+        "legacy-lex-sunt-406f344d"
+      ],
+      "form_examples": [
+        "sunt"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "tibi",
+      "first_match_candidate_id": "legacy-lex-tibi-67364d2f",
+      "candidate_ids": [
+        "legacy-lex-tibi-67364d2f"
+      ],
+      "form_examples": [
+        "tibi"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "timebat",
+      "first_match_candidate_id": "legacy-lex-timebat-6e3f94fd",
+      "candidate_ids": [
+        "legacy-lex-timebat-6e3f94fd"
+      ],
+      "form_examples": [
+        "timēbat"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "timere",
+      "first_match_candidate_id": "legacy-lex-timere-849675b6",
+      "candidate_ids": [
+        "legacy-lex-timere-849675b6"
+      ],
+      "form_examples": [
+        "timēre"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "titi",
+      "first_match_candidate_id": "legacy-lex-titus-0ec305e6",
+      "candidate_ids": [
+        "legacy-lex-titus-0ec305e6"
+      ],
+      "form_examples": [
+        "Tītī"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "tito",
+      "first_match_candidate_id": "legacy-lex-titus-0ec305e6",
+      "candidate_ids": [
+        "legacy-lex-titus-0ec305e6"
+      ],
+      "form_examples": [
+        "Tītō"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "titum",
+      "first_match_candidate_id": "legacy-lex-titus-0ec305e6",
+      "candidate_ids": [
+        "legacy-lex-titus-0ec305e6"
+      ],
+      "form_examples": [
+        "Tītum"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "titus",
+      "first_match_candidate_id": "legacy-lex-titus-0ec305e6",
+      "candidate_ids": [
+        "legacy-lex-titus-0ec305e6"
+      ],
+      "form_examples": [
+        "Tītus"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "tonitrus",
+      "first_match_candidate_id": "legacy-lex-tonitrus-931e8091",
+      "candidate_ids": [
+        "legacy-lex-tonitrus-931e8091"
+      ],
+      "form_examples": [
+        "tonitrus"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "tres",
+      "first_match_candidate_id": "legacy-lex-tres-888603c3",
+      "candidate_ids": [
+        "legacy-lex-tres-888603c3"
+      ],
+      "form_examples": [
+        "trēs"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "tria",
+      "first_match_candidate_id": "legacy-lex-tres-888603c3",
+      "candidate_ids": [
+        "legacy-lex-tres-888603c3"
+      ],
+      "form_examples": [
+        "tria"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "ubi",
+      "first_match_candidate_id": "legacy-lex-ubi-056c1458",
+      "candidate_ids": [
+        "legacy-lex-ubi-056c1458"
+      ],
+      "form_examples": [
+        "ubi"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "vendere",
+      "first_match_candidate_id": "legacy-lex-vendere-d0173010",
+      "candidate_ids": [
+        "legacy-lex-vendere-d0173010"
+      ],
+      "form_examples": [
+        "vendere"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "vendit",
+      "first_match_candidate_id": "legacy-lex-vendere-d0173010",
+      "candidate_ids": [
+        "legacy-lex-vendere-d0173010"
+      ],
+      "form_examples": [
+        "vendit"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "veni",
+      "first_match_candidate_id": "legacy-lex-venire-05a7664c",
+      "candidate_ids": [
+        "legacy-lex-venire-05a7664c"
+      ],
+      "form_examples": [
+        "venī"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "venire",
+      "first_match_candidate_id": "legacy-lex-venire-05a7664c",
+      "candidate_ids": [
+        "legacy-lex-venire-05a7664c"
+      ],
+      "form_examples": [
+        "venīre"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "venit",
+      "first_match_candidate_id": "legacy-lex-venire-05a7664c",
+      "candidate_ids": [
+        "legacy-lex-venire-05a7664c"
+      ],
+      "form_examples": [
+        "venit"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "via",
+      "first_match_candidate_id": "legacy-lex-via-3d1fcc9b",
+      "candidate_ids": [
+        "legacy-lex-via-3d1fcc9b"
+      ],
+      "form_examples": [
+        "via",
+        "viā"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "videre",
+      "first_match_candidate_id": "legacy-lex-videre-c98e6807",
+      "candidate_ids": [
+        "legacy-lex-videre-c98e6807"
+      ],
+      "form_examples": [
+        "vidēre"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "videt",
+      "first_match_candidate_id": "legacy-lex-videre-c98e6807",
+      "candidate_ids": [
+        "legacy-lex-videre-c98e6807"
+      ],
+      "form_examples": [
+        "videt"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "villa",
+      "first_match_candidate_id": "legacy-lex-villa-0cfb455b",
+      "candidate_ids": [
+        "legacy-lex-villa-0cfb455b"
+      ],
+      "form_examples": [
+        "vīlla",
+        "vīllā"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "villae",
+      "first_match_candidate_id": "legacy-lex-villa-0cfb455b",
+      "candidate_ids": [
+        "legacy-lex-villa-0cfb455b"
+      ],
+      "form_examples": [
+        "vīllae"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "visitabit",
+      "first_match_candidate_id": "legacy-lex-visitare-f9e70b7f",
+      "candidate_ids": [
+        "legacy-lex-visitare-f9e70b7f"
+      ],
+      "form_examples": [
+        "vīsitābit"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "visitare",
+      "first_match_candidate_id": "legacy-lex-visitare-f9e70b7f",
+      "candidate_ids": [
+        "legacy-lex-visitare-f9e70b7f"
+      ],
+      "form_examples": [
+        "vīsitāre"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "vocare",
+      "first_match_candidate_id": "legacy-lex-vocare-4ee5164c",
+      "candidate_ids": [
+        "legacy-lex-vocare-4ee5164c"
+      ],
+      "form_examples": [
+        "vocāre"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    },
+    {
+      "key": "vocat",
+      "first_match_candidate_id": "legacy-lex-vocare-4ee5164c",
+      "candidate_ids": [
+        "legacy-lex-vocare-4ee5164c"
+      ],
+      "form_examples": [
+        "vocat"
+      ],
+      "status": "unresolved",
+      "approved_lexeme_id": null
+    }
+  ]
+}

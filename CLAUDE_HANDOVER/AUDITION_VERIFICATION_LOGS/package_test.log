@@ -1,0 +1,7 @@
+
+> latin-x-tablinum-review@0.4.2 test:package
+> node scripts/verify-claude-package.cjs
+
+PASS: full Claude review source package has 127 required nonempty files.
+PASS: 8-chapter offline source, 130 planned chapters, 128 unsigned Claude candidates and zero approved new lessons.
+PASS: reconciled Phase 2 compiler and reviewed-source catalogue are included alongside the owner-review tools.

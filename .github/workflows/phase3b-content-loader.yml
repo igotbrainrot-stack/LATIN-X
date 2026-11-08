@@ -1,0 +1,92 @@
+name: LATIN X Phase 3b offline chapter loading
+on:
+  push:
+    branches:
+      - feature/phase3b-content-loader-20261106
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  linux-safety:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run full original/Phase 1/2/3b Node tests
+        run: |
+          npm test
+          npm run test:phase2
+          npm run test:phase3b
+          npm run test:lexemes
+          npm run test:package
+      - name: Ensure zero unsigned approvals and correct strict milestones
+        shell: bash
+        run: |
+          for n in 1500 3000; do
+            if node curriculum/validate-roadmap-130.cjs --require-introduced-$n >"strict-$n.txt" 2>&1; then
+              echo "ERROR: false $n completion gate"; exit 1
+            fi
+            grep -q "GATE NOT MET" "strict-$n.txt"
+          done
+          if node scripts/validate-lexemes.cjs --require-review-ready > lexical-ready.txt 2>&1; then
+            echo "ERROR: false unsigned review readiness"; exit 1
+          fi
+      - name: Verify all eight old chapter sources are unchanged
+        run: npm run test:phase3b
+      - name: Build and verify full Claude review ZIP from GitHub source
+        shell: bash
+        run: |
+          mkdir -p dist
+          git archive --format=zip --output=dist/LATIN_X_PHASE3B_COMPLETE_CLAUDE_REVIEW.zip HEAD
+          unzip -t dist/LATIN_X_PHASE3B_COMPLETE_CLAUDE_REVIEW.zip | tail -n 1
+          for file in index.html app/30-content-loader.js app/legacy-runtime.js content/catalogue.js content/legacy/ch01.js content/legacy/ch08.js tests/content-loader.test.cjs CLAUDE_REVIEW_PACKAGE/00_START_HERE.md; do
+            unzip -Z1 dist/LATIN_X_PHASE3B_COMPLETE_CLAUDE_REVIEW.zip | grep -Fx "$file"
+          done
+          sha256sum dist/LATIN_X_PHASE3B_COMPLETE_CLAUDE_REVIEW.zip > dist/SHA256SUMS.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: LATIN_X_PHASE3B_COMPLETE_CLAUDE_REVIEW
+          path: dist/
+          if-no-files-found: error
+          retention-days: 30
+  windows-offline:
+    runs-on: windows-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run Windows Node and compiler checks
+        run: |
+          npm test
+          npm run test:phase2
+          npm run test:phase3b
+      - name: Install Playwright desktop browsers
+        run: |
+          npm install --no-save playwright
+          npx playwright install chromium
+          npx playwright install firefox
+      - name: Verify HTTP desktop/mobile original visuals and tests
+        run: npm run test:browser
+      - name: Verify Windows Chromium file URL and v4 progress/restore
+        run: npm run test:file
+      - name: Verify Windows Edge file URL
+        env:
+          TABLINUM_BROWSER_CHANNEL: msedge
+        run: npm run test:file
+      - name: Verify Windows Chrome file URL
+        env:
+          TABLINUM_BROWSER_CHANNEL: chrome
+        run: npm run test:file
+      - name: Verify Windows Firefox file URL
+        env:
+          TABLINUM_BROWSER_TYPE: firefox
+        run: npm run test:file
+      - name: Verify Phase 3b synthetic course load and missing-file recovery in real browser
+        run: npm run test:phase3b-browser
+      - name: Verify vocabulary editor file URL and export
+        run: npm run test:review-browser

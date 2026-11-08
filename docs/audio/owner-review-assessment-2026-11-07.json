@@ -1,0 +1,46 @@
+{
+  "schema": "latin-x-owner-voice-review-interpretation-v1",
+  "owner_original_review_file": "docs/audio/owner-original-review-2026-11-07.json",
+  "owner_message": "Eleanors voice is too american and annoying",
+  "owner_voice_rejection": {
+    "Eleanor": "exclude from all future auditions and narration, all 17/17 original clips rejected"
+  },
+  "selected_voice_in_original_export": null,
+  "working_voice_candidate": "Miriam",
+  "working_voice_candidate_status": "inferred by exclusion; NOT an explicit final narrator selection",
+  "miriam_accept_count": 12,
+  "miriam_reject_count": 5,
+  "miriam_accepted_with_note": [
+    "legacy-ch01-s008"
+  ],
+  "miriam_rejected": [
+    {
+      "clip_id": "voiceA__legacy-ch01-s007__v1",
+      "sentence_id": "legacy-ch01-s007",
+      "note": "LIVIA"
+    },
+    {
+      "clip_id": "voiceA__legacy-ch01-s009__v1",
+      "sentence_id": "legacy-ch01-s009",
+      "note": "lIVIA"
+    },
+    {
+      "clip_id": "voiceA__test-villa__v1",
+      "sentence_id": "test-villa",
+      "note": "vILLA "
+    },
+    {
+      "clip_id": "voiceA__test-aqua__v1",
+      "sentence_id": "test-aqua",
+      "note": "AQWA"
+    },
+    {
+      "clip_id": "voiceA__test-quoque__v1",
+      "sentence_id": "test-quoque",
+      "note": "qWOQA"
+    }
+  ],
+  "approval_scope": "Owner approval is of specific v1 audition clips in original review only, not approval of future generations or substitution into reader.",
+  "audio_replacement_in_reader": false,
+  "ipa_source": "docs/audio/latin-ipa-pilot-lexicon.json, Claude draft not Latinist verified"
+}

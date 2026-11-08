@@ -1,0 +1,6 @@
+
+> latin-x-tablinum-review@0.4.2 test:music
+> node tests/phase7-music-score.test.cjs && node tests/phase7a-audio.test.cjs
+
+PASS Phase7 music: 4 source-attributed 2–4 min pieces, varied rhythms/drone, Seikilos 37 notes/48 pulses, no dropped final tonic.
+PASS Phase7a: original 3x 2–4m modal scores; no audio before gesture, one lazy AudioContext, duck, settings, microphone pause, hidden-tab pause, v5 backup.

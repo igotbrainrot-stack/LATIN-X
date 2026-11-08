@@ -1,0 +1,27 @@
+{
+  "app": "tablinum-v02",
+  "version": 2,
+  "state": {
+    "ch": 1,
+    "tab": "quiz",
+    "sel": 0,
+    "notes": {
+      "1": "Old backup from v0.2."
+    },
+    "correct": {
+      "1:0": true
+    },
+    "answers": {
+      "1:0": "Mārcus"
+    },
+    "vocab": {
+      "arbor": {
+        "head": "arbor",
+        "meaning": "tree",
+        "days": 3,
+        "due": 1793836800000,
+        "reps": 2
+      }
+    }
+  }
+}

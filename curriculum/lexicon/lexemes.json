@@ -1,0 +1,11 @@
+{
+  "schema": "tablinum-lexemes-v1",
+  "status": "human_review_required",
+  "conventions": {
+    "verb_head": "first-person present indicative active (deponent: passive form)",
+    "id_policy": "immutable, stable, sense-disambiguated lx-<lemma>-<meaning> identifier, never an inflected form",
+    "macrons": "reviewed Latin quantity, not automatic accent normalisation"
+  },
+  "lexemes": [],
+  "note": "Do not move any unreviewed legacy glossary entry here as approved. These 128 entries remain in the candidate review map."
+}

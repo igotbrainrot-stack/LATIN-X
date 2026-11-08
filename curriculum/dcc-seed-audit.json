@@ -1,0 +1,555 @@
+{
+  "status": "superseded-by-50-chapter-outline",
+  "baseline_branch": "design/classical-manuscript-20261104",
+  "source": "user-supplied latin-core-list.csv",
+  "matched_headwords": 987,
+  "chapters": [
+    {
+      "chapter": 1,
+      "title": "In hortō",
+      "story": "A small Līvia sits under a large tree in the garden.",
+      "grammar_focus": "Nominative subject with est/sunt",
+      "dcc_seed_lemmas": [
+        "sum",
+        "arbor",
+        "hic",
+        "māgnus",
+        "parvus",
+        "in"
+      ],
+      "story_vocabulary_not_matched_in_dcc": [],
+      "editor_note": "Preserve the existing first-chapter setting and illustration; audit advanced forms already in the draft.",
+      "is_review": false
+    },
+    {
+      "chapter": 2,
+      "title": "Familia",
+      "story": "The four family members are introduced at their villa.",
+      "grammar_focus": "Singular genitive of possession (-ae / -ī)",
+      "dcc_seed_lemmas": [
+        "pater",
+        "māter",
+        "fīlia",
+        "frāter",
+        "soror"
+      ],
+      "story_vocabulary_not_matched_in_dcc": [
+        "fīlius"
+      ],
+      "editor_note": "Keep Mārcus, Flāvia, Līvia, and Tītus consistent in every later scene.",
+      "is_review": false
+    },
+    {
+      "chapter": 3,
+      "title": "Dōnum",
+      "story": "Līvia gives her mother a red rose, while Tītus holds a book.",
+      "grammar_focus": "Dative of recipient",
+      "dcc_seed_lemmas": [
+        "dō",
+        "accipiō",
+        "liber",
+        "amīcus"
+      ],
+      "story_vocabulary_not_matched_in_dcc": [
+        "rosa"
+      ],
+      "editor_note": "The red rose must be immediately recognizable in the image.",
+      "is_review": false
+    },
+    {
+      "chapter": 4,
+      "title": "Cēna",
+      "story": "At dinner the family points to bread, water, and cups.",
+      "grammar_focus": "Accusative direct object",
+      "dcc_seed_lemmas": [
+        "aqua",
+        "cibus",
+        "ēdō",
+        "mēnsa"
+      ],
+      "story_vocabulary_not_matched_in_dcc": [
+        "bībō"
+      ],
+      "editor_note": "Also include a short review vignette using Chapters I–IV only.",
+      "is_review": false
+    },
+    {
+      "chapter": 5,
+      "title": "Forum",
+      "story": "Mārcus buys two apples and Līvia sees three at a market stall.",
+      "grammar_focus": "Neuter plural nouns in -a, counted",
+      "dcc_seed_lemmas": [
+        "forum",
+        "duo",
+        "trēs",
+        "multus"
+      ],
+      "story_vocabulary_not_matched_in_dcc": [
+        "emō"
+      ],
+      "editor_note": "Display exactly two bought apples and three on the stall.",
+      "is_review": false
+    },
+    {
+      "chapter": 6,
+      "title": "Canis",
+      "story": "The dog runs along the Roman street towards Līvia at the gate.",
+      "grammar_focus": "Motion toward with ad + accusative",
+      "dcc_seed_lemmas": [
+        "canis",
+        "via",
+        "currō",
+        "ad",
+        "porta",
+        "vocō"
+      ],
+      "story_vocabulary_not_matched_in_dcc": [],
+      "editor_note": "Retain the current dog chapter theme; use fair comprehension questions.",
+      "is_review": false
+    },
+    {
+      "chapter": 7,
+      "title": "Tempestās",
+      "story": "In the present tense the family watches clouds, wind and rain.",
+      "grammar_focus": "Present third-person singular versus plural (-t / -nt)",
+      "dcc_seed_lemmas": [
+        "ventus",
+        "audiō",
+        "videō",
+        "moveō"
+      ],
+      "story_vocabulary_not_matched_in_dcc": [
+        "nūbēs"
+      ],
+      "editor_note": "Replace the overloaded past-tense story with present-time narration.",
+      "is_review": false
+    },
+    {
+      "chapter": 8,
+      "title": "Vesper — Recēnsiō I",
+      "story": "At evening the dog returns home as the family remembers the market visit.",
+      "grammar_focus": "No new grammar; review I–VII",
+      "dcc_seed_lemmas": [],
+      "story_vocabulary_not_matched_in_dcc": [],
+      "editor_note": "Dedicated illustrated review story with only previously introduced forms.",
+      "is_review": true
+    },
+    {
+      "chapter": 9,
+      "title": "Herī",
+      "story": "A yellow sun today contrasts with the grey storm yesterday.",
+      "grammar_focus": "Imperfect of sum: erat / erant",
+      "dcc_seed_lemmas": [
+        "hodiē",
+        "tempus",
+        "nox",
+        "sōl"
+      ],
+      "story_vocabulary_not_matched_in_dcc": [
+        "herī"
+      ],
+      "editor_note": "A two-panel before/now illustration clarifies time.",
+      "is_review": false
+    },
+    {
+      "chapter": 10,
+      "title": "Sub tēctō",
+      "story": "Tītus was reading and Flāvia was working while rain continued.",
+      "grammar_focus": "Imperfect active in -bā-",
+      "dcc_seed_lemmas": [
+        "legō",
+        "scrībō",
+        "maneō",
+        "sedeō",
+        "dormiō"
+      ],
+      "story_vocabulary_not_matched_in_dcc": [],
+      "editor_note": "Contrast ongoing past action with present actions.",
+      "is_review": false
+    },
+    {
+      "chapter": 11,
+      "title": "Nōlī timēre",
+      "story": "Flāvia tells frightened Tītus not to fear the thunder.",
+      "grammar_focus": "Negative singular command: nōlī + infinitive",
+      "dcc_seed_lemmas": [
+        "timeō",
+        "nōlō",
+        "taceō",
+        "fortis"
+      ],
+      "story_vocabulary_not_matched_in_dcc": [
+        "clāmō"
+      ],
+      "editor_note": "Keep this command separate from the new past-tense lessons.",
+      "is_review": false
+    },
+    {
+      "chapter": 12,
+      "title": "Post tempestātem — Recēnsiō II",
+      "story": "The family orders pictures and retells the storm.",
+      "grammar_focus": "No new grammar; review IX–XI",
+      "dcc_seed_lemmas": [],
+      "story_vocabulary_not_matched_in_dcc": [],
+      "editor_note": "Sequence the events with Latin-only picture prompts.",
+      "is_review": true
+    },
+    {
+      "chapter": 13,
+      "title": "Crās",
+      "story": "Līvia prepares roses for a future visit to a friend.",
+      "grammar_focus": "Future of 1st/2nd conjugations in -b-",
+      "dcc_seed_lemmas": [
+        "parō",
+        "dōnum",
+        "amīcus",
+        "vocō"
+      ],
+      "story_vocabulary_not_matched_in_dcc": [
+        "crās"
+      ],
+      "editor_note": "Reintroduce the original Chapter VIII future material gradually.",
+      "is_review": false
+    },
+    {
+      "chapter": 14,
+      "title": "Iter crāstinum",
+      "story": "The family discusses what they will do and hear on the road.",
+      "grammar_focus": "Future of 3rd/4th conjugations (-am / -ēs / -et)",
+      "dcc_seed_lemmas": [
+        "iter",
+        "faciō",
+        "veniō",
+        "audiō",
+        "ferō"
+      ],
+      "story_vocabulary_not_matched_in_dcc": [],
+      "editor_note": "Show how this future differs from -b- verbs, with repeated examples.",
+      "is_review": false
+    },
+    {
+      "chapter": 15,
+      "title": "Ad amīcum",
+      "story": "Mārcus says who will go to the friend's house.",
+      "grammar_focus": "Irregular future of īre: ībō / ībimus",
+      "dcc_seed_lemmas": [
+        "eō",
+        "redeō",
+        "prope",
+        "longus",
+        "locus"
+      ],
+      "story_vocabulary_not_matched_in_dcc": [],
+      "editor_note": "Keep other irregular futures out of the initial exposure.",
+      "is_review": false
+    },
+    {
+      "chapter": 16,
+      "title": "Dōnum amīcō — Recēnsiō III",
+      "story": "The family makes the journey and delivers the gift.",
+      "grammar_focus": "No new grammar; review XIII–XV",
+      "dcc_seed_lemmas": [],
+      "story_vocabulary_not_matched_in_dcc": [],
+      "editor_note": "Optional repeated reading with an attached verified recording.",
+      "is_review": true
+    },
+    {
+      "chapter": 17,
+      "title": "In viā novā",
+      "story": "A traveller sees a person, dog, river and city.",
+      "grammar_focus": "3rd-declension nominative/accusative contrast",
+      "dcc_seed_lemmas": [
+        "homō",
+        "canis",
+        "urbs",
+        "flūmen",
+        "nōmen"
+      ],
+      "story_vocabulary_not_matched_in_dcc": [],
+      "editor_note": "Formalize canis / canem using high-frequency forms.",
+      "is_review": false
+    },
+    {
+      "chapter": 18,
+      "title": "Hic an ille?",
+      "story": "Līvia distinguishes a near basket from another basket.",
+      "grammar_focus": "Demonstratives ille / illa / illud versus hic",
+      "dcc_seed_lemmas": [
+        "ille",
+        "hic",
+        "alius",
+        "ipse",
+        "alter"
+      ],
+      "story_vocabulary_not_matched_in_dcc": [],
+      "editor_note": "The image must show two visibly distinct referents.",
+      "is_review": false
+    },
+    {
+      "chapter": 19,
+      "title": "Quī venit?",
+      "story": "A visitor who lives nearby returns a missing book.",
+      "grammar_focus": "Relative clause introduced by quī / quae / quod",
+      "dcc_seed_lemmas": [
+        "quī",
+        "dīcō",
+        "ostendō",
+        "quaerō"
+      ],
+      "story_vocabulary_not_matched_in_dcc": [
+        "quae",
+        "quod"
+      ],
+      "editor_note": "Restrict the first exposure to one simple clause position.",
+      "is_review": false
+    },
+    {
+      "chapter": 20,
+      "title": "Cuius liber? — Recēnsiō IV",
+      "story": "The children work out who owns and brought a book.",
+      "grammar_focus": "No new grammar; review XVII–XIX",
+      "dcc_seed_lemmas": [],
+      "story_vocabulary_not_matched_in_dcc": [],
+      "editor_note": "No passive forms yet; title is only a story label to review before use.",
+      "is_review": true
+    },
+    {
+      "chapter": 21,
+      "title": "Epistula",
+      "story": "Līvia writes about gifts she prepared and a friend she called.",
+      "grammar_focus": "Regular perfect active using -v-",
+      "dcc_seed_lemmas": [
+        "laudō",
+        "vocō",
+        "parō",
+        "servō",
+        "amō"
+      ],
+      "story_vocabulary_not_matched_in_dcc": [],
+      "editor_note": "Contrast finished actions with ongoing past scenes.",
+      "is_review": false
+    },
+    {
+      "chapter": 22,
+      "title": "Nūntius dīxit",
+      "story": "A messenger tells the family what he saw, said and did.",
+      "grammar_focus": "Strong/non--v- perfect active verbs",
+      "dcc_seed_lemmas": [
+        "dīcō",
+        "faciō",
+        "veniō",
+        "videō",
+        "accipiō"
+      ],
+      "story_vocabulary_not_matched_in_dcc": [],
+      "editor_note": "Introduce only a few very common irregular perfect stems.",
+      "is_review": false
+    },
+    {
+      "chapter": 23,
+      "title": "Anteā",
+      "story": "The family reconstructs what had happened before the messenger arrived.",
+      "grammar_focus": "Pluperfect indicative active",
+      "dcc_seed_lemmas": [
+        "ante",
+        "post",
+        "iam",
+        "prius",
+        "mittō"
+      ],
+      "story_vocabulary_not_matched_in_dcc": [],
+      "editor_note": "Use a two-event timeline; avoid introducing a new subordinate mood.",
+      "is_review": false
+    },
+    {
+      "chapter": 24,
+      "title": "Quid accidit? — Recēnsiō V",
+      "story": "The children reconstruct the events of a missing letter.",
+      "grammar_focus": "No new grammar; review XXI–XXIII",
+      "dcc_seed_lemmas": [],
+      "story_vocabulary_not_matched_in_dcc": [],
+      "editor_note": "Use story sequencing and Latin comprehension questions.",
+      "is_review": true
+    },
+    {
+      "chapter": 25,
+      "title": "Cum redierit",
+      "story": "Mārcus predicts what will happen after Tītus has returned.",
+      "grammar_focus": "Future perfect indicative in future-time clauses",
+      "dcc_seed_lemmas": [
+        "cum",
+        "sī",
+        "redeō",
+        "dō",
+        "faciō"
+      ],
+      "story_vocabulary_not_matched_in_dcc": [],
+      "editor_note": "Make future completion explicit before more advanced subordination.",
+      "is_review": false
+    },
+    {
+      "chapter": 26,
+      "title": "Vocātur",
+      "story": "At the forum, a messenger describes who is summoned and what is sold.",
+      "grammar_focus": "Present passive -tur / -ntur",
+      "dcc_seed_lemmas": [
+        "vocō",
+        "laudō",
+        "audiō",
+        "servō"
+      ],
+      "story_vocabulary_not_matched_in_dcc": [
+        "vendō"
+      ],
+      "editor_note": "Compare active and passive with two unmistakable illustrations.",
+      "is_review": false
+    },
+    {
+      "chapter": 27,
+      "title": "Dōnum repertum est",
+      "story": "A lost gift is found and returned to the family.",
+      "grammar_focus": "Perfect passive: participle + sum",
+      "dcc_seed_lemmas": [
+        "inveniō",
+        "mittō",
+        "scrībō",
+        "aperiō",
+        "dō"
+      ],
+      "story_vocabulary_not_matched_in_dcc": [],
+      "editor_note": "Teach the compound verb before participles used as adjectives.",
+      "is_review": false
+    },
+    {
+      "chapter": 28,
+      "title": "In forō — Recēnsiō VI",
+      "story": "A market story mixes current, completed and passive events.",
+      "grammar_focus": "No new grammar; review XXV–XXVII",
+      "dcc_seed_lemmas": [],
+      "story_vocabulary_not_matched_in_dcc": [],
+      "editor_note": "Only previously introduced grammatical forms.",
+      "is_review": true
+    },
+    {
+      "chapter": 29,
+      "title": "Canis currēns",
+      "story": "The dog runs after a boy carrying a basket.",
+      "grammar_focus": "Present active participle (-ns / -ntis)",
+      "dcc_seed_lemmas": [
+        "currō",
+        "portō",
+        "sequor",
+        "videō",
+        "sedeō"
+      ],
+      "story_vocabulary_not_matched_in_dcc": [],
+      "editor_note": "Show simultaneous actions in a clear illustration.",
+      "is_review": false
+    },
+    {
+      "chapter": 30,
+      "title": "Litterae scrīptae",
+      "story": "Līvia finds a written letter and an opened box.",
+      "grammar_focus": "Perfect passive participle used adjectivally",
+      "dcc_seed_lemmas": [
+        "scrībō",
+        "aperiō",
+        "legō",
+        "pōnō",
+        "ferō"
+      ],
+      "story_vocabulary_not_matched_in_dcc": [],
+      "editor_note": "Contrast with the perfect passive verbal construction in XXVII.",
+      "is_review": false
+    },
+    {
+      "chapter": 31,
+      "title": "Ut videat",
+      "story": "Mārcus opens a door so that Līvia may see a room.",
+      "grammar_focus": "Affirmative purpose clause: ut + present subjunctive",
+      "dcc_seed_lemmas": [
+        "rogō",
+        "iuvō",
+        "parō",
+        "veniō"
+      ],
+      "story_vocabulary_not_matched_in_dcc": [
+        "ut"
+      ],
+      "editor_note": "Introduce only this basic use of the subjunctive.",
+      "is_review": false
+    },
+    {
+      "chapter": 32,
+      "title": "Quid Līvia facit? — Recēnsiō VII",
+      "story": "The family practices actions, purposes and descriptions.",
+      "grammar_focus": "No new grammar; review XXIX–XXXI",
+      "dcc_seed_lemmas": [],
+      "story_vocabulary_not_matched_in_dcc": [],
+      "editor_note": "Include context cards, a short reread and a teacher-print page.",
+      "is_review": true
+    },
+    {
+      "chapter": 33,
+      "title": "Manūs et portūs",
+      "story": "At a harbour people load goods onto a ship by hand.",
+      "grammar_focus": "4th-declension nouns in context",
+      "dcc_seed_lemmas": [
+        "manus",
+        "exercitus",
+        "frūctus",
+        "nāvis"
+      ],
+      "story_vocabulary_not_matched_in_dcc": [
+        "portus"
+      ],
+      "editor_note": "Start with natural contrasts rather than an entire declension table.",
+      "is_review": false
+    },
+    {
+      "chapter": 34,
+      "title": "Diēs et rēs",
+      "story": "At a family gathering a problem is resolved as the day goes on.",
+      "grammar_focus": "5th-declension nouns in context",
+      "dcc_seed_lemmas": [
+        "diēs",
+        "rēs",
+        "spēs",
+        "fidēs",
+        "faciēs"
+      ],
+      "story_vocabulary_not_matched_in_dcc": [],
+      "editor_note": "Keep the story familiar while introducing the forms.",
+      "is_review": false
+    },
+    {
+      "chapter": 35,
+      "title": "Fābula prīma — Pōns ad librōs",
+      "story": "An entirely original animal tale leads into graded independent prose.",
+      "grammar_focus": "No new grammar; cumulative bridge story",
+      "dcc_seed_lemmas": [],
+      "story_vocabulary_not_matched_in_dcc": [],
+      "editor_note": "Only known grammar; suggest public-domain reading after checking provenance.",
+      "is_review": true
+    }
+  ],
+  "unique_dcc_seed_count": 95,
+  "unmatched_seed_words": [
+    "fīlius",
+    "rosa",
+    "bībō",
+    "emō",
+    "nūbēs",
+    "herī",
+    "clāmō",
+    "crās",
+    "quae",
+    "quod",
+    "vendō",
+    "ut",
+    "portus"
+  ],
+  "vocab_note": "Sample seeds, not a full 800–1200-lemma course list. Manual review is required.",
+  "superseded_by": "curriculum/dcc-seed-audit-50.json",
+  "note": "Historical audit only; the active user instruction limits new vocabulary to about 15 words per teaching chapter across about 50 chapters."
+}

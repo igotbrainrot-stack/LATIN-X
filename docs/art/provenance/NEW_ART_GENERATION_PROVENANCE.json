@@ -1,0 +1,191 @@
+[
+  {
+    "scene": "b01-c001-scene",
+    "generated_image_id": "6d8ab4bd-63bd-49a9-a591-e809c288ae5f",
+    "source_png": "CLAUDE_HANDOVER/NEW_IRREGULAR_EDGE_ORIGINAL_PNGS/b01-c001-scene.png",
+    "generated_source_filename": "roman_garden_treehouse_friendship.png",
+    "source_sha256": "837ebda36def3f5fcefc830c0699f01bd6f8ae4ac721198337139e93a72b6e36",
+    "source_resolution": [
+      1672,
+      941
+    ],
+    "published_webp": "assets/art/b01/b01-c001-scene.webp",
+    "published_width": 1200,
+    "published_height": 675,
+    "quality": 20,
+    "published_bytes": 255702,
+    "published_sha256": "f1924ade115de6c5e4a5235e5a1d84a5fe11a81f143fdd369262e17611f253ff",
+    "thumbnail_bytes": 112278,
+    "thumbnail_sha256": "17b987759599107f1ffcc487bf44ec81009b1fc84e54f3a7d783c4ca6fb335bb",
+    "previous_webp": "CLAUDE_HANDOVER/PRE_NEW_IRREGULAR_EDGE_WEBPS/b01-c001-scene.webp",
+    "previous_webp_sha256": "386bb50d4fb0bd2a697d36debca83081513c678dbd5d4813235703390569d238"
+  },
+  {
+    "scene": "b01-c002-scene",
+    "generated_image_id": "2e0c9dcd-564a-4260-b8bd-888b8af0be8f",
+    "source_png": "CLAUDE_HANDOVER/NEW_IRREGULAR_EDGE_ORIGINAL_PNGS/b01-c002-scene.png",
+    "generated_source_filename": "mediterranean_family_in_watercolor_bloom.png",
+    "source_sha256": "e98cb5ce652eb39081c324bcef2e9099bbab396f36a9d31bcfd45bc1cf999218",
+    "source_resolution": [
+      1672,
+      941
+    ],
+    "published_webp": "assets/art/b01/b01-c002-scene.webp",
+    "published_width": 1200,
+    "published_height": 675,
+    "quality": 28,
+    "published_bytes": 255184,
+    "published_sha256": "9aa37df30d8c78753c247d59b5b70eee193aa140060b80f80116fca59e4686a0",
+    "thumbnail_bytes": 112150,
+    "thumbnail_sha256": "24347112fe270f334ab0e380c591de9f1172323d34732bc770d9f5a64a4d5d8b",
+    "previous_webp": "CLAUDE_HANDOVER/PRE_NEW_IRREGULAR_EDGE_WEBPS/b01-c002-scene.webp",
+    "previous_webp_sha256": "874ab7535b11991a9cb23fd5e92da4e8a7f2b23e0b7c1d796ef8da177f8b2a23"
+  },
+  {
+    "scene": "b01-c003-scene",
+    "generated_image_id": "bd94ddff-d0e5-4a56-80d8-80792a215330",
+    "source_png": "CLAUDE_HANDOVER/NEW_IRREGULAR_EDGE_ORIGINAL_PNGS/b01-c003-scene.png",
+    "generated_source_filename": "watercolor_family_feast_in_a_roman_courtyard.png",
+    "source_sha256": "84c43332b73a4e68f430901006b264909335e669c5b1fa03833f65a60ba946e3",
+    "source_resolution": [
+      1672,
+      941
+    ],
+    "published_webp": "assets/art/b01/b01-c003-scene.webp",
+    "published_width": 1200,
+    "published_height": 675,
+    "quality": 40,
+    "published_bytes": 253078,
+    "published_sha256": "0450d1b4469aef3a4b856a883df10dde5fe19c55f9f76be3e05496bf68f4ba6b",
+    "thumbnail_bytes": 105338,
+    "thumbnail_sha256": "4c8ef0e48c40613a20d67a4ea341794d7a38a811a45bd34a76aa48d5efc6357c",
+    "previous_webp": "CLAUDE_HANDOVER/PRE_NEW_IRREGULAR_EDGE_WEBPS/b01-c003-scene.webp",
+    "previous_webp_sha256": "bbd9054e63625d70971329d441b7c330e2251c73c0d0551400e4a16edf86e76c"
+  },
+  {
+    "scene": "b01-c004-scene",
+    "generated_image_id": "d3546434-3986-45f5-8866-0080d21107cb",
+    "source_png": "CLAUDE_HANDOVER/NEW_IRREGULAR_EDGE_ORIGINAL_PNGS/b01-c004-scene.png",
+    "generated_source_filename": "watercolor_courtyard_with_rose_and_scroll.png",
+    "source_sha256": "7583ded6f6821bc88bd9461d8ea4961990efddc9020684d1c29608c5c283c9c9",
+    "source_resolution": [
+      1672,
+      941
+    ],
+    "published_webp": "assets/art/b01/b01-c004-scene.webp",
+    "published_width": 1200,
+    "published_height": 675,
+    "quality": 22,
+    "published_bytes": 254052,
+    "published_sha256": "615a5284432a0f8c369b9e49577be54edd76f77fb3b81bd8d2f3157a31388b2c",
+    "thumbnail_bytes": 106690,
+    "thumbnail_sha256": "8c857e4be021567681a9111fc9905a04f2c1a327a8f28813d6f7659c85e27c12",
+    "previous_webp": "CLAUDE_HANDOVER/PRE_NEW_IRREGULAR_EDGE_WEBPS/b01-c004-scene.webp",
+    "previous_webp_sha256": "02296cc0694fd510a15083e03d8e12d67ea4c9f602b5fc78f7e5b86f4d4847ca"
+  },
+  {
+    "scene": "b01-c005-scene",
+    "generated_image_id": "351af374-1313-4237-aede-d1f0cc4b4f70",
+    "source_png": "CLAUDE_HANDOVER/NEW_IRREGULAR_EDGE_ORIGINAL_PNGS/b01-c005-scene.png",
+    "generated_source_filename": "watercolor_roman_family_courtyard_scene.png",
+    "source_sha256": "20468abb2d99335f87121c43f4e216e88f172335a52ffcc219e3f62b47628081",
+    "source_resolution": [
+      1672,
+      941
+    ],
+    "published_webp": "assets/art/b01/b01-c005-scene.webp",
+    "published_width": 1200,
+    "published_height": 675,
+    "quality": 45,
+    "published_bytes": 252996,
+    "published_sha256": "f675eae831522d8f5233ae087cf4a38888e26755c17c6c56065e85520c541507",
+    "thumbnail_bytes": 106436,
+    "thumbnail_sha256": "9480268484f1ebc667a0690c70c0545d91a9b5b19bda8b81399d331e34caaf19",
+    "previous_webp": "CLAUDE_HANDOVER/PRE_NEW_IRREGULAR_EDGE_WEBPS/b01-c005-scene.webp",
+    "previous_webp_sha256": "1ba95b5281ce6fe5a4d2a2f42a41dff8ca06395ce877a00aa8af06616dec5dbc"
+  },
+  {
+    "scene": "b01-c006-scene",
+    "generated_image_id": "831aa585-c57f-4a89-af9f-136a6ff589aa",
+    "source_png": "CLAUDE_HANDOVER/NEW_IRREGULAR_EDGE_ORIGINAL_PNGS/b01-c006-scene.png",
+    "generated_source_filename": "watercolor_roman_marketplace_exchange.png",
+    "source_sha256": "6716a3236aa33c2140d1163a7a75aab8d076f6df6cd9f6916016807c84989ba6",
+    "source_resolution": [
+      1672,
+      941
+    ],
+    "published_webp": "assets/art/b01/b01-c006-scene.webp",
+    "published_width": 1200,
+    "published_height": 675,
+    "quality": 45,
+    "published_bytes": 235430,
+    "published_sha256": "02da88bac4e512d687f125345f27a7098b0ebd251ffcc5857c71d9d8da68ef01",
+    "thumbnail_bytes": 99832,
+    "thumbnail_sha256": "38e0dbd80bc8556f15c3f780bc82ef757e1495781e1f1288b43468ac2db9da38",
+    "previous_webp": "CLAUDE_HANDOVER/PRE_NEW_IRREGULAR_EDGE_WEBPS/b01-c006-scene.webp",
+    "previous_webp_sha256": "65bf26c22e44822ea33680336360455d5a93c82a79ea282f776f71200049ce5b"
+  },
+  {
+    "scene": "b01-c007-scene",
+    "generated_image_id": "3cfaaf8b-0c8d-48cc-8726-9d4eed123627",
+    "source_png": "CLAUDE_HANDOVER/NEW_IRREGULAR_EDGE_ORIGINAL_PNGS/b01-c007-scene.png",
+    "generated_source_filename": "organic_watercolor_village_street_scene.png",
+    "source_sha256": "d80f9f89253a1ac769b0ecff707fe2d860ba238759a06ad1fcdab50dce8b4433",
+    "source_resolution": [
+      1672,
+      941
+    ],
+    "published_webp": "assets/art/b01/b01-c007-scene.webp",
+    "published_width": 1200,
+    "published_height": 675,
+    "quality": 28,
+    "published_bytes": 255498,
+    "published_sha256": "d850adfd04882ca34dc1d3cfca8602a91dd32181b630a0a7ff363752b6fa8af5",
+    "thumbnail_bytes": 101626,
+    "thumbnail_sha256": "bfc4ff2fc8ac7b412779b38c6d764ac069436e5905d5cfc534396d3734d6639d",
+    "previous_webp": "CLAUDE_HANDOVER/PRE_NEW_IRREGULAR_EDGE_WEBPS/b01-c007-scene.webp",
+    "previous_webp_sha256": "772e7d5b3691e4965da5e58e8d24b899d96e0a39585252460fa4087957556824"
+  },
+  {
+    "scene": "b01-c008-scene-storm",
+    "generated_image_id": "cddb5cff-f682-4bbb-b251-f536cd5abc51",
+    "source_png": "CLAUDE_HANDOVER/NEW_IRREGULAR_EDGE_ORIGINAL_PNGS/b01-c008-scene-storm.png",
+    "generated_source_filename": "rainy_courtyard_windows_in_watercolor.png",
+    "source_sha256": "f50b17c18c066171c4d6e4aa994876184eddff45816de8cf7e395116b45f4820",
+    "source_resolution": [
+      1672,
+      941
+    ],
+    "published_webp": "assets/art/b01/b01-c008-scene-storm.webp",
+    "published_width": 1200,
+    "published_height": 675,
+    "quality": 40,
+    "published_bytes": 252326,
+    "published_sha256": "18e94820ca228726413a89435a560835697e32aa7b75d2d8a1e45b2c6d810f80",
+    "thumbnail_bytes": 94546,
+    "thumbnail_sha256": "d11c7ef38ca4967c284fbe8c06a411e17d5e047d70b33426d72c4c5186a6f6a4",
+    "previous_webp": "CLAUDE_HANDOVER/PRE_NEW_IRREGULAR_EDGE_WEBPS/b01-c008-scene-storm.webp",
+    "previous_webp_sha256": "cd64763e2b1d37762b36eb3b9184a90302d369ee183b3e7f6d420286bfaf05ec"
+  },
+  {
+    "scene": "b01-c008-scene-sun",
+    "generated_image_id": "bbc284a5-ab9b-4bb7-96db-720982c2a8c7",
+    "source_png": "CLAUDE_HANDOVER/NEW_IRREGULAR_EDGE_ORIGINAL_PNGS/b01-c008-scene-sun.png",
+    "generated_source_filename": "watercolor_courtyard_under_the_ancient_tree.png",
+    "source_sha256": "d1c641448d25c94e82e515e9e7a1a4fe17ba6909ca6888fa725127e2e7c6dcea",
+    "source_resolution": [
+      1672,
+      941
+    ],
+    "published_webp": "assets/art/b01/b01-c008-scene-sun.webp",
+    "published_width": 1200,
+    "published_height": 675,
+    "quality": 32,
+    "published_bytes": 253270,
+    "published_sha256": "3375b9f077255ae5d6cd4dfe7a1147860b0c0245b58de193cf30821f4163b8a1",
+    "thumbnail_bytes": 111056,
+    "thumbnail_sha256": "c60c0121836765ae49f7a703a11dfb943e2f522df809d673f1f5ca2f431d07c3",
+    "previous_webp": "CLAUDE_HANDOVER/PRE_NEW_IRREGULAR_EDGE_WEBPS/b01-c008-scene-sun.webp",
+    "previous_webp_sha256": "12cfc006addbd8a72d0ecf27137fa58ef00c51bbce07f8bd953641b1afbeabed"
+  }
+]

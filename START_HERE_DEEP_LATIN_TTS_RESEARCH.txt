@@ -1,0 +1,11 @@
+LATIN X — Deeper Classical Latin TTS research + Miriam pronunciation round 4
+
+1. Read docs/audio/DEEP_RESEARCH_RUNWAY_CLASSICAL_LATIN_2026-11-07.md
+2. Audio review only: Extract complete ZIP. Run DOWNLOAD_MIRIAM_ALIAS_V4.cmd with Internet.
+3. Run Start Miriam Review v4.cmd to review only the THREE new unapproved recordings.
+4. Export JSON; send it to GPT/Claude. Prior approvals stay unchanged.
+5. Open Start Tablinum.cmd to use the unchanged offline reader.
+
+All 34 original v1 Runway recordings remain in audio-audition/. New three original v4-iteration MP3s are still held in Runway; use private short-lived signed links in this owner ZIP to download the original bytes. Never put those URLs, generated MP3s or private owner reviews into public Git. Do not install any audition audio without user approval.
+
+No new picture art, textbook content, progress-state logic, or chapter gates were modified.

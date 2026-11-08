@@ -1,0 +1,45 @@
+{
+  "schema": "latin-x-miriam-alias-v3-owner-review-v1",
+  "source": "LATIN_X_MIRIAM_IPA_RETRY_REVIEW.json",
+  "original_clip_approvals_preserved": true,
+  "selected_voice": null,
+  "owner_tier": "owner_not_latinist",
+  "v3_trials": [
+    {
+      "sentence_id": "legacy-ch01-s007",
+      "clip_id": "voiceA__legacy-ch01-s007__v3",
+      "decision": "reject",
+      "problems": [
+        "wrong pronunciation",
+        "unnatural timing or vowel length"
+      ],
+      "notes": ""
+    },
+    {
+      "sentence_id": "legacy-ch01-s009",
+      "clip_id": "voiceA__legacy-ch01-s009__v3",
+      "decision": "reject",
+      "problems": [
+        "wrong pronunciation",
+        "unnatural timing or vowel length"
+      ],
+      "notes": ""
+    },
+    {
+      "sentence_id": "test-aqua",
+      "clip_id": "voiceA__test-aqua__v3",
+      "decision": "accept",
+      "problems": [],
+      "notes": ""
+    },
+    {
+      "sentence_id": "test-quoque",
+      "clip_id": "voiceA__test-quoque__v3",
+      "decision": "reject",
+      "problems": [
+        "wrong pronunciation"
+      ],
+      "notes": ""
+    }
+  ]
+}

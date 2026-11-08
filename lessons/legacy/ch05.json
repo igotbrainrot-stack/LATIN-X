@@ -1,0 +1,645 @@
+{
+  "schema": "tablinum-lesson-v1",
+  "id": "legacy-ch05",
+  "legacy": true,
+  "status": "legacy_unreviewed",
+  "original_zero_based_index": 4,
+  "legacy_source_fingerprint_fnv32": "1178ea02",
+  "title": "Forum",
+  "legacy_source": {
+    "name": "Forum",
+    "sub": "Duo māla",
+    "scene": "market",
+    "context": "Mārcus duo māla emit. Līvia tria māla videt.",
+    "explain": "In forō describes where you are. Ad forum means toward the market. Duo and tria agree with neuter plural māla.",
+    "sent": [
+      [
+        "Hodiē familia ad forum it.",
+        "Today the family goes to market."
+      ],
+      [
+        "In forō multī mercātōrēs sunt.",
+        "Many merchants are in the market."
+      ],
+      [
+        "Mercātor māla vendit.",
+        "A merchant sells apples."
+      ],
+      [
+        "Līvia tria māla videt.",
+        "Livia sees three apples."
+      ],
+      [
+        "Mārcus duo māla emit.",
+        "Marcus buys two apples."
+      ],
+      [
+        "Tītus interrogat: «Quot māla habēmus?»",
+        "Titus asks: How many apples do we have?"
+      ],
+      [
+        "Mārcus respondet: «Duo māla habēmus.»",
+        "Marcus answers: We have two apples."
+      ],
+      [
+        "Familia ē forō domum redit.",
+        "The family returns home from the market."
+      ]
+    ],
+    "v": [
+      [
+        "forum",
+        "market",
+        "forō"
+      ],
+      [
+        "hodiē",
+        "today",
+        ""
+      ],
+      [
+        "mercātor",
+        "merchant",
+        "mercātōrēs"
+      ],
+      [
+        "mālum",
+        "apple",
+        "māla"
+      ],
+      [
+        "duo",
+        "two",
+        ""
+      ],
+      [
+        "trēs",
+        "three",
+        "tria"
+      ],
+      [
+        "multus",
+        "many",
+        "multī"
+      ],
+      [
+        "vendere",
+        "to sell",
+        "vendit"
+      ],
+      [
+        "emere",
+        "to buy",
+        "emit"
+      ],
+      [
+        "quot",
+        "how many",
+        ""
+      ],
+      [
+        "īre",
+        "to go",
+        "it"
+      ],
+      [
+        "redīre",
+        "to return",
+        "redit"
+      ],
+      [
+        "domus",
+        "home",
+        "domum"
+      ]
+    ],
+    "q": [
+      [
+        "Quot māla Mārcus emit?",
+        [
+          "tria",
+          "duo",
+          "quattuor"
+        ],
+        "duo",
+        "Mārcus duo māla emit."
+      ],
+      [
+        "Ubi sunt mercātōrēs?",
+        [
+          "in hortō",
+          "in forō",
+          "in vīllā"
+        ],
+        "in forō",
+        "In forō sunt."
+      ],
+      [
+        "Quid mercātor vendit?",
+        null,
+        [
+          "māla",
+          "māla vendit",
+          "mercātor vendit māla"
+        ],
+        "Mercātor māla vendit."
+      ]
+    ]
+  },
+  "cloze_source": {
+    "text": "Mārcus duo māla ____.",
+    "answers": [
+      "emit"
+    ],
+    "clue": "Quid in forō Mārcus facit?",
+    "proof": "Mārcus duo māla emit."
+  },
+  "sentences": [
+    {
+      "id": "legacy-ch05-s001",
+      "text_la": "Hodiē familia ad forum it.",
+      "en": "Today the family goes to market.",
+      "tokens": [
+        {
+          "t": "Hodiē",
+          "start": 0,
+          "end": 5,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-hodie-420372be"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "familia",
+          "start": 6,
+          "end": 13,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-familia-521d0429"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "ad",
+          "start": 14,
+          "end": 16,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-ad-11c63447",
+            "legacy-lex-ad-87331a6f"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "forum",
+          "start": 17,
+          "end": 22,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-forum-b5f82e71"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "it",
+          "start": 23,
+          "end": 25,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-ire-cded647a"
+          ],
+          "review_status": "unreviewed"
+        }
+      ]
+    },
+    {
+      "id": "legacy-ch05-s002",
+      "text_la": "In forō multī mercātōrēs sunt.",
+      "en": "Many merchants are in the market.",
+      "tokens": [
+        {
+          "t": "In",
+          "start": 0,
+          "end": 2,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-in-41387a9e"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "forō",
+          "start": 3,
+          "end": 7,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-forum-b5f82e71"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "multī",
+          "start": 8,
+          "end": 13,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-multus-e1978fa2"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "mercātōrēs",
+          "start": 14,
+          "end": 24,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-mercator-1a2d0ed5"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "sunt",
+          "start": 25,
+          "end": 29,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-sunt-406f344d"
+          ],
+          "review_status": "unreviewed"
+        }
+      ]
+    },
+    {
+      "id": "legacy-ch05-s003",
+      "text_la": "Mercātor māla vendit.",
+      "en": "A merchant sells apples.",
+      "tokens": [
+        {
+          "t": "Mercātor",
+          "start": 0,
+          "end": 8,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-mercator-1a2d0ed5"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "māla",
+          "start": 9,
+          "end": 13,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-malum-10bc2abf"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "vendit",
+          "start": 14,
+          "end": 20,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-vendere-d0173010"
+          ],
+          "review_status": "unreviewed"
+        }
+      ]
+    },
+    {
+      "id": "legacy-ch05-s004",
+      "text_la": "Līvia tria māla videt.",
+      "en": "Livia sees three apples.",
+      "tokens": [
+        {
+          "t": "Līvia",
+          "start": 0,
+          "end": 5,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "tria",
+          "start": 6,
+          "end": 10,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-tres-888603c3"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "māla",
+          "start": 11,
+          "end": 15,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-malum-10bc2abf"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "videt",
+          "start": 16,
+          "end": 21,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-videre-c98e6807"
+          ],
+          "review_status": "unreviewed"
+        }
+      ]
+    },
+    {
+      "id": "legacy-ch05-s005",
+      "text_la": "Mārcus duo māla emit.",
+      "en": "Marcus buys two apples.",
+      "tokens": [
+        {
+          "t": "Mārcus",
+          "start": 0,
+          "end": 6,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "duo",
+          "start": 7,
+          "end": 10,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-duo-be248829"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "māla",
+          "start": 11,
+          "end": 15,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-malum-10bc2abf"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "emit",
+          "start": 16,
+          "end": 20,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-emere-793fbd5c"
+          ],
+          "review_status": "unreviewed"
+        }
+      ]
+    },
+    {
+      "id": "legacy-ch05-s006",
+      "text_la": "Tītus interrogat: «Quot māla habēmus?»",
+      "en": "Titus asks: How many apples do we have?",
+      "tokens": [
+        {
+          "t": "Tītus",
+          "start": 0,
+          "end": 5,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "interrogat",
+          "start": 6,
+          "end": 16,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-interrogare-fe94d5c5"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "Quot",
+          "start": 19,
+          "end": 23,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-quot-c6d16c30"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "māla",
+          "start": 24,
+          "end": 28,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-malum-10bc2abf"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "habēmus",
+          "start": 29,
+          "end": 36,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-habemus-bc4c856d"
+          ],
+          "review_status": "unreviewed"
+        }
+      ]
+    },
+    {
+      "id": "legacy-ch05-s007",
+      "text_la": "Mārcus respondet: «Duo māla habēmus.»",
+      "en": "Marcus answers: We have two apples.",
+      "tokens": [
+        {
+          "t": "Mārcus",
+          "start": 0,
+          "end": 6,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "respondet",
+          "start": 7,
+          "end": 16,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-respondere-b571b74e"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "Duo",
+          "start": 19,
+          "end": 22,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-duo-be248829"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "māla",
+          "start": 23,
+          "end": 27,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-malum-10bc2abf"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "habēmus",
+          "start": 28,
+          "end": 35,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-habemus-bc4c856d"
+          ],
+          "review_status": "unreviewed"
+        }
+      ]
+    },
+    {
+      "id": "legacy-ch05-s008",
+      "text_la": "Familia ē forō domum redit.",
+      "en": "The family returns home from the market.",
+      "tokens": [
+        {
+          "t": "Familia",
+          "start": 0,
+          "end": 7,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-familia-521d0429"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "ē",
+          "start": 8,
+          "end": 9,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-e-95cd8075"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "forō",
+          "start": 10,
+          "end": 14,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-forum-b5f82e71"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "domum",
+          "start": 15,
+          "end": 20,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-domus-d2c8c28e"
+          ],
+          "review_status": "unreviewed"
+        },
+        {
+          "t": "redit",
+          "start": 21,
+          "end": 26,
+          "lx": null,
+          "morph": null,
+          "legacy_candidate_ids": [
+            "legacy-lex-redire-00912b52"
+          ],
+          "review_status": "unreviewed"
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "legacy-ch05-q001",
+      "legacy_source": [
+        "Quot māla Mārcus emit?",
+        [
+          "tria",
+          "duo",
+          "quattuor"
+        ],
+        "duo",
+        "Mārcus duo māla emit."
+      ]
+    },
+    {
+      "id": "legacy-ch05-q002",
+      "legacy_source": [
+        "Ubi sunt mercātōrēs?",
+        [
+          "in hortō",
+          "in forō",
+          "in vīllā"
+        ],
+        "in forō",
+        "In forō sunt."
+      ]
+    },
+    {
+      "id": "legacy-ch05-q003",
+      "legacy_source": [
+        "Quid mercātor vendit?",
+        null,
+        [
+          "māla",
+          "māla vendit",
+          "mercātor vendit māla"
+        ],
+        "Mercātor māla vendit."
+      ]
+    }
+  ]
+}

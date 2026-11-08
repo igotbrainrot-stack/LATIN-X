@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tablinum · Illustration Review (offline)</title>
+<style>
+:root{font-family:system-ui,"Segoe UI",sans-serif;background:#f6f1e9;color:#2a352f}
+*{box-sizing:border-box}body{margin:0}header{background:#273c36;color:#fdf9f0;padding:18px 24px}
+header h1{font-family:Georgia,serif;font-size:1.6rem;margin:.15rem 0}main{max-width:1300px;margin:auto;padding:18px;display:grid;gap:18px;grid-template-columns:minmax(245px,360px) minmax(0,1fr)}
+section{background:#fffdf8;border:1px solid #ded6c9;border-radius:12px;padding:16px;min-width:0}
+fieldset{border:1px solid #d5c8b4;border-radius:8px;margin:12px 0;padding:10px}legend{font-weight:bold}
+button,select,input,textarea{font:inherit}button{background:#e4eee7;border:1px solid #859b8a;padding:9px 12px;border-radius:7px;cursor:pointer;margin:3px}
+button.primary{background:#244d3a;color:white}button:disabled{opacity:.4;cursor:not-allowed}
+input:not([type=checkbox]):not([type=file]),textarea,select{width:100%;padding:8px;background:white;border:1px solid #bdb7ac;border-radius:5px}
+label{display:block;margin:.7rem 0 .25rem}small,.note{color:#62594c}.warn{background:#fff1db;border-left:4px solid #b87923;padding:10px;margin:10px 0}
+#canvas{width:100%;position:relative;border:1px solid #9e907b;background:#fbf8f1;min-height:180px;touch-action:manipulation}
+#preview{width:100%;height:auto;display:block}#overlay{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+#regions{max-height:220px;overflow:auto;padding:8px;border:1px solid #e1d9ce}
+.region{padding:4px;border-bottom:1px solid #e1d9ce}.tiny{font-size:.83rem}
+pre{white-space:pre-wrap;word-break:break-word}#status{margin:6px 0;font-weight:bold}
+@media(max-width:840px){main{display:block}main section{margin-bottom:12px}}
+</style></head>
+<body><header><h1>Tablinum · Ars picta</h1><div>Local illustration review · no uploads or external dependencies</div></header>
+<main>
+<section aria-label="Image review controls">
+<p class="warn">Nothing in the current project is image-approved. Load the manifest, view a REAL picture, draw percentage hit regions and explicitly sign. Export a new JSON; the app will not publish it until its image files are present and validated.</p>
+<label for="manifest">Current illustration manifest (JSON)</label><input type="file" id="manifest" accept=".json,application/json">
+<label for="choice">Scene or character sheet</label><select id="choice" disabled></select>
+<label for="source">Full-sized scene image (WebP ≤250KB, roughly 1600px wide) or reference character PNG</label>
+<input type="file" id="source" accept="image/webp,image/png,image/jpeg">
+<label for="thumb">600px thumbnail (WebP; required to approve a scene)</label><input type="file" id="thumb" accept="image/webp">
+<div class="note tiny" id="fileInfo">No image selected. PNG character preview is not an approved runtime image.</div>
+<fieldset><legend>Latin-first alternative description</legend>
+<label for="altLa">Alt text · Latīnē</label><textarea id="altLa" rows="2"></textarea>
+<label for="altEn">English explanation</label><textarea id="altEn" rows="2"></textarea></fieldset>
+<fieldset><legend>Image provenance</legend>
+<label for="sourceTool">Generation method / tool</label><input id="sourceTool" placeholder="OpenAI image_gen / other">
+<label for="prompt">Exact prompt used</label><textarea id="prompt" rows="4"></textarea>
+<label for="rights">Licence/rights note</label><input id="rights" placeholder="New project-original, pending owner approval">
+</fieldset>
+<fieldset><legend>Owner's actual review (not auto-filled)</legend>
+<label><input type="checkbox" id="historic"> I checked historical accuracy, hands, clothing, objects and character consistency.</label>
+<label for="reviewer">My reviewer name</label><input id="reviewer" placeholder="Owner enters their name">
+<label for="reviewed">Review date YYYY-MM-DD</label><input id="reviewed" type="date">
+<label for="reviewNotes">Review notes and corrections</label><textarea id="reviewNotes" rows="2"></textarea>
+</fieldset>
+<button id="approve" class="primary" disabled>Approve this reviewed scene</button>
+<button id="draft">Save changes as draft</button>
+<button id="export" class="primary" disabled>Export complete reviewed JSON</button>
+<p role="status" id="status">Load the source manifest to begin.</p>
+</section>
+<section aria-label="Image and region editing">
+<h2 id="sceneTitle">Choose the scene to review</h2>
+<p class="note">Click the actual image to place percentage-based vertices. Select a region from the list, add 3 or more points, then choose Close region. Do not guess polygons without the final image.</p>
+<div id="canvas"><img id="preview" alt="Image preview (not yet signed)"><svg id="overlay" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"></svg></div>
+<fieldset><legend>Clickable picture regions</legend>
+<div id="regions">No scene loaded.</div>
+<div id="tools"><button id="clear" disabled>Clear current region</button><button id="undo" disabled>Undo vertex</button><button id="close" disabled>Close region</button></div>
+<div class="tiny" id="coordinate">No region selected.</div></fieldset>
+<p class="note">The SVG fallback remains in the learner. Unapproved scenes remain invisible to published lessons. Missing images, alt text, provenance, thumbnails or required polygons fail validation.</p>
+</section>
+</main>
+<script>
+"use strict";
+let manifest=null,selection=null,region=null,points=[],seenSource=false,seenThumb=false,sourceName="",thumbName="";
+let url=null;
+const $=id=>document.getElementById(id);
+const announce=m=>{$("status").textContent=m};
+const val=id=>$(id).value.trim(),clone=x=>JSON.parse(JSON.stringify(x));
+const current=()=>selection==="character"?manifest?.character_sheet:manifest?.scenes[Number(selection)];
+function safeDownload(data){
+ const blob=new Blob([JSON.stringify(data,null,2)+"\n"],{type:"application/json"});
+ const u=URL.createObjectURL(blob),a=document.createElement("a");a.href=u;
+ a.download="illustrations-owner-review.json";document.body.append(a);a.click();a.remove();
+ setTimeout(()=>URL.revokeObjectURL(u),3000);
+}
+function fill(){
+ const c=current();if(!c)return;
+ const sheet=selection==="character";$("sceneTitle").textContent=sheet?"Original character sheet (review only)":c.title+" — Chapter "+c.chapter;
+ $("altLa").value=sheet?"":c.alt_la_draft||"";
+ $("altEn").value=sheet?"":c.alt_en_draft||"";
+ $("sourceTool").value=c.tool||"";
+ $("prompt").value=c.generation_prompt||c.prompt||"";
+ $("rights").value=c.licence_status||"";
+ $("reviewer").value=c.approval?.by||"";
+ $("reviewed").value=c.approval?.at||"";
+ $("reviewNotes").value=c.approval?.notes||"";
+ $("historic").checked=false;
+ $("source").value="";$("thumb").value="";
+ seenSource=false;seenThumb=false;sourceName="";thumbName="";region=null;points=[];
+ if(url)URL.revokeObjectURL(url);url=null;$("preview").removeAttribute("src");
+ $("approve").disabled=false;$("clear").disabled=false;$("undo").disabled=false;$("close").disabled=false;
+ renderRegions();renderOverlay();$("fileInfo").textContent="Choose a real image file to check its dimensions and draw accurate regions.";
+}
+function renderRegions(){
+ const box=$("regions");box.textContent="";
+ if(selection==="character"){box.textContent="Character consistency review. Scene polygons are not applicable.";return}
+ const c=current();if(!c)return;
+ for(const id of c.required_region_ids||[]){
+  const b=document.createElement("button");b.textContent=(id===region?"● ":"○ ")+id+" ("+(c.polygons?.[id]?.length||0)+" points)";
+  b.className="region";b.onclick=()=>{
+   region=id;points=clone(c.polygons?.[id]||[]);renderRegions();renderOverlay();
+   $("coordinate").textContent="Active region: "+id;
+  };box.append(b);
+ }
+}
+function renderOverlay(){
+ const svg=$("overlay");while(svg.firstChild)svg.removeChild(svg.firstChild);
+ const c=current();if(!c||selection==="character")return;
+ for(const [id,p] of Object.entries(c.polygons||{})){
+  if(!Array.isArray(p)||p.length<3)continue;
+  const poly=document.createElementNS("http://www.w3.org/2000/svg","polygon");
+  poly.setAttribute("points",p.map(q=>q.join(",")).join(" "));
+  poly.setAttribute("fill","rgba(212,142,62,.18)");
+  poly.setAttribute("stroke",id===region?"#c35436":"#365f45");
+  poly.setAttribute("stroke-width",".55");svg.append(poly);
+ }
+ if(points.length){
+  const line=document.createElementNS("http://www.w3.org/2000/svg","polyline");
+  line.setAttribute("points",points.map(q=>q.join(",")).join(" "));
+  line.setAttribute("fill","none");line.setAttribute("stroke","#bc4430");
+  line.setAttribute("stroke-width",".65");svg.append(line);
+ }
+}
+function capture(){
+ const c=current();if(!c)return;
+ if(selection==="character"){c.prompt=val("prompt");c.tool=val("sourceTool");c.licence_status=val("rights");}
+ else{
+  c.alt_la_draft=val("altLa");c.alt_en_draft=val("altEn");
+  c.generation_prompt=val("prompt");c.tool=val("sourceTool");c.licence_status=val("rights");
+  if(sourceName)c.asset="assets/art/b01/"+sourceName;
+  if(thumbName)c.thumbnail="assets/art/b01/"+thumbName;
+  if(seenSource&&sourceName)c.provenance={source:"owner-selected-local-image",
+    source_file:sourceName,tool:val("sourceTool"),prompt:val("prompt"),
+    recorded_at:new Date().toISOString(),
+    note:"Locally selected real file; owner must copy WebP and thumbnail into assets/art/b01"};
+
+ }
+ c.approval={by:val("reviewer")||null,at:val("reviewed")||null,notes:val("reviewNotes")||null};
+}
+$("manifest").addEventListener("change",async e=>{
+ const file=e.target.files?.[0];if(!file)return;
+ try{
+  if(file.size>1024*1024)throw Error("Manifest exceeds 1MB.");
+  const d=JSON.parse(await file.text());
+  if(d.schema!=="tablinum-illustration-plan-v1"||d.scenes?.length!==9)throw Error("Not a nine-scene Tablinum illustration manifest.");
+  manifest=d;$("choice").disabled=false;$("export").disabled=false;$("choice").textContent="";
+  const add=(value,label)=>{const o=document.createElement("option");o.value=value;o.textContent=label;$("choice").append(o)};
+  add("character","Character sheet — must approve first");
+  d.scenes.forEach((c,i)=>add(String(i),c.title+" · Chapter "+c.chapter));
+  $("choice").value="character";selection="character";fill();announce("Loaded 9 draft scene entries. No image has been approved.");
+ }catch(error){announce("Cannot open manifest: "+error.message)}
+});
+$("choice").addEventListener("change",()=>{selection=$("choice").value;fill()});
+$("source").addEventListener("change",async e=>{
+ const file=e.target.files?.[0];if(!file)return;
+ seenSource=false;
+ if(url)URL.revokeObjectURL(url);url=URL.createObjectURL(file);
+ $("preview").src=url;
+ const ok=selection==="character"||file.type==="image/webp"&&file.size<=250*1024;
+ await $("preview").decode().catch(()=>{});
+ const w=$("preview").naturalWidth,h=$("preview").naturalHeight;
+ seenSource=ok&&w>0&&h>0&&(selection==="character"||w>=1200&&w<=2000);
+ sourceName=file.name;
+ $("fileInfo").textContent=file.name+" · "+file.size+" bytes · "+w+"×"+h+(seenSource?" · draft ready for visual review":" · NOT valid for publication (WebP ≤250KB, width 1200–2000px required)");
+ renderOverlay();
+});
+$("thumb").addEventListener("change",async e=>{
+ const f=e.target.files?.[0];if(!f)return;
+ const img=new Image(),u=URL.createObjectURL(f);img.src=u;await img.decode().catch(()=>{});
+ seenThumb=f.type==="image/webp"&&img.naturalWidth>0&&img.naturalWidth<=600&&f.size<=250*1024;
+ thumbName=f.name;URL.revokeObjectURL(u);
+ announce(seenThumb?"Thumbnail checked for this review session.":"Invalid thumbnail: WebP ≤600px wide and ≤250KB required.");
+});
+$("preview").addEventListener("click",e=>{
+ if(!manifest||selection==="character"||!region||!seenSource)return;
+ const r=$("preview").getBoundingClientRect();const x=Math.round((e.clientX-r.left)/r.width*1000)/10,y=Math.round((e.clientY-r.top)/r.height*1000)/10;
+ if(x<0||x>100||y<0||y>100)return;
+ if(points.length>=40)return announce("Maximum 40 vertices per polygon.");
+ points.push([x,y]);$("coordinate").textContent=region+": "+points.length+" vertices. Close when 3+ points.";
+ renderOverlay();
+});
+$("undo").onclick=()=>{points.pop();renderOverlay()};
+$("clear").onclick=()=>{if(!region||selection==="character")return;points=[];delete current().polygons[region];renderOverlay();renderRegions()};
+$("close").onclick=()=>{
+ if(selection==="character"||!region||points.length<3)return announce("Choose a scene region with at least 3 points.");
+ current().polygons[region]=clone(points);renderOverlay();renderRegions();announce("Draft polygon saved for "+region+". Not approved.");
+};
+$("draft").onclick=()=>{if(!manifest)return;capture();announce("Saved locally in this editor. Export JSON to preserve your changes.")};
+$("approve").onclick=()=>{
+ if(!manifest)return;
+ capture();const c=current(),sheet=selection==="character";
+ if(!seenSource||(!sheet&&!seenThumb))return announce("Approval blocked: inspect an actual valid full image and 600px thumbnail in this session.");
+ if(!val("reviewer")||!/^\d{4}-\d\d-\d\d$/.test(val("reviewed"))||!$("historic").checked)
+  return announce("Approval blocked: actual reviewer, date and historical/character review acknowledgement required.");
+ if(!val("prompt")||!val("sourceTool")||!val("rights"))
+  return announce("Approval blocked: full prompt, tool and licence notes required.");
+ if(!sheet){
+  if(!val("altLa")||!val("altEn"))return announce("Approval blocked: Latin and English alt text both required.");
+  if((c.required_region_ids||[]).some(k=>!Array.isArray(c.polygons?.[k])||c.polygons[k].length<3))
+   return announce("Approval blocked: every required region needs an image-accurate polygon.");
+  c.status="approved";
+ }else{c.status="owner_approved_character_reference";c.shipped_in_repo=false}
+ announce("Review signed in local export only. Copy checked image files to assets/art/b01 and run validator before publication.");
+};
+$("export").onclick=()=>{if(manifest){capture();safeDownload(manifest);announce("JSON exported. Keep it with the original source files and your backup.")}};
+</script></body></html>

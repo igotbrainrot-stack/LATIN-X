@@ -1,0 +1,81 @@
+{
+  "schema": "tablinum-music-provenance-v2",
+  "updated": "2026-11-06",
+  "historical_disclaimer": "Music inspired by ancient Greek and Roman sources; reconstruction is uncertain. The Seikilos pitch/rhythm line is ancient; the quiet tonic/fifth drone, register, equal temperament and plucked timbre are modern interpretative additions.",
+  "audio_source": "Offline WebAudio Karplus–Strong synthesis: three original authored modal scores plus transposed public-domain Seikilos melody (no recordings or modern arrangements).",
+  "sources": [
+    {
+      "title": "Seikilos stele — Denmark National Museum, inv.14897",
+      "url": "https://samlinger.natmus.dk/as/asset/28501",
+      "kind": "primary_object",
+      "use": "Ancient Greek inscribed melody and context"
+    },
+    {
+      "title": "Seikilos score (public-domain modernized transposition)",
+      "url": "https://commons.wikimedia.org/wiki/File:Seikilos_score.png",
+      "kind": "public_domain_score",
+      "use": "Manually re-entered notated pitches and eighth-note durations; no artwork or recordings copied"
+    },
+    {
+      "title": "Traditions of Greek Musical Theory",
+      "url": "https://ecu.pressbooks.pub/earlymusicinthewest/chapter/traditions-of-greek-musical-theory/",
+      "kind": "scholarly_background",
+      "use": "Ancient pitch and long/short duration signs; alternative accepted tonal transpositions"
+    },
+    {
+      "title": "Pöhlmann and West, Documents of Ancient Greek Music (2001), no. 23, pp. 88–91",
+      "kind": "scholarly_bibliography",
+      "url": "https://www.cambridge.org/core/books/carpe-diem/in-search-of-present-time/B8843F0A713AE0B9759C10C05D787",
+      "use": "Bibliographic reference only; not a claim to reproduce the copyrighted edition"
+    },
+    {
+      "title": "Owner's audio/art brief",
+      "path": "docs/owner/AUDIO_AND_ART_REQUIREMENTS.md",
+      "kind": "project_spec"
+    }
+  ],
+  "scores": [
+    {
+      "id": "hortus-serenus",
+      "duration_seconds": 226.8,
+      "author": "OpenAI-generated original score for LATIN X",
+      "style": "modal lyre-inspired, original",
+      "license_status": "New project composition; no third-party recording or arrangement",
+      "asset": "content/music.js",
+      "notes_explanation": "Original authored 32-note phrase, 32 distinct lengths, 8 varied cycles, 2.5-beat breath; phrase length and dynamics vary; low tonic/fifth drone at approximately 30% amplitude",
+      "provenance_status": "original_project_composition"
+    },
+    {
+      "id": "sub-columnis",
+      "duration_seconds": 226.8,
+      "author": "OpenAI-generated original score for LATIN X",
+      "style": "modal lyre-inspired, original",
+      "license_status": "New project composition; no third-party recording or arrangement",
+      "asset": "content/music.js",
+      "notes_explanation": "Original authored 32-note phrase, 32 distinct lengths, 8 varied cycles, 2.5-beat breath; phrase length and dynamics vary; low tonic/fifth drone at approximately 30% amplitude",
+      "provenance_status": "original_project_composition"
+    },
+    {
+      "id": "vesper-in-villa",
+      "duration_seconds": 226.8,
+      "author": "OpenAI-generated original score for LATIN X",
+      "style": "modal lyre-inspired, original",
+      "license_status": "New project composition; no third-party recording or arrangement",
+      "asset": "content/music.js",
+      "notes_explanation": "Original authored 32-note phrase, 32 distinct lengths, 8 varied cycles, 2.5-beat breath; phrase length and dynamics vary; low tonic/fifth drone at approximately 30% amplitude",
+      "provenance_status": "original_project_composition"
+    },
+    {
+      "id": "seikilos-epitaph",
+      "duration_seconds": 197.88,
+      "author": "Ancient Greek anonymous melody on the Seikilos stele (1st–2nd century CE); this WebAudio performance authored for LATIN X",
+      "style": "Transposed inscription melody, 37 explicitly timed pitches, 4 repeated complete performances, 3-beat breaths, low interpretive lyre drone",
+      "asset": "content/music.js",
+      "source": "https://commons.wikimedia.org/wiki/File:Seikilos_score.png",
+      "license_status": "Ancient melody PUBLIC DOMAIN; public-domain Commons score used only for pitch/rhythm entry, no modern recording or arrangement reproduced",
+      "provenance_status": "public_domain_transcription_project_performance",
+      "caution": "Actual ancient accompaniment and tuning uncertain; not a historically exact restoration."
+    }
+  ],
+  "notes": "Rhythmic engine app/58-music-score.js preserves the first and last notes; original pieces use 4-cycle variation patterns plus rests/quiet drone. Historical Seikilos pitches are never altered by the variation feature. Full original modern-source transposition is attributed."
+}

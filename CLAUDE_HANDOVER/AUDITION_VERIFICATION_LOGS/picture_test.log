@@ -1,0 +1,14 @@
+
+> latin-x-tablinum-review@0.4.2 test:picture
+> node scripts/import-claude-pilot.cjs --check && node scripts/build-picture-practice.cjs --check && node tests/picture-exercises.test.cjs
+
+b01-c001: 52 reading lines, 275 tokens, 2 segments
+b01-c002: 40 reading lines, 284 tokens, 2 segments
+b01-c003: 45 reading lines, 256 tokens, 2 segments
+b01-c004: 49 reading lines, 267 tokens, 3 segments
+b01-c005: 43 reading lines, 288 tokens, 3 segments
+b01-c006: 49 reading lines, 279 tokens, 3 segments
+b01-c007: 46 reading lines, 271 tokens, 3 segments
+b01-c008: 55 reading lines, 306 tokens, 3 segments
+PASS: unsigned picture-practice classic script matches manuscript-derived JSON exactly
+PASS picture exercises: 44 unsigned keys cover all 9 scene region maps; cumulative Latin forms, inside/outside hit tests, future signed grade, storm overlapping-polygon clicks and v5 backup roundtrip.

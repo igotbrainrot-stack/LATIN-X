@@ -1,0 +1,81 @@
+name: LATIN X Phase 3a classic runtime relocation
+on:
+  push:
+    branches:
+      - feature/phase3-runtime-20261105
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  node-linux:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Full Phase 0-3a regression suite on Linux
+        run: npm test
+      - name: Verify byte-identical classic runtime relocation
+        run: npm run test:phase3a
+      - name: Check deterministic Phase 2 compilation and lexeme review
+        run: |
+          npm run test:phase2
+          npm run test:lexemes
+          npm run test:package
+      - name: Assert v4 localStorage key survives in original classic script
+        shell: bash
+        run: |
+          grep -q 'tablinum-source-review-v02' app/legacy-runtime.js
+          ! grep -q 'tablinum-state-v5' app/legacy-runtime.js
+      - name: Create complete Claude-ready Phase 3a program
+        shell: bash
+        run: |
+          mkdir -p dist
+          git archive --format=zip --output=dist/LATIN_X_PHASE3A_FULL_CLAUDE_REVIEW.zip HEAD
+          unzip -t dist/LATIN_X_PHASE3A_FULL_CLAUDE_REVIEW.zip | tail -n 1
+          for file in index.html app/legacy-runtime.js archive/index-v04-inline-phase3a-baseline.html CLAUDE_REVIEW_PACKAGE/00_START_HERE.md; do
+            unzip -Z1 dist/LATIN_X_PHASE3A_FULL_CLAUDE_REVIEW.zip | grep -Fx "$file"
+          done
+          sha256sum dist/LATIN_X_PHASE3A_FULL_CLAUDE_REVIEW.zip > dist/SHA256SUMS.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: LATIN_X_PHASE3A_FULL_CLAUDE_REVIEW
+          path: dist/
+          if-no-files-found: error
+          retention-days: 30
+  windows-offline:
+    runs-on: windows-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Full Node regression tests Windows
+        run: |
+          npm test
+          npm run test:phase2
+          npm run test:phase3a
+      - name: Install Playwright and Chromium
+        run: |
+          npm install --no-save playwright
+          npx playwright install chromium
+          npx playwright install firefox
+      - name: Verify Windows Chromium file URL, progress and backups
+        run: npm run test:file
+      - name: Verify Microsoft Edge file URL, progress and backups
+        env:
+          TABLINUM_BROWSER_CHANNEL: msedge
+        run: npm run test:file
+      - name: Verify Chrome file URL and original progress
+        env:
+          TABLINUM_BROWSER_CHANNEL: chrome
+        run: npm run test:file
+      - name: Verify Firefox file URL and original progress
+        env:
+          TABLINUM_BROWSER_TYPE: firefox
+        run: npm run test:file
+      - name: Verify offline vocabulary review and export via file URL
+        run: npm run test:review-browser

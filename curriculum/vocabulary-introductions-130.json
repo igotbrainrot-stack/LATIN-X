@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "status": "no-verified-new-lessons-yet",
+  "description": "Actual introduced lexemes only; do not populate from planned word budgets or glossary entries alone.",
+  "completion_gates": [
+    {
+      "chapter": 90,
+      "minimum_unique_approved_lemmas": 1500
+    },
+    {
+      "chapter": 130,
+      "minimum_unique_approved_lemmas": 3000
+    }
+  ],
+  "introduced_lexemes": [],
+  "expected_entry_schema": {
+    "lexeme_id": "stable sense-disambiguated ID e.g. edo_eat_v3 (not interchangeable with edō='issue')",
+    "headword": "reviewed canonical Latin lemma",
+    "english_gloss": "brief licensed or original teacher-approved meaning",
+    "first_chapter": "integer 1..130, never a review chapter",
+    "lesson_path": "repository-relative JSON file for a complete authored Latin lesson",
+    "sentence_id": "identifier of first contextual reading sentence, not quiz-only text",
+    "source_reference": "provenance ID and licence for any borrowed lexicon data",
+    "reviewed_by": "actual owner or qualified Latinist signer, clearly identified by review_tier",
+    "reviewed_at": "ISO date YYYY-MM-DD",
+    "part_of_speech": "noun, verb, pronoun, etc.",
+    "review_tier": "owner (signed after Claude drafted; NOT checked by a Latinist) | latinist (qualified linguistic review)",
+    "drafted_by": "required for owner-tier; must differ from reviewed_by"
+  },
+  "counting_notes": [
+    "Inflected surface forms are not new lexemes.",
+    "Proper names are not counted toward the Latin vocabulary minimum.",
+    "Spellings normalized without macrons are not sufficient to merge different headwords/senses.",
+    "Each entry needs a reviewed lesson with matching lexeme token and contextual sentence.",
+    "Planned allocations are not introductions.",
+    "Always report owner-tier and Latinist-tier introductions separately, including both 1,500/3,000 completion gates.",
+    "Owner-reviewed entries are explicitly labelled NOT checked by a Latinist even when total approved word-count gates pass."
+  ],
+  "generated_by": "scripts/compile-content.cjs",
+  "generated_from_hash": "dc6677a01a6a42ec6c12a820b0bb464f285ae017e7952f9f85b6ef4d7688c06b"
+}

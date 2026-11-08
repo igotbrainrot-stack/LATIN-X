@@ -1,0 +1,93 @@
+name: LATIN X Phase6 Claude repairs and Phase7b offline audio
+on:
+  push:
+    branches: [fix/phase6-reviewed-phase7b-20261106]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - name: Install exact fsrs provenance dependency
+        run: npm install --no-save ts-fsrs@5.4.2
+      - name: All legacy, Phase6, Phase7a and offline media checks
+        run: |
+          npm run test:vendor-fsrs
+          npm test
+          npm run test:phase6-claude
+          npm run test:phase7b
+          npm run test:phase7a
+          npm run test:phase6
+          npm run test:phase5
+          npm run test:phase3c
+          npm run test:phase2
+          npm run test:pilot
+          npm run test:lexemes
+          npm run test:illustrations
+          npm run test:package
+          python3 scripts/check-claude-pilot.py
+      - name: Require pending owner approvals and milestones to remain RED
+        shell: bash
+        run: |
+          if node scripts/validate-lexemes.cjs --require-review-ready > review-gate.txt 2>&1; then exit 1; fi
+          for n in 1500 3000; do
+            if node curriculum/validate-roadmap-130.cjs --require-introduced-$n > gate-$n.txt 2>&1; then exit 1; fi
+            grep -q 'GATE NOT MET' gate-$n.txt
+          done
+      - name: Build complete program and Claude review ZIP with checksum
+        shell: bash
+        run: |
+          mkdir -p dist
+          git archive --format=zip --output=dist/LATIN_X_PHASE7B_FULL_CLAUDE_REVIEW.zip HEAD
+          unzip -t dist/LATIN_X_PHASE7B_FULL_CLAUDE_REVIEW.zip | tail -n 1
+          for p in index.html 'Start Tablinum.cmd' vendor/ts-fsrs.umd.js vendor/ts-fsrs.LICENSE app/70-user-media.js app/60-audio-ambience.js PHASE7B_CLAUDE_HANDOVER.md docs/claude/PHASE6_REVIEW_FOR_GPT.md docs/owner/AUDIO_AND_ART_REQUIREMENTS.md lessons/b01/c001.json; do
+            unzip -Z1 dist/LATIN_X_PHASE7B_FULL_CLAUDE_REVIEW.zip | grep -Fx "$p"
+          done
+          sha256sum dist/LATIN_X_PHASE7B_FULL_CLAUDE_REVIEW.zip > dist/SHA256SUMS.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: LATIN_X_PHASE7B_FULL_CLAUDE_REVIEW
+          path: dist/
+          if-no-files-found: error
+          retention-days: 30
+  windows:
+    runs-on: windows-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - name: Install exact fsrs and supported Windows browser testing version
+        run: |
+          npm install --no-save ts-fsrs@5.4.2 playwright@1.64.1
+          npx playwright install chromium
+      - name: All regression checks including original progress
+        run: |
+          npm test
+          npm run test:phase6-claude
+          npm run test:phase7b
+          npm run test:phase7a
+          npm run test:phase3c
+      - name: Phase7b file URL local storage and timing-v2
+        run: npm run test:phase7b-browser
+      - name: Phase6 keyboard and final-sentence exposure
+        run: npm run test:phase6-browser
+      - name: Phase7a Chromium no-autoplay and saved audio settings
+        run: npm run test:phase7a-browser
+      - name: Phase7a Edge audio no-autoplay and saved audio settings
+        env:
+          TABLINUM_BROWSER_CHANNEL: msedge
+        run: npm run test:phase7a-browser
+      - name: Original legacy offline app tests
+        run: npm run test:file
+      - name: Phase5 keyboard exercise smoke
+        run: npm run test:phase5-browser
+      - name: Vocabulary review owner's file URL editor
+        run: npm run test:review-browser
+      - name: Original responsive browser layout
+        run: npm run test:browser

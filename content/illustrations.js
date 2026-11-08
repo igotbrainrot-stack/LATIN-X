@@ -1,0 +1,2286 @@
+/* Generated from curriculum/illustrations.json. Do NOT edit manually. */
+globalThis.TablinumIllustrationsData={
+  "schema": "tablinum-illustration-plan-v1",
+  "updated": "2026-11-07",
+  "status": "draft_all_images_pending_owner_approval",
+  "style": "Ink-and-coloured-watercolour historical Roman family sketch on parchment; terracotta, ochre, olive, blue, consistent characters, no words inside art",
+  "historical_context": "1st century AD Roman domestic life; buildings, dress and food must be checked before publication",
+  "character_sheet": {
+    "status": "approved",
+    "image_gen_id": "df1e03a6-4346-4ce6-8e73-727f48a114cc",
+    "tool": "OpenAI image_gen",
+    "generated_at": "2026-11-06",
+    "settings": {
+      "actual_output_aspect_ratio": "2:1",
+      "width": 1774,
+      "height": 887,
+      "medium": "PNG",
+      "size_bytes": 3322112
+    },
+    "provenance": "New original ink-and-watercolour character reference v2 regenerated from owner-selected candidate A and precise correction brief on 2026-11-06. Full PNG included under CLAUDE_HANDOVER/DRAFT_CHARACTER_ART in the user-delivered ZIP, WebP derivatives committed by Claude after owner approval; source PNG kept outside Git. Tool did not disclose exact internal generation prompt.",
+    "license_status": "Original tool-generated artwork; owner-approved for use in LATIN X (personal use).",
+    "shipped_in_repo": true,
+    "prompt": "A warm, parchment-textured watercolor-and-ink character lineup presents seven full-body figures in classical Roman dress, evenly spaced and front-facing with no text or background objects. From left to right: Mārcus, a bearded, sturdy father in a cream tunic with red trim and leather belt; Flāvia, his poised mother in an ivory stola and rust-red palla, gold earrings, and an elegant updo; Līvia, a smiling nine-year-old girl with braided hair and an olive tunic; Tītus, a cheerful seven-year-old boy in blue with a prominent gold bulla; Gāius, a serious yet approachable family friend in a blue-grey tunic and brown mantle; Gāius’s calm ten-year-old son in an ochre tunic; and a seated, alert white-and-chestnut dog wearing a brown collar.",
+    "characters": [
+      {
+        "id": "Mārcus",
+        "notes": "Father ~40, short beard, everyday tunic (toga only formal)"
+      },
+      {
+        "id": "Flāvia",
+        "notes": "Mother, stola/palla, hair up"
+      },
+      {
+        "id": "Līvia",
+        "notes": "Daughter ~9, braided hair, tunic"
+      },
+      {
+        "id": "Tītus",
+        "notes": "Son ~7, tunic and bulla pendant"
+      },
+      {
+        "id": "Gāius",
+        "notes": "Family friend"
+      },
+      {
+        "id": "Gāiī-fīlius",
+        "notes": "Young son of Gāius"
+      },
+      {
+        "id": "canis",
+        "notes": "Family dog"
+      }
+    ],
+    "source_filename": "character-sheet-v2-unapproved.png",
+    "approval": {
+      "by": "owner",
+      "at": "2026-11-06",
+      "notes": "Owner approved v2 as the canonical reference for all scenes (decision card in the Claude project thread, 2026-11-06). Claude pre-checked: plain background, Gāius ~40 with grey temples, son distinct from Tītus, all wardrobe colours as specified, no text or anachronisms. Owner tier; not a professional historical review."
+    },
+    "character_colors": {
+      "Mārcus": "warm-white knee-length tunic with thin red border, brown belt; short dark beard and curly hair; no cloak",
+      "Flāvia": "long ivory stola with terracotta palla over one shoulder; dark hair pinned up with gold band",
+      "Līvia": "olive-green tunic; long dark-brown hair in two braids",
+      "Tītus": "faded-blue tunic with golden bulla on cord; light-brown short curly hair",
+      "Gāius": "clean-shaven ~40, same age as Mārcus; grey at temples; blue-grey tunic and brown mantle",
+      "Gāiī-fīlius": "ochre tunic, straight short black hair, slimmer face than Tītus; about 10",
+      "canis": "medium-sized white dog with chestnut patches, brown leather collar, sitting"
+    },
+    "new_candidate_previews_20261106": [
+      {
+        "status": "draft_unapproved",
+        "filename_in_full_handover": "CLAUDE_HANDOVER/DRAFT_CHARACTER_ART/candidate-A-lineup-courtyard.png",
+        "committed_to_git": false,
+        "image_gen_id": "df7c46cb-2c75-42f2-9892-fc635508db22",
+        "generated_at": "2026-11-06",
+        "tool": "OpenAI image_gen",
+        "source_description_as_returned_by_tool": "A richly textured watercolor-and-ink textbook-style scene depicts a Roman peristyle courtyard in warm ochre, terracotta, and stone tones, with seven cheerful figures and a friendly patched dog posed before columns, vines, a laurel-painted red wall, fountain, flowering shrubs, amphitheatre ruins, cypresses, and sunlit city buildings—without any text. From left to right are a bearded father in an ivory tunic and reddish cloak, a mother in a draped stola and lilac palla, two belted children in trimmed cream tunics (the boy wearing a gold bulla), a cloaked young friend, his smiling son in ochre, and the seated dog, all rendered with historically styled Roman garments, sandals, expressive faces, fabric folds, and soft dappled shading.",
+        "internal_generation_prompt": null,
+        "prompt_provenance_note": "The image tool supplied this description but did not expose its exact internal generation prompt; do not claim it is the exact prompt.",
+        "requested_design_brief": "docs/owner/AUDIO_AND_ART_REQUIREMENTS.md, section C; character colour map in this manifest",
+        "dimensions_px": [
+          1536,
+          1024
+        ],
+        "sha256": "a7f0f811f4407186299301f007e8c037978cb791ac6443b5e2705462f522833b",
+        "licence_status": "Original tool-generated artwork draft; owner publication permission still pending",
+        "owner_review": {
+          "by": null,
+          "at": null,
+          "decision": null
+        },
+        "qa_findings": "Most complete full-body lineup; does not match specified Līvia olive clothing, Tītus pale blue clothing or Flāvia terracotta palla; courtyard background too elaborate for a neutral sheet; needs owner correction."
+      },
+      {
+        "status": "draft_unapproved",
+        "filename_in_full_handover": "CLAUDE_HANDOVER/DRAFT_CHARACTER_ART/candidate-B-group-portrait.png",
+        "committed_to_git": false,
+        "image_gen_id": "e92d02f5-bce3-4580-8745-05917fb9",
+        "generated_at": "2026-11-06",
+        "tool": "OpenAI image_gen",
+        "source_description_as_returned_by_tool": "A richly textured watercolor-and-ink ensemble portrait for the LATIN X / Tablinum pilot presents a Roman family and friends gathered in a sunlit peristyle courtyard, framed by columns, vines, roses, a fountain, mosaic paving, terracotta roofs, cypress trees, and a distant amphitheater-like ruin. The stable cast includes the bearded father Mārcus, elegant mother Flāvia, thoughtful daughter Līvia, cheerful son Tītus, friendly Gāius, Gāius’s lively boy, and a relaxed brown-and-white hunting dog, all dressed in historically inspired Roman garments and accessories with no text or modern details.",
+        "internal_generation_prompt": null,
+        "prompt_provenance_note": "The image tool supplied this description but did not expose its exact internal generation prompt; do not claim it is the exact prompt.",
+        "requested_design_brief": "docs/owner/AUDIO_AND_ART_REQUIREMENTS.md, section C; character colour map in this manifest",
+        "dimensions_px": [
+          1536,
+          1024
+        ],
+        "sha256": "1f73b1aa197a2f71e0cfcc077e740d443c5f4c3f4ca1c2a8140f822917f54146",
+        "licence_status": "Original tool-generated artwork draft; owner publication permission still pending",
+        "owner_review": {
+          "by": null,
+          "at": null,
+          "decision": null
+        },
+        "qa_findings": "Compositional illustration rather than full-body character lineup; missing required olive/blue/terracotta wardrobe, character poses overlap."
+      },
+      {
+        "status": "draft_unapproved",
+        "filename_in_full_handover": "CLAUDE_HANDOVER/DRAFT_CHARACTER_ART/candidate-C-group-portrait.png",
+        "committed_to_git": false,
+        "image_gen_id": "758c6299-0a67-47cb-9eea-a61a8a08dc61",
+        "generated_at": "2026-11-06",
+        "tool": "OpenAI image_gen",
+        "source_description_as_returned_by_tool": "A warm, classical watercolor-and-ink character portrait set in a peaceful Roman villa courtyard, featuring seven figures—three adults, three children, and a cheerful patched dog—arranged with adults standing behind children seated on a stone bench. Painted walls, columns, terracotta roofs, greenery, amphorae, a fountain, and a distant hilltop temple create the richly textured setting, while carefully rendered Roman garments, gentle expressions, soft daylight, and detailed brushwork reinforce the historical atmosphere.",
+        "internal_generation_prompt": null,
+        "prompt_provenance_note": "The image tool supplied this description but did not expose its exact internal generation prompt; do not claim it is the exact prompt.",
+        "requested_design_brief": "docs/owner/AUDIO_AND_ART_REQUIREMENTS.md, section C; character colour map in this manifest",
+        "dimensions_px": [
+          1536,
+          1024
+        ],
+        "sha256": "87dd2adbeed4fb375b7245dc9a2097e83cd0512c044666726cea6a1b499a185a",
+        "licence_status": "Original tool-generated artwork draft; owner publication permission still pending",
+        "owner_review": {
+          "by": null,
+          "at": null,
+          "decision": null
+        },
+        "qa_findings": "Image is a grouped scene, not a neutral full-body reference sheet; Līvia and Tītus colours incorrect, overlapping characters complicate reuse."
+      },
+      {
+        "status": "draft_unapproved",
+        "filename_in_full_handover": "CLAUDE_HANDOVER/DRAFT_CHARACTER_ART/prior-draft-from-previous-turn.png",
+        "committed_to_git": false,
+        "image_gen_id": "49285db5-a1f5-44ae-afb8-7eaace9841b9",
+        "generated_at": "2026-11-06",
+        "tool": "OpenAI image_gen",
+        "source_description_as_returned_by_tool": "A warm, finely detailed watercolor-and-ink character portrait set in a sunlit Roman peristyle courtyard, with columns, tiled roofing, greenery, a fountain, red fresco panels, amphora, and a distant hill crowned by a Colosseum-like amphitheater and cypress trees; the Roman family and household gather in a harmonious, text-free composition with natural clothing, expressive faces, soft washes, and delicate ink outlines. Gāius and his son stand at left, Mārcus and Flāvia behind the group, while Tītus and Līvia sit in front beside a cheerful white-and-brown dog, all shown with distinctive period garments, jewelry, bulla, braided hair, and warm, consistent likenesses.",
+        "internal_generation_prompt": null,
+        "prompt_provenance_note": "The image tool supplied this description but did not expose its exact internal generation prompt; do not claim it is the exact prompt.",
+        "requested_design_brief": "docs/owner/AUDIO_AND_ART_REQUIREMENTS.md, section C; character colour map in this manifest",
+        "dimensions_px": [
+          1536,
+          1024
+        ],
+        "sha256": "ffa876645465d97391672a80b1ef1e2767dec839b8f0fec73952911a9da185ae",
+        "licence_status": "Original tool-generated artwork draft; owner publication permission still pending",
+        "owner_review": {
+          "by": null,
+          "at": null,
+          "decision": null
+        },
+        "qa_findings": "Prior conversation concept provided only for context; no owner signoff and wrong fixed wardrobe, not the canonical sheet."
+      }
+    ],
+    "prompt_provenance_note": "The text in prompt is the tool-returned image description, not an asserted verbatim hidden internal generation prompt. Owner instructions are stored verbatim in owner_correction_brief_verbatim and CLAUDE_HANDOVER/PASTE_TO_GPT_CHARACTER_SHEET_V2.md.",
+    "owner_correction_brief_verbatim": "The owner chose **candidate A (the full-body lineup)** as the base. Please regenerate it as the character reference sheet with these corrections.\n\nKeep the style exactly: ink line work with watercolour wash, warm palette, no text anywhere in the image.\n\n**Layout**\n- Plain warm parchment background, with no buildings, no Colosseum and no Parthenon.\n- All seven characters stand front-facing in one row, head to toe, slightly apart, with nothing overlapping. The dog sits at the end.\n- Even lighting.\n\n**Characters, left to right**\n1. **Mārcus:** father, about 40, short dark beard, curly hair. Warm-white knee-length tunic with a thin red border, brown belt, sandals. No cloak.\n2. **Flāvia:** mother, about 35, dark hair pinned up with a gold band. Long ivory stola, with a **terracotta** palla over one shoulder.\n3. **Līvia:** girl, about 9, long dark-brown hair in **two braids**. **Olive-green** tunic, sandals.\n4. **Tītus:** boy, about 7, short curly light-brown hair. **Faded-blue** tunic, **gold bulla** on a cord.\n5. **Gāius:** family friend, **about 40, the same age as Mārcus**. Clean-shaven, short hair with **grey at the temples**. Blue-grey tunic with a brown mantle.\n6. **Gāius's son:** about 10, **straight black hair cut short**, a slimmer face than Tītus and clearly a different child. **Ochre** tunic.\n7. **The dog:** medium-sized, white with chestnut patches, brown leather collar, sitting.\n\n**Accuracy for Rome in the 1st century AD:** sandals only, no modern items, no glass, nothing written.\n\nThen show me the image and record its prompt, generation ID and date in `curriculum/illustrations.json` under `character_sheet`, with the owner fields left empty. Do **not** start the 9 scenes until I approve this sheet.",
+    "filename_in_full_handover": "CLAUDE_HANDOVER/DRAFT_CHARACTER_ART/character-sheet-v2-unapproved.png",
+    "sha256": "e6a60f4df382033f7c37135f49684441000a88db5900e7426a0f50ff612e92e9",
+    "owner_review": {
+      "by": null,
+      "at": null,
+      "decision": null
+    },
+    "v2_visual_review_notes": "Owner review is still required. The new image shows distinct full-body silhouettes in a straight row and conforms far better to the requested palette, braids, bulla, and dog. Do not treat this automated visual appraisal as owner sign-off or license approval.",
+    "based_on_candidate_gen_id": "df7c46cb-2c75-42f2-9892-fc635508db22",
+    "asset": "assets/art/characters/character-sheet.webp",
+    "thumbnail": "assets/art/characters/character-sheet-thumb.webp",
+    "source_png_sha256": "e6a60f4df382033f7c37135f49684441000a88db5900e7426a0f50ff612e92e9",
+    "derivatives": {
+      "full": {
+        "width": 1600,
+        "height": 800,
+        "format": "webp",
+        "quality": 76,
+        "bytes": 200900,
+        "sha256": "a756843fab3d44bf9a91efd96b0d708cb10194611d31c497598a087622ec5d24"
+      },
+      "thumb": {
+        "width": 600,
+        "format": "webp",
+        "quality": 80,
+        "bytes": 38274,
+        "sha256": "179d4be78f8e15c4f5addf99b6b8e0496a0ea325b5df3dfd9e9b71aa0afef8cb"
+      },
+      "converted_by": "Claude (Pillow, Lanczos resize) 2026-11-06"
+    }
+  },
+  "sources": [
+    {
+      "title": "Roman Painting",
+      "url": "https://www.metmuseum.org/it/essays/roman-painting",
+      "use": "Reference for Roman interior frescoes, not copying"
+    },
+    {
+      "title": "A Day in Pompeii / Residences",
+      "url": "https://museum.wa.gov.au/pompeii2010/daily-life/residences/",
+      "use": "Atrium and peristyle historical checks"
+    },
+    {
+      "title": "Owner requirements",
+      "path": "docs/owner/AUDIO_AND_ART_REQUIREMENTS.md",
+      "use": "Binding owner style and region list"
+    }
+  ],
+  "scenes": [
+    {
+      "id": "b01-c001-scene",
+      "chapter": 1,
+      "title": "Hortus et arbor",
+      "alt_la_draft": "Līvia in hortō est; Tītus in arbore magnā est.",
+      "alt_en_draft": "Livia is in the garden; Titus is in the big tree.",
+      "status": "approved",
+      "asset": "assets/art/b01/b01-c001-scene.webp",
+      "thumbnail": "assets/art/b01/b01-c001-scene-thumb.webp",
+      "fallback": "svg-scene-book",
+      "required_region_ids": [
+        "arbor-magna",
+        "arbor-parva",
+        "rosa",
+        "vīlla",
+        "Līvia",
+        "Tītus"
+      ],
+      "polygons": {
+        "Tītus": [
+          [
+            18,
+            6
+          ],
+          [
+            31,
+            5
+          ],
+          [
+            32,
+            28
+          ],
+          [
+            25,
+            34
+          ],
+          [
+            18,
+            33
+          ]
+        ],
+        "arbor-magna": [
+          [
+            0,
+            35
+          ],
+          [
+            12,
+            30
+          ],
+          [
+            22,
+            36
+          ],
+          [
+            28,
+            45
+          ],
+          [
+            24,
+            62
+          ],
+          [
+            30,
+            90
+          ],
+          [
+            38,
+            100
+          ],
+          [
+            0,
+            100
+          ]
+        ],
+        "arbor-parva": [
+          [
+            82,
+            15
+          ],
+          [
+            92,
+            11
+          ],
+          [
+            100,
+            14
+          ],
+          [
+            100,
+            48
+          ],
+          [
+            94,
+            55
+          ],
+          [
+            90,
+            56
+          ],
+          [
+            83,
+            42
+          ]
+        ],
+        "rosa": [
+          [
+            66,
+            62
+          ],
+          [
+            80,
+            58
+          ],
+          [
+            100,
+            60
+          ],
+          [
+            100,
+            95
+          ],
+          [
+            67,
+            93
+          ]
+        ],
+        "Līvia": [
+          [
+            57,
+            35
+          ],
+          [
+            64,
+            35
+          ],
+          [
+            66,
+            55
+          ],
+          [
+            64,
+            80
+          ],
+          [
+            62,
+            96
+          ],
+          [
+            54,
+            96
+          ],
+          [
+            55,
+            55
+          ]
+        ],
+        "vīlla": [
+          [
+            33,
+            17
+          ],
+          [
+            60,
+            10
+          ],
+          [
+            80,
+            20
+          ],
+          [
+            80,
+            52
+          ],
+          [
+            66,
+            52
+          ],
+          [
+            66,
+            34
+          ],
+          [
+            54,
+            34
+          ],
+          [
+            54,
+            52
+          ],
+          [
+            33,
+            52
+          ]
+        ]
+      },
+      "provenance": "Exploratory watercolour storyboard by GPT image tool (source a_detailed_watercolor_ink_illustration_in_warm_te.png), exported by GPT as 1672×941 PNG (SHA-256 60eeb629239167cb9147dc43d58cda93a40eb0cc51d88ce7f07b086ca610cb16). Source PNG kept outside Git. WebP 1280×720 q55 and 600 px thumbnail made by Claude on 2026-11-06.",
+      "approval": {
+        "by": "owner",
+        "at": "2026-11-07",
+        "notes": "Owner approved the nine regenerated irregular-edge watercolour scenes as the official art via decision card in the Claude project thread, 2026-11-07. Claude overlaid every polygon on the new pixels and found all regions on the right subject. Owner tier; not a professional historical review. Earlier approval kept in approval_history."
+      },
+      "generation_prompt": "Mandatory common direction per docs/art/PILOT_SCENE_PROMPTS.md (ink and watercolour on cream parchment, Roman Italy 1st–2nd c. CE, approved character sheet identities, no text). Roman villa peristyle garden seen obliquely, two visibly different trees, one much larger. Līvia, 9, olive tunic and braid, stands by three rose bushes. Tītus, 7, pale blue tunic and bulla, is partly hidden **high in the large tree** yet clearly findable. A small tree stands separate. Low tiled-roof villa and colonnade behind. Warm morning light. Required clickable targets: `arbor-magna`, `arbor-parva`, `rosa`, `vīlla`, `Līvia`, `Tītus`. No target may overlap so closely that a polygon becomes ambiguous.",
+      "tool": "OpenAI image_gen (via ChatGPT), generator ID not returned",
+      "licence_status": "Original tool-generated artwork; owner-approved for use in LATIN X (personal use).",
+      "source_png_sha256": "60eeb629239167cb9147dc43d58cda93a40eb0cc51d88ce7f07b086ca610cb16",
+      "approval_history": [
+        {
+          "by": "owner",
+          "at": "2026-11-06",
+          "notes": "Owner approved scenes 1, 5 and 8 (storm) for the app via decision card in the Claude project thread, 2026-11-06. Owner tier; not a professional historical review. Polygons drawn by Claude from 10% grid overlays."
+        }
+      ]
+    },
+    {
+      "id": "b01-c002-scene",
+      "chapter": 2,
+      "title": "Familia apud vīllam",
+      "alt_la_draft": "Ecce familia Mārcī: pater, māter, fīlia, fīlius.",
+      "alt_en_draft": "Here is Marcus's family: father, mother, daughter, son.",
+      "status": "approved",
+      "asset": "assets/art/b01/b01-c002-scene.webp",
+      "thumbnail": "assets/art/b01/b01-c002-scene-thumb.webp",
+      "fallback": "svg-scene-book",
+      "required_region_ids": [
+        "Mārcus",
+        "Flāvia",
+        "Līvia",
+        "Tītus",
+        "vīlla"
+      ],
+      "polygons": {
+        "Mārcus": [
+          [
+            31,
+            2
+          ],
+          [
+            35,
+            3
+          ],
+          [
+            37,
+            9
+          ],
+          [
+            36,
+            17
+          ],
+          [
+            35,
+            20
+          ],
+          [
+            38,
+            24
+          ],
+          [
+            39,
+            31
+          ],
+          [
+            38,
+            45
+          ],
+          [
+            36,
+            57
+          ],
+          [
+            37,
+            72
+          ],
+          [
+            37,
+            93
+          ],
+          [
+            33,
+            93
+          ],
+          [
+            32,
+            64
+          ],
+          [
+            31,
+            93
+          ],
+          [
+            26,
+            93
+          ],
+          [
+            26,
+            63
+          ],
+          [
+            23,
+            51
+          ],
+          [
+            23,
+            31
+          ],
+          [
+            26,
+            23
+          ],
+          [
+            28,
+            19
+          ],
+          [
+            28,
+            10
+          ]
+        ],
+        "Flāvia": [
+          [
+            41,
+            7
+          ],
+          [
+            45,
+            8
+          ],
+          [
+            47,
+            13
+          ],
+          [
+            47,
+            20
+          ],
+          [
+            49,
+            25
+          ],
+          [
+            50,
+            34
+          ],
+          [
+            50,
+            50
+          ],
+          [
+            49,
+            66
+          ],
+          [
+            50,
+            92
+          ],
+          [
+            41,
+            92
+          ],
+          [
+            36,
+            92
+          ],
+          [
+            37,
+            70
+          ],
+          [
+            37,
+            43
+          ],
+          [
+            38,
+            25
+          ],
+          [
+            40,
+            20
+          ],
+          [
+            39,
+            14
+          ]
+        ],
+        "Līvia": [
+          [
+            53,
+            18
+          ],
+          [
+            57,
+            18
+          ],
+          [
+            59,
+            23
+          ],
+          [
+            58,
+            31
+          ],
+          [
+            60,
+            37
+          ],
+          [
+            60,
+            54
+          ],
+          [
+            60,
+            73
+          ],
+          [
+            59,
+            77
+          ],
+          [
+            60,
+            92
+          ],
+          [
+            56,
+            92
+          ],
+          [
+            54,
+            78
+          ],
+          [
+            53,
+            92
+          ],
+          [
+            50,
+            92
+          ],
+          [
+            49,
+            76
+          ],
+          [
+            49,
+            55
+          ],
+          [
+            49,
+            39
+          ],
+          [
+            52,
+            31
+          ],
+          [
+            51,
+            24
+          ]
+        ],
+        "Tītus": [
+          [
+            64,
+            22
+          ],
+          [
+            67,
+            23
+          ],
+          [
+            69,
+            28
+          ],
+          [
+            68,
+            34
+          ],
+          [
+            70,
+            38
+          ],
+          [
+            71,
+            53
+          ],
+          [
+            71,
+            70
+          ],
+          [
+            70,
+            78
+          ],
+          [
+            71,
+            92
+          ],
+          [
+            67,
+            92
+          ],
+          [
+            65,
+            78
+          ],
+          [
+            64,
+            92
+          ],
+          [
+            61,
+            92
+          ],
+          [
+            60,
+            76
+          ],
+          [
+            60,
+            54
+          ],
+          [
+            60,
+            39
+          ],
+          [
+            62,
+            34
+          ],
+          [
+            62,
+            27
+          ]
+        ],
+        "vīlla": [
+          [
+            73,
+            11
+          ],
+          [
+            99,
+            10
+          ],
+          [
+            99,
+            42
+          ],
+          [
+            94,
+            42
+          ],
+          [
+            94,
+            48
+          ],
+          [
+            91,
+            48
+          ],
+          [
+            91,
+            65
+          ],
+          [
+            73,
+            65
+          ],
+          [
+            72,
+            40
+          ],
+          [
+            73,
+            24
+          ]
+        ]
+      },
+      "provenance": "Original independent watercolor image generated with OpenAI image_gen id cf6f71f8-6cb4-414b-ab2e-bd53c31e7c62, 2026-11-07 Sydney. The user requested this specific new art be installed as a replacement in the program. Native 1672×941 PNG supplied in Claude handover. WebP derivatives locally encoded, polygons retraced by assistant for this new composition; owner to visually verify the coordinates. Supersedes older scene art whose tool/source were different.",
+      "approval": {
+        "by": "owner",
+        "at": "2026-11-07",
+        "notes": "Owner approved the nine regenerated irregular-edge watercolour scenes as the official art via decision card in the Claude project thread, 2026-11-07. Claude overlaid every polygon on the new pixels and found all regions on the right subject. Owner tier; not a professional historical review. Earlier approval kept in approval_history."
+      },
+      "generation_prompt": "Original image-generation output prompt was not disclosed by image tool. User requested this art as a replacement following the original chapter brief; see the exact PNG and image_gen ID in the SHA-256 provenance report.",
+      "tool": "OpenAI image_gen",
+      "licence_status": "Original tool-generated artwork for user-directed LATIN X personal use; existing owner permission to display these replacement images in the program. Newly retraced polygons require owner spot-check.",
+      "source_png_sha256": "6e3fb367d721f6d5c3fd6c799653400099f2d82f2f7f85a24cc9c37540db26bf",
+      "art_replacement_20261107": {
+        "generation_id": "cf6f71f8-6cb4-414b-ab2e-bd53c31e7c62",
+        "source_png_sha256": "1a411becc54ba599f399782c18b67b9f73b4f0b02b43a83bac94e69840f225f7",
+        "source_native_size_px": [
+          1672,
+          941
+        ],
+        "original_asset_sha256": "b761f7f73966fab1161365aa34f4d3d16fe666c2fabc9181fd1d1efb9b7876bc",
+        "new_webp_sha256": "e041713849d0932c2c3b0e805f1e52f03689b9a7db9747c79086482af0e6d348",
+        "new_webp_size_bytes": 238604,
+        "new_webp_dimensions_px": [
+          1360,
+          765
+        ],
+        "new_thumbnail_sha256": "8a0ea98b9547bb23c61503170a54b56617be5d792cb9e1d2d054040047fe6c55",
+        "selection_region_status": "owner_confirmed_2026-11-07",
+        "region_anchors_pct": {
+          "Mārcus": [
+            29,
+            38
+          ],
+          "Flāvia": [
+            43,
+            42
+          ],
+          "Līvia": [
+            55,
+            47
+          ],
+          "Tītus": [
+            66,
+            47
+          ],
+          "vīlla": [
+            85,
+            45
+          ]
+        },
+        "old_polygons_archived_in_handover": true
+      },
+      "approval_history": [
+        {
+          "by": "owner",
+          "at": "2026-11-06",
+          "notes": "Owner approved via decision card in the Claude project thread, 2026-11-06. Owner tier; not a professional historical review. Polygons drawn by Claude from 10% grid overlays. Replacement of the image was explicitly requested by owner in this conversation on 2026-11-07. Polygon geometry was reconstructed on the replacement asset by GPT and has NOT been independently owner-approved; please confirm the clickable selections against the QA overlays."
+        }
+      ]
+    },
+    {
+      "id": "b01-c003-scene",
+      "chapter": 3,
+      "title": "Cēna",
+      "alt_la_draft": "Tītus pānem capit; Līvia pōculum habet.",
+      "alt_en_draft": "Titus takes the bread; Livia has a cup.",
+      "status": "approved",
+      "asset": "assets/art/b01/b01-c003-scene.webp",
+      "thumbnail": "assets/art/b01/b01-c003-scene-thumb.webp",
+      "fallback": "svg-scene-book",
+      "required_region_ids": [
+        "mēnsa",
+        "pānis",
+        "pōculum",
+        "liber",
+        "cibus"
+      ],
+      "polygons": {
+        "pānis": [
+          [
+            44,
+            66
+          ],
+          [
+            50,
+            63
+          ],
+          [
+            60,
+            62
+          ],
+          [
+            65,
+            62
+          ],
+          [
+            65,
+            72
+          ],
+          [
+            60,
+            78
+          ],
+          [
+            48,
+            79
+          ],
+          [
+            44,
+            74
+          ]
+        ],
+        "pōculum": [
+          [
+            58,
+            46
+          ],
+          [
+            63,
+            46
+          ],
+          [
+            62.5,
+            55
+          ],
+          [
+            58.5,
+            55
+          ]
+        ],
+        "liber": [
+          [
+            68,
+            77
+          ],
+          [
+            86,
+            70
+          ],
+          [
+            88,
+            73
+          ],
+          [
+            70,
+            84
+          ]
+        ],
+        "cibus": [
+          [
+            25,
+            70
+          ],
+          [
+            33,
+            64
+          ],
+          [
+            40,
+            67
+          ],
+          [
+            41,
+            76
+          ],
+          [
+            46,
+            80
+          ],
+          [
+            45,
+            88
+          ],
+          [
+            37,
+            89
+          ],
+          [
+            35,
+            82
+          ],
+          [
+            27,
+            82
+          ]
+        ],
+        "mēnsa": [
+          [
+            10,
+            88
+          ],
+          [
+            48,
+            84
+          ],
+          [
+            66,
+            80
+          ],
+          [
+            90,
+            82
+          ],
+          [
+            96,
+            88
+          ],
+          [
+            95,
+            96
+          ],
+          [
+            88,
+            100
+          ],
+          [
+            12,
+            100
+          ]
+        ]
+      },
+      "provenance": "Native 1672×941 PNG generated by GPT image tool (id c8f92a8c-0ead-4eb5-ad40-0a15e7820631), delivered by the owner 2026-11-06 (SHA-256 65cbfb5c…6d339c0). Source PNG kept outside Git. WebP 1440 px q64 (to fit 250 KB) and 600 px thumbnail made by Claude.",
+      "approval": {
+        "by": "owner",
+        "at": "2026-11-07",
+        "notes": "Owner approved the nine regenerated irregular-edge watercolour scenes as the official art via decision card in the Claude project thread, 2026-11-07. Claude overlaid every polygon on the new pixels and found all regions on the right subject. Owner tier; not a professional historical review. Earlier approval kept in approval_history."
+      },
+      "generation_prompt": "Mandatory common direction per docs/art/PILOT_SCENE_PROMPTS.md (ink and watercolour, Roman Italy 1st–2nd c. CE, approved character sheet identities, no text). 1st century Roman dining scene, low wooden mēnsa laid with Roman round bread scored in eight sections, simple earthenware drinking cups, fruit and a closed scroll/wooden writing tablet labelled only by app as liber. Tītus reaches towards bread with a natural, anatomically convincing hand. Clearly separate other food portions. No forks, ceramic plates with modern designs or glassware. Required: `mēnsa`, `pānis`, `pōculum`, `liber`, `cibus`. Correction: only Mārcus, Flāvia, Līvia and Tītus; Līvia holds the clay cup.",
+      "tool": "OpenAI image_gen (via ChatGPT), id c8f92a8c-0ead-4eb5-ad40-0a15e7820631",
+      "licence_status": "Original tool-generated artwork; owner-approved for use in LATIN X (personal use).",
+      "source_png_sha256": "65cbfb5c3431422b1a53861cb44bfb6b1ac2d0d18b6d9f051307855be6d339c0",
+      "approval_history": [
+        {
+          "by": "owner",
+          "at": "2026-11-06",
+          "notes": "Owner approved via decision card in the Claude project thread, 2026-11-06. Owner tier; not a professional historical review. Polygons drawn by Claude from 10% grid overlay. Painting style is richer than c002/c005 but close to c001."
+        }
+      ]
+    },
+    {
+      "id": "b01-c004-scene",
+      "chapter": 4,
+      "title": "Dōna",
+      "alt_la_draft": "Līvia Flāviae rosam dat; Gāius Mārcō librum dat.",
+      "alt_en_draft": "Livia gives Flavia a rose; Gaius gives Marcus a book.",
+      "status": "approved",
+      "asset": "assets/art/b01/b01-c004-scene.webp",
+      "thumbnail": "assets/art/b01/b01-c004-scene-thumb.webp",
+      "fallback": "svg-scene-book",
+      "required_region_ids": [
+        "rosa-rubra",
+        "liber",
+        "pōculum-rubrum",
+        "Gāius"
+      ],
+      "polygons": {
+        "rosa-rubra": [
+          [
+            20.5,
+            34
+          ],
+          [
+            25,
+            34
+          ],
+          [
+            25,
+            41
+          ],
+          [
+            23,
+            46
+          ],
+          [
+            22,
+            53
+          ],
+          [
+            21,
+            53
+          ],
+          [
+            21,
+            42
+          ]
+        ],
+        "liber": [
+          [
+            68,
+            40
+          ],
+          [
+            77,
+            36.5
+          ],
+          [
+            78.5,
+            41
+          ],
+          [
+            70,
+            46
+          ]
+        ],
+        "pōculum-rubrum": [
+          [
+            77,
+            58
+          ],
+          [
+            82,
+            58
+          ],
+          [
+            81.5,
+            66
+          ],
+          [
+            78,
+            67
+          ]
+        ],
+        "Gāius": [
+          [
+            83,
+            12
+          ],
+          [
+            90,
+            11
+          ],
+          [
+            92,
+            25
+          ],
+          [
+            100,
+            30
+          ],
+          [
+            100,
+            100
+          ],
+          [
+            94,
+            100
+          ],
+          [
+            93,
+            60
+          ],
+          [
+            90,
+            45
+          ],
+          [
+            83,
+            43
+          ],
+          [
+            77,
+            48
+          ],
+          [
+            76,
+            40
+          ],
+          [
+            80,
+            30
+          ],
+          [
+            84,
+            28
+          ]
+        ]
+      },
+      "provenance": "Native 1671×941 PNG generated by GPT image tool (id 29e2ccb1-8dc8-4652-80f0-d97a67ae22f6), delivered by the owner 2026-11-06 (SHA-256 fd6acfac…3885f02). Source PNG kept outside Git. WebP 1440 px q64 (to fit 250 KB) and 600 px thumbnail made by Claude.",
+      "approval": {
+        "by": "owner",
+        "at": "2026-11-07",
+        "notes": "Owner approved the nine regenerated irregular-edge watercolour scenes as the official art via decision card in the Claude project thread, 2026-11-07. Claude overlaid every polygon on the new pixels and found all regions on the right subject. Owner tier; not a professional historical review. Earlier approval kept in approval_history."
+      },
+      "generation_prompt": "Mandatory common direction per docs/art/PILOT_SCENE_PROMPTS.md (ink and watercolour, Roman Italy 1st–2nd c. CE, approved character sheet identities, no text). Stone atrium with impluvium, gentle afternoon sun. Family friend Gāius (tall, blue-grey tunic, brown mantle) is offering a book/scroll, a **distinct red rose**, and a distinct **red clay cup** on separate sides of the scene. Another person receives the gift. Leave horizontal open space for arrows the app draws separately; do not paint arrows. Required: `rosa-rubra`, `liber`, `pōculum-rubrum`, `Gāius`. Correction per Claude review: inside the villa; Līvia gives Flāvia the red rose, Gāius gives Mārcus a scroll, Tītus holds the red cup.",
+      "tool": "OpenAI image_gen (via ChatGPT), id 29e2ccb1-8dc8-4652-80f0-d97a67ae22f6",
+      "licence_status": "Original tool-generated artwork; owner-approved for use in LATIN X (personal use).",
+      "source_png_sha256": "fd6acfac8727641b07e80d9d9cedbda2f98d954a354034b955266632e3885f02",
+      "approval_history": [
+        {
+          "by": "owner",
+          "at": "2026-11-06",
+          "notes": "Owner approved via decision card in the Claude project thread, 2026-11-06. Owner tier; not a professional historical review. Polygons drawn by Claude from 10% grid overlay. Gāius reads fully grey rather than grey at the temples; owner accepted."
+        }
+      ]
+    },
+    {
+      "id": "b01-c005-scene",
+      "chapter": 5,
+      "title": "Vesper in vīllā",
+      "alt_la_draft": "Mārcus, Flāvia, Līvia et Tītus in hortō sunt.",
+      "alt_en_draft": "Marcus, Flavia, Livia and Titus are in the garden.",
+      "status": "approved",
+      "asset": "assets/art/b01/b01-c005-scene.webp",
+      "thumbnail": "assets/art/b01/b01-c005-scene-thumb.webp",
+      "fallback": "svg-scene-book",
+      "required_region_ids": [
+        "vīlla",
+        "Mārcus",
+        "Flāvia",
+        "Līvia",
+        "Tītus"
+      ],
+      "polygons": {
+        "Mārcus": [
+          [
+            25,
+            6
+          ],
+          [
+            32,
+            6
+          ],
+          [
+            35,
+            12
+          ],
+          [
+            34,
+            21
+          ],
+          [
+            32,
+            28
+          ],
+          [
+            38,
+            32
+          ],
+          [
+            40,
+            45
+          ],
+          [
+            36,
+            55
+          ],
+          [
+            37,
+            73
+          ],
+          [
+            35,
+            88
+          ],
+          [
+            32,
+            99
+          ],
+          [
+            7,
+            99
+          ],
+          [
+            0,
+            78
+          ],
+          [
+            1,
+            57
+          ],
+          [
+            6,
+            38
+          ],
+          [
+            17,
+            28
+          ],
+          [
+            20,
+            22
+          ],
+          [
+            20,
+            12
+          ]
+        ],
+        "Flāvia": [
+          [
+            61,
+            3
+          ],
+          [
+            70,
+            3
+          ],
+          [
+            75,
+            9
+          ],
+          [
+            75,
+            19
+          ],
+          [
+            72,
+            25
+          ],
+          [
+            77,
+            29
+          ],
+          [
+            80,
+            39
+          ],
+          [
+            82,
+            51
+          ],
+          [
+            83,
+            59
+          ],
+          [
+            79,
+            62
+          ],
+          [
+            74,
+            57
+          ],
+          [
+            72,
+            51
+          ],
+          [
+            70,
+            44
+          ],
+          [
+            65,
+            40
+          ],
+          [
+            58,
+            41
+          ],
+          [
+            55,
+            50
+          ],
+          [
+            48,
+            50
+          ],
+          [
+            50,
+            40
+          ],
+          [
+            55,
+            29
+          ],
+          [
+            57,
+            19
+          ],
+          [
+            57,
+            10
+          ]
+        ],
+        "Līvia": [
+          [
+            42,
+            24
+          ],
+          [
+            49,
+            24
+          ],
+          [
+            52,
+            30
+          ],
+          [
+            51,
+            42
+          ],
+          [
+            58,
+            48
+          ],
+          [
+            61,
+            58
+          ],
+          [
+            59,
+            73
+          ],
+          [
+            58,
+            91
+          ],
+          [
+            55,
+            96
+          ],
+          [
+            40,
+            98
+          ],
+          [
+            36,
+            91
+          ],
+          [
+            34,
+            79
+          ],
+          [
+            35,
+            55
+          ],
+          [
+            38,
+            44
+          ],
+          [
+            39,
+            34
+          ]
+        ],
+        "Tītus": [
+          [
+            65,
+            38
+          ],
+          [
+            74,
+            39
+          ],
+          [
+            76,
+            44
+          ],
+          [
+            75,
+            54
+          ],
+          [
+            79,
+            59
+          ],
+          [
+            79,
+            72
+          ],
+          [
+            75,
+            75
+          ],
+          [
+            61,
+            75
+          ],
+          [
+            58,
+            68
+          ],
+          [
+            59,
+            57
+          ],
+          [
+            62,
+            51
+          ],
+          [
+            63,
+            44
+          ]
+        ],
+        "vīlla": [
+          [
+            84,
+            1
+          ],
+          [
+            99,
+            1
+          ],
+          [
+            99,
+            55
+          ],
+          [
+            89,
+            55
+          ],
+          [
+            86,
+            43
+          ],
+          [
+            84,
+            32
+          ],
+          [
+            81,
+            25
+          ],
+          [
+            81,
+            17
+          ]
+        ]
+      },
+      "provenance": "Original independent watercolor image generated with OpenAI image_gen id 4601b10e-db81-4ab5-8e98-322a1abeddc0, 2026-11-07 Sydney. The user requested this specific new art be installed as a replacement in the program. Native 1672×941 PNG supplied in Claude handover. WebP derivatives locally encoded, polygons retraced by assistant for this new composition; owner to visually verify the coordinates. Supersedes older scene art whose tool/source were different.",
+      "approval": {
+        "by": "owner",
+        "at": "2026-11-07",
+        "notes": "Owner approved the nine regenerated irregular-edge watercolour scenes as the official art via decision card in the Claude project thread, 2026-11-07. Claude overlaid every polygon on the new pixels and found all regions on the right subject. Owner tier; not a professional historical review. Earlier approval kept in approval_history."
+      },
+      "generation_prompt": "Original image-generation output prompt was not disclosed by image tool. User requested this art as a replacement following the original chapter brief; see the exact PNG and image_gen ID in the SHA-256 provenance report.",
+      "tool": "OpenAI image_gen",
+      "licence_status": "Original tool-generated artwork for user-directed LATIN X personal use; existing owner permission to display these replacement images in the program. Newly retraced polygons require owner spot-check.",
+      "source_png_sha256": "73fb1742e2547dc03862334726e0d40fa77630918e6c13fc8f6b755331e857fa",
+      "deviation_note": "Replaced 2026-11-06: earlier approved image was an upscaled storyboard crop without Flāvia. This native render shows all four family members in the garden at evening, so the original region list (with Flāvia) is restored. Mārcus reads slightly greyer than the sheet; owner accepted.",
+      "art_replacement_20261107": {
+        "generation_id": "4601b10e-db81-4ab5-8e98-322a1abeddc0",
+        "source_png_sha256": "32c7fee21cdecac588b8dbfee3dcba260d7f0718cc5dd5badb2f3bd767d52737",
+        "source_native_size_px": [
+          1672,
+          941
+        ],
+        "original_asset_sha256": "a336cc3bc194a65ba28f4599c0f58a4ff2f2addc78ba8099b27eb99d5861626b",
+        "new_webp_sha256": "6d933ce0629bf85b76b31e0c7f2cc03316bd67eb58f35e9d81b1250547d6203b",
+        "new_webp_size_bytes": 251494,
+        "new_webp_dimensions_px": [
+          1440,
+          810
+        ],
+        "new_thumbnail_sha256": "12a8deab9c8c29ead7be33b7eee3de068a925ee646f16ba06e0557f9a1f36856",
+        "selection_region_status": "owner_confirmed_2026-11-07",
+        "region_anchors_pct": {
+          "Mārcus": [
+            24,
+            43
+          ],
+          "Flāvia": [
+            69,
+            28
+          ],
+          "Līvia": [
+            46,
+            65
+          ],
+          "Tītus": [
+            70,
+            63
+          ],
+          "vīlla": [
+            93,
+            26
+          ]
+        },
+        "old_polygons_archived_in_handover": true
+      },
+      "approval_history": [
+        {
+          "by": "owner",
+          "at": "2026-11-06",
+          "notes": "Owner approved via decision card in the Claude project thread, 2026-11-06. Owner tier; not a professional historical review. Polygons drawn by Claude from 10% grid overlays. Replacement of the image was explicitly requested by owner in this conversation on 2026-11-07. Polygon geometry was reconstructed on the replacement asset by GPT and has NOT been independently owner-approved; please confirm the clickable selections against the QA overlays."
+        }
+      ]
+    },
+    {
+      "id": "b01-c006-scene",
+      "chapter": 6,
+      "title": "Forum",
+      "alt_la_draft": "Mārcus mercātōrī pecūniam dat; Līvia māla numerat.",
+      "alt_en_draft": "Marcus gives the merchant money; Livia counts the apples.",
+      "status": "approved",
+      "asset": "assets/art/b01/b01-c006-scene.webp",
+      "thumbnail": "assets/art/b01/b01-c006-scene-thumb.webp",
+      "fallback": "svg-scene-book",
+      "required_region_ids": [
+        "mercātor",
+        "māla",
+        "ōva",
+        "pecūnia",
+        "mālum-1",
+        "māla-2",
+        "māla-3"
+      ],
+      "polygons": {
+        "mercātor": [
+          [
+            73,
+            12
+          ],
+          [
+            80,
+            10
+          ],
+          [
+            83,
+            18
+          ],
+          [
+            92,
+            25
+          ],
+          [
+            94,
+            45
+          ],
+          [
+            90,
+            70
+          ],
+          [
+            78,
+            68
+          ],
+          [
+            70,
+            55
+          ],
+          [
+            68,
+            45
+          ],
+          [
+            60,
+            45
+          ],
+          [
+            56,
+            42
+          ],
+          [
+            68,
+            38
+          ],
+          [
+            72,
+            25
+          ]
+        ],
+        "pecūnia": [
+          [
+            49,
+            35
+          ],
+          [
+            55,
+            34
+          ],
+          [
+            55.5,
+            41
+          ],
+          [
+            50,
+            42
+          ]
+        ],
+        "māla": [
+          [
+            31,
+            52
+          ],
+          [
+            37,
+            48
+          ],
+          [
+            52,
+            49
+          ],
+          [
+            56,
+            55
+          ],
+          [
+            54,
+            69
+          ],
+          [
+            33,
+            70
+          ],
+          [
+            30,
+            60
+          ]
+        ],
+        "ōva": [
+          [
+            59,
+            62
+          ],
+          [
+            64,
+            57
+          ],
+          [
+            75,
+            57
+          ],
+          [
+            78,
+            62
+          ],
+          [
+            76,
+            72
+          ],
+          [
+            61,
+            72
+          ]
+        ],
+        "mālum-1": [
+          [
+            33.5,
+            78
+          ],
+          [
+            38.5,
+            78
+          ],
+          [
+            38.5,
+            87
+          ],
+          [
+            33.5,
+            87
+          ]
+        ],
+        "māla-2": [
+          [
+            45,
+            78
+          ],
+          [
+            56,
+            78
+          ],
+          [
+            56,
+            88
+          ],
+          [
+            45,
+            88
+          ]
+        ],
+        "māla-3": [
+          [
+            62,
+            78
+          ],
+          [
+            80,
+            78
+          ],
+          [
+            80,
+            88
+          ],
+          [
+            62,
+            88
+          ]
+        ]
+      },
+      "provenance": "Native 1672×941 PNG generated by GPT image tool (id 862595f4-aa46-4c1b-bbf4-b39609e4ef42), delivered by the owner 2026-11-06 (SHA-256 fbeddbe9…5e6a56a). Source PNG kept outside Git. WebP 1600 px q55 (to fit 250 KB) and 600 px thumbnail made by Claude.",
+      "approval": {
+        "by": "owner",
+        "at": "2026-11-07",
+        "notes": "Owner approved the nine regenerated irregular-edge watercolour scenes as the official art via decision card in the Claude project thread, 2026-11-07. Claude overlaid every polygon on the new pixels and found all regions on the right subject. Owner tier; not a professional historical review. Earlier approval kept in approval_history."
+      },
+      "generation_prompt": "Mandatory common direction per docs/art/PILOT_SCENE_PROMPTS.md (ink and watercolour, Roman Italy 1st–2nd c. CE, approved character sheet identities, no text). Busy but uncluttered Roman town forum market stall under linen awning. Period-dressed mercātor offers red/gold apples and a basket of eggs, small Roman coins (as / sestertius) on wood. Three apples must be individually and clearly countable (one isolated, pair beside, trio near a basket), with other fruit not masquerading as apples. No modern signs or typography. Required: `mercātor`, `māla`, `ōva`, `pecūnia`, `mālum-1`, `māla-2`, `māla-3`. Generated from REMAINING_3_SCENES_FOR_GPT.md (Claude brief, 2026-11-06).",
+      "tool": "OpenAI image_gen (via ChatGPT), id 862595f4-aa46-4c1b-bbf4-b39609e4ef42",
+      "licence_status": "Original tool-generated artwork; owner-approved for use in LATIN X (personal use).",
+      "source_png_sha256": "fbeddbe9bc4383c59e262853f438b2f2d3531195d35866c53eea8c9455e6a56a",
+      "approval_history": [
+        {
+          "by": "owner",
+          "at": "2026-11-06",
+          "notes": "Owner approved via decision card in the Claude project thread, 2026-11-06. Owner tier; not a professional historical review. Polygons drawn by Claude from 10% grid overlay."
+        }
+      ]
+    },
+    {
+      "id": "b01-c007-scene",
+      "chapter": 7,
+      "title": "Canis in viā",
+      "alt_la_draft": "Canis ad Līviam currit; puer canem vocat.",
+      "alt_en_draft": "The dog runs to Livia; the boy calls the dog.",
+      "status": "approved",
+      "asset": "assets/art/b01/b01-c007-scene.webp",
+      "thumbnail": "assets/art/b01/b01-c007-scene-thumb.webp",
+      "fallback": "svg-scene-book",
+      "required_region_ids": [
+        "via",
+        "porta",
+        "canis",
+        "puer",
+        "Līvia"
+      ],
+      "polygons": {
+        "Līvia": [
+          [
+            13,
+            15
+          ],
+          [
+            19,
+            15
+          ],
+          [
+            21,
+            30
+          ],
+          [
+            20,
+            68
+          ],
+          [
+            19,
+            88
+          ],
+          [
+            11,
+            88
+          ],
+          [
+            11,
+            30
+          ]
+        ],
+        "porta": [
+          [
+            21,
+            8
+          ],
+          [
+            36,
+            10
+          ],
+          [
+            36,
+            64
+          ],
+          [
+            25,
+            70
+          ],
+          [
+            21,
+            68
+          ]
+        ],
+        "canis": [
+          [
+            53,
+            46
+          ],
+          [
+            60,
+            45
+          ],
+          [
+            66,
+            52
+          ],
+          [
+            71,
+            49
+          ],
+          [
+            69,
+            60
+          ],
+          [
+            67,
+            69
+          ],
+          [
+            60,
+            66
+          ],
+          [
+            53,
+            73
+          ],
+          [
+            52,
+            60
+          ]
+        ],
+        "puer": [
+          [
+            85,
+            25
+          ],
+          [
+            88,
+            25
+          ],
+          [
+            92,
+            35
+          ],
+          [
+            90,
+            50
+          ],
+          [
+            88,
+            60
+          ],
+          [
+            86,
+            60
+          ],
+          [
+            83,
+            50
+          ],
+          [
+            81,
+            28
+          ]
+        ],
+        "via": [
+          [
+            25,
+            100
+          ],
+          [
+            30,
+            80
+          ],
+          [
+            45,
+            68
+          ],
+          [
+            60,
+            70
+          ],
+          [
+            75,
+            60
+          ],
+          [
+            90,
+            48
+          ],
+          [
+            100,
+            45
+          ],
+          [
+            100,
+            100
+          ]
+        ]
+      },
+      "provenance": "Native 1672×941 PNG generated by GPT image tool (id 31dbccee-33ba-466e-bdc8-1c4719816a01), delivered by the owner 2026-11-06 (SHA-256 bbda02fd…e8c09af). Source PNG kept outside Git. WebP 1440 px q64 (to fit 250 KB) and 600 px thumbnail made by Claude.",
+      "approval": {
+        "by": "owner",
+        "at": "2026-11-07",
+        "notes": "Owner approved the nine regenerated irregular-edge watercolour scenes as the official art via decision card in the Claude project thread, 2026-11-07. Claude overlaid every polygon on the new pixels and found all regions on the right subject. Owner tier; not a professional historical review. Earlier approval kept in approval_history."
+      },
+      "generation_prompt": "Mandatory common direction per docs/art/PILOT_SCENE_PROMPTS.md (ink and watercolour, Roman Italy 1st–2nd c. CE, approved character sheet identities, no text). Roman polygonal-stone street, raised stepping stones and a clear city gate, no modern signs. Familiar white/chestnut patched dog runs visibly towards the gate. Līvia in green braid watches beside a young boy in tunic. Legible action, correct paws. Required: `via`, `porta`, `canis`, `puer`, `Līvia`. Generated from REMAINING_3_SCENES_FOR_GPT.md (Claude brief, 2026-11-06).",
+      "tool": "OpenAI image_gen (via ChatGPT), id 31dbccee-33ba-466e-bdc8-1c4719816a01",
+      "licence_status": "Original tool-generated artwork; owner-approved for use in LATIN X (personal use).",
+      "source_png_sha256": "bbda02fd63935886bf2a01909a617e87210a73a4251bf23c07f941780e8c09af",
+      "approval_history": [
+        {
+          "by": "owner",
+          "at": "2026-11-06",
+          "notes": "Owner approved via decision card in the Claude project thread, 2026-11-06. Owner tier; not a professional historical review. Polygons drawn by Claude from 10% grid overlay. Small hilltop temple in the far background reads as a Roman town temple; owner accepted."
+        }
+      ]
+    },
+    {
+      "id": "b01-c008-scene-storm",
+      "chapter": 8,
+      "title": "Tempestās et pluvia",
+      "alt_la_draft": "Ventus arborem movet; pluvia in hortō est.",
+      "alt_en_draft": "The wind moves the tree; the rain is in the garden.",
+      "status": "approved",
+      "asset": "assets/art/b01/b01-c008-scene-storm.webp",
+      "thumbnail": "assets/art/b01/b01-c008-scene-storm-thumb.webp",
+      "fallback": "svg-scene-book",
+      "required_region_ids": [
+        "ventus",
+        "pluvia",
+        "fenestra",
+        "arbor"
+      ],
+      "polygons": {
+        "arbor": [
+          [
+            25,
+            27
+          ],
+          [
+            29,
+            23
+          ],
+          [
+            35,
+            23
+          ],
+          [
+            39,
+            30
+          ],
+          [
+            41,
+            36
+          ],
+          [
+            39,
+            42
+          ],
+          [
+            34,
+            48
+          ],
+          [
+            27,
+            50
+          ],
+          [
+            22,
+            56
+          ],
+          [
+            20,
+            70
+          ],
+          [
+            16,
+            70
+          ],
+          [
+            18,
+            54
+          ],
+          [
+            17,
+            46
+          ],
+          [
+            18,
+            37
+          ],
+          [
+            21,
+            31
+          ]
+        ],
+        "ventus": [
+          [
+            16,
+            18
+          ],
+          [
+            44,
+            18
+          ],
+          [
+            44,
+            70
+          ],
+          [
+            15,
+            70
+          ]
+        ],
+        "pluvia": [
+          [
+            57,
+            17
+          ],
+          [
+            88,
+            17
+          ],
+          [
+            88,
+            87
+          ],
+          [
+            57,
+            87
+          ]
+        ],
+        "fenestra": [
+          [
+            12,
+            13
+          ],
+          [
+            47,
+            13
+          ],
+          [
+            47,
+            73
+          ],
+          [
+            12,
+            73
+          ]
+        ]
+      },
+      "provenance": "Original independent watercolor image generated with OpenAI image_gen id 9f90d863-4f53-499a-a329-2613b3662db2, 2026-11-07 Sydney. The user requested this specific new art be installed as a replacement in the program. Native 1672×941 PNG supplied in Claude handover. WebP derivatives locally encoded, polygons retraced by assistant for this new composition; owner to visually verify the coordinates. Supersedes older scene art whose tool/source were different.",
+      "approval": {
+        "by": "owner",
+        "at": "2026-11-07",
+        "notes": "Owner approved the nine regenerated irregular-edge watercolour scenes as the official art via decision card in the Claude project thread, 2026-11-07. Claude overlaid every polygon on the new pixels and found all regions on the right subject. Owner tier; not a professional historical review. Earlier approval kept in approval_history."
+      },
+      "generation_prompt": "Original image-generation output prompt was not disclosed by image tool. User requested this art as a replacement following the original chapter brief; see the exact PNG and image_gen ID in the SHA-256 provenance report.",
+      "tool": "OpenAI image_gen",
+      "licence_status": "Original tool-generated artwork for user-directed LATIN X personal use; existing owner permission to display these replacement images in the program. Newly retraced polygons require owner spot-check.",
+      "source_png_sha256": "607ad91df4d1aa2a3f435d2c7af1b5b66d8461fadcbca580f4c19b4bfafc0d8e",
+      "deviation_note": "Replaced 2026-11-06: new native render shows two shuttered window openings (wind-bent tree in one, rain in the other), matching \"ad aliam fenestram\"; no people. Earlier approved image (upscaled crop of the family at one window) retired. ventus = the left opening where the wind bends the tree; arbor = the tree itself; pluvia = the right opening; fenestra = the left window with its shutters.",
+      "art_replacement_20261107": {
+        "generation_id": "9f90d863-4f53-499a-a329-2613b3662db2",
+        "source_png_sha256": "35cd804107bf718fa8760425a7bb16d8367c56de6f3fab128103f44766acd860",
+        "source_native_size_px": [
+          1672,
+          941
+        ],
+        "original_asset_sha256": "7f75ab97784ad7b6fbb4a2b620fad11c69df3290642615d6447e63d72c129f86",
+        "new_webp_sha256": "769bdc1b1d542e93e4740c4725aca577687a1b5b537002dd36bc12e54c60e7c4",
+        "new_webp_size_bytes": 237038,
+        "new_webp_dimensions_px": [
+          1600,
+          900
+        ],
+        "new_thumbnail_sha256": "5caa13e3d549f42fa61896a139cc6f6f18c0a54596705db09a5b12f88ff2a53d",
+        "selection_region_status": "owner_confirmed_2026-11-07",
+        "region_anchors_pct": {
+          "arbor": [
+            30,
+            32
+          ],
+          "ventus": [
+            25,
+            25
+          ],
+          "pluvia": [
+            70,
+            49
+          ],
+          "fenestra": [
+            13.5,
+            14.5
+          ]
+        },
+        "old_polygons_archived_in_handover": true
+      },
+      "approval_history": [
+        {
+          "by": "owner",
+          "at": "2026-11-06",
+          "notes": "Owner approved via decision card in the Claude project thread, 2026-11-06. Owner tier; not a professional historical review. Polygons drawn by Claude from 10% grid overlays. Replacement of the image was explicitly requested by owner in this conversation on 2026-11-07. Polygon geometry was reconstructed on the replacement asset by GPT and has NOT been independently owner-approved; please confirm the clickable selections against the QA overlays."
+        }
+      ]
+    },
+    {
+      "id": "b01-c008-scene-sun",
+      "chapter": 8,
+      "title": "Sōl post tempestātem",
+      "alt_la_draft": "Sōl lūcet; Līvia et Tītus in hortō stant.",
+      "alt_en_draft": "The sun shines; Livia and Titus stand in the garden.",
+      "status": "approved",
+      "asset": "assets/art/b01/b01-c008-scene-sun.webp",
+      "thumbnail": "assets/art/b01/b01-c008-scene-sun-thumb.webp",
+      "fallback": "svg-scene-book",
+      "required_region_ids": [
+        "sōl",
+        "arbor",
+        "hortus"
+      ],
+      "polygons": {
+        "sōl": [
+          [
+            80,
+            3
+          ],
+          [
+            89,
+            3
+          ],
+          [
+            89,
+            14
+          ],
+          [
+            80,
+            14
+          ]
+        ],
+        "arbor": [
+          [
+            0,
+            20
+          ],
+          [
+            15,
+            25
+          ],
+          [
+            22,
+            30
+          ],
+          [
+            18,
+            45
+          ],
+          [
+            16,
+            60
+          ],
+          [
+            22,
+            80
+          ],
+          [
+            30,
+            95
+          ],
+          [
+            0,
+            100
+          ]
+        ],
+        "hortus": [
+          [
+            63,
+            65
+          ],
+          [
+            80,
+            60
+          ],
+          [
+            100,
+            62
+          ],
+          [
+            100,
+            95
+          ],
+          [
+            65,
+            92
+          ]
+        ]
+      },
+      "provenance": "Native 1672×941 PNG generated by GPT image tool (id 1b5092ae-da46-4774-9e24-cb95b104e367), delivered by the owner 2026-11-06 (SHA-256 c572e93e…c13cf4b). Source PNG kept outside Git. WebP 1280 px q60 (to fit 250 KB) and 600 px thumbnail made by Claude.",
+      "approval": {
+        "by": "owner",
+        "at": "2026-11-07",
+        "notes": "Owner approved the nine regenerated irregular-edge watercolour scenes as the official art via decision card in the Claude project thread, 2026-11-07. Claude overlaid every polygon on the new pixels and found all regions on the right subject. Owner tier; not a professional historical review. Earlier approval kept in approval_history."
+      },
+      "generation_prompt": "Mandatory common direction per docs/art/PILOT_SCENE_PROMPTS.md (ink and watercolour, Roman Italy 1st–2nd c. CE, approved character sheet identities, no text). Same garden, tree and villa as previous storm scene but bright sunlight returns after rain, pools in stone path with soft reflections and damp leaves. Open ochre-blue sky and golden sun through clouds. The same garden and large tree are identifiable. Required: `sōl`, `arbor`, `hortus`. Generated from REMAINING_3_SCENES_FOR_GPT.md (Claude brief, 2026-11-06).",
+      "tool": "OpenAI image_gen (via ChatGPT), id 1b5092ae-da46-4774-9e24-cb95b104e367",
+      "licence_status": "Original tool-generated artwork; owner-approved for use in LATIN X (personal use).",
+      "source_png_sha256": "c572e93ed2afc39c1fb8846d11efde7abcbceeb448bd2d84699f48e76c13cf4b",
+      "approval_history": [
+        {
+          "by": "owner",
+          "at": "2026-11-06",
+          "notes": "Owner approved via decision card in the Claude project thread, 2026-11-06. Owner tier; not a professional historical review. Polygons drawn by Claude from 10% grid overlay."
+        }
+      ]
+    }
+  ],
+  "generated_assets_notice": "The current character illustration exists as a chat attachment only, not committed into GitHub; the complete GitHub ZIP contains the full prompt and reproducible provenance. Owner needs to approve sheet and place local compressed WebP images into assets/art/b01 before any draft art becomes visible in published chapters."
+};

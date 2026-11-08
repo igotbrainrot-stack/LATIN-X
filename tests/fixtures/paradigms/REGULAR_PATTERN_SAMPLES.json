@@ -1,0 +1,313 @@
+{
+  "schema": "tablinum.paradigm-proposals.v1",
+  "review_status": "awaiting_owner_verification",
+  "approved_patterns": [],
+  "note": "Do not change status to reviewed without checking a complete sample table against authoritative grammar; sample assertions are engineering tests, not linguistic approval.",
+  "specimens": [
+    {
+      "pattern": "noun-1",
+      "lexeme": {
+        "pos": "noun",
+        "head": "puella",
+        "genitive": "puellae",
+        "declension": 1,
+        "gender": "f"
+      },
+      "checks": [
+        [
+          "n.nom.sg",
+          "puella"
+        ],
+        [
+          "n.gen.sg",
+          "puellae"
+        ],
+        [
+          "n.acc.sg",
+          "puellam"
+        ],
+        [
+          "n.abl.sg",
+          "puellā"
+        ],
+        [
+          "n.gen.pl",
+          "puellārum"
+        ]
+      ]
+    },
+    {
+      "pattern": "noun-2-m",
+      "lexeme": {
+        "pos": "noun",
+        "head": "servus",
+        "genitive": "servī",
+        "declension": 2,
+        "gender": "m"
+      },
+      "checks": [
+        [
+          "n.voc.sg",
+          "serve"
+        ],
+        [
+          "n.acc.sg",
+          "servum"
+        ],
+        [
+          "n.gen.pl",
+          "servōrum"
+        ]
+      ]
+    },
+    {
+      "pattern": "noun-2-n",
+      "lexeme": {
+        "pos": "noun",
+        "head": "bellum",
+        "genitive": "bellī",
+        "declension": 2,
+        "gender": "n"
+      },
+      "checks": [
+        [
+          "n.nom.pl",
+          "bella"
+        ],
+        [
+          "n.acc.pl",
+          "bella"
+        ],
+        [
+          "n.gen.sg",
+          "bellī"
+        ]
+      ]
+    },
+    {
+      "pattern": "noun-3",
+      "lexeme": {
+        "pos": "noun",
+        "head": "rēx",
+        "genitive": "rēgis",
+        "declension": 3,
+        "gender": "m"
+      },
+      "checks": [
+        [
+          "n.nom.sg",
+          "rēx"
+        ],
+        [
+          "n.acc.sg",
+          "rēgem"
+        ],
+        [
+          "n.gen.pl",
+          "rēgum"
+        ]
+      ]
+    },
+    {
+      "pattern": "noun-3-i",
+      "lexeme": {
+        "pos": "noun",
+        "head": "cīvis",
+        "genitive": "cīvis",
+        "declension": 3,
+        "gender": "m",
+        "i_stem": true
+      },
+      "checks": [
+        [
+          "n.nom.pl",
+          "cīvēs"
+        ],
+        [
+          "n.gen.pl",
+          "cīvium"
+        ]
+      ]
+    },
+    {
+      "pattern": "noun-3-i-n",
+      "lexeme": {
+        "pos": "noun",
+        "head": "mare",
+        "genitive": "maris",
+        "declension": 3,
+        "gender": "n",
+        "i_stem": true
+      },
+      "checks": [
+        [
+          "n.nom.pl",
+          "maria"
+        ],
+        [
+          "n.abl.sg",
+          "marī"
+        ]
+      ]
+    },
+    {
+      "pattern": "noun-4",
+      "lexeme": {
+        "pos": "noun",
+        "head": "manus",
+        "genitive": "manūs",
+        "declension": 4,
+        "gender": "f"
+      },
+      "checks": [
+        [
+          "n.gen.sg",
+          "manūs"
+        ],
+        [
+          "n.acc.pl",
+          "manūs"
+        ]
+      ]
+    },
+    {
+      "pattern": "noun-5",
+      "lexeme": {
+        "pos": "noun",
+        "head": "diēs",
+        "genitive": "diēī",
+        "declension": 5,
+        "gender": "m"
+      },
+      "checks": [
+        [
+          "n.gen.sg",
+          "diēī"
+        ],
+        [
+          "n.acc.sg",
+          "diēm"
+        ],
+        [
+          "n.dat.pl",
+          "diēbus"
+        ]
+      ]
+    },
+    {
+      "pattern": "adj-12",
+      "lexeme": {
+        "pos": "adj",
+        "head": "magnus",
+        "feminine": "magna",
+        "neuter": "magnum",
+        "pattern": "adj-12"
+      },
+      "checks": [
+        [
+          "adj.nom.sg",
+          "magnus"
+        ],
+        [
+          "adj.nom.pl",
+          "magnae"
+        ],
+        [
+          "adj.acc.sg",
+          "magnum"
+        ]
+      ]
+    },
+    {
+      "pattern": "adj-3-two",
+      "lexeme": {
+        "pos": "adj",
+        "head": "fortis",
+        "feminine": "fortis",
+        "neuter": "forte",
+        "genitive": "fortis",
+        "pattern": "adj-3-two"
+      },
+      "checks": [
+        [
+          "adj.nom.sg",
+          "forte"
+        ],
+        [
+          "adj.gen.pl",
+          "fortium"
+        ]
+      ]
+    },
+    {
+      "pattern": "verb-1",
+      "lexeme": {
+        "pos": "verb",
+        "conjugation": "1",
+        "principal_parts": "amō, amāre, amāvī, amātum"
+      },
+      "checks": [
+        [
+          "v.ind.pres.act.3sg",
+          "amat"
+        ]
+      ]
+    },
+    {
+      "pattern": "verb-2",
+      "lexeme": {
+        "pos": "verb",
+        "conjugation": "2",
+        "principal_parts": "moneō, monēre, monuī, monitum"
+      },
+      "checks": [
+        [
+          "v.ind.pres.act.3sg",
+          "monet"
+        ]
+      ]
+    },
+    {
+      "pattern": "verb-3",
+      "lexeme": {
+        "pos": "verb",
+        "conjugation": "3",
+        "principal_parts": "regō, regere, rēxī, rēctum"
+      },
+      "checks": [
+        [
+          "v.ind.pres.act.3sg",
+          "regit"
+        ]
+      ]
+    },
+    {
+      "pattern": "verb-3io",
+      "lexeme": {
+        "pos": "verb",
+        "conjugation": "3io",
+        "principal_parts": "capiō, capere, cēpī, captum"
+      },
+      "checks": [
+        [
+          "v.ind.pres.act.3pl",
+          "capiunt"
+        ]
+      ]
+    },
+    {
+      "pattern": "verb-4",
+      "lexeme": {
+        "pos": "verb",
+        "conjugation": "4",
+        "principal_parts": "audiō, audīre, audīvī, audītum"
+      },
+      "checks": [
+        [
+          "v.ind.pres.act.2sg",
+          "audīs"
+        ]
+      ]
+    }
+  ]
+}

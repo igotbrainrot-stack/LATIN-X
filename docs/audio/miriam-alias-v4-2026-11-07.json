@@ -1,0 +1,82 @@
+{
+  "schema": "latin-x-miriam-v4-iteration-2026-11-07",
+  "date": "2026-11-07",
+  "no_reader_integration": true,
+  "prior_review": "docs/audio/owner-miriam-alias-v3-review-2026-11-07.json",
+  "voice": "Miriam",
+  "model": "eleven_v3",
+  "version_label_note": "v4 is the fourth recording-iteration label, NOT the Eleven v4 model",
+  "original_miriam_v1": "12 accept, 5 reject",
+  "eleanor_v1": "all 17 reject",
+  "v2_villa": "owner accepted",
+  "v3_aqua": "owner accepted",
+  "v3_other_three": "owner rejected",
+  "selected_voice": null,
+  "clips": [
+    {
+      "sentence_id": "legacy-ch01-s007",
+      "display_text": "Līvia arborem videt.",
+      "speech_input": "Leewia arborem videt.",
+      "voice_name": "Miriam",
+      "model": "eleven_v3",
+      "speed": 0.85,
+      "language_code": null,
+      "runway_task_id": "70e6e791-6a9b-4421-b4b7-c5a23cd29e8f",
+      "provider_duration_seconds": 2.72,
+      "sha256": null,
+      "filename": "voiceA__legacy-ch01-s007__v4.mp3",
+      "prior_v3_owner_decision": "reject",
+      "prior_v3_problems": [
+        "wrong pronunciation",
+        "unnatural timing or vowel length"
+      ],
+      "original_v1_filename": "voiceA__legacy-ch01-s007__v1.mp3",
+      "original_v1_sha256": "c4074fe617a36d2212390fcb43e990a013bad41b7f4ae786faf54b3f58387d7d",
+      "owner_v4_decision": null,
+      "status": "runway_generated_original_mp3_NOT_in_zip"
+    },
+    {
+      "sentence_id": "legacy-ch01-s009",
+      "display_text": "Līvia laeta est.",
+      "speech_input": "Leewia laeta est.",
+      "voice_name": "Miriam",
+      "model": "eleven_v3",
+      "speed": 0.85,
+      "language_code": null,
+      "runway_task_id": "19b39967-4830-41d2-9959-bd7990b52003",
+      "provider_duration_seconds": 2.4,
+      "sha256": null,
+      "filename": "voiceA__legacy-ch01-s009__v4.mp3",
+      "prior_v3_owner_decision": "reject",
+      "prior_v3_problems": [
+        "wrong pronunciation",
+        "unnatural timing or vowel length"
+      ],
+      "original_v1_filename": "voiceA__legacy-ch01-s009__v1.mp3",
+      "original_v1_sha256": "d1814cdc97c55aaffb9c3ffa7422354bdea43ff65de1eb28ec53f5bc90bb6868",
+      "owner_v4_decision": null,
+      "status": "runway_generated_original_mp3_NOT_in_zip"
+    },
+    {
+      "sentence_id": "test-quoque",
+      "display_text": "quoque",
+      "speech_input": "kwokweh",
+      "voice_name": "Miriam",
+      "model": "eleven_v3",
+      "speed": 0.85,
+      "language_code": null,
+      "runway_task_id": "25966444-9058-4bfb-b758-091dd2ee1673",
+      "provider_duration_seconds": 0.96,
+      "sha256": null,
+      "filename": "voiceA__test-quoque__v4.mp3",
+      "prior_v3_owner_decision": "reject",
+      "prior_v3_problems": [
+        "wrong pronunciation"
+      ],
+      "original_v1_filename": "voiceA__test-quoque__v1.mp3",
+      "original_v1_sha256": "dcb1077abc76490e65817fc3a8c73032a2cc3be2f1b313d0e557d64749abf281",
+      "owner_v4_decision": null,
+      "status": "runway_generated_original_mp3_NOT_in_zip"
+    }
+  ]
+}

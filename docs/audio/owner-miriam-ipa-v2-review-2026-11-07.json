@@ -1,0 +1,38 @@
+{
+  "schema": "latin-x-miriam-ipa-retries-review-v1",
+  "source": "owner-review-2026-11-07",
+  "selected_voice": null,
+  "original_clip_approvals_preserved": true,
+  "ipa_trials": [
+    {
+      "sentence_id": "legacy-ch01-s007",
+      "clip_id": "voiceA__legacy-ch01-s007__v2",
+      "decision": null,
+      "notes": "does not say it like Li W ia"
+    },
+    {
+      "sentence_id": "legacy-ch01-s009",
+      "clip_id": "voiceA__legacy-ch01-s009__v2",
+      "decision": "reject",
+      "notes": "does not say it like Li W ia"
+    },
+    {
+      "sentence_id": "test-villa",
+      "clip_id": "voiceA__test-villa__v2",
+      "decision": "accept",
+      "notes": ""
+    },
+    {
+      "sentence_id": "test-aqua",
+      "clip_id": "voiceA__test-aqua__v2",
+      "decision": "reject",
+      "notes": "does not make the Akwa sound. "
+    },
+    {
+      "sentence_id": "test-quoque",
+      "clip_id": "voiceA__test-quoque__v2",
+      "decision": "reject",
+      "notes": "doesnt say it like Kwo Kee\n"
+    }
+  ]
+}

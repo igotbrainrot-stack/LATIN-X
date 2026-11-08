@@ -1,0 +1,20 @@
+{
+  "schema": "tablinum-recurrence-thresholds-v1",
+  "in_chapter": {
+    "book_1": 8,
+    "book_2": 6,
+    "book_3": 6
+  },
+  "next_three_chapters": 4,
+  "required_next_review_chapter": true,
+  "max_gap_fail": {
+    "books_1_2": 20,
+    "book_3": 30
+  },
+  "max_gap_warn": {
+    "books_1_2": 10,
+    "book_3": 15
+  },
+  "policy": "Unwritten future chapters always report PENDING, never PASS; synthetic fixtures may be used in unit tests only.",
+  "density_counting_policy": "Each new lexeme counts ONCE per reading segment for new-lexeme density; recurrence independently counts every real token occurrence across chapters."
+}

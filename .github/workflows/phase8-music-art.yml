@@ -1,0 +1,93 @@
+name: LATIN X Phase8 ancient music and owner illustration review
+on:
+  push:
+    branches: [feature/phase8-music-art-review-20261106]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - name: Install exact published FSRS for licence verification
+        run: npm install --no-save ts-fsrs@5.4.2
+      - name: Test original art fallback, ancient score and full historical source
+        run: |
+          npm run test:vendor-fsrs
+          npm run test:music
+          npm run test:art
+          npm test
+          npm run test:phase7b
+          npm run test:phase7a
+          npm run test:phase6-claude
+          npm run test:phase3c
+          npm run test:pilot
+          npm run test:lexemes
+          npm run test:package
+          python3 scripts/check-claude-pilot.py
+      - name: Require unsigned lexeme/chapter and 1500/3000 milestones RED
+        shell: bash
+        run: |
+          if node scripts/validate-lexemes.cjs --require-review-ready > review-gate.txt 2>&1; then exit 1; fi
+          for n in 1500 3000; do
+            if node curriculum/validate-roadmap-130.cjs --require-introduced-$n > gate-$n.txt 2>&1; then exit 1; fi
+            grep -q 'GATE NOT MET' gate-$n.txt
+          done
+      - name: Package COMPLETE runnable source and Claude handover ZIP
+        shell: bash
+        run: |
+          mkdir -p dist
+          git archive --format=zip --output=dist/LATIN_X_PHASE8_MUSIC_CHARACTER_REVIEW_COMPLETE.zip HEAD
+          unzip -t dist/LATIN_X_PHASE8_MUSIC_CHARACTER_REVIEW_COMPLETE.zip | tail -n 1
+          for f in index.html 'Start Tablinum.cmd' 'Start Art Review.cmd' 'Art Review.html' content/music.js app/58-music-score.js app/60-audio-ambience.js content/illustrations.js app/64-art-scenes.js curriculum/illustrations.json docs/art/PILOT_SCENE_PROMPTS.md PHASE8_MUSIC_CHARACTER_CLAUDE_HANDOVER.md vendor/ts-fsrs.umd.js vendor/ts-fsrs.LICENSE; do
+            unzip -Z1 dist/LATIN_X_PHASE8_MUSIC_CHARACTER_REVIEW_COMPLETE.zip | grep -Fx "$f"
+          done
+          sha256sum dist/LATIN_X_PHASE8_MUSIC_CHARACTER_REVIEW_COMPLETE.zip > dist/SHA256SUMS.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: LATIN_X_PHASE8_MUSIC_CHARACTER_REVIEW_COMPLETE
+          path: dist/
+          if-no-files-found: error
+          retention-days: 30
+  windows:
+    runs-on: windows-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: '22'}
+      - name: Use exact working FSRS and Playwright versions
+        run: |
+          npm install --no-save ts-fsrs@5.4.2 playwright@1.64.1
+          npx playwright install chromium
+      - name: Full original and new music art/FSRS code tests
+        run: |
+          npm test
+          npm run test:music
+          npm run test:art
+          npm run test:phase6-claude
+          npm run test:phase7b
+      - name: Windows file URL image reviewer and SVG fallback
+        run: npm run test:art-browser
+      - name: Windows file URL recorded audio and IDB progress
+        run: npm run test:phase7b-browser
+      - name: Windows file URL music no-autoplay (Chromium)
+        run: npm run test:phase7a-browser
+      - name: Windows Edge music no-autoplay and restored settings
+        env:
+          TABLINUM_BROWSER_CHANNEL: msedge
+        run: npm run test:phase7a-browser
+      - name: Windows file URL original backup and progress
+        run: npm run test:file
+      - name: Windows FSRS and last sentence exposure
+        run: npm run test:phase6-browser
+      - name: Original Phase5 keyboard Latin answers
+        run: npm run test:phase5-browser
+      - name: Owner lexicon CSV reviewer still works
+        run: npm run test:review-browser
+      - name: Responsive legacy original eight chapters
+        run: npm run test:browser

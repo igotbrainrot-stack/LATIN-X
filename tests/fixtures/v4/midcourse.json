@@ -1,0 +1,280 @@
+{
+  "version": 4,
+  "ch": 3,
+  "tab": "quiz",
+  "sel": 3,
+  "macrons": true,
+  "guided": true,
+  "translations": {
+    "0:0": true
+  },
+  "answers": {
+    "0:0": "in hortō",
+    "0:1": "fixture-answer-0-1",
+    "0:2": "fixture-answer-0-2",
+    "1:0": "fixture-answer-1-0",
+    "1:1": "fixture-answer-1-1",
+    "1:2": "fixture-answer-1-2",
+    "2:0": "fixture-answer-2-0",
+    "2:1": "fixture-answer-2-1",
+    "2:2": "fixture-answer-2-2",
+    "3:0": "fixture-answer-3-0",
+    "3:1": "fixture-answer-3-1",
+    "3:2": "fixture-answer-3-2",
+    "4:0": "fixture-answer-4-0",
+    "4:1": "fixture-answer-4-1",
+    "4:2": "fixture-answer-4-2"
+  },
+  "correct": {
+    "0:0": true,
+    "0:2": true,
+    "1:1": true,
+    "1:2": true,
+    "2:0": true,
+    "2:1": true,
+    "3:0": true,
+    "3:2": true,
+    "4:1": true,
+    "4:2": true
+  },
+  "vocab": {
+    "habet": {
+      "head": "habet",
+      "meaning": "fixture habet",
+      "days": 1,
+      "due": 1793836800000,
+      "reps": 0
+    },
+    "habere": {
+      "head": "habere",
+      "meaning": "fixture habere",
+      "days": 2,
+      "due": 1793923200000,
+      "reps": 1
+    },
+    "ad": {
+      "head": "ad",
+      "meaning": "fixture ad",
+      "days": 3,
+      "due": 1794009600000,
+      "reps": 2
+    },
+    "omnes": {
+      "head": "omnes",
+      "meaning": "fixture omnes",
+      "days": 4,
+      "due": 1794096000000,
+      "reps": 3
+    },
+    "livia": {
+      "head": "livia",
+      "meaning": "fixture livia",
+      "days": 5,
+      "due": 1794182400000,
+      "reps": 4
+    },
+    "arbor": {
+      "head": "arbor",
+      "meaning": "fixture arbor",
+      "days": 6,
+      "due": 1794268800000,
+      "reps": 5
+    },
+    "hortus": {
+      "head": "hortus",
+      "meaning": "fixture hortus",
+      "days": 7,
+      "due": 1794355200000,
+      "reps": 6
+    },
+    "puella": {
+      "head": "puella",
+      "meaning": "fixture puella",
+      "days": 8,
+      "due": 1794441600000,
+      "reps": 7
+    },
+    "puer": {
+      "head": "puer",
+      "meaning": "fixture puer",
+      "days": 9,
+      "due": 1794528000000,
+      "reps": 0
+    },
+    "est": {
+      "head": "est",
+      "meaning": "fixture est",
+      "days": 10,
+      "due": 1794614400000,
+      "reps": 1
+    },
+    "et": {
+      "head": "et",
+      "meaning": "fixture et",
+      "days": 11,
+      "due": 1794700800000,
+      "reps": 2
+    },
+    "sub": {
+      "head": "sub",
+      "meaning": "fixture sub",
+      "days": 12,
+      "due": 1794787200000,
+      "reps": 3
+    },
+    "roma": {
+      "head": "roma",
+      "meaning": "fixture roma",
+      "days": 1,
+      "due": 1794873600000,
+      "reps": 4
+    },
+    "familia": {
+      "head": "familia",
+      "meaning": "fixture familia",
+      "days": 2,
+      "due": 1794960000000,
+      "reps": 5
+    },
+    "mater": {
+      "head": "mater",
+      "meaning": "fixture mater",
+      "days": 3,
+      "due": 1795046400000,
+      "reps": 6
+    },
+    "pater": {
+      "head": "pater",
+      "meaning": "fixture pater",
+      "days": 4,
+      "due": 1795132800000,
+      "reps": 7
+    },
+    "filius": {
+      "head": "filius",
+      "meaning": "fixture filius",
+      "days": 5,
+      "due": 1795219200000,
+      "reps": 0
+    },
+    "filia": {
+      "head": "filia",
+      "meaning": "fixture filia",
+      "days": 6,
+      "due": 1795305600000,
+      "reps": 1
+    },
+    "rosam": {
+      "head": "rosam",
+      "meaning": "fixture rosam",
+      "days": 7,
+      "due": 1795392000000,
+      "reps": 2
+    },
+    "dat": {
+      "head": "dat",
+      "meaning": "fixture dat",
+      "days": 8,
+      "due": 1795478400000,
+      "reps": 3
+    },
+    "panem": {
+      "head": "panem",
+      "meaning": "fixture panem",
+      "days": 9,
+      "due": 1795564800000,
+      "reps": 4
+    },
+    "edit": {
+      "head": "edit",
+      "meaning": "fixture edit",
+      "days": 10,
+      "due": 1795651200000,
+      "reps": 5
+    },
+    "duo": {
+      "head": "duo",
+      "meaning": "fixture duo",
+      "days": 11,
+      "due": 1795737600000,
+      "reps": 6
+    },
+    "forum": {
+      "head": "forum",
+      "meaning": "fixture forum",
+      "days": 12,
+      "due": 1795824000000,
+      "reps": 7
+    },
+    "emit": {
+      "head": "emit",
+      "meaning": "fixture emit",
+      "days": 1,
+      "due": 1795910400000,
+      "reps": 0
+    },
+    "canis": {
+      "head": "canis",
+      "meaning": "fixture canis",
+      "days": 2,
+      "due": 1795996800000,
+      "reps": 1
+    },
+    "currit": {
+      "head": "currit",
+      "meaning": "fixture currit",
+      "days": 3,
+      "due": 1796083200000,
+      "reps": 2
+    },
+    "herī": {
+      "head": "herī",
+      "meaning": "fixture herī",
+      "days": 4,
+      "due": 1796169600000,
+      "reps": 3
+    },
+    "pluvia": {
+      "head": "pluvia",
+      "meaning": "fixture pluvia",
+      "days": 5,
+      "due": 1796256000000,
+      "reps": 4
+    },
+    "crās": {
+      "head": "crās",
+      "meaning": "fixture crās",
+      "days": 6,
+      "due": 1796342400000,
+      "reps": 5
+    }
+  },
+  "notes": {
+    "0": "Arbor magna est.",
+    "2": "Rosa rubra est."
+  },
+  "custom": "",
+  "customSentences": [],
+  "hintLevels": {
+    "0:0": 1,
+    "0:1": 3,
+    "1:2": 2,
+    "2:0": 1,
+    "3:4": 3
+  },
+  "clozeAnswers": {
+    "0": "arbor",
+    "1": "Tītī"
+  },
+  "clozeCorrect": {
+    "0": true
+  },
+  "readingConfidence": {
+    "0": "confident",
+    "1": "developing",
+    "2": "difficult",
+    "3": "developing",
+    "4": "confident"
+  },
+  "singleSentence": false
+}

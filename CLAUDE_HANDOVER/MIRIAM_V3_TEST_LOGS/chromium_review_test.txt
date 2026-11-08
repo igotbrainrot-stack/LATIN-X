@@ -1,0 +1,3 @@
+PASS Chromium using page.set_content HTML: four cards, 8 player controls, real embedded v1 MP3 decoded & playback time advanced, review decisions saved, generated owner review JSON exported and parsed, 0 pageerrors.
+Environment blocks navigation to file:// with net::ERR_BLOCKED_BY_ADMINISTRATOR; not a Windows test.
+New v3 MP3s are Runway-generated but hosted, not in ZIP: cannot assert offline playback until downloaded on owner Windows.

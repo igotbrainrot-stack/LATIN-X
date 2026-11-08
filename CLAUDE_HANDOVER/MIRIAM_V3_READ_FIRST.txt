@@ -1,0 +1,4 @@
+Start here for Claude/GPT: CLAUDE_HANDOVER/00_START_HERE_MIRIAM_V3_ALIAS_REVIEW.md
+Review starter: START_HERE_MIRIAM_V3.txt
+Owner round 2 review: docs/audio/owner-miriam-ipa-v2-review-2026-11-07.json
+Next-round V3 audition: Miriam Alias Review v3.html

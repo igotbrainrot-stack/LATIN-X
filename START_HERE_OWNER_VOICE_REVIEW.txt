@@ -1,0 +1,16 @@
+LATIN X — Owner audio review received, 7 November 2026
+
+1. Open Audio Audition.html to play the 34 existing genuine MP3s, with the owner
+   decisions imported. Eleanor is hidden by default: her 17/17 clips were rejected.
+2. Miriam has 12 accepted and 5 rejected clips. Do not automatically install new
+   narration in the reader. No final narrator approval was exported.
+3. Five EXPERIMENTAL IPA retries have been generated in Runway (model eleven_v3);
+   they ARE NOT INCLUDED as MP3 because Runway only returned signed hosted URLs.
+   The original v1 MP3s are all included and embedded.
+4. While connected to internet, run DOWNLOAD_MIRIAM_IPA_TRIALS.cmd once.
+   Then open Miriam IPA Retry Review.html and listen to v1 vs v2.
+5. Export its review JSON and upload for targeted refinements. If any IPA symbols
+   or slash marks are spoken, reject that retry; use alternate supported phoneme/alias
+   method, not blanket English respelling.
+6. Full Claude technical instructions: CLAUDE_HANDOVER/00_START_HERE_MIRIAM_OWNER_REVIEW.md.
+No artwork, lesson, learner-state, or core reader audio changed.

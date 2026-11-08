@@ -1,0 +1,68 @@
+name: Tablinum Phase 1 lexeme registry and human-review gate
+
+on:
+  push:
+    branches:
+      - feature/lexeme-registry-phase1-20261105
+      - fix/phase1-owner-tier-next-steps-20261105
+  workflow_dispatch:
+
+jobs:
+  lexeme-review:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 12
+    permissions:
+      contents: read
+      statuses: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check all existing app tests and Phase 1 negative cases
+        run: npm test
+      - name: Verify source-derived phase 1 snapshots and 128-row review sheet
+        run: npm run test:lexemes
+      - name: Confirm human review cannot be claimed complete without signed approvals
+        shell: bash
+        run: |
+          if node scripts/validate-lexemes.cjs --require-review-ready >/tmp/review-gate.log 2>&1; then
+            echo "ERROR: reviewed Latin falsely reported complete" >&2
+            exit 1
+          fi
+          grep -q "Human review still needed" /tmp/review-gate.log
+          echo "PASS: review-ready gate correctly requires human Latinist decisions"
+      - name: Freeze Phase 0 token snapshot and legacy IDs
+        run: node scripts/build-legacy-lexeme-audit.cjs --check
+      - name: Verify 130-chapter roadmap remains untouched
+        run: |
+          node curriculum/validate-roadmap-130.cjs
+          node curriculum/validate-outline-v3.cjs
+      - name: Confirm strict new-course word-count gates do not pass
+        shell: bash
+        run: |
+          for level in 1500 3000; do
+            if node curriculum/validate-roadmap-130.cjs --require-introduced-$level > /tmp/strict-$level.log 2>&1; then
+              echo "ERROR: uncertified $level-word milestone passed" >&2
+              exit 1
+            fi
+            grep -q "GATE NOT MET" /tmp/strict-$level.log
+          done
+          echo "PASS: 1500/3000 gates remain unverified (as required)"
+      - name: Publish Phase 1 status
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          OUTCOME: ${{ job.status }}
+        shell: bash
+        run: |
+          if [ "$OUTCOME" = success ]; then state=success; else state=failure; fi
+          gh api --method POST "repos/$GITHUB_REPOSITORY/statuses/$GITHUB_SHA" \
+            -f state="$state" \
+            -f context="tablinum/lexemes-${{ matrix.os }}" \
+            -f description="Offline lexical audit and explicit reviewer approval gates" \
+            -f target_url="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID"

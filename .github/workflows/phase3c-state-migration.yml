@@ -1,0 +1,88 @@
+name: LATIN X Phase 3c lossless state migration and backups
+on:
+  push:
+    branches: [feature/phase3c-state-migration-20261106]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test pure v5 migration and retained original source
+        run: |
+          npm run test:phase3c
+          npm test
+          npm run test:phase2
+          npm run test:lexemes
+          npm run test:package
+      - name: Check no false owner approval or word milestones
+        shell: bash
+        run: |
+          for n in 1500 3000; do
+            if node curriculum/validate-roadmap-130.cjs --require-introduced-$n >"gate-$n.txt" 2>&1; then exit 1; fi
+            grep -q "GATE NOT MET" "gate-$n.txt"
+          done
+          if node scripts/validate-lexemes.cjs --require-review-ready > gate-review.txt 2>&1; then exit 1; fi
+      - name: Verify complete runnable Claude-review ZIP
+        shell: bash
+        run: |
+          mkdir -p dist
+          git archive --format=zip --output=dist/LATIN_X_PHASE3C_COMPLETE_CLAUDE_REVIEW.zip HEAD
+          unzip -t dist/LATIN_X_PHASE3C_COMPLETE_CLAUDE_REVIEW.zip | tail -n 1
+          for f in index.html app/20-state-v5.js content/migration-maps.js app/legacy-runtime.js tests/migration.test.cjs PHASE3C_CLAUDE_HANDOVER.md; do
+            unzip -Z1 dist/LATIN_X_PHASE3C_COMPLETE_CLAUDE_REVIEW.zip | grep -Fx "$f"
+          done
+          sha256sum dist/LATIN_X_PHASE3C_COMPLETE_CLAUDE_REVIEW.zip > dist/SHA256SUMS.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: LATIN_X_PHASE3C_COMPLETE_CLAUDE_REVIEW
+          path: dist/
+          if-no-files-found: error
+          retention-days: 30
+  windows:
+    runs-on: windows-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run all Node, migration and compiler regression tests
+        run: |
+          npm test
+          npm run test:phase3c
+          npm run test:phase2
+          npm run test:lexemes
+      - name: Install Playwright desktop browsers
+        run: |
+          npm install --no-save playwright
+          npx playwright install chromium
+          npx playwright install firefox
+      - name: Test original desktop/mobile application over HTTP
+        run: npm run test:browser
+      - name: Chromium file URL v4/v5 migration and backup roundtrip
+        run: npm run test:file
+      - name: Edge file URL v4/v5 migration and backup roundtrip
+        env:
+          TABLINUM_BROWSER_CHANNEL: msedge
+        run: npm run test:file
+      - name: Chrome file URL v4/v5 migration and backup roundtrip
+        env:
+          TABLINUM_BROWSER_CHANNEL: chrome
+        run: npm run test:file
+      - name: Firefox file URL v4/v5 migration and backup roundtrip
+        env:
+          TABLINUM_BROWSER_TYPE: firefox
+        run: npm run test:file
+      - name: Test missing chapters and synthetic course migration
+        run: npm run test:phase3b-browser
+      - name: Real file URL missing chapter, 120-note and explicit recovery checks
+        run: npm run test:phase3c-browser
+      - name: Test offline editorial review remains functional
+        run: npm run test:review-browser

@@ -1,0 +1,2415 @@
+{
+  "status": "historical-DCC-seed-audit-not-current-v2-lesson-plan",
+  "created": "2026-11-05",
+  "source_csv": "user-uploaded latin-core-list.csv",
+  "csv_rows": 997,
+  "combined_headword_alias": "fīlia -ae f.; fīlius -ī m.",
+  "course_chapters": 50,
+  "teaching_chapters": 38,
+  "review_chapters": [
+    5,
+    9,
+    13,
+    17,
+    21,
+    25,
+    29,
+    33,
+    37,
+    41,
+    45,
+    49
+  ],
+  "new_lemma_ceiling": 15,
+  "maximum_new_lemmas": 570,
+  "distinct_dcc_seed_lemmas": 144,
+  "unmatched_seed_words": [
+    {
+      "word": "panis",
+      "occurrences": 1
+    },
+    {
+      "word": "rosa",
+      "occurrences": 2
+    },
+    {
+      "word": "emō",
+      "occurrences": 1
+    },
+    {
+      "word": "mercātor",
+      "occurrences": 1
+    },
+    {
+      "word": "nūbēs",
+      "occurrences": 1
+    },
+    {
+      "word": "sonus",
+      "occurrences": 2
+    },
+    {
+      "word": "pluvia",
+      "occurrences": 2
+    },
+    {
+      "word": "quid",
+      "occurrences": 1
+    },
+    {
+      "word": "facere",
+      "occurrences": 1
+    },
+    {
+      "word": "vīlla",
+      "occurrences": 1
+    },
+    {
+      "word": "hortus",
+      "occurrences": 1
+    },
+    {
+      "word": "ruber",
+      "occurrences": 1
+    },
+    {
+      "word": "ambulō",
+      "occurrences": 1
+    },
+    {
+      "word": "herī",
+      "occurrences": 1
+    },
+    {
+      "word": "clāmō",
+      "occurrences": 1
+    },
+    {
+      "word": "dēleō",
+      "occurrences": 1
+    },
+    {
+      "word": "crās",
+      "occurrences": 1
+    },
+    {
+      "word": "visitō",
+      "occurrences": 1
+    },
+    {
+      "word": "habitō",
+      "occurrences": 1
+    },
+    {
+      "word": "feria",
+      "occurrences": 1
+    },
+    {
+      "word": "quae",
+      "occurrences": 1
+    },
+    {
+      "word": "quod",
+      "occurrences": 1
+    },
+    {
+      "word": "vendō",
+      "occurrences": 1
+    },
+    {
+      "word": "portus",
+      "occurrences": 1
+    },
+    {
+      "word": "adventus",
+      "occurrences": 1
+    },
+    {
+      "word": "seriēs",
+      "occurrences": 1
+    }
+  ],
+  "manual_review_flags": [
+    "edō (eat) is not DCC ēdō (bring forth)",
+    "bibō not bībō",
+    "magnus standard editorial spelling; DCC source has māgnus",
+    "fīlius is a secondary headword in combined fīlia/fīlius row"
+  ],
+  "chapters": [
+    {
+      "chapter": 1,
+      "title": "In hortō",
+      "story": "Līvia explores the garden; a small child stands beside a large tree.",
+      "grammar_focus": "Nominative subjects with est/sunt",
+      "core_seeds": [
+        {
+          "lesson_form": "sum",
+          "dcc_headword": "sum esse fuī futūrum",
+          "headword_source_line": 866,
+          "frequency_rank": 2
+        },
+        {
+          "lesson_form": "arbor",
+          "dcc_headword": "arbor arboris f.",
+          "headword_source_line": 73,
+          "frequency_rank": 468
+        },
+        {
+          "lesson_form": "hic",
+          "dcc_headword": "hic haec hoc",
+          "headword_source_line": 376,
+          "frequency_rank": 7
+        },
+        {
+          "lesson_form": "magnus",
+          "dcc_headword": "māgnus -a -um",
+          "headword_source_line": 497,
+          "frequency_rank": 25
+        },
+        {
+          "lesson_form": "parvus",
+          "dcc_headword": "parvus -a -um",
+          "headword_source_line": 626,
+          "frequency_rank": 143
+        },
+        {
+          "lesson_form": "in",
+          "dcc_headword": "in",
+          "headword_source_line": 409,
+          "frequency_rank": 5
+        },
+        {
+          "lesson_form": "puella",
+          "dcc_headword": "puella -ae f.",
+          "headword_source_line": 717,
+          "frequency_rank": 233
+        }
+      ],
+      "extra_dcc_unmatched": [],
+      "reused_core_seeds": [],
+      "editor_note": "Keep an image-led start, with repeated singular descriptions.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 6,
+      "v2_chapter_title": "In hortō",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 2,
+      "title": "Familia",
+      "story": "Mārcus, Flāvia, Līvia and Tītus stand before the villa; their relationships are named.",
+      "grammar_focus": "Singular genitive of possession (-ae/-ī)",
+      "core_seeds": [
+        {
+          "lesson_form": "pater",
+          "dcc_headword": "pater patris m.",
+          "headword_source_line": 628,
+          "frequency_rank": 71
+        },
+        {
+          "lesson_form": "māter",
+          "dcc_headword": "māter mātris f.",
+          "headword_source_line": 506,
+          "frequency_rank": 127
+        },
+        {
+          "lesson_form": "fīlia",
+          "dcc_headword": "fīlia -ae f.; fīlius -ī m.",
+          "headword_source_line": 327,
+          "frequency_rank": 909
+        },
+        {
+          "lesson_form": "fīlius",
+          "dcc_headword": "fīlia -ae f.; fīlius -ī m.",
+          "headword_source_line": 327,
+          "frequency_rank": 909
+        },
+        {
+          "lesson_form": "frāter",
+          "dcc_headword": "frāter frātris m.",
+          "headword_source_line": 348,
+          "frequency_rank": 225
+        },
+        {
+          "lesson_form": "soror",
+          "dcc_headword": "soror -ōris f.",
+          "headword_source_line": 847,
+          "frequency_rank": 497
+        },
+        {
+          "lesson_form": "familia",
+          "dcc_headword": "familia -ae f.",
+          "headword_source_line": 313,
+          "frequency_rank": 943
+        }
+      ],
+      "extra_dcc_unmatched": [],
+      "reused_core_seeds": [],
+      "editor_note": "The son fīlius shares one DCC entry with fīlia.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 8,
+      "v2_chapter_title": "Familia",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 3,
+      "title": "Cēna",
+      "story": "At supper Tītus eats bread and Līvia drinks water while Flāvia points to each object.",
+      "grammar_focus": "Accusative direct objects",
+      "core_seeds": [
+        {
+          "lesson_form": "aqua",
+          "dcc_headword": "aqua -ae f.",
+          "headword_source_line": 70,
+          "frequency_rank": 272
+        },
+        {
+          "lesson_form": "cibus",
+          "dcc_headword": "cibus -ī m.",
+          "headword_source_line": 142,
+          "frequency_rank": 863
+        },
+        {
+          "lesson_form": "mēnsa",
+          "dcc_headword": "mēnsa -ae f.",
+          "headword_source_line": 513,
+          "frequency_rank": 747
+        },
+        {
+          "lesson_form": "habeō",
+          "dcc_headword": "habeō habēre habuī habitum",
+          "headword_source_line": 374,
+          "frequency_rank": 39
+        },
+        {
+          "lesson_form": "portō",
+          "dcc_headword": "portō -āre",
+          "headword_source_line": 666,
+          "frequency_rank": 853
+        },
+        {
+          "lesson_form": "liber",
+          "dcc_headword": "liber librī m.",
+          "headword_source_line": 475,
+          "frequency_rank": 901
+        }
+      ],
+      "extra_dcc_unmatched": [
+        "panis"
+      ],
+      "reused_core_seeds": [],
+      "editor_note": "Accusative comes BEFORE the dative; edō 'eat' and bibō are extra-DCC words, not the core-list ēdō.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 9,
+      "v2_chapter_title": "Cēna",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 4,
+      "title": "Dōnum",
+      "story": "Līvia gives her mother a red rose; her father receives another gift.",
+      "grammar_focus": "Dative recipient (-ae/-ō/-ī)",
+      "core_seeds": [
+        {
+          "lesson_form": "dō",
+          "dcc_headword": "dō dare dedī datum",
+          "headword_source_line": 250,
+          "frequency_rank": 28
+        },
+        {
+          "lesson_form": "accipiō",
+          "dcc_headword": "accipiō -cipere -cēpī -ceptum",
+          "headword_source_line": 8,
+          "frequency_rank": 110
+        },
+        {
+          "lesson_form": "amīcus",
+          "dcc_headword": "amīcus -a -um",
+          "headword_source_line": 51,
+          "frequency_rank": 198
+        },
+        {
+          "lesson_form": "laetus",
+          "dcc_headword": "laetus -a -um",
+          "headword_source_line": 463,
+          "frequency_rank": 262
+        },
+        {
+          "lesson_form": "grātia",
+          "dcc_headword": "grātia -ae f.",
+          "headword_source_line": 371,
+          "frequency_rank": 380
+        }
+      ],
+      "extra_dcc_unmatched": [
+        "rosa"
+      ],
+      "reused_core_seeds": [],
+      "editor_note": "Visual action clearly shows giver, gift and receiver.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 10,
+      "v2_chapter_title": "Dōnum",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 5,
+      "title": "Recēnsiō I — In vīllā",
+      "story": "The family retells a short garden-and-supper story with two gifts.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "core_seeds": [],
+      "extra_dcc_unmatched": [],
+      "reused_core_seeds": [],
+      "editor_note": "Retell using only vocabulary from chapters I–IV, plus zero new lemmas.",
+      "review": true,
+      "approx_new_word_cap": 0,
+      "v2_target_budget": 0,
+      "v2_chapter_title": "Recēnsiō I — In vīllā",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 6,
+      "title": "Forum",
+      "story": "At the market Mārcus chooses two apples while Līvia counts three on the stall.",
+      "grammar_focus": "Neuter plural nominative/accusative in -a",
+      "core_seeds": [
+        {
+          "lesson_form": "forum",
+          "dcc_headword": "forum -ī n.",
+          "headword_source_line": 346,
+          "frequency_rank": 811
+        },
+        {
+          "lesson_form": "duo",
+          "dcc_headword": "duo duae duo",
+          "headword_source_line": 266,
+          "frequency_rank": 221
+        },
+        {
+          "lesson_form": "trēs",
+          "dcc_headword": "trēs tria",
+          "headword_source_line": 915,
+          "frequency_rank": 533
+        },
+        {
+          "lesson_form": "multus",
+          "dcc_headword": "multus -a -um",
+          "headword_source_line": 541,
+          "frequency_rank": 43
+        },
+        {
+          "lesson_form": "pretium",
+          "dcc_headword": "pretium -ī n.",
+          "headword_source_line": 689,
+          "frequency_rank": 629
+        }
+      ],
+      "extra_dcc_unmatched": [
+        "emō",
+        "mercātor"
+      ],
+      "reused_core_seeds": [],
+      "editor_note": "Two bought apples versus three displayed must be visually unambiguous.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 11,
+      "v2_chapter_title": "Forum",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 7,
+      "title": "Canis in viā",
+      "story": "A dog runs along a Roman street to Līvia at the gate; a boy calls him.",
+      "grammar_focus": "Direction with ad + accusative",
+      "core_seeds": [
+        {
+          "lesson_form": "canis",
+          "dcc_headword": "canis -is m./f.",
+          "headword_source_line": 118,
+          "frequency_rank": 687
+        },
+        {
+          "lesson_form": "via",
+          "dcc_headword": "via -ae f.",
+          "headword_source_line": 951,
+          "frequency_rank": 196
+        },
+        {
+          "lesson_form": "ad",
+          "dcc_headword": "ad",
+          "headword_source_line": 11,
+          "frequency_rank": 14
+        },
+        {
+          "lesson_form": "porta",
+          "dcc_headword": "porta -ae f.",
+          "headword_source_line": 665,
+          "frequency_rank": 759
+        },
+        {
+          "lesson_form": "currō",
+          "dcc_headword": "currō currere cucurrī cursum",
+          "headword_source_line": 208,
+          "frequency_rank": 562
+        },
+        {
+          "lesson_form": "vocō",
+          "dcc_headword": "vocō -āre",
+          "headword_source_line": 977,
+          "frequency_rank": 158
+        },
+        {
+          "lesson_form": "puer",
+          "dcc_headword": "puer puerī m.",
+          "headword_source_line": 718,
+          "frequency_rank": 191
+        }
+      ],
+      "extra_dcc_unmatched": [],
+      "reused_core_seeds": [],
+      "editor_note": "Keep the current dog story but use non-leading comprehension questions.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 12,
+      "v2_chapter_title": "Canis in viā",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 8,
+      "title": "Tempestās",
+      "story": "The family hears rain and wind; people look out of different windows.",
+      "grammar_focus": "Present third-person -t versus -nt",
+      "core_seeds": [
+        {
+          "lesson_form": "audiō",
+          "dcc_headword": "audiō -īre -īvī/-iī -ītum",
+          "headword_source_line": 90,
+          "frequency_rank": 165
+        },
+        {
+          "lesson_form": "videō",
+          "dcc_headword": "videō vidēre vīdī vīsum",
+          "headword_source_line": 955,
+          "frequency_rank": 31
+        },
+        {
+          "lesson_form": "ventus",
+          "dcc_headword": "ventus -ī m.",
+          "headword_source_line": 939,
+          "frequency_rank": 269
+        },
+        {
+          "lesson_form": "moveō",
+          "dcc_headword": "moveō -ēre mōvī mōtum",
+          "headword_source_line": 537,
+          "frequency_rank": 192
+        }
+      ],
+      "extra_dcc_unmatched": [
+        "nūbēs",
+        "sonus",
+        "pluvia"
+      ],
+      "reused_core_seeds": [],
+      "editor_note": "No past tense, future tense, or negative commands here.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 12,
+      "v2_chapter_title": "Tempestās",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 9,
+      "title": "Recēnsiō II — Canis redit",
+      "story": "A small review tale uses the market, the storm and the running dog.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "core_seeds": [],
+      "extra_dcc_unmatched": [],
+      "reused_core_seeds": [],
+      "editor_note": "Reuse the first eight chapters; no unseen verbal endings.",
+      "review": true,
+      "approx_new_word_cap": 0,
+      "v2_target_budget": 0,
+      "v2_chapter_title": "Recēnsiō II — Canis redit",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 10,
+      "title": "Ego in hortō",
+      "story": "Līvia narrates what she sees and carries in the garden.",
+      "grammar_focus": "First-person singular present (-ō)",
+      "core_seeds": [
+        {
+          "lesson_form": "ego",
+          "dcc_headword": "ego meī mihi mē",
+          "headword_source_line": 275,
+          "frequency_rank": 11
+        },
+        {
+          "lesson_form": "dīcō",
+          "dcc_headword": "dīcō dīcere dīxī dictum",
+          "headword_source_line": 233,
+          "frequency_rank": 33
+        },
+        {
+          "lesson_form": "faciō",
+          "dcc_headword": "faciō facere fēcī factum",
+          "headword_source_line": 307,
+          "frequency_rank": 32
+        }
+      ],
+      "extra_dcc_unmatched": [],
+      "reused_core_seeds": [
+        {
+          "lesson_form": "videō",
+          "dcc_headword": "videō vidēre vīdī vīsum",
+          "headword_source_line": 955,
+          "frequency_rank": 31
+        },
+        {
+          "lesson_form": "portō",
+          "dcc_headword": "portō -āre",
+          "headword_source_line": 666,
+          "frequency_rank": 853
+        },
+        {
+          "lesson_form": "habeō",
+          "dcc_headword": "habeō habēre habuī habitum",
+          "headword_source_line": 374,
+          "frequency_rank": 39
+        },
+        {
+          "lesson_form": "sum",
+          "dcc_headword": "sum esse fuī futūrum",
+          "headword_source_line": 866,
+          "frequency_rank": 2
+        }
+      ],
+      "editor_note": "Build from known third-person clauses.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 12,
+      "v2_chapter_title": "Ego in hortō",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 11,
+      "title": "Tū quid facis?",
+      "story": "Līvia asks Tītus what he is doing; he answers directly.",
+      "grammar_focus": "Second-person singular present (-s)",
+      "core_seeds": [
+        {
+          "lesson_form": "tū",
+          "dcc_headword": "tū tuī tibi tē",
+          "headword_source_line": 918,
+          "frequency_rank": 9
+        },
+        {
+          "lesson_form": "quis",
+          "dcc_headword": "quis quid",
+          "headword_source_line": 746,
+          "frequency_rank": 212
+        },
+        {
+          "lesson_form": "rogō",
+          "dcc_headword": "rogō -āre",
+          "headword_source_line": 785,
+          "frequency_rank": 551
+        },
+        {
+          "lesson_form": "respondeō",
+          "dcc_headword": "respondeō -spondēre -spondī -spōnsum",
+          "headword_source_line": 777,
+          "frequency_rank": 535
+        },
+        {
+          "lesson_form": "laborō",
+          "dcc_headword": "labōrō -āre",
+          "headword_source_line": 460,
+          "frequency_rank": 900
+        }
+      ],
+      "extra_dcc_unmatched": [
+        "quid",
+        "facere"
+      ],
+      "reused_core_seeds": [],
+      "editor_note": "Alternate ego / tū dialogue to prevent memorised forms.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 12,
+      "v2_chapter_title": "Tū quid facis?",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 12,
+      "title": "In vīllā et ex vīllā",
+      "story": "The children go into the villa and come out from it.",
+      "grammar_focus": "Place with in + ablative",
+      "core_seeds": [
+        {
+          "lesson_form": "ex",
+          "dcc_headword": "ex, ē",
+          "headword_source_line": 291,
+          "frequency_rank": 26
+        },
+        {
+          "lesson_form": "ā",
+          "dcc_headword": "ā ab abs",
+          "headword_source_line": 2,
+          "frequency_rank": 21
+        },
+        {
+          "lesson_form": "locus",
+          "dcc_headword": "locus -ī m.",
+          "headword_source_line": 486,
+          "frequency_rank": 62
+        },
+        {
+          "lesson_form": "prope",
+          "dcc_headword": "prope",
+          "headword_source_line": 707,
+          "frequency_rank": 189
+        }
+      ],
+      "extra_dcc_unmatched": [
+        "vīlla",
+        "hortus"
+      ],
+      "reused_core_seeds": [
+        {
+          "lesson_form": "in",
+          "dcc_headword": "in",
+          "headword_source_line": 409,
+          "frequency_rank": 5
+        }
+      ],
+      "editor_note": "Contrast stative in vīllā with motion ad vīllam already seen.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 12,
+      "v2_chapter_title": "In vīllā et ex vīllā",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 13,
+      "title": "Recēnsiō III — Ubi sumus?",
+      "story": "A dialogue revisits I/you forms and near versus inside locations.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "core_seeds": [],
+      "extra_dcc_unmatched": [],
+      "reused_core_seeds": [],
+      "editor_note": "Include a map of the villa rooms with labelled places.",
+      "review": true,
+      "approx_new_word_cap": 0,
+      "v2_target_budget": 0,
+      "v2_chapter_title": "Recēnsiō III — Ubi sumus?",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 14,
+      "title": "Rosa rubra",
+      "story": "The family chooses among red, white, large and small objects.",
+      "grammar_focus": "Masculine/feminine/neuter adjective agreement (singular)",
+      "core_seeds": [
+        {
+          "lesson_form": "albus",
+          "dcc_headword": "albus -a -um",
+          "headword_source_line": 41,
+          "frequency_rank": 925
+        },
+        {
+          "lesson_form": "bonus",
+          "dcc_headword": "bonus -a -um",
+          "headword_source_line": 106,
+          "frequency_rank": 68
+        },
+        {
+          "lesson_form": "malus",
+          "dcc_headword": "malus -a -um",
+          "headword_source_line": 501,
+          "frequency_rank": 227
+        }
+      ],
+      "extra_dcc_unmatched": [
+        "ruber",
+        "rosa"
+      ],
+      "reused_core_seeds": [
+        {
+          "lesson_form": "magnus",
+          "dcc_headword": "māgnus -a -um",
+          "headword_source_line": 497,
+          "frequency_rank": 25
+        },
+        {
+          "lesson_form": "parvus",
+          "dcc_headword": "parvus -a -um",
+          "headword_source_line": 626,
+          "frequency_rank": 143
+        }
+      ],
+      "editor_note": "Use canonical magnus display; DCC māgnus is separately flagged as doubtful.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 12,
+      "v2_chapter_title": "Rosa rubra",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 15,
+      "title": "Amīcī et amīcae",
+      "story": "Several visitors arrive at the villa, with different people and gifts.",
+      "grammar_focus": "Nominative plurals of 1st/2nd-declension nouns",
+      "core_seeds": [
+        {
+          "lesson_form": "vir",
+          "dcc_headword": "vir virī m.",
+          "headword_source_line": 959,
+          "frequency_rank": 85
+        },
+        {
+          "lesson_form": "dominus",
+          "dcc_headword": "dominus -ī m.; domina -ae f.",
+          "headword_source_line": 255,
+          "frequency_rank": 241
+        },
+        {
+          "lesson_form": "servus",
+          "dcc_headword": "servus -ī m.",
+          "headword_source_line": 824,
+          "frequency_rank": 496
+        }
+      ],
+      "extra_dcc_unmatched": [],
+      "reused_core_seeds": [
+        {
+          "lesson_form": "amīcus",
+          "dcc_headword": "amīcus -a -um",
+          "headword_source_line": 51,
+          "frequency_rank": 198
+        },
+        {
+          "lesson_form": "fīlia",
+          "dcc_headword": "fīlia -ae f.; fīlius -ī m.",
+          "headword_source_line": 327,
+          "frequency_rank": 909
+        },
+        {
+          "lesson_form": "fīlius",
+          "dcc_headword": "fīlia -ae f.; fīlius -ī m.",
+          "headword_source_line": 327,
+          "frequency_rank": 909
+        },
+        {
+          "lesson_form": "puer",
+          "dcc_headword": "puer puerī m.",
+          "headword_source_line": 718,
+          "frequency_rank": 191
+        }
+      ],
+      "editor_note": "Keep adjective agreement in plural as recycled extension, not a new system.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 12,
+      "v2_chapter_title": "Amīcī et amīcae",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 16,
+      "title": "Nōs et vōs",
+      "story": "Family members plan together; hosts speak to visiting friends.",
+      "grammar_focus": "First/second person plural present (-mus/-tis)",
+      "core_seeds": [
+        {
+          "lesson_form": "nōs",
+          "dcc_headword": "nōs nostrum/nostrī nōbīs nōs",
+          "headword_source_line": 576,
+          "frequency_rank": 51
+        },
+        {
+          "lesson_form": "vōs",
+          "dcc_headword": "vōs",
+          "headword_source_line": 983,
+          "frequency_rank": 130
+        },
+        {
+          "lesson_form": "laudō",
+          "dcc_headword": "laudō -āre",
+          "headword_source_line": 468,
+          "frequency_rank": 435
+        }
+      ],
+      "extra_dcc_unmatched": [
+        "ambulō"
+      ],
+      "reused_core_seeds": [
+        {
+          "lesson_form": "sum",
+          "dcc_headword": "sum esse fuī futūrum",
+          "headword_source_line": 866,
+          "frequency_rank": 2
+        },
+        {
+          "lesson_form": "habeō",
+          "dcc_headword": "habeō habēre habuī habitum",
+          "headword_source_line": 374,
+          "frequency_rank": 39
+        },
+        {
+          "lesson_form": "vidēo",
+          "dcc_headword": "videō vidēre vīdī vīsum",
+          "headword_source_line": 955,
+          "frequency_rank": 31
+        }
+      ],
+      "editor_note": "Say what 'we do' and what 'you all do' in simple repeated sentences.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 12,
+      "v2_chapter_title": "Nōs et vōs",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 17,
+      "title": "Recēnsiō IV — Hospitēs",
+      "story": "Visitors arrive, eat together, and talk about pictures.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "core_seeds": [],
+      "extra_dcc_unmatched": [],
+      "reused_core_seeds": [],
+      "editor_note": "Short independent reading with known persons and plural forms.",
+      "review": true,
+      "approx_new_word_cap": 0,
+      "v2_target_budget": 0,
+      "v2_chapter_title": "Recēnsiō IV — Hospitēs",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 18,
+      "title": "Veni hūc!",
+      "story": "Mārcus asks Tītus to carry a basket and Līvia to open the door.",
+      "grammar_focus": "Positive singular imperative",
+      "core_seeds": [
+        {
+          "lesson_form": "veniō",
+          "dcc_headword": "veniō venīre vēnī ventum",
+          "headword_source_line": 938,
+          "frequency_rank": 63
+        },
+        {
+          "lesson_form": "ferō",
+          "dcc_headword": "ferō ferre tulī lātum",
+          "headword_source_line": 321,
+          "frequency_rank": 45
+        },
+        {
+          "lesson_form": "aperiō",
+          "dcc_headword": "aperiō aperīre aperuī apertum",
+          "headword_source_line": 65,
+          "frequency_rank": 837
+        },
+        {
+          "lesson_form": "claudō",
+          "dcc_headword": "claudō claudere clausī clausum",
+          "headword_source_line": 152,
+          "frequency_rank": 392
+        },
+        {
+          "lesson_form": "tenēo",
+          "dcc_headword": "teneō -ēre -uī tentum",
+          "headword_source_line": 899,
+          "frequency_rank": 106
+        },
+        {
+          "lesson_form": "mittō",
+          "dcc_headword": "mittō mittere mīsī missum",
+          "headword_source_line": 523,
+          "frequency_rank": 114
+        },
+        {
+          "lesson_form": "vōx",
+          "dcc_headword": "vōx vōcis f.",
+          "headword_source_line": 985,
+          "frequency_rank": 169
+        }
+      ],
+      "extra_dcc_unmatched": [],
+      "reused_core_seeds": [],
+      "editor_note": "Do not include nōlī yet.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 12,
+      "v2_chapter_title": "Venī hūc!",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 19,
+      "title": "Quid vult Līvia?",
+      "story": "A child wants to read and can carry a book but cannot reach a shelf.",
+      "grammar_focus": "Complementary infinitive after posse/velle",
+      "core_seeds": [
+        {
+          "lesson_form": "possum",
+          "dcc_headword": "possum posse potuī",
+          "headword_source_line": 668,
+          "frequency_rank": 23
+        },
+        {
+          "lesson_form": "volō",
+          "dcc_headword": "volō velle voluī",
+          "headword_source_line": 978,
+          "frequency_rank": 66
+        },
+        {
+          "lesson_form": "legō",
+          "dcc_headword": "legō legere lēgī lēctum",
+          "headword_source_line": 472,
+          "frequency_rank": 419
+        },
+        {
+          "lesson_form": "sedēo",
+          "dcc_headword": "sedeō sedēre sēdī sessum",
+          "headword_source_line": 810,
+          "frequency_rank": 506
+        },
+        {
+          "lesson_form": "surgo",
+          "dcc_headword": "surgō surgere surrēxī surrēctum",
+          "headword_source_line": 876,
+          "frequency_rank": 570
+        },
+        {
+          "lesson_form": "putō",
+          "dcc_headword": "putō -āre",
+          "headword_source_line": 722,
+          "frequency_rank": 166
+        }
+      ],
+      "extra_dcc_unmatched": [],
+      "reused_core_seeds": [
+        {
+          "lesson_form": "portō",
+          "dcc_headword": "portō -āre",
+          "headword_source_line": 666,
+          "frequency_rank": 853
+        }
+      ],
+      "editor_note": "Introduce one simple finite verb plus infinitive pattern.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 13,
+      "v2_chapter_title": "Quid vult Līvia?",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 20,
+      "title": "Mē vides?",
+      "story": "A family member points to themselves and then to another person.",
+      "grammar_focus": "Accusative personal pronouns mē/tē/nōs/vōs",
+      "core_seeds": [],
+      "extra_dcc_unmatched": [],
+      "reused_core_seeds": [
+        {
+          "lesson_form": "ego",
+          "dcc_headword": "ego meī mihi mē",
+          "headword_source_line": 275,
+          "frequency_rank": 11
+        },
+        {
+          "lesson_form": "tū",
+          "dcc_headword": "tū tuī tibi tē",
+          "headword_source_line": 918,
+          "frequency_rank": 9
+        },
+        {
+          "lesson_form": "nōs",
+          "dcc_headword": "nōs nostrum/nostrī nōbīs nōs",
+          "headword_source_line": 576,
+          "frequency_rank": 51
+        },
+        {
+          "lesson_form": "vōs",
+          "dcc_headword": "vōs",
+          "headword_source_line": 983,
+          "frequency_rank": 130
+        },
+        {
+          "lesson_form": "dō",
+          "dcc_headword": "dō dare dedī datum",
+          "headword_source_line": 250,
+          "frequency_rank": 28
+        },
+        {
+          "lesson_form": "videō",
+          "dcc_headword": "videō vidēre vīdī vīsum",
+          "headword_source_line": 955,
+          "frequency_rank": 31
+        },
+        {
+          "lesson_form": "audiō",
+          "dcc_headword": "audiō -īre -īvī/-iī -ītum",
+          "headword_source_line": 90,
+          "frequency_rank": 165
+        }
+      ],
+      "editor_note": "Contrast subject and object pronouns pictorially.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 13,
+      "v2_chapter_title": "Mē vidēs?",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 21,
+      "title": "Recēnsiō V — Verba familiae",
+      "story": "A short conversation recycles pronouns, plural verbs and commands.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "core_seeds": [],
+      "extra_dcc_unmatched": [],
+      "reused_core_seeds": [],
+      "editor_note": "Do not introduce new imperatives, voices or tenses.",
+      "review": true,
+      "approx_new_word_cap": 0,
+      "v2_target_budget": 0,
+      "v2_chapter_title": "Recēnsiō V — Verba familiae",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 22,
+      "title": "Herī et hodiē",
+      "story": "Two pictures contrast today's good weather with yesterday's storm.",
+      "grammar_focus": "Imperfect of sum: eram/erat/erant",
+      "core_seeds": [
+        {
+          "lesson_form": "hodiē",
+          "dcc_headword": "hodiē",
+          "headword_source_line": 379,
+          "frequency_rank": 981
+        },
+        {
+          "lesson_form": "tempus",
+          "dcc_headword": "tempus -oris n.",
+          "headword_source_line": 896,
+          "frequency_rank": 89
+        },
+        {
+          "lesson_form": "nox",
+          "dcc_headword": "nox noctis f.",
+          "headword_source_line": 581,
+          "frequency_rank": 119
+        },
+        {
+          "lesson_form": "sōl",
+          "dcc_headword": "sōl sōlis m.",
+          "headword_source_line": 840,
+          "frequency_rank": 320
+        },
+        {
+          "lesson_form": "annus",
+          "dcc_headword": "annus -ī m.",
+          "headword_source_line": 61,
+          "frequency_rank": 167
+        },
+        {
+          "lesson_form": "diēs",
+          "dcc_headword": "diēs diēī m./f.",
+          "headword_source_line": 234,
+          "frequency_rank": 54
+        }
+      ],
+      "extra_dcc_unmatched": [
+        "herī"
+      ],
+      "reused_core_seeds": [],
+      "editor_note": "Build understanding of a past state before narrative past verbs.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 13,
+      "v2_chapter_title": "Herī et hodiē",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 23,
+      "title": "Ad fenestram",
+      "story": "Tītus was reading while Flāvia was writing during heavy rain.",
+      "grammar_focus": "Imperfect active in -bā-",
+      "core_seeds": [
+        {
+          "lesson_form": "scribō",
+          "dcc_headword": "scrībō scrībere scrīpsī scrīptum",
+          "headword_source_line": 806,
+          "frequency_rank": 568
+        },
+        {
+          "lesson_form": "dormiō",
+          "dcc_headword": "dormiō -īre",
+          "headword_source_line": 260,
+          "frequency_rank": 975
+        },
+        {
+          "lesson_form": "manēo",
+          "dcc_headword": "maneō manēre mānsī mānsum",
+          "headword_source_line": 502,
+          "frequency_rank": 357
+        },
+        {
+          "lesson_form": "per",
+          "dcc_headword": "per",
+          "headword_source_line": 641,
+          "frequency_rank": 30
+        }
+      ],
+      "extra_dcc_unmatched": [
+        "pluvia"
+      ],
+      "reused_core_seeds": [
+        {
+          "lesson_form": "legō",
+          "dcc_headword": "legō legere lēgī lēctum",
+          "headword_source_line": 472,
+          "frequency_rank": 419
+        },
+        {
+          "lesson_form": "sedeō",
+          "dcc_headword": "sedeō sedēre sēdī sessum",
+          "headword_source_line": 810,
+          "frequency_rank": 506
+        }
+      ],
+      "editor_note": "Keep the past continuous; do not introduce perfect yet.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 13,
+      "v2_chapter_title": "Ad fenestram",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 24,
+      "title": "Nōlī timēre",
+      "story": "Flāvia comforts Tītus and tells him not to fear thunder.",
+      "grammar_focus": "Negative singular command nōlī + infinitive",
+      "core_seeds": [
+        {
+          "lesson_form": "nōlō",
+          "dcc_headword": "nōlō nōlle nōluī",
+          "headword_source_line": 572,
+          "frequency_rank": 458
+        },
+        {
+          "lesson_form": "timeō",
+          "dcc_headword": "timeō -ēre -uī",
+          "headword_source_line": 907,
+          "frequency_rank": 153
+        },
+        {
+          "lesson_form": "taceō",
+          "dcc_headword": "taceō -ēre -uī -itum",
+          "headword_source_line": 880,
+          "frequency_rank": 369
+        },
+        {
+          "lesson_form": "timor",
+          "dcc_headword": "timor -ōris m.",
+          "headword_source_line": 908,
+          "frequency_rank": 536
+        },
+        {
+          "lesson_form": "fortis",
+          "dcc_headword": "fortis -e",
+          "headword_source_line": 344,
+          "frequency_rank": 286
+        }
+      ],
+      "extra_dcc_unmatched": [
+        "clāmō",
+        "sonus"
+      ],
+      "reused_core_seeds": [],
+      "editor_note": "Clear calm context and repeated single command pattern.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 13,
+      "v2_chapter_title": "Nōlī timēre",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 25,
+      "title": "Recēnsiō VI — Post tempestātem",
+      "story": "The family retells how it felt and what people were doing in the storm.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "core_seeds": [],
+      "extra_dcc_unmatched": [],
+      "reused_core_seeds": [],
+      "editor_note": "Compare present, imperfect and commands in familiar scenes.",
+      "review": true,
+      "approx_new_word_cap": 0,
+      "v2_target_budget": 0,
+      "v2_chapter_title": "Recēnsiō VI — Post tempestātem",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 26,
+      "title": "Dōnum parāvī",
+      "story": "Līvia reports that she prepared roses and called her mother.",
+      "grammar_focus": "Regular perfect active with -v-",
+      "core_seeds": [
+        {
+          "lesson_form": "parō",
+          "dcc_headword": "parō -āre",
+          "headword_source_line": 623,
+          "frequency_rank": 160
+        },
+        {
+          "lesson_form": "servō",
+          "dcc_headword": "servō -āre",
+          "headword_source_line": 823,
+          "frequency_rank": 289
+        },
+        {
+          "lesson_form": "amō",
+          "dcc_headword": "amō -āre",
+          "headword_source_line": 54,
+          "frequency_rank": 219
+        }
+      ],
+      "extra_dcc_unmatched": [
+        "dēleō"
+      ],
+      "reused_core_seeds": [
+        {
+          "lesson_form": "laudō",
+          "dcc_headword": "laudō -āre",
+          "headword_source_line": 468,
+          "frequency_rank": 435
+        },
+        {
+          "lesson_form": "vocō",
+          "dcc_headword": "vocō -āre",
+          "headword_source_line": 977,
+          "frequency_rank": 158
+        },
+        {
+          "lesson_form": "dō",
+          "dcc_headword": "dō dare dedī datum",
+          "headword_source_line": 250,
+          "frequency_rank": 28
+        }
+      ],
+      "editor_note": "Introduce completed events with a simple timeline.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 13,
+      "v2_chapter_title": "Dōnum parāvī",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 27,
+      "title": "Nūntius vēnit",
+      "story": "A messenger reports what he said, saw and did on a journey.",
+      "grammar_focus": "Common strong perfect active stems",
+      "core_seeds": [],
+      "extra_dcc_unmatched": [],
+      "reused_core_seeds": [
+        {
+          "lesson_form": "veniō",
+          "dcc_headword": "veniō venīre vēnī ventum",
+          "headword_source_line": 938,
+          "frequency_rank": 63
+        },
+        {
+          "lesson_form": "videō",
+          "dcc_headword": "videō vidēre vīdī vīsum",
+          "headword_source_line": 955,
+          "frequency_rank": 31
+        },
+        {
+          "lesson_form": "dīcō",
+          "dcc_headword": "dīcō dīcere dīxī dictum",
+          "headword_source_line": 233,
+          "frequency_rank": 33
+        },
+        {
+          "lesson_form": "faciō",
+          "dcc_headword": "faciō facere fēcī factum",
+          "headword_source_line": 307,
+          "frequency_rank": 32
+        },
+        {
+          "lesson_form": "accipiō",
+          "dcc_headword": "accipiō -cipere -cēpī -ceptum",
+          "headword_source_line": 8,
+          "frequency_rank": 110
+        },
+        {
+          "lesson_form": "ferō",
+          "dcc_headword": "ferō ferre tulī lātum",
+          "headword_source_line": 321,
+          "frequency_rank": 45
+        },
+        {
+          "lesson_form": "sum",
+          "dcc_headword": "sum esse fuī futūrum",
+          "headword_source_line": 866,
+          "frequency_rank": 2
+        }
+      ],
+      "editor_note": "Only a handful of very frequent non-v perfects.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 15,
+      "v2_chapter_title": "Nūntius vēnit",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 28,
+      "title": "Liber anteā missus",
+      "story": "The children discover that a letter had been sent before the visitor arrived.",
+      "grammar_focus": "Pluperfect active indicative",
+      "core_seeds": [
+        {
+          "lesson_form": "ante",
+          "dcc_headword": "ante",
+          "headword_source_line": 62,
+          "frequency_rank": 112
+        },
+        {
+          "lesson_form": "post",
+          "dcc_headword": "post",
+          "headword_source_line": 669,
+          "frequency_rank": 164
+        },
+        {
+          "lesson_form": "iam",
+          "dcc_headword": "iam",
+          "headword_source_line": 392,
+          "frequency_rank": 34
+        },
+        {
+          "lesson_form": "prius",
+          "dcc_headword": "prius or priusquam",
+          "headword_source_line": 697,
+          "frequency_rank": 484
+        },
+        {
+          "lesson_form": "relinquō",
+          "dcc_headword": "relinquō -linquere -līquī -lictum",
+          "headword_source_line": 770,
+          "frequency_rank": 144
+        },
+        {
+          "lesson_form": "quaerō",
+          "dcc_headword": "quaerō -rere -sīvī -sītum",
+          "headword_source_line": 724,
+          "frequency_rank": 113
+        }
+      ],
+      "extra_dcc_unmatched": [],
+      "reused_core_seeds": [
+        {
+          "lesson_form": "mittō",
+          "dcc_headword": "mittō mittere mīsī missum",
+          "headword_source_line": 523,
+          "frequency_rank": 114
+        }
+      ],
+      "editor_note": "Use two clearly ordered past events, not an unintroduced participial construction.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 15,
+      "v2_chapter_title": "Epistula iam vēnerat",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 29,
+      "title": "Recēnsiō VII — Litterae",
+      "story": "A short mystery reorders past actions and discovers a lost message.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "core_seeds": [],
+      "extra_dcc_unmatched": [],
+      "reused_core_seeds": [],
+      "editor_note": "Sentence ordering by time and two short rereads.",
+      "review": true,
+      "approx_new_word_cap": 0,
+      "v2_target_budget": 0,
+      "v2_chapter_title": "Recēnsiō VII — Litterae",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 30,
+      "title": "Crās in viā",
+      "story": "The family will visit friends and carry a gift tomorrow.",
+      "grammar_focus": "Future of 1st/2nd-conjugation verbs in -b-",
+      "core_seeds": [],
+      "extra_dcc_unmatched": [
+        "crās",
+        "visitō",
+        "habitō",
+        "feria"
+      ],
+      "reused_core_seeds": [
+        {
+          "lesson_form": "parō",
+          "dcc_headword": "parō -āre",
+          "headword_source_line": 623,
+          "frequency_rank": 160
+        },
+        {
+          "lesson_form": "vocō",
+          "dcc_headword": "vocō -āre",
+          "headword_source_line": 977,
+          "frequency_rank": 158
+        },
+        {
+          "lesson_form": "laudō",
+          "dcc_headword": "laudō -āre",
+          "headword_source_line": 468,
+          "frequency_rank": 435
+        }
+      ],
+      "editor_note": "Separate this from other future formations.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 15,
+      "v2_chapter_title": "Crās in viā",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 31,
+      "title": "Iter crāstinum",
+      "story": "The children ask what they will see and do on the journey.",
+      "grammar_focus": "Future of 3rd/4th-conjugation verbs (-am/-ēs/-et)",
+      "core_seeds": [
+        {
+          "lesson_form": "iter",
+          "dcc_headword": "iter itineris n.",
+          "headword_source_line": 446,
+          "frequency_rank": 230
+        }
+      ],
+      "extra_dcc_unmatched": [],
+      "reused_core_seeds": [
+        {
+          "lesson_form": "veniō",
+          "dcc_headword": "veniō venīre vēnī ventum",
+          "headword_source_line": 938,
+          "frequency_rank": 63
+        },
+        {
+          "lesson_form": "faciō",
+          "dcc_headword": "faciō facere fēcī factum",
+          "headword_source_line": 307,
+          "frequency_rank": 32
+        },
+        {
+          "lesson_form": "audiō",
+          "dcc_headword": "audiō -īre -īvī/-iī -ītum",
+          "headword_source_line": 90,
+          "frequency_rank": 165
+        },
+        {
+          "lesson_form": "ferō",
+          "dcc_headword": "ferō ferre tulī lātum",
+          "headword_source_line": 321,
+          "frequency_rank": 45
+        },
+        {
+          "lesson_form": "quaerō",
+          "dcc_headword": "quaerō -rere -sīvī -sītum",
+          "headword_source_line": 724,
+          "frequency_rank": 113
+        },
+        {
+          "lesson_form": "legō",
+          "dcc_headword": "legō legere lēgī lēctum",
+          "headword_source_line": 472,
+          "frequency_rank": 419
+        }
+      ],
+      "editor_note": "Future ībimus can appear as one annotated lexical exception, not a second paradigm.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 15,
+      "v2_chapter_title": "Iter crāstinum",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 32,
+      "title": "Cum redierit",
+      "story": "The visit will end after someone has returned with the book.",
+      "grammar_focus": "Future perfect indicative",
+      "core_seeds": [
+        {
+          "lesson_form": "cum",
+          "dcc_headword": "cum",
+          "headword_source_line": 201,
+          "frequency_rank": 10
+        },
+        {
+          "lesson_form": "redeō",
+          "dcc_headword": "redeō -īre -iī -itum",
+          "headword_source_line": 764,
+          "frequency_rank": 301
+        },
+        {
+          "lesson_form": "inveniō",
+          "dcc_headword": "inveniō -venīre -vēnī -ventum",
+          "headword_source_line": 436,
+          "frequency_rank": 316
+        }
+      ],
+      "extra_dcc_unmatched": [],
+      "reused_core_seeds": [
+        {
+          "lesson_form": "aperiō",
+          "dcc_headword": "aperiō aperīre aperuī apertum",
+          "headword_source_line": 65,
+          "frequency_rank": 837
+        },
+        {
+          "lesson_form": "faciō",
+          "dcc_headword": "faciō facere fēcī factum",
+          "headword_source_line": 307,
+          "frequency_rank": 32
+        },
+        {
+          "lesson_form": "dō",
+          "dcc_headword": "dō dare dedī datum",
+          "headword_source_line": 250,
+          "frequency_rank": 28
+        },
+        {
+          "lesson_form": "mittō",
+          "dcc_headword": "mittō mittere mīsī missum",
+          "headword_source_line": 523,
+          "frequency_rank": 114
+        }
+      ],
+      "editor_note": "Contrast future events and prior completion in a visual timeline.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 15,
+      "v2_chapter_title": "Cum redierit",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 33,
+      "title": "Recēnsiō VIII — Iter",
+      "story": "The family sets out, travels, and recounts the return.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "core_seeds": [],
+      "extra_dcc_unmatched": [],
+      "reused_core_seeds": [],
+      "editor_note": "New narrative built entirely from previously introduced grammar.",
+      "review": true,
+      "approx_new_word_cap": 0,
+      "v2_target_budget": 0,
+      "v2_chapter_title": "Recēnsiō VIII — Iter",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 34,
+      "title": "In urbe",
+      "story": "The family meets a person near the river in a large city.",
+      "grammar_focus": "3rd-declension nominative/accusative noun contrasts",
+      "core_seeds": [
+        {
+          "lesson_form": "homō",
+          "dcc_headword": "homō hominis m.",
+          "headword_source_line": 380,
+          "frequency_rank": 88
+        },
+        {
+          "lesson_form": "urbs",
+          "dcc_headword": "urbs urbis f.",
+          "headword_source_line": 986,
+          "frequency_rank": 82
+        },
+        {
+          "lesson_form": "flūmen",
+          "dcc_headword": "flūmen -inis n.",
+          "headword_source_line": 335,
+          "frequency_rank": 283
+        },
+        {
+          "lesson_form": "nōmen",
+          "dcc_headword": "nōmen -inis n.",
+          "headword_source_line": 573,
+          "frequency_rank": 135
+        },
+        {
+          "lesson_form": "corpus",
+          "dcc_headword": "corpus corporis n.",
+          "headword_source_line": 194,
+          "frequency_rank": 75
+        }
+      ],
+      "extra_dcc_unmatched": [],
+      "reused_core_seeds": [
+        {
+          "lesson_form": "canis",
+          "dcc_headword": "canis -is m./f.",
+          "headword_source_line": 118,
+          "frequency_rank": 687
+        },
+        {
+          "lesson_form": "tempus",
+          "dcc_headword": "tempus -oris n.",
+          "headword_source_line": 896,
+          "frequency_rank": 89
+        }
+      ],
+      "editor_note": "Contrast homō/hominem, canis/canem and city terms in short clauses.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 15,
+      "v2_chapter_title": "In urbe",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 35,
+      "title": "Quī librum habet?",
+      "story": "A visitor who lives nearby brings back a missing book.",
+      "grammar_focus": "Relative clauses with quī/quae/quod",
+      "core_seeds": [
+        {
+          "lesson_form": "quī",
+          "dcc_headword": "quī quae quod",
+          "headword_source_line": 738,
+          "frequency_rank": 3
+        },
+        {
+          "lesson_form": "ostendō",
+          "dcc_headword": "ostendō ostendere ostendī ostentum",
+          "headword_source_line": 615,
+          "frequency_rank": 371
+        },
+        {
+          "lesson_form": "ille",
+          "dcc_headword": "ille illa illud",
+          "headword_source_line": 399,
+          "frequency_rank": 8
+        }
+      ],
+      "extra_dcc_unmatched": [
+        "quae",
+        "quod"
+      ],
+      "reused_core_seeds": [
+        {
+          "lesson_form": "dīcō",
+          "dcc_headword": "dīcō dīcere dīxī dictum",
+          "headword_source_line": 233,
+          "frequency_rank": 33
+        },
+        {
+          "lesson_form": "quaerō",
+          "dcc_headword": "quaerō -rere -sīvī -sītum",
+          "headword_source_line": 724,
+          "frequency_rank": 113
+        }
+      ],
+      "editor_note": "Start with subjects in simple relative clauses.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 15,
+      "v2_chapter_title": "Omnēs fortēs?",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 36,
+      "title": "Hic an ille?",
+      "story": "Līvia distinguishes two baskets and the people who own them.",
+      "grammar_focus": "Demonstrative pronouns hic/haec/hoc and ille/illa/illud",
+      "core_seeds": [
+        {
+          "lesson_form": "alius",
+          "dcc_headword": "alius -a -ud",
+          "headword_source_line": 46,
+          "frequency_rank": 37
+        },
+        {
+          "lesson_form": "alter",
+          "dcc_headword": "alter altera alterum",
+          "headword_source_line": 48,
+          "frequency_rank": 148
+        },
+        {
+          "lesson_form": "ipse",
+          "dcc_headword": "ipse ipsa ipsum",
+          "headword_source_line": 438,
+          "frequency_rank": 22
+        },
+        {
+          "lesson_form": "ūnus",
+          "dcc_headword": "ūnus -a -um",
+          "headword_source_line": 976,
+          "frequency_rank": 53
+        },
+        {
+          "lesson_form": "omnis",
+          "dcc_headword": "omnis -e",
+          "headword_source_line": 600,
+          "frequency_rank": 18
+        }
+      ],
+      "extra_dcc_unmatched": [],
+      "reused_core_seeds": [
+        {
+          "lesson_form": "hic",
+          "dcc_headword": "hic haec hoc",
+          "headword_source_line": 376,
+          "frequency_rank": 7
+        },
+        {
+          "lesson_form": "ille",
+          "dcc_headword": "ille illa illud",
+          "headword_source_line": 399,
+          "frequency_rank": 8
+        }
+      ],
+      "editor_note": "Build a controlled this/that contrast using two pictures.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 15,
+      "v2_chapter_title": "Quī librum habet?",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 37,
+      "title": "Recēnsiō IX — Cuius liber?",
+      "story": "The family identifies lost property by its owner and location.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "core_seeds": [],
+      "extra_dcc_unmatched": [],
+      "reused_core_seeds": [],
+      "editor_note": "No passive participles or extra case paradigms in this review.",
+      "review": true,
+      "approx_new_word_cap": 0,
+      "v2_target_budget": 0,
+      "v2_chapter_title": "Recēnsiō IX — Cuius liber?",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 38,
+      "title": "Vocātur",
+      "story": "At the forum people are summoned, and goods are sold.",
+      "grammar_focus": "Present passive -tur/-ntur",
+      "core_seeds": [],
+      "extra_dcc_unmatched": [
+        "vendō"
+      ],
+      "reused_core_seeds": [
+        {
+          "lesson_form": "vocō",
+          "dcc_headword": "vocō -āre",
+          "headword_source_line": 977,
+          "frequency_rank": 158
+        },
+        {
+          "lesson_form": "laudō",
+          "dcc_headword": "laudō -āre",
+          "headword_source_line": 468,
+          "frequency_rank": 435
+        },
+        {
+          "lesson_form": "servō",
+          "dcc_headword": "servō -āre",
+          "headword_source_line": 823,
+          "frequency_rank": 289
+        },
+        {
+          "lesson_form": "mittō",
+          "dcc_headword": "mittō mittere mīsī missum",
+          "headword_source_line": 523,
+          "frequency_rank": 114
+        },
+        {
+          "lesson_form": "audiō",
+          "dcc_headword": "audiō -īre -īvī/-iī -ītum",
+          "headword_source_line": 90,
+          "frequency_rank": 165
+        },
+        {
+          "lesson_form": "forum",
+          "dcc_headword": "forum -ī n.",
+          "headword_source_line": 346,
+          "frequency_rank": 811
+        }
+      ],
+      "editor_note": "Pair active and passive depictions side by side.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 15,
+      "v2_chapter_title": "Vocātur",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 39,
+      "title": "Dōnum repertum est",
+      "story": "The family learns that a lost object has been found.",
+      "grammar_focus": "Perfect passive participle + sum as a verb",
+      "core_seeds": [],
+      "extra_dcc_unmatched": [],
+      "reused_core_seeds": [
+        {
+          "lesson_form": "inveniō",
+          "dcc_headword": "inveniō -venīre -vēnī -ventum",
+          "headword_source_line": 436,
+          "frequency_rank": 316
+        },
+        {
+          "lesson_form": "aperiō",
+          "dcc_headword": "aperiō aperīre aperuī apertum",
+          "headword_source_line": 65,
+          "frequency_rank": 837
+        },
+        {
+          "lesson_form": "mittō",
+          "dcc_headword": "mittō mittere mīsī missum",
+          "headword_source_line": 523,
+          "frequency_rank": 114
+        },
+        {
+          "lesson_form": "scribō",
+          "dcc_headword": "scrībō scrībere scrīpsī scrīptum",
+          "headword_source_line": 806,
+          "frequency_rank": 568
+        },
+        {
+          "lesson_form": "dō",
+          "dcc_headword": "dō dare dedī datum",
+          "headword_source_line": 250,
+          "frequency_rank": 28
+        },
+        {
+          "lesson_form": "ferō",
+          "dcc_headword": "ferō ferre tulī lātum",
+          "headword_source_line": 321,
+          "frequency_rank": 45
+        },
+        {
+          "lesson_form": "relinquō",
+          "dcc_headword": "relinquō -linquere -līquī -lictum",
+          "headword_source_line": 770,
+          "frequency_rank": 144
+        }
+      ],
+      "editor_note": "Keep participial adjective use for later.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 15,
+      "v2_chapter_title": "Dōnum repertum est",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 40,
+      "title": "Canis currēns",
+      "story": "A dog running through the gate follows a boy carrying a basket.",
+      "grammar_focus": "Present active participle -ns/-ntis",
+      "core_seeds": [
+        {
+          "lesson_form": "sequor",
+          "dcc_headword": "sequor sequī secūtus sum",
+          "headword_source_line": 820,
+          "frequency_rank": 108
+        },
+        {
+          "lesson_form": "fugiō",
+          "dcc_headword": "fugiō fugere fūgī fugitum",
+          "headword_source_line": 356,
+          "frequency_rank": 177
+        }
+      ],
+      "extra_dcc_unmatched": [],
+      "reused_core_seeds": [
+        {
+          "lesson_form": "currō",
+          "dcc_headword": "currō currere cucurrī cursum",
+          "headword_source_line": 208,
+          "frequency_rank": 562
+        },
+        {
+          "lesson_form": "portō",
+          "dcc_headword": "portō -āre",
+          "headword_source_line": 666,
+          "frequency_rank": 853
+        },
+        {
+          "lesson_form": "teneō",
+          "dcc_headword": "teneō -ēre -uī tentum",
+          "headword_source_line": 899,
+          "frequency_rank": 106
+        },
+        {
+          "lesson_form": "videō",
+          "dcc_headword": "videō vidēre vīdī vīsum",
+          "headword_source_line": 955,
+          "frequency_rank": 31
+        },
+        {
+          "lesson_form": "sedeō",
+          "dcc_headword": "sedeō sedēre sēdī sessum",
+          "headword_source_line": 810,
+          "frequency_rank": 506
+        }
+      ],
+      "editor_note": "The image needs clear simultaneous actions.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 15,
+      "v2_chapter_title": "Canis currēns",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 41,
+      "title": "Recēnsiō X — Quid factum est?",
+      "story": "A short account contrasts ongoing actions, completed passive events and persons acting.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "core_seeds": [],
+      "extra_dcc_unmatched": [],
+      "reused_core_seeds": [],
+      "editor_note": "No new lexical or grammatical forms in the cumulative reading.",
+      "review": true,
+      "approx_new_word_cap": 0,
+      "v2_target_budget": 0,
+      "v2_chapter_title": "Recēnsiō X — Quid factum est?",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 42,
+      "title": "Līvia dīcit…",
+      "story": "Līvia reports that a traveller is approaching the house.",
+      "grammar_focus": "Accusative + infinitive in indirect statement",
+      "core_seeds": [
+        {
+          "lesson_form": "sciō",
+          "dcc_headword": "sciō -īre -īvī/-iī -ītum",
+          "headword_source_line": 805,
+          "frequency_rank": 172
+        },
+        {
+          "lesson_form": "crēdō",
+          "dcc_headword": "crēdō crēdere crēdidī crēditum",
+          "headword_source_line": 196,
+          "frequency_rank": 109
+        },
+        {
+          "lesson_form": "sentīō",
+          "dcc_headword": "sentiō sentīre sēnsī sēnsum",
+          "headword_source_line": 818,
+          "frequency_rank": 302
+        }
+      ],
+      "extra_dcc_unmatched": [],
+      "reused_core_seeds": [
+        {
+          "lesson_form": "dīcō",
+          "dcc_headword": "dīcō dīcere dīxī dictum",
+          "headword_source_line": 233,
+          "frequency_rank": 33
+        },
+        {
+          "lesson_form": "putō",
+          "dcc_headword": "putō -āre",
+          "headword_source_line": 722,
+          "frequency_rank": 166
+        },
+        {
+          "lesson_form": "audiō",
+          "dcc_headword": "audiō -īre -īvī/-iī -ītum",
+          "headword_source_line": 90,
+          "frequency_rank": 165
+        },
+        {
+          "lesson_form": "videō",
+          "dcc_headword": "videō vidēre vīdī vīsum",
+          "headword_source_line": 955,
+          "frequency_rank": 31
+        }
+      ],
+      "editor_note": "Keep tense of infinitive present; later readings can add perfect infinitives.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 15,
+      "v2_chapter_title": "Līvia dīcit…",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 43,
+      "title": "Nūntiō acceptō",
+      "story": "After receiving news, the family begins a journey.",
+      "grammar_focus": "Ablative absolute (noun + perfect passive participle)",
+      "core_seeds": [
+        {
+          "lesson_form": "nūntius",
+          "dcc_headword": "nūntius -ī m.",
+          "headword_source_line": 589,
+          "frequency_rank": 919
+        },
+        {
+          "lesson_form": "hostis",
+          "dcc_headword": "hostis -is m./f.",
+          "headword_source_line": 386,
+          "frequency_rank": 93
+        }
+      ],
+      "extra_dcc_unmatched": [],
+      "reused_core_seeds": [
+        {
+          "lesson_form": "accipiō",
+          "dcc_headword": "accipiō -cipere -cēpī -ceptum",
+          "headword_source_line": 8,
+          "frequency_rank": 110
+        },
+        {
+          "lesson_form": "faciō",
+          "dcc_headword": "faciō facere fēcī factum",
+          "headword_source_line": 307,
+          "frequency_rank": 32
+        },
+        {
+          "lesson_form": "relinquō",
+          "dcc_headword": "relinquō -linquere -līquī -lictum",
+          "headword_source_line": 770,
+          "frequency_rank": 144
+        },
+        {
+          "lesson_form": "mittō",
+          "dcc_headword": "mittō mittere mīsī missum",
+          "headword_source_line": 523,
+          "frequency_rank": 114
+        },
+        {
+          "lesson_form": "iter",
+          "dcc_headword": "iter itineris n.",
+          "headword_source_line": 446,
+          "frequency_rank": 230
+        }
+      ],
+      "editor_note": "One simple detached phrase, illustrated before/after.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 15,
+      "v2_chapter_title": "Nūntius ventūrus",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 44,
+      "title": "Canis sequitur",
+      "story": "The dog follows a friend who tries to speak to the family.",
+      "grammar_focus": "Deponent verbs (present forms, active meanings)",
+      "core_seeds": [
+        {
+          "lesson_form": "loquor",
+          "dcc_headword": "loquor loquī locūtus sum",
+          "headword_source_line": 489,
+          "frequency_rank": 310
+        },
+        {
+          "lesson_form": "hortor",
+          "dcc_headword": "hortor hortārī hortātus sum",
+          "headword_source_line": 384,
+          "frequency_rank": 887
+        },
+        {
+          "lesson_form": "ingredior",
+          "dcc_headword": "ingredior -gredī -gressus sum:",
+          "headword_source_line": 419,
+          "frequency_rank": 885
+        },
+        {
+          "lesson_form": "moror",
+          "dcc_headword": "moror morārī morātus sum",
+          "headword_source_line": 533,
+          "frequency_rank": 581
+        },
+        {
+          "lesson_form": "proficīscor",
+          "dcc_headword": "proficīscor -ficīscī -fectus sum",
+          "headword_source_line": 704,
+          "frequency_rank": 835
+        },
+        {
+          "lesson_form": "arbitror",
+          "dcc_headword": "arbitror arbitrārī arbitrātus sum",
+          "headword_source_line": 72,
+          "frequency_rank": 963
+        }
+      ],
+      "extra_dcc_unmatched": [],
+      "reused_core_seeds": [
+        {
+          "lesson_form": "sequor",
+          "dcc_headword": "sequor sequī secūtus sum",
+          "headword_source_line": 820,
+          "frequency_rank": 108
+        }
+      ],
+      "editor_note": "Make deponent forms recognizable without teaching every principal part at once.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 15,
+      "v2_chapter_title": "Canis sequitur",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 45,
+      "title": "Recēnsiō XI — Iter nūntiī",
+      "story": "A small original fable-like journey revisits participles, reports and deponents.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "core_seeds": [],
+      "extra_dcc_unmatched": [],
+      "reused_core_seeds": [],
+      "editor_note": "Avoid unreviewed constructions; add a listening version only when verified.",
+      "review": true,
+      "approx_new_word_cap": 0,
+      "v2_target_budget": 0,
+      "v2_chapter_title": "Recēnsiō XI — Iter nūntiī",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 46,
+      "title": "Maior an minor?",
+      "story": "The children compare two trees, two animals and two houses.",
+      "grammar_focus": "Comparative adjectives (-ior/-ius), with quam",
+      "core_seeds": [
+        {
+          "lesson_form": "longus",
+          "dcc_headword": "longus -a -um",
+          "headword_source_line": 488,
+          "frequency_rank": 142
+        },
+        {
+          "lesson_form": "altus",
+          "dcc_headword": "altus -a -um",
+          "headword_source_line": 49,
+          "frequency_rank": 159
+        },
+        {
+          "lesson_form": "quam",
+          "dcc_headword": "quam",
+          "headword_source_line": 726,
+          "frequency_rank": 29
+        }
+      ],
+      "extra_dcc_unmatched": [],
+      "reused_core_seeds": [
+        {
+          "lesson_form": "magnus",
+          "dcc_headword": "māgnus -a -um",
+          "headword_source_line": 497,
+          "frequency_rank": 25
+        },
+        {
+          "lesson_form": "parvus",
+          "dcc_headword": "parvus -a -um",
+          "headword_source_line": 626,
+          "frequency_rank": 143
+        },
+        {
+          "lesson_form": "bonus",
+          "dcc_headword": "bonus -a -um",
+          "headword_source_line": 106,
+          "frequency_rank": 68
+        },
+        {
+          "lesson_form": "malus",
+          "dcc_headword": "malus -a -um",
+          "headword_source_line": 501,
+          "frequency_rank": 227
+        }
+      ],
+      "editor_note": "Superlatives remain an optional explicitly marked later subtopic.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 15,
+      "v2_chapter_title": "Maior an minor?",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 47,
+      "title": "Manūs et portūs",
+      "story": "People load boxes by hand at a harbour.",
+      "grammar_focus": "4th-declension noun forms in context",
+      "core_seeds": [
+        {
+          "lesson_form": "manus",
+          "dcc_headword": "manus -ūs f.",
+          "headword_source_line": 503,
+          "frequency_rank": 48
+        },
+        {
+          "lesson_form": "exercitus",
+          "dcc_headword": "exercitus -ūs m.",
+          "headword_source_line": 296,
+          "frequency_rank": 267
+        },
+        {
+          "lesson_form": "frūctus",
+          "dcc_headword": "frūctus -ūs m.",
+          "headword_source_line": 351,
+          "frequency_rank": 927
+        },
+        {
+          "lesson_form": "senātus",
+          "dcc_headword": "senātus -ūs m.",
+          "headword_source_line": 814,
+          "frequency_rank": 329
+        },
+        {
+          "lesson_form": "gradus",
+          "dcc_headword": "gradus -ūs m.",
+          "headword_source_line": 370,
+          "frequency_rank": 577
+        }
+      ],
+      "extra_dcc_unmatched": [
+        "portus",
+        "adventus"
+      ],
+      "reused_core_seeds": [],
+      "editor_note": "Begin with two familiar cases, not an entire declension table.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 15,
+      "v2_chapter_title": "Maximus an minimus?",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 48,
+      "title": "Diēs et rēs",
+      "story": "A problem at the harbour is resolved on a particular day.",
+      "grammar_focus": "5th-declension noun forms in context",
+      "core_seeds": [
+        {
+          "lesson_form": "rēs",
+          "dcc_headword": "rēs reī f.",
+          "headword_source_line": 775,
+          "frequency_rank": 38
+        },
+        {
+          "lesson_form": "spēs",
+          "dcc_headword": "spēs speī f.",
+          "headword_source_line": 854,
+          "frequency_rank": 232
+        },
+        {
+          "lesson_form": "fidēs",
+          "dcc_headword": "fidēs -eī f.",
+          "headword_source_line": 326,
+          "frequency_rank": 184
+        },
+        {
+          "lesson_form": "faciēs",
+          "dcc_headword": "faciēs -ēī f.",
+          "headword_source_line": 304,
+          "frequency_rank": 479
+        },
+        {
+          "lesson_form": "aciēs",
+          "dcc_headword": "aciēs -ēī f.",
+          "headword_source_line": 10,
+          "frequency_rank": 439
+        }
+      ],
+      "extra_dcc_unmatched": [
+        "seriēs"
+      ],
+      "reused_core_seeds": [
+        {
+          "lesson_form": "diēs",
+          "dcc_headword": "diēs diēī m./f.",
+          "headword_source_line": 234,
+          "frequency_rank": 54
+        }
+      ],
+      "editor_note": "Reuse diēs and rēs before rarer fifth-declension vocabulary.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 15,
+      "v2_chapter_title": "Manūs et portūs",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 49,
+      "title": "Recēnsiō XII — In portū",
+      "story": "An original harbour story recycles comparisons, deponents and fourth/fifth declensions.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "core_seeds": [],
+      "extra_dcc_unmatched": [],
+      "reused_core_seeds": [],
+      "editor_note": "Last full review before the bridge story.",
+      "review": true,
+      "approx_new_word_cap": 0,
+      "v2_target_budget": 0,
+      "v2_chapter_title": "Recēnsiō XII — In portū",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    },
+    {
+      "chapter": 50,
+      "title": "Fābula prīma — Pōns ad librōs",
+      "story": "An original fable about an animal, a friend and a helpful action opens a path to adapted classics.",
+      "grammar_focus": "Affirmative purpose clause ut + present subjunctive",
+      "core_seeds": [
+        {
+          "lesson_form": "ut",
+          "dcc_headword": "ut, utī",
+          "headword_source_line": 989,
+          "frequency_rank": 15
+        },
+        {
+          "lesson_form": "iuvō",
+          "dcc_headword": "iuvō iuvāre iūvī iūtum",
+          "headword_source_line": 458,
+          "frequency_rank": 390
+        }
+      ],
+      "extra_dcc_unmatched": [],
+      "reused_core_seeds": [
+        {
+          "lesson_form": "rogō",
+          "dcc_headword": "rogō -āre",
+          "headword_source_line": 785,
+          "frequency_rank": 551
+        },
+        {
+          "lesson_form": "parō",
+          "dcc_headword": "parō -āre",
+          "headword_source_line": 623,
+          "frequency_rank": 160
+        },
+        {
+          "lesson_form": "veniō",
+          "dcc_headword": "veniō venīre vēnī ventum",
+          "headword_source_line": 938,
+          "frequency_rank": 63
+        },
+        {
+          "lesson_form": "aperiō",
+          "dcc_headword": "aperiō aperīre aperuī apertum",
+          "headword_source_line": 65,
+          "frequency_rank": 837
+        },
+        {
+          "lesson_form": "amīcus",
+          "dcc_headword": "amīcus -a -um",
+          "headword_source_line": 51,
+          "frequency_rank": 198
+        }
+      ],
+      "editor_note": "First original bridge reading; no imported ancient text without source and licence checks.",
+      "review": false,
+      "approx_new_word_cap": 15,
+      "v2_target_budget": 15,
+      "v2_chapter_title": "Fābula prīma — Pōns ad librōs",
+      "legacy_seed_status": "candidates_only_not_verified_in_revised_grammar_story"
+    }
+  ],
+  "active_outline": "curriculum/CURRICULUM_130_MASTER_PLAN.md",
+  "planned_new_lemmas_foundation": 500,
+  "maximum_new_lemmas_meaning": "Upper bound 38 teaching chapters x 15; not the current planned lexical allocation or a verified introduced count",
+  "ledger_note": "Historical seed audit for initial 50-chapter plan: title/grammar may differ from v2. Use 130-chapter manifest for active syllabus. All seeds require revalidation against authored Latin text."
+}

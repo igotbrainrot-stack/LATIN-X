@@ -1,0 +1,7 @@
+LATIN X — Review round 3.
+
+Second owner review received: vīlla v2 accepted; Līvia s009, aqua, quoque v2 rejected; Līvia s007 no formal verdict but a negative note. These are preserved in docs/audio.
+
+Run DOWNLOAD_MIRIAM_ALIAS_V3.cmd while online (four new Runway-generated clips), then Start Miriam Alias Review v3.cmd to compare against the original embedded recordings. Export LATIN_X_MIRIAM_ALIAS_V3_REVIEW.json and upload it.
+
+The app/lessons/art/progress remain unchanged. No new audio is installed into the reader without owner approval.

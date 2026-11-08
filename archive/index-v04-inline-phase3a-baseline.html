@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tablinum — Prima Via</title>
+<style>
+/* TABLINVM — MANUSCRIPT EDITION / presentation-only theme.
+   No remote fonts, external images, scripts, or changes to course data. */
+:root {
+  color-scheme: light;
+  --parchment: #eee1c9;
+  --parchment-deep: #dfcdb0;
+  --vellum: #e9dcc4;
+  --paper: #faf3e5;
+  --paper-bright: #fff8ea;
+  --paper-inset: #f4e9d4;
+  --ink: #382b21;
+  --ink-soft: #59483a;
+  --ink-muted: #685748;
+  --umber: #493425;
+  --rule: #b9a284;
+  --rule-light: #d9c8ad;
+  --terracotta: #a55c45;
+  --ochre: #765a2a;
+  --olive: #586342;
+  --burgundy: #723c3a;
+  --good-ink: #39462b;
+  --good-paper: #e9eddf;
+  --bad-ink: #703c37;
+  --bad-paper: #f2e4dc;
+  --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", "Baskerville", Georgia, serif;
+  --display: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  font-family: var(--serif);
+  color: var(--ink);
+  background: var(--parchment);
+}
+* { box-sizing: border-box; }
+html { min-width: 320px; background: var(--parchment); }
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: var(--serif);
+  font-size: 15px;
+  line-height: 1.58;
+  letter-spacing: .004em;
+  color: var(--ink);
+  background:
+    radial-gradient(ellipse at 8% 10%, rgba(255,255,250,.53), transparent 42%),
+    radial-gradient(ellipse at 94% 73%, rgba(128,86,45,.085), transparent 45%),
+    repeating-linear-gradient(90deg, rgba(107,79,49,.012) 0px, transparent 2px, transparent 6px),
+    var(--parchment);
+}
+/* Restrained fibre grain; entirely CSS so the application stays offline. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: .22;
+  background:
+    repeating-linear-gradient(4deg, transparent 0 16px, rgba(77,55,35,.035) 17px, transparent 18px 35px),
+    repeating-linear-gradient(103deg, transparent 0 37px, rgba(255,255,255,.13) 38px, transparent 39px 70px);
+}
+header, .codex, .dock, footer, .app-status { position: relative; z-index: 1; }
+button, input, textarea, select { font: inherit; }
+button { cursor: pointer; }
+button[hidden], [hidden] { display: none !important; }
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+summary:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--olive);
+  outline-offset: 3px;
+}
+button:disabled { cursor: not-allowed; opacity: .72; }
+
+/* Title leaf: inscription typography over parchment, not a SaaS banner. */
+header {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 30px 34px 27px;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 20px;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+header::after {
+  position: absolute;
+  content: "";
+  bottom: 10px;
+  left: 34px;
+  right: 34px;
+  height: 4px;
+  border-top: 1px solid var(--ochre);
+  border-bottom: 1px solid var(--rule);
+}
+.logo {
+  color: var(--umber);
+  font-family: var(--display);
+  font-size: clamp(34px, 4vw, 48px);
+  font-weight: 600;
+  font-variant: small-caps;
+  letter-spacing: .09em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+.tag {
+  margin-top: 7px;
+  color: var(--burgundy);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+}
+header .edition-note {
+  max-width: 290px;
+  padding-bottom: 6px;
+  color: var(--ink-soft);
+  text-align: right;
+  font-size: 12px;
+  font-style: italic;
+  letter-spacing: .035em;
+  line-height: 1.45;
+}
+
+/* The entire study area is one folio with ruled sections. */
+.codex {
+  width: min(1420px, calc(100% - 46px));
+  margin: 10px auto 16px;
+  overflow: clip;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  box-shadow: 0 1px 0 rgba(255,255,255,.65) inset, 0 8px 27px rgba(57,41,28,.10);
+}
+#tabs {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: thin;
+  padding: 0 16px;
+  background: linear-gradient(#f2e9d8, #e9dbc3);
+  border-bottom: 3px double var(--rule);
+}
+#tabs button {
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 15px 18px 13px;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  color: var(--ink-soft);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .11em;
+  white-space: nowrap;
+  transition: color .15s ease, background .15s ease, border-color .15s ease;
+}
+#tabs button:hover { color: var(--burgundy); background: rgba(255,248,232,.42); }
+#tabs button.active, #tabs button[aria-current="page"] {
+  color: var(--burgundy);
+  background: rgba(255,251,241,.67);
+  border-bottom-color: var(--burgundy);
+}
+.layout {
+  display: grid;
+  grid-template-columns: 202px minmax(0, 1fr) 245px;
+  min-height: 670px;
+  max-width: none;
+  margin: 0;
+  background: var(--paper);
+}
+aside {
+  min-width: 0;
+  background: linear-gradient(110deg, var(--vellum), #efe3cd);
+  padding: 26px 17px;
+  color: var(--ink);
+}
+aside.chapters { border-right: 1px solid var(--rule-light); }
+aside.help-aside {
+  border-left: 1px solid var(--rule-light);
+  border-right: 0;
+  background: linear-gradient(100deg, #f2e7d4, #ecdec5);
+}
+#main {
+  min-width: 0;
+  padding: 28px clamp(22px, 3.2vw, 54px) 40px;
+  background:
+    linear-gradient(90deg, rgba(117,85,48,.024), transparent 8%, transparent 92%, rgba(117,85,48,.023)),
+    var(--paper);
+}
+
+/* Section typesetting */
+h1, h2, h3 {
+  margin: 0 0 11px;
+  color: var(--umber);
+  font-family: var(--display);
+  font-weight: 600;
+  line-height: 1.23;
+}
+h1 { margin: 3px 0 7px; font-size: clamp(30px, 3.2vw, 40px); letter-spacing: -.025em; }
+h2 { font-size: 25px; }
+h3 { font-size: 20px; }
+.mini {
+  color: var(--burgundy);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .14em;
+}
+.subtle, small { color: var(--ink-soft); }
+.subtle { font-size: 14px; }
+small { font-size: 12px; }
+
+/* Book index in the left margin */
+.chapters > .mini {
+  display: block;
+  padding: 0 3px 12px;
+  margin: 0 0 10px !important;
+  border-bottom: 1px solid var(--rule);
+}
+.ch {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 10px 7px 11px;
+  margin-bottom: 2px;
+  text-align: left;
+  border: 0;
+  border-left: 2px solid transparent;
+  border-radius: 0;
+  color: var(--ink-soft);
+  background: transparent;
+}
+.ch > strong {
+  min-width: 17px;
+  flex: 0 0 auto;
+  color: var(--ochre);
+  font-family: var(--display);
+  font-size: 16px;
+  font-weight: 600;
+}
+.ch span { min-width: 0; }
+.ch span strong {
+  display: block;
+  color: var(--ink);
+  font-family: var(--display);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+.ch small { display: block; margin-top: 3px; font-size: 11px; line-height: 1.32; color: var(--ink-muted); }
+.ch:hover { background: rgba(255,255,248,.34); color: var(--burgundy); }
+.ch.active, .ch[aria-current="true"] {
+  background: rgba(255,250,239,.63);
+  border-left-color: var(--terracotta);
+}
+.ch.active > strong, .ch.active span strong { color: var(--burgundy); }
+
+/* Illustration as a lightly toned plate, not a bright flat cartoon card. */
+.scene {
+  position: relative;
+  margin: 22px 0;
+  overflow: hidden;
+  background: #e7dac2;
+  border: 1px solid var(--rule);
+  border-radius: 0;
+  box-shadow: inset 0 0 0 5px rgba(255,249,235,.55);
+}
+.scene::after {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px solid rgba(103,73,45,.28);
+  background: rgba(110,75,43,.025);
+  pointer-events: none;
+}
+.scene svg {
+  display: block;
+  width: 100%;
+  height: 200px;
+  background: #e7ddc9;
+  filter: none; /* Narrative colour (e.g. rosam rubram) is semantic content. */
+}
+.caption {
+  padding: 10px 17px;
+  border-top: 1px solid var(--rule-light);
+  background: var(--paper-inset);
+  color: var(--ink-soft);
+  font: italic 15px/1.5 var(--serif);
+}
+
+/* Ruled passages: separate sentences like paragraphs, not floating cards. */
+.sentence {
+  margin: 0;
+  padding: 16px 15px 18px;
+  background: transparent;
+  border: 0;
+  border-top: 1px solid var(--rule-light);
+  border-left: 3px solid transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+.sentence + .sentence { margin-top: 0; }
+.sentence.selected {
+  background: linear-gradient(90deg, rgba(171,117,71,.085), rgba(171,117,71,0) 82%);
+  border-color: var(--rule-light);
+  border-left-color: var(--burgundy);
+  box-shadow: none;
+}
+.sentence .mini { color: var(--ink-muted); font-size: 10px; letter-spacing: .13em; }
+.words {
+  margin: 7px 0;
+  color: var(--ink);
+  font: normal 22px/1.8 var(--serif);
+  cursor: text;
+  overflow-wrap: anywhere;
+}
+.word {
+  display: inline;
+  padding: 0 1px;
+  border: 0;
+  border-bottom: 1px dotted rgba(114,60,58,.42);
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  text-align: inherit;
+  text-decoration: none;
+}
+.word:hover { color: var(--burgundy); border-bottom-color: var(--burgundy); background: rgba(175,124,62,.11); }
+.word:focus-visible { background: #f4e1c0; outline-offset: 1px; }
+.hint-words { font-size: 16px; line-height: 1.7; }
+.hint-words .word { font: inherit; border-bottom-color: rgba(114,60,58,.3); }
+.sentence .tools { margin: 10px 0 0; }
+.help {
+  margin: 13px 0 0;
+  padding: 12px 14px;
+  border: 1px solid var(--rule-light);
+  border-left: 3px solid var(--olive);
+  border-radius: 0;
+  background: var(--paper-inset);
+  color: var(--ink-soft);
+  font-size: 13px;
+  line-height: 1.65;
+}
+.help strong { color: var(--umber); font-family: var(--display); font-size: 15px; }
+
+/* All controls are modest rectangular engraved furniture. */
+.tools { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 13px 0; }
+.btn {
+  padding: 9px 13px;
+  min-height: 36px;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  background: linear-gradient(#fcf4e5, #eedfc6);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.62);
+  color: var(--umber);
+  font-family: var(--serif);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.3;
+  transition: background .15s ease, border-color .15s ease;
+}
+.btn:hover { border-color: var(--terracotta); background: var(--paper-bright); }
+.btn.primary, .primary {
+  border-color: #643431;
+  background: linear-gradient(#854d46, var(--burgundy));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.13);
+  color: #fff8e9;
+}
+.btn.primary:hover, .primary:hover { background: #603433; color: #fff8e9; }
+.link {
+  padding: 5px 3px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--burgundy);
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgba(114,60,58,.55);
+  text-underline-offset: 3px;
+}
+.link:hover { color: #4c2626; text-decoration-color: currentColor; }
+
+/* Study notes, workbook exercises and marginal scholia */
+.note {
+  padding: 12px 15px;
+  margin: 14px 0;
+  border: 1px solid var(--rule-light);
+  border-left: 3px solid var(--ochre);
+  border-radius: 0;
+  background: #f1e7d4;
+  color: var(--ink-soft);
+  font-size: 13px;
+}
+.panel {
+  margin: 16px 0;
+  padding: 15px 16px;
+  background: rgba(255,250,239,.55);
+  border: 1px solid var(--rule-light);
+  border-radius: 0;
+  box-shadow: none;
+}
+.panel h2 { font-size: 23px; }
+#help .panel { background: rgba(255,252,244,.55); padding: 14px 12px; }
+#help h3 { margin-top: 5px; }
+#help .tools { gap: 5px; }
+#help .btn { font-size: 12px; }
+.quiz {
+  margin: 15px 0 19px;
+  padding: 19px 20px 20px;
+  border: 1px solid var(--rule-light);
+  border-top: 2px solid var(--ochre);
+  border-radius: 0;
+  background: rgba(255,250,239,.7);
+  box-shadow: none;
+}
+.question { margin: 11px 0 15px; color: var(--ink); font: normal 20px/1.55 var(--serif); }
+.option {
+  display: block;
+  width: 100%;
+  padding: 11px 13px;
+  margin: 7px 0;
+  text-align: left;
+  border: 1px solid var(--rule-light);
+  border-radius: 2px;
+  background: var(--paper-bright);
+  color: var(--ink);
+  font: normal 15px/1.5 var(--serif);
+}
+.option:hover { border-color: var(--ochre); background: #f2e7d5; }
+.option:disabled { opacity: 1; }
+.option.is-correct, .good {
+  background: var(--good-paper);
+  border-color: #8b9779;
+  color: var(--good-ink);
+}
+.option.is-wrong, .bad {
+  background: var(--bad-paper);
+  border-color: #bb9288;
+  color: var(--bad-ink);
+}
+.good, .bad { margin-top: 10px; padding: 10px 12px; border-width: 1px; border-style: solid; border-radius: 0; font-size: 13px; }
+
+/* The learner's ledger; slim rather than dashboard-style cards. */
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 9px; margin: 20px 0; }
+.stat {
+  min-width: 0;
+  padding: 13px 11px;
+  border: 1px solid var(--rule-light);
+  border-radius: 0;
+  background: var(--paper-inset);
+}
+.stat b { display: block; color: var(--burgundy); font: normal 29px/1.25 var(--display); }
+.stat small { display: block; margin-top: 5px; color: var(--ink-soft); font-size: 11px; }
+.bar { height: 6px; margin-top: 9px; overflow: hidden; border-radius: 0; background: #e2d3b8; }
+.bar > div { height: 100%; background: var(--olive); }
+
+/* Text, audio and archive inputs, kept easy to operate. */
+.field, input[type="text"], textarea, select {
+  width: 100%;
+  min-width: 0;
+  padding: 10px 12px;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  background: var(--paper-bright);
+  box-shadow: inset 0 1px 2px rgba(75,50,28,.035);
+  color: var(--ink);
+}
+textarea.field { min-height: 110px; resize: vertical; line-height: 1.58; }
+input[type="file"].field { display: block; padding: 10px 9px; font-size: 13px; }
+input[type="range"] { width: 100%; accent-color: var(--burgundy); }
+label[for] { display: block; margin-top: 12px; color: var(--ink-soft); font-size: 13px; font-weight: 600; }
+details {
+  margin: 13px 0;
+  padding: 11px 13px;
+  border: 1px solid var(--rule-light);
+  border-radius: 0;
+  background: var(--paper-inset);
+}
+summary { color: var(--burgundy); cursor: pointer; font-weight: 600; }
+pre {
+  overflow: auto;
+  max-width: 100%;
+  padding: 12px;
+  background: #e9ddc6;
+  border: 1px solid var(--rule-light);
+  color: var(--ink);
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+/* A paper-coloured control strip follows the folio while scrolling. */
+.dock {
+  position: sticky;
+  bottom: 0;
+  z-index: 4;
+  width: min(1420px, calc(100% - 46px));
+  margin: 0 auto;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  border: 1px solid var(--rule);
+  border-top: 3px double var(--ochre);
+  border-radius: 0;
+  background: linear-gradient(#f3e8d5, #e8d8bf);
+  box-shadow: 0 -3px 15px rgba(61,44,25,.10);
+}
+.dock > div:first-child { min-width: 175px; flex: 1 1 185px; }
+.dock > div:first-child b { display: block; color: var(--umber); font-size: 13px; }
+.dock small { display: block; margin-top: 2px; font-size: 11px; color: var(--ink-soft); }
+.dock .tools { margin: 0; }
+.app-status {
+  width: min(1420px, calc(100% - 46px));
+  min-height: 27px;
+  margin: 0 auto;
+  padding: 5px 14px;
+  background: var(--paper-inset);
+  border: 1px solid var(--rule-light);
+  border-top: 0;
+  color: var(--bad-ink);
+  font-size: 12px;
+}
+.app-status:empty {
+  min-height: 0;
+  height: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  /* Keep the aria-live status element in the accessibility tree. */
+}
+footer {
+  width: min(1420px, calc(100% - 46px));
+  margin: 0 auto 28px;
+  padding: 13px 4px 0;
+  border: 0;
+  border-top: 1px solid var(--rule);
+  background: transparent;
+  color: var(--ink-soft);
+  font-size: 11px;
+  font-style: italic;
+}
+
+/* Intermediate tablets: glossary moves beneath the reader. */
+@media (max-width: 1120px) {
+  .layout { grid-template-columns: 190px minmax(0,1fr); }
+  #main { padding: 25px 30px 33px; }
+  aside.help-aside {
+    grid-column: 2;
+    border-top: 1px solid var(--rule-light);
+    border-left: 0;
+    background: var(--paper-inset);
+    padding: 20px 28px;
+  }
+  #help .panel { max-width: 100%; }
+}
+
+/* Small screens are a single narrow folio; chapter strip scrolls horizontally. */
+@media (max-width: 720px) {
+  /* Compact title page: surface the first Latin sentence without scrolling. */
+  header { display: block; padding: 10px 14px 14px; }
+  header::after { left: 14px; right: 14px; bottom: 6px; height: 3px; }
+  header .logo { font-size: 28px; line-height: 1; letter-spacing: .075em; }
+  header .tag, header .edition-note { display: none; }
+  .codex, .dock, footer, .app-status { width: calc(100% - 18px); }
+  .codex { margin-top: 5px; }
+  #tabs { padding: 0 6px; }
+  #tabs button { padding: 9px 10px 8px; font-size: 11px; letter-spacing: .05em; line-height: 1.2; }
+  .layout { display: block; min-height: 0; }
+  aside.chapters {
+    display: flex;
+    gap: 5px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    padding: 5px 8px;
+    border-right: 0;
+    border-bottom: 1px solid var(--rule);
+    scrollbar-width: thin;
+  }
+  .chapters > .mini { display: none; }
+  .chapters .ch { flex: 0 0 132px; min-width: 0; margin: 0; padding: 5px 7px; }
+  .chapters .ch span strong { font-size: 13px; line-height: 1.12; }
+  .chapters .ch small { font-size: 10px; line-height: 1.15; margin-top: 2px; }
+  #main { padding: 10px 14px 24px; }
+  #main h1 { font-size: 27px; margin: 2px 0 3px; }
+  #main > .mini { font-size: 10px; }
+  #main > .subtle { font-size: 12px; }
+  #main .note { padding: 8px 10px; margin: 8px 0; font-size: 12px; line-height: 1.35; }
+  #main .tools { gap: 5px; margin: 8px 0; }
+  #main > .tools .btn { min-height: 33px; padding: 6px 9px; font-size: 12px; }
+  .scene { margin: 8px 0 9px; }
+  .scene svg { height: 108px; }
+  .scene .caption { padding: 5px 10px; font-size: 12px; line-height: 1.35; }
+  .words { font-size: 20px; line-height: 1.75; }
+  .sentence { padding: 10px 8px 12px 11px; }
+  .quiz { padding: 15px 13px; }
+  .question { font-size: 19px; }
+  aside.help-aside { padding: 18px 16px; border-top: 1px solid var(--rule); }
+  .dock { display: grid; grid-template-columns: minmax(0, 1fr); padding: 5px 8px; gap: 3px; }
+  .dock > div:first-child { min-width: 0; display: flex; gap: 7px; align-items: center; }
+  .dock > div:first-child b { font-size: 11px; flex: 0 0 auto; white-space: nowrap; }
+  .dock small { min-width: 0; max-width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; margin: 0; font-size: 10px; }
+  .dock .tools { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); width: 100%; gap: 4px; margin: 0; }
+  .dock .btn { min-width: 0; padding: 6px 4px; min-height: 32px; font-size: 11px; white-space: nowrap; }
+  footer { padding-top: 10px; margin-bottom: 14px; }
+}
+@media (max-width: 420px) {
+  .stats { grid-template-columns: repeat(3, minmax(0,1fr)); gap: 5px; }
+  .stat { padding: 10px 7px; }
+  .stat b { font-size: 24px; }
+  .stat small { font-size: 10px; }
+  .words { font-size: 19px; }
+  .dock .btn { font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: 0s !important; scroll-behavior: auto !important; }
+}
+@media print {
+  body { background: #fff; }
+  body::before, .dock, .tools { display: none !important; }
+  header, .codex, footer { width: 100%; box-shadow: none; }
+  .layout { display: block; }
+  aside { display: none; }
+  #main { padding: 15px 0; }
+  .sentence { break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<header><div><div class="logo">Tablinum</div><div class="tag">Prima Via · Discere legendo</div></div><small class="edition-note">An original Latin learning course · v0.4.2</small></header>
+<div class="codex">
+<nav id="tabs" aria-label="Study sections"></nav>
+<div class="layout">
+<aside class="chapters" id="chapters"></aside>
+<main id="main"></main>
+<aside class="help-aside" id="help"></aside>
+</div>
+</div>
+<div class="dock">
+<div><b id="audioMode">Browser voice</b><small id="audioNote">Voice pronunciation depends on browser voices.</small></div>
+<div class="tools"><button class="btn" data-action="previous">← Prev</button><button class="btn primary" data-action="play">▶ Play</button><button class="btn" data-action="pause">Ⅱ Pause</button><button class="btn" data-action="forward">Next →</button></div>
+</div>
+<footer>Version 0.4.2 Manuscript Edition review build · Latin content is unreviewed original draft material · No copyrighted textbook included.</footer>
+<script>
+(function(){
+"use strict";
+const L=[
+{name:"In hortō",sub:"Līvia et arbor",scene:"garden",context:"Līvia in hortō est. Arbor magna est.",explain:"Est means is. The form hortō after in describes a location. Endings are clues to meaning.",sent:[
+["Hic est hortus.","This is a garden."],["In hortō est arbor.","There is a tree in the garden."],["In hortō est puella.","There is a girl in the garden."],["Puella Līvia est.","The girl is Livia."],["Arbor magna est.","The tree is large."],["Līvia parva est.","Livia is small."],["Līvia arborem videt.","Livia sees the tree."],["Līvia sub arbore sedet.","Livia sits beneath the tree."],["Līvia laeta est.","Livia is happy."]],
+v:[["hortus","garden","hortō hortum"],["arbor","tree","arborem arbore"],["puella","girl",""],["Līvia","Livia","Līviam Līviae"],["magnus","big","magna"],["parvus","small","parva"],["vidēre","to see","videt"],["sedēre","to sit","sedet"],["laetus","happy","laeta"],["sub","under",""],["est","is",""]],
+q:[["Ubi est arbor?",["in hortō","in forō","in aquā"],"in hortō","In hortō est arbor."],["Quis sub arbore sedet?",["hortus","Līvia","arbor"],"Līvia","Līvia sub arbore sedet."],["Arbor magna est an parva?",null,["magna","magna est","arbor est magna"],"Arbor magna est."]]},
+{name:"Familia",sub:"In vīllā",scene:"family",context:"Mārcus, Flāvia, Līvia et Tītus familia sunt.",explain:"The ending -ae in Līviae can mean 'of Livia'. This is the genitive case. Sunt means 'are'.",sent:[
+["Haec est vīlla familiae.","This is the family's house."],["In vīllā Mārcus habitat.","Marcus lives in the house."],["Flāvia quoque in vīllā habitat.","Flavia also lives in the house."],["Mārcus pater Līviae est.","Marcus is Livia's father."],["Flāvia māter Līviae est.","Flavia is Livia's mother."],["Tītus frāter Līviae est.","Titus is Livia's brother."],["Līvia soror Tītī est.","Livia is Titus's sister."],["Mārcus et Flāvia parentēs sunt.","Marcus and Flavia are parents."],["Quattuor hominēs in vīllā habitant.","Four people live in the house."]],
+v:[["familia","family","familiae"],["vīlla","house","vīllā vīllae"],["Mārcus","Marcus","Mārcī Mārce"],["Flāvia","Flavia","Flāviae"],["Tītus","Titus","Tītī"],["pater","father",""],["māter","mother",""],["frāter","brother",""],["soror","sister",""],["parentēs","parents",""],["habitāre","to live","habitat habitant"],["sunt","are",""],["quattuor","four",""]],
+q:[["Quis pater Līviae est?",["Tītus","Mārcus","Flāvia"],"Mārcus","Mārcus pater Līviae est."],["Cuius frāter est Tītus?",null,["Līviae","frāter Līviae est","Tītus est frāter Līviae"],"Tītus frāter Līviae est."],["Quot hominēs in vīllā habitant?",["duo","trēs","quattuor"],["quattuor","Quattuor hominēs in vīllā habitant."],"Quattuor hominēs habitant."]]},
+{name:"Dōnum",sub:"Rosa et liber",scene:"gift",context:"Līvia rosam rubram mātrī dat.",explain:"Rosam is an accusative object. Mātrī expresses the recipient, 'to mother'. Compare rosa with rosam.",sent:[
+["Līvia rosam rubram habet.","Livia has a red rose."],["Tītus librum habet.","Titus has a book."],["Rosa pulchra est.","The rose is beautiful."],["Līvia ad mātrem ambulat.","Livia walks to her mother."],["Līvia rosam mātrī dat.","Livia gives the rose to her mother."],["Flāvia rosam accipit.","Flavia receives the rose."],["Mārcus librum legit.","Marcus reads the book."],["Tītus patrem spectat.","Titus watches his father."],["Flāvia dīcit: «Grātiās tibi agō!»","Flavia says: Thank you!"]],
+v:[["rosa","rose","rosam"],["ruber","red","rubram"],["liber","book","librum"],["pulcher","beautiful","pulchra"],["habēre","to have","habet"],["dare","to give","dat"],["accipere","to receive","accipit"],["legere","to read","legit"],["ambulāre","to walk","ambulat"],["spectāre","to watch","spectat"],["dīcere","to say","dīcit"],["tibi","to you",""]],
+q:[["Quid Līvia habet?",["rosam","pānem","canem"],"rosam","Līvia rosam habet."],["Cui Līvia rosam dat?",["patrī","mātrī","Tītō"],"mātrī","Līvia mātrī dat."],["Quid Mārcus legit?",null,["librum","librum legit","Mārcus legit librum"],"Mārcus librum legit."]]},
+{name:"Cēna",sub:"Ad mēnsam",scene:"table",context:"Tītus pānem edit. Līvia aquam bibit.",explain:"The ending -t in many present tense verbs marks 'he/she does'. Venī is a command: 'Come!'.",sent:[
+["Cibus in mēnsā est.","Food is on the table."],["Flāvia aquam portat.","Flavia carries water."],["Tītus pānem edit.","Titus eats bread."],["Līvia aquam bibit.","Livia drinks water."],["Mārcus ad mēnsam ambulat.","Marcus walks to the table."],["Flāvia dīcit: «Venī, Mārce!»","Flavia says: Come, Marcus!"],["Mārcus venit et sedet.","Marcus comes and sits."],["Omnēs in vīllā cēnant.","Everyone has dinner in the house."]],
+v:[["cibus","food",""],["mēnsa","table","mēnsā mēnsam"],["aqua","water","aquam"],["pānis","bread","pānem"],["edere","to eat","edit"],["bibere","to drink","bibit"],["portāre","to carry","portat"],["venīre","to come","venit venī"],["omnis","all","omnēs"],["cēnāre","to dine","cēnant"],["ad","towards",""]],
+q:[["Quid Tītus edit?",["rosam","pānem","librum"],"pānem","Tītus pānem edit."],["Quid Līvia bibit?",["aquam","pānem","rosam"],"aquam","Līvia aquam bibit."],["Quis aquam portat?",null,["Flāvia","Flāvia portat","māter"],"Flāvia aquam portat."]]},
+{name:"Forum",sub:"Duo māla",scene:"market",context:"Mārcus duo māla emit. Līvia tria māla videt.",explain:"In forō describes where you are. Ad forum means toward the market. Duo and tria agree with neuter plural māla.",sent:[
+["Hodiē familia ad forum it.","Today the family goes to market."],["In forō multī mercātōrēs sunt.","Many merchants are in the market."],["Mercātor māla vendit.","A merchant sells apples."],["Līvia tria māla videt.","Livia sees three apples."],["Mārcus duo māla emit.","Marcus buys two apples."],["Tītus interrogat: «Quot māla habēmus?»","Titus asks: How many apples do we have?"],["Mārcus respondet: «Duo māla habēmus.»","Marcus answers: We have two apples."],["Familia ē forō domum redit.","The family returns home from the market."]],
+v:[["forum","market","forō"],["hodiē","today",""],["mercātor","merchant","mercātōrēs"],["mālum","apple","māla"],["duo","two",""],["trēs","three","tria"],["multus","many","multī"],["vendere","to sell","vendit"],["emere","to buy","emit"],["quot","how many",""],["īre","to go","it"],["redīre","to return","redit"],["domus","home","domum"]],
+q:[["Quot māla Mārcus emit?",["tria","duo","quattuor"],"duo","Mārcus duo māla emit."],["Ubi sunt mercātōrēs?",["in hortō","in forō","in vīllā"],"in forō","In forō sunt."],["Quid mercātor vendit?",null,["māla","māla vendit","mercātor vendit māla"],"Mercātor māla vendit."]]},
+{name:"Canis",sub:"In viā",scene:"dog",context:"Canis currit. Puer canem vocat.",explain:"Canis is the subject and canem is the object. Ad Līviam indicates movement to Livia.",sent:[
+["Canis in viā currit.","A dog runs in the road."],["Puer canem videt.","A boy sees the dog."],["Puer canem vocat.","The boy calls the dog."],["Sed canis nōn audit.","But the dog does not hear."],["Līvia prope portam stat.","Livia stands near the gate."],["Canis ad Līviam currit.","The dog runs to Livia."],["Līvia rīdet; puer quoque rīdet.","Livia laughs; the boy also laughs."],["Nunc canis cum puerō ambulat.","Now the dog walks with the boy."]],
+v:[["canis","dog","canem"],["via","road","viā"],["puer","boy","puerō"],["currere","to run","currit"],["vocāre","to call","vocat"],["audīre","to hear","audit"],["nōn","not",""],["porta","gate","portam"],["prope","near",""],["rīdēre","to laugh","rīdet"],["nunc","now",""],["cum","with",""],["stāre","to stand","stat"]],
+q:[["Quis in viā currit?",["canis","Mārcus","Flāvia"],"canis","Canis in viā currit."],["Quō canis currit?",["ad Mārcum","ad Līviam","ad Tītum"],"ad Līviam","Canis ad Līviam currit."],["Ubi Līvia stat?",null,["prope portam","prope portam stat","Līvia stat prope portam"],"Līvia prope portam stat."]]},
+{name:"Tempestās",sub:"Herī et hodiē",scene:"rain",context:"Herī pluvia erat; hodiē sōl lūcet.",explain:"Erat, manēbat, and legēbat describe past states or continuing actions. Sonuit and dīxit report completed events. Nōlī timēre is a negative command.",sent:[
+["Herī pluvia erat.","Yesterday there was rain."],["Familia in vīllā manēbat.","The family was staying in the house."],["Līvia librum legēbat.","Livia was reading a book."],["Tītus per fenestram spectābat.","Titus was looking through the window."],["Subitō tonitrus sonuit.","Suddenly thunder sounded."],["Tītus timēbat.","Titus was afraid."],["Flāvia dīxit: «Nōlī timēre!»","Flavia said: Don't be afraid!"],["Hodiē sōl lūcet.","Today the sun shines."]],
+v:[["herī","yesterday",""],["pluvia","rain",""],["erat","was",""],["manēre","to stay","manēbat"],["legēbat","was reading",""],["fenestra","window","fenestram"],["spectābat","was looking",""],["subitō","suddenly",""],["tonitrus","thunder",""],["sonuit","sounded",""],["timēbat","was afraid",""],["dīxit","said",""],["sōl","sun",""],["lūcēre","to shine","lūcet"]],
+q:[["Quid herī erat?",["sōl","pluvia","mālum"],"pluvia","Herī pluvia erat."],["Quis librum legēbat?",["Līvia","Tītus","Flāvia"],"Līvia","Līvia librum legēbat."],["Quid hodiē lūcet?",null,["sōl","sōl lūcet","hodiē sōl"],"Hodiē sōl lūcet."]]},
+{name:"Crās",sub:"Ad amīcum",scene:"journey",context:"Hodiē parāmus; crās ībimus.",explain:"Some future verbs use -bit or -bimus (vīsitābit, cēnābimus), but others use -et or -ēmus (feret, faciēmus). Ībimus is the future of īre.",sent:[
+["Crās familia amīcum vīsitābit.","Tomorrow the family will visit a friend."],["Līvia rosās portābit.","Livia will carry roses."],["Tītus librum feret.","Titus will bring a book."],["Mārcus interrogat: «Quid faciēmus?»","Marcus asks: What shall we do?"],["Flāvia respondet: «Prīmum ad amīcum ībimus.»","Flavia answers: First we will go to our friend."],["«Deinde cēnābimus», Flāvia dīcit.","Then we shall dine, Flavia says."],["Omnēs laetī sunt.","Everyone is happy."],["Familia iam sē parat.","The family is already getting ready."]],
+v:[["crās","tomorrow",""],["amīcus","friend","amīcum"],["vīsitāre","to visit","vīsitābit"],["portābit","will carry",""],["ferre","to bring","feret"],["interrogāre","to ask","interrogat"],["facere","to do","faciēmus"],["prīmum","first",""],["ībimus","we will go",""],["deinde","then",""],["cēnābimus","we will dine",""],["iam","already",""],["parāre","to prepare","parat"],["laetī","happy (plural)",""]],
+q:[["Quandō familia amīcum vīsitābit?",["herī","hodiē","crās"],"crās","Crās familia amīcum vīsitābit."],["Quid Tītus feret?",["librum","canem","pānem"],"librum","Tītus librum feret."],["Quid Līvia portābit?",null,["rosās","rosās portābit","Līvia portābit rosās"],"Līvia rosās portābit."]]}
+];
+
+const shared=[["in","in",""],["et","and",""],["haec","this (feminine)",""],["hic","this (masculine)",""],["quis","who",""],["quid","what",""],["ubi","where",""],["quō","where to",""],["cui","to whom",""],["cuius","whose",""],["an","or (in a question)",""],["est","is",""],["sunt","are",""],["sed","but",""],["nōn","not",""],["quoque","also",""],["cum","with",""],["ad","to, toward",""],["ē","from",""],["sub","under",""],["habet","has",""],["habēmus","we have",""],["nunc","now",""],["omnēs","everyone",""],["prope","near",""],["homō","person","hominēs"],["māter","mother","mātrem mātrī"],["pater","father","patrem patrī"],["grātiās","thanks",""],["agere","to do, drive; express thanks","agō"],["respondēre","to answer","respondet"],["nōlī","do not (singular command)",""],["timēre","to fear",""],["parāre","to prepare","parāmus"],["rosa","rose","rosās"],["sē","himself/herself/themselves",""],["Tītus","Titus","Tītō Tītum"],["Mārcus","Marcus","Mārcum"],["quam","whom/which (feminine accusative)",""],["per","through",""]];
+function norm(s){return String(s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9 ]/g,"").trim().replace(/\s+/g," ")}
+const dict=Object.create(null);
+for(const w of [...shared,...L.flatMap(c=>c.v)]){
+ for(const form of [w[0],...String(w[2]||"").split(/\s+/)]){
+  if(form&&!Object.prototype.hasOwnProperty.call(dict,norm(form)))dict[norm(form)]={head:w[0],meaning:w[1]};
+ }
+}
+const guidedCloze=[
+ {text:"Arbor magna est. In hortō est ____ magna.",answers:["arbor"],clue:"Arbor est magna; puella parva est.",proof:"In hortō est arbor magna."},
+ {text:"Līvia soror ____ est.",answers:["Tītī"],clue:"Quis est frāter Līviae?",proof:"Līvia soror Tītī est."},
+ {text:"Līvia rosam mātrī ____.",answers:["dat"],clue:"Quid Līvia facit?",proof:"Līvia rosam mātrī dat."},
+ {text:"Tītus pānem ____.",answers:["edit"],clue:"Quid Tītus facit?",proof:"Tītus pānem edit."},
+ {text:"Mārcus duo māla ____.",answers:["emit"],clue:"Quid in forō Mārcus facit?",proof:"Mārcus duo māla emit."},
+ {text:"Canis in viā ____.",answers:["currit"],clue:"Canis nōn sedet.",proof:"Canis in viā currit."},
+ {text:"Herī pluvia ____.",answers:["erat"],clue:"Herī, nōn hodiē.",proof:"Herī pluvia erat."},
+ {text:"Crās familia amīcum ____.",answers:["vīsitābit"],clue:"Quid familia crās faciet?",proof:"Crās familia amīcum vīsitābit."}
+];
+// Contextual hints reuse story material; do not introduce unreviewed Latin.
+function contextualClue(chapter,sentenceIndex){
+ if(sentenceIndex===0)return chapter.context||chapter.sent[0]?.[0]||"";
+ return chapter.sent[sentenceIndex-1]?.[0]||chapter.context||"";
+}
+const key="tablinum-source-review-v02";
+const tabsList=["read","quiz","review","library","progress"];
+const base={version:4,ch:0,tab:"read",sel:0,macrons:true,guided:true,translations:{},answers:{},correct:{},vocab:{},notes:{},custom:"",customSentences:[],hintLevels:{},clozeAnswers:{},clozeCorrect:{},readingConfidence:{},singleSentence:false};
+function objectOrEmpty(x){return x&&typeof x==="object"&&!Array.isArray(x)?x:{}}
+function safeMap(o,accept,limit=2500){
+ const map=Object.create(null);let n=0;
+ for(const [k,v] of Object.entries(objectOrEmpty(o))){
+  if(++n>limit)break;
+  if(k==="__proto__"||k==="constructor"||k==="prototype"||k.length>80)continue;
+  const checked=accept(v,k);
+  if(checked!==undefined)map[k]=checked;
+ }
+ return map;
+}
+function isFiniteNum(x){return typeof x==="number"&&Number.isFinite(x)}
+function normalizeState(input){
+ const x=objectOrEmpty(input),o={...base};
+ o.custom=typeof x.custom==="string"?x.custom.slice(0,20000):"";
+ o.customSentences=Array.isArray(x.customSentences)?x.customSentences.filter(z=>typeof z==="string"&&z.trim()).slice(0,300).map(z=>z.slice(0,1000)):[];
+ o.ch=x.ch==="custom"&&o.custom?"custom":Number.isInteger(x.ch)&&x.ch>=0&&x.ch<L.length?x.ch:0;
+ o.tab=tabsList.includes(x.tab)?x.tab:"read";
+ const n=o.ch==="custom"?(o.customSentences.length||splitSentences(o.custom).length):L[o.ch].sent.length;
+ o.sel=Number.isInteger(x.sel)?Math.min(Math.max(x.sel,0),Math.max(n-1,0)):0;
+ o.macrons=typeof x.macrons==="boolean"?x.macrons:true;
+ o.guided=typeof x.guided==="boolean"?x.guided:true;
+ o.singleSentence=x.singleSentence===true;
+ o.translations=safeMap(x.translations,v=>typeof v==="boolean"?v:undefined);
+ o.answers=safeMap(x.answers,v=>typeof v==="string"?v.slice(0,500):undefined);
+ o.correct=safeMap(x.correct,v=>v===true?true:undefined);
+ o.notes=safeMap(x.notes,v=>typeof v==="string"?v.slice(0,5000):undefined,100);
+ o.hintLevels=safeMap(x.hintLevels,v=>Number.isInteger(v)&&v>=0&&v<=3?v:undefined);
+ o.clozeAnswers=safeMap(x.clozeAnswers,v=>typeof v==="string"?v.slice(0,300):undefined,100);
+ o.clozeCorrect=safeMap(x.clozeCorrect,v=>v===true?true:undefined,100);
+ o.readingConfidence=safeMap(x.readingConfidence,v=>["difficult","developing","confident"].includes(v)?v:undefined,100);
+ o.vocab=safeMap(x.vocab,v=>{
+  if(!v||typeof v!=="object"||Array.isArray(v))return;
+  return {head:typeof v.head==="string"?v.head.slice(0,80):"",meaning:typeof v.meaning==="string"?v.meaning.slice(0,250):"",
+   days:isFiniteNum(v.days)&&v.days>0&&v.days<=10000?v.days:1,due:isFiniteNum(v.due)&&v.due>=0?v.due:Date.now(),
+   reps:Number.isInteger(v.reps)&&v.reps>=0?v.reps:0};
+ },10000);
+ return o;
+}
+function splitSentences(input){
+ const text=String(input||"").replace(/\r/g,"");
+ const protectedText=text.replace(/\b([A-Z])\.\s+(?=[A-Z])/g,"$1\uFFF0 ");
+ return protectedText.replace(/([.!?])\s+/g,"$1\n").split(/\n+/).map(v=>v.replace(/\uFFF0/g,".").trim()).filter(Boolean).slice(0,300);
+}
+let S;let warning="";
+try{S=normalizeState(JSON.parse(localStorage.getItem(key)||"null"))}catch(e){S=normalizeState({});warning="Stored data was unreadable; defaults were restored."}
+function save(){
+ try{localStorage.setItem(key,JSON.stringify(S));return true}
+ catch(e){warning="Progress could not be saved on this device. Export a backup.";return false}
+}
+save(); // Persist the validated schema on startup so malformed old fields cannot linger.
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const spell=s=>S.macrons?String(s):String(s).normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+const audio=new Audio();
+const mediaByChapter=new Map();
+let chosenWord="",reviewKey=null,reviewReveal=false,readingIndex=null,spokenVoice="",speechRequest=0,voicePaused=false,boundaryFrame=0;
+function chapterKey(){return String(S.ch)}
+function current(){
+ if(S.ch==="custom"){
+  const pieces=S.customSentences.length?S.customSentences:splitSentences(S.custom);
+  return{name:"Textus meus",sub:"My imported reading",scene:"book",context:"Textus tuus",explain:"Imported texts have not been checked or annotated.",sent:pieces.map(z=>[z,""]),q:[],v:[]};
+ }
+ return L[S.ch];
+}
+function media(){return mediaByChapter.get(chapterKey())}
+function timed(){
+ const m=media();return !!m&&m.ranges.length===current().sent.length&&m.ranges.length>0;
+}
+function mode(){return !media()?"voice":timed()?"timed":"untimed"}
+function updateBanner(msg){
+ if(msg)warning=msg;
+ const el=$("appStatus");if(el)el.textContent=warning||"";
+}
+function clearVoice(){
+ speechRequest++;readingIndex=null;voicePaused=false;
+ if("speechSynthesis" in window)try{speechSynthesis.cancel()}catch(e){}
+}
+function stopBoundaryMonitor(){
+ if(boundaryFrame&&typeof cancelAnimationFrame==="function")cancelAnimationFrame(boundaryFrame);
+ boundaryFrame=0;
+}
+function startBoundaryMonitor(){
+ stopBoundaryMonitor();
+ if(!S.singleSentence||!timed()||typeof requestAnimationFrame!=="function")return;
+ const chapter=chapterKey(),interval=media()?.ranges[S.sel];
+ if(!interval)return;
+ const boundary=interval.end;
+ function tick(){
+  boundaryFrame=0;
+  if(chapter!==chapterKey()||audio.paused||!S.singleSentence||!timed())return;
+  // Approximately one animation-frame tolerance; exact audio sample accuracy is NOT claimed.
+  if(audio.currentTime>=boundary-0.025){audio.pause();return}
+  boundaryFrame=requestAnimationFrame(tick);
+ }
+ boundaryFrame=requestAnimationFrame(tick);
+}
+function stopAudio(){stopBoundaryMonitor();audio.pause()}
+function useChapterAudio(){
+ stopAudio();audio.removeAttribute("src");audio.load();
+ const m=media();if(m){audio.src=m.url;audio.load();}
+ updateDock();
+}
+function setChapter(id){
+ if(id==="custom"&&!S.custom)return;
+ clearVoice();
+ S.ch=id==="custom"?"custom":Math.min(L.length-1,Math.max(0,Number(id)||0));
+ S.sel=0;S.tab="read";chosenWord="";
+ useChapterAudio();save();render();
+}
+function switchTab(id){
+ if(!tabsList.includes(id))return;
+ clearVoice();S.tab=id;save();render();
+}
+function stableFocus(){
+ const el=document.activeElement;
+ if(!el||!el.dataset)return null;
+ const props=["tab","ch","action","hint","guided","choice","check","clozeCheck","confidence","sentence","word","save","rating"];
+ for(const p of props)if(el.dataset[p]!==undefined)return{p,v:el.dataset[p],sentence:el.closest?.("[data-sentence-container]")?.dataset.sentenceContainer??null,wordIndex:el.dataset.wordIndex??null,hint:!!el.closest?.(".hint-words")};
+ return null;
+}
+function restoreFocus(record){
+ if(!record)return;
+ const elements=document.querySelectorAll("[data-"+record.p.replace(/[A-Z]/g,z=>"-"+z.toLowerCase())+"]");
+ for(const e of elements)if(e.dataset[record.p]===record.v&&(record.sentence===null||e.closest?.("[data-sentence-container]")?.dataset.sentenceContainer===record.sentence)&&(record.wordIndex===null||e.dataset.wordIndex===record.wordIndex)&&(!record.hint||!!e.closest?.(".hint-words"))){e.focus({preventScroll:true});return}
+}
+function scene(type){
+const bg='<rect width="600" height="245" fill="#e7f0e1"/><circle cx="492" cy="57" r="32" fill="#f0d28c"/><path d="M0 180Q135 151 300 178T600 168V245H0" fill="#c3dbb5"/><path d="M0 216Q230 190 600 205V245H0" fill="#a3c397"/>';
+const tree='<rect x="112" y="87" width="23" height="123" rx="6" fill="#92775f"/><circle cx="125" cy="75" r="56" fill="#79ac7c"/><circle cx="98" cy="94" r="34" fill="#88ba89"/><circle cx="158" cy="86" r="37" fill="#669b70"/>';
+const human=(x,y,c,s=1)=>`<g transform="translate(${x},${y}) scale(${s})"><circle cy="-43" r="15" fill="#d8a481"/><path d="M-16 -23H16L25 44H-25Z" fill="${c}"/><path d="M-11 45L-13 67M11 45L13 67" stroke="#595c59" stroke-width="8" stroke-linecap="round"/><path d="M-15 -7L-28 24M15 -7L28 24" stroke="#d8a481" stroke-width="7" stroke-linecap="round"/></g>`;
+const house='<path d="M181 88L319 24 456 88" fill="none" stroke="#aa8064" stroke-width="14"/><rect x="194" y="84" width="252" height="113" fill="#e4c5a1" stroke="#c3997a" stroke-width="3"/><rect x="302" y="126" width="44" height="71" fill="#836349"/><rect x="222" y="111" width="36" height="37" fill="#8badab"/><rect x="385" y="111" width="36" height="37" fill="#8badab"/>';
+let art="";
+switch(type){
+case"garden":art=tree+human(335,158,"#aa738a")+ '<text x="131" y="235" fill="#365c46" font-size="17" text-anchor="middle">arbor</text>';break;
+case"family":art=house+human(104,160,"#7593a7",.8)+human(178,157,"#b27985",.8)+human(477,161,"#b79f62",.8)+human(544,162,"#879b81",.72);break;
+case"gift":art=tree+human(317,164,"#b27985",.91)+human(447,164,"#6e9ca7",.89)+'<circle cx="385" cy="131" r="13" fill="#b95b69"/><path d="M371 134Q380 147 400 150" stroke="#538360" stroke-width="5" fill="none"/>';break;
+case"table":art='<rect x="102" y="143" width="394" height="23" rx="8" fill="#a77e57"/><path d="M121 164V223M481 164V223" stroke="#94724e" stroke-width="16"/><ellipse cx="300" cy="135" rx="82" ry="15" fill="#dfc78c"/><ellipse cx="300" cy="135" rx="48" ry="8" fill="#ac8655"/>'+human(120,132,"#a87782",.75)+human(488,132,"#7298a7",.75);break;
+case"market":art='<rect x="97" y="106" width="410" height="100" fill="#e0c6a3"/><path d="M87 106L123 65H475L513 106Z" fill="#c27962"/><path d="M133 66V106M221 66V106M309 66V106M397 66V106" stroke="#f1dfbe" stroke-width="20"/><rect x="136" y="143" width="321" height="20" fill="#9e7653"/><circle cx="232" cy="135" r="13" fill="#bdc975"/><circle cx="278" cy="135" r="13" fill="#c47764"/><circle cx="324" cy="135" r="13" fill="#c47764"/>';break;
+case"dog":art=human(445,161,"#a87782",.88)+'<ellipse cx="187" cy="177" rx="54" ry="29" fill="#bd946c"/><circle cx="227" cy="152" r="25" fill="#bd946c"/><path d="M228 130L253 110 248 148" fill="#997453"/><path d="M146 176Q103 141 101 154" fill="none" stroke="#bd946c" stroke-width="12"/><path d="M159 190V220M206 190V220" stroke="#917153" stroke-width="11"/>';break;
+case"rain":art=house+Array.from({length:27},(_,i)=>`<path d="M${(i*77)%560+15} ${(i*47)%155+5}l-10 20" stroke="#7c9ba6" stroke-width="3"/>`).join("");break;
+case"journey":art=tree+'<path d="M229 245Q280 160 362 184T495 130" fill="none" stroke="#d7c1a0" stroke-width="47"/>'+human(345,145,"#ad7385",.8)+human(413,143,"#7596a8",.79);break;
+default:art=tree+'<path d="M255 112Q303 92 307 131Q363 90 414 112V202Q345 180 307 208Q274 183 255 202Z" fill="#fff9eb" stroke="#91765d" stroke-width="3"/>';break
+}
+return `<div class="scene"><svg viewBox="0 0 600 245" role="img" aria-label="${esc(current().context)}">${type==="rain"?bg.replace(/<circle[^>]*\/>/,""):bg}${art}</svg><div class="caption">${esc(current().context)}</div></div>`
+}
+
+function renderWords(t){
+ const words=spell(t).match(/[\p{L}\p{M}]+|[^\p{L}\p{M}]+/gu)||[];
+ let first=true,wordIndex=0;
+ return words.map(w=>{
+  if(!/^[\p{L}\p{M}]/u.test(w))return esc(w);
+  const tabbable=first;first=false;
+  return '<button class="word" lang="la" tabindex="'+(tabbable?0:-1)+'" data-word="'+esc(w)+'" data-word-index="'+(wordIndex++)+'" aria-label="Look up '+esc(w)+'">'+esc(w)+'</button>';
+ }).join("");
+}
+function correctAnswer(q,response){
+ const answers=Array.isArray(q[2])?q[2]:[q[2]];
+ const accepted=[...answers,q[3]].filter(x=>typeof x==="string");
+ return accepted.some(x=>norm(x)===norm(response));
+}
+function tabs(){
+ const list=[["read","Lectiō"],["quiz","Exercitia"],["review","Memoria"],["library","Bibliothēca"],["progress","Progressus"]];
+ $("tabs").innerHTML=list.map(([id,n])=>'<button class="'+(S.tab===id?"active":"")+'" data-tab="'+id+'" aria-current="'+(S.tab===id?"page":"false")+'">'+n+"</button>").join("");
+ $("chapters").innerHTML='<div class="mini" style="margin:5px 9px 14px">Liber prīmus</div>'+L.map((c,i)=>'<button class="ch '+(S.ch===i?"active":"")+'" data-ch="'+i+'" aria-current="'+(S.ch===i?"true":"false")+'"><strong>'+(i+1)+'</strong><span><strong>'+esc(c.name)+'</strong><small>'+esc(c.sub)+'</small></span></button>').join("")+(S.custom?'<button class="ch '+(S.ch==="custom"?"active":"")+'" data-ch="custom">✧ Textus meus</button>':"");
+ updateDock();
+}
+function updateDock(){
+ const m=mode();
+ $("audioMode").textContent=m==="voice"?"Browser voice — not a verified recording":m==="timed"?"Imported audio — timing supplied":"Imported audio — unsynchronized";
+ $("audioNote").textContent=m==="voice"?"Device voice: "+(spokenVoice||"system default (unverified)"):m==="timed"?"Selected sentence has supplied intervals; not acoustically verified.":"Sentence selection does not seek. Play resumes at current position.";
+ const playBtn=document.querySelector(".dock [data-action='play']");
+ if(playBtn)playBtn.textContent=m==="voice"?"▶ Speak sentence":m==="timed"?"▶ Play selected sentence":"▶ Play recording";
+ const pauseBtn=document.querySelector(".dock [data-action='pause']");
+ if(pauseBtn)pauseBtn.textContent=m==="voice"?"■ Stop voice":"Ⅱ Pause";
+}
+function help(){
+ const w=Object.prototype.hasOwnProperty.call(dict,norm(chosenWord))?dict[norm(chosenWord)]:undefined;
+ $("help").innerHTML='<div class="mini">Dux discendī</div><h3>Learn through context</h3><p class="subtle" style="font-size:12px">Read Latin first, then choose how much guidance you need.</p><div class="mini" style="margin-top:18px">Verbum electum</div><div class="panel">'+(chosenWord?'<h3 lang="la">'+esc(spell(chosenWord))+'</h3>'+(w?'<p>'+esc(w.meaning)+'</p><small>Headword: <span lang="la">'+esc(spell(w.head))+'</span></small><div class="tools"><button class="btn primary" data-save="'+esc(norm(w.head))+'">Save vocabulary</button></div>':'<small>This word is not in the starter glossary.</small>'):'<small>Click a Latin word to look it up.</small>')+'</div><div class="tools"><button class="btn" data-action="macrons">'+(S.macrons?"Āā Macrons":"Aa No macrons")+'</button><button class="btn" data-action="guide">'+(S.guided?"Guidance on":"Guidance off")+'</button></div>'+(S.guided?'<details><summary>Explain the grammar</summary><p style="font-size:12px">'+esc(current().explain)+'</p></details>':"")+'<div class="mini" style="margin-top:19px">Notae meae</div><textarea class="field" id="notes" placeholder="Personal notes..." maxlength="5000">'+esc(S.notes[chapterKey()]||"")+'</textarea><small>Notes are stored locally when browser storage is available.</small>';
+}
+function guidedHint(i,level){
+ const c=current(),s=c.sent[i];if(!s||level<=0)return"";
+ if(level===1)return S.ch==="custom"?(i>0?c.sent[i-1][0]:c.sent[0]?.[0]||""):contextualClue(c,i);
+ if(level===2){
+  const words=s[0].match(/[\p{L}\p{M}]+/gu)||[],items=[],used=new Set();
+  const skip=new Set(["in","est","et","ad","hic","haec","nōn","non","sunt","quoque","cum","sed"]);
+  for(const word of words){
+   const k=norm(word),d=dict[k];
+   if(!d||skip.has(k)||used.has(norm(d.head))||["livia","titus","marcus","flavia"].includes(norm(d.head)))continue;
+   used.add(norm(d.head));items.push(d.head+": "+d.meaning);if(items.length===4)break;
+  }
+  return items.length?items.join(" · "):"Select an unfamiliar word for a definition.";
+ }
+ return s[1]||"No checked English gloss exists for this imported text.";
+}
+function inlineGloss(){
+ const d=dict[norm(chosenWord)];
+ return chosenWord?'<div class="help" aria-live="polite"><strong lang="la">'+esc(spell(chosenWord))+'</strong> · '+esc(d?.meaning||"Not in starter glossary.")+(d?'<button class="link" data-save="'+esc(norm(d.head))+'" style="margin-left:10px">Save word</button>':"")+'</div>':"";
+}
+function reader(){
+ const c=current();let h='<div class="mini">Lectiō '+esc(S.ch==="custom"?"propria":S.ch+1)+'</div><h1>'+esc(c.name)+'</h1><div class="subtle">'+esc(c.sub)+'</div>'+scene(c.scene);
+ h+='<div class="note">Read Latin first. Ask for one clue at a time: context, important words, then English.</div><div class="tools"><button class="btn primary" data-action="play">'+(mode()==="voice"?"▶ Speak sentence":mode()==="timed"?"▶ Play timed sentence":"▶ Play recording (untimed)")+'</button><button class="btn" data-tab="quiz">Exercises →</button></div>';
+ c.sent.forEach(([latin,en],i)=>{
+  const k=chapterKey()+":"+i,level=S.hintLevels[k]||0,selected=S.sel===i;
+  h+='<article class="sentence '+(selected?"selected":"")+'" data-sentence-container="'+i+'" aria-current="'+(selected?"true":"false")+'"><div class="mini">Sententia '+(i+1)+'</div><div class="words" lang="la" data-sentence="'+i+'">'+renderWords(latin)+'</div><div class="tools"><button class="link" data-sentence="'+i+'">○ Select / listen</button><button class="btn" '+(S.guided?"":"hidden ")+'data-guided="'+i+'">'+(level===0?"Latin clue":level===1?"Word clues":level===2?"English meaning":"Hide hints")+' ('+level+'/3)</button></div>';
+  if(S.guided&&level>0)h+='<div class="help"><strong>'+(level===1?"Previously in the story":level===2?"Important words":"Optional English")+'</strong><div>'+(level===1?'<span lang="la" class="hint-words">'+renderWords(guidedHint(i,level))+'</span>':esc(guidedHint(i,level)))+'</div></div>';
+  if(selected)h+=inlineGloss();h+='</article>';
+ });
+ if(S.ch!=="custom")h+='<div class="panel"><div class="mini">Quam bene intellegis?</div><p class="subtle">Did you understand the story? Self-assessment, not a grade.</p><div class="tools">'+[["difficult","Need support"],["developing","Getting there"],["confident","Understood"]].map(([value,label])=>'<button class="btn '+(S.readingConfidence[chapterKey()]===value?"primary":"")+'" data-confidence="'+value+'">'+label+'</button>').join("")+'</div></div>';
+ h+='<div class="tools"><button class="btn" data-action="prevChapter">← '+(S.ch==="custom"?"First chapter":"Previous chapter")+'</button><button class="btn primary" data-tab="quiz">Check understanding →</button></div>';
+ return h;
+}
+function answer(index,value){
+ const q=current().q[index];if(!q)return;
+ const k=chapterKey()+":"+index;
+ if(S.correct[k])return;
+ S.answers[k]=String(value||"").slice(0,500);
+ if(correctAnswer(q,value))S.correct[k]=true;
+ save();render();updateBanner(S.correct[k]?"Rectē! Correct.":"Not quite. Rēlege sententiam.");
+}
+function quiz(){
+ const c=current();let h='<div class="mini">Intellege et responde</div><h1>Exercitia</h1><p class="subtle">Use the story as evidence. Short answers accept the expected word or the full model sentence.</p>';
+ if(!c.q.length)return h+'<div class="note">Imported text has no checked answer keys. Automatic grading is disabled.</div>';
+ c.q.forEach((q,i)=>{
+  const k=chapterKey()+":"+i,correct=!!S.correct[k],value=S.answers[k]||"";
+  h+='<section class="quiz"><div class="mini">'+(q[1]?"Elige":"Scribe")+' · '+(i+1)+' / '+c.q.length+'</div><div class="question" lang="la">'+esc(spell(q[0]))+'</div>';
+  if(q[1])h+=q[1].map(o=>'<button class="option '+(correct&&correctAnswer(q,o)?"is-correct":!correct&&o===value?"is-wrong":"")+'" data-choice="'+i+'" data-value="'+esc(o)+'" aria-pressed="'+(o===value?"true":"false")+'" '+(correct?"disabled":"")+' lang="la">'+esc(spell(o))+'</button>').join("");
+  else h+='<div class="tools"><input class="field" id="answer-'+i+'" lang="la" aria-label="Latin answer" value="'+esc(value)+'" '+(correct?"disabled":"")+' placeholder="Respondē Latīnē…"><button class="btn primary" data-check="'+i+'" '+(correct?"disabled":"")+'>Check</button></div>';
+  if(value||correct)h+='<div role="status" class="'+(correct?"good":"bad")+'">'+esc(correct?"Rectē! "+q[3]:"Nōndum. Re-read the relevant sentence and try again.")+'</div>';
+  h+='</section>';
+ });
+ const i=Number(S.ch),item=guidedCloze[i],key=chapterKey();
+ if(item){
+  const complete=!!S.clozeCorrect[key],value=S.clozeAnswers[key]||"";
+  h+='<section class="quiz"><div class="mini">Verbum dēest · Guided completion</div><div class="question" lang="la">'+esc(spell(item.text))+'</div><div class="tools"><input class="field" lang="la" id="clozeInput" aria-label="Missing Latin word" value="'+esc(value)+'" '+(complete?"disabled":"")+'><button class="btn primary" data-action="clozeCheck" '+(complete?"disabled":"")+'>Check</button></div>';
+  if(complete||value)h+='<div role="status" class="'+(complete?"good":"bad")+'">'+esc(complete?"Rectē! "+item.proof:"Nōndum. "+item.clue)+'</div>';
+  h+='</section>';
+ }
+ return h+'<div class="tools"><button class="btn" data-tab="read">Read again</button>'+(S.ch===L.length-1?'<span class="note">Liber prīmus complete — review or revisit earlier lessons.</span>':'<button class="btn primary" data-action="nextChapter">Next chapter →</button>')+'</div>';
+}
+function clozeCheck(){
+ if(S.ch==="custom")return;const item=guidedCloze[S.ch],value=String($("clozeInput")?.value||"").slice(0,300);
+ const k=chapterKey();if(S.clozeCorrect[k])return;
+ S.clozeAnswers[k]=value;if(item.answers.some(v=>norm(v)===norm(value)))S.clozeCorrect[k]=true;
+ save();render();updateBanner(S.clozeCorrect[k]?"Rectē! Correct cloze.":"Try again with the story as a clue.");
+}
+function dueEntries(){return Object.entries(S.vocab).filter(([,v])=>v&&v.due<=Date.now())}
+function review(){
+ const entries=Object.entries(S.vocab),due=dueEntries();
+ let h='<div class="mini">Memoria</div><h1>Vocabulary review</h1><p class="subtle">Save words by selecting them in the story. This is a basic scheduler, not FSRS.</p><div class="stats"><div class="stat"><b>'+entries.length+'</b><small>Saved</small></div><div class="stat"><b>'+due.length+'</b><small>Due</small></div><div class="stat"><b>'+(entries.length-due.length)+'</b><small>Later</small></div></div>';
+ if(!entries.length)return h+'<div class="panel">Select a Latin word in a lesson, then choose Save vocabulary.</div>';
+ if(!due.length)return h+'<div class="panel">Omnia bene! No reviews are due.</div>';
+ if(!reviewKey||!S.vocab[reviewKey]||S.vocab[reviewKey].due>Date.now())reviewKey=due[0][0];
+ const item=S.vocab[reviewKey];
+ h+='<div class="panel" style="text-align:center;padding:25px"><div class="mini">Quid significat?</div><h1 lang="la">'+esc(spell(item.head||reviewKey))+'</h1>';
+ h+=reviewReveal?'<h2>'+esc(item.meaning)+'</h2><div class="tools" style="justify-content:center">'+["again","hard","good","easy"].map(x=>'<button class="btn '+(x==="good"?"primary":"")+'" data-rating="'+x+'">'+x+'</button>').join("")+'</div>':'<button class="btn primary" data-action="revealCard">Reveal meaning</button>';
+ return h+'</div>';
+}
+function library(){
+ const m=media();
+ let h='<div class="mini">Bibliothēca</div><h1>Reading and audio library</h1><div class="note">Import locally owned Latin text or recordings. EPUB, PDF, TEI, Vox Classica and dictionary archives are not integrated yet.</div>';
+ h+='<div class="panel"><h2>Textus meus</h2><label for="textFile">Choose a .txt file (under 1 MB)</label><input class="field" type="file" id="textFile" accept=".txt,text/plain"><textarea id="customText" class="field" style="min-height:150px" maxlength="20000" placeholder="Paste your Latin text...">'+esc(S.custom)+'</textarea><div class="tools"><button class="btn primary" data-action="importText">Save and open text</button><button class="btn" data-action="clearText">Clear imported text</button></div><small>Imported text uses editable sentence splits. No artificial timestamps or grading are generated.</small></div>';
+ if(S.custom)h+='<div class="panel"><h2>Correct sentence splits</h2><p class="subtle">One sentence or reading segment per line. Save changes to persist them.</p><textarea id="customSegments" class="field" style="min-height:120px">'+esc((S.customSentences.length?S.customSentences:splitSentences(S.custom)).join("\n"))+'</textarea><button class="btn primary" data-action="saveSegments">Save sentence boundaries</button></div>';
+ h+='<div class="panel"><h2>Local audio</h2><label for="audioFile">Attach MP3/WAV for the selected chapter</label><input type="file" class="field" id="audioFile" accept="audio/*"><label for="timingFile">Import a timing JSON (under 1 MB)</label><input class="field" type="file" id="timingFile" accept=".json,application/json"><small>'+(m?esc(m.name)+(timed()?" · timed":" · untimed"):"No local audio attached for this chapter.")+'</small><div class="tools"><button class="btn" data-action="clearAudio">Clear audio for this chapter</button><button class="btn" data-action="singleSentence">'+(S.singleSentence?"✓ One sentence only":"Play continuously")+'</button></div><label for="audioSeek">Recording position (seconds)</label><input id="audioSeek" class="field" type="range" min="0" max="0" step="0.1" value="0" aria-label="Seek imported recording"></div>';
+ h+='<details><summary>Timing JSON format</summary><pre>[{"start":0.5,"end":2.9},{"start":3.0,"end":5.8}]</pre><p class="subtle">Provide measured boundaries, one interval per displayed sentence. Supplying JSON does not establish acoustic accuracy.</p></details>';
+ return h;
+}
+function progress(){
+ const total=L.reduce((n,c)=>n+c.q.length,0),done=Object.values(S.correct).filter(Boolean).length,finished=L.filter((c,i)=>c.q.every((q,j)=>S.correct[i+":"+j])).length;
+ let h='<div class="mini">Progressus</div><h1>Learning progress</h1><div class="stats"><div class="stat"><b>'+finished+'/'+L.length+'</b><small>Finished lessons</small></div><div class="stat"><b>'+done+'/'+total+'</b><small>Original questions</small></div><div class="stat"><b>'+Object.keys(S.vocab).length+'</b><small>Saved words</small></div></div><div class="panel"><h2>Guided progress</h2><p>'+Object.values(S.clozeCorrect).filter(Boolean).length+'/'+guidedCloze.length+' contextual cloze exercises</p><p>'+Object.keys(S.readingConfidence).length+'/'+L.length+' self-assessed lessons</p></div><h2>Course map</h2>';
+ L.forEach((c,i)=>{const n=c.q.filter((q,j)=>S.correct[i+":"+j]).length;h+='<div style="padding:8px 0;border-bottom:1px solid #dfe7db"><button class="link" data-ch="'+i+'">'+(i+1)+". "+esc(c.name)+'</button><small style="float:right">'+n+'/'+c.q.length+'</small><div class="bar"><div style="width:'+(n/c.q.length*100)+'%"></div></div></div>'});
+ h+='<div class="panel"><h2>Backup and recovery</h2><p class="subtle">Audio is not stored in backups. Restored fields are validated. Current schema v4 also accepts v0.2 backup envelopes.</p><div class="tools"><button class="btn primary" data-action="export">Export backup JSON</button></div><label for="restoreFile">Restore a JSON backup (under 2 MB)</label><input class="field" type="file" id="restoreFile" accept=".json,application/json"><details><summary>Reset exercise and vocabulary progress</summary><button class="btn" data-action="reset">Reset progress (keep notes and imported text)</button></details></div>';
+ return h;
+}
+function syncAudioElement(){
+ const el=$("audioSeek");if(!el)return;
+ el.max=Number.isFinite(audio.duration)&&audio.duration>0?String(audio.duration):"0";
+ el.value=String(Number.isFinite(audio.currentTime)?audio.currentTime:0);
+}
+function render(){
+ const old=stableFocus();tabs();help();
+ $("main").innerHTML=S.tab==="read"?reader():S.tab==="quiz"?quiz():S.tab==="review"?review():S.tab==="library"?library():progress();
+ syncAudioElement();restoreFocus(old);updateBanner();
+}
+function updateSentenceHighlight(){
+ if(chosenWord){chosenWord="";for(const gloss of document.querySelectorAll(".sentence .help[aria-live]"))gloss.remove();const panel=$("help")?.querySelector?.(".panel");if(panel)panel.innerHTML="<small>Click a Latin word to look it up.</small>"}
+ const rows=document.querySelectorAll("[data-sentence-container]");
+ for(const el of rows){const selected=Number(el.dataset.sentenceContainer)===S.sel;el.classList.toggle("selected",selected);el.setAttribute("aria-current",selected?"true":"false")}
+}
+function selectSentence(i,activate=false){
+ const count=current().sent.length;S.sel=Math.max(0,Math.min(Number(i)||0,Math.max(count-1,0)));
+ if(timed()){
+  const target=media().ranges[S.sel];if(target)audio.currentTime=target.start;
+ }
+ save();updateSentenceHighlight();
+ if(!audio.paused)startBoundaryMonitor();
+ if(activate){if(mode()==="voice")speak();else if(mode()==="timed")play();}
+}
+function availableVoice(){
+ const list=typeof speechSynthesis==="undefined"?[]:speechSynthesis.getVoices();
+ const voice=list.find(v=>(v.lang||"").toLowerCase().startsWith("la"));
+ return voice||null;
+}
+function speak(){
+ if(!("speechSynthesis" in window))return updateBanner("Browser voice unavailable.");
+ const line=current().sent[S.sel];if(!line)return;
+ clearVoice();const id=++speechRequest,utterance=new SpeechSynthesisUtterance(line[0]),v=availableVoice();
+ utterance.lang="la";utterance.rate=.82;
+ if(v)utterance.voice=v;
+ spokenVoice=v?v.name:"system default (not Latin-verified)";
+ updateDock();
+ utterance.onend=()=>{if(id!==speechRequest)return;readingIndex=null};
+ utterance.onerror=()=>{if(id===speechRequest)updateBanner("Browser voice could not read this sentence.")};
+ readingIndex=S.sel;speechSynthesis.speak(utterance);
+}
+function play(){
+ if(mode()==="voice"){speak();return}
+ if(timed()&&media().ranges[S.sel])audio.currentTime=media().ranges[S.sel].start;
+ audio.play().then(()=>startBoundaryMonitor()).catch(()=>updateBanner("Audio could not start. Check the attached file."));
+}
+function rating(which){
+ const v=S.vocab[reviewKey];if(!v)return;let days=v.days||1;
+ if(which==="again")days=1/1440;else if(which==="hard")days=Math.max(1,Math.round(days*1.2));else if(which==="good")days=Math.max(2,Math.round(days*2.2));else days=Math.max(4,Math.round(days*3.2));
+ v.days=days;v.due=Date.now()+days*86400000;v.reps=(v.reps||0)+1;reviewReveal=false;reviewKey=null;save();render();
+}
+function download(name,content){
+ const blob=new Blob([content],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000);
+}
+function loadText(file,handler,limit){
+ if(file.size>limit){updateBanner("File too large. Maximum size is "+Math.round(limit/1024)+" KB.");return}
+ const reader=new FileReader();reader.onload=()=>{try{handler(String(reader.result||""))}catch(e){updateBanner("Import failed: "+(e.message||"Invalid file."))}};reader.onerror=()=>updateBanner("Unable to read the selected file.");reader.readAsText(file);
+}
+function validateRanges(raw,expected,duration){
+ if(!Array.isArray(raw)||raw.length!==expected||expected===0)throw Error("Need one timing interval per sentence.");
+ let end=-1;const out=[];
+ for(const item of raw){
+  if(!item||typeof item!=="object"||!isFiniteNum(item.start)||!isFiniteNum(item.end)||item.start<0||item.end<=item.start||item.start<end)throw Error("Invalid, overlapping or unordered intervals.");
+  end=item.end;out.push({start:item.start,end:item.end});
+ }
+ if(isFiniteNum(duration)&&duration>0&&end>duration+.5)throw Error("Timing intervals exceed recording duration.");
+ return out;
+}
+function attachRanges(input){
+ const m=media();if(!m)throw Error("Attach audio to this chapter before adding timings.");
+ const obj=JSON.parse(input),raw=Array.isArray(obj)?obj:obj&&obj.intervals;
+ // The duration may not yet be known; validate it again after loadedmetadata.
+ m.ranges=validateRanges(raw,current().sent.length,Number.isFinite(audio.duration)?audio.duration:NaN);
+ updateBanner("Timing format accepted; boundaries still require listening verification.");render();
+}
+function restoreBackup(content){
+ const data=JSON.parse(content);
+ if(!data||typeof data!=="object"||!["tablinum","tablinum-v02"].includes(data.app)||!data.state||typeof data.state!=="object"||Array.isArray(data.state))throw Error("Not a supported Tablinum backup.");
+ const next=normalizeState(data.state);
+ if(!confirm("Restore this backup? Existing local progress will be replaced."))return;
+ clearVoice();stopAudio();S=next;useChapterAudio();save();render();updateBanner("Backup restored with input validation.");
+}
+document.addEventListener("click",e=>{
+ const b=e.target.closest("button");if(!b)return;
+ if(b.dataset.tab){switchTab(b.dataset.tab);return}
+ if(b.dataset.ch){setChapter(b.dataset.ch==="custom"?"custom":Number(b.dataset.ch));return}
+ if(b.dataset.word){chosenWord=b.dataset.word;const container=b.closest("[data-sentence-container]");if(container)S.sel=Number(container.dataset.sentenceContainer);save();render();return}
+ if(b.dataset.sentence!==undefined){selectSentence(Number(b.dataset.sentence),true);return}
+ if(b.dataset.guided!==undefined){if(!S.guided)return;const k=chapterKey()+":"+b.dataset.guided;S.hintLevels[k]=((Number(S.hintLevels[k])||0)+1)%4;save();render();return}
+ if(b.dataset.confidence){S.readingConfidence[chapterKey()]=b.dataset.confidence;save();render();return}
+ if(b.dataset.save){const w=dict[b.dataset.save];if(w){S.vocab[b.dataset.save]??={head:w.head,meaning:w.meaning,days:1,due:Date.now(),reps:0};save();render()}return}
+ if(b.dataset.choice!==undefined){answer(Number(b.dataset.choice),b.dataset.value);return}
+ if(b.dataset.check!==undefined){answer(Number(b.dataset.check),$("answer-"+b.dataset.check)?.value||"");return}
+ if(b.dataset.rating){rating(b.dataset.rating);return}
+ switch(b.dataset.action){
+ case"macrons":S.macrons=!S.macrons;save();render();break;
+ case"guide":S.guided=!S.guided;save();render();break;
+ case"play":play();break;
+ case"pause":if(mode()==="voice")clearVoice();else audio.pause();break;
+ case"previous":selectSentence(S.sel-1);break;
+ case"forward":selectSentence(S.sel+1);break;
+ case"prevChapter":setChapter(S.ch==="custom"?0:Math.max(0,S.ch-1));break;
+ case"nextChapter":setChapter(Math.min(L.length-1,Number(S.ch||0)+1));break;
+ case"revealCard":reviewReveal=true;render();break;
+ case"clozeCheck":clozeCheck();break;
+ case"importText":{
+  const t=String($("customText")?.value||"");if(!t.trim())return updateBanner("Paste some Latin text first.");
+  S.custom=t.slice(0,20000);S.customSentences=splitSentences(S.custom);for(const k of Object.keys(S.hintLevels))if(k.startsWith("custom:"))delete S.hintLevels[k];save();setChapter("custom");break;
+ }
+ case"clearText":
+  if(confirm("Clear your imported Latin text?")){S.custom="";S.customSentences=[];if(S.ch==="custom")S.ch=0;save();render()}break;
+ case"saveSegments":{
+  const segments=String($("customSegments")?.value||"").split(/\r?\n/).map(v=>v.trim()).filter(Boolean).slice(0,300);
+  if(!segments.length)return updateBanner("Add at least one nonempty segment.");
+  S.customSentences=segments.map(x=>x.slice(0,1000));S.sel=Math.min(S.sel,S.customSentences.length-1);save();render();updateBanner("Sentence boundaries saved.");break;
+ }
+ case"clearAudio":{
+  const m=media();if(m){URL.revokeObjectURL(m.url);mediaByChapter.delete(chapterKey());useChapterAudio();render()}break;
+ }
+ case"singleSentence":S.singleSentence=!S.singleSentence;save();if(S.singleSentence&&!audio.paused)startBoundaryMonitor();else stopBoundaryMonitor();render();break;
+ case"export":download("tablinum-v04-progress.json",JSON.stringify({app:"tablinum",version:4,state:S},null,2));break;
+ case"reset":if(confirm("Reset completed exercises, hints, confidence and saved vocabulary? Keep notes and text?")){S.correct={};S.answers={};S.vocab={};S.clozeAnswers={};S.clozeCorrect={};S.hintLevels={};S.readingConfidence={};save();render()}break;
+ }
+});
+document.addEventListener("change",e=>{
+ const t=e.target,file=t.files?.[0];if(!file)return;
+ if(t.id==="textFile")loadText(file,content=>{S.custom=content.slice(0,20000);S.customSentences=splitSentences(S.custom);for(const k of Object.keys(S.hintLevels))if(k.startsWith("custom:"))delete S.hintLevels[k];save();render();if(content.length>20000)updateBanner("Imported text was shortened to 20,000 characters.")},1024*1024);
+ if(t.id==="timingFile")loadText(file,attachRanges,1024*1024);
+ if(t.id==="restoreFile")loadText(file,restoreBackup,2*1024*1024);
+ if(t.id==="audioFile"){
+  const key=chapterKey(),prior=mediaByChapter.get(key);if(prior)URL.revokeObjectURL(prior.url);
+  mediaByChapter.set(key,{url:URL.createObjectURL(file),name:file.name,ranges:[]});useChapterAudio();render();
+ }
+});
+document.addEventListener("input",e=>{if(e.target.id==="notes"){S.notes[chapterKey()]=e.target.value.slice(0,5000);save()}else if(e.target.id==="audioSeek"&&Number.isFinite(Number(e.target.value))){audio.currentTime=Number(e.target.value)}});
+document.addEventListener("keydown",e=>{
+ if(e.key==="Enter"&&e.target.id?.startsWith("answer-")){e.preventDefault();answer(Number(e.target.id.slice(7)),e.target.value)}
+ if(e.key==="Enter"&&e.target.id==="clozeInput"){e.preventDefault();clozeCheck()}
+ if((e.key==="ArrowLeft"||e.key==="ArrowRight")&&e.target.matches?.(".word")){
+  const group=e.target.closest(".words, .hint-words");if(!group)return;
+  const buttons=[...group.querySelectorAll(".word")];const n=buttons.indexOf(e.target);if(n<0)return;
+  e.preventDefault();e.target.tabIndex=-1;const next=buttons[(n+(e.key==="ArrowLeft"?-1:1)+buttons.length)%buttons.length];next.tabIndex=0;next.focus();
+ }
+});
+audio.addEventListener("timeupdate",()=>{
+ const seek=$("audioSeek");if(seek&&Number.isFinite(audio.currentTime)&&document.activeElement!==seek)seek.value=String(audio.currentTime);
+ if(mode()!=="timed")return;
+ const ranges=media().ranges,clock=audio.currentTime;
+ if(S.singleSentence&&ranges[S.sel]&&clock>=ranges[S.sel].end-0.025){audio.pause();return}
+ const i=ranges.findIndex(t=>clock>=t.start&&clock<t.end);
+ if(i>=0&&i!==S.sel){S.sel=i;save();updateSentenceHighlight()}
+
+});
+audio.addEventListener("play",startBoundaryMonitor);
+audio.addEventListener("pause",stopBoundaryMonitor);
+audio.addEventListener("ended",stopBoundaryMonitor);
+audio.addEventListener("loadedmetadata",()=>{
+ syncAudioElement();
+ const m=media();if(!m||!m.ranges.length)return;
+ try{validateRanges(m.ranges,current().sent.length,audio.duration)}
+ catch(e){m.ranges=[];updateBanner("Audio timings rejected after duration check: "+e.message);render()}
+});
+if("speechSynthesis" in window)speechSynthesis.addEventListener?.("voiceschanged",()=>updateDock());
+window.TablinumAudit={normalizeState,correctAnswer,splitSentences,validateRanges,chapterCount:()=>L.length,questions:()=>L.reduce((n,c)=>n+c.q.length,0),cloze:()=>guidedCloze.length,knownWords:()=>Object.keys(dict).length,contextualClue,lessonAt:i=>L[i]};
+const statusBar=document.createElement("div");statusBar.id="appStatus";statusBar.setAttribute("role","status");statusBar.setAttribute("aria-live","polite");statusBar.className="app-status";document.body.insertBefore(statusBar,document.querySelector("footer"));
+render();
+
+})();
+</script>
+</body>
+</html>

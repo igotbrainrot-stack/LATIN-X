@@ -1,0 +1,17 @@
+{
+  "original_v1_mp3_count": 34,
+  "new_v4_iteration_runway_tasks": 3,
+  "new_v4_mp3_bytes_locally_present": 0,
+  "v4_status": "owner_review_pending",
+  "owner_v3_review_preserved": true,
+  "main_reader_audio_modified": false,
+  "research_sources": [
+    "francescafini.com",
+    "aclanthology.org",
+    "reddit.com/r/latin",
+    "reddit.com/r/ElevenLabs",
+    "huggingface.co",
+    "help.runwayml.com",
+    "elevenlabs.io"
+  ]
+}

@@ -1,0 +1,45 @@
+name: LATIN X Phase 2 review restoration
+
+on:
+  push:
+    branches:
+      - fix/phase2-review-restoration-20261105
+  workflow_dispatch:
+
+jobs:
+  review-and-regression:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run legacy app and vocabulary checks
+        run: npm test
+      - name: Validate Claude owner review queue offline
+        run: npm run test:review
+      - name: Check vocabulary registry stays unapproved
+        run: npm run test:lexemes
+      - name: Check 130 chapter course plan
+        run: node curriculum/validate-roadmap-130.cjs
+  windows-browser:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Playwright
+        run: npm install --no-save playwright
+      - name: Install Chromium
+        run: npx playwright install chromium
+      - name: Verify original app launches from file URLs
+        run: npm run test:file
+      - name: Verify offline vocabulary owner review from file URLs
+        run: npm run test:review-browser

@@ -1,0 +1,219 @@
+{
+  "date": "2026-11-07",
+  "operation": "alpha-edge-feather on already-styled original scene pixels, not image regeneration",
+  "width_full_image_fraction_background": 0.173,
+  "width_fraction_focus": 0.113,
+  "no_crops_resizes_warps_or_region_moves": true,
+  "approved_manifest_and_compiled_data_unchanged": true,
+  "all_outermost_pixels_fully_transparent": true,
+  "no_owner_new_art_signature_fabricated": true,
+  "scenes": [
+    {
+      "scene_id": "b01-c001-scene",
+      "asset": "assets/art/b01/b01-c001-scene.webp",
+      "thumbnail": "assets/art/b01/b01-c001-scene-thumb.webp",
+      "input_rgb_webp_sha256": "fd4f259ef9b234865fa5f065aaf0e969199ee3cc9056ad46ec1d92a77bc95f51",
+      "output_rgba_webp_sha256": "386bb50d4fb0bd2a697d36debca83081513c678dbd5d4813235703390569d238",
+      "input_thumb_sha256": "bc37107bdb0031471b3d1734628f2c7016e67ac4fff9f689c73d3f41613d38ef",
+      "output_thumb_sha256": "fd4b65c92ee1fd670dfd5e51489e4fdddcbe1c158ad79ddd89a4c8705b1288fa",
+      "full_dimensions_px": [
+        1280,
+        720
+      ],
+      "thumb_dimensions_px": [
+        600,
+        338
+      ],
+      "new_full_bytes": 253076,
+      "new_thumb_bytes": 128758,
+      "quality_full": "previously encoded RGBA",
+      "quality_thumb": "previously encoded RGBA",
+      "fully_transparent_edge": true,
+      "fraction_fully_opaque": 0.5439
+    },
+    {
+      "scene_id": "b01-c002-scene",
+      "asset": "assets/art/b01/b01-c002-scene.webp",
+      "thumbnail": "assets/art/b01/b01-c002-scene-thumb.webp",
+      "input_rgb_webp_sha256": "2e9407e20f2e877290733d7c837fa76ba514967654cc8f81c434e4d405c3158c",
+      "output_rgba_webp_sha256": "874ab7535b11991a9cb23fd5e92da4e8a7f2b23e0b7c1d796ef8da177f8b2a23",
+      "input_thumb_sha256": "7da3e5824351cd0a4f0b02e165b5aec6262d190ca641e2399aad255699152f49",
+      "output_thumb_sha256": "c739f35df91b30b5f7c44ead7b0212e2aeee87e595ab4b7e78206b6b2786b448",
+      "full_dimensions_px": [
+        1360,
+        765
+      ],
+      "thumb_dimensions_px": [
+        600,
+        338
+      ],
+      "new_full_bytes": 249612,
+      "new_thumb_bytes": 124640,
+      "quality_full": "previously encoded RGBA",
+      "quality_thumb": "previously encoded RGBA",
+      "fully_transparent_edge": true,
+      "fraction_fully_opaque": 0.5064
+    },
+    {
+      "scene_id": "b01-c003-scene",
+      "asset": "assets/art/b01/b01-c003-scene.webp",
+      "thumbnail": "assets/art/b01/b01-c003-scene-thumb.webp",
+      "input_rgb_webp_sha256": "e45ddb0aaa0d9879bc274686804a40fa8952ffbf2d4dd65d8ce2d37b1101dd65",
+      "output_rgba_webp_sha256": "bbd9054e63625d70971329d441b7c330e2251c73c0d0551400e4a16edf86e76c",
+      "input_thumb_sha256": "d6b952f2d24f69038fe81aca62b531553b710dee348a4e2cd096dd02ca230245",
+      "output_thumb_sha256": "475bf4534316e4c638358e771ad31d839b1f0c563985c712c31ad9804d392ef9",
+      "full_dimensions_px": [
+        1440,
+        810
+      ],
+      "thumb_dimensions_px": [
+        600,
+        338
+      ],
+      "new_full_bytes": 249910,
+      "new_thumb_bytes": 126804,
+      "quality_full": "previously encoded RGBA",
+      "quality_thumb": "previously encoded RGBA",
+      "fully_transparent_edge": true,
+      "fraction_fully_opaque": 0.4729
+    },
+    {
+      "scene_id": "b01-c004-scene",
+      "asset": "assets/art/b01/b01-c004-scene.webp",
+      "thumbnail": "assets/art/b01/b01-c004-scene-thumb.webp",
+      "input_rgb_webp_sha256": "ac2d99e86e7dcec06a2b5aa95ee7c39f9c152db909c1b0d0813f60fb43f5299c",
+      "output_rgba_webp_sha256": "02296cc0694fd510a15083e03d8e12d67ea4c9f602b5fc78f7e5b86f4d4847ca",
+      "input_thumb_sha256": "1e539ace703a8e55ac61d303dec9d75da901ec5c9b70a9e7c43c3946f65b66aa",
+      "output_thumb_sha256": "2bbaaa2b470a1a05c710ab1a2c7550cb1eda5ddb81d01ef3fa2246b5b95b4161",
+      "full_dimensions_px": [
+        1440,
+        811
+      ],
+      "thumb_dimensions_px": [
+        600,
+        338
+      ],
+      "new_full_bytes": 250634,
+      "new_thumb_bytes": 122656,
+      "quality_full": "previously encoded RGBA",
+      "quality_thumb": "previously encoded RGBA",
+      "fully_transparent_edge": true,
+      "fraction_fully_opaque": 0.4739
+    },
+    {
+      "scene_id": "b01-c005-scene",
+      "asset": "assets/art/b01/b01-c005-scene.webp",
+      "thumbnail": "assets/art/b01/b01-c005-scene-thumb.webp",
+      "input_rgb_webp_sha256": "dd5fe20b19aa0f50ff49196d6a68110b897778a76ae79a3198bcdc10459ef772",
+      "output_rgba_webp_sha256": "1ba95b5281ce6fe5a4d2a2f42a41dff8ca06395ce877a00aa8af06616dec5dbc",
+      "input_thumb_sha256": "6016e55dd5ccd932a8fd074998422c3780b04ad18bc926fe803294e66df948ff",
+      "output_thumb_sha256": "05aa91d21a492e64ba9383ff49c0136c83cebd148fa427133534a44b27596ae1",
+      "full_dimensions_px": [
+        1440,
+        810
+      ],
+      "thumb_dimensions_px": [
+        600,
+        338
+      ],
+      "new_full_bytes": 254966,
+      "new_thumb_bytes": 127872,
+      "quality_full": "previously encoded RGBA",
+      "quality_thumb": "previously encoded RGBA",
+      "fully_transparent_edge": true,
+      "fraction_fully_opaque": 0.5196
+    },
+    {
+      "scene_id": "b01-c006-scene",
+      "asset": "assets/art/b01/b01-c006-scene.webp",
+      "thumbnail": "assets/art/b01/b01-c006-scene-thumb.webp",
+      "input_rgb_webp_sha256": "060c3a738dc01b770c02d6b604ad568ff1670c7d8d09a260021f08f41390e524",
+      "output_rgba_webp_sha256": "65bf26c22e44822ea33680336360455d5a93c82a79ea282f776f71200049ce5b",
+      "input_thumb_sha256": "9f14de8fd25ecbc6ff7349672732f893899beaba1310af78168b5f065c56c9ea",
+      "output_thumb_sha256": "87f8678b7051e0a5acff4928cf48a7ebbe56c9809ed663c5cce860b20bbbdb95",
+      "full_dimensions_px": [
+        1600,
+        900
+      ],
+      "thumb_dimensions_px": [
+        600,
+        338
+      ],
+      "new_full_bytes": 254148,
+      "new_thumb_bytes": 117754,
+      "quality_full": 56,
+      "quality_thumb": 92,
+      "fully_transparent_edge": true,
+      "fraction_fully_opaque": 0.5015
+    },
+    {
+      "scene_id": "b01-c007-scene",
+      "asset": "assets/art/b01/b01-c007-scene.webp",
+      "thumbnail": "assets/art/b01/b01-c007-scene-thumb.webp",
+      "input_rgb_webp_sha256": "cff7d51715cfb9308cafd7b574c3a70f7852e3afdc307003fdda85da3d98a687",
+      "output_rgba_webp_sha256": "772e7d5b3691e4965da5e58e8d24b899d96e0a39585252460fa4087957556824",
+      "input_thumb_sha256": "78f4b1109ae6f7813c3b980cc0e5b2b6dd49b09863a217a5337fdc97fd5ef5e4",
+      "output_thumb_sha256": "46dd0f60f04e34e4f176fade97b9f394da4601884f66a6956b7462f2e32d62c0",
+      "full_dimensions_px": [
+        1440,
+        810
+      ],
+      "thumb_dimensions_px": [
+        600,
+        338
+      ],
+      "new_full_bytes": 251134,
+      "new_thumb_bytes": 118704,
+      "quality_full": 56,
+      "quality_thumb": 92,
+      "fully_transparent_edge": true,
+      "fraction_fully_opaque": 0.5448
+    },
+    {
+      "scene_id": "b01-c008-scene-storm",
+      "asset": "assets/art/b01/b01-c008-scene-storm.webp",
+      "thumbnail": "assets/art/b01/b01-c008-scene-storm-thumb.webp",
+      "input_rgb_webp_sha256": "c0864d39a46d6463c03140fa0546e2a7210c345a35c5b0181422ed5707f52615",
+      "output_rgba_webp_sha256": "cd64763e2b1d37762b36eb3b9184a90302d369ee183b3e7f6d420286bfaf05ec",
+      "input_thumb_sha256": "d509b69b3b0f6f4d2c5a98cb715d779fb505696397731cd17954e44df906e431",
+      "output_thumb_sha256": "14047ef8afc7d7d10c769243981531e2948b9b23bb6375fb933ce0d1343e0851",
+      "full_dimensions_px": [
+        1600,
+        900
+      ],
+      "thumb_dimensions_px": [
+        600,
+        338
+      ],
+      "new_full_bytes": 254632,
+      "new_thumb_bytes": 105502,
+      "quality_full": 64,
+      "quality_thumb": 92,
+      "fully_transparent_edge": true,
+      "fraction_fully_opaque": 0.5107
+    },
+    {
+      "scene_id": "b01-c008-scene-sun",
+      "asset": "assets/art/b01/b01-c008-scene-sun.webp",
+      "thumbnail": "assets/art/b01/b01-c008-scene-sun-thumb.webp",
+      "input_rgb_webp_sha256": "b46f17016ee6c6b01a6a3ee41b68c1b8cef324442126457a5645c5f71930975e",
+      "output_rgba_webp_sha256": "12cfc006addbd8a72d0ecf27137fa58ef00c51bbce07f8bd953641b1afbeabed",
+      "input_thumb_sha256": "616e95c571e2d4a0936c5f8d1b2f6a3a184a5ccd86b08ab1a9b67c23cd1b3c91",
+      "output_thumb_sha256": "dfff64b7e2b3afdc9fe1d905f565247b73b361b74410fb7470411682d9757338",
+      "full_dimensions_px": [
+        1280,
+        720
+      ],
+      "thumb_dimensions_px": [
+        600,
+        338
+      ],
+      "new_full_bytes": 254092,
+      "new_thumb_bytes": 127792,
+      "quality_full": 60,
+      "quality_thumb": 92,
+      "fully_transparent_edge": true,
+      "fraction_fully_opaque": 0.5134
+    }
+  ]
+}

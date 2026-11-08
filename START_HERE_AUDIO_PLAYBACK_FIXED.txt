@@ -1,0 +1,24 @@
+LATIN X — Runway voice playback connected and verified (7 Nov 2026)
+
+Quick test (Windows): double-click Start Audio Audition.cmd, then click
+"Test sound (Miriam · Hic est hortus.)" at the top of the page.
+
+You can also open Audio Audition.html directly in Chrome or Edge. The HTML
+contains ALL 34 genuine MP3 files as embedded data — no external JS, MP3
+paths, internet or Runway connection required. Each of the 34 audio
+players is real and connected.
+
+The separate Start Audio Audition.cmd opens the audition. The main reader
+Play does NOT use Runway speech yet; these
+recordings are awaiting your listening approval according to the supplied
+Classical Latin guide. Existing reader voice and music were not changed.
+
+For confidence, the exact original MP3s are also stored under audio-audition/
+and every SHA-256 matches docs/audio/audition-2026-11.json. Run
+VERIFY_AUDITION_MP3S.cmd to verify those separate original bytes.
+
+If the test plays but is silent: unmute the browser tab, check Windows
+volume/output device, and confirm Chrome/Edge is permitted to play audio.
+If it shows an error: tell Claude or ChatGPT the displayed error text.
+
+All project files, tests, previous art backups and Claude handover included.

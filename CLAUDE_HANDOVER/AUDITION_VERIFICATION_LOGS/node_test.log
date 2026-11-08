@@ -1,0 +1,50 @@
+
+> latin-x-tablinum-review@0.4.2 test
+> node tests/smoke.test.cjs && node tests/design-integrity.test.cjs && node tests/backup-compat.test.cjs && node tests/legacy-content-lock.test.cjs && node tests/legacy-lexeme-audit.test.cjs && node tests/lexemes.test.cjs && node tests/owner-tier-review.test.cjs && node tests/offline-vocabulary-review.test.cjs && node tests/grammar-gate.test.cjs && node tests/paradigms.test.cjs && node tests/compiler.test.cjs && node tests/phase3a-relocation.test.cjs && node tests/content-loader.test.cjs && node tests/migration.test.cjs && node tests/phase3c-review.test.cjs && node tests/pilot-text.test.cjs && node tests/exercise-engine.test.cjs && node tests/phase6-fsrs.test.cjs && node tests/phase7a-audio.test.cjs && node tests/illustrations-plan.test.cjs && node tests/phase6-claude-fixes.test.cjs && node tests/phase7b-user-media.test.cjs && node tests/phase7-music-score.test.cjs && node tests/phase8-art-gates.test.cjs && node tests/phase12-accessibility.test.cjs && node tests/phase12-long-profile.test.cjs && node tests/picture-exercises.test.cjs && node tests/legacy-main-art.test.cjs && node tests/art-replacement-regions.test.cjs
+
+PASS: v0.4.2 course, state, all explicit short-answer variants, navigation, keyboard hint arrows and timed/untimed audio checks
+NOT TESTED: real browser, real audio, voice, complete Latin accuracy, CSS/accessibility
+PASS: Visual-only contract — original script/data unchanged; classical styles, landmarks and offline assets retained.
+PASS Phase3c: v2/v4/v5 backup restores, 120 notes, 30 cards, original v4 immutable and v5 roundtrip.
+PASS: unchanged legacy chapter data, question answers/variants, cloze clues, shared glossary, 67 sentences and saved-state keys.
+PASS: 8 stable legacy chapter IDs, 67 sentence IDs, 24 question IDs, 255 token IDs and numeric saved-state key compatibility.
+PASS: glossary candidate audit properly separates 9 ambiguous forms, 48 proper-name tokens and ZERO verified introductions.
+NOT TESTED: morphology, senses, macrons, Latinist sign-off, actual migration or browser/audio.
+PASS: 128 review candidates / 204 glossary keys / 177 extra streams, with 9 source ambiguity tokens.
+PASS: signed synthetic approval, no-macron/no-reviewer rejection, morphology checks, CSV injection guard and ambiguous homograph gate.
+PENDING: actual Latinist review and independently vetted lemma entry; no real approval claimed.
+PASS: owner signatures, multi-row merge, multi-sense, Latinist upgrade, and immutable lexeme IDs.
+PASS: legacy Claude draft check/dry-run accepted; unsigned import fails closed.
+PASS: candidate-tagged extra streams identify five occurrences of three unglossed Latin forms.
+PASS: 128 unapproved Claude candidates; offline vocabulary review and CLI defaults.
+PASS: strict 130-chapter morphology gate; chapter 3 imperfect fails; reviewed previews are token-scoped.
+PASS: 15 unreviewed regular paradigm patterns, macron-sensitive form checks and approval gates.
+PASS: Phase 2 old-lesson roundtrip, deterministic output, signed synthetic checks, draft exclusion, retired IDs, exercise-only vocabulary guard, grammar/form checks.
+PASS Phase 3b/12: HTML unchanged except enumerated classic source tags; generated eight-chapter content matches byte-locked v0.4.2 source.
+PASS Phase3b: catalogued on-demand script loads, dedup, rejection, missing-file guidance and no false approval.
+PASS Phase 3c: 5 v4 fixtures, 120 notes, v2/v5 backups, immutable v4, snapshot, missing content, idempotency and storage quota.
+PASS Claude Phase3c review fixes: approved-card identity, reset deletion, Firefox quota and code 22.
+PASS b01-c001: 52 distinct manuscript lines; 275 reading tokens; annotations unsigned
+PASS b01-c002: 40 distinct manuscript lines; 284 reading tokens; annotations unsigned
+PASS b01-c003: 45 distinct manuscript lines; 256 reading tokens; annotations unsigned
+PASS b01-c004: 49 distinct manuscript lines; 267 reading tokens; annotations unsigned
+PASS b01-c005: 43 distinct manuscript lines; 288 reading tokens; annotations unsigned
+PASS b01-c006: 49 distinct manuscript lines; 279 reading tokens; annotations unsigned
+PASS b01-c007: 46 distinct manuscript lines; 271 reading tokens; annotations unsigned
+PASS b01-c008: 55 distinct manuscript lines; 306 reading tokens; annotations unsigned
+PASS Claude pilot manuscript lock, negative chapter forms, duplicates and explicit morph-first_chapter gate.
+PASS Phase5: 15 types, reviewed-only grading, no substring, verified audio gates, all legacy answers, deterministic distractors and morphology order.
+PASS Phase6: pinned FSRS, unsigned legacy card preserved, exact reviewer-only creation, session exposure, independent counters, log bound and old v5 roundtrip.
+PASS Phase7a: original 3x 2–4m modal scores; no audio before gesture, one lazy AudioContext, duck, settings, microphone pause, hidden-tab pause, v5 backup.
+PASS: 9 draft scenes have grounded region plans and SVG fallback; no unapproved image asset is published.
+PASS Phase8 preproduction: pilot art slots (unsigned copy used for negative checks); bad fallback, alt, polygons and missing WebP fail as designed.
+PASS Claude Phase6 review: 30-day legacy Good >30 days; Again lapses; empty stays New; daily 1+1 caps enforced across both decks.
+PASS Phase7b: offline local blobs, fail-closed timing-v2 per sentence, real ungraded recording ZIP structure, removal and unsafe path rejection.
+PASS Phase7 music: 4 source-attributed 2–4 min pieces, varied rhythms/drone, Seikilos 37 notes/48 pulses, no dropped final tonic.
+PASS: 9 draft scenes have grounded region plans and SVG fallback; no unapproved image asset is published.
+PASS Phase8: 9 owner-approved art scenes, unsigned-copy fail-closed gates, exact static JS manifest, owner-review tool parse, SVG fallback, and polygon geometry.
+PASS Phase 12 static A11y: landmarks, input labels, Latin lang, results, focus, reduced motion and 8 manuscript palette contrasts >= 4.5:1.
+PASS Phase 12: 160 detailed notes, 820 legacy cards, imported sentences, non-mapped keys, v4 byte lock, snapshot, reopen and v5 backup roundtrip.
+PASS picture exercises: 44 unsigned keys cover all 9 scene region maps; cumulative Latin forms, inside/outside hit tests, future signed grade, storm overlapping-polygon clicks and v5 backup roundtrip.
+PASS main-reader artwork preview: all eight topics mapped to nine approved WebPs, two weather pictures, related-scene warning, SVG fallback and unsigned gate.
+PASS new watercolor art: 9 published replacement WebPs and 9 thumbs, native PNG and former art rollback, unchanged polygon maps, provenance/SHA/size/alpha/aspect gates, 14 anchors, storm overlap and unsigned grading gate.

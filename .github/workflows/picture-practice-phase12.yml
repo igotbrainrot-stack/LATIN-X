@@ -1,0 +1,85 @@
+name: LATIN X Picture Practice and Phase12 a11y review
+
+on:
+  push:
+    branches:
+      - feature/picture-exercises-phase12-20261107
+      - fix/picture-overlap-grading-20261107
+      - fix/main-reader-approved-art-20261107
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  node-and-archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Entire original regression suite and unsigned picture content
+        run: |
+          npm test
+          npm run test:pilot
+          npm run test:picture
+          npm run test:phase2
+          npm run test:art
+          npm run test:music
+          npm run test:package
+      - name: Confirm strict owner-signature and lexeme gates remain closed
+        shell: bash
+        run: |
+          if node scripts/validate-lexemes.cjs --require-review-ready > /tmp/review-gate.log 2>&1; then
+            echo 'Unexpected owner approval of unsigned vocabulary'; exit 1
+          fi
+          for n in 1500 3000; do
+            if node curriculum/validate-roadmap-130.cjs --require-introduced-$n > /tmp/lexeme-gate-$n.log 2>&1; then
+              echo "Unexpected $n lexeme gate success"; exit 1
+            fi
+            grep -q 'GATE NOT MET' /tmp/lexeme-gate-$n.log
+          done
+      - name: Exact complete source ZIP and SHA-256
+        shell: bash
+        run: |
+          mkdir -p dist
+          git archive --format=zip --output=dist/LATIN_X_PICTURE_PRACTICE_FULL.zip HEAD
+          unzip -t dist/LATIN_X_PICTURE_PRACTICE_FULL.zip | tail -1
+          for f in 'Start Tablinum.cmd' 'Start Picture Practice.cmd' 'Picture Practice.html' 'index.html' 'app/65-picture-practice.js' 'content/picture-exercises.js' 'tests/phase8-picture-practice-browser.test.cjs' 'PHASE_PICTURE_PRACTICE_CLAUDE_HANDOVER.md'; do
+            unzip -Z1 dist/LATIN_X_PICTURE_PRACTICE_FULL.zip | grep -Fx "$f"
+          done
+          sha256sum dist/LATIN_X_PICTURE_PRACTICE_FULL.zip > dist/SHA256SUMS.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: LATIN_X_PICTURE_PRACTICE_FULL
+          path: dist/
+          if-no-files-found: error
+          retention-days: 30
+
+  windows-file-browser:
+    runs-on: windows-latest
+    timeout-minutes: 50
+    strategy:
+      fail-fast: false
+      matrix:
+        browser: [chromium, chrome, msedge, firefox]
+    env:
+      TABLINUM_BROWSER_NAME: ${{ matrix.browser }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install CI-only pinned test tooling, no runtime dependency
+        run: |
+          npm install --no-save --no-package-lock ts-fsrs@5.4.2 playwright@1.64.1 axe-core@4.10.3
+          npx playwright install chromium firefox
+      - name: Windows file URL picture tests and axe-core serious/critical gate
+        run: |
+          npm run test:picture
+          npm run test:picture-browser
+          npm run test:legacy-art-browser
+          npm run test:phase12-browser
+          npm run test:axe-browser

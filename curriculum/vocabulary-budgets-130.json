@@ -1,0 +1,3100 @@
+{
+  "status": "planned_targets_only_not_introduced",
+  "version": "2026-11-05-outline-v3",
+  "preceding_plan": "curriculum/CHAPTER_OUTLINE_50_DRAFT.md",
+  "counting_unit": "unique editorially-reviewed lexeme ID, not inflected form or token",
+  "minimum_introduced_by_chapter90": 1500,
+  "aspirational_introduced_by_chapter130": 3000,
+  "books": [
+    {
+      "book": 1,
+      "chapters": 50,
+      "teaching": 38,
+      "reviews": 12,
+      "target": 500
+    },
+    {
+      "book": 2,
+      "chapters": 40,
+      "teaching": 32,
+      "reviews": 8,
+      "target": 1032
+    },
+    {
+      "book": 3,
+      "chapters": 40,
+      "teaching": 32,
+      "reviews": 8,
+      "target": 1504
+    }
+  ],
+  "cumulative_milestones": [
+    {
+      "chapter": 50,
+      "cumulative": 500
+    },
+    {
+      "chapter": 90,
+      "cumulative": 1532
+    },
+    {
+      "chapter": 130,
+      "cumulative": 3036
+    }
+  ],
+  "reviews": [
+    5,
+    9,
+    13,
+    17,
+    21,
+    25,
+    29,
+    33,
+    37,
+    41,
+    45,
+    49,
+    55,
+    60,
+    65,
+    70,
+    75,
+    80,
+    85,
+    90,
+    95,
+    100,
+    105,
+    110,
+    115,
+    120,
+    125,
+    130
+  ],
+  "chapters": [
+    {
+      "chapter": 1,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "In hortō",
+      "story": "Līvia explores the garden; a small child stands beside a large tree.",
+      "grammar_focus": "Nominative subjects with est/sunt",
+      "communication_task": "Identify and name people and objects in simple Latin.",
+      "review": false,
+      "source_seed_lemmas": [
+        "sum",
+        "arbor",
+        "magnus",
+        "parvus",
+        "in",
+        "puella"
+      ],
+      "budget_new_lemmas": 6,
+      "target_running_tokens": [
+        250,
+        360
+      ],
+      "lesson_segments": 2,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 6
+    },
+    {
+      "chapter": 2,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Familia",
+      "story": "Mārcus, Flāvia, Līvia and Tītus stand before the villa; their relationships are named.",
+      "grammar_focus": "Singular genitive of possession (-ae/-ī)",
+      "communication_task": "Identify and name people and objects in simple Latin.",
+      "review": false,
+      "source_seed_lemmas": [
+        "pater",
+        "māter",
+        "fīlia",
+        "fīlius",
+        "frāter",
+        "soror",
+        "familia"
+      ],
+      "budget_new_lemmas": 8,
+      "target_running_tokens": [
+        260,
+        370
+      ],
+      "lesson_segments": 2,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 14
+    },
+    {
+      "chapter": 3,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Cēna",
+      "story": "At supper Tītus eats bread and Līvia drinks water while Flāvia points to each object.",
+      "grammar_focus": "Accusative direct objects",
+      "communication_task": "Identify and name people and objects in simple Latin.",
+      "review": false,
+      "source_seed_lemmas": [
+        "aqua",
+        "cibus",
+        "mēnsa",
+        "habeō",
+        "portō",
+        "liber"
+      ],
+      "budget_new_lemmas": 9,
+      "target_running_tokens": [
+        270,
+        380
+      ],
+      "lesson_segments": 2,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 23
+    },
+    {
+      "chapter": 4,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Dōnum",
+      "story": "Līvia gives her mother a red rose; her father receives another gift.",
+      "grammar_focus": "Dative recipient (-ae/-ō/-ī)",
+      "communication_task": "Identify and name people and objects in simple Latin.",
+      "review": false,
+      "source_seed_lemmas": [
+        "dō",
+        "accipiō",
+        "amīcus",
+        "laetus",
+        "grātia"
+      ],
+      "budget_new_lemmas": 10,
+      "target_running_tokens": [
+        280,
+        390
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 33
+    },
+    {
+      "chapter": 5,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Recēnsiō I — In vīllā",
+      "story": "The family retells a short garden-and-supper story with two gifts.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "communication_task": "Identify and name people and objects in simple Latin.",
+      "review": true,
+      "source_seed_lemmas": [],
+      "budget_new_lemmas": 0,
+      "target_running_tokens": [
+        290,
+        400
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 33
+    },
+    {
+      "chapter": 6,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Forum",
+      "story": "At the market Mārcus chooses two apples while Līvia counts three on the stall.",
+      "grammar_focus": "Neuter plural nominative/accusative in -a",
+      "communication_task": "Identify and name people and objects in simple Latin.",
+      "review": false,
+      "source_seed_lemmas": [
+        "forum",
+        "duo",
+        "trēs",
+        "multus",
+        "pretium"
+      ],
+      "budget_new_lemmas": 11,
+      "target_running_tokens": [
+        300,
+        410
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 44
+    },
+    {
+      "chapter": 7,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Canis in viā",
+      "story": "A dog runs along a Roman street to Līvia at the gate; a boy calls him.",
+      "grammar_focus": "Direction with ad + accusative",
+      "communication_task": "Identify and name people and objects in simple Latin.",
+      "review": false,
+      "source_seed_lemmas": [
+        "canis",
+        "via",
+        "ad",
+        "porta",
+        "currō",
+        "vocō",
+        "puer"
+      ],
+      "budget_new_lemmas": 12,
+      "target_running_tokens": [
+        310,
+        420
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 56
+    },
+    {
+      "chapter": 8,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Tempestās",
+      "story": "The family hears rain and wind; people look out of different windows.",
+      "grammar_focus": "Present third-person -t versus -nt",
+      "communication_task": "Identify and name people and objects in simple Latin.",
+      "review": false,
+      "source_seed_lemmas": [
+        "audiō",
+        "videō",
+        "ventus",
+        "moveō"
+      ],
+      "budget_new_lemmas": 12,
+      "target_running_tokens": [
+        320,
+        430
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 68
+    },
+    {
+      "chapter": 9,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Recēnsiō II — Canis redit",
+      "story": "A small review tale uses the market, the storm and the running dog.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "communication_task": "Identify and name people and objects in simple Latin.",
+      "review": true,
+      "source_seed_lemmas": [],
+      "budget_new_lemmas": 0,
+      "target_running_tokens": [
+        330,
+        440
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 68
+    },
+    {
+      "chapter": 10,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Ego in hortō",
+      "story": "Līvia narrates what she sees and carries in the garden.",
+      "grammar_focus": "First-person singular present (-ō)",
+      "communication_task": "Identify and name people and objects in simple Latin.",
+      "review": false,
+      "source_seed_lemmas": [
+        "ego",
+        "dīcō",
+        "faciō"
+      ],
+      "budget_new_lemmas": 12,
+      "target_running_tokens": [
+        340,
+        450
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 80
+    },
+    {
+      "chapter": 11,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Tū quid facis?",
+      "story": "Līvia speaks to Tītus: she sees him and asks whether he sees her; he answers.",
+      "grammar_focus": "Second-person singular present (-s) with ego/tū and direct-object mē/tē",
+      "communication_task": "Answer familiar Latin questions and recite short dialogues.",
+      "review": false,
+      "source_seed_lemmas": [
+        "tū",
+        "quis",
+        "rogō",
+        "respondeō",
+        "labōrō"
+      ],
+      "budget_new_lemmas": 12,
+      "target_running_tokens": [
+        420,
+        690
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 92,
+      "required_instructional_forms": [
+        "ego",
+        "tū",
+        "mē",
+        "tē"
+      ],
+      "instructional_form_status": "planned_for_authored_latin_lesson_not_evidenced_or_verified"
+    },
+    {
+      "chapter": 12,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "In vīllā et ex vīllā",
+      "story": "The children go into the villa and come out from it.",
+      "grammar_focus": "Place with in + ablative",
+      "communication_task": "Answer familiar Latin questions and recite short dialogues.",
+      "review": false,
+      "source_seed_lemmas": [
+        "ex",
+        "ā",
+        "locus",
+        "prope"
+      ],
+      "budget_new_lemmas": 12,
+      "target_running_tokens": [
+        420,
+        690
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 104
+    },
+    {
+      "chapter": 13,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Recēnsiō III — Ubi sumus?",
+      "story": "A dialogue revisits I/you forms and near versus inside locations.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "communication_task": "Answer familiar Latin questions and recite short dialogues.",
+      "review": true,
+      "source_seed_lemmas": [],
+      "budget_new_lemmas": 0,
+      "target_running_tokens": [
+        420,
+        690
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 104
+    },
+    {
+      "chapter": 14,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Rosa rubra",
+      "story": "The family distinguishes red, white, large and small objects and says which one is mine or yours.",
+      "grammar_focus": "Masculine/feminine/neuter singular adjective agreement (-us/-a/-um)",
+      "communication_task": "Answer familiar Latin questions and recite short dialogues.",
+      "review": false,
+      "source_seed_lemmas": [
+        "albus",
+        "bonus",
+        "malus"
+      ],
+      "budget_new_lemmas": 12,
+      "target_running_tokens": [
+        420,
+        690
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 116,
+      "secondary_focus": "Possessive adjectives meus/mea/meum and tuus/tua/tuum, in the same adjective-agreement paradigms.",
+      "lesson_sequence_notes": "Lectio I: colour and size agreement; lectio II: possessor visibly points: mea rosa / tuus liber. Do not silently treat as lexical extras.",
+      "required_instructional_forms": [
+        "meus",
+        "mea",
+        "meum",
+        "tuus",
+        "tua",
+        "tuum"
+      ],
+      "instructional_form_status": "planned_for_authored_latin_lesson_not_evidenced_or_verified"
+    },
+    {
+      "chapter": 15,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Amīcī et amīcae",
+      "story": "Two nearby visitors and two distant visitors arrive at the villa, so Līvia contrasts hī amīcī with illī amīcī.",
+      "grammar_focus": "Nominative plurals of 1st/2nd-declension nouns",
+      "communication_task": "Answer familiar Latin questions and recite short dialogues.",
+      "review": false,
+      "source_seed_lemmas": [
+        "vir",
+        "dominus",
+        "servus",
+        "hic",
+        "ille"
+      ],
+      "budget_new_lemmas": 12,
+      "target_running_tokens": [
+        420,
+        690
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 128,
+      "secondary_focus": "Deictic demonstratives hic/haec/hoc and ille/illa/illud in simple near/far noun contrasts; plural hī/illī lightly introduced.",
+      "lesson_sequence_notes": "Lectio I forms nominative noun plurals; Lectio II points to near and far people/groups: hic amīcus / ille amīcus / hī amīcī / illī amīcī. Only nominative cues introduced; oblique forms remain for Ch 71.",
+      "required_instructional_forms": [
+        "hic",
+        "haec",
+        "hoc",
+        "ille",
+        "illa",
+        "illud",
+        "hī",
+        "illī"
+      ],
+      "instructional_form_status": "planned_for_latin_authored_lesson_not_reviewed"
+    },
+    {
+      "chapter": 16,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Nōs et vōs",
+      "story": "Family members plan together; hosts speak to visiting friends.",
+      "grammar_focus": "First/second person plural present (-mus/-tis), with nōs/vōs as subjects and objects",
+      "communication_task": "Answer familiar Latin questions and recite short dialogues.",
+      "review": false,
+      "source_seed_lemmas": [
+        "nōs",
+        "vōs",
+        "laudō"
+      ],
+      "budget_new_lemmas": 12,
+      "target_running_tokens": [
+        420,
+        690
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 140,
+      "lesson_sequence_notes": "Contrast nōs/vōs with earlier ego/tū and mē/tē in short exchanges. Do not create a second full declension unit.",
+      "required_instructional_forms": [
+        "nōs",
+        "vōs"
+      ],
+      "instructional_form_status": "planned_for_authored_latin_lesson_not_evidenced_or_verified"
+    },
+    {
+      "chapter": 17,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Recēnsiō IV — Hospitēs",
+      "story": "Visitors arrive, eat together, and talk about pictures.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "communication_task": "Answer familiar Latin questions and recite short dialogues.",
+      "review": true,
+      "source_seed_lemmas": [],
+      "budget_new_lemmas": 0,
+      "target_running_tokens": [
+        420,
+        690
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 140
+    },
+    {
+      "chapter": 18,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Venī hūc!",
+      "story": "Mārcus calls to Tītus ('Tīte, venī!') and Līvia ('Līvia, aperī!') to carry a basket and open the door.",
+      "grammar_focus": "Positive singular imperative and vocative case in direct address",
+      "communication_task": "Answer familiar Latin questions and recite short dialogues.",
+      "review": false,
+      "source_seed_lemmas": [
+        "veniō",
+        "ferō",
+        "aperiō",
+        "claudō",
+        "teneō",
+        "mittō",
+        "vōx"
+      ],
+      "budget_new_lemmas": 12,
+      "target_running_tokens": [
+        420,
+        690
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 152,
+      "lesson_sequence_notes": "Start with known names: Tītus → Tīte, Mārcus → Mārce; compare the vocative of first-declension Līvia (unchanged). Teach the call as part of the command scene; postpone plural imperatives until Ch 54.",
+      "required_instructional_forms": [
+        "Mārce",
+        "Tīte"
+      ],
+      "instructional_form_status": "planned_for_authored_latin_lesson_not_evidenced_or_verified"
+    },
+    {
+      "chapter": 19,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Quid vult Līvia?",
+      "story": "A child wants to read and can carry a book but cannot reach a shelf.",
+      "grammar_focus": "Complementary infinitive after posse/velle",
+      "communication_task": "Answer familiar Latin questions and recite short dialogues.",
+      "review": false,
+      "source_seed_lemmas": [
+        "possum",
+        "volō",
+        "legō",
+        "sedeō",
+        "surgō",
+        "putō"
+      ],
+      "budget_new_lemmas": 13,
+      "target_running_tokens": [
+        420,
+        690
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 165
+    },
+    {
+      "chapter": 20,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Is librum habet",
+      "story": "Līvia points to a visitor, his sister and their book, asking who holds it and whose it is.",
+      "grammar_focus": "Third-person anaphoric pronouns is / ea / id, eum/eam, and possessive genitive eius",
+      "communication_task": "Use is, ea, id and eius to refer back to a known person or object instead of repeating a name.",
+      "review": false,
+      "source_seed_lemmas": [],
+      "budget_new_lemmas": 13,
+      "target_running_tokens": [
+        420,
+        690
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 178,
+      "lesson_sequence_notes": "Lectio I: is / ea / id in clear two-character scenes; lectio II: eum / eam as objects; lectio III: eius refers to someone else's book. Contrast with already studied mē/tē and nōs/vōs; avoid treating eius as a reflexive possessive.",
+      "required_instructional_forms": [
+        "is",
+        "ea",
+        "id",
+        "eum",
+        "eam",
+        "eius"
+      ],
+      "instructional_form_status": "planned_for_authored_latin_lesson_not_evidenced_or_verified"
+    },
+    {
+      "chapter": 21,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Recēnsiō V — Verba familiae",
+      "story": "A short conversation recycles pronouns, plural verbs and commands.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "communication_task": "Answer familiar Latin questions and recite short dialogues.",
+      "review": true,
+      "source_seed_lemmas": [],
+      "budget_new_lemmas": 0,
+      "target_running_tokens": [
+        520,
+        790
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 178
+    },
+    {
+      "chapter": 22,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Herī et hodiē",
+      "story": "Two pictures contrast today's good weather with yesterday's storm.",
+      "grammar_focus": "Imperfect of sum: eram/erat/erant",
+      "communication_task": "Answer familiar Latin questions and recite short dialogues.",
+      "review": false,
+      "source_seed_lemmas": [
+        "hodiē",
+        "tempus",
+        "nox",
+        "sōl",
+        "annus",
+        "diēs"
+      ],
+      "budget_new_lemmas": 13,
+      "target_running_tokens": [
+        520,
+        790
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 191
+    },
+    {
+      "chapter": 23,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Ad fenestram",
+      "story": "Tītus was reading while Flāvia was writing during heavy rain.",
+      "grammar_focus": "Imperfect active in -bā-",
+      "communication_task": "Answer familiar Latin questions and recite short dialogues.",
+      "review": false,
+      "source_seed_lemmas": [
+        "scrībō",
+        "dormiō",
+        "maneō",
+        "per"
+      ],
+      "budget_new_lemmas": 13,
+      "target_running_tokens": [
+        520,
+        790
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 204
+    },
+    {
+      "chapter": 24,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Nōlī timēre",
+      "story": "Flāvia comforts Tītus and tells him not to fear thunder.",
+      "grammar_focus": "Negative singular command nōlī + infinitive",
+      "communication_task": "Answer familiar Latin questions and recite short dialogues.",
+      "review": false,
+      "source_seed_lemmas": [
+        "nōlō",
+        "timeō",
+        "taceō",
+        "timor",
+        "fortis"
+      ],
+      "budget_new_lemmas": 13,
+      "target_running_tokens": [
+        520,
+        790
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 217
+    },
+    {
+      "chapter": 25,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Recēnsiō VI — Post tempestātem",
+      "story": "The family retells how it felt and what people were doing in the storm.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "communication_task": "Answer familiar Latin questions and recite short dialogues.",
+      "review": true,
+      "source_seed_lemmas": [],
+      "budget_new_lemmas": 0,
+      "target_running_tokens": [
+        520,
+        790
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 217
+    },
+    {
+      "chapter": 26,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Dōnum parāvī",
+      "story": "Līvia says she prepared her own gift, while Tītus prepared a gift belonging to someone else.",
+      "grammar_focus": "Regular perfect active with -v-",
+      "communication_task": "Answer familiar Latin questions and recite short dialogues.",
+      "review": false,
+      "source_seed_lemmas": [
+        "parō",
+        "servō",
+        "amō"
+      ],
+      "budget_new_lemmas": 13,
+      "target_running_tokens": [
+        520,
+        790
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 230,
+      "secondary_focus": "Reflexive sē and possessive suus/sua/suum (refer back to the clause's subject), explicitly contrasted with eius from Chapter 20.",
+      "lesson_sequence_notes": "Lectio I: familiar regular perfect -v- in parāvit; lectio II: compare Līvia sē videt / Līvia rosam suam parāvit / Līvia rosam eius portat. This is a tightly bounded pronoun micro-lesson, not a complete expansion of all pronominal cases. Verify sentences with a Latinist.",
+      "required_instructional_forms": [
+        "sē",
+        "suus",
+        "sua",
+        "suum",
+        "eius"
+      ],
+      "instructional_form_status": "planned_for_authored_latin_lesson_not_evidenced_or_verified"
+    },
+    {
+      "chapter": 27,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Nūntius vēnit",
+      "story": "A messenger reports what he said, saw and did on a journey.",
+      "grammar_focus": "Common strong perfect active stems",
+      "communication_task": "Answer familiar Latin questions and recite short dialogues.",
+      "review": false,
+      "source_seed_lemmas": [],
+      "budget_new_lemmas": 15,
+      "target_running_tokens": [
+        520,
+        790
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 245
+    },
+    {
+      "chapter": 28,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Epistula iam vēnerat",
+      "story": "A letter had already arrived before a visitor came; the children reconstruct which event happened first.",
+      "grammar_focus": "Pluperfect active indicative in a two-event past timeline",
+      "communication_task": "Answer familiar Latin questions and recite short dialogues.",
+      "review": false,
+      "source_seed_lemmas": [
+        "ante",
+        "post",
+        "iam",
+        "prius",
+        "relinquō",
+        "quaerō"
+      ],
+      "budget_new_lemmas": 15,
+      "target_running_tokens": [
+        520,
+        790
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 260
+    },
+    {
+      "chapter": 29,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Recēnsiō VII — Litterae",
+      "story": "A short mystery reorders past actions and discovers a lost message.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "communication_task": "Answer familiar Latin questions and recite short dialogues.",
+      "review": true,
+      "source_seed_lemmas": [],
+      "budget_new_lemmas": 0,
+      "target_running_tokens": [
+        520,
+        790
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 260
+    },
+    {
+      "chapter": 30,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Crās in viā",
+      "story": "The family will visit friends and carry a gift tomorrow.",
+      "grammar_focus": "Future of 1st/2nd-conjugation verbs in -b-",
+      "communication_task": "Answer familiar Latin questions and recite short dialogues.",
+      "review": false,
+      "source_seed_lemmas": [],
+      "budget_new_lemmas": 15,
+      "target_running_tokens": [
+        520,
+        790
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 275
+    },
+    {
+      "chapter": 31,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Iter crāstinum",
+      "story": "The children ask what they will see and do on the journey.",
+      "grammar_focus": "Future of 3rd/4th-conjugation verbs (-am/-ēs/-et)",
+      "communication_task": "Retell a familiar passage in simple connected Latin.",
+      "review": false,
+      "source_seed_lemmas": [
+        "iter"
+      ],
+      "budget_new_lemmas": 15,
+      "target_running_tokens": [
+        650,
+        1050
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 290
+    },
+    {
+      "chapter": 32,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Cum redierit",
+      "story": "The visit will end after someone has returned with the book.",
+      "grammar_focus": "Future perfect indicative",
+      "communication_task": "Retell a familiar passage in simple connected Latin.",
+      "review": false,
+      "source_seed_lemmas": [
+        "cum",
+        "redeō",
+        "inveniō"
+      ],
+      "budget_new_lemmas": 15,
+      "target_running_tokens": [
+        650,
+        1050
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 305
+    },
+    {
+      "chapter": 33,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Recēnsiō VIII — Iter",
+      "story": "The family sets out, travels, and recounts the return.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "communication_task": "Retell a familiar passage in simple connected Latin.",
+      "review": true,
+      "source_seed_lemmas": [],
+      "budget_new_lemmas": 0,
+      "target_running_tokens": [
+        650,
+        1050
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 305
+    },
+    {
+      "chapter": 34,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "In urbe",
+      "story": "The family meets a person near the river in a large city.",
+      "grammar_focus": "3rd-declension nominative/accusative noun contrasts",
+      "communication_task": "Retell a familiar passage in simple connected Latin.",
+      "review": false,
+      "source_seed_lemmas": [
+        "homō",
+        "urbs",
+        "flūmen",
+        "nōmen",
+        "corpus"
+      ],
+      "budget_new_lemmas": 15,
+      "target_running_tokens": [
+        650,
+        1050
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 320
+    },
+    {
+      "chapter": 35,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Omnēs fortēs?",
+      "story": "The family compares a brave boy, a fast dog and large groups of familiar people.",
+      "grammar_focus": "Third-declension adjective agreement (omnis, fortis, celer)",
+      "communication_task": "Describe familiar people and animals with third-declension adjectives.",
+      "review": false,
+      "source_seed_lemmas": [
+        "omnis",
+        "celer"
+      ],
+      "budget_new_lemmas": 15,
+      "target_running_tokens": [
+        650,
+        1050
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 335
+    },
+    {
+      "chapter": 36,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Quī librum habet?",
+      "story": "A visitor who lives nearby comes to the villa with a missing book.",
+      "grammar_focus": "Relative clauses with quī/quae/quod (nominative subjects)",
+      "communication_task": "Identify which person or object performs an action in a simple relative clause.",
+      "review": false,
+      "source_seed_lemmas": [
+        "quī",
+        "ostendō"
+      ],
+      "budget_new_lemmas": 15,
+      "target_running_tokens": [
+        650,
+        1050
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 350
+    },
+    {
+      "chapter": 37,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Recēnsiō IX — Cuius liber?",
+      "story": "The family identifies lost property by its owner and location.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "communication_task": "Retell a familiar passage in simple connected Latin.",
+      "review": true,
+      "source_seed_lemmas": [],
+      "budget_new_lemmas": 0,
+      "target_running_tokens": [
+        650,
+        1050
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 350
+    },
+    {
+      "chapter": 38,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Vocātur",
+      "story": "At the forum people are summoned, and goods are sold.",
+      "grammar_focus": "Present passive -tur/-ntur",
+      "communication_task": "Retell a familiar passage in simple connected Latin.",
+      "review": false,
+      "source_seed_lemmas": [],
+      "budget_new_lemmas": 15,
+      "target_running_tokens": [
+        650,
+        1050
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 365
+    },
+    {
+      "chapter": 39,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Dōnum repertum est",
+      "story": "The family learns that a lost object has been found.",
+      "grammar_focus": "Perfect passive participle + sum as a verb",
+      "communication_task": "Retell a familiar passage in simple connected Latin.",
+      "review": false,
+      "source_seed_lemmas": [],
+      "budget_new_lemmas": 15,
+      "target_running_tokens": [
+        650,
+        1050
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 380
+    },
+    {
+      "chapter": 40,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Canis currēns",
+      "story": "A dog runs through the gate toward a boy who is carrying a basket.",
+      "grammar_focus": "Present active participle -ns/-ntis",
+      "communication_task": "Retell a familiar passage in simple connected Latin.",
+      "review": false,
+      "source_seed_lemmas": [
+        "fugiō"
+      ],
+      "budget_new_lemmas": 15,
+      "target_running_tokens": [
+        650,
+        1050
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 395
+    },
+    {
+      "chapter": 41,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Recēnsiō X — Quid factum est?",
+      "story": "A short account contrasts ongoing actions, completed passive events and persons acting.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "communication_task": "Retell a familiar passage in simple connected Latin.",
+      "review": true,
+      "source_seed_lemmas": [],
+      "budget_new_lemmas": 0,
+      "target_running_tokens": [
+        650,
+        1050
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 395
+    },
+    {
+      "chapter": 42,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Līvia dīcit…",
+      "story": "Līvia reports that a traveller is approaching the house.",
+      "grammar_focus": "Accusative + infinitive in indirect statement",
+      "communication_task": "Retell a familiar passage in simple connected Latin.",
+      "review": false,
+      "source_seed_lemmas": [
+        "sciō",
+        "crēdō",
+        "sentiō"
+      ],
+      "budget_new_lemmas": 15,
+      "target_running_tokens": [
+        650,
+        1050
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 410
+    },
+    {
+      "chapter": 43,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Nūntius ventūrus",
+      "story": "A messenger who is about to arrive is seen in the distance, and the family prepares for his visit.",
+      "grammar_focus": "Future active participle (-ūrus), introduced in clear predicative phrases",
+      "communication_task": "Explain who is about to arrive and what they intend to do.",
+      "review": false,
+      "source_seed_lemmas": [
+        "nūntius"
+      ],
+      "budget_new_lemmas": 15,
+      "target_running_tokens": [
+        650,
+        1050
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 425
+    },
+    {
+      "chapter": 44,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Canis sequitur",
+      "story": "The dog follows a friend who tries to speak to the family.",
+      "grammar_focus": "Deponent verbs (present forms, active meanings)",
+      "communication_task": "Retell a familiar passage in simple connected Latin.",
+      "review": false,
+      "source_seed_lemmas": [
+        "loquor",
+        "hortor",
+        "ingredior",
+        "moror",
+        "proficīscor",
+        "arbitror"
+      ],
+      "budget_new_lemmas": 15,
+      "target_running_tokens": [
+        650,
+        1050
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 440
+    },
+    {
+      "chapter": 45,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Recēnsiō XI — Iter nūntiī",
+      "story": "A small original fable-like journey revisits participles, reports and deponents.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "communication_task": "Retell a familiar passage in simple connected Latin.",
+      "review": true,
+      "source_seed_lemmas": [],
+      "budget_new_lemmas": 0,
+      "target_running_tokens": [
+        650,
+        1050
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 440
+    },
+    {
+      "chapter": 46,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Maior an minor?",
+      "story": "The children compare two trees, two animals and two houses.",
+      "grammar_focus": "Comparative adjectives (-ior/-ius), with quam",
+      "communication_task": "Retell a familiar passage in simple connected Latin.",
+      "review": false,
+      "source_seed_lemmas": [
+        "longus",
+        "altus",
+        "quam"
+      ],
+      "budget_new_lemmas": 15,
+      "target_running_tokens": [
+        650,
+        1050
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 455
+    },
+    {
+      "chapter": 47,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Maximus an minimus?",
+      "story": "The children compare several trees and houses, finding which is greatest and smallest.",
+      "grammar_focus": "Superlative adjective forms (-issimus, maximus, minimus)",
+      "communication_task": "Describe the largest, smallest, best or worst item in a picture.",
+      "review": false,
+      "source_seed_lemmas": [],
+      "budget_new_lemmas": 15,
+      "target_running_tokens": [
+        650,
+        1050
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 470
+    },
+    {
+      "chapter": 48,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Manūs et portūs",
+      "story": "People load boxes by hand at a harbour as a ship arrives.",
+      "grammar_focus": "Fourth-declension noun forms in concrete contexts",
+      "communication_task": "Identify actions and locations at the harbour.",
+      "review": false,
+      "source_seed_lemmas": [
+        "manus",
+        "exercitus",
+        "frūctus",
+        "senātus",
+        "gradus"
+      ],
+      "budget_new_lemmas": 15,
+      "target_running_tokens": [
+        650,
+        1050
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 485
+    },
+    {
+      "chapter": 49,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Recēnsiō XII — In portū",
+      "story": "An original harbour story recycles comparisons, deponents and fourth/fifth declensions.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "communication_task": "Retell a familiar passage in simple connected Latin.",
+      "review": true,
+      "source_seed_lemmas": [],
+      "budget_new_lemmas": 0,
+      "target_running_tokens": [
+        650,
+        1050
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 485
+    },
+    {
+      "chapter": 50,
+      "book": 1,
+      "stage": "Foundation / Prima Via",
+      "title": "Fābula prīma — Pōns ad librōs",
+      "story": "An original fable about an animal, a friend and a helpful action opens a path to adapted classics.",
+      "grammar_focus": "Purpose clauses with ut / nē + present subjunctive (forms first)",
+      "communication_task": "Explain what someone does to achieve or prevent a simple result.",
+      "review": false,
+      "source_seed_lemmas": [
+        "ut",
+        "iuvō"
+      ],
+      "budget_new_lemmas": 15,
+      "target_running_tokens": [
+        650,
+        1050
+      ],
+      "lesson_segments": 3,
+      "content_status": "unwritten_or_legacy_short_story; not vocabulary-verified",
+      "cumulative_target": 500
+    },
+    {
+      "chapter": 51,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "In agrō Mārcī",
+      "story": "At a neighbouring farm the family watches workers cultivate a field.",
+      "grammar_focus": "Ablative of means in concrete actions",
+      "communication_task": "Describe how someone works using a pictured tool.",
+      "review": false,
+      "budget_new_lemmas": 17,
+      "target_running_tokens": [
+        800,
+        1200
+      ],
+      "lesson_segments": 4,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 517
+    },
+    {
+      "chapter": 52,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Aqua et terra",
+      "story": "Two gardeners compare dry and wet fields, then carry water.",
+      "grammar_focus": "Ablative of cause and separation",
+      "communication_task": "Explain why a plant grows or fails to grow.",
+      "review": false,
+      "budget_new_lemmas": 18,
+      "target_running_tokens": [
+        800,
+        1200
+      ],
+      "lesson_segments": 4,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 535
+    },
+    {
+      "chapter": 53,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Frūctūs hortī",
+      "story": "The children compare crops and decide what belongs in a basket.",
+      "grammar_focus": "Quantity expressions with genitive",
+      "communication_task": "Ask for a number, amount, or portion in Latin.",
+      "review": false,
+      "budget_new_lemmas": 19,
+      "target_running_tokens": [
+        800,
+        1200
+      ],
+      "lesson_segments": 4,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 554
+    },
+    {
+      "chapter": 54,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Mercātōrēs, audīte!",
+      "story": "A merchant calls to several other traders and asks them all to listen, carry goods and answer questions.",
+      "grammar_focus": "Second-person plural imperatives (-te), with vocative direct-address review",
+      "communication_task": "Address several people and give or follow plural commands in a market dialogue.",
+      "review": false,
+      "budget_new_lemmas": 20,
+      "target_running_tokens": [
+        800,
+        1200
+      ],
+      "lesson_segments": 4,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 574,
+      "lesson_sequence_notes": "Contrast Ch18 Venī! with Venīte!, audī vs audīte, portā vs portāte; revisit singular vocative and plural address.",
+      "required_instructional_forms": [
+        "venīte",
+        "audīte",
+        "portāte"
+      ],
+      "instructional_form_status": "planned_for_authored_latin_lesson_not_evidenced_or_verified"
+    },
+    {
+      "chapter": 55,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Recēnsiō XIII — In agrīs",
+      "story": "An original farm and market story recycles tools, causes and amounts.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "communication_task": "Give a short spoken account of the illustrated market.",
+      "review": true,
+      "budget_new_lemmas": 0,
+      "target_running_tokens": [
+        800,
+        1200
+      ],
+      "lesson_segments": 4,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 574
+    },
+    {
+      "chapter": 56,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Diēs et rēs",
+      "story": "During a long journey the travellers count the days and solve a small problem.",
+      "grammar_focus": "Fifth-declension nouns (diēs, rēs) in frequent cases",
+      "communication_task": "Describe what happened on a particular day and how a problem was solved.",
+      "review": false,
+      "budget_new_lemmas": 21,
+      "target_running_tokens": [
+        850,
+        1250
+      ],
+      "lesson_segments": 4,
+      "source_seed_lemmas": [
+        "rēs",
+        "spēs",
+        "fidēs",
+        "faciēs",
+        "aciēs"
+      ],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 595
+    },
+    {
+      "chapter": 57,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Ad flūmen",
+      "story": "A ferryman helps travellers cross a river near the farm.",
+      "grammar_focus": "Ablative of accompaniment versus means",
+      "communication_task": "Describe companions and instruments without English.",
+      "review": false,
+      "budget_new_lemmas": 22,
+      "target_running_tokens": [
+        850,
+        1250
+      ],
+      "lesson_segments": 4,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 617
+    },
+    {
+      "chapter": 58,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Celeriter ambulant",
+      "story": "Travellers cross a busy road carefully while a friend moves more quickly.",
+      "grammar_focus": "Formation and contextual use of common adverbs (-ē/-iter)",
+      "communication_task": "Describe how people travel, work and speak in varied situations.",
+      "review": false,
+      "budget_new_lemmas": 23,
+      "target_running_tokens": [
+        850,
+        1250
+      ],
+      "lesson_segments": 4,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 640
+    },
+    {
+      "chapter": 59,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Iānuam aperiēbat",
+      "story": "A guest describes how doors were opened and letters were delivered during a previous visit.",
+      "grammar_focus": "Imperfect passive indicative (-bātur/-bantur)",
+      "communication_task": "Describe what was being done by a person in an earlier scene.",
+      "review": false,
+      "budget_new_lemmas": 24,
+      "target_running_tokens": [
+        850,
+        1250
+      ],
+      "lesson_segments": 4,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 664
+    },
+    {
+      "chapter": 60,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Recēnsiō XIV — Hospitium",
+      "story": "The family retraces a journey from farm to riverside lodging.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "communication_task": "Answer spoken questions about the journey in sequence.",
+      "review": true,
+      "budget_new_lemmas": 0,
+      "target_running_tokens": [
+        850,
+        1250
+      ],
+      "lesson_segments": 4,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 664
+    },
+    {
+      "chapter": 61,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Crās vocābitur",
+      "story": "A healer says that a visitor will be called to the shop tomorrow.",
+      "grammar_focus": "Future passive indicative (-bitur/-entur)",
+      "communication_task": "Describe what will be done tomorrow using a simple passive construction.",
+      "review": false,
+      "budget_new_lemmas": 25,
+      "target_running_tokens": [
+        1100,
+        1550
+      ],
+      "lesson_segments": 4,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 689
+    },
+    {
+      "chapter": 62,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Cōnsilium medicī",
+      "story": "The healer explains which remedies are permitted and which actions are necessary.",
+      "grammar_focus": "Impersonal verbs licet / oportet with infinitive",
+      "communication_task": "Give and respond to short advice using licet and oportet.",
+      "review": false,
+      "budget_new_lemmas": 26,
+      "target_running_tokens": [
+        1100,
+        1550
+      ],
+      "lesson_segments": 4,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 715
+    },
+    {
+      "chapter": 63,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Sī pluit",
+      "story": "A traveller makes plans depending on the weather.",
+      "grammar_focus": "Open conditional with sī + indicative",
+      "communication_task": "Plan two possible routes with a partner.",
+      "review": false,
+      "budget_new_lemmas": 27,
+      "target_running_tokens": [
+        1100,
+        1550
+      ],
+      "lesson_segments": 4,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 742
+    },
+    {
+      "chapter": 64,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Quod parātum erat",
+      "story": "A traveller discovers that supplies had been prepared before the storm began.",
+      "grammar_focus": "Pluperfect passive indicative (participle + imperfect of sum)",
+      "communication_task": "Explain what had already been prepared or completed.",
+      "review": false,
+      "budget_new_lemmas": 28,
+      "target_running_tokens": [
+        1100,
+        1550
+      ],
+      "lesson_segments": 4,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 770
+    },
+    {
+      "chapter": 65,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Recēnsiō XV — Iter incertum",
+      "story": "A storm changes the travelling family's plans.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "communication_task": "Solve a simple practical problem by exchanging Latin sentences.",
+      "review": true,
+      "budget_new_lemmas": 0,
+      "target_running_tokens": [
+        1100,
+        1550
+      ],
+      "lesson_segments": 4,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 770
+    },
+    {
+      "chapter": 66,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Nesciō ubi sit",
+      "story": "A child cannot find a missing object and asks where it is.",
+      "grammar_focus": "Indirect questions with present subjunctive",
+      "communication_task": "Ask another person to relay a simple question.",
+      "review": false,
+      "budget_new_lemmas": 29,
+      "target_running_tokens": [
+        1100,
+        1550
+      ],
+      "lesson_segments": 4,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 799
+    },
+    {
+      "chapter": 67,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Quid scīverit?",
+      "story": "A messenger asks what someone heard earlier.",
+      "grammar_focus": "Perfect subjunctive in indirect questions with primary-sequence reporting",
+      "communication_task": "Ask and report what has happened using primary-sequence indirect questions.",
+      "review": false,
+      "budget_new_lemmas": 30,
+      "target_running_tokens": [
+        1100,
+        1550
+      ],
+      "lesson_segments": 4,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 829
+    },
+    {
+      "chapter": 68,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Dīxit ut venīret",
+      "story": "An older character reports a request made the day before.",
+      "grammar_focus": "Primary/secondary sequence of tenses: imperfect subjunctive in reported commands (ut/nē)",
+      "communication_task": "Report a command made now or in the past using a suitably chosen subjunctive.",
+      "review": false,
+      "budget_new_lemmas": 31,
+      "target_running_tokens": [
+        1100,
+        1550
+      ],
+      "lesson_segments": 4,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 860
+    },
+    {
+      "chapter": 69,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Tam celeriter cucurrit ut…",
+      "story": "The dog runs so fast that everyone notices.",
+      "grammar_focus": "Result clause with ut + subjunctive",
+      "communication_task": "Explain an unexpected result from a clear scene.",
+      "review": false,
+      "budget_new_lemmas": 32,
+      "target_running_tokens": [
+        1100,
+        1550
+      ],
+      "lesson_segments": 4,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 892
+    },
+    {
+      "chapter": 70,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Recēnsiō XVI — Nūntius",
+      "story": "Two messages and one command must be correctly interpreted.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "communication_task": "Report a short message aloud to another learner.",
+      "review": true,
+      "budget_new_lemmas": 0,
+      "target_running_tokens": [
+        1100,
+        1550
+      ],
+      "lesson_segments": 4,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 892
+    },
+    {
+      "chapter": 71,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Hic an ille in urbe?",
+      "story": "In a busy city the family distinguishes nearby buildings and distant people.",
+      "grammar_focus": "Demonstratives hic/haec/hoc and ille/illa/illud: oblique forms and consolidated paradigm",
+      "communication_task": "Distinguish people and places and refer back to them with accurate demonstratives.",
+      "review": false,
+      "budget_new_lemmas": 33,
+      "target_running_tokens": [
+        1350,
+        1900
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [
+        "alius",
+        "alter",
+        "ipse",
+        "ūnus"
+      ],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 925,
+      "lesson_sequence_notes": "The simple near/far nominatives were taught as picture-supported lexical forms at Ch 15; extend into genitive, dative, accusative and ablative, without presenting hic/ille as entirely unseen."
+    },
+    {
+      "chapter": 72,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Cui librum dedit?",
+      "story": "At the busy forum the family identifies whom a traveller met and to whom a book was given.",
+      "grammar_focus": "Relative pronouns in oblique cases (cuius/cui/quem/quam)",
+      "communication_task": "Identify the owner, recipient or object in a more complex relative clause.",
+      "review": false,
+      "budget_new_lemmas": 34,
+      "target_running_tokens": [
+        1350,
+        1900
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 959
+    },
+    {
+      "chapter": 73,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Nūntiō acceptō",
+      "story": "After a message arrives, the family prepares to travel with their possessions.",
+      "grammar_focus": "Ablative absolute (noun + perfect passive participle)",
+      "communication_task": "Describe what happened after receiving a piece of news.",
+      "review": false,
+      "budget_new_lemmas": 35,
+      "target_running_tokens": [
+        1350,
+        1900
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 994
+    },
+    {
+      "chapter": 74,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Cum nūntius venīret",
+      "story": "Because the messenger was arriving late, the family reconsidered its plans.",
+      "grammar_focus": "Circumstantial / causal cum + imperfect subjunctive (pluperfect cum deferred until after Chapter 79)",
+      "communication_task": "Explain circumstances and causes within a connected story.",
+      "review": false,
+      "budget_new_lemmas": 36,
+      "target_running_tokens": [
+        1350,
+        1900
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 1030
+    },
+    {
+      "chapter": 75,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Recēnsiō XVII — Diēs fēstus",
+      "story": "A festive day requires invitations, directions and organized tasks.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "communication_task": "Coordinate a small festival in role-play.",
+      "review": true,
+      "budget_new_lemmas": 0,
+      "target_running_tokens": [
+        1350,
+        1900
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 1030
+    },
+    {
+      "chapter": 76,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Timeō nē nāvis discēdat",
+      "story": "A worried traveller fears that a ship may leave before the family arrives.",
+      "grammar_focus": "Fear clauses with timeō nē + subjunctive",
+      "communication_task": "Explain a character's fear in a natural dialogue.",
+      "review": false,
+      "budget_new_lemmas": 37,
+      "target_running_tokens": [
+        1350,
+        1900
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 1067
+    },
+    {
+      "chapter": 77,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Quamquam ventus fortis est",
+      "story": "A ship sails although the wind is strong.",
+      "grammar_focus": "Concessive quamquam + indicative",
+      "communication_task": "Compare a plan and an obstacle.",
+      "review": false,
+      "budget_new_lemmas": 38,
+      "target_running_tokens": [
+        1350,
+        1900
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 1105
+    },
+    {
+      "chapter": 78,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Sī tempus habērem",
+      "story": "A young traveller imagines a different journey.",
+      "grammar_focus": "Present contrary-to-fact conditions using imperfect subjunctive forms",
+      "communication_task": "State what one would do with more time.",
+      "review": false,
+      "budget_new_lemmas": 39,
+      "target_running_tokens": [
+        1350,
+        1900
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 1144
+    },
+    {
+      "chapter": 79,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Sī anteā vīdissem",
+      "story": "A traveller regrets not seeing a signal sooner.",
+      "grammar_focus": "Pluperfect subjunctive forms in past contrary-to-fact conditions",
+      "communication_task": "Describe an imagined alternative outcome.",
+      "review": false,
+      "budget_new_lemmas": 40,
+      "target_running_tokens": [
+        1350,
+        1900
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 1184
+    },
+    {
+      "chapter": 80,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Recēnsiō XVIII — In mare",
+      "story": "The ship's passengers discuss weather, timing and choices.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "communication_task": "Retell two possible travel stories.",
+      "review": true,
+      "budget_new_lemmas": 0,
+      "target_running_tokens": [
+        1350,
+        1900
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 1184
+    },
+    {
+      "chapter": 81,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Nūntius dīxit eum venīre",
+      "story": "A messenger distinguishes a report about another traveller from what the messenger says about himself.",
+      "grammar_focus": "Indirect statement perspective: accusative eum/eam (someone else) versus reflexive sē (same reporting subject)",
+      "communication_task": "Report what someone says about themselves versus another person, accurately contrasting sē and eum/eam.",
+      "review": false,
+      "budget_new_lemmas": 40,
+      "target_running_tokens": [
+        1650,
+        2400
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 1224,
+      "lesson_sequence_notes": "The present infinitive ACI construction was introduced Ch42; Ch81 reuses that syntax to teach subject-reference contrast. Ch82 introduces perfect infinitive and Ch83 future infinitive.",
+      "required_instructional_forms": [
+        "eum",
+        "eam",
+        "sē"
+      ],
+      "instructional_form_status": "planned_for_authored_latin_lesson_not_evidenced_or_verified"
+    },
+    {
+      "chapter": 82,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Puer dīxit sē vēnisse",
+      "story": "A child explains that they had already returned.",
+      "grammar_focus": "Indirect statement with perfect infinitive",
+      "communication_task": "Distinguish simultaneous from earlier reported action.",
+      "review": false,
+      "budget_new_lemmas": 41,
+      "target_running_tokens": [
+        1650,
+        2400
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 1265
+    },
+    {
+      "chapter": 83,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Crēdit sē ventūrum esse",
+      "story": "A traveller expresses an expectation about tomorrow.",
+      "grammar_focus": "Future active infinitive in indirect statement",
+      "communication_task": "Report another character's future intention.",
+      "review": false,
+      "budget_new_lemmas": 42,
+      "target_running_tokens": [
+        1650,
+        2400
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 1307
+    },
+    {
+      "chapter": 84,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Audīvit iānuam aperīrī",
+      "story": "A family member hears that a door is being opened.",
+      "grammar_focus": "Passive infinitive in indirect statement",
+      "communication_task": "Report what is heard without naming the actor.",
+      "review": false,
+      "budget_new_lemmas": 43,
+      "target_running_tokens": [
+        1650,
+        2400
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 1350
+    },
+    {
+      "chapter": 85,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Recēnsiō XIX — Rūmōrēs",
+      "story": "Several rumours are compared against firsthand evidence.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "communication_task": "Ask a partner what they actually heard versus assumed.",
+      "review": true,
+      "budget_new_lemmas": 0,
+      "target_running_tokens": [
+        1650,
+        2400
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 1350
+    },
+    {
+      "chapter": 86,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Ad librum legendum",
+      "story": "A student goes to a table intending to read.",
+      "grammar_focus": "Gerund forms in common purpose expressions",
+      "communication_task": "Explain why one enters a room using a gerund phrase.",
+      "review": false,
+      "budget_new_lemmas": 44,
+      "target_running_tokens": [
+        1650,
+        2400
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 1394
+    },
+    {
+      "chapter": 87,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Liber legendus est",
+      "story": "A note describes which books must be read before a visit.",
+      "grammar_focus": "Gerundive obligation with passive periphrastic",
+      "communication_task": "Politely negotiate duties in a short dialogue.",
+      "review": false,
+      "budget_new_lemmas": 45,
+      "target_running_tokens": [
+        1650,
+        2400
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 1439
+    },
+    {
+      "chapter": 88,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Volō īre, sed nōn possum",
+      "story": "The travellers negotiate who wants to go, who must carry the goods and who is able to return.",
+      "grammar_focus": "Frequently used irregular verbs: eō, ferō, volō, nōlō, mālō",
+      "communication_task": "Negotiate destinations, preferences and carrying tasks with irregular verbs.",
+      "review": false,
+      "budget_new_lemmas": 46,
+      "target_running_tokens": [
+        1650,
+        2400
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 1485
+    },
+    {
+      "chapter": 89,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Quod nescīmus",
+      "story": "A family member struggles to understand a difficult message.",
+      "grammar_focus": "Substantive quod clauses in narrow contexts",
+      "communication_task": "Explain a simple fact that surprises another person.",
+      "review": false,
+      "budget_new_lemmas": 47,
+      "target_running_tokens": [
+        1650,
+        2400
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 1532
+    },
+    {
+      "chapter": 90,
+      "book": 2,
+      "stage": "Developing Reader / Via Media",
+      "title": "Recēnsiō XX — Liber novus",
+      "story": "A final developing-reader mystery resolves a missing manuscript.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "communication_task": "Give a two-minute retelling with notes if needed.",
+      "review": true,
+      "budget_new_lemmas": 0,
+      "target_running_tokens": [
+        1650,
+        2400
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 1532
+    },
+    {
+      "chapter": 91,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Fābula dē fonte",
+      "story": "An original tale describes a spring that saves a thirsty traveller.",
+      "grammar_focus": "Literary historical present as narrative device",
+      "communication_task": "Retell the fable in the past and present.",
+      "review": false,
+      "budget_new_lemmas": 46,
+      "target_running_tokens": [
+        1800,
+        2600
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 1578
+    },
+    {
+      "chapter": 92,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Iter per montēs",
+      "story": "Two travellers describe mountains, roads and hazards.",
+      "grammar_focus": "Participial phrases as narrative compression",
+      "communication_task": "Describe simultaneous scenes with participles.",
+      "review": false,
+      "budget_new_lemmas": 46,
+      "target_running_tokens": [
+        1800,
+        2600
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 1624
+    },
+    {
+      "chapter": 93,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Līs dē agrō",
+      "story": "Neighbours dispute a field, and several witnesses explain what they believe happened.",
+      "grammar_focus": "Indirect statement in longer prose",
+      "communication_task": "Report competing claims accurately and neutrally.",
+      "review": false,
+      "budget_new_lemmas": 46,
+      "target_running_tokens": [
+        1800,
+        2600
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 1670
+    },
+    {
+      "chapter": 94,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Vōx senis",
+      "story": "An elder gives practical advice about a family disagreement.",
+      "grammar_focus": "Structured argument with enim/autem/igitur",
+      "communication_task": "Give reasons for a preference in connected Latin.",
+      "review": false,
+      "budget_new_lemmas": 46,
+      "target_running_tokens": [
+        1800,
+        2600
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 1716
+    },
+    {
+      "chapter": 95,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Recēnsiō XXI — Aqua et terra",
+      "story": "A short original fable requires interpreting evidence and motive.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "communication_task": "Debate an outcome using two connected reasons.",
+      "review": true,
+      "budget_new_lemmas": 0,
+      "target_running_tokens": [
+        1800,
+        2600
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 1716
+    },
+    {
+      "chapter": 96,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "In thermīs",
+      "story": "An original episode in public baths involves lost property.",
+      "grammar_focus": "Expanded ablative expressions in authentic descriptions",
+      "communication_task": "Explain a misunderstanding to another person.",
+      "review": false,
+      "budget_new_lemmas": 46,
+      "target_running_tokens": [
+        1800,
+        2600
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 1762
+    },
+    {
+      "chapter": 97,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Amīcus peregrīnus",
+      "story": "A visitor from another region learns the family's customs.",
+      "grammar_focus": "Polite requests with velim and conditional structures",
+      "communication_task": "Ask for assistance and offer a response naturally.",
+      "review": false,
+      "budget_new_lemmas": 46,
+      "target_running_tokens": [
+        1800,
+        2600
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 1808
+    },
+    {
+      "chapter": 98,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Verba inter amīcōs",
+      "story": "Two friends disagree over a promise but reconcile.",
+      "grammar_focus": "Expressions of emotion and judgement",
+      "communication_task": "Explain feelings and intentions in short dialogue.",
+      "review": false,
+      "budget_new_lemmas": 46,
+      "target_running_tokens": [
+        1800,
+        2600
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 1854
+    },
+    {
+      "chapter": 99,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Lūdus magistrī",
+      "story": "A teacher challenges students to explain difficult sentences.",
+      "grammar_focus": "Sequence-of-tenses consolidation in extended reported speech",
+      "communication_task": "Retell a complex account using primary and secondary reporting from Chapters 67–68.",
+      "review": false,
+      "budget_new_lemmas": 46,
+      "target_running_tokens": [
+        1800,
+        2600
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 1900
+    },
+    {
+      "chapter": 100,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Recēnsiō XXII — Hospitēs",
+      "story": "An original novella episode follows a visitor's stay.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "communication_task": "Sustain a three-minute guided conversation.",
+      "review": true,
+      "budget_new_lemmas": 0,
+      "target_running_tokens": [
+        1800,
+        2600
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 1900
+    },
+    {
+      "chapter": 101,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Historia urbis",
+      "story": "An original historical-style account describes the growth of a town.",
+      "grammar_focus": "Longer relative chains without losing referents",
+      "communication_task": "Identify the agents and sequence of events aloud.",
+      "review": false,
+      "budget_new_lemmas": 46,
+      "target_running_tokens": [
+        2100,
+        3000
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 1946
+    },
+    {
+      "chapter": 102,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Legēs forī",
+      "story": "A magistrate settles a small dispute between two sellers.",
+      "grammar_focus": "Jussive and prohibitive subjunctive",
+      "communication_task": "Suggest a fair resolution in Latin.",
+      "review": false,
+      "budget_new_lemmas": 46,
+      "target_running_tokens": [
+        2100,
+        3000
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 1992
+    },
+    {
+      "chapter": 103,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Epistula senātōris",
+      "story": "A magistrate writes to an absent friend about public affairs.",
+      "grammar_focus": "Formal epistolary openings and closings",
+      "communication_task": "Dictate a brief formal Latin letter.",
+      "review": false,
+      "budget_new_lemmas": 46,
+      "target_running_tokens": [
+        2100,
+        3000
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 2038
+    },
+    {
+      "chapter": 104,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Dē causā",
+      "story": "An advocate explains why a proposed action is justified.",
+      "grammar_focus": "Causal clauses with subjunctive perspectives",
+      "communication_task": "Present a brief argument and counterargument.",
+      "review": false,
+      "budget_new_lemmas": 46,
+      "target_running_tokens": [
+        2100,
+        3000
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 2084
+    },
+    {
+      "chapter": 105,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Recēnsiō XXIII — Iūs et aequum",
+      "story": "A short civic story explores evidence, law and fairness.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "communication_task": "Conduct a structured mini-debate with two speakers.",
+      "review": true,
+      "budget_new_lemmas": 0,
+      "target_running_tokens": [
+        2100,
+        3000
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 2084
+    },
+    {
+      "chapter": 106,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Nauta perītus",
+      "story": "A sailor describes a difficult passage using practical observations.",
+      "grammar_focus": "Participles plus ablative absolute in continuous narrative",
+      "communication_task": "Retell a challenging journey concisely.",
+      "review": false,
+      "budget_new_lemmas": 46,
+      "target_running_tokens": [
+        2100,
+        3000
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 2130
+    },
+    {
+      "chapter": 107,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Ad portum spectātum",
+      "story": "At night a sailor goes to the harbour to inspect a ship after seeing a strange signal.",
+      "grammar_focus": "Supine in -um after verbs of motion (restricted recognition)",
+      "communication_task": "Explain the purpose of travel in a short maritime account.",
+      "review": false,
+      "budget_new_lemmas": 46,
+      "target_running_tokens": [
+        2100,
+        3000
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 2176
+    },
+    {
+      "chapter": 108,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Perīculum in nāve",
+      "story": "A storm tests the choices of a captain and passengers.",
+      "grammar_focus": "More complex conditionals in narrative",
+      "communication_task": "Explain a difficult decision and its consequences.",
+      "review": false,
+      "budget_new_lemmas": 46,
+      "target_running_tokens": [
+        2100,
+        3000
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 2222
+    },
+    {
+      "chapter": 109,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Postquam terram vīdit",
+      "story": "A traveller describes what happened immediately after land appeared.",
+      "grammar_focus": "Temporal clauses with postquam and cum",
+      "communication_task": "Recount a linked series of past actions.",
+      "review": false,
+      "budget_new_lemmas": 46,
+      "target_running_tokens": [
+        2100,
+        3000
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 2268
+    },
+    {
+      "chapter": 110,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Recēnsiō XXIV — Nāvis redit",
+      "story": "An original maritime story revisits time, condition and reported speech.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "communication_task": "Narrate an extended journey without looking at a script.",
+      "review": true,
+      "budget_new_lemmas": 0,
+      "target_running_tokens": [
+        2100,
+        3000
+      ],
+      "lesson_segments": 5,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 2268
+    },
+    {
+      "chapter": 111,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Animalia dē cibō",
+      "story": "In an original fable two animals disagree about sharing food.",
+      "grammar_focus": "Direct speech with varied reporting verbs",
+      "communication_task": "Perform contrasting character voices in Latin.",
+      "review": false,
+      "budget_new_lemmas": 47,
+      "target_running_tokens": [
+        2350,
+        3400
+      ],
+      "lesson_segments": 6,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 2315
+    },
+    {
+      "chapter": 112,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Rēs parvae, magnae cūrae",
+      "story": "A small object causes a major argument among neighbours.",
+      "grammar_focus": "Comparison and superlative nuance",
+      "communication_task": "Contrast two characters' behaviour clearly.",
+      "review": false,
+      "budget_new_lemmas": 47,
+      "target_running_tokens": [
+        2350,
+        3400
+      ],
+      "lesson_segments": 6,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 2362
+    },
+    {
+      "chapter": 113,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Dē fidē",
+      "story": "An original moral story explores trust and promises.",
+      "grammar_focus": "Relative clauses of characteristic",
+      "communication_task": "Explain a character's motives and conduct.",
+      "review": false,
+      "budget_new_lemmas": 47,
+      "target_running_tokens": [
+        2350,
+        3400
+      ],
+      "lesson_segments": 6,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 2409
+    },
+    {
+      "chapter": 114,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Quid fābula doceat",
+      "story": "The narrator invites readers to infer the moral of a tale.",
+      "grammar_focus": "Indirect questions in reflective prose",
+      "communication_task": "Express the moral in two or three Latin sentences.",
+      "review": false,
+      "budget_new_lemmas": 47,
+      "target_running_tokens": [
+        2350,
+        3400
+      ],
+      "lesson_segments": 6,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 2456
+    },
+    {
+      "chapter": 115,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Recēnsiō XXV — Fābulae brevēs",
+      "story": "Short original fables recycle main narrative patterns.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "communication_task": "Retell a fable, then answer follow-up questions.",
+      "review": true,
+      "budget_new_lemmas": 0,
+      "target_running_tokens": [
+        2350,
+        3400
+      ],
+      "lesson_segments": 6,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 2456
+    },
+    {
+      "chapter": 116,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Quis dīxerat?",
+      "story": "An original historical investigation includes conflicting reports.",
+      "grammar_focus": "Layers of indirect speech and pluperfect",
+      "communication_task": "Distinguish narrator, witness and hearsay in dialogue.",
+      "review": false,
+      "budget_new_lemmas": 47,
+      "target_running_tokens": [
+        2350,
+        3400
+      ],
+      "lesson_segments": 6,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 2503
+    },
+    {
+      "chapter": 117,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Nūntius ex urbe",
+      "story": "A courier brings a warning to a distant family.",
+      "grammar_focus": "Compressed subordinate clauses in longer prose",
+      "communication_task": "Explain the warning and actions to a partner.",
+      "review": false,
+      "budget_new_lemmas": 47,
+      "target_running_tokens": [
+        2350,
+        3400
+      ],
+      "lesson_segments": 6,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 2550
+    },
+    {
+      "chapter": 118,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Dē dēliberātiōne",
+      "story": "A household council weighs routes, needs and risks.",
+      "grammar_focus": "Concessive and conditional nuance",
+      "communication_task": "Present and defend one of several plans.",
+      "review": false,
+      "budget_new_lemmas": 47,
+      "target_running_tokens": [
+        2350,
+        3400
+      ],
+      "lesson_segments": 6,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 2597
+    },
+    {
+      "chapter": 119,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Cōnsilium acceptum",
+      "story": "The characters agree to act and reflect on their earlier errors.",
+      "grammar_focus": "Gerundive constructions in extended prose",
+      "communication_task": "Summarize duties and alternatives in Latin.",
+      "review": false,
+      "budget_new_lemmas": 47,
+      "target_running_tokens": [
+        2350,
+        3400
+      ],
+      "lesson_segments": 6,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 2644
+    },
+    {
+      "chapter": 120,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Recēnsiō XXVI — Cōnsilium",
+      "story": "A multi-scene novella tests inference and narrated dialogue.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "communication_task": "Lead a short question-and-answer discussion.",
+      "review": true,
+      "budget_new_lemmas": 0,
+      "target_running_tokens": [
+        2350,
+        3400
+      ],
+      "lesson_segments": 6,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 2644
+    },
+    {
+      "chapter": 121,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Dē librō veterī",
+      "story": "A scholar describes an old book and how it was found.",
+      "grammar_focus": "Features of historical explanatory prose",
+      "communication_task": "Give a clear synopsis of a newly seen passage.",
+      "review": false,
+      "budget_new_lemmas": 49,
+      "target_running_tokens": [
+        2700,
+        4000
+      ],
+      "lesson_segments": 6,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 2693
+    },
+    {
+      "chapter": 122,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Dē poētā",
+      "story": "A fictional teacher and student discuss how Latin verse differs from prose.",
+      "grammar_focus": "Poetic word order recognition, no verse composition required",
+      "communication_task": "Read a short metre-free adapted poetic paraphrase aloud.",
+      "review": false,
+      "budget_new_lemmas": 49,
+      "target_running_tokens": [
+        2700,
+        4000
+      ],
+      "lesson_segments": 6,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 2742
+    },
+    {
+      "chapter": 123,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Dē itinere Rōmānō",
+      "story": "An original travel account visits monuments and public spaces.",
+      "grammar_focus": "Long periodic sentence parsing",
+      "communication_task": "Retell a long sentence as shorter accurate clauses.",
+      "review": false,
+      "budget_new_lemmas": 49,
+      "target_running_tokens": [
+        2700,
+        4000
+      ],
+      "lesson_segments": 6,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 2791
+    },
+    {
+      "chapter": 124,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Dē hominibus dīversīs",
+      "story": "A story considers the perspectives of people of different social status.",
+      "grammar_focus": "Narrator viewpoint and embedded evaluation",
+      "communication_task": "Explain how two characters perceive one event.",
+      "review": false,
+      "budget_new_lemmas": 49,
+      "target_running_tokens": [
+        2700,
+        4000
+      ],
+      "lesson_segments": 6,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 2840
+    },
+    {
+      "chapter": 125,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Recēnsiō XXVII — Lēctiō longior",
+      "story": "A sustained original prose reading with sparse help.",
+      "grammar_focus": "REVIEW: no new grammar",
+      "communication_task": "Offer a summary and respond to spontaneous follow-ups.",
+      "review": true,
+      "budget_new_lemmas": 0,
+      "target_running_tokens": [
+        2700,
+        4000
+      ],
+      "lesson_segments": 6,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 2840
+    },
+    {
+      "chapter": 126,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Vīta mercātōris",
+      "story": "A coherent novella follows a merchant through a difficult week.",
+      "grammar_focus": "Authorial variation in tense and aspect",
+      "communication_task": "Narrate a complex chain of events fluently at own pace.",
+      "review": false,
+      "budget_new_lemmas": 49,
+      "target_running_tokens": [
+        2700,
+        4000
+      ],
+      "lesson_segments": 6,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 2889
+    },
+    {
+      "chapter": 127,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Dē rē pūblicā",
+      "story": "An original civic narrative explores responsibility and public trust.",
+      "grammar_focus": "Recognising rhetorical balance and parallelism",
+      "communication_task": "Give a short reasoned speech about a decision.",
+      "review": false,
+      "budget_new_lemmas": 49,
+      "target_running_tokens": [
+        2700,
+        4000
+      ],
+      "lesson_segments": 6,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 2938
+    },
+    {
+      "chapter": 128,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Dē bellō et pāce",
+      "story": "An original dialogue weighs conflict, peace and consequences.",
+      "grammar_focus": "Complex historical prose with subordinate hierarchy",
+      "communication_task": "Defend a viewpoint using cited story events.",
+      "review": false,
+      "budget_new_lemmas": 49,
+      "target_running_tokens": [
+        2700,
+        4000
+      ],
+      "lesson_segments": 6,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 2987
+    },
+    {
+      "chapter": 129,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Ad fontēs",
+      "story": "A learner compares an original graded retelling with short source-cleared excerpts.",
+      "grammar_focus": "Recognising unadapted Classical syntax and vocabulary",
+      "communication_task": "Explain the gist of a short authentic passage.",
+      "review": false,
+      "budget_new_lemmas": 49,
+      "target_running_tokens": [
+        2700,
+        4000
+      ],
+      "lesson_segments": 6,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 3036
+    },
+    {
+      "chapter": 130,
+      "book": 3,
+      "stage": "Advanced Reader / Via Longa",
+      "title": "Recēnsiō XXVIII — Librī aperiuntur",
+      "story": "A final original long reading bridges to independent Latin authors.",
+      "grammar_focus": "REVIEW: comprehensive bridge, zero new core lemmas",
+      "communication_task": "Read, narrate, discuss and self-assess without a scripted answer key.",
+      "review": true,
+      "budget_new_lemmas": 0,
+      "target_running_tokens": [
+        2700,
+        4000
+      ],
+      "lesson_segments": 6,
+      "source_seed_lemmas": [],
+      "content_status": "planned_only; no Latin passage or checked lemma inventory",
+      "cumulative_target": 3036
+    }
+  ],
+  "metrics_disclaimer": "All numeric targets are allocations, not audited introduced lexemes. Actual counted vocabulary will remain zero until reviewed lesson files assign lexeme IDs and show contextual usage.",
+  "pedagogical_rule": "New foundational words appear in meaningful Latin contextual sentences, images, captions, questions and revision; 8–10 encounters can span reading and activities, not necessarily 8–10 appearances in one story.",
+  "legacy_50_lemma_target": 500,
+  "legacy_50_max_ceiling": 570,
+  "research_review_input": "curriculum/reviews/CLAUDE_REVIEW_130.md",
+  "outline_v2_changes": [
+    {
+      "chapter": 18,
+      "rationale": "L4: imperative venī with long ī"
+    },
+    {
+      "chapter": 20,
+      "rationale": "L5: second-person vidēs"
+    },
+    {
+      "chapter": 28,
+      "rationale": "L3: avoid passive participle and keep active pluperfect"
+    },
+    {
+      "chapter": 35,
+      "rationale": "G6: explicitly introduce third-declension adjectives after third-declension nouns"
+    },
+    {
+      "chapter": 36,
+      "rationale": "G6: move relative clause teaching here and defer demonstratives to Chapter 71"
+    },
+    {
+      "chapter": 40,
+      "rationale": "G10: avoid deponent sequor before Chapter 44"
+    },
+    {
+      "chapter": 43,
+      "rationale": "G3/G8: move premature ablative absolute later; introduce future active participle before future infinitive"
+    },
+    {
+      "chapter": 47,
+      "rationale": "G8: position superlatives immediately after comparatives"
+    },
+    {
+      "chapter": 48,
+      "rationale": "G8: retain fourth-declension teaching after moving superlatives to Chapter 47"
+    },
+    {
+      "chapter": 50,
+      "rationale": "G5/G9: teach basic present-subjunctive forms before ut/nē purpose in first lectio"
+    },
+    {
+      "chapter": 56,
+      "rationale": "Move fifth-declension coverage from 48 while keeping early superlatives"
+    },
+    {
+      "chapter": 58,
+      "rationale": "G8: include adverb formation"
+    },
+    {
+      "chapter": 59,
+      "rationale": "G7: introduce imperfect passive after simple passive in Book I"
+    },
+    {
+      "chapter": 61,
+      "rationale": "G7: introduce future passive"
+    },
+    {
+      "chapter": 62,
+      "rationale": "L10/G8: correct cōnsilium and teach frequent impersonal verbs"
+    },
+    {
+      "chapter": 63,
+      "rationale": "L6: long ī in sī"
+    },
+    {
+      "chapter": 64,
+      "rationale": "G7: add missing pluperfect passive"
+    },
+    {
+      "chapter": 67,
+      "rationale": "G1: introduce primary-sequence principle before chapter 68"
+    },
+    {
+      "chapter": 68,
+      "rationale": "G1/G5: introduce secondary sequence and indirect negative commands before later uses"
+    },
+    {
+      "chapter": 71,
+      "rationale": "G6: teach demonstratives after third-declension adjective and relative clauses"
+    },
+    {
+      "chapter": 72,
+      "rationale": "Retain the useful oblique relative forms after basic relative subject"
+    },
+    {
+      "chapter": 73,
+      "rationale": "G3: move ablative absolute after Book II means/cause/accompaniment"
+    },
+    {
+      "chapter": 74,
+      "rationale": "G4: teach common circumstantial cum + subjunctive after sequence of tenses"
+    },
+    {
+      "chapter": 75,
+      "rationale": "L11: diēs and fēstus"
+    },
+    {
+      "chapter": 76,
+      "rationale": "G8: add frequent fear-clause construction"
+    },
+    {
+      "chapter": 78,
+      "rationale": "G2: explicitly link imperfect subjunctive to unreal present conditions"
+    },
+    {
+      "chapter": 79,
+      "rationale": "G2: first lectio explicitly presents pluperfect-subjunctive morphology"
+    },
+    {
+      "chapter": 81,
+      "rationale": "L7: perfect dīxit macron"
+    },
+    {
+      "chapter": 84,
+      "rationale": "L8: iānuam quantity"
+    },
+    {
+      "chapter": 88,
+      "rationale": "G8/L14: focus on high-frequency irregular paradigms instead of awkward comparative title"
+    },
+    {
+      "chapter": 91,
+      "rationale": "L9: vowel lengths"
+    },
+    {
+      "chapter": 93,
+      "rationale": "L1: replace nonsensical agerī dēspōnsī with correct dispute title"
+    },
+    {
+      "chapter": 96,
+      "rationale": "L2: in + ablative plural"
+    },
+    {
+      "chapter": 99,
+      "rationale": "G1: move first teaching of sequence to 67–68; chapter 99 consolidates"
+    },
+    {
+      "chapter": 103,
+      "rationale": "L12: macrons"
+    },
+    {
+      "chapter": 107,
+      "rationale": "G8: include rare supine at late-advanced level"
+    },
+    {
+      "chapter": 112,
+      "rationale": "L13: macron"
+    },
+    {
+      "chapter": 119,
+      "rationale": "L10: macron"
+    },
+    {
+      "chapter": 74,
+      "rationale": "Ch74 removed untaught pluperfect subjunctive: venīret, not vēnisset"
+    },
+    {
+      "chapter": 54,
+      "rationale": "Ch54 vocative case explicitly taught; replace low-priority distributive forms"
+    },
+    {
+      "chapter": 1,
+      "rationale": "Reduce seven DCC first-introduction candidates to six allocated seeds; defer hic to a later reviewed lesson."
+    },
+    {
+      "chapter": 35,
+      "rationale": "Rescope old relative-pronoun seeds to third-declension adjectives"
+    },
+    {
+      "chapter": 36,
+      "rationale": "Move relative-pronoun anchor from 35 to 36"
+    },
+    {
+      "chapter": 47,
+      "rationale": "Remove old fourth-declension candidate list; superlatives reuse existing adjective lemmas"
+    },
+    {
+      "chapter": 48,
+      "rationale": "Move fourth-declension noun candidate list from 47 to 48"
+    },
+    {
+      "chapter": 56,
+      "rationale": "Move fifth-declension noun candidate list from 48 to 56"
+    },
+    {
+      "chapter": 71,
+      "rationale": "Move demonstrative-context candidate list from 36 to 71"
+    }
+  ],
+  "source_seed_note": "Candidates aligned with v2 story/grammar after topic moves; these are NOT final authored or verified vocabulary. Some form-level examples (fortis, diēs) may be familiar from earlier lessons, so do not count them a second time.",
+  "authentic_excerpt_gloss_policy": "In Chapters 129-130, unfamiliar words found only in licensed Classical excerpts are marked glossed-only and are NOT introduced or added to the verified lexeme count unless taught in a separate reviewed lesson with repeated contextual encounters. Review chapters still introduce zero new course lemmas.",
+  "book_iii_admission": "Entry after Chapter 90 requires independently tested understanding of a new graded 600-word passage (suggested >=8/10 responses), sampling retained Book I-II vocabulary, and a human-reviewed 3-minute guided Latin interaction; completion alone is not evidence of speaking ability.",
+  "content_budget_policy": "First-time lemma budget != achieved lexical coverage. Existing 8-chapter v0.4.2 app remains the legacy draft; authoring must maintain stable chapter slugs to migrate progress safely.",
+  "latest_review": "Tablinum review.md — curriculum v2 check",
+  "outline_v3_changes": [
+    {
+      "chapter": 11,
+      "reason": "Pronouns: mē/tē encountered and explained in a simple first-/second-person dialogue before Ch 20."
+    },
+    {
+      "chapter": 14,
+      "reason": "Teach meus/tuus early and visibly as part of existing adjective agreement."
+    },
+    {
+      "chapter": 16,
+      "reason": "Complete first/second person pronoun use without a new chapter."
+    },
+    {
+      "chapter": 18,
+      "reason": "Introduce vocative alongside first commands; preserve 54 for plural imperative."
+    },
+    {
+      "chapter": 20,
+      "reason": "Fill major Book I anaphoric pronoun gap at Ch20 without adding a new chapter."
+    },
+    {
+      "chapter": 26,
+      "reason": "Teach reflexive sē/suus by Ch26, after is/eius and before indirect statement."
+    },
+    {
+      "chapter": 54,
+      "reason": "Teach plural imperative explicitly instead of repeating initial vocative."
+    },
+    {
+      "chapter": 81,
+      "reason": "Remove duplicated first introduction of indirect statement (Ch42) and contrast eum/sē."
+    },
+    {
+      "chapter": 76,
+      "reason": "Restore the long ē in discēdō."
+    },
+    {
+      "chapter": 78,
+      "reason": "Imperfect subjunctive of habeō uses habērem."
+    },
+    {
+      "chapter": 85,
+      "reason": "Rūmōrēs has long ū."
+    },
+    {
+      "chapter": 94,
+      "reason": "Vōx has long ō."
+    },
+    {
+      "chapter": 120,
+      "reason": "Cōnsilium has long ō."
+    },
+    {
+      "chapter": 15,
+      "reason": "The latest review also asks for hic/ille inside Book I, not only Chapter 71: introduce picture-supported near/far deictics with nominative plurals; reserve full paradigm for Chapter 71."
+    }
+  ],
+  "pronoun_sequence": "Ch 11 mē/tē in 2nd-person speech; Ch 14 meus/tuus in adjective agreement; Ch 15 hic/ille in near/far nominated groups; Ch 16 nōs/vōs; Ch 20 is/ea/id with eum/eam/eius; Ch 26 sē/suus contrasted with eius; Ch 81 eum vs sē in ACI.",
+  "pronoun_notes": "Secondary pronoun application at chapters 14, 15 and 26 is staged in an explicitly marked extra lectio. This is a pacing compromise requiring Latinist review; no new 130 chapter slots are invented.",
+  "seed_macron_changes": [
+    {
+      "chapter": 11,
+      "from": "laborō",
+      "to": "labōrō"
+    },
+    {
+      "chapter": 18,
+      "from": "tenēo",
+      "to": "teneō"
+    },
+    {
+      "chapter": 19,
+      "from": "sedēo",
+      "to": "sedeō"
+    },
+    {
+      "chapter": 19,
+      "from": "surgo",
+      "to": "surgō"
+    },
+    {
+      "chapter": 23,
+      "from": "scribō",
+      "to": "scrībō"
+    },
+    {
+      "chapter": 23,
+      "from": "manēo",
+      "to": "maneō"
+    },
+    {
+      "chapter": 42,
+      "from": "sentīō",
+      "to": "sentiō"
+    }
+  ],
+  "pronoun_count_policy": "Examples like is/eum/eius are inflected forms of one lexeme and must never be counted as three distinct new words. mē/tē and nōs/vōs are forms/persons of pronominal paradigms, not new entries per inflection. Similarly suus/sua/suum is a single headword; sē belongs to the sui reflexive paradigm."
+}
