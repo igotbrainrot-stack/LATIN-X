@@ -20,15 +20,10 @@ const {chromium,firefox}=require("playwright");
   assert.equal(await page.locator('#chapters').getAttribute('aria-label'),"Chapter navigation");
   assert.equal(await page.locator('#help').getAttribute('aria-label'),"Learning guidance and personal notes");
   assert.equal(await page.locator('label[for="notes"]').textContent(),"Personal notes for this chapter");
-  await page.locator('#tabs [data-tab="library"]').focus();await page.keyboard.press("Enter");
-  await page.locator('label[for="customText"]').waitFor();
-  assert.equal(await page.locator('label[for="customText"]').textContent(),"Your Latin text");
-  await page.locator('#customText').fill('Rōma in Italiā est. Līvia in hortō est.');
-  await page.locator('[data-action="importText"]').click();
-  // Import deliberately opens the custom reader, so return to Library for split editing.
-  await page.locator('#tabs [data-tab="library"]').click();
-  await page.locator('label[for="customSegments"]').waitFor();
-  assert.equal(await page.locator('label[for="customSegments"]').textContent(),"Corrected Latin sentence boundaries");
+  // Bibliothēca (text/audio import) was removed from the learner app in Nov 2026.
+  assert.equal(await page.locator('#tabs [data-tab="library"]').count(),0,"Library tab removed");
+  await page.locator('#tabs [data-tab="progress"]').focus();await page.keyboard.press("Enter");
+  await page.locator('[data-action="exportRecordings"]').waitFor();
   await page.locator('#chapters [data-ch="0"]').click();
   await page.locator('#tabs [data-tab="quiz"]').click();
   assert(await page.locator('#main [lang="la"]').count()>0,"Latin prompts need lang=la");

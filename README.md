@@ -16,10 +16,11 @@ Learner packages are built from this source with `npm run build:release` (see [H
 - **Lectiō** — eight illustrated legacy chapters with clickable words, three-level Latin clues, macron and guidance toggles, personal notes, approved Miriam recordings where available (browser voice, labelled "not Miriam", elsewhere) and optional microphone practice.
 - **Exercitia** — the original 24 questions plus eight guided cloze items.
 - **Memoria** — offline FSRS review of saved words.
-- **Bibliothēca** — import your own Latin text, local audio and measured timing JSON; export your recordings.
-- **Progressus** — progress ledger, course map, backup export / restore and safe recovery of older saved data.
+- **Progressus** — progress ledger, course map, export of your practice recordings, backup export / restore and safe recovery of older saved data.
 - **Picture Practice** — nine owner-approved watercolour scenes with clickable regions (draft questions, never graded).
 - Background lyre music and click sounds with separate on/off and volume controls.
+
+The former **Bibliothēca** tab (import your own text, local audio and timing JSON) was removed at the owner's request on 8 Nov 2026.
 
 Content status: the eight legacy chapters are the playable course. The eight Book I pilot chapters, the 44 picture questions and all lexicon entries remain **unsigned drafts**. Latin has not been verified by a Latinist.
 

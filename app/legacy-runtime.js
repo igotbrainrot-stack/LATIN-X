@@ -301,7 +301,7 @@ function correctAnswer(q,response){
  return globalThis.TablinumExercises.gradeLegacy(q,response);
 }
 function tabs(){
- const list=[["read","Lectiō"],["quiz","Exercitia"],["review","Memoria"],["library","Bibliothēca"],["progress","Progressus"]];
+ const list=[["read","Lectiō"],["quiz","Exercitia"],["review","Memoria"],["progress","Progressus"]];
  $("tabs").innerHTML=list.map(([id,n])=>'<button class="'+(S.tab===id?"active":"")+'" data-tab="'+id+'" aria-current="'+(S.tab===id?"page":"false")+'">'+n+"</button>").join("");
  $("chapters").innerHTML='<div class="mini" style="margin:5px 9px 14px">Liber prīmus</div>'+L.map((c,i)=>'<button class="ch '+(S.ch===i&&!activeCourse?"active":"")+'" data-ch="'+i+'" aria-current="'+(S.ch===i&&!activeCourse?"true":"false")+'"><strong>'+(i+1)+'</strong><span><strong>'+esc(c.name)+'</strong><small>'+esc(c.sub)+'</small></span></button>').join("")+(S.custom?'<button class="ch '+(S.ch==="custom"&&!activeCourse?"active":"")+'" data-ch="custom">✧ Textus meus</button>':"")+
  [...globalThis.Tablinum.catalogue.values()].filter(entry=>!entry.legacy).map(entry=>
@@ -541,17 +541,6 @@ function review(){
  h+=reviewReveal?'<h2>'+esc(item.meaning||"No gloss available")+'</h2><div class="tools" style="justify-content:center">'+["again","hard","good","easy"].map(x=>'<button class="btn '+(x==="good"?"primary":"")+'" data-rating="'+x+'">'+x+'</button>').join("")+'</div>':'<button class="btn primary" data-action="revealCard">Ostende significātiōnem · Reveal</button>';
  return h+'</div>';
 }
-function library(){
- const m=media();
- let h='<div class="mini">Bibliothēca</div><h1>Reading and audio library</h1><div class="note">Import locally owned Latin text or recordings. EPUB, PDF, TEI, Vox Classica and dictionary archives are not integrated yet.</div>';
- h+='<div class="panel"><h2>Textus meus</h2><label for="textFile">Choose a .txt file (under 1 MB)</label><input class="field" type="file" id="textFile" accept=".txt,text/plain"><textarea id="customText" class="field" style="min-height:150px" maxlength="20000" placeholder="Paste your Latin text...">'+esc(S.custom)+'</textarea><div class="tools"><button class="btn primary" data-action="importText">Save and open text</button><button class="btn" data-action="clearText">Clear imported text</button></div><small>Imported text uses editable sentence splits. No artificial timestamps or grading are generated.</small></div>';
- if(S.custom)h+='<div class="panel"><h2>Correct sentence splits</h2><p class="subtle">One sentence or reading segment per line. Save changes to persist them.</p><textarea id="customSegments" class="field" style="min-height:120px">'+esc((S.customSentences.length?S.customSentences:splitSentences(S.custom)).join("\n"))+'</textarea><button class="btn primary" data-action="saveSegments">Save sentence boundaries</button></div>';
- h+='<div class="panel"><h2>Local audio</h2><label for="audioFile">Attach MP3/WAV for the selected chapter</label><input type="file" class="field" id="audioFile" accept="audio/*"><label for="timingFile">Import a timing JSON (under 1 MB)</label><input class="field" type="file" id="timingFile" accept=".json,application/json"><small>'+(m?esc(m.name)+(timed()?" · timed":" · untimed"):"No local audio attached for this chapter.")+'</small><div class="tools"><button class="btn" data-action="clearAudio">Clear audio for this chapter</button><button class="btn" data-action="singleSentence">'+(S.singleSentence?"✓ One sentence only":"Play continuously")+'</button></div><label for="audioSeek">Recording position (seconds)</label><input id="audioSeek" class="field" type="range" min="0" max="0" step="0.1" value="0" aria-label="Seek imported recording"></div>';
- h+='<div class="panel"><h2>Vōx mea · Speaking practice</h2><p class="subtle">Use Record / Stop / Compare on a selected reading sentence. No speech recognition, no grades. Recordings are stored locally in IndexedDB where permitted and do NOT appear in progress backups. Export a separate ZIP.</p><button class="btn" data-action="exportRecordings">Export my recordings ZIP</button><small>Storage: '+esc(userMedia?.status?.()||"unsupported")+' (temporary data may disappear when this tab closes).</small></div>';
- h+='<p class="subtle">Ars picta: Open <a href="Art Review.html">Art Review</a> to view unsigned character previews, inspect proposed Roman scenes and export a signed owner-review JSON. Unsigned art is never shown as published content.</p>';
-  h+='<details><summary>Timing JSON format</summary><pre>{"schema":"tablinum-timing-v2","chapter_id":"b01-c001","intervals":[{"sentence_id":"b01-c001-s001","start":0.5,"end":2.9}]}</pre><p class="subtle">Provide measured boundaries, one interval per displayed sentence. Supplying JSON does not establish acoustic accuracy.</p></details>';
- return h;
-}
 function progress(chapters=L){
  const total=chapters.reduce((n,c)=>n+c.q.length,0),done=Object.values(S.correct).filter(Boolean).length,finished=chapters.filter((c,i)=>c.q.every((q,j)=>S.correct[i+":"+j])).length;
  const lexemes=globalThis.TablinumCompiledContent?.lexicon?.lexemes||[];
@@ -566,6 +555,7 @@ function progress(chapters=L){
  '</div><p class="subtle">Legacy saved words: '+indicators.legacySaved+' (not automatically owner-approved).</p><p class="subtle">Musica ex fontibus Graecīs et Rōmānīs īnspīrāta est; reconstrūctiō incerta est. Music inspired by ancient Greek and Roman sources; reconstruction is uncertain. Source details: <a href="curriculum/music.json">music provenance</a>.</p><h2>Course map</h2>';
  chapters.forEach((c,i)=>{const n=c.q.filter((q,j)=>S.correct[i+":"+j]).length;h+='<div style="padding:8px 0;border-bottom:1px solid #dfe7db"><button class="link" data-ch="'+i+'">'+(i+1)+". "+esc(c.name)+'</button><small style="float:right">'+n+'/'+c.q.length+'</small><div class="bar"><div style="width:'+(n/c.q.length*100)+'%"></div></div></div>'});
  if(storageMode==="blocked")h+='<div class="note" role="alert">'+esc(boot.warning||'Saved progress needs recovery; your old data has not been overwritten.')+' <button class="btn" data-action="remigrateV4">Re-migrate from original v4</button> or restore a backup below.</div>';
+ h+='<div class="panel"><h2>Vōx mea · Your recordings</h2><p class="subtle">Practice recordings from Lectiō stay on this computer and are not part of the backup below. Export them separately.</p><div class="tools"><button class="btn" data-action="exportRecordings">Export my recordings ZIP</button>'+(S.custom?'<button class="btn" data-action="clearText">Remove imported text</button>':'')+(media()?'<button class="btn" data-action="clearAudio">Remove local audio for this chapter</button>':'')+'</div><small>Storage: '+esc(userMedia?.status?.()||"unsupported")+' (temporary data may disappear when this tab closes).</small></div>';
  h+='<div class="panel"><h2>Backup and recovery</h2><p class="subtle">Audio is not stored in backups. Restored fields are validated. Current schema v4 also accepts v0.2 backup envelopes.</p><div class="tools"><button class="btn primary" data-action="export">Export backup JSON</button></div><label for="restoreFile">Restore a JSON backup (under 12 MB)</label><input class="field" type="file" id="restoreFile" accept=".json,application/json"><details><summary>Reset exercise and vocabulary progress</summary><button class="btn" data-action="reset">Reset progress (keep notes and imported text)</button></details></div>';
  return h;
 }
@@ -575,8 +565,9 @@ function syncAudioElement(){
  el.value=String(Number.isFinite(audio.currentTime)?audio.currentTime:0);
 }
 function render(){
+ if(S.tab==="library")S.tab="read"; // Bibliothēca removed (Nov 2026); a saved library tab opens the reader
  const old=stableFocus(),chapter=current();tabs();help();
- $("main").innerHTML=S.tab==="read"?reader(chapter):S.tab==="quiz"?quiz(chapter):S.tab==="review"?review():S.tab==="library"?library():progress(L);
+ $("main").innerHTML=S.tab==="read"?reader(chapter):S.tab==="quiz"?quiz(chapter):S.tab==="review"?review():progress(L);
  syncAudioElement();restoreFocus(old);updateBanner();
 }
 function updateSentenceHighlight(){

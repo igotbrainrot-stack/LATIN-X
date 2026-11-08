@@ -14,29 +14,12 @@ const {chromium}=require("playwright"),{pathToFileURL}=require("node:url");
   await page.goto(url);await page.locator(".sentence").first().waitFor();
   const prefix=await page.evaluate(()=>({id:globalThis.TablinumAudit.currentChapter().name,sent:globalThis.TablinumAudit.currentChapter().sent.length}));
   assert(prefix.sent>0);
-  await page.locator('#tabs [data-tab="library"]').click();
+  // Bibliothēca (chapter audio + timing import UI) was removed in Nov 2026. The local media
+  // store still backs Vōx mea; its export now lives on the Progress page.
+  assert.equal(await page.locator('#tabs [data-tab="library"]').count(),0,"Library tab removed");
+  await page.locator('#tabs [data-tab="progress"]').click();
   assert.match(await page.locator("#main").textContent(),/Vōx mea/);
-  await page.locator("#audioFile").setInputFiles({name:"my-story.mp3",mimeType:"audio/mpeg",
-   buffer:Buffer.from([73,68,51,4,0,0,0,0,0,0,0,0])});
-  try{
-   await page.waitForFunction(async()=>((await globalThis.TablinumUserMedia.getAudio("0"))?.blob?.size)===12,null,{timeout:5000});
-  }catch(error){
-   const debug=await page.evaluate(()=>({chapter:globalThis.TablinumAudit.currentChapter().name,
-    storage:globalThis.TablinumUserMedia.status(),
-    saved:document.getElementById("appStatus")?.textContent,
-    candidates:[...document.querySelectorAll("input[type=file]")].map(x=>x.id)}));
-   throw Error("Chapter audio import did not persist: "+JSON.stringify({debug,errors}));
-  }
-  const recordedSize=await page.evaluate(async()=>((await globalThis.TablinumUserMedia.getAudio("0"))?.blob?.size));
-  assert.equal(recordedSize,12,"Audio must exist in local media store");
-  const v2={schema:"tablinum-timing-v2",chapter_id:"legacy-ch01",intervals:Array.from({length:prefix.sent},(_,i)=>({
-   sentence_id:"legacy-ch01-s"+String(i+1).padStart(3,"0"),start:i*2,end:i*2+1.8
-  }))};
-  await page.locator("#timingFile").setInputFiles({name:"times-v2.json",mimeType:"application/json",buffer:Buffer.from(JSON.stringify(v2))});
-  await page.waitForFunction(()=>document.getElementById("appStatus")?.textContent?.includes("unverified"));
-  const timing=await page.evaluate(()=>globalThis.TablinumUserMedia.getTiming("0"));
-  assert.equal(timing.timing.ranges.length,prefix.sent);
-  assert.equal(timing.timing.verified,false);
+  assert.equal(await page.locator('#main [data-action="exportRecordings"]').count(),1,"Recordings export kept on Progress");
   await page.evaluate(async()=>globalThis.TablinumUserMedia.put("record:legacy-ch01:legacy-ch01-s001",{
    kind:"recording",blob:new Blob([new Uint8Array(128).fill(5)],{type:"audio/webm"})
   }));
@@ -49,8 +32,6 @@ const {chromium}=require("playwright"),{pathToFileURL}=require("node:url");
   const persisted=await page.evaluate(()=>globalThis.TablinumUserMedia.status());
   await page.reload();await page.locator("#tabs").waitFor();
   if(persisted==="persistent"){
-   const restoredSize=await page.evaluate(async()=>((await globalThis.TablinumUserMedia.getAudio("0"))?.blob?.size));
-   assert.equal(restoredSize,12,"IndexedDB chapter audio should survive file URL reload");
    const storedSize=await page.evaluate(async()=>((await globalThis.TablinumUserMedia.getRecording("legacy-ch01","legacy-ch01-s001"))?.blob?.size));
    assert.equal(storedSize,128,"Stored speaking practice survives reload");
   }else{
@@ -63,6 +44,6 @@ const {chromium}=require("playwright"),{pathToFileURL}=require("node:url");
   assert.equal(await page.evaluate(()=>localStorage.getItem("tablinum-source-review-v02")),raw);
   assert.deepEqual(network,[],"No external fetch/CDN in offline media suite");
   assert.deepEqual(errors,[],"No browser JS errors in local media suite");
-  console.log("PASS Phase7b Windows file:// local MP3, timing-v2, non-graded recorded ZIP, actual IDB/fallback, silent v4 key and no network.");
+  console.log("PASS Phase7b Windows file:// (Library tab removed): recordings export on Progress, non-graded recorded ZIP, actual IDB/fallback, silent v4 key and no network.");
  }finally{await browser.close()}
 })().catch(e=>{console.error(e);process.exitCode=1});

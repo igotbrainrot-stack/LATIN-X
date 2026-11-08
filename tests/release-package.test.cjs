@@ -90,7 +90,7 @@ function extract(entries,dir){
     await page.locator('#chapters [data-ch="'+ch+'"]').first().click();
     await page.locator(".sentence").first().waitFor();
    }
-   for(const tab of ["quiz","review","library","progress","read"]){
+   for(const tab of ["quiz","review","progress","read"]){
     await page.locator('#tabs [data-tab="'+tab+'"]').click();await page.waitForTimeout(80);
    }
    await page.goto(pathToFileURL(path.join(appDir,"Picture Practice.html")).href);
@@ -105,5 +105,5 @@ function extract(entries,dir){
    await page.close();
   }
  }finally{await browser.close();fs.rmSync(temp,{recursive:true,force:true})}
- console.log("PASS release: Windows ZIP and Linux tar.gz build, extract into spaced/non-ASCII paths, launch via Tablinum.html, all 8 chapters/5 tabs/picture practice load offline with no missing files, no clutter, CRLF .cmd and 0755 Linux installer.");
+ console.log("PASS release: Windows ZIP and Linux tar.gz build, extract into spaced/non-ASCII paths, launch via Tablinum.html, all 8 chapters/4 tabs/picture practice load offline with no missing files, no clutter, CRLF .cmd and 0755 Linux installer.");
 })().catch(e=>{console.error(e);process.exit(1)});

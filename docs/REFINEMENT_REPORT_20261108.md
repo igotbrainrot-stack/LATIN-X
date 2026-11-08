@@ -78,6 +78,14 @@ Deliberately minimal. The runtime and lesson data are byte-locked by tests, so p
 - **Firefox and Edge:** only Chromium is installed in this container. Earlier phases' CI ran Edge; this pass did not.
 - Real speaker playback of the MP3s (headless browser only).
 
+## Follow-up change at the owner's request (8 Nov, later the same day)
+
+**Bibliothēca tab removed.** The tab, its page (import your own .txt / pasted Latin, sentence-split editor, attach local MP3/WAV + timing JSON, seek bar, Art Review link) are gone from the learner app (`app/legacy-runtime.js`: tab list, `library()` page and its route). Preserved so nothing is lost:
+- **Export my recordings ZIP** moved to Progressus, in a new "Vōx mea · Your recordings" panel (backups do not include audio, so this export must stay reachable).
+- If a learner had imported a text or attached local audio before, that data is untouched; the imported text still shows in the chapter list, and Progressus offers "Remove imported text" / "Remove local audio for this chapter" buttons only when such data exists.
+- A saved state whose last tab was Library opens Lectiō instead (verified in Chromium). The v4/v5 state schema still accepts the `library` value, so old saves and backups load unchanged.
+- Tests updated: `phase12-accessibility-browser` and `phase7b-browser` no longer drive the removed UI and now assert the tab is gone and the export is on Progressus; `release-package` walks four tabs. The media-store and timing logic remain covered at API level by `phase7b-user-media`.
+
 ## Known limitations
 
 - Six approved Miriam takes are still missing (s007 V6b/V6a, s009 V5a, quoque V4, vīlla V2, aqua V3); those items use the labelled browser voice. See `docs/audio/APPROVED_NARRATION.md`.
