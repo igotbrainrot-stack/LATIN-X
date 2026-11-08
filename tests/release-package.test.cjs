@@ -49,8 +49,7 @@ function extract(entries,dir){
 (async()=>{
  const temp=fs.mkdtempSync(path.join(os.tmpdir(),"tablinum release "));
  const out=path.join(temp,"dist");
- process.argv.push("--out",out);
- const [winZip,linuxTar]=release.build();
+ const [winZip,linuxTar]=release.build({out});
  const win=readZip(fs.readFileSync(winZip)),lin=readTarGz(fs.readFileSync(linuxTar));
  const top=release.TOP+"/";
  for(const [label,entries] of [["windows",win],["linux",lin]]){

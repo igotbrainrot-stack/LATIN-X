@@ -20,8 +20,6 @@ const {execFileSync}=require("node:child_process");
 
 const root=path.resolve(__dirname,"..");
 const arg=(name,fallback)=>{const i=process.argv.indexOf(name);return i>0&&process.argv[i+1]?process.argv[i+1]:fallback};
-const LABEL=arg("--label","0.4.2-polish.20261108");
-const OUT=path.resolve(root,arg("--out","dist"));
 const TOP="Tablinum";
 
 /* Runtime set: pages, their scripts/styles/assets and every file a page links to. */
@@ -139,7 +137,9 @@ function tarGz(entries){
  return zlib.gzipSync(Buffer.concat(parts),{level:9});
 }
 
-function build(){
+function build(options={}){
+ const LABEL=options.label||arg("--label","0.4.2-polish.20261108");
+ const OUT=path.resolve(root,options.out||arg("--out","dist"));
  fs.mkdirSync(OUT,{recursive:true});
  const outputs=[
   ["Tablinum-"+LABEL+"-windows.zip",zip(entriesFor("windows"))],

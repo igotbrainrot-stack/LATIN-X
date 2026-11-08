@@ -83,7 +83,7 @@ node curriculum/validate-roadmap-130.cjs --require-introduced-1500
 node curriculum/validate-roadmap-130.cjs --require-introduced-3000
 ```
 
-Human-review working procedure and all fields: [PHASE1_REVIEW_GUIDE.md](curriculum/lexicon/PHASE1_REVIEW_GUIDE.md). For source details and ambiguous tokens, read [AMBIGUITIES_TO_REVIEW.md](curriculum/lexicon/AMBIGUITIES_TO_REVIEW.md).
+Human-review working procedure and all fields: [PHASE1_REVIEW_GUIDE.md](../../curriculum/lexicon/PHASE1_REVIEW_GUIDE.md). For source details and ambiguous tokens, read [AMBIGUITIES_TO_REVIEW.md](../../curriculum/lexicon/AMBIGUITIES_TO_REVIEW.md).
 
 ## What Claude or a Latinist must do before calling Phase 1 finished
 
@@ -96,7 +96,7 @@ Human-review working procedure and all fields: [PHASE1_REVIEW_GUIDE.md](curricul
 
 ## Next coding phase after signed Latin review
 
-**Phase 2** of the archived [CLAUDE_IMPLEMENTATION_ROADMAP.md](CLAUDE_IMPLEMENTATION_ROADMAP.md): create a versioned, token-tagged lesson content schema and compiler, with exact old-lesson round-trip and stable IDs. Keep `file://` safe by compiling content for classic scripts or inline HTML, and migrate progress only in Phase 3 with backup tests.
+**Phase 2** of the archived [CLAUDE_IMPLEMENTATION_ROADMAP.md](../../CLAUDE_IMPLEMENTATION_ROADMAP.md): create a versioned, token-tagged lesson content schema and compiler, with exact old-lesson round-trip and stable IDs. Keep `file://` safe by compiling content for classic scripts or inline HTML, and migrate progress only in Phase 3 with backup tests.
 
 ## Handback and branch rules
 

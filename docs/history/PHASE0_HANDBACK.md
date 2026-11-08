@@ -2,7 +2,7 @@
 
 **Branch:** `test/phase0-safety-net`  
 **Source:** `feature/legacy-lexeme-audit-20261105` (direct continuation; no merge)  
-**Roadmap:** [CLAUDE_IMPLEMENTATION_ROADMAP.md](CLAUDE_IMPLEMENTATION_ROADMAP.md) §12 (owner-supplied).  
+**Roadmap:** [CLAUDE_IMPLEMENTATION_ROADMAP.md](../../CLAUDE_IMPLEMENTATION_ROADMAP.md) §12 (owner-supplied).  
 **Running program:** `index.html` — **byte-identical** v0.4.2 Manuscript Edition.  
 **Status:** Phase 0 automated tests implemented and verified in Linux/Windows GitHub Actions; manual owner Windows checklist outstanding.
 
@@ -17,7 +17,7 @@ The following files were added:
 - `tests/file-url-smoke.cjs` — real local `file://` test with Playwright for quiz persistence and backup restore, on Chromium and Windows Edge;
 - `scripts/lib/extract-legacy.cjs` — shared bounded original lesson array extraction;
 - `Start Tablinum.cmd` and `.gitattributes` — optional Windows double-click launcher and checkout line endings;
-- `docs/WINDOWS_OFFLINE_CHECK.md` and [PHASE0_RESULTS.md](docs/PHASE0_RESULTS.md) — manual and automated evidence;
+- `docs/WINDOWS_OFFLINE_CHECK.md` and [PHASE0_RESULTS.md](../PHASE0_RESULTS.md) — manual and automated evidence;
 - `CLAUDE_IMPLEMENTATION_ROADMAP.md` — archived complete user-supplied plan in the same package.
 
 Modified only `scripts/build-legacy-lexeme-audit.cjs` (imports the shared extractor; output remains byte-identical), `tests/`, `package.json` and CI workflow. **No application code, lesson text, progress data, or actual vocabulary ledger was changed.**
@@ -30,7 +30,7 @@ Re-examined the Phase 0 acceptance criteria and discovered that preserving *ques
 
 Strengthened automated CI to run the reproducible lexical snapshots on **both Linux and Windows**, the HTTP and local-file browser routes, and both honest `1500`/`3000` curriculum gates. Browser tests log exact Node, Playwright and browser versions to their workflow output.
 
-**Pass 2 result:** Linux and Windows Node checks, Linux Chromium HTTP and file-path checks, Windows Chromium and Windows Edge file-path tests completed successfully. Details: [PHASE0_RESULTS.md](docs/PHASE0_RESULTS.md). No physical Windows 10/11 manual check is claimed.
+**Pass 2 result:** Linux and Windows Node checks, Linux Chromium HTTP and file-path checks, Windows Chromium and Windows Edge file-path tests completed successfully. Details: [PHASE0_RESULTS.md](../PHASE0_RESULTS.md). No physical Windows 10/11 manual check is claimed.
 
 ## Known issue carried forward
 
