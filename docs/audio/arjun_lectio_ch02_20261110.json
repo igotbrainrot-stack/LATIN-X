@@ -1,0 +1,55 @@
+{
+  "chapter": 2,
+  "voice": "Arjun",
+  "owner_review": "pending",
+  "installation": "not_installed",
+  "model": "eleven_v3",
+  "speed": 0.9,
+  "lines": [
+    {
+      "sentence_id": "legacy-ch02-s001",
+      "canonical_text": "Haec est vīlla familiae.",
+      "runway_task_id": "8099d576-ec20-429b-a001-598887a43b2d"
+    },
+    {
+      "sentence_id": "legacy-ch02-s002",
+      "canonical_text": "In vīllā Mārcus habitat.",
+      "runway_task_id": "70fd2a38-5182-49b7-bba5-148b2cd9eb99"
+    },
+    {
+      "sentence_id": "legacy-ch02-s003",
+      "canonical_text": "Flāvia quoque in vīllā habitat.",
+      "runway_task_id": "e22d1800-30f0-41ed-b576-55f3e727c5cf"
+    },
+    {
+      "sentence_id": "legacy-ch02-s004",
+      "canonical_text": "Mārcus pater Līviae est.",
+      "runway_task_id": "94c54ef5-704b-4248-bed2-fab4b989661d"
+    },
+    {
+      "sentence_id": "legacy-ch02-s005",
+      "canonical_text": "Flāvia māter Līviae est.",
+      "runway_task_id": "5daf8c88-a3e7-4682-9a0e-6d1e43d3438d"
+    },
+    {
+      "sentence_id": "legacy-ch02-s006",
+      "canonical_text": "Tītus frāter Līviae est.",
+      "runway_task_id": "55902c94-ab7c-4297-b007-e2411cd6be20"
+    },
+    {
+      "sentence_id": "legacy-ch02-s007",
+      "canonical_text": "Līvia soror Tītī est.",
+      "runway_task_id": "8b35e328-e140-41bf-9922-7db030130316"
+    },
+    {
+      "sentence_id": "legacy-ch02-s008",
+      "canonical_text": "Mārcus et Flāvia parentēs sunt.",
+      "runway_task_id": "6fd05516-14db-49ba-b4e4-4e1622f06854"
+    },
+    {
+      "sentence_id": "legacy-ch02-s009",
+      "canonical_text": "Quattuor hominēs in vīllā habitant.",
+      "runway_task_id": "5984e688-9b53-4bfc-81f6-b03c10b7bbdb"
+    }
+  ]
+}
