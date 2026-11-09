@@ -1,0 +1,396 @@
+{
+  "schema": "latin-x-offline-audio-v1",
+  "description": "SHA-256 pins for the 75 owner narration recordings (74 Arjun, one Miriam laeta fallback) and three original Roman reading music MP3s; binaries are private and gitignored.",
+  "files": [
+    {
+      "path": "audio/narration/arjun/s001-arjun.mp3",
+      "sha256": "93418701b6e1b544732b99e70bdf679df4c6a0fa9f9545adf2065a333344c76f",
+      "bytes": 39331
+    },
+    {
+      "path": "audio/narration/arjun/s002-arjun.mp3",
+      "sha256": "8fe76992cb958df966bf4becd5a25fdb6a4a0c817349659ab3be9616c72e3c29",
+      "bytes": 41838
+    },
+    {
+      "path": "audio/narration/arjun/s003-arjun.mp3",
+      "sha256": "51ad9571a1eed81b4bbc72436406ded07f9c842fddf74dbfbce0068add87454e",
+      "bytes": 34315
+    },
+    {
+      "path": "audio/narration/arjun/s004-arjun.mp3",
+      "sha256": "b7e3501ecef8dfa061f08cf55299911d785d1f7eb36f1170d1e9b863806b4fe6",
+      "bytes": 51034
+    },
+    {
+      "path": "audio/narration/arjun/s005-arjun.mp3",
+      "sha256": "e3de7e10ab958eddb3fb33352d1a1320cb20056ff9a31de9f49d13a7ced0e605",
+      "bytes": 35569
+    },
+    {
+      "path": "audio/narration/arjun/s006-arjun.mp3",
+      "sha256": "2a3571d186998660214161b800c8acd674d346ab0a51d7cd9742632ce0cb5897",
+      "bytes": 39331
+    },
+    {
+      "path": "audio/narration/arjun/s007-arjun.mp3",
+      "sha256": "f5eb1098a6a275d2f305f39fd17a07b33af0ce6e9d481a92ab5f5bef1de7d71f",
+      "bytes": 40585
+    },
+    {
+      "path": "audio/narration/arjun/s008-arjun.mp3",
+      "sha256": "cb2dcf99734f6e10236e9d3f17b7d22fcbad2fab58422b6d238d2f54f817d0a8",
+      "bytes": 49780
+    },
+    {
+      "path": "audio/narration/arjun/s009-arjun.mp3",
+      "sha256": "aae85b20a2c1c976d902692de42b874be5b09c2f9e740f5af0807b56e13eb7a3",
+      "bytes": 38077
+    },
+    {
+      "path": "audio/narration/arjun/word-quoque-arjun.mp3",
+      "sha256": "2197c533c059c740d5c030f2d5ca30fed55d784bda8c62db0def9b87665326fa",
+      "bytes": 26792
+    },
+    {
+      "path": "audio/narration/arjun/word-villa-arjun.mp3",
+      "sha256": "aa3e264c8c47f858ae55e028b070cc9d41467ee72590426256e148c12081a096",
+      "bytes": 35569
+    },
+    {
+      "path": "audio/narration/arjun/word-aqua-arjun.mp3",
+      "sha256": "cbe86f2b1cd2add0fafaf6b78c6b2bf820090cb9e8f8fc5104357a9a49c1ddba",
+      "bytes": 24284
+    },
+    {
+      "path": "audio/narration/arjun/word-cena-arjun.mp3",
+      "sha256": "0888e2cbc9c96343f27c351516f4ddaa7531d03f70ac58fcd2276cbf2f1db568",
+      "bytes": 17597
+    },
+    {
+      "path": "audio/narration/arjun/word-gaius-arjun.mp3",
+      "sha256": "f95d36e50eb051530abcfa3c43738ecf6761d636b82f652ed03a85fc333d7c61",
+      "bytes": 17597
+    },
+    {
+      "path": "audio/narration/arjun/word-magna-arjun.mp3",
+      "sha256": "15e5817a5b30985a202a2a936069e30be89425681cb649cc05acfb0f7c7a81d4",
+      "bytes": 38077
+    },
+    {
+      "path": "audio/narration/arjun/word-pecunia-arjun.mp3",
+      "sha256": "e72629ee6e4f0b227a090e7b33e742dfd921664e773e7d2b7f59c82aeba1aa70",
+      "bytes": 34315
+    },
+    {
+      "path": "audio/narration/arjun/word-laeta-miriam-fallback.mp3",
+      "sha256": "04368b036e73a0f3b733de70448a19adf85c1ffb88b7ccd81210a063d824ef09",
+      "bytes": 30554
+    },
+    {
+      "path": "audio/narration/arjun/ch02-s001-arjun.mp3",
+      "sha256": "35c36629452d91ce49dacb61ded236ab784d8f0f6d8516137202d5f27df7f5c3",
+      "bytes": 39331
+    },
+    {
+      "path": "audio/narration/arjun/ch02-s002-arjun.mp3",
+      "sha256": "6e18d5eb80950c1b370558e0c92cf07cf35bbeba0eade8b68a37e0b99f72319c",
+      "bytes": 48526
+    },
+    {
+      "path": "audio/narration/arjun/ch02-s003-arjun.mp3",
+      "sha256": "7f3657ca7d9eef964d631a196188121ca019b1d7b65859603850d86882804170",
+      "bytes": 67752
+    },
+    {
+      "path": "audio/narration/arjun/ch02-s004-arjun.mp3",
+      "sha256": "19a9ed2bca1b935b7ac63f93b6ac623381e0a2194e7eb9336a53c2080af0dcca",
+      "bytes": 70260
+    },
+    {
+      "path": "audio/narration/arjun/ch02-s005-arjun.mp3",
+      "sha256": "d79598c10c59cb8c28081d644c9c9920df76aa54da167705afd4cb1d417f9871",
+      "bytes": 58557
+    },
+    {
+      "path": "audio/narration/arjun/ch02-s006-arjun.mp3",
+      "sha256": "6ade91b1d54d093aeb5064c653c606bf38594b72b066827e76f043995c1aafef",
+      "bytes": 57303
+    },
+    {
+      "path": "audio/narration/arjun/ch02-s007-arjun.mp3",
+      "sha256": "c322314280c0830ce1f57bad9287f0fa17d1ba107d8eb5d163759003e2997226",
+      "bytes": 52287
+    },
+    {
+      "path": "audio/narration/arjun/ch02-s008-arjun.mp3",
+      "sha256": "1f0a1acb219cdf16d61fc6c19ef076dc4e0e30aa5434fecb641afe399fde3103",
+      "bytes": 67752
+    },
+    {
+      "path": "audio/narration/arjun/ch02-s009-arjun.mp3",
+      "sha256": "a13b53331efd57735867ec50cfbe078c7f1e83203508ca49e4fef64921616ae4",
+      "bytes": 65244
+    },
+    {
+      "path": "audio/narration/arjun/ch03-s001-arjun.mp3",
+      "sha256": "bf67dc5011f73fe78945c139e89c45f673037a534c981cfcaaa3393cd6ea1d05",
+      "bytes": 57303
+    },
+    {
+      "path": "audio/narration/arjun/ch03-s002-arjun.mp3",
+      "sha256": "4fab1963f73e86807d7f4be795aca6475640ad14080e5b8ddd5752b3d634f1c4",
+      "bytes": 39331
+    },
+    {
+      "path": "audio/narration/arjun/ch03-s003-arjun.mp3",
+      "sha256": "89cf0d6598b4b4508b1060da4b3f5366bdebf8d7a1bc0aa89a570778b6136b4f",
+      "bytes": 41838
+    },
+    {
+      "path": "audio/narration/arjun/ch03-s004-arjun.mp3",
+      "sha256": "e484f5008b79c804a9816ed62532a460c5bdb9e55da453a2350501bbe2bc8aa5",
+      "bytes": 52287
+    },
+    {
+      "path": "audio/narration/arjun/ch03-s005-arjun.mp3",
+      "sha256": "7e201bb742b3b68017a288125e8a929b5aa6f408e6e14752af4ba062fa65dc99",
+      "bytes": 49780
+    },
+    {
+      "path": "audio/narration/arjun/ch03-s006-arjun.mp3",
+      "sha256": "b678f0c3707fbeacdd8e012024326413c5a6fc34c19a6e1bec58b8e53efe526e",
+      "bytes": 48526
+    },
+    {
+      "path": "audio/narration/arjun/ch03-s007-arjun.mp3",
+      "sha256": "e532717667dede0e285bda535f590c6c98f6b71d4e169de366817f6b598e5543",
+      "bytes": 43510
+    },
+    {
+      "path": "audio/narration/arjun/ch03-s008-arjun.mp3",
+      "sha256": "f1fb7447612cae479790d3ccdc077fb4d031b8d71a343baeaabb4214b33d8379",
+      "bytes": 49780
+    },
+    {
+      "path": "audio/narration/arjun/ch03-s009-arjun.mp3",
+      "sha256": "8c28fb008733be0b64410dd192d3abb1688a9a81767bab2cee30bbe13424edae",
+      "bytes": 72767
+    },
+    {
+      "path": "audio/narration/arjun/ch04-s001-arjun.mp3",
+      "sha256": "280fa2e744adcbdef1f0f60288ea83d9f0e7bbe3a05f015916691ce48b35bc77",
+      "bytes": 39331
+    },
+    {
+      "path": "audio/narration/arjun/ch04-s002-arjun.mp3",
+      "sha256": "d99394ed7de934697d4d2428946eb25efb0d2c351a56f6471b83cae03f3be8f9",
+      "bytes": 48526
+    },
+    {
+      "path": "audio/narration/arjun/ch04-s003-arjun.mp3",
+      "sha256": "70160845d0aa9a4fd9aaccf006c092cc78cbf2563ae5f952a081d4fd30e6b67f",
+      "bytes": 34315
+    },
+    {
+      "path": "audio/narration/arjun/ch04-s004-arjun.mp3",
+      "sha256": "c354f39d94014abbd3793537d18c6b7c3f2c9a8fd67b069cb23f30f12e8eb07e",
+      "bytes": 36823
+    },
+    {
+      "path": "audio/narration/arjun/ch04-s005-arjun.mp3",
+      "sha256": "6c1a967f6eb7d94e136e2e96b8579b0040b2e55ea21342ffd0eb4bd516146c7e",
+      "bytes": 51034
+    },
+    {
+      "path": "audio/narration/arjun/ch04-s006-arjun.mp3",
+      "sha256": "59b557084179f60f19af42a1e8555bfdb3ef89bd91ad7d5985560a09484a2f2f",
+      "bytes": 71514
+    },
+    {
+      "path": "audio/narration/arjun/ch04-s007-arjun.mp3",
+      "sha256": "9dcf536df7e6aaf8b8443557a175cf579634ca3eb7ae0cd63edf0b5fd94a7a8b",
+      "bytes": 43510
+    },
+    {
+      "path": "audio/narration/arjun/ch04-s008-arjun.mp3",
+      "sha256": "3aec357411e082fad0d4bf501d28e31a27a9e862f1b335c41dc6b44474870867",
+      "bytes": 38077
+    },
+    {
+      "path": "audio/narration/arjun/ch05-s001-arjun.mp3",
+      "sha256": "9996b7b1a3d7a69b7cef64e67222a652aa5dc6edb08db65bf77aba423ee373ab",
+      "bytes": 53541
+    },
+    {
+      "path": "audio/narration/arjun/ch05-s002-arjun.mp3",
+      "sha256": "8d23cf2f43296b40b1d4ac055543f49857106798a5cfbf139222f5b2c5e01793",
+      "bytes": 69006
+    },
+    {
+      "path": "audio/narration/arjun/ch05-s003-arjun.mp3",
+      "sha256": "93e1fb4c6bff80ed18771b73a92784bdfedcb260c59ac6169dfce4adf4600600",
+      "bytes": 54795
+    },
+    {
+      "path": "audio/narration/arjun/ch05-s004-arjun.mp3",
+      "sha256": "26e0a07b51954132635d64f8fedb6e20d01c400e5caf180610467befd6756d92",
+      "bytes": 53541
+    },
+    {
+      "path": "audio/narration/arjun/ch05-s005-arjun.mp3",
+      "sha256": "01982ea87a38fb362b43b00de01f9ab8ea8bfcb67da4994788e21e89856c0420",
+      "bytes": 56049
+    },
+    {
+      "path": "audio/narration/arjun/ch05-s006-arjun.mp3",
+      "sha256": "8edb1ab84821880554b8851c0da1b52816b71ed3b5a3b63ddfb54c587e5d663a",
+      "bytes": 75275
+    },
+    {
+      "path": "audio/narration/arjun/ch05-s007-arjun.mp3",
+      "sha256": "3ed3ae47d5010e680ab0c6f84c41551a4bfc2532e9395cfb6b6ee920539b63a7",
+      "bytes": 74021
+    },
+    {
+      "path": "audio/narration/arjun/ch05-s008-arjun.mp3",
+      "sha256": "3f13dd878a8b9bcffefd9103ad7657b18b94a66fc98fb08e98f0994c3d2f6188",
+      "bytes": 71514
+    },
+    {
+      "path": "audio/narration/arjun/ch06-s001-arjun.mp3",
+      "sha256": "fd4a00b4190a558361306d301a2664ab590e5c17de865a738e340f32ffdc3c3c",
+      "bytes": 43510
+    },
+    {
+      "path": "audio/narration/arjun/ch06-s002-arjun.mp3",
+      "sha256": "eb12286d3eeb8e039eecc777a0091ec1be8ca2051da64ca57e0f40de881ea83e",
+      "bytes": 41838
+    },
+    {
+      "path": "audio/narration/arjun/ch06-s003-arjun.mp3",
+      "sha256": "1c4a29963d76ea3678117e804c843b9ad5adf589e6158a5096e41a2f61c4dfb3",
+      "bytes": 53541
+    },
+    {
+      "path": "audio/narration/arjun/ch06-s004-arjun.mp3",
+      "sha256": "abc6f2c1885f8bb4a63a95ad037e7bee98be0429dd16183d1e96b1550c96a30a",
+      "bytes": 44764
+    },
+    {
+      "path": "audio/narration/arjun/ch06-s005-arjun.mp3",
+      "sha256": "efe702615de95d803359cdba0ca66da45127d2aab75718277ef76508fffc40e5",
+      "bytes": 57303
+    },
+    {
+      "path": "audio/narration/arjun/ch06-s006-arjun.mp3",
+      "sha256": "57f0b464637497b426b8a5a69a84050d2045a448349418e051c09c7ba488d8ce",
+      "bytes": 51034
+    },
+    {
+      "path": "audio/narration/arjun/ch06-s007-arjun.mp3",
+      "sha256": "ac268ce153be1b26e8b08672d00412f28d627ef52ce588d69fb07518d013b370",
+      "bytes": 70260
+    },
+    {
+      "path": "audio/narration/arjun/ch06-s008-arjun.mp3",
+      "sha256": "1f2cdbc0f1dab35315ab76b629b8ee4b4787c8c881ce995797d7dc3d267f169f",
+      "bytes": 61065
+    },
+    {
+      "path": "audio/narration/arjun/ch07-s001-arjun.mp3",
+      "sha256": "fa02f2348e8b71d4267ea9be623140386bad22f5c7443cddea0c99249c261345",
+      "bytes": 49780
+    },
+    {
+      "path": "audio/narration/arjun/ch07-s002-arjun.mp3",
+      "sha256": "92325c72e41677f52d7aeedd1d2bbec60232ef7faaa37493d25f69432dab64b1",
+      "bytes": 62318
+    },
+    {
+      "path": "audio/narration/arjun/ch07-s003-arjun.mp3",
+      "sha256": "1329b930feb17ca491fe75dc56c2d836e5d991f5360eae3da60e92024a8749b1",
+      "bytes": 49780
+    },
+    {
+      "path": "audio/narration/arjun/ch07-s004-arjun.mp3",
+      "sha256": "3426bfcc157ec8f4af31a03b896f03b5b4287b9a16262f70dc30b0a800d5d644",
+      "bytes": 54795
+    },
+    {
+      "path": "audio/narration/arjun/ch07-s005-arjun.mp3",
+      "sha256": "a3b7cd9484feb212dd4001c7baaf107072886ac98c6ea16dff02307f57652d19",
+      "bytes": 56049
+    },
+    {
+      "path": "audio/narration/arjun/ch07-s006-arjun.mp3",
+      "sha256": "445b56b00fe257515b30e3918a64c42a100410d107874e560b08fef2a746900c",
+      "bytes": 36823
+    },
+    {
+      "path": "audio/narration/arjun/ch07-s007-arjun.mp3",
+      "sha256": "771e20aef0cd87d31e9ef026fc23cd04952451097d987247277c6cb6135bb430",
+      "bytes": 59811
+    },
+    {
+      "path": "audio/narration/arjun/ch07-s008-arjun.mp3",
+      "sha256": "168e975f4d3c494396a311695a98dd7e66ae074f32740344fad8904eaed49cf5",
+      "bytes": 38077
+    },
+    {
+      "path": "audio/narration/arjun/ch08-s001-arjun.mp3",
+      "sha256": "adcd87ec39ad16883d89196eea77081a38d8453dd68ea19b944d22fa9e7df5d4",
+      "bytes": 72767
+    },
+    {
+      "path": "audio/narration/arjun/ch08-s002-arjun.mp3",
+      "sha256": "6b5c682071ee6a1c926db3f7c3b2785fd4dcb7d60a5104bbed9973636835b826",
+      "bytes": 53541
+    },
+    {
+      "path": "audio/narration/arjun/ch08-s003-arjun.mp3",
+      "sha256": "f2c5851029084497e4952c4675b93845ad6ff7af7d54212c1042e7ea15b3e5c1",
+      "bytes": 36823
+    },
+    {
+      "path": "audio/narration/arjun/ch08-s004-arjun.mp3",
+      "sha256": "dc23a58675b0b8deec9d0a91310e2740aceff7b525be8dcb49d3789189776c3c",
+      "bytes": 72767
+    },
+    {
+      "path": "audio/narration/arjun/ch08-s005-arjun.mp3",
+      "sha256": "424ee42bb7d537abc2039e87a9ffa7020562a52485b948f4ece893576e7ea44a",
+      "bytes": 84470
+    },
+    {
+      "path": "audio/narration/arjun/ch08-s006-arjun.mp3",
+      "sha256": "5fe9c9c2ee7cb7e2aba6209d7410c81c729017615bddb20f1acc4669b907eb26",
+      "bytes": 79037
+    },
+    {
+      "path": "audio/narration/arjun/ch08-s007-arjun.mp3",
+      "sha256": "75bd2be44d085b4cfc06200045718b8283878b6e8ff0f3df6ae3dbb19bdceef3",
+      "bytes": 38077
+    },
+    {
+      "path": "audio/narration/arjun/ch08-s008-arjun.mp3",
+      "sha256": "b57b81a1fdb018fd0c628121411752740ea44745a67e5c84bcb353d4829f902f",
+      "bytes": 34315
+    },
+    {
+      "path": "assets/audio/roman/hortus-quietus.mp3",
+      "sha256": "ee0cde71d66bc547d58b49b6dfd8fe86aace5ae43b9d67c2b597efaa7e7411d8",
+      "bytes": 4171844
+    },
+    {
+      "path": "assets/audio/roman/ad-lucernam.mp3",
+      "sha256": "455cd7e9be25f9cdbe0628e16b890792ff99499cc210b01e5fddd18095f124b8",
+      "bytes": 4087834
+    },
+    {
+      "path": "assets/audio/roman/porticus-serena.mp3",
+      "sha256": "9361008f3d87d6dee9013dc8458f88191631daaffeda656af6cf25ef72c7ebab",
+      "bytes": 4220118
+    }
+  ]
+}
