@@ -49,7 +49,8 @@ for(const file of expected.files){
 const runtime=read("app/legacy-runtime.js");
 assert(runtime.includes('const approved=installed&&take.owner_listening==="pass"'));
 assert(runtime.includes('const pending=installed&&take.owner_listening==="pending"'));
-assert(runtime.includes('awaiting your review'));
+assert(runtime.includes('New take awaiting owner listening review'),'Dock note names pending takes');
+assert(read('app/62-narration.js').includes(' — new recording, awaiting your review'),'Pending takes get their own label');
 assert(runtime.includes('if(activate){if(mode()==="voice")speak()'));
 assert(runtime.includes('onend:()=>{if(id!==speechRequest)return;narrationTake=null;readingIndex=null;'));
 assert(!runtime.includes("Clip end advances to sentence 2"));

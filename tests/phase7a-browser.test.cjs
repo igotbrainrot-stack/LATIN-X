@@ -4,15 +4,15 @@ const {chromium}=require("playwright"),{pathToFileURL}=require("node:url");
 (async()=>{
  const browser=await chromium.launch({headless:true,channel:process.env.TABLINUM_BROWSER_CHANNEL||undefined});
  try{
-  const context=await browser.newContext(),page=await context.newPage(),errors=[],requests=[];
+  const context=await browser.newContext();
+  // Skip the first-run guide via its stored preference: clicking "Enter" would be a user gesture and unlock audio.
+  await context.addInitScript(()=>{try{localStorage.setItem("latin-x-welcome-skip-v1","yes")}catch(e){}});
+  const page=await context.newPage(),errors=[],requests=[];
   page.on("pageerror",error=>errors.push(error.message));
   page.on("request",request=>{if(/^https?:\/\//.test(request.url()))requests.push(request.url())});
   const url=pathToFileURL(path.resolve(__dirname,"..","index.html")).href;
   await page.goto(url);
-  if(await page.locator("#lx-welcome:not([hidden])").count()){
-   await page.locator("#lx-welcome-skip").check();
-   await page.locator("#lx-welcome-enter").click();
-  }
+  assert.equal(await page.locator("#lx-welcome:not([hidden])").count(),0,"Stored preference skips the guide");
   await page.locator(".sentence").first().waitFor();
   const before=await page.evaluate(()=>globalThis.TablinumAmbience.debug());
   assert.equal(before.activated,false,"No audio context before a gesture");

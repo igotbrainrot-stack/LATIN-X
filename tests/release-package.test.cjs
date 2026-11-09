@@ -5,7 +5,7 @@
  * then opens the windowless launcher page and walks every tab and chapter.
  * Fails on any missing file, page error, network request or clutter in the package. */
 const fs=require("node:fs"),os=require("node:os"),path=require("node:path"),zlib=require("node:zlib");
-const assert=require("node:assert/strict"),{pathToFileURL}=require("node:url");
+const assert=require("node:assert/strict"),{pathToFileURL,fileURLToPath}=require("node:url");
 const {chromium}=require("playwright");
 const release=require("../scripts/build-release.cjs");
 
@@ -82,7 +82,7 @@ function extract(entries,dir){
    page.on("pageerror",e=>errors.push(e.message));
    page.on("console",m=>{if(m.type()==="error")errors.push(m.text())});
    page.on("request",r=>{if(!r.url().startsWith("file:")&&!r.url().startsWith("data:")&&!r.url().startsWith("blob:"))network.push(r.url())});
-   page.on("requestfailed",r=>failed.push(r.url()));
+   page.on("requestfailed",r=>failed.push({url:r.url(),error:(r.failure()||{}).errorText||""}));
    await page.goto(pathToFileURL(path.join(appDir,"Tablinum.html")).href);
    await page.waitForURL(/index\.html$/);
    assert.equal(await page.locator("#lx-welcome:not([hidden])").count(),1,label+": first launch shows course guide");
@@ -108,7 +108,11 @@ function extract(entries,dir){
    await page.goto(pathToFileURL(path.join(appDir,"Art Review.html")).href);
    await page.waitForLoadState("load");
    // All approved narration now ships, so any failed request (including a narration MP3) is a packaging defect.
-   assert.deepEqual(failed,[],label+": every requested file is in the package");
+   // Switching chapters quickly cancels in-flight narration probes (net::ERR_ABORTED). That is not a missing
+   // file, so such requests are checked on disk instead; every other failed request is a packaging defect.
+   const aborted=failed.filter(f=>f.error==="net::ERR_ABORTED"&&/\/audio\/narration\/[^/]+\/[^/]+\.mp3$/.test(decodeURI(f.url)));
+   for(const f of aborted)assert(fs.existsSync(fileURLToPath(f.url)),label+": cancelled narration request points at a packaged file: "+f.url);
+   assert.deepEqual(failed.filter(f=>!aborted.includes(f)).map(f=>f.url),[],label+": every requested file is in the package");
    assert.deepEqual(network,[],label+": no network access");
    assert.deepEqual(errors,[],label+": no page errors");
    await page.close();
