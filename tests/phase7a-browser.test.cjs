@@ -9,6 +9,10 @@ const {chromium}=require("playwright"),{pathToFileURL}=require("node:url");
   page.on("request",request=>{if(/^https?:\/\//.test(request.url()))requests.push(request.url())});
   const url=pathToFileURL(path.resolve(__dirname,"..","index.html")).href;
   await page.goto(url);
+  if(await page.locator("#lx-welcome:not([hidden])").count()){
+   await page.locator("#lx-welcome-skip").check();
+   await page.locator("#lx-welcome-enter").click();
+  }
   await page.locator(".sentence").first().waitFor();
   const before=await page.evaluate(()=>globalThis.TablinumAmbience.debug());
   assert.equal(before.activated,false,"No audio context before a gesture");
