@@ -1,0 +1,66 @@
+{
+  "chapter": 6,
+  "voice": "Arjun",
+  "owner_review": "pending",
+  "installation": "not_installed",
+  "model": "eleven_v3",
+  "speed": 0.9,
+  "lines": [
+    {
+      "sentence_id": "legacy-ch06-s001",
+      "canonical_text": "Canis in viā currit.",
+      "tts_input": "Canis in wee-ah currit.",
+      "runway_task_id": "e7362576-1c0c-4751-8b26-4524ffc957cc",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch06-s002",
+      "canonical_text": "Puer canem videt.",
+      "tts_input": "Puer canem wee-det.",
+      "runway_task_id": "3120b05a-a531-48f2-a722-3de9066da5fd",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch06-s003",
+      "canonical_text": "Puer canem vocat.",
+      "tts_input": "Puer canem woh-kaht.",
+      "runway_task_id": "eebd3509-6ae9-43f8-9c01-5f65bd1c1fb2",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch06-s004",
+      "canonical_text": "Sed canis nōn audit.",
+      "tts_input": "Sed canis nōn audit.",
+      "runway_task_id": "cd1f8289-bab1-4086-847a-bb9a040e06bd",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch06-s005",
+      "canonical_text": "Līvia prope portam stat.",
+      "tts_input": "Li'wi'ah prope portam stat.",
+      "runway_task_id": "1acdadc8-7702-4ae0-9ba3-a9fedca48a75",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch06-s006",
+      "canonical_text": "Canis ad Līviam currit.",
+      "tts_input": "Canis ad Li'wi'ahm currit.",
+      "runway_task_id": "ce08a79d-4156-4e09-bd7f-133cbd315ffe",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch06-s007",
+      "canonical_text": "Līvia rīdet; puer quoque rīdet.",
+      "tts_input": "Li'wi'ah rīdet; puer quoque rīdet.",
+      "runway_task_id": "4bd2e178-8b3d-4b2a-95d0-3993d7b01b5e",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch06-s008",
+      "canonical_text": "Nunc canis cum puerō ambulat.",
+      "tts_input": "Nunc canis cum puerō ambulat.",
+      "runway_task_id": "cd8e0d10-9a9a-4aca-a66f-be1f1409c3d1",
+      "status": "task_pending"
+    }
+  ]
+}
