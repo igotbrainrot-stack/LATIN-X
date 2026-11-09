@@ -24,9 +24,9 @@ for(const link of headLinks){const target=link.match(/href="([^"]+)"/)[1];assert
 const paths=[...html.matchAll(/<script src="([^"]+)"\s*><\/script>/g)].map(m=>m[1]);
 assert.deepEqual(paths,[...files,welcomeScript],"Only the approved classic scripts, in the correct order");
 for(const link of headLinks)assert(html.includes(link),"Approved stylesheet/icon asset link must exist");
-assert.equal((html.match(/<link\\b/g)||[]).length,headLinks.length,"No unreviewed external stylesheets");
-assert.equal((html.match(/<script\\b/g)||[]).length,files.length+1,"No unauthorized inline scripts");
-assert(!/<script(?!\\s+src=)/.test(html),"No new inline startup logic");
+assert.equal(html.split("<link ").length-1,headLinks.length,"Only the approved stylesheet and icon links");
+assert.equal(html.split("<script ").length-1,files.length+1,"Only explicitly enumerated scripts");
+assert(!html.includes("<script>"),"No new inline startup logic");
 assert(html.includes("body::before"),"Keep approved CSS paper texture");
 assert(!html.includes("body::after"),"Do not stack a second page texture");
 assert(html.includes('id="lx-welcome"')&&html.includes('id="lx-welcome-enter"'),"First-run guide and enter button must be present");
