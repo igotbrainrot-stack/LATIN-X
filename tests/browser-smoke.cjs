@@ -34,6 +34,10 @@ const close=()=>new Promise(resolve=>server.close(resolve));
   const desktop=await browser.newPage({viewport:{width:1440,height:960},deviceScaleFactor:1});
   desktop.on("pageerror",e=>errors.push(e.message));
   await desktop.goto(root,{waitUntil:"load"});
+  if(await desktop.locator("#lx-welcome:not([hidden])").count()){
+   await desktop.locator("#lx-welcome-skip").check();
+   await desktop.locator("#lx-welcome-enter").click();
+  }
   await desktop.locator('img[data-art-image="b01-c001-scene"]').waitFor({state:"visible"});
   await desktop.waitForFunction(()=>{const image=document.querySelector('img[data-art-image="b01-c001-scene"]');return image?.complete&&image.naturalWidth>0});
   assert.equal(await desktop.locator(".sentence").count(),9,"Chapter I must still contain nine original sentences");
@@ -69,6 +73,10 @@ const close=()=>new Promise(resolve=>server.close(resolve));
   const mobile=await browser.newPage({viewport:{width:390,height:844},deviceScaleFactor:1});
   mobile.on("pageerror",e=>errors.push(e.message));
   await mobile.goto(root,{waitUntil:"load"});
+  if(await mobile.locator("#lx-welcome:not([hidden])").count()){
+   await mobile.locator("#lx-welcome-skip").check();
+   await mobile.locator("#lx-welcome-enter").click();
+  }
   await mobile.locator('img[data-art-image="b01-c001-scene"]').waitFor({state:"visible"});
   const sizes=await mobile.evaluate(()=>({scroll:document.documentElement.scrollWidth,viewport:window.innerWidth}));
   assert(sizes.scroll<=sizes.viewport+2,JSON.stringify(sizes)+" — unexpected body-level horizontal overflow");
