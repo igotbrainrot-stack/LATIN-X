@@ -381,7 +381,7 @@ let h='<div class="mini">Lectiō '+esc(activeCourse?activeCourse.chapter:S.ch===
  h+='<div class="note">Read Latin first. Ask for one clue at a time: context, important words, then English.</div><div class="tools"><button class="btn primary" data-action="play">'+(mode()==="voice"?"▶ Speak sentence":mode()==="timed"?"▶ Play timed sentence":"▶ Play recording (untimed)")+'</button><button class="btn" data-tab="quiz">Exercises →</button></div>';
  c.sent.forEach(([latin,en],i)=>{
   const k=chapterKey()+":"+i,level=S.hintLevels[k]||0,selected=S.sel===i;
-  h+='<article class="sentence '+(selected?"selected":"")+'" data-sentence-container="'+i+'" aria-current="'+(selected?"true":"false")+'"><div class="mini">Sententia '+(i+1)+'</div><div class="words" lang="la" data-sentence="'+i+'">'+renderWords(latin)+'</div><div class="tools"><button class="link" data-sentence="'+i+'">○ Select / listen</button><button class="btn" '+(S.guided?"":"hidden ")+'data-guided="'+i+'">'+(level===0?"Latin clue":level===1?"Word clues":level===2?"English meaning":"Hide hints")+' ('+level+'/3)</button></div>';
+  h+='<article class="sentence '+(selected?"selected":"")+'" data-sentence-container="'+i+'" aria-current="'+(selected?"true":"false")+'"><div class="mini">Sententia '+(i+1)+'</div><div class="words" lang="la" data-sentence="'+i+'">'+renderWords(latin)+'</div><div class="tools"><button class="link" data-sentence="'+i+'">▶ Listen to sentence</button><button class="btn" '+(S.guided?"":"hidden ")+'data-guided="'+i+'">'+(level===0?"Latin clue":level===1?"Word clues":level===2?"English meaning":"Hide hints")+' ('+level+'/3)</button></div>';
   if(S.guided&&level>0)h+='<div class="help"><strong>'+(level===1?"Previously in the story":level===2?"Important words":"Optional English")+'</strong><div>'+(level===1?'<span lang="la" class="hint-words">'+renderWords(guidedHint(i,level))+'</span>':esc(guidedHint(i,level)))+'</div></div>';
   if(selected)h+=inlineGloss();h+='</article>';
  });
@@ -580,7 +580,11 @@ function selectSentence(i,activate=false){
   const prev=activeCourse.segments.flatMap(seg=>seg.sentences||[])[S.sel];
   if(prev)globalThis.TablinumReviewDeck.seenSentence(v5State,activeCourse,prev,exposureSession);
  }
- const count=current().sent.length;S.sel=Math.max(0,Math.min(Number(i)||0,Math.max(count-1,0)));
+ const count=current().sent.length,previous=S.sel;
+ const selected=Math.max(0,Math.min(Number(i)||0,Math.max(count-1,0)));
+ // One sentence per click. Selecting a different sentence stops current speech.
+ if(selected!==previous){clearVoice();if(!audio.paused)audio.pause()}
+ S.sel=selected;
  if(timed()){
   const target=media().ranges[S.sel];if(target)audio.currentTime=target.start;
  }
@@ -603,7 +607,7 @@ function speak(){
  clearVoice();const id=++speechRequest;
  if(narration&&narration.play(currentSentenceId(),line[0],{
   onstart:take=>{narrationTake=take;readingIndex=S.sel;if(ambience)ambience.duck(true);updateDock()},
-  onend:()=>{if(id!==speechRequest)return;narrationTake=null;readingIndex=null;if(ambience)ambience.duck(!audio.paused);readOn(id)},
+  onend:()=>{if(id!==speechRequest)return;narrationTake=null;readingIndex=null;if(ambience)ambience.duck(!audio.paused);updateDock()},
   onmissing:(take,blocked)=>{
    if(id!==speechRequest)return;narrationTake=null;
    if(blocked){readingIndex=null;if(ambience)ambience.duck(!audio.paused);updateDock();return updateBanner("The browser blocked playback. Press ▶ Play to hear Miriam.")}
@@ -615,19 +619,7 @@ function speak(){
  if(missingTake)updateBanner("Miriam's approved recording ("+missingTake.clip_id+") is not in this copy of the program, so the browser voice (not Miriam) is reading this sentence.");
  speakWithBrowser(line,id);
 }
-/* After a Miriam clip ends: move the highlight to the next sentence. Unless "one sentence only" is on,
- * keep reading while the next sentence also has an installed Miriam recording; never switch voices
- * automatically, so reading stops before a sentence that would need the browser voice. */
-function readOn(id){
- const chapter=chapterKey(),next=S.sel+1;
- if(next>=current().sent.length){updateDock();return}
- const line=current().sent[next],nextId=currentSentenceId().replace(/s\d{3}$/,"s"+String(next+1).padStart(3,"0"));
- const t=narration&&line?narration.take(nextId,line[0]):null;
- (t&&!S.singleSentence?narration.probe(t):Promise.resolve(false)).then(ok=>{
-  if(id!==speechRequest||chapter!==chapterKey()||S.sel!==next-1)return;
-  selectSentence(next,ok);
- });
-}
+/* Click-to-play only: completing a sentence never advances or starts another. */
 function speakWithBrowser(line,id){
  if(!("speechSynthesis" in window)){readingIndex=null;if(ambience)ambience.duck(!audio.paused);return updateBanner("Browser voice unavailable.")}
  const utterance=new SpeechSynthesisUtterance(line[0]),v=availableVoice();
