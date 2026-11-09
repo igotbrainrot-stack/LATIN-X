@@ -5,6 +5,10 @@ All **new/generated LATIN X narration and spoken vocabulary** should use an **It
 
 Owner's latest spoken name cue for Chapter I sentence 7 is `Li'wi'ah` (private speech prompt only); learner-facing canonical text remains `Līvia arborem videt.`. The user said the V12 take was "better," **not formally passed/approved**.
 
+## Owner-selected voice (9 November 2026)
+
+**RaffaeleR — Steady Calm and Italian Corporate Deep** is the owner's preferred male voice for all future LATIN X narration. Runway library voice ID: `YGp1lBJLaHhfIFT0yeDE`. It has a steady, deliberate, deep male delivery and neutral Northern Italian accent. This is a **voice selection**, not yet an approval of any newly rendered Latin recording, and no existing MP3 has been replaced. Classical Latin pronunciation must still be tested using `Līvia arborem videt.` (clear [w] for Latin `v`). The currently connected Runway `generate_speech` tool only exposes preset voices and does not accept this library voice ID; use a compatible `eleven_v4`/`voiceId` generation path when available.
+
 ## Candidate voice sources found in Runway
 - **Silvia — Italian Accent English**: voice ID `NeTWyxKL7qMefrZEowed`, female, warm clear Italian accent, advertised for e-learning and narration.
 - **Caty — Calm & whimsical**: voice ID `5DTSWAtuA2BoWMSMFTRP`, female, English with Italian accent.
