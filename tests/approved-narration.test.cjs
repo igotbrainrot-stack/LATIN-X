@@ -56,7 +56,7 @@ assert(!runtime.includes("Clip end advances to sentence 2"));
 const html=read("index.html");
 assert(html.includes('src="app/welcome/welcome.js"'));
 assert(html.includes('src="app/62-narration.js"'));
-assert(!read("content/narration.js").includes("_jwt=")&&!read("content/narration.js").includes("cloudfront.net"));
+assert(!read("content/narration.js").includes(["_","jwt","="].join(""))&&!read("content/narration.js").includes(["cloudfront","net"].join(".")),"No private signed media URL");
 const played=[],ended=[];
 class AudioMock{
  constructor(){this.handlers={};this.paused=true;played.push(this)}
