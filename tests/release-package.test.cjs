@@ -57,13 +57,13 @@ function extract(entries,dir){
   assert(names.every(n=>n.startsWith(top)),label+": single top-level folder");
   for(const need of ["index.html","Tablinum.html","README.txt","Picture Practice.html","Art Review.html",
    "app/legacy-runtime.js","app/62-narration.js","content/narration.js","vendor/ts-fsrs.umd.js",
-   "app/styles/tablinum-polish.css","app/styles/tablinum-fonts.css","assets/fonts/gentium-book-plus/OFL.txt",
+   "app/styles/tablinum-polish.css","app/styles/tablinum-fonts.css","app/welcome/welcome.js","app/welcome/welcome.css","assets/fonts/gentium-book-plus/OFL.txt",
    "assets/icons/tablinum.svg","curriculum/music.json"])
    assert(entries.has(top+need),label+": missing "+need);
   const clutter=names.filter(n=>/(^|\/)(tests|scripts\/lib|archive|docs|CLAUDE_|PHASE|GPT_|audio-audition|node_modules|artifacts)|\.md$/.test(n.slice(top.length))&&!/ATTRIBUTION\.md$|assets\/art\/b01\/README\.md$/.test(n));
   assert.deepEqual(clutter,[],label+": historical or development files must not ship");
   assert(!names.some(n=>/PRIVATE_|LOCAL_INSTALL_RECORD/.test(n)),label+": private links must not ship");
-  assert(names.filter(n=>/\.mp3$/.test(n)).length>=1,label+": approved narration MP3s ship");
+  assert.equal(names.filter(n=>/\.mp3$/.test(n)).length,78,label+": all 75 narrator files and 3 Roman music tracks ship");
  }
  assert(win.get(top+"Start Tablinum.cmd").data.toString().includes("\r\n"),"Windows .cmd keeps CRLF");
  assert(!lin.has(top+"Start Tablinum.cmd"),"Linux package has no .cmd files");
@@ -83,6 +83,14 @@ function extract(entries,dir){
    page.on("requestfailed",r=>failed.push(r.url()));
    await page.goto(pathToFileURL(path.join(appDir,"Tablinum.html")).href);
    await page.waitForURL(/index\.html$/);
+   assert.equal(await page.locator("#lx-welcome:not([hidden])").count(),1,label+": first launch shows course guide");
+   await page.locator("#lx-welcome-skip").check();
+   await page.locator("#lx-welcome-enter").click();
+   assert.equal(await page.locator("#lx-welcome:not([hidden])").count(),0,label+": enter hides introduction");
+   await page.locator("#lx-guide-button").click();
+   assert.equal(await page.locator("#lx-welcome:not([hidden])").count(),1,label+": guide can be reopened");
+   await page.keyboard.press("Escape");
+   assert.equal(await page.locator("#lx-welcome:not([hidden])").count(),0,label+": Escape closes guide");
    await page.locator(".sentence").first().waitFor();
    const fontOk=await page.evaluate(async()=>{await document.fonts.ready;return document.fonts.check('16px "Tablinum Book"',"ā")});
    assert(fontOk,label+": bundled book face loads from file://");
