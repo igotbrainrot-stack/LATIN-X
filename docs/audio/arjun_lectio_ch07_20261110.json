@@ -1,0 +1,66 @@
+{
+  "chapter": 7,
+  "voice": "Arjun",
+  "owner_review": "pending",
+  "installation": "not_installed",
+  "model": "eleven_v3",
+  "speed": 0.9,
+  "lines": [
+    {
+      "sentence_id": "legacy-ch07-s001",
+      "canonical_text": "Herī pluvia erat.",
+      "tts_input": "Herī ploo-wee-ah erat.",
+      "runway_task_id": "0b5d9793-2169-451b-beb9-b1b4e01ef78d",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch07-s002",
+      "canonical_text": "Familia in vīllā manēbat.",
+      "tts_input": "Familia in wee-lah manēbat.",
+      "runway_task_id": "37dbd23e-aad0-4fcf-9829-8fad8b01d6b7",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch07-s003",
+      "canonical_text": "Līvia librum legēbat.",
+      "tts_input": "Li'wi'ah librum legēbat.",
+      "runway_task_id": "3b8d142a-3fab-4843-a437-2eff23ed547d",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch07-s004",
+      "canonical_text": "Tītus per fenestram spectābat.",
+      "tts_input": "Tītus per fenestram spectābat.",
+      "runway_task_id": "9d46a61f-c5f7-4adf-a478-fb489e0e0c1b",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch07-s005",
+      "canonical_text": "Subitō tonitrus sonuit.",
+      "tts_input": "Subitō tonitrus sonuit.",
+      "runway_task_id": "12263737-496e-4fdb-a478-a88fb2510f33",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch07-s006",
+      "canonical_text": "Tītus timēbat.",
+      "tts_input": "Tītus timēbat.",
+      "runway_task_id": "82dd5d97-6f77-4bd8-badc-e6bc9e40e40a",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch07-s007",
+      "canonical_text": "Flāvia dīxit: «Nōlī timēre!»",
+      "tts_input": "Flah-wee-ah dīxit: «Nōlī timēre!»",
+      "runway_task_id": "efa66247-41c7-4fd9-b8bc-dbbb66086f4f",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch07-s008",
+      "canonical_text": "Hodiē sōl lūcet.",
+      "tts_input": "Hodiē sōl lūcet.",
+      "runway_task_id": "33f22a6b-0e3f-4f2b-847d-52516d413777",
+      "status": "task_pending"
+    }
+  ]
+}
