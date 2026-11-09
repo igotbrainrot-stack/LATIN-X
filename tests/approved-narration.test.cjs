@@ -15,7 +15,8 @@ assert.equal(expected.files.length,78);
 const ids=new Set(),names=new Set();
 for(const [i,entry] of catalogue.sentences.entries()){
  assert(!ids.has(entry.sentence_id),"No duplicate sentence IDs");ids.add(entry.sentence_id);
- const ch=Number(entry.sentence_id.match(/^legacy-ch(\\d{2})-s\\d{3}$/)?.[1]);
+ assert(entry.sentence_id.startsWith("legacy-ch"));
+ const ch=Number(entry.sentence_id.slice(9,11));
  assert(ch>=1&&ch<=8);
  const from=JSON.parse(read("lessons/legacy/ch"+String(ch).padStart(2,"0")+".json"));
  const number=Number(entry.sentence_id.slice(-3))-1;
