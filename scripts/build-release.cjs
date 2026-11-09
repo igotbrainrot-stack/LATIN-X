@@ -80,7 +80,7 @@ function sourceEntries(){
  // approved narration, the original audition MP3s and the owner's own review record.
  // PRIVATE_* signed-link files are never packaged (see RUNTIME.exclude).
  const optional=p=>fs.existsSync(path.join(root,p))?walk(p):[];
- const audio=[...optional("audio/narration"),...optional("audio-audition")].filter(f=>/\.mp3$/i.test(f))
+ const audio=[...optional("audio/narration"),...optional("assets/audio/roman"),...optional("audio-audition")].filter(f=>/\.mp3$/i.test(f))
   .concat(fs.existsSync(path.join(root,"docs/audio/owner-original-review-2026-11-07.json"))?["docs/audio/owner-original-review-2026-11-07.json"]:[]);
  const names=[...new Set([...tracked,...audio])].filter(f=>fs.existsSync(path.join(root,f))&&!RUNTIME.exclude.some(r=>r.test(f))).sort();
  return names.map(f=>{const abs=path.join(root,f);return {name:f,data:fs.readFileSync(abs),mode:(fs.statSync(abs).mode&0o111)?0o755:0o644}});
@@ -142,8 +142,22 @@ function tarGz(entries){
  return zlib.gzipSync(Buffer.concat(parts),{level:9});
 }
 
+function verifyOwnerMedia(){
+ const manifest=path.join(root,"docs/audio/ARJUN_OFFLINE_MEDIA_CHECKSUMS_20261110.json");
+ if(!fs.existsSync(manifest))throw Error("Missing offline owner-media checksum manifest");
+ const files=JSON.parse(fs.readFileSync(manifest,"utf8")).files;
+ if(!Array.isArray(files)||files.length!==78)throw Error("Expected exactly 75 narration and 3 music files");
+ for(const entry of files){
+  if(!/^(audio\\/narration\\/arjun|assets\\/audio\\/roman)\\/[a-z0-9-]+\\.mp3$/.test(entry.path))throw Error("Bad audio path: "+entry.path);
+  const p=path.join(root,entry.path);
+  if(!fs.existsSync(p))throw Error("Missing offline recording: "+entry.path);
+  const data=fs.readFileSync(p);
+  if(data.length!==entry.bytes||crypto.createHash("sha256").update(data).digest("hex")!==entry.sha256)throw Error("Audio checksum failure: "+entry.path);
+ }
+}
 function build(options={}){
- const LABEL=options.label||arg("--label","0.4.2-polish.20261108");
+ verifyOwnerMedia();
+ const LABEL=options.label||arg("--label","0.4.2-arjun-offline.20261110");
  const OUT=path.resolve(root,options.out||arg("--out","dist"));
  fs.mkdirSync(OUT,{recursive:true});
  const outputs=[
