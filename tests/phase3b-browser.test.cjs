@@ -10,6 +10,10 @@ const {pathToFileURL}=require("node:url"),{chromium}=require("playwright");
   const page=await context.newPage(),errors=[];
   page.on("pageerror",error=>errors.push(error.message));
   await page.goto(pathToFileURL(path.resolve(__dirname,"..","index.html")).href);
+  if(await page.locator("#lx-welcome:not([hidden])").count()){
+   await page.locator("#lx-welcome-skip").check();
+   await page.locator("#lx-welcome-enter").click();
+  }
   await page.locator(".sentence").first().waitFor();
   assert.equal(await page.locator(".sentence").count(),9,"Original chapter must render");
   await page.evaluate(()=>{

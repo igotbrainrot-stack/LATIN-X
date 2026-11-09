@@ -5,7 +5,7 @@
  * then opens the windowless launcher page and walks every tab and chapter.
  * Fails on any missing file, page error, network request or clutter in the package. */
 const fs=require("node:fs"),os=require("node:os"),path=require("node:path"),zlib=require("node:zlib");
-const assert=require("node:assert/strict"),{pathToFileURL}=require("node:url");
+const assert=require("node:assert/strict"),{pathToFileURL,fileURLToPath}=require("node:url");
 const {chromium}=require("playwright");
 const release=require("../scripts/build-release.cjs");
 
@@ -57,13 +57,15 @@ function extract(entries,dir){
   assert(names.every(n=>n.startsWith(top)),label+": single top-level folder");
   for(const need of ["index.html","Tablinum.html","README.txt","Picture Practice.html","Art Review.html",
    "app/legacy-runtime.js","app/62-narration.js","content/narration.js","vendor/ts-fsrs.umd.js",
-   "app/styles/tablinum-polish.css","app/styles/tablinum-fonts.css","assets/fonts/gentium-book-plus/OFL.txt",
+   "app/styles/tablinum-polish.css","app/styles/tablinum-fonts.css","app/welcome/welcome.js","app/welcome/welcome.css","assets/fonts/gentium-book-plus/OFL.txt",
    "assets/icons/tablinum.svg","curriculum/music.json"])
    assert(entries.has(top+need),label+": missing "+need);
   const clutter=names.filter(n=>/(^|\/)(tests|scripts\/lib|archive|docs|CLAUDE_|PHASE|GPT_|audio-audition|node_modules|artifacts)|\.md$/.test(n.slice(top.length))&&!/ATTRIBUTION\.md$|assets\/art\/b01\/README\.md$/.test(n));
   assert.deepEqual(clutter,[],label+": historical or development files must not ship");
   assert(!names.some(n=>/PRIVATE_|LOCAL_INSTALL_RECORD/.test(n)),label+": private links must not ship");
-  assert(names.filter(n=>/\.mp3$/.test(n)).length>=1,label+": approved narration MP3s ship");
+  const requiredAudio=JSON.parse(fs.readFileSync(path.join(__dirname,"..","docs/audio/ARJUN_OFFLINE_MEDIA_CHECKSUMS_20261110.json"),"utf8")).files;
+  for(const media of requiredAudio)assert(entries.has(top+media.path),label+": missing verified media "+media.path);
+  assert(names.filter(n=>n.endsWith(".mp3")).length>=78,label+": all 75 narrator files and 3 Roman music tracks ship");
  }
  assert(win.get(top+"Start Tablinum.cmd").data.toString().includes("\r\n"),"Windows .cmd keeps CRLF");
  assert(!lin.has(top+"Start Tablinum.cmd"),"Linux package has no .cmd files");
@@ -80,9 +82,17 @@ function extract(entries,dir){
    page.on("pageerror",e=>errors.push(e.message));
    page.on("console",m=>{if(m.type()==="error")errors.push(m.text())});
    page.on("request",r=>{if(!r.url().startsWith("file:")&&!r.url().startsWith("data:")&&!r.url().startsWith("blob:"))network.push(r.url())});
-   page.on("requestfailed",r=>failed.push(r.url()));
+   page.on("requestfailed",r=>failed.push({url:r.url(),error:(r.failure()||{}).errorText||""}));
    await page.goto(pathToFileURL(path.join(appDir,"Tablinum.html")).href);
    await page.waitForURL(/index\.html$/);
+   assert.equal(await page.locator("#lx-welcome:not([hidden])").count(),1,label+": first launch shows course guide");
+   await page.locator("#lx-welcome-skip").check();
+   await page.locator("#lx-welcome-enter").click();
+   assert.equal(await page.locator("#lx-welcome:not([hidden])").count(),0,label+": enter hides introduction");
+   await page.locator("#lx-guide-button").click();
+   assert.equal(await page.locator("#lx-welcome:not([hidden])").count(),1,label+": guide can be reopened");
+   await page.keyboard.press("Escape");
+   assert.equal(await page.locator("#lx-welcome:not([hidden])").count(),0,label+": Escape closes guide");
    await page.locator(".sentence").first().waitFor();
    const fontOk=await page.evaluate(async()=>{await document.fonts.ready;return document.fonts.check('16px "Tablinum Book"',"ā")});
    assert(fontOk,label+": bundled book face loads from file://");
@@ -98,7 +108,11 @@ function extract(entries,dir){
    await page.goto(pathToFileURL(path.join(appDir,"Art Review.html")).href);
    await page.waitForLoadState("load");
    // All approved narration now ships, so any failed request (including a narration MP3) is a packaging defect.
-   assert.deepEqual(failed,[],label+": every requested file is in the package");
+   // Switching chapters quickly cancels in-flight narration probes (net::ERR_ABORTED). That is not a missing
+   // file, so such requests are checked on disk instead; every other failed request is a packaging defect.
+   const aborted=failed.filter(f=>f.error==="net::ERR_ABORTED"&&/\/audio\/narration\/[^/]+\/[^/]+\.mp3$/.test(decodeURI(f.url)));
+   for(const f of aborted)assert(fs.existsSync(fileURLToPath(f.url)),label+": cancelled narration request points at a packaged file: "+f.url);
+   assert.deepEqual(failed.filter(f=>!aborted.includes(f)).map(f=>f.url),[],label+": every requested file is in the package");
    assert.deepEqual(network,[],label+": no network access");
    assert.deepEqual(errors,[],label+": no page errors");
    await page.close();

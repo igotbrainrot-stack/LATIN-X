@@ -26,6 +26,10 @@ assert(!(type===firefox&&channel),"Firefox cannot be combined with a Chromium ch
   const page=await context.newPage();
   page.on("pageerror",e=>pageErrors.push(e.message));
   await page.goto(href,{waitUntil:"load"});
+  if(await page.locator("#lx-welcome:not([hidden])").count()){
+   await page.locator("#lx-welcome-skip").check();
+   await page.locator("#lx-welcome-enter").click();
+  }
   await page.locator('img[data-art-image="b01-c001-scene"]').waitFor({state:"visible"});
   await page.waitForFunction(()=>{const image=document.querySelector('img[data-art-image="b01-c001-scene"]');return image?.complete&&image.naturalWidth>0});
   assert.equal(await page.locator(".sentence").count(),9,"Chapter I must have exactly nine original sentences");

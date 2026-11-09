@@ -16,6 +16,10 @@ const {chromium,firefox}=require('playwright');
  try{
   const url=pathToFileURL(path.join(__dirname,'..','index.html')).href;
   await page.goto(url);
+  if(await page.locator("#lx-welcome:not([hidden])").count()){
+   await page.locator("#lx-welcome-skip").check();
+   await page.locator("#lx-welcome-enter").click();
+  }
   for(let i=0;i<8;i++){
    await page.locator(`button.ch[data-ch="${i}"]`).click();
    const marker=page.locator(`[data-legacy-art-preview="${bookIds[i]}"]`);

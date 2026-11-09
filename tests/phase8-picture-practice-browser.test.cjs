@@ -13,6 +13,10 @@ const manifest=require("../curriculum/illustrations.json");
  try{
   const root=path.resolve(__dirname,"..");
   await page.goto(pathToFileURL(path.join(root,"Picture Practice.html")).href);
+  if(await page.locator("#lx-welcome:not([hidden])").count()){
+   await page.locator("#lx-welcome-skip").check();
+   await page.locator("#lx-welcome-enter").click();
+  }
   await page.locator('[data-picture-chapter="b01-c001"]').waitFor();
   assert.equal(await page.locator('[data-picture-chapter]').count(),8);
   const v4='{"keep":"original-v4"}',snapshot='{"keep":"v4-snapshot"}',v5='{"preserved":"do-not-change"}';

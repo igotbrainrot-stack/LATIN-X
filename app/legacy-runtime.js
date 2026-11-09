@@ -311,9 +311,12 @@ function tabs(){
 function updateDock(){
  const m=mode(),take=narrationTake||currentNarrationTake(),state=narration&&take?narration.known(take):"none";
  if(state==="unknown"&&!narration.playing()){const sid=currentSentenceId();narration.probe(take).then(()=>{if(currentSentenceId()===sid)updateDock()})}
- const approved=m==="voice"&&take&&state==="installed";
- $("audioMode").textContent=approved?"Miriam — approved recording":m==="voice"?"Browser voice — not Miriam":m==="timed"?"Imported audio — timing supplied":"Imported audio — unsynchronized";
- $("audioNote").textContent=approved?"Owner-accepted listening take "+take.clip_id+" (not Latinist-verified). Whole sentence; no word timing.":m==="voice"?(take&&state==="missing"?"Miriam's approved take "+take.clip_id+" is not in this copy. ":"")+"Device voice: "+(spokenVoice||"system default (unverified)"):m==="timed"?"Selected sentence has supplied intervals; not acoustically verified.":"Sentence selection does not seek. Play resumes at current position.";
+ const installed=m==="voice"&&take&&state==="installed";
+ const voice=take?.voice||narration?.meta?.voice||"recorded voice";
+ const approved=installed&&take.owner_listening==="pass";
+ const pending=installed&&take.owner_listening==="pending";
+ $("audioMode").textContent=m==="voice"&&narration?.labelFor?narration.labelFor(take,installed):(installed?voice+" — local recording":m==="voice"?"Browser voice — not "+voice:m==="timed"?"Imported audio — timing supplied":"Imported audio — unsynchronized");
+ $("audioNote").textContent=installed?(approved?"Owner-accepted listening take ":pending?"New take awaiting owner listening review ":"Local recording ")+take.clip_id+" (not Latinist-verified). Whole sentence; no word timing.":m==="voice"?(take&&state==="missing"?voice+" recording "+take.clip_id+" is not in this copy. ":"")+"Device voice: "+(spokenVoice||"system default (unverified)"):m==="timed"?"Selected sentence has supplied intervals; not acoustically verified.":"Sentence selection does not seek. Play resumes at current position.";
  const playBtn=document.querySelector(".dock [data-action='play']");
  if(playBtn){playBtn.hidden=m==="voice";playBtn.textContent=m==="timed"?"▶ Play selected sentence":"▶ Play recording"}
  const pauseBtn=document.querySelector(".dock [data-action='pause']");
@@ -337,7 +340,7 @@ function wordButton(){
  const t=narration&&chosenWord?narration.wordTake(chosenWord):null;
  if(!t||narration.known(t)==="missing")return "";
  if(narration.known(t)==="unknown"){const w=chosenWord;narration.probe(t).then(()=>{if(chosenWord===w)help()});return ""}
- return '<button class="btn" data-action="hearWord" aria-label="Hear Miriam say '+esc(t.canonical_text)+'">▶ Miriam</button>';
+ return '<button class="btn" data-action="hearWord" aria-label="Hear '+esc(t.voice||"recorded voice") +' say '+esc(t.canonical_text)+'">▶ '+esc(t.voice||"Voice")+'</button>';
 }
 function hearWord(){
  const t=narration&&chosenWord?narration.wordTake(chosenWord):null;if(!t)return;
@@ -346,7 +349,7 @@ function hearWord(){
   onstart:()=>{if(ambience)ambience.duck(true)},
   onend:()=>{if(id===speechRequest&&ambience)ambience.duck(!audio.paused)},
   onmissing:(take,blocked)=>{if(id!==speechRequest)return;if(ambience)ambience.duck(!audio.paused);
-   updateBanner(blocked?"The browser blocked playback. Press ▶ Miriam again.":"Miriam's approved recording of "+take.canonical_text+" ("+take.clip_id+") is not in this copy of the program.");help()}
+   updateBanner(blocked?"The browser blocked playback. Click the word again.":(take.voice||"Recorded voice")+" recording of "+take.canonical_text+" ("+take.clip_id+") is not in this copy of the program.");help()}
  });
 }
 function help(){
@@ -610,13 +613,13 @@ function speak(){
   onend:()=>{if(id!==speechRequest)return;narrationTake=null;readingIndex=null;if(ambience)ambience.duck(!audio.paused);updateDock()},
   onmissing:(take,blocked)=>{
    if(id!==speechRequest)return;narrationTake=null;
-   if(blocked){readingIndex=null;if(ambience)ambience.duck(!audio.paused);updateDock();return updateBanner("The browser blocked playback. Press ▶ Play to hear Miriam.")}
-   updateBanner("Miriam's approved recording ("+take.clip_id+") is not in this copy of the program, so the browser voice (not Miriam) is reading this sentence.");
+   if(blocked){readingIndex=null;if(ambience)ambience.duck(!audio.paused);updateDock();return updateBanner("The browser blocked playback. Click the sentence again to hear it.")}
+   updateBanner((take.voice||"Recorded voice")+" recording ("+take.clip_id+") is not in this copy, so the browser voice is reading this sentence.");
    speakWithBrowser(line,id);
   }
  }))return;
  const missingTake=narration?narration.take(currentSentenceId(),line[0]):null;
- if(missingTake)updateBanner("Miriam's approved recording ("+missingTake.clip_id+") is not in this copy of the program, so the browser voice (not Miriam) is reading this sentence.");
+ if(missingTake)updateBanner((missingTake.voice||"Recorded voice")+" recording ("+missingTake.clip_id+") is not in this copy, so the browser voice is reading this sentence.");
  speakWithBrowser(line,id);
 }
 /* Click-to-play only: completing a sentence never advances or starts another. */

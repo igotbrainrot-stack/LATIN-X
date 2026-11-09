@@ -8,6 +8,63 @@ const score=root.TablinumMusicScore;
 if(!score||typeof score.compile!=="function")throw Error("Offline rhythmic music score compiler missing");
 let settings={...defs},persist=()=>{},ctx=null,musicBus=null,fxBus=null,timer=null;
 let activated=false,narrating=false,recording=false,streams=[],playlist=[],previousPiece=-1,lastTick=0,disabled=false;
+/* Roman owner-provided MP3 soundtrack; original WebAudio score remains fallback.
+ * MP3s are ignored by Git but copied into the release packages. */
+const romanTracks=["assets/audio/roman/hortus-quietus.mp3","assets/audio/roman/ad-lucernam.mp3","assets/audio/roman/porticus-serena.mp3"];
+const romanFadeSeconds=8,romanGainFactor=.38;
+let romanIndex=0,romanCurrent=null,romanNext=null,romanFading=false,romanTimer=null,romanFadeStart=0,romanFailed=false;
+const romanClock=()=>typeof performance!=="undefined"&&performance.now?performance.now():Date.now();
+function romanAvailable(){return !romanFailed&&typeof root.Audio==="function"}
+function romanTarget(){return activated&&!recording&&displayed()&&settings.music?
+ Math.min(.25,Math.max(0,settings.musicVolume)*romanGainFactor)*(narrating?.12:1):0}
+function romanVolume(){
+ const target=romanTarget();
+ if(romanFading&&romanNext&&romanCurrent){
+  const p=Math.max(0,Math.min(1,(romanClock()-romanFadeStart)/(1000*romanFadeSeconds)));
+  romanCurrent.volume=target*(1-p);romanNext.volume=target*p;
+ }else if(romanCurrent)romanCurrent.volume=target;
+}
+function romanStop(){if(romanTimer){clearInterval(romanTimer);romanTimer=null}
+ if(romanCurrent)romanCurrent.pause();if(romanNext)romanNext.pause();romanVolume()}
+function romanCreate(i){
+ const a=new root.Audio(romanTracks[i]);a.preload="auto";a.volume=0;
+ a.addEventListener("error",()=>{romanFailed=true;romanStop();if(activated&&settings.music)resumeLoop()});
+ a.addEventListener("ended",()=>{if(romanFading||romanCurrent!==a)return;
+  romanIndex=(romanIndex+1)%romanTracks.length;romanCurrent=romanCreate(romanIndex);
+  if(activated&&settings.music&&!recording&&displayed()){romanVolume();romanCurrent.play().catch(()=>{})}
+ });
+ return a;
+}
+function romanCrossfade(){
+ if(romanFading||!romanCurrent||!romanAvailable())return;
+ romanNext=romanCreate((romanIndex+1)%romanTracks.length);
+ romanFading=true;romanFadeStart=romanClock();romanVolume();
+ romanNext.play().catch(()=>{romanFading=false;romanNext=null});
+}
+function romanPulse(){
+ if(!romanAvailable()||!romanCurrent||!settings.music||recording||!displayed())return;
+ if(!romanFading){const duration=romanCurrent.duration;
+  if(Number.isFinite(duration)&&duration>romanFadeSeconds+1&&duration-romanCurrent.currentTime<=romanFadeSeconds+.1)romanCrossfade();
+ }else if((romanClock()-romanFadeStart)/1000>=romanFadeSeconds){
+  const old=romanCurrent;romanIndex=(romanIndex+1)%romanTracks.length;
+  romanCurrent=romanNext;romanNext=null;romanFading=false;
+  if(old){old.pause();try{old.removeAttribute("src");old.load()}catch(e){}}
+ }
+ romanVolume();
+}
+function romanResume(){
+ if(!romanAvailable())return;
+ if(timer){clearInterval(timer);timer=null}
+ if(ctx&&musicBus)musicBus.gain.setTargetAtTime(0,ctx.currentTime,.05);
+ if(!romanCurrent)romanCurrent=romanCreate(romanIndex);
+ if(!romanTimer)romanTimer=setInterval(romanPulse,160);
+ if(settings.music&&!recording&&displayed()){
+  romanCurrent.play().catch(()=>{});
+  if(romanNext)romanNext.play().catch(()=>{});
+ }
+ romanVolume();
+}
+
 function nextTrack(){
  if(!playlist.length){
   playlist=pieces.map((p,i)=>i);
@@ -21,6 +78,7 @@ function clamp(n,def){n=Number(n);return Number.isFinite(n)?Math.min(1,Math.max(
 function normalize(x){return {music:x?.music!==false,musicVolume:clamp(x?.musicVolume,0.2),
  sfx:x?.sfx!==false,sfxVolume:clamp(x?.sfxVolume,0.4)}}
 function gain(v,t=0.2){
+ romanVolume();
  if(!ctx||!musicBus)return;
  const target=activated&&!recording&&displayed()&&settings.music?
   Math.max(0,Math.min(0.3,settings.musicVolume))*(narrating?0.1:1):0;
@@ -46,6 +104,7 @@ function pluck(freq,when,duration,loudness,bus,seed){
  source.onended=()=>{try{source.disconnect();envelope.disconnect()}catch(e){}};
 }
 function makeStream(at){
+ if(romanAvailable())return;
  if(!ctx||!pieces.length)return;
  const p=nextTrack(),plan=score.compile(p);
  const ending=at+plan.totalSeconds,bus=ctx.createGain();bus.connect(musicBus);
@@ -56,6 +115,7 @@ function makeStream(at){
  streams.push({p,bus,plan,start:at,end:ending,index:0,total:plan.events.length});
 }
 function schedule(){
+ if(romanAvailable())return;
  if(!ctx||ctx.state!=="running"||!settings.music||recording||!displayed())return;
  if(!streams.length)makeStream(ctx.currentTime+0.1);
  const horizon=ctx.currentTime+2.5;
@@ -77,12 +137,14 @@ function schedule(){
  });
 }
 function resumeLoop(){
+ if(romanAvailable()){romanResume();return;}
  if(!ctx||disabled)return;
  if(ctx.state==="suspended"){const p=ctx.resume();if(p&&p.catch)p.catch(()=>{});}
  if(!timer)timer=setInterval(schedule,350);
  gain(settings.musicVolume);
 }
 function stopLoop(){
+ romanStop();
  if(timer){clearInterval(timer);timer=null}
  gain(0);
 }

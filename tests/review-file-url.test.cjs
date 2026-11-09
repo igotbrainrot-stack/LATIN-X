@@ -14,6 +14,10 @@ const {parseCsv}=require("../scripts/lib/review-csv.cjs");
  const page=await context.newPage();
  try{
   await page.goto(pathToFileURL(path.join(root,"Vocabulary Review.html")).href);
+  if(await page.locator("#lx-welcome:not([hidden])").count()){
+   await page.locator("#lx-welcome-skip").check();
+   await page.locator("#lx-welcome-enter").click();
+  }
   assert((await page.title()).includes("Vocabulary Review"));
   await page.setInputFiles("#file",path.join(root,"curriculum/lexicon/review-sheets/legacy-candidates-claude-draft-32col.csv"));
   await page.waitForFunction(()=>document.querySelector("#total").textContent==="128");

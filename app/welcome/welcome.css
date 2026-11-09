@@ -1,0 +1,24 @@
+/* Paper-folio welcome. Existing global body::before grain is the only page texture. */
+#lx-welcome[hidden]{display:none!important}
+#lx-welcome{position:fixed;inset:0;z-index:30000;overflow:auto;display:grid;place-items:center;padding:20px;background:rgba(27,21,16,.75);color:#392c21}
+#lx-welcome *{box-sizing:border-box}
+.lx-welcome-folio{width:min(870px,100%);max-height:calc(100vh - 40px);overflow:auto;padding:clamp(20px,4vw,42px);border:4px double #ab9274;background:linear-gradient(135deg,#fff7e7,#e8d8bd);box-shadow:0 24px 75px #0006}
+.lx-welcome-eyebrow,.lx-welcome-subtitle,.lx-welcome-title{text-align:center}
+.lx-welcome-eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#795638;font-weight:700}
+.lx-welcome-title{margin:6px 0;font-size:clamp(36px,5vw,60px);letter-spacing:.1em;font-variant:small-caps;color:#513729}
+.lx-welcome-subtitle{font-style:italic;color:#70513b;margin:0 0 18px}
+.lx-welcome-intro{margin:0 auto 20px;max-width:660px;text-align:center;line-height:1.6}
+.lx-welcome-columns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.lx-welcome-panel{padding:15px;border:1px solid #c5ac8c;background:#fff8e8a6}
+.lx-welcome-panel h2,.lx-welcome-progress h2{font-size:16px;color:#75452f;margin:0 0 7px}
+.lx-welcome-panel p,.lx-welcome-progress p{font-size:13px;line-height:1.6;margin:0}
+.lx-welcome-progress{margin:15px 0;padding:15px;border:1px solid #c5ac8c;background:#c2a68219}
+.lx-welcome-steps{display:flex;align-items:center;flex-wrap:wrap;gap:6px;margin-top:12px;color:#684b32;font-size:12px}
+.lx-welcome-steps span{background:#f7ecda;border:1px solid #d0b895;padding:5px 8px}
+.lx-welcome-actions{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.lx-welcome-check{display:flex;align-items:center;gap:8px;font-size:12px}
+#lx-welcome-enter{background:#684733;border:1px solid #4d3426;color:#fff5df;padding:12px 23px;min-height:43px;font-weight:bold;cursor:pointer}
+#lx-guide-button{border:1px solid #b7a183;background:#f4e8d2;color:#563d2e;padding:8px 12px;font-size:12px;cursor:pointer}
+body.lx-welcome-open{overflow:hidden}
+@media(max-width:690px){.lx-welcome-columns{grid-template-columns:1fr}#lx-welcome{padding:12px}.lx-welcome-folio{max-height:calc(100vh - 24px)}}
+@media print{#lx-welcome,#lx-guide-button{display:none!important}}

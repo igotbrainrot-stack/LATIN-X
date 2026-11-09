@@ -20,7 +20,11 @@ async function run(){
   const context=await browser.newContext(),page=await context.newPage();
   const url=pathToFileURL(path.join(temp,"index.html")).href;
   await page.addInitScript(raw=>{localStorage.setItem("tablinum-source-review-v02",raw)},capsRaw);
-  await page.goto(url);await page.locator(".sentence").first().waitFor();
+  await page.goto(url);
+  if(await page.locator("#lx-welcome:not([hidden])").count()){
+   await page.locator("#lx-welcome-skip").check();
+   await page.locator("#lx-welcome-enter").click();
+  }await page.locator(".sentence").first().waitFor();
   const full=await page.evaluate(()=>({
    original:localStorage.getItem("tablinum-source-review-v02"),
    snapshot:localStorage.getItem("tablinum-v4-snapshot"),
@@ -33,7 +37,11 @@ async function run(){
   fs.unlinkSync(path.join(temp,"content/legacy/ch04.js"));
   const missingCtx=await browser.newContext(),missing=await missingCtx.newPage();
   await missing.addInitScript(raw=>{localStorage.setItem("tablinum-source-review-v02",raw)},oldRaw);
-  await missing.goto(url);await missing.locator("#appStatus").waitFor();
+  await missing.goto(url);
+  if(await missing.locator("#lx-welcome:not([hidden])").count()){
+   await missing.locator("#lx-welcome-skip").check();
+   await missing.locator("#lx-welcome-enter").click();
+  }await missing.locator("#appStatus").waitFor();
   const failed=await missing.evaluate(()=>({
    original:localStorage.getItem("tablinum-source-review-v02"),
    snapshot:localStorage.getItem("tablinum-v4-snapshot"),
@@ -52,7 +60,11 @@ async function run(){
    localStorage.setItem("tablinum-source-review-v02",raw);
    localStorage.setItem("tablinum-state-v5","{corrupt");
   },oldRaw);
-  await corrupt.goto(url);await corrupt.locator(".sentence").first().waitFor();
+  await corrupt.goto(url);
+  if(await corrupt.locator("#lx-welcome:not([hidden])").count()){
+   await corrupt.locator("#lx-welcome-skip").check();
+   await corrupt.locator("#lx-welcome-enter").click();
+  }await corrupt.locator(".sentence").first().waitFor();
   assert.equal(await corrupt.evaluate(()=>localStorage.getItem("tablinum-state-v5")),"{corrupt");
   assert.equal(await corrupt.evaluate(()=>localStorage.getItem("tablinum-source-review-v02")),oldRaw);
   await corrupt.locator('#tabs [data-tab="progress"]').click();

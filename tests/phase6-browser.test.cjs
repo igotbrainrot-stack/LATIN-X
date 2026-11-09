@@ -10,6 +10,10 @@ const {chromium}=require("playwright"),{pathToFileURL}=require("node:url");
   await page.addInitScript(raw=>{localStorage.setItem("tablinum-source-review-v02",raw)},old);
   const url=pathToFileURL(path.resolve(__dirname,"..","index.html")).href;
   await page.goto(url);
+  if(await page.locator("#lx-welcome:not([hidden])").count()){
+   await page.locator("#lx-welcome-skip").check();
+   await page.locator("#lx-welcome-enter").click();
+  }
   try{await page.locator(".sentence").first().waitFor({timeout:5000})}
   catch(e){
    const snapshot=await page.evaluate(()=>({body:document.body?.innerText?.slice(0,1400),

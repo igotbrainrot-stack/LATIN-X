@@ -1,4 +1,4 @@
-/* Plays owner-approved Miriam recordings from local files (file:// safe). One clip per sentence or word;
+/* Plays approved Chapter I and pending Chapter II–VIII recordings locally (file:// safe). One clip per sentence or word;
  * no word or sentence timing is invented. Completion is a single deterministic event per clip.
  * Missing/unplayable files report "missing" so the caller can fall back. Classic script, no network. */
 (function(root){
@@ -76,6 +76,12 @@ function setAlternative(sentenceId,on){if(on)preferAlternative.add(sentenceId);e
 function hasAlternative(sentenceId,text){const e=entry(sentenceId,text);return !!e&&e.takes.some(x=>x.role==="alternative")}
 function usingAlternative(sentenceId){return preferAlternative.has(sentenceId)}
 function playing(){return current?{key:current.key,clipId:current.take.clip_id}:null}
-root.TablinumNarration=Object.freeze({take,wordTake,src,known,probe,play,playWord,stop,setAlternative,hasAlternative,usingAlternative,playing,
+function labelFor(t,installed=true){
+ const voice=t?.voice||catalogue?.voice||"Recorded voice";
+ if(!installed)return "Browser voice — not "+voice;
+ return voice+(t?.owner_listening==="pass"?" — approved recording":
+  t?.owner_listening==="pending"?" — new recording, awaiting your review":" — local recording");
+}
+root.TablinumNarration=Object.freeze({labelFor,take,wordTake,src,known,probe,play,playWord,stop,setAlternative,hasAlternative,usingAlternative,playing,
  meta:catalogue?{voice:catalogue.voice,review_status:catalogue.review_status}:null});
 })(typeof globalThis!=="undefined"?globalThis:this);

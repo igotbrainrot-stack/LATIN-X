@@ -7,6 +7,10 @@ const {pathToFileURL}=require("node:url"),{chromium}=require("playwright");
   const context=await browser.newContext(),page=await context.newPage(),errors=[];
   page.on("pageerror",e=>errors.push(e.message));
   await page.goto(pathToFileURL(path.resolve(__dirname,"..","index.html")).href);
+  if(await page.locator("#lx-welcome:not([hidden])").count()){
+   await page.locator("#lx-welcome-skip").check();
+   await page.locator("#lx-welcome-enter").click();
+  }
   await page.locator(".sentence").first().waitFor();
   const old=await page.evaluate(()=>localStorage.getItem("tablinum-source-review-v02"));
   await page.evaluate(()=>{

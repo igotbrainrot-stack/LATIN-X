@@ -17,3 +17,6 @@ node_modules/
 
 # Owner-private Runway signed links (temporary tokens): never commit.
 /audio-audition/PRIVATE_*.json
+
+# Owner-supplied original Roman reading music stays out of the public repository.
+/assets/audio/roman/*.mp3

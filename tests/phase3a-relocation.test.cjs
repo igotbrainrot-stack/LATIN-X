@@ -10,18 +10,28 @@ assert.equal(crypto.createHash("sha1").update(original).digest("hex"),
 const inline=original.match(/<script>([\s\S]*?)<\/script>/);
 assert(inline,"Archived v0.4.2 inline script missing");
 const files=["content/catalogue.js","content/lexicon.js",...Array.from({length:8},(_,i)=>"content/legacy/ch"+String(i+1).padStart(2,"0")+".js"),"content/migration-maps.js","app/20-state-v5.js","app/30-content-loader.js","app/50-exercises.js","vendor/ts-fsrs.umd.js","app/55-review-deck.js","content/illustrations.js","app/64-art-scenes.js","content/music.js","app/58-music-score.js","app/60-audio-ambience.js","content/narration.js","app/62-narration.js","app/70-user-media.js","app/legacy-runtime.js","app/80-accessibility.js"];
-const scriptTags=files.map(file=>'<script src="'+file+'"></script>').join("\n");
+const welcomeScript="app/welcome/welcome.js";
+const scriptTags=[...files,welcomeScript].map(file=>'<script src="'+file+'"></script>').join("\n");
 // Polish pass (Nov 2026): presentation-only <link> tags may follow the original
 // inline stylesheet. They are enumerated here; no script, logic or data may change.
 const headLinks=['<link rel="icon" href="assets/icons/tablinum.svg" type="image/svg+xml">',
  '<link rel="icon" href="assets/icons/tablinum-48.png" sizes="48x48" type="image/png">',
  '<link rel="stylesheet" href="app/styles/tablinum-fonts.css">',
- '<link rel="stylesheet" href="app/styles/tablinum-polish.css">'];
+ '<link rel="stylesheet" href="app/styles/tablinum-polish.css">',
+ '<link rel="stylesheet" href="app/welcome/welcome.css">'];
 for(const link of headLinks){const target=link.match(/href="([^"]+)"/)[1];assert(fs.existsSync(path.join(root,target)),"Missing linked presentation asset "+target)}
-assert.equal(html,original.replace(inline[0],scriptTags).replace("</style>\n</head>","</style>\n"+headLinks.join("\n")+"\n</head>"),
- "Phase12 may append only the explicitly enumerated classic accessibility script to the original script replacement");
-assert.equal((html.match(/<link\b/g)||[]).length,headLinks.length,"Only the enumerated presentation links are allowed");
-assert.equal((html.match(/<script\b/g)||[]).length,files.length);
+// Preserve the exact legacy reading sources, but allow explicitly approved presentation additions.
+const paths=[...html.matchAll(/<script src="([^"]+)"\s*><\/script>/g)].map(m=>m[1]);
+assert.deepEqual(paths,[...files,welcomeScript],"Only the approved classic scripts, in the correct order");
+for(const link of headLinks)assert(html.includes(link),"Approved stylesheet/icon asset link must exist");
+assert.equal(html.split("<link ").length-1,headLinks.length,"Only the approved stylesheet and icon links");
+assert.equal(html.split("<script ").length-1,files.length+1,"Only explicitly enumerated scripts");
+assert(!html.includes("<script>"),"No new inline startup logic");
+assert(html.includes("body::before"),"Keep approved CSS paper texture");
+assert(!html.includes("body::after"),"Do not stack a second page texture");
+assert(html.includes('id="lx-welcome"')&&html.includes('id="lx-welcome-enter"'),"First-run guide and enter button must be present");
+assert(html.includes('aria-modal="true"')&&html.includes('id="lx-welcome-skip"'),"Welcome accessibility and persistence controls");
+assert(fs.existsSync(path.join(root,welcomeScript)),"Welcome controller must be bundled");
 assert(!html.includes('type="module"')&&!html.includes("fetch("));
 assert(runtime.includes("const L=Array.from({length:8}"),"Runtime should use compiled legacy data");
 assert(!runtime.includes("const L=["),"Legacy authoring data cannot be duplicated in browser runtime");
@@ -39,4 +49,4 @@ for(let i=0;i<8;i++){
  assert.equal(data.catalogue.entries[i].id,id);
 }
 assert.equal(extractArray(original,"const guidedCloze=","\n];\n// Contextual hints").length,8);
-console.log("PASS Phase 3b/12: HTML unchanged except enumerated classic source tags; generated eight-chapter content matches byte-locked v0.4.2 source.");
+console.log("PASS Phase 3b/12: locked legacy content unchanged; explicitly approved CSS and welcome assets; no unreviewed scripts.");

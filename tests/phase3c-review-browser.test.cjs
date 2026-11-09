@@ -16,6 +16,10 @@ const assert=require("node:assert/strict"),path=require("node:path"),{pathToFile
    content["b01-c001"]=lesson;Object.defineProperty(globalThis,"TablinumCompiledContent",{value:content,configurable:true});
   });
   await page.goto(url);
+  if(await page.locator("#lx-welcome:not([hidden])").count()){
+   await page.locator("#lx-welcome-skip").check();
+   await page.locator("#lx-welcome-enter").click();
+  }
   await page.locator("#tabs [data-tab='progress']").click();
   await page.locator('[data-course="b01-c001"]').click();
   await page.getByRole("heading",{name:"Synthetic reload fixture"}).waitFor();
@@ -30,7 +34,11 @@ const assert=require("node:assert/strict"),path=require("node:path"),{pathToFile
    localStorage.setItem("tablinum-source-review-v02","{unreadable-v4");
    localStorage.removeItem("tablinum-state-v5");localStorage.removeItem("tablinum-v4-snapshot");
   });
-  await bad.goto(url);await bad.locator("#tabs [data-tab='progress']").click();
+  await bad.goto(url);
+  if(await bad.locator("#lx-welcome:not([hidden])").count()){
+   await bad.locator("#lx-welcome-skip").check();
+   await bad.locator("#lx-welcome-enter").click();
+  }await bad.locator("#tabs [data-tab='progress']").click();
   await bad.locator('[data-action="remigrateV4"]').waitFor();
   assert.match(await bad.locator("#main").textContent(),/Original v4 data is unreadable/);
   bad.on("dialog",dialog=>dialog.accept());
