@@ -148,7 +148,7 @@ function verifyOwnerMedia(){
  const files=JSON.parse(fs.readFileSync(manifest,"utf8")).files;
  if(!Array.isArray(files)||files.length!==78)throw Error("Expected exactly 75 narration and 3 music files");
  for(const entry of files){
-  if(!/^(audio\\/narration\\/arjun|assets\\/audio\\/roman)\\/[a-z0-9-]+\\.mp3$/.test(entry.path))throw Error("Bad audio path: "+entry.path);
+  if(!(entry.path.startsWith("audio/narration/arjun/")||entry.path.startsWith("assets/audio/roman/"))||!entry.path.endsWith(".mp3")||entry.path.includes("..")||entry.path.includes("\\\\"))throw Error("Bad audio path: "+entry.path);
   const p=path.join(root,entry.path);
   if(!fs.existsSync(p))throw Error("Missing offline recording: "+entry.path);
   const data=fs.readFileSync(p);
