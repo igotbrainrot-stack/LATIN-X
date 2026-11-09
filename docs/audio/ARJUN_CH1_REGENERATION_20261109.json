@@ -6,7 +6,7 @@
   "speed": 0.9,
   "source": "Runway",
   "owner_voice_selection": "Arjun chosen 2026-11-09",
-  "status": "owner_approved_all_17_2026-11-09_audio_bytes_not_downloaded_or_installed",
+  "status": "owner_approved_16_arjun_files_received_and_install_overlay_prepared_1_missing_not_deployed",
   "note": "Original Miriam recordings and all owner approvals preserved. Do not replace them until Arjun binaries downloaded, decoded, sha256 verified and owner reviews pronunciation. Arjun is not an Italian-accent voice; it supersedes prior preference for RaffaeleR by the owner's later explicit selection.",
   "takes": [
     {
@@ -174,6 +174,16 @@
     "mp3_bytes_available_in_repository": false,
     "active_audio_in_app": "Miriam",
     "technical_blocker": "Runway tool returns signed MP3 playback URLs but not downloadable binary; container cannot reach Runway CDN and repository currently excludes MP3s; don't point app to nonexistent Arjun MP3s.",
-    "next_action": "Retrieve task MP3 bytes into audio/narration/arjun, compute hashes, update app catalogue to Arjun with safe fallback; run narration tests and full release build before deployment."
+    "next_action": "Apply downloaded overlay ZIP to owner's LATIN X checkout, run INSTALL_ARJUN.py; obtain missing Arjun laeta to finish 17/17. Public GitHub ignores MP3s."
+  },
+  "delivery_update_2026_11_10": {
+    "source": "User uploaded LATIN VOICE.zip plus earlier LATIN.zip",
+    "received_arjun_recordings": 16,
+    "missing_arjun_recording": "word-laeta",
+    "missing_runway_task_id": "16daa58b-d7fa-489b-ac55-b1ac766242b2",
+    "fallback": "Original Miriam word-laeta v1 from LATIN VOICE.zip",
+    "local_install_package": "LATIN_X_Arjun_16_of_17_INSTALL.zip",
+    "installation_scope": "ZIP overlay contains 16 Arjun MP3s, 1 Miriam laeta fallback, checksum manifest and installer script; user must apply overlay to checkout; not yet installed or pushed as binaries on public GitHub",
+    "validation": "17 MP3s decoded by ffprobe; installer verified SHA-256 in mock checkout; JavaScript catalogue smoke test passed; not tested against full original program."
   }
 }
