@@ -19,12 +19,20 @@ assert.equal(axeVersion,"4.10.3","Pin axe-core in CI rather than taking latest s
    console.log(`axe ${label}: ${results.violations.length} violations, ${violations.length} serious/critical`);
   }
   await page.goto(pathToFileURL(path.join(root,"index.html")).href);
+  if(await page.locator("#lx-welcome:not([hidden])").count()){
+   await page.locator("#lx-welcome-skip").check();
+   await page.locator("#lx-welcome-enter").click();
+  }
   await page.locator('.sentence').first().waitFor();
   await audit("reader");
   for(const [label,id] of [["quiz","quiz"],["review","review"],["progress","progress"]]){
    await page.locator(`#tabs [data-tab="${id}"]`).click();await audit(label);
   }
   await page.goto(pathToFileURL(path.join(root,"Picture Practice.html")).href);
+  if(await page.locator("#lx-welcome:not([hidden])").count()){
+   await page.locator("#lx-welcome-skip").check();
+   await page.locator("#lx-welcome-enter").click();
+  }
   await page.locator('[data-picture-chapter="b01-c001"]').waitFor();
   await page.waitForFunction(()=>{const i=document.querySelector('img[data-art-image]');return i?.complete&&i.naturalWidth>0&&i.style.display!=="none"});
   await page.locator('img[data-art-image]').first().scrollIntoViewIfNeeded();
