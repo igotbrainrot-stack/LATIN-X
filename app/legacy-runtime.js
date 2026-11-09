@@ -315,7 +315,7 @@ function updateDock(){
  const voice=take?.voice||narration?.meta?.voice||"recorded voice";
  const approved=installed&&take.owner_listening==="pass";
  const pending=installed&&take.owner_listening==="pending";
- $("audioMode").textContent=installed?(voice+(approved?" — approved recording":pending?" — new recording, awaiting your review":" — local recording")):m==="voice"?"Browser voice — not "+voice:m==="timed"?"Imported audio — timing supplied":"Imported audio — unsynchronized";
+ $("audioMode").textContent=m==="voice"&&narration?.labelFor?narration.labelFor(take,installed):(installed?voice+" — local recording":m==="voice"?"Browser voice — not "+voice:m==="timed"?"Imported audio — timing supplied":"Imported audio — unsynchronized");
  $("audioNote").textContent=installed?(approved?"Owner-accepted listening take ":pending?"New take awaiting owner listening review ":"Local recording ")+take.clip_id+" (not Latinist-verified). Whole sentence; no word timing.":m==="voice"?(take&&state==="missing"?voice+" recording "+take.clip_id+" is not in this copy. ":"")+"Device voice: "+(spokenVoice||"system default (unverified)"):m==="timed"?"Selected sentence has supplied intervals; not acoustically verified.":"Sentence selection does not seek. Play resumes at current position.";
  const playBtn=document.querySelector(".dock [data-action='play']");
  if(playBtn){playBtn.hidden=m==="voice";playBtn.textContent=m==="timed"?"▶ Play selected sentence":"▶ Play recording"}
