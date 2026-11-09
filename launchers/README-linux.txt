@@ -18,11 +18,18 @@ KEEP YOUR PROGRESS
   copy. Extract new versions to a new folder.
 
 AUDIO
-  All approved Miriam recordings are in audio/narration/miriam, including
-  sentences 7 and 9 and the words quoque, vīlla and aqua.
-  Five of them (sentence 7 V6b and V6a, sentence 9 V5a, quoque V4, aqua V3) are
-  new recordings with the same voice and settings, made because the originals
-  could not be downloaded; vīlla V2 is the original.
+  All 67 Lectio sentences are mapped to owner-supplied Arjun MP3s under
+  audio/narration/arjun. Chapter I is owner-approved; Chapters II–VIII are
+  new recordings awaiting your listening review. Seven vocabulary words use
+  Arjun; laeta uses a clearly labelled Miriam fallback.
+  Roman reading music: three original, low-volume MP3 tracks, overlapping
+  through 8-second crossfades. Music automatically ducks during speech.
+  One sentence plays when clicked, and stops when it finishes.
+
+FIRST START
+  The course guide explains Lectio, Exercitia, Memoria and progression.
+  Select Enter the Tablinum to begin. Reopen it with Course guide.
+  You can choose not to show the guide automatically next time.
 
 FONT
   Linux Mint has no Palatino, so the reader uses the bundled open-licence face
