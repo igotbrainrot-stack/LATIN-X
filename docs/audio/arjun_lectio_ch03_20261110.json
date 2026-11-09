@@ -1,0 +1,73 @@
+{
+  "chapter": 3,
+  "voice": "Arjun",
+  "owner_review": "pending",
+  "installation": "not_installed",
+  "model": "eleven_v3",
+  "speed": 0.9,
+  "lines": [
+    {
+      "sentence_id": "legacy-ch03-s001",
+      "canonical_text": "Līvia rosam rubram habet.",
+      "tts_input": "Li'wi'ah rosam rubram habet.",
+      "runway_task_id": "a91b4850-23b3-4149-9805-31fbc279ae82",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch03-s002",
+      "canonical_text": "Tītus librum habet.",
+      "tts_input": "Tītus librum habet.",
+      "runway_task_id": "e50bd073-8757-4fea-8e64-4b343bf6bba5",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch03-s003",
+      "canonical_text": "Rosa pulchra est.",
+      "tts_input": "Rosa pulchra est.",
+      "runway_task_id": "c7906329-4b36-4a82-9249-cc55478f47f0",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch03-s004",
+      "canonical_text": "Līvia ad mātrem ambulat.",
+      "tts_input": "Li'wi'ah ad mātrem ambulat.",
+      "runway_task_id": "27bc2325-89d9-4544-9860-01d13c03ea8d",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch03-s005",
+      "canonical_text": "Līvia rosam mātrī dat.",
+      "tts_input": "Li'wi'ah rosam mātrī dat.",
+      "runway_task_id": "04ae1730-c1f2-4970-964a-a7e46864a765",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch03-s006",
+      "canonical_text": "Flāvia rosam accipit.",
+      "tts_input": "Flah-wee-ah rosam accipit.",
+      "runway_task_id": "3cfe83c5-94e9-44e9-862d-df1c74f7a1a8",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch03-s007",
+      "canonical_text": "Mārcus librum legit.",
+      "tts_input": "Mārcus librum legit.",
+      "runway_task_id": "b1309560-408f-4561-b1f1-e0ff9f63177e",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch03-s008",
+      "canonical_text": "Tītus patrem spectat.",
+      "tts_input": "Tītus patrem spectat.",
+      "runway_task_id": "08a29f01-1b9f-4993-b418-7b8f29c49d1d",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch03-s009",
+      "canonical_text": "Flāvia dīcit: «Grātiās tibi agō!»",
+      "tts_input": "Flah-wee-ah dīcit: «Grātiās tibi agō!»",
+      "runway_task_id": "5b3067c2-8716-4ee8-a9ad-a083bc98fa00",
+      "status": "task_pending"
+    }
+  ]
+}
