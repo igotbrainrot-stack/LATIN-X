@@ -1,5 +1,9 @@
 # Italian-accent narration direction — owner request, 9 November 2026
 
+## Latest owner decision — Arjun (9 November 2026)
+
+**Arjun** was selected after the owner listened to comparative speech recordings of Frank, Noah, Arjun, Ragnar and Tom. This **supersedes the previously selected RaffaeleR** for the next set of LATIN X narration. Arjun is an Indian-accented male preset, **not an Italian-accent voice**; do not imply that the earlier Italian-accent preference has been fulfilled. All 17 Chapter I narration/vocabulary candidate tasks have been generated in Runway and are documented in `docs/audio/ARJUN_CH1_REGENERATION_20261109.json`. They are **not yet downloaded, approved, or installed**. Canonical Latin text, previous Miriam files, SHA-256 records, and prior owner approvals stay intact.
+
 ## Owner requirement
 All **new/generated LATIN X narration and spoken vocabulary** should use an **Italian accent** rather than the existing British-accent Miriam voice. Preserve Classical Latin spelling/macrons and aim for Classical Latin pronunciation, particularly consonantal `v` pronounced [w], not English [v]. This is an accent/delivery request, **not** a request to pronounce Latin using modern Italian phonology uncritically.
 
