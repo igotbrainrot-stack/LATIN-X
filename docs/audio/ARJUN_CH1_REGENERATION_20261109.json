@@ -6,7 +6,7 @@
   "speed": 0.9,
   "source": "Runway",
   "owner_voice_selection": "Arjun chosen 2026-11-09",
-  "status": "generated_in_runway_not_downloaded_not_verified_not_installed_or_linguistically_approved",
+  "status": "owner_approved_all_17_2026-11-09_audio_bytes_not_downloaded_or_installed",
   "note": "Original Miriam recordings and all owner approvals preserved. Do not replace them until Arjun binaries downloaded, decoded, sha256 verified and owner reviews pronunciation. Arjun is not an Italian-accent voice; it supersedes prior preference for RaffaeleR by the owner's later explicit selection.",
   "takes": [
     {
@@ -15,7 +15,8 @@
       "private_tts_prompt": "Hic est hortus.",
       "runway_task_id": "0d7db6cc-de53-49bd-8ca1-0b2dacd09de4",
       "duration_seconds": 2.4,
-      "owner_listening": "pending"
+      "owner_listening": "pass",
+      "owner_listening_review_date": "2026-11-09"
     },
     {
       "key": "s002",
@@ -23,7 +24,8 @@
       "private_tts_prompt": "In hortō est arbor.",
       "runway_task_id": "5dc1d88c-6a8c-4c28-8f54-2cf6c75f7c48",
       "duration_seconds": 2.56,
-      "owner_listening": "pending"
+      "owner_listening": "pass",
+      "owner_listening_review_date": "2026-11-09"
     },
     {
       "key": "s003",
@@ -31,7 +33,8 @@
       "private_tts_prompt": "In hortō est puella.",
       "runway_task_id": "942d0670-ae3b-42f7-97aa-4874ea163436",
       "duration_seconds": 2.08,
-      "owner_listening": "pending"
+      "owner_listening": "pass",
+      "owner_listening_review_date": "2026-11-09"
     },
     {
       "key": "s004",
@@ -39,7 +42,8 @@
       "private_tts_prompt": "Puella Li'wi'ah est.",
       "runway_task_id": "90f1e439-1c07-4207-ac35-00eaa9b1057f",
       "duration_seconds": 3.12,
-      "owner_listening": "pending"
+      "owner_listening": "pass",
+      "owner_listening_review_date": "2026-11-09"
     },
     {
       "key": "s005",
@@ -47,7 +51,8 @@
       "private_tts_prompt": "Arbor magna est.",
       "runway_task_id": "a3e2c234-690b-42bc-a605-3c4da5d70c0a",
       "duration_seconds": 2.16,
-      "owner_listening": "pending"
+      "owner_listening": "pass",
+      "owner_listening_review_date": "2026-11-09"
     },
     {
       "key": "s006",
@@ -55,7 +60,8 @@
       "private_tts_prompt": "Li'wi'ah parva est.",
       "runway_task_id": "cf260310-b497-4cec-97a7-b637ddce9713",
       "duration_seconds": 2.4,
-      "owner_listening": "pending"
+      "owner_listening": "pass",
+      "owner_listening_review_date": "2026-11-09"
     },
     {
       "key": "s007",
@@ -63,7 +69,8 @@
       "private_tts_prompt": "Li'wi'ah arborem videt.",
       "runway_task_id": "7cf88ac5-a839-4946-9183-aeea5b073285",
       "duration_seconds": 2.48,
-      "owner_listening": "pending"
+      "owner_listening": "pass",
+      "owner_listening_review_date": "2026-11-09"
     },
     {
       "key": "s008",
@@ -71,7 +78,8 @@
       "private_tts_prompt": "Li'wi'ah sub arbore sedet.",
       "runway_task_id": "55ef1d42-be20-49f7-bfa6-ce67ec685f6d",
       "duration_seconds": 3.04,
-      "owner_listening": "pending"
+      "owner_listening": "pass",
+      "owner_listening_review_date": "2026-11-09"
     },
     {
       "key": "s009",
@@ -79,7 +87,8 @@
       "private_tts_prompt": "Li'wi'ah laeta est.",
       "runway_task_id": "d776e60a-18f8-4190-a7c7-01d747c0a914",
       "duration_seconds": 2.32,
-      "owner_listening": "pending"
+      "owner_listening": "pass",
+      "owner_listening_review_date": "2026-11-09"
     },
     {
       "key": "word-quoque",
@@ -87,7 +96,8 @@
       "private_tts_prompt": "Kwoh-kweh.",
       "runway_task_id": "50bc1473-ad1d-4660-8ab3-7917e332f5a4",
       "duration_seconds": 1.6,
-      "owner_listening": "pending"
+      "owner_listening": "pass",
+      "owner_listening_review_date": "2026-11-09"
     },
     {
       "key": "word-villa",
@@ -95,7 +105,8 @@
       "private_tts_prompt": "WEE-lah.",
       "runway_task_id": "73802ad4-f9f8-4655-b139-c2fc9e0481da",
       "duration_seconds": 2.16,
-      "owner_listening": "pending"
+      "owner_listening": "pass",
+      "owner_listening_review_date": "2026-11-09"
     },
     {
       "key": "word-aqua",
@@ -103,7 +114,8 @@
       "private_tts_prompt": "AH-kwah.",
       "runway_task_id": "8a18a57a-2f81-46fd-b8b5-d6a01d4e42dc",
       "duration_seconds": 1.44,
-      "owner_listening": "pending"
+      "owner_listening": "pass",
+      "owner_listening_review_date": "2026-11-09"
     },
     {
       "key": "word-cena",
@@ -111,7 +123,8 @@
       "private_tts_prompt": "KAY-nah.",
       "runway_task_id": "44970650-e33e-4ea0-be30-ce566892be34",
       "duration_seconds": 1.04,
-      "owner_listening": "pending"
+      "owner_listening": "pass",
+      "owner_listening_review_date": "2026-11-09"
     },
     {
       "key": "word-gaius",
@@ -119,7 +132,8 @@
       "private_tts_prompt": "GAH-yoos.",
       "runway_task_id": "591a6d2c-2f8c-4a74-8543-b2a5b29a7c8a",
       "duration_seconds": 1.04,
-      "owner_listening": "pending"
+      "owner_listening": "pass",
+      "owner_listening_review_date": "2026-11-09"
     },
     {
       "key": "word-magna",
@@ -127,7 +141,8 @@
       "private_tts_prompt": "MAHNG-nah.",
       "runway_task_id": "2eac5a03-e1cd-49ac-8949-3f52381f1d4c",
       "duration_seconds": 2.32,
-      "owner_listening": "pending"
+      "owner_listening": "pass",
+      "owner_listening_review_date": "2026-11-09"
     },
     {
       "key": "word-pecunia",
@@ -135,7 +150,8 @@
       "private_tts_prompt": "peh-KOO-nee-ah.",
       "runway_task_id": "cd705260-1ff3-43b3-9b90-00ce7316ca0e",
       "duration_seconds": 2.08,
-      "owner_listening": "pending"
+      "owner_listening": "pass",
+      "owner_listening_review_date": "2026-11-09"
     },
     {
       "key": "word-laeta",
@@ -143,7 +159,21 @@
       "private_tts_prompt": "LAI-tah.",
       "runway_task_id": "16daa58b-d7fa-489b-ac55-b1ac766242b2",
       "duration_seconds": 1.84,
-      "owner_listening": "pending"
+      "owner_listening": "pass",
+      "owner_listening_review_date": "2026-11-09"
     }
-  ]
+  ],
+  "owner_approval": {
+    "decision": "approve_all",
+    "date": "2026-11-09",
+    "source": "Owner said 'all good. go ahead' after listening to the 17 Arjun clips",
+    "scope": "all 9 sentence + 8 vocabulary Arjun generation tasks",
+    "linguistic_verification": "owner accepted sound; not independently Latinist verified"
+  },
+  "installation_status": {
+    "mp3_bytes_available_in_repository": false,
+    "active_audio_in_app": "Miriam",
+    "technical_blocker": "Runway tool returns signed MP3 playback URLs but not downloadable binary; container cannot reach Runway CDN and repository currently excludes MP3s; don't point app to nonexistent Arjun MP3s.",
+    "next_action": "Retrieve task MP3 bytes into audio/narration/arjun, compute hashes, update app catalogue to Arjun with safe fallback; run narration tests and full release build before deployment."
+  }
 }
