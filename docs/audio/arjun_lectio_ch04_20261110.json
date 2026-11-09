@@ -1,0 +1,66 @@
+{
+  "chapter": 4,
+  "voice": "Arjun",
+  "owner_review": "pending",
+  "installation": "not_installed",
+  "model": "eleven_v3",
+  "speed": 0.9,
+  "lines": [
+    {
+      "sentence_id": "legacy-ch04-s001",
+      "canonical_text": "Cibus in mēnsā est.",
+      "tts_input": "Cibus in mēnsā est.",
+      "runway_task_id": "2bea7315-a42c-42a4-bea2-55f2558eec61",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch04-s002",
+      "canonical_text": "Flāvia aquam portat.",
+      "tts_input": "Flah-wee-ah aquam portat.",
+      "runway_task_id": "20a29605-5c57-45f7-a038-4a3f7f86edb8",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch04-s003",
+      "canonical_text": "Tītus pānem edit.",
+      "tts_input": "Tītus pānem edit.",
+      "runway_task_id": "cc0cdcf3-b1af-4438-a5b0-09b849c16b04",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch04-s004",
+      "canonical_text": "Līvia aquam bibit.",
+      "tts_input": "Li'wi'ah aquam bibit.",
+      "runway_task_id": "032411b6-f15d-483c-a27a-5214b61cca76",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch04-s005",
+      "canonical_text": "Mārcus ad mēnsam ambulat.",
+      "tts_input": "Mārcus ad mēnsam ambulat.",
+      "runway_task_id": "ebc8050e-4f4d-4f25-bc2a-f76080212a13",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch04-s006",
+      "canonical_text": "Flāvia dīcit: «Venī, Mārce!»",
+      "tts_input": "Flah-wee-ah dīcit: «Weh-nee, Mārce!»",
+      "runway_task_id": "824e51c6-92a0-4ad4-a580-e099715c0ef4",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch04-s007",
+      "canonical_text": "Mārcus venit et sedet.",
+      "tts_input": "Mārcus weh-nit et sedet.",
+      "runway_task_id": "a91abc51-18d4-491e-b6fa-38eafb3ede99",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch04-s008",
+      "canonical_text": "Omnēs in vīllā cēnant.",
+      "tts_input": "Omnēs in wee-lah cēnant.",
+      "runway_task_id": "f35553e9-bca0-4ea7-b665-3ecadf23658a",
+      "status": "task_pending"
+    }
+  ]
+}
