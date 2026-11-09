@@ -315,7 +315,7 @@ function updateDock(){
  $("audioMode").textContent=approved?"Miriam — approved recording":m==="voice"?"Browser voice — not Miriam":m==="timed"?"Imported audio — timing supplied":"Imported audio — unsynchronized";
  $("audioNote").textContent=approved?"Owner-accepted listening take "+take.clip_id+" (not Latinist-verified). Whole sentence; no word timing.":m==="voice"?(take&&state==="missing"?"Miriam's approved take "+take.clip_id+" is not in this copy. ":"")+"Device voice: "+(spokenVoice||"system default (unverified)"):m==="timed"?"Selected sentence has supplied intervals; not acoustically verified.":"Sentence selection does not seek. Play resumes at current position.";
  const playBtn=document.querySelector(".dock [data-action='play']");
- if(playBtn)playBtn.textContent=approved?"▶ Play":m==="voice"?"▶ Speak sentence":m==="timed"?"▶ Play selected sentence":"▶ Play recording";
+ if(playBtn){playBtn.hidden=m==="voice";playBtn.textContent=m==="timed"?"▶ Play selected sentence":"▶ Play recording"}
  const pauseBtn=document.querySelector(".dock [data-action='pause']");
  if(pauseBtn)pauseBtn.textContent=m==="voice"?"■ Stop voice":"Ⅱ Pause";
  let takeBtn=document.querySelector(".dock [data-action='narrationTake']");
@@ -378,7 +378,7 @@ const fallbackScene=scene(c.scene);
  const picture=globalThis.TablinumArtScenes?.renderChapter(activeCourse?.id,fallbackScene)||fallbackScene;
 let h='<div class="mini">Lectiō '+esc(activeCourse?activeCourse.chapter:S.ch==="custom"?"propria":S.ch+1)+'</div><h1>'+esc(c.name)+'</h1><div class="subtle">'+esc(c.sub)+'</div>'+picture;
 
- h+='<div class="note">Read Latin first. Ask for one clue at a time: context, important words, then English.</div><div class="tools"><button class="btn primary" data-action="play">'+(mode()==="voice"?"▶ Speak sentence":mode()==="timed"?"▶ Play timed sentence":"▶ Play recording (untimed)")+'</button><button class="btn" data-tab="quiz">Exercises →</button></div>';
+ h+='<div class="note">Read Latin first. Click a sentence to hear it; ask for clues when needed.</div><div class="tools"><button class="btn primary" '+(mode()==="voice"?"hidden ":"")+'data-action="play">'+(mode()==="voice"?"▶ Listen":mode()==="timed"?"▶ Play timed sentence":"▶ Play recording (untimed)")+'</button><button class="btn" data-tab="quiz">Exercises →</button></div>';
  c.sent.forEach(([latin,en],i)=>{
   const k=chapterKey()+":"+i,level=S.hintLevels[k]||0,selected=S.sel===i;
   h+='<article class="sentence '+(selected?"selected":"")+'" data-sentence-container="'+i+'" aria-current="'+(selected?"true":"false")+'"><div class="mini">Sententia '+(i+1)+'</div><div class="words" lang="la" data-sentence="'+i+'">'+renderWords(latin)+'</div><div class="tools"><button class="link" data-sentence="'+i+'">▶ Listen to sentence</button><button class="btn" '+(S.guided?"":"hidden ")+'data-guided="'+i+'">'+(level===0?"Latin clue":level===1?"Word clues":level===2?"English meaning":"Hide hints")+' ('+level+'/3)</button></div>';
@@ -634,7 +634,7 @@ function speakWithBrowser(line,id){
 }
 function play(){
  if(!current().sent.length)return updateBanner("No readable sentences in this chapter. Restore the missing content file.");
- if(mode()==="voice"){speak();return}
+ if(mode()==="voice"){updateBanner("Click the sentence you want to hear.");return}
  if(timed()&&media().ranges[S.sel])audio.currentTime=media().ranges[S.sel].start;
  audio.play().then(()=>startBoundaryMonitor()).catch(()=>updateBanner("Audio could not start. Check the attached file."));
 }
@@ -731,7 +731,7 @@ document.addEventListener("click",e=>{
  if(b.dataset.tab){switchTab(b.dataset.tab);return}
  if(b.dataset.ch){setChapter(b.dataset.ch==="custom"?"custom":Number(b.dataset.ch));return}
  if(b.dataset.course){setCourseChapter(b.dataset.course);return}
- if(b.dataset.word){chosenWord=b.dataset.word;const container=b.closest("[data-sentence-container]");if(container)S.sel=Number(container.dataset.sentenceContainer);save();render();return}
+ if(b.dataset.word){chosenWord=b.dataset.word;const container=b.closest("[data-sentence-container]");if(container&&Number(container.dataset.sentenceContainer)!==S.sel){clearVoice();if(!audio.paused)audio.pause();S.sel=Number(container.dataset.sentenceContainer)}save();render();return}
  if(b.dataset.sentence!==undefined){selectSentence(Number(b.dataset.sentence),true);return}
  if(b.dataset.guided!==undefined){if(!S.guided)return;
   if(activeCourse&&activeCourse.status==="approved"){
@@ -772,7 +772,7 @@ document.addEventListener("click",e=>{
  case"play":play();break;
  case"pause":if(mode()==="voice")clearVoice();else audio.pause();break;
  case"hearWord":hearWord();break;
- case"narrationTake":if(narration){const sid=currentSentenceId();narration.setAlternative(sid,!narration.usingAlternative(sid));clearVoice();updateDock();speak()}break;
+ case"narrationTake":if(narration){const sid=currentSentenceId();narration.setAlternative(sid,!narration.usingAlternative(sid));clearVoice();updateDock();updateBanner("Alternative take selected. Click the sentence to listen.")}break;
  case"previous":selectSentence(S.sel-1);break;
  case"forward":selectSentence(S.sel+1);break;
  case"prevChapter":setChapter(S.ch==="custom"?0:Math.max(0,S.ch-1));break;
