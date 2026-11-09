@@ -643,6 +643,20 @@ footer {
   #main { padding: 15px 0; }
   .sentence { break-inside: avoid; }
 }
+/* Quiet woven rag-paper texture: low-contrast, CSS-only and offline-safe. */
+body::before {
+  opacity: .17;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(78,60,39,.045) 0px, rgba(78,60,39,.045) .45px, transparent 1px, transparent 5px),
+    repeating-linear-gradient(90deg, rgba(99,76,53,.035) 0px, rgba(99,76,53,.035) .45px, transparent 1px, transparent 6px),
+    repeating-linear-gradient(28deg, transparent 0px, rgba(114,85,55,.025) 1px, transparent 2px, transparent 19px),
+    repeating-linear-gradient(119deg, transparent 0px, rgba(255,255,250,.09) 1px, transparent 3px, transparent 33px);
+}
+.codex, aside, #main {
+  background-image:
+    repeating-linear-gradient(88deg, transparent 0px, rgba(121,95,65,.017) 1px, transparent 2px, transparent 11px),
+    repeating-linear-gradient(2deg, transparent 0px, rgba(121,95,65,.014) 1px, transparent 2px, transparent 13px);
+}
 </style>
 <link rel="icon" href="assets/icons/tablinum.svg" type="image/svg+xml">
 <link rel="icon" href="assets/icons/tablinum-48.png" sizes="48x48" type="image/png">
