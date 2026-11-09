@@ -1,0 +1,66 @@
+{
+  "chapter": 5,
+  "voice": "Arjun",
+  "owner_review": "pending",
+  "installation": "not_installed",
+  "model": "eleven_v3",
+  "speed": 0.9,
+  "lines": [
+    {
+      "sentence_id": "legacy-ch05-s001",
+      "canonical_text": "Hodiē familia ad forum it.",
+      "tts_input": "Hodiē familia ad forum it.",
+      "runway_task_id": "636a2ac9-3df9-4e98-a043-7b6498b4f1a4",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch05-s002",
+      "canonical_text": "In forō multī mercātōrēs sunt.",
+      "tts_input": "In forō multī mercātōrēs sunt.",
+      "runway_task_id": "5b091a75-25a8-42b1-9f04-d2cfe764f673",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch05-s003",
+      "canonical_text": "Mercātor māla vendit.",
+      "tts_input": "Mercātor māla wehn-dit.",
+      "runway_task_id": "6286ce18-6e19-49a0-8198-daa7f0e56f78",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch05-s004",
+      "canonical_text": "Līvia tria māla videt.",
+      "tts_input": "Li'wi'ah tria māla wee-det.",
+      "runway_task_id": "a4a9c7d7-cd88-4aeb-922a-7fd3054c77be",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch05-s005",
+      "canonical_text": "Mārcus duo māla emit.",
+      "tts_input": "Mārcus duo māla emit.",
+      "runway_task_id": "84c81710-d8ef-4a39-be94-c27bc64bfcd2",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch05-s006",
+      "canonical_text": "Tītus interrogat: «Quot māla habēmus?»",
+      "tts_input": "Tītus interrogat: «Quot māla habēmus?»",
+      "runway_task_id": "9d536acf-861f-493b-9c85-70bc8f4be24e",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch05-s007",
+      "canonical_text": "Mārcus respondet: «Duo māla habēmus.»",
+      "tts_input": "Mārcus respondet: «Duo māla habēmus.»",
+      "runway_task_id": "fa5f939f-ce57-490d-8912-eb1992f2c175",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch05-s008",
+      "canonical_text": "Familia ē forō domum redit.",
+      "tts_input": "Familia ē forō domum redit.",
+      "runway_task_id": "c419e66d-8bd9-4b09-8286-98dd763af29c",
+      "status": "task_pending"
+    }
+  ]
+}
