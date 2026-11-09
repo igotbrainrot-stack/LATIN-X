@@ -63,7 +63,9 @@ function extract(entries,dir){
   const clutter=names.filter(n=>/(^|\/)(tests|scripts\/lib|archive|docs|CLAUDE_|PHASE|GPT_|audio-audition|node_modules|artifacts)|\.md$/.test(n.slice(top.length))&&!/ATTRIBUTION\.md$|assets\/art\/b01\/README\.md$/.test(n));
   assert.deepEqual(clutter,[],label+": historical or development files must not ship");
   assert(!names.some(n=>/PRIVATE_|LOCAL_INSTALL_RECORD/.test(n)),label+": private links must not ship");
-  assert.equal(names.filter(n=>/\.mp3$/.test(n)).length,78,label+": all 75 narrator files and 3 Roman music tracks ship");
+  const requiredAudio=JSON.parse(fs.readFileSync(path.join(__dirname,"..","docs/audio/ARJUN_OFFLINE_MEDIA_CHECKSUMS_20261110.json"),"utf8")).files;
+  for(const media of requiredAudio)assert(entries.has(top+media.path),label+": missing verified media "+media.path);
+  assert(names.filter(n=>n.endsWith(".mp3")).length>=78,label+": all 75 narrator files and 3 Roman music tracks ship");
  }
  assert(win.get(top+"Start Tablinum.cmd").data.toString().includes("\r\n"),"Windows .cmd keeps CRLF");
  assert(!lin.has(top+"Start Tablinum.cmd"),"Linux package has no .cmd files");
