@@ -1051,11 +1051,11 @@ root.TablinumNarrationCatalogue=freeze({
       "canonical_text": "pecūnia"
     },
     {
-      "clip_id": "arjun-word-laeta",
+      "clip_id": "miriam-word-laeta-fallback",
       "file": "word-laeta-miriam-fallback.mp3",
       "role": "fallback",
       "voice": "Miriam",
-      "runway_task_id": "16daa58b-d7fa-489b-ac55-b1ac766242b2",
+      "runway_task_id": "c456a05d-2cc3-46ae-afe2-c754bb6b38e9",
       "owner_listening": "fallback",
       "owner_listening_review_date": null,
       "owner_decision": null,
