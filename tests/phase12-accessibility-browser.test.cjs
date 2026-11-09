@@ -16,6 +16,10 @@ const {chromium,firefox}=require("playwright");
  page.on("request",req=>{if(/^https?:/i.test(req.url()))network.push(req.url())});
  try{
   await page.goto(pathToFileURL(path.resolve(__dirname,"..","index.html")).href);
+  if(await page.locator("#lx-welcome:not([hidden])").count()){
+   await page.locator("#lx-welcome-skip").check();
+   await page.locator("#lx-welcome-enter").click();
+  }
   await page.locator(".sentence").first().waitFor();
   assert.equal(await page.locator('#chapters').getAttribute('aria-label'),"Chapter navigation");
   assert.equal(await page.locator('#help').getAttribute('aria-label'),"Learning guidance and personal notes");
