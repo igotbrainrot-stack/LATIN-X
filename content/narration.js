@@ -1,47 +1,1066 @@
-/* Owner-approved Miriam narration (Runway, eleven_v3, speed 0.9). Final owner decisions, 2026-11-09 handover.
- * Owner acceptance = listening/educational preference ("owner_not_latinist"), NOT Latinist verification.
- * Files live in audio/narration/miriam/. A clip whose file is absent falls back (sentences: browser voice,
- * clearly labelled "not Miriam"; words: a plain message). Speech aliases (tts_input) are provenance only:
- * the reader always shows canonical Latin. Rejected takes are listed nowhere here and never play.
- * 2026-11-08: the original bytes of five approved takes could not be retrieved, so at the owner's request they were
- * regenerated with identical settings. Those entries keep the approved clip_id and role, carry the new runway_task_id,
- * record the approved original as approved_task_id, and are marked owner_listening:"pending" until the owner re-listens. */
+/* LATIN X Arjun narration — canonical Latin from generated legacy lesson sources.
+ * Chapter I owner-reviewed; Chapters II–VIII awaiting owner listening review.
+ * Original Miriam decisions preserved in docs/audio and Git history.
+ * MP3s are owner media, installed locally and included only in offline releases.
+ */
 (function(root){
 "use strict";
-const T=(o)=>Object.freeze(o);
-const v1=(n,task,dur)=>T({clip_id:"voiceA__legacy-ch01-s00"+n+"__v1",file:"s00"+n+"-v1.mp3",role:"default",
- source_file:"audio-audition/voiceA__legacy-ch01-s00"+n+"__v1.mp3",runway_task_id:task,tts_input:null,provider_duration_seconds:dur,
- owner_decision:"accept",decision_record:"docs/audio/owner-original-review-2026-11-07.json"});
-root.TablinumNarrationCatalogue=T({
- schema:"latin-x-approved-narration-v2",
- decisions_date:"2026-11-09",
- voice:"Miriam",model:"eleven_v3",speed:0.9,
- review_status:"owner_accepted_listening_quality_not_latinist_verified",
- base_path:"audio/narration/miriam/",
- sentences:T([
-  T({sentence_id:"legacy-ch01-s001",canonical_text:"Hic est hortus.",takes:T([v1(1,"9f7a5b5e-250b-472b-8116-2331698a5e41",1.724082)])}),
-  T({sentence_id:"legacy-ch01-s002",canonical_text:"In hortō est arbor.",takes:T([v1(2,"e7216f81-ff9f-497f-a73e-98c37ef498ca",2.586122)])}),
-  T({sentence_id:"legacy-ch01-s003",canonical_text:"In hortō est puella.",takes:T([v1(3,"501f603e-000e-42bd-8ab8-6117bd64fa94",1.959184)])}),
-  T({sentence_id:"legacy-ch01-s004",canonical_text:"Puella Līvia est.",takes:T([v1(4,"91182986-1d63-44f9-833a-a3d426a738d6",1.959184)])}),
-  T({sentence_id:"legacy-ch01-s005",canonical_text:"Arbor magna est.",takes:T([v1(5,"e17106d1-9ef0-40ee-b8ef-771fe798a3bd",2.037551)])}),
-  T({sentence_id:"legacy-ch01-s006",canonical_text:"Līvia parva est.",takes:T([v1(6,"9f304361-74f0-4818-b7f4-d0f86e1b3b74",2.037551)])}),
-  T({sentence_id:"legacy-ch01-s007",canonical_text:"Līvia arborem videt.",takes:T([
-   T({clip_id:"s007-v6b",file:"s007-v6b.mp3",role:"default",runway_task_id:"d5e56be3-5245-4a20-bcf4-fd7774aac9f8",approved_task_id:"7dbe3810-0cb9-435d-a1d6-bdf978821d95",regenerated:"2026-11-08 via Runway in ChatGPT at owner request (original bytes unrecoverable); same voice, model, speed and input text",owner_listening:"pending",tts_input:"Lii-wia arborem videt.",provider_duration_seconds:2.690612,owner_decision:"accept",decision_record:"LATIN_X_CLAUDE_HANDOVER_20261109.md"}),
-   T({clip_id:"s007-v6a",file:"s007-v6a.mp3",role:"alternative",runway_task_id:"51e15135-b26d-4ce0-a3ec-7cada1f77a80",approved_task_id:"2331d77d-7aa5-400b-9084-a6593a6666c3",regenerated:"2026-11-08 via Runway in ChatGPT at owner request (original bytes unrecoverable); same voice, model, speed and input text",owner_listening:"pending",tts_input:"Lee-wee-ah arborem videt.",provider_duration_seconds:2.76898,owner_decision:"accept",decision_record:"LATIN_X_CLAUDE_HANDOVER_20261109.md"})])}),
-  T({sentence_id:"legacy-ch01-s008",canonical_text:"Līvia sub arbore sedet.",takes:T([v1(8,"d650a09c-e9cb-46fc-a343-bf4fe89be51f",2.507755)])}),
-  T({sentence_id:"legacy-ch01-s009",canonical_text:"Līvia laeta est.",takes:T([
-   T({clip_id:"s009-v5a",file:"s009-v5a.mp3",role:"default",runway_task_id:"77fb7257-a9ab-4130-83b2-c62b0df15c02",approved_task_id:"68a14597-2f02-42a9-9c65-12419d7dda73",regenerated:"2026-11-08 via Runway in ChatGPT at owner request (original bytes unrecoverable); same voice, model, speed and input text",owner_listening:"pending",tts_input:"Lee-wee-ah laeta est.",provider_duration_seconds:2.76898,owner_decision:"accept",decision_record:"LATIN_X_CLAUDE_HANDOVER_20261109.md"})])})
- ]),
- /* Single-word recordings: played from the word-lookup panel, never as lesson narration. */
- words:T([
-  T({canonical_text:"quoque",clip_id:"quoque-v4-approved",file:"word-quoque-v4.mp3",also_named:T(["quoque-v4-approved.mp3"]),runway_task_id:"b22171b7-df88-471a-a2c9-fc0abf63a2db",approved_task_id:"8060b628-3555-4da4-b5de-499d80fdbc85",regenerated:"2026-11-08 via Runway in ChatGPT at owner request (original bytes unrecoverable); same voice, model, speed and input text",owner_listening:"pending",tts_input:"Kwoh-kweh.",provider_duration_seconds:1.880816,owner_decision:"accept",decision_record:"LATIN_X_CLAUDE_HANDOVER_20261109.md"}),
-  T({canonical_text:"vīlla",clip_id:"voiceA__test-villa__v2",file:"word-villa-v2.mp3",also_named:T(["voiceA__test-villa__v2.mp3"]),runway_task_id:"d0e9f755-d72c-4195-ae74-4aa84c8699c7",tts_input:"/ˈwiːl.la/",provider_duration_seconds:1.227755,owner_decision:"accept",decision_record:"docs/audio/owner-miriam-ipa-v2-review-2026-11-07.json"}),
-  T({canonical_text:"aqua",clip_id:"voiceA__test-aqua__v3",file:"word-aqua-v3.mp3",also_named:T(["voiceA__test-aqua__v3.mp3"]),runway_task_id:"3c4763d0-784c-4519-b935-7a6f4b7a0a3b",approved_task_id:"56c069b3-6746-4400-be64-29fe0597ba3c",regenerated:"2026-11-08 via Runway in ChatGPT at owner request (original bytes unrecoverable); same voice, model, speed and input text",owner_listening:"pending",tts_input:"AH-kwah",provider_duration_seconds:1.48898,owner_decision:"accept",decision_record:"docs/audio/owner-miriam-alias-v3-review-2026-11-07.json"}),
-  ...[["cēna","cena","9f971213-914e-4693-a3ba-1c1814faffe9",1.48898],["Gāius","gaius","2d4ba3ff-8e1a-4bc2-a0af-74fdec0867dd",0.992653],
-      ["magna","magna","c1225af0-c734-4b18-9fb0-92c5afd5684f",1.959184],["pecūnia","pecunia","2cd95b10-14d0-4f79-b49a-5e88441c734d",2.037551],
-      ["laeta","laeta","c456a05d-2cc3-46ae-afe2-c754bb6b38e9",1.880816]].map(([text,slug,task,dur])=>T({canonical_text:text,
-   clip_id:"voiceA__test-"+slug+"__v1",file:"word-"+slug+"-v1.mp3",source_file:"audio-audition/voiceA__test-"+slug+"__v1.mp3",
-   runway_task_id:task,tts_input:null,provider_duration_seconds:dur,owner_decision:"accept",decision_record:"docs/audio/owner-original-review-2026-11-07.json"}))
- ])
+const freeze=o=>{if(o&&typeof o==="object"){Object.values(o).forEach(freeze);Object.freeze(o)}return o};
+root.TablinumNarrationCatalogue=freeze({
+  "schema": "latin-x-arjun-narration-v3",
+  "decisions_date": "2026-11-09",
+  "voice": "Arjun",
+  "model": "eleven_v3",
+  "speed": 0.9,
+  "review_status": "chapter1_pass_chapters2_8_pending_not_latinist_verified",
+  "base_path": "audio/narration/arjun/",
+  "sentences": [
+    {
+      "sentence_id": "legacy-ch01-s001",
+      "canonical_text": "Hic est hortus.",
+      "takes": [
+        {
+          "clip_id": "arjun-s001",
+          "file": "s001-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "runway_task_id": "0d7db6cc-de53-49bd-8ca1-0b2dacd09de4",
+          "owner_listening": "pass",
+          "owner_listening_review_date": "2026-11-09",
+          "owner_decision": "accept"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch01-s002",
+      "canonical_text": "In hortō est arbor.",
+      "takes": [
+        {
+          "clip_id": "arjun-s002",
+          "file": "s002-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "runway_task_id": "5dc1d88c-6a8c-4c28-8f54-2cf6c75f7c48",
+          "owner_listening": "pass",
+          "owner_listening_review_date": "2026-11-09",
+          "owner_decision": "accept"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch01-s003",
+      "canonical_text": "In hortō est puella.",
+      "takes": [
+        {
+          "clip_id": "arjun-s003",
+          "file": "s003-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "runway_task_id": "942d0670-ae3b-42f7-97aa-4874ea163436",
+          "owner_listening": "pass",
+          "owner_listening_review_date": "2026-11-09",
+          "owner_decision": "accept"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch01-s004",
+      "canonical_text": "Puella Līvia est.",
+      "takes": [
+        {
+          "clip_id": "arjun-s004",
+          "file": "s004-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "runway_task_id": "90f1e439-1c07-4207-ac35-00eaa9b1057f",
+          "owner_listening": "pass",
+          "owner_listening_review_date": "2026-11-09",
+          "owner_decision": "accept"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch01-s005",
+      "canonical_text": "Arbor magna est.",
+      "takes": [
+        {
+          "clip_id": "arjun-s005",
+          "file": "s005-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "runway_task_id": "a3e2c234-690b-42bc-a605-3c4da5d70c0a",
+          "owner_listening": "pass",
+          "owner_listening_review_date": "2026-11-09",
+          "owner_decision": "accept"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch01-s006",
+      "canonical_text": "Līvia parva est.",
+      "takes": [
+        {
+          "clip_id": "arjun-s006",
+          "file": "s006-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "runway_task_id": "cf260310-b497-4cec-97a7-b637ddce9713",
+          "owner_listening": "pass",
+          "owner_listening_review_date": "2026-11-09",
+          "owner_decision": "accept"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch01-s007",
+      "canonical_text": "Līvia arborem videt.",
+      "takes": [
+        {
+          "clip_id": "arjun-s007",
+          "file": "s007-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "runway_task_id": "7cf88ac5-a839-4946-9183-aeea5b073285",
+          "owner_listening": "pass",
+          "owner_listening_review_date": "2026-11-09",
+          "owner_decision": "accept"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch01-s008",
+      "canonical_text": "Līvia sub arbore sedet.",
+      "takes": [
+        {
+          "clip_id": "arjun-s008",
+          "file": "s008-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "runway_task_id": "55ef1d42-be20-49f7-bfa6-ce67ec685f6d",
+          "owner_listening": "pass",
+          "owner_listening_review_date": "2026-11-09",
+          "owner_decision": "accept"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch01-s009",
+      "canonical_text": "Līvia laeta est.",
+      "takes": [
+        {
+          "clip_id": "arjun-s009",
+          "file": "s009-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "runway_task_id": "d776e60a-18f8-4190-a7c7-01d747c0a914",
+          "owner_listening": "pass",
+          "owner_listening_review_date": "2026-11-09",
+          "owner_decision": "accept"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch02-s001",
+      "canonical_text": "Haec est vīlla familiae.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch02-s001",
+          "file": "ch02-s001-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch02-s002",
+      "canonical_text": "In vīllā Mārcus habitat.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch02-s002",
+          "file": "ch02-s002-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch02-s003",
+      "canonical_text": "Flāvia quoque in vīllā habitat.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch02-s003",
+          "file": "ch02-s003-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch02-s004",
+      "canonical_text": "Mārcus pater Līviae est.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch02-s004",
+          "file": "ch02-s004-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch02-s005",
+      "canonical_text": "Flāvia māter Līviae est.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch02-s005",
+          "file": "ch02-s005-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch02-s006",
+      "canonical_text": "Tītus frāter Līviae est.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch02-s006",
+          "file": "ch02-s006-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch02-s007",
+      "canonical_text": "Līvia soror Tītī est.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch02-s007",
+          "file": "ch02-s007-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch02-s008",
+      "canonical_text": "Mārcus et Flāvia parentēs sunt.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch02-s008",
+          "file": "ch02-s008-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch02-s009",
+      "canonical_text": "Quattuor hominēs in vīllā habitant.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch02-s009",
+          "file": "ch02-s009-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch03-s001",
+      "canonical_text": "Līvia rosam rubram habet.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch03-s001",
+          "file": "ch03-s001-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch03-s002",
+      "canonical_text": "Tītus librum habet.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch03-s002",
+          "file": "ch03-s002-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch03-s003",
+      "canonical_text": "Rosa pulchra est.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch03-s003",
+          "file": "ch03-s003-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch03-s004",
+      "canonical_text": "Līvia ad mātrem ambulat.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch03-s004",
+          "file": "ch03-s004-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch03-s005",
+      "canonical_text": "Līvia rosam mātrī dat.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch03-s005",
+          "file": "ch03-s005-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch03-s006",
+      "canonical_text": "Flāvia rosam accipit.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch03-s006",
+          "file": "ch03-s006-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch03-s007",
+      "canonical_text": "Mārcus librum legit.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch03-s007",
+          "file": "ch03-s007-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch03-s008",
+      "canonical_text": "Tītus patrem spectat.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch03-s008",
+          "file": "ch03-s008-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch03-s009",
+      "canonical_text": "Flāvia dīcit: «Grātiās tibi agō!»",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch03-s009",
+          "file": "ch03-s009-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch04-s001",
+      "canonical_text": "Cibus in mēnsā est.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch04-s001",
+          "file": "ch04-s001-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch04-s002",
+      "canonical_text": "Flāvia aquam portat.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch04-s002",
+          "file": "ch04-s002-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch04-s003",
+      "canonical_text": "Tītus pānem edit.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch04-s003",
+          "file": "ch04-s003-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch04-s004",
+      "canonical_text": "Līvia aquam bibit.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch04-s004",
+          "file": "ch04-s004-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch04-s005",
+      "canonical_text": "Mārcus ad mēnsam ambulat.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch04-s005",
+          "file": "ch04-s005-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch04-s006",
+      "canonical_text": "Flāvia dīcit: «Venī, Mārce!»",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch04-s006",
+          "file": "ch04-s006-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch04-s007",
+      "canonical_text": "Mārcus venit et sedet.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch04-s007",
+          "file": "ch04-s007-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch04-s008",
+      "canonical_text": "Omnēs in vīllā cēnant.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch04-s008",
+          "file": "ch04-s008-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch05-s001",
+      "canonical_text": "Hodiē familia ad forum it.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch05-s001",
+          "file": "ch05-s001-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch05-s002",
+      "canonical_text": "In forō multī mercātōrēs sunt.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch05-s002",
+          "file": "ch05-s002-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch05-s003",
+      "canonical_text": "Mercātor māla vendit.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch05-s003",
+          "file": "ch05-s003-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch05-s004",
+      "canonical_text": "Līvia tria māla videt.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch05-s004",
+          "file": "ch05-s004-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch05-s005",
+      "canonical_text": "Mārcus duo māla emit.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch05-s005",
+          "file": "ch05-s005-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch05-s006",
+      "canonical_text": "Tītus interrogat: «Quot māla habēmus?»",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch05-s006",
+          "file": "ch05-s006-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch05-s007",
+      "canonical_text": "Mārcus respondet: «Duo māla habēmus.»",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch05-s007",
+          "file": "ch05-s007-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch05-s008",
+      "canonical_text": "Familia ē forō domum redit.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch05-s008",
+          "file": "ch05-s008-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch06-s001",
+      "canonical_text": "Canis in viā currit.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch06-s001",
+          "file": "ch06-s001-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch06-s002",
+      "canonical_text": "Puer canem videt.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch06-s002",
+          "file": "ch06-s002-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch06-s003",
+      "canonical_text": "Puer canem vocat.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch06-s003",
+          "file": "ch06-s003-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch06-s004",
+      "canonical_text": "Sed canis nōn audit.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch06-s004",
+          "file": "ch06-s004-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch06-s005",
+      "canonical_text": "Līvia prope portam stat.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch06-s005",
+          "file": "ch06-s005-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch06-s006",
+      "canonical_text": "Canis ad Līviam currit.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch06-s006",
+          "file": "ch06-s006-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch06-s007",
+      "canonical_text": "Līvia rīdet; puer quoque rīdet.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch06-s007",
+          "file": "ch06-s007-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch06-s008",
+      "canonical_text": "Nunc canis cum puerō ambulat.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch06-s008",
+          "file": "ch06-s008-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch07-s001",
+      "canonical_text": "Herī pluvia erat.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch07-s001",
+          "file": "ch07-s001-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch07-s002",
+      "canonical_text": "Familia in vīllā manēbat.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch07-s002",
+          "file": "ch07-s002-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch07-s003",
+      "canonical_text": "Līvia librum legēbat.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch07-s003",
+          "file": "ch07-s003-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch07-s004",
+      "canonical_text": "Tītus per fenestram spectābat.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch07-s004",
+          "file": "ch07-s004-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch07-s005",
+      "canonical_text": "Subitō tonitrus sonuit.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch07-s005",
+          "file": "ch07-s005-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch07-s006",
+      "canonical_text": "Tītus timēbat.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch07-s006",
+          "file": "ch07-s006-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch07-s007",
+      "canonical_text": "Flāvia dīxit: «Nōlī timēre!»",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch07-s007",
+          "file": "ch07-s007-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch07-s008",
+      "canonical_text": "Hodiē sōl lūcet.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch07-s008",
+          "file": "ch07-s008-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch08-s001",
+      "canonical_text": "Crās familia amīcum vīsitābit.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch08-s001",
+          "file": "ch08-s001-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch08-s002",
+      "canonical_text": "Līvia rosās portābit.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch08-s002",
+          "file": "ch08-s002-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch08-s003",
+      "canonical_text": "Tītus librum feret.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch08-s003",
+          "file": "ch08-s003-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch08-s004",
+      "canonical_text": "Mārcus interrogat: «Quid faciēmus?»",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch08-s004",
+          "file": "ch08-s004-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch08-s005",
+      "canonical_text": "Flāvia respondet: «Prīmum ad amīcum ībimus.»",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch08-s005",
+          "file": "ch08-s005-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch08-s006",
+      "canonical_text": "«Deinde cēnābimus», Flāvia dīcit.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch08-s006",
+          "file": "ch08-s006-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch08-s007",
+      "canonical_text": "Omnēs laetī sunt.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch08-s007",
+          "file": "ch08-s007-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    },
+    {
+      "sentence_id": "legacy-ch08-s008",
+      "canonical_text": "Familia iam sē parat.",
+      "takes": [
+        {
+          "clip_id": "arjun-legacy-ch08-s008",
+          "file": "ch08-s008-arjun.mp3",
+          "role": "default",
+          "voice": "Arjun",
+          "owner_listening": "pending",
+          "review_status": "awaiting_owner_listening_review"
+        }
+      ]
+    }
+  ],
+  "words": [
+    {
+      "clip_id": "arjun-word-quoque",
+      "file": "word-quoque-arjun.mp3",
+      "role": "default",
+      "voice": "Arjun",
+      "runway_task_id": "50bc1473-ad1d-4660-8ab3-7917e332f5a4",
+      "owner_listening": "pass",
+      "owner_listening_review_date": "2026-11-09",
+      "owner_decision": "accept",
+      "canonical_text": "quoque"
+    },
+    {
+      "clip_id": "arjun-word-villa",
+      "file": "word-villa-arjun.mp3",
+      "role": "default",
+      "voice": "Arjun",
+      "runway_task_id": "73802ad4-f9f8-4655-b139-c2fc9e0481da",
+      "owner_listening": "pass",
+      "owner_listening_review_date": "2026-11-09",
+      "owner_decision": "accept",
+      "canonical_text": "vīlla"
+    },
+    {
+      "clip_id": "arjun-word-aqua",
+      "file": "word-aqua-arjun.mp3",
+      "role": "default",
+      "voice": "Arjun",
+      "runway_task_id": "8a18a57a-2f81-46fd-b8b5-d6a01d4e42dc",
+      "owner_listening": "pass",
+      "owner_listening_review_date": "2026-11-09",
+      "owner_decision": "accept",
+      "canonical_text": "aqua"
+    },
+    {
+      "clip_id": "arjun-word-cena",
+      "file": "word-cena-arjun.mp3",
+      "role": "default",
+      "voice": "Arjun",
+      "runway_task_id": "44970650-e33e-4ea0-be30-ce566892be34",
+      "owner_listening": "pass",
+      "owner_listening_review_date": "2026-11-09",
+      "owner_decision": "accept",
+      "canonical_text": "cēna"
+    },
+    {
+      "clip_id": "arjun-word-gaius",
+      "file": "word-gaius-arjun.mp3",
+      "role": "default",
+      "voice": "Arjun",
+      "runway_task_id": "591a6d2c-2f8c-4a74-8543-b2a5b29a7c8a",
+      "owner_listening": "pass",
+      "owner_listening_review_date": "2026-11-09",
+      "owner_decision": "accept",
+      "canonical_text": "Gāius"
+    },
+    {
+      "clip_id": "arjun-word-magna",
+      "file": "word-magna-arjun.mp3",
+      "role": "default",
+      "voice": "Arjun",
+      "runway_task_id": "2eac5a03-e1cd-49ac-8949-3f52381f1d4c",
+      "owner_listening": "pass",
+      "owner_listening_review_date": "2026-11-09",
+      "owner_decision": "accept",
+      "canonical_text": "magna"
+    },
+    {
+      "clip_id": "arjun-word-pecunia",
+      "file": "word-pecunia-arjun.mp3",
+      "role": "default",
+      "voice": "Arjun",
+      "runway_task_id": "cd705260-1ff3-43b3-9b90-00ce7316ca0e",
+      "owner_listening": "pass",
+      "owner_listening_review_date": "2026-11-09",
+      "owner_decision": "accept",
+      "canonical_text": "pecūnia"
+    },
+    {
+      "clip_id": "arjun-word-laeta",
+      "file": "word-laeta-miriam-fallback.mp3",
+      "role": "fallback",
+      "voice": "Miriam",
+      "runway_task_id": "16daa58b-d7fa-489b-ac55-b1ac766242b2",
+      "owner_listening": "fallback",
+      "owner_listening_review_date": null,
+      "owner_decision": null,
+      "canonical_text": "laeta"
+    }
+  ]
 });
 })(typeof globalThis!=="undefined"?globalThis:this);
