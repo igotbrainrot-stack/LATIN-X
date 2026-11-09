@@ -1,0 +1,66 @@
+{
+  "chapter": 8,
+  "voice": "Arjun",
+  "owner_review": "pending",
+  "installation": "not_installed",
+  "model": "eleven_v3",
+  "speed": 0.9,
+  "lines": [
+    {
+      "sentence_id": "legacy-ch08-s001",
+      "canonical_text": "Crās familia amīcum vīsitābit.",
+      "tts_input": "Crās familia amīcum wee-see-tah-bit.",
+      "runway_task_id": "5bc99105-530b-4fad-bc92-eef1e006886b",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch08-s002",
+      "canonical_text": "Līvia rosās portābit.",
+      "tts_input": "Li'wi'ah rosās portābit.",
+      "runway_task_id": "c70695a3-8654-4120-99be-fe8db45096b0",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch08-s003",
+      "canonical_text": "Tītus librum feret.",
+      "tts_input": "Tītus librum feret.",
+      "runway_task_id": "a602f3b5-34a2-4cfb-a10b-204996cd3619",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch08-s004",
+      "canonical_text": "Mārcus interrogat: «Quid faciēmus?»",
+      "tts_input": "Mārcus interrogat: «Quid faciēmus?»",
+      "runway_task_id": "d1f4109a-969f-4383-8fb3-9dfd72052f8c",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch08-s005",
+      "canonical_text": "Flāvia respondet: «Prīmum ad amīcum ībimus.»",
+      "tts_input": "Flah-wee-ah respondet: «Prīmum ad amīcum ībimus.»",
+      "runway_task_id": "27eded60-8fed-4924-94ea-6a1c1a21cc62",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch08-s006",
+      "canonical_text": "«Deinde cēnābimus», Flāvia dīcit.",
+      "tts_input": "«Deinde cēnābimus», Flah-wee-ah dīcit.",
+      "runway_task_id": "bf86d0dc-9f0d-4f48-ae92-b1e1be34183c",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch08-s007",
+      "canonical_text": "Omnēs laetī sunt.",
+      "tts_input": "Omnēs laetī sunt.",
+      "runway_task_id": "cd8a88f4-be31-4b9e-9f4e-88249d8552f1",
+      "status": "task_pending"
+    },
+    {
+      "sentence_id": "legacy-ch08-s008",
+      "canonical_text": "Familia iam sē parat.",
+      "tts_input": "Familia iam sē parat.",
+      "runway_task_id": "bc4ee1dc-ddb8-49f9-83d2-4eeace937b8a",
+      "status": "task_pending"
+    }
+  ]
+}
