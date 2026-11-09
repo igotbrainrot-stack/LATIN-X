@@ -11,7 +11,11 @@ const {chromium}=require("playwright"),{pathToFileURL}=require("node:url");
   const url=pathToFileURL(path.resolve(__dirname,"..","index.html")).href;
   const raw=JSON.stringify({version:4,ch:0,vocab:{rosa:{head:"rosa",meaning:"rose",due:0,days:3,reps:2}}});
   await page.addInitScript(v=>localStorage.setItem("tablinum-source-review-v02",v),raw);
-  await page.goto(url);await page.locator(".sentence").first().waitFor();
+  await page.goto(url);
+  if(await page.locator("#lx-welcome:not([hidden])").count()){
+   await page.locator("#lx-welcome-skip").check();
+   await page.locator("#lx-welcome-enter").click();
+  }await page.locator(".sentence").first().waitFor();
   const prefix=await page.evaluate(()=>({id:globalThis.TablinumAudit.currentChapter().name,sent:globalThis.TablinumAudit.currentChapter().sent.length}));
   assert(prefix.sent>0);
   // Bibliothēca (chapter audio + timing import UI) was removed in Nov 2026. The local media
