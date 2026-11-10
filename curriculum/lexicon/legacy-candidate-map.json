@@ -811,10 +811,10 @@
     },
     {
       "candidate_id": "legacy-lex-magnus-53cacdb9",
-      "head_as_in_app": "magnus",
+      "head_as_in_app": "māgnus",
       "original_gloss": "big",
       "is_proper_name": false,
-      "proposed_lemma": "magnus",
+      "proposed_lemma": "māgnus",
       "proposed_id": null,
       "review_state": "pending",
       "approved_lexeme_id": null,
