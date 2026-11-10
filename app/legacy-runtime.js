@@ -259,12 +259,15 @@ function switchTab(id){
 function stableFocus(){
  const el=document.activeElement;
  if(!el||!el.dataset)return null;
+ // A typed answer re-renders the page; keep the caret in the same answer field.
+ if(typeof el.id==="string"&&/^(answer-\d+|clozeInput|exercise-.+)$/.test(el.id))return{id:el.id};
  const props=["tab","ch","course","action","hint","guided","choice","check","clozeCheck","confidence","sentence","word","save","rating"];
  for(const p of props)if(el.dataset[p]!==undefined)return{p,v:el.dataset[p],sentence:el.closest?.("[data-sentence-container]")?.dataset.sentenceContainer??null,wordIndex:el.dataset.wordIndex??null,hint:!!el.closest?.(".hint-words")};
  return null;
 }
 function restoreFocus(record){
  if(!record)return;
+ if(record.id){const field=$(record.id);if(field&&!field.disabled&&field.focus)field.focus({preventScroll:true});return}
  const elements=document.querySelectorAll("[data-"+record.p.replace(/[A-Z]/g,z=>"-"+z.toLowerCase())+"]");
  for(const e of elements)if(e.dataset[record.p]===record.v&&(record.sentence===null||e.closest?.("[data-sentence-container]")?.dataset.sentenceContainer===record.sentence)&&(record.wordIndex===null||e.dataset.wordIndex===record.wordIndex)&&(!record.hint||!!e.closest?.(".hint-words"))){e.focus({preventScroll:true});return}
 }
@@ -352,9 +355,13 @@ function hearWord(){
    updateBanner(blocked?"The browser blocked playback. Click the word again.":(take.voice||"Recorded voice")+" recording of "+take.canonical_text+" ("+take.clip_id+") is not in this copy of the program.");help()}
  });
 }
+function isSaved(entry){return Object.prototype.hasOwnProperty.call(S.vocab,norm(entry.head))}
+function saveButton(entry,cls,label,extra=""){
+ return isSaved(entry)?'<button class="'+cls+'" disabled'+extra+'>Saved ✓</button>':'<button class="'+cls+'" data-save="'+esc(norm(entry.head))+'"'+extra+'>'+label+'</button>';
+}
 function help(){
  const w=Object.prototype.hasOwnProperty.call(dict,norm(chosenWord))?dict[norm(chosenWord)]:undefined;
- $("help").innerHTML='<div class="mini">Dux discendī</div><h3>Learn through context</h3><p class="subtle" style="font-size:12px">Read Latin first, then choose how much guidance you need.</p><div class="mini" style="margin-top:18px">Verbum ēlēctum</div><div class="panel">'+(chosenWord?'<h3 lang="la">'+esc(spell(chosenWord))+'</h3>'+(w?'<p>'+esc(w.meaning)+'</p><small>Headword: <span lang="la">'+esc(spell(w.head))+'</span></small><div class="tools"><button class="btn primary" data-save="'+esc(norm(w.head))+'">Save vocabulary</button>'+wordButton()+'</div>':'<small>This word is not in the starter glossary.</small>'+(wordButton()?'<div class="tools">'+wordButton()+'</div>':"")):'<small>Click a Latin word to look it up.</small>')+'</div><div class="tools"><button class="btn" data-action="macrons">'+(S.macrons?"Āā Macrons":"Aa No macrons")+'</button><button class="btn" data-action="guide">'+(S.guided?"Guidance on":"Guidance off")+'</button></div>'+(S.guided?'<details><summary>Explain the grammar</summary><p style="font-size:12px">'+esc(current().explain)+'</p></details>':"")+'<div class="mini" style="margin-top:19px">Notae meae</div><textarea class="field" id="notes" placeholder="Personal notes..." maxlength="5000">'+esc(S.notes[chapterKey()]||"")+'</textarea><small>Notes are stored locally when browser storage is available.</small>';
+ $("help").innerHTML='<div class="mini">Dux discendī</div><h3>Learn through context</h3><p class="subtle" style="font-size:12px">Read Latin first, then choose how much guidance you need.</p><div class="mini" style="margin-top:18px">Verbum ēlēctum</div><div class="panel">'+(chosenWord?'<h3 lang="la">'+esc(spell(chosenWord))+'</h3>'+(w?'<p>'+esc(w.meaning)+'</p><small>Headword: <span lang="la">'+esc(spell(w.head))+'</span></small><div class="tools">'+saveButton(w,"btn primary","Save vocabulary")+wordButton()+'</div>':'<small>This word is not in the starter glossary.</small>'+(wordButton()?'<div class="tools">'+wordButton()+'</div>':"")):'<small>Click a Latin word to look it up.</small>')+'</div><div class="tools"><button class="btn" data-action="macrons">'+(S.macrons?"Āā Macrons":"Aa No macrons")+'</button><button class="btn" data-action="guide">'+(S.guided?"Guidance on":"Guidance off")+'</button></div>'+(S.guided?'<details><summary>Explain the grammar</summary><p style="font-size:12px">'+esc(current().explain)+'</p></details>':"")+'<div class="mini" style="margin-top:19px">Notae meae</div><textarea class="field" id="notes" placeholder="Personal notes..." maxlength="5000">'+esc(S.notes[chapterKey()]||"")+'</textarea><small>Notes are stored locally when browser storage is available.</small>';
 }
 function guidedHint(i,level){
  const c=current(),s=c.sent[i];if(!s||level<=0)return"";
@@ -373,7 +380,7 @@ function guidedHint(i,level){
 }
 function inlineGloss(){
  const d=dict[norm(chosenWord)];
- return chosenWord?'<div class="help" aria-live="polite"><strong lang="la">'+esc(spell(chosenWord))+'</strong> · '+esc(d?.meaning||"Not in starter glossary.")+(d?'<button class="link" data-save="'+esc(norm(d.head))+'" style="margin-left:10px">Save word</button>':"")+'</div>':"";
+ return chosenWord?'<div class="help" aria-live="polite"><strong lang="la">'+esc(spell(chosenWord))+'</strong> · '+esc(d?.meaning||"Not in starter glossary.")+(d?saveButton(d,"link","Save word",' style="margin-left:10px"'):"")+'</div>':"";
 }
 function reader(c=current()){
  if(c.unavailable)return '<h1>Chapter unavailable</h1><div class="note" role="alert">'+esc(c.sub)+'</div><p>Restore the missing local content file from the full Tablinum ZIP; no progress has been erased.</p>';
@@ -393,7 +400,7 @@ let h='<div class="mini">Lēctiō '+esc(activeCourse?activeCourse.chapter:S.ch==
  if(activeCourse&&activeCourse.status==="approved"){
   h+='<div class="tools"><button class="btn" data-action="courseFinished">Mark approved chapter read · add reviewed lexemes</button></div>';
  }
-  h+='<div class="tools"><button class="btn" data-action="prevChapter">← '+(S.ch==="custom"?"First chapter":"Previous chapter")+'</button><button class="btn primary" data-tab="quiz">Check understanding →</button></div>';
+  h+='<div class="tools"><button class="btn" data-action="prevChapter"'+(S.ch===0?" disabled":"")+'>← '+(S.ch==="custom"?"First chapter":"Previous chapter")+'</button><button class="btn primary" data-tab="quiz">Check understanding →</button></div>';
  return h;
 }
 function answer(index,value){
@@ -401,13 +408,21 @@ function answer(index,value){
  const k=chapterKey()+":"+index;
  if(S.correct[k])return;
  S.answers[k]=String(value||"").slice(0,500);
- if(correctAnswer(q,value))S.correct[k]=true;
+ if(correctAnswer(q,value))S.correct[k]=true;else miss("q:"+k);
  if(ambience)ambience.sound(S.correct[k]?"correct":"wrong");
  save();render();updateBanner(S.correct[k]?"Rēctē! Correct.":"Not quite. Relege sententiam.");
 }
 // Phase 5: only explicitly signed, compiled course exercises can be graded.
 // Legacy questions retain their exact previous IDs and the original UI.
 const revealedCourseAnswers=new Set();
+// Legacy questions: after three misses in this session the learner may read the
+// model answer. It is never recorded as correct and nothing extra is stored.
+const missCounts=new Map(),shownModels=new Set(),MISSES_BEFORE_MODEL=3;
+function miss(k){missCounts.set(k,(missCounts.get(k)||0)+1)}
+function modelHelp(k,text,label){
+ if(shownModels.has(k))return '<div class="help model-answer"><strong>'+label+'</strong><div lang="la">'+esc(spell(text))+'</div><small>Shown for study; type it yourself to complete the exercise.</small></div>';
+ return (missCounts.get(k)||0)>=MISSES_BEFORE_MODEL?'<div class="tools"><button class="btn" data-show-model="'+esc(k)+'">Show the answer</button></div>':"";
+}
 const courseOrderDrafts=new Map();
 function getOrder(ex){
  if(courseOrderDrafts.has(ex.id))return courseOrderDrafts.get(ex.id);
@@ -497,6 +512,7 @@ function quiz(c=current()){if(activeCourse)return courseQuiz();let h='<div class
   if(q[1])h+=q[1].map(o=>'<button class="option '+(correct&&correctAnswer(q,o)?"is-correct":!correct&&o===value?"is-wrong":"")+'" data-choice="'+i+'" data-value="'+esc(o)+'" aria-pressed="'+(o===value?"true":"false")+'" '+(correct?"disabled":"")+' lang="la">'+esc(spell(o))+'</button>').join("");
   else h+='<div class="tools"><input class="field" id="answer-'+i+'" lang="la" aria-label="Latin answer" value="'+esc(value)+'" '+(correct?"disabled":"")+' placeholder="Respondē Latīnē…"><button class="btn primary" data-check="'+i+'" '+(correct?"disabled":"")+'>Check</button></div>';
   if(value||correct)h+='<div role="status" class="'+(correct?"good":"bad")+'">'+esc(correct?"Rēctē! "+q[3]:"Nōndum. Re-read the relevant sentence and try again.")+'</div>';
+  if(!correct)h+=modelHelp("q:"+k,q[3],"Model answer");
   h+='</section>';
  });
  const i=Number(S.ch),item=guidedCloze[i],key=chapterKey();
@@ -504,6 +520,7 @@ function quiz(c=current()){if(activeCourse)return courseQuiz();let h='<div class
   const complete=!!S.clozeCorrect[key],value=S.clozeAnswers[key]||"";
   h+='<section class="quiz"><div class="mini">Verbum dēest · Guided completion</div><div class="question" lang="la">'+esc(spell(item.text))+'</div><div class="tools"><input class="field" lang="la" id="clozeInput" aria-label="Missing Latin word" value="'+esc(value)+'" '+(complete?"disabled":"")+'><button class="btn primary" data-action="clozeCheck" '+(complete?"disabled":"")+'>Check</button></div>';
   if(complete||value)h+='<div role="status" class="'+(complete?"good":"bad")+'">'+esc(complete?"Rēctē! "+item.proof:"Nōndum. "+item.clue)+'</div>';
+  if(!complete)h+=modelHelp("c:"+key,item.proof,"Complete sentence");
   h+='</section>';
  }
  return h+'<div class="tools"><button class="btn" data-tab="read">Read again</button>'+(S.ch===L.length-1?'<span class="note">Liber prīmus complete — review or revisit earlier lessons.</span>':'<button class="btn primary" data-action="nextChapter">Next chapter →</button>')+'</div>';
@@ -511,7 +528,7 @@ function quiz(c=current()){if(activeCourse)return courseQuiz();let h='<div class
 function clozeCheck(){
  if(S.ch==="custom")return;const item=guidedCloze[S.ch],value=String($("clozeInput")?.value||"").slice(0,300);
  const k=chapterKey();if(S.clozeCorrect[k])return;
- S.clozeAnswers[k]=value;if(item.answers.some(v=>norm(v)===norm(value)))S.clozeCorrect[k]=true;
+ S.clozeAnswers[k]=value;if(item.answers.some(v=>norm(v)===norm(value)))S.clozeCorrect[k]=true;else miss("c:"+k);
  if(ambience)ambience.sound(S.clozeCorrect[k]?"correct":"wrong");
  save();render();updateBanner(S.clozeCorrect[k]?"Rēctē! Correct cloze.":"Try again with the story as a clue.");
 }
@@ -528,21 +545,47 @@ function reviewItems(){
   ...deck.dueCards(v5State,Date.now(),"legacyCards").map(([key,v])=>({key,group:"legacyCards",v}))
  ];
 }
+const RATINGS=["again","hard","good","easy"];
+/* Says why nothing is due: either the daily limit is holding cards back, or the
+ * next card is scheduled for a later time. */
+function reviewIdleMessage(){
+ const now=Date.now(),all=[...Object.values(v5State.deck.cards),...Object.values(v5State.deck.legacyCards)];
+ const ready=all.filter(c=>Number(c.due||0)<=now).length;
+ if(ready)return "Satis hodiē! Today's review limit is reached. "+ready+" more "+(ready===1?"card is":"cards are")+" ready and will appear tomorrow.";
+ const next=Math.min(...all.map(c=>Number(c.due||0)).filter(d=>d>now));
+ if(!Number.isFinite(next))return "Omnia bene! No reviews are due.";
+ const days=Math.round((new Date(next).setHours(0,0,0,0)-new Date(now).setHours(0,0,0,0))/864e5);
+ return "Omnia bene! No reviews are due. Next review: "+(days<=0?"later today":days===1?"tomorrow":"in "+days+" days")+".";
+}
+/* Words the learner saved by hand, with a way to take one out again. */
+function savedWordsList(){
+ const rows=Object.entries(S.vocab).filter(([,v])=>v).sort(([a],[b])=>a.localeCompare(b));
+ if(!rows.length)return "";
+ return '<details class="panel" id="savedWords"'+(savedWordsOpen?" open":"")+'><summary>Verba servāta · Saved words ('+rows.length+')</summary><ul style="list-style:none;padding:0;margin:8px 0 0">'+
+  rows.map(([k,v])=>'<li style="display:flex;gap:10px;align-items:baseline;justify-content:space-between;padding:5px 0;border-bottom:1px solid #dfe7db"><span><strong lang="la">'+esc(spell(v.head||k))+'</strong> · '+esc(v.meaning||"")+'</span><button class="link" data-unsave="'+esc(k)+'" aria-label="Remove '+esc(v.head||k)+' from saved words">Remove</button></li>').join("")+'</ul></details>';
+}
+let savedWordsOpen=false;
 function review(){
  const deck=globalThis.TablinumReviewDeck,items=reviewItems();
  const total=Object.keys(v5State.deck.cards).length+Object.keys(v5State.deck.legacyCards).length;
  let h='<div class="mini">Memoria</div><h1>Memoria: verba repetenda</h1><p class="subtle">Offline FSRS scheduling. Reviewed course words are separated from unsigned legacy free cards.</p>';
  h+='<div class="stats"><div class="stat"><b>'+total+'</b><small>Servāta · Saved</small></div><div class="stat"><b>'+items.length+'</b><small>Hodiē · Due</small></div><div class="stat"><b>'+(total-items.length)+'</b><small>Posteā · Later</small></div></div>';
  if(!total)return h+'<div class="panel">Ēlige verbum Latīnum in lēctiōne. Select a Latin word in a lesson, then save it. Original and new-course words retain distinct approval statuses.</div>';
- if(!items.length)return h+'<div class="panel">Omnia bene! No reviews are due.</div>';
+ if(!items.length)return h+'<div class="panel">'+reviewIdleMessage()+'</div>'+savedWordsList();
  const entry=items.find(x=>x.group+"|"+x.key===reviewKey)||items[0];
  reviewKey=entry.group+"|"+entry.key;
  const item=entry.v;
  h+='<div class="panel" style="text-align:center;padding:25px"><div class="mini">'+(entry.group==="legacyCards"?"Verbum vetus · Not owner-reviewed":"Verbum recognitum · "+esc(item.direction))+'</div>';
  h+='<h1 lang="la">'+esc(spell(item.head||entry.key))+'</h1>';
  if(item.sourceText)h+='<p lang="la">'+highlightReviewSentence(item)+'</p>';
- h+=reviewReveal?'<h2>'+esc(item.meaning||"No gloss available")+'</h2><div class="tools" style="justify-content:center">'+["again","hard","good","easy"].map(x=>'<button class="btn '+(x==="good"?"primary":"")+'" data-rating="'+x+'">'+x+'</button>').join("")+'</div>':'<button class="btn primary" data-action="revealCard">Ostende significātiōnem · Reveal</button>';
- return h+'</div>';
+ h+=reviewReveal?'<h2>'+esc(item.meaning||"No gloss available")+'</h2><div class="tools" style="justify-content:center">'+RATINGS.map((x,i)=>'<button class="btn '+(x==="good"?"primary":"")+'" data-rating="'+x+'" aria-keyshortcuts="'+(i+1)+'">'+(i+1)+' · '+x[0].toUpperCase()+x.slice(1)+'</button>').join("")+'</div><small>Keys 1 to 4 rate the card.</small>':'<button class="btn primary" data-action="revealCard" aria-keyshortcuts="Space">Ostende significātiōnem · Reveal</button><br><small>Space or Enter reveals the meaning.</small>';
+ return h+'</div>'+savedWordsList();
+}
+function storageLabel(status){
+ return status==="persistent"?"Recording storage: kept by the browser until you remove it."
+  :status==="temporary"?"Recording storage: temporary. The browser may clear recordings, so export the ones you want to keep."
+  :status==="not_checked"?"Recording storage: not checked yet. It is checked when you make your first recording."
+  :"Recording storage: not available in this browser.";
 }
 function progress(chapters=L){
  const total=chapters.reduce((n,c)=>n+c.q.length,0),done=Object.values(S.correct).filter(Boolean).length,finished=chapters.filter((c,i)=>c.q.every((q,j)=>S.correct[i+":"+j])).length;
@@ -550,16 +593,16 @@ function progress(chapters=L){
  const completed=Object.keys(v5State.completedCourse||{}).filter(k=>v5State.completedCourse[k]===true);
  const reached=completed.reduce((n,k)=>Math.max(n,globalThis.Tablinum.catalogue.get(k)?.chapter||0),0);
  const indicators=globalThis.TablinumReviewDeck.metrics(v5State,lexemes,reached);
- let h='<div class="mini">Prōgressus</div><h1>Learning progress</h1><div class="stats"><div class="stat"><b>'+finished+'/'+chapters.length+'</b><small>Finished lessons</small></div><div class="stat"><b>'+done+'/'+total+'</b><small>Original questions</small></div><div class="stat"><b>'+Object.keys(S.vocab).length+'</b><small>Saved words</small></div></div><div class="panel"><h2>Guided progress</h2><p>'+Object.values(S.clozeCorrect).filter(Boolean).length+'/'+guidedCloze.length+' contextual cloze exercises</p><p>'+Object.keys(S.readingConfidence).length+'/'+chapters.length+' self-assessed lessons</p></div><h2>Verba discenda · Four separate measures</h2><div class="stats">'+
+ let h='<div class="mini">Prōgressus</div><h1>Learning progress</h1><div class="stats"><div class="stat"><b>'+finished+'/'+chapters.length+'</b><small>Finished lessons</small></div><div class="stat"><b>'+done+'/'+total+'</b><small>Original questions</small></div><div class="stat"><b>'+Object.keys(S.vocab).length+'</b><small>Saved words</small></div></div><div class="panel"><h2>Guided progress</h2><p>'+Object.values(S.clozeCorrect).filter(Boolean).length+'/'+guidedCloze.length+' contextual cloze exercises</p><p>'+Object.keys(S.readingConfidence).length+'/'+chapters.length+' self-assessed lessons</p></div>'+(lexemes.some(l=>l.status==="approved")?'<h2>Verba discenda · Four separate measures</h2><div class="stats">'+
  '<div class="stat"><b>'+indicators.introduced+'</b><small>Introduced (approved)</small></div>'+
  '<div class="stat"><b>'+indicators.encountered+'</b><small>Encountered</small></div>'+
  '<div class="stat"><b>'+indicators.recognised+'</b><small>Recognised</small></div>'+
  '<div class="stat"><b>'+indicators.productive+'</b><small>Productive</small></div>'+
- '</div><p class="subtle">Legacy saved words: '+indicators.legacySaved+' (not automatically owner-approved).</p><p class="subtle">Mūsica ex fontibus Graecīs et Rōmānīs īnspīrāta est; reconstrūctiō incerta est. Music inspired by ancient Greek and Roman sources; reconstruction is uncertain. Source details: <a href="curriculum/music.json">music provenance</a>.</p><h2>Course map</h2>';
+ '</div>':'')+'<p class="subtle">Legacy saved words: '+indicators.legacySaved+' (not automatically owner-approved).</p><p class="subtle">Mūsica ex fontibus Graecīs et Rōmānīs īnspīrāta est; reconstrūctiō incerta est. Music inspired by ancient Greek and Roman sources; reconstruction is uncertain. Source details: <a href="curriculum/music.json">music provenance</a>.</p><h2>Course map</h2>';
  chapters.forEach((c,i)=>{const n=c.q.filter((q,j)=>S.correct[i+":"+j]).length;h+='<div style="padding:8px 0;border-bottom:1px solid #dfe7db"><button class="link" data-ch="'+i+'">'+(i+1)+". "+esc(c.name)+'</button><small style="float:right">'+n+'/'+c.q.length+'</small><div class="bar"><div style="width:'+(n/c.q.length*100)+'%"></div></div></div>'});
  if(storageMode==="blocked")h+='<div class="note" role="alert">'+esc(boot.warning||'Saved progress needs recovery; your old data has not been overwritten.')+' <button class="btn" data-action="remigrateV4">Re-migrate from original v4</button> or restore a backup below.</div>';
- h+='<div class="panel"><h2>Vōx mea · Your recordings</h2><p class="subtle">Practice recordings from Lēctiō stay on this computer and are not part of the backup below. Export them separately.</p><div class="tools"><button class="btn" data-action="exportRecordings">Export my recordings ZIP</button>'+(S.custom?'<button class="btn" data-action="clearText">Remove imported text</button>':'')+(media()?'<button class="btn" data-action="clearAudio">Remove local audio for this chapter</button>':'')+'</div><small>Storage: '+esc(userMedia?.status?.()||"unsupported")+' (temporary data may disappear when this tab closes).</small></div>';
- h+='<div class="panel"><h2>Backup and recovery</h2><p class="subtle">Audio is not stored in backups. Restored fields are validated. Current schema v4 also accepts v0.2 backup envelopes.</p><div class="tools"><button class="btn primary" data-action="export">Export backup JSON</button></div><label for="restoreFile">Restore a JSON backup (under 12 MB)</label><input class="field" type="file" id="restoreFile" accept=".json,application/json"><details><summary>Reset exercise and vocabulary progress</summary><button class="btn" data-action="reset">Reset progress (keep notes and imported text)</button></details></div>';
+ h+='<div class="panel"><h2>Vōx mea · Your recordings</h2><p class="subtle">Practice recordings from Lēctiō stay on this computer and are not part of the backup below. Export them separately.</p><div class="tools"><button class="btn" data-action="exportRecordings">Export my recordings ZIP</button>'+(S.custom?'<button class="btn" data-action="clearText">Remove imported text</button>':'')+(media()?'<button class="btn" data-action="clearAudio">Remove local audio for this chapter</button>':'')+'</div><small>'+esc(storageLabel(userMedia?.status?.()))+'</small></div>';
+ h+='<div class="panel"><h2>Backup and recovery</h2><p class="subtle">Audio is not stored in backups. Restored fields are validated. Backups from this version and from older versions (v0.2 and v4) can be restored.</p><div class="tools"><button class="btn primary" data-action="export">Export backup JSON</button></div><label for="restoreFile">Restore a JSON backup (under 12 MB)</label><input class="field" type="file" id="restoreFile" accept=".json,application/json"><details><summary>Reset exercise and vocabulary progress</summary><button class="btn" data-action="reset">Reset progress (keep notes and imported text)</button></details></div>';
  return h;
 }
 function syncAudioElement(){
@@ -571,6 +614,7 @@ function render(){
  if(S.tab==="library")S.tab="read"; // Bibliothēca removed (Nov 2026); a saved library tab opens the reader
  const old=stableFocus(),chapter=current();tabs();help();
  $("main").innerHTML=S.tab==="read"?reader(chapter):S.tab==="quiz"?quiz(chapter):S.tab==="review"?review():progress(L);
+ const dock=document.querySelector(".dock");if(dock)dock.hidden=S.tab!=="read";
  syncAudioElement();restoreFocus(old);updateBanner();
 }
 function updateSentenceHighlight(){
@@ -743,7 +787,14 @@ document.addEventListener("click",e=>{
   }
   const k=chapterKey()+":"+b.dataset.guided;S.hintLevels[k]=((Number(S.hintLevels[k])||0)+1)%4;save();render();return}
  if(b.dataset.confidence){S.readingConfidence[chapterKey()]=b.dataset.confidence;save();render();return}
- if(b.dataset.save){const w=dict[b.dataset.save];if(w){S.vocab[b.dataset.save]??={head:w.head,meaning:w.meaning,days:1,due:Date.now(),reps:0};save();render()}return}
+ if(b.dataset.save){const w=Object.prototype.hasOwnProperty.call(dict,b.dataset.save)?dict[b.dataset.save]:undefined;if(w){S.vocab[b.dataset.save]??={head:w.head,meaning:w.meaning,days:1,due:Date.now(),reps:0};const stored=save();render();updateBanner(stored?"Saved "+spell(w.head)+" to Memoria.":undefined)}return}
+ if(b.dataset.unsave!==undefined){
+  const k=b.dataset.unsave;
+  if(Object.prototype.hasOwnProperty.call(S.vocab,k)&&confirm("Remove "+(S.vocab[k].head||k)+" from your saved words? Its review history will be deleted.")){
+   const head=S.vocab[k].head||k;delete S.vocab[k];savedWordsOpen=true;reviewKey=null;reviewReveal=false;save();render();updateBanner("Removed "+spell(head)+" from Memoria.");
+  }
+  return;
+ }
  if(b.dataset.exOrderShift!==undefined){moveOrder(b.dataset.exOrderShift,Number(b.dataset.orderIndex),Number(b.dataset.orderDelta));return}
  if(b.dataset.exOrderSubmit!==undefined){
   const ex=activeCourse?.exercises?.find(q=>q.id===b.dataset.exOrderSubmit);
@@ -765,6 +816,7 @@ document.addEventListener("click",e=>{
   }
   return;
  }
+ if(b.dataset.showModel!==undefined){shownModels.add(b.dataset.showModel);render();return}
  if(b.dataset.exReveal){revealedCourseAnswers.add(b.dataset.exReveal);render();return}
  if(b.dataset.choice!==undefined){answer(Number(b.dataset.choice),b.dataset.value);return}
  if(b.dataset.check!==undefined){answer(Number(b.dataset.check),$("answer-"+b.dataset.check)?.value||"");return}
@@ -885,6 +937,13 @@ document.addEventListener("input",e=>{
  if(e.target.id==="sfx-volume"){if(ambience)ambience.set({sfxVolume:Number(e.target.value)});return}
  if(e.target.id==="notes"){S.notes[chapterKey()]=e.target.value.slice(0,5000);save()}else if(e.target.id==="audioSeek"&&Number.isFinite(Number(e.target.value))){audio.currentTime=Number(e.target.value)}});
 document.addEventListener("keydown",e=>{
+ if(S.tab==="review"&&reviewKey&&!e.ctrlKey&&!e.metaKey&&!e.altKey&&!e.target.closest?.("input,textarea,select,[contenteditable]")){
+  /* Space and Enter keep their normal job on a focused control, except on the Memoria tab itself,
+   * where focus rests after the learner opens the tab. */
+  const control=e.target.closest?.("button,a,summary"),free=!control||control.dataset?.tab==="review";
+  if(!reviewReveal&&free&&(e.key===" "||e.key==="Enter")&&document.querySelector("[data-action='revealCard']")){e.preventDefault();reviewReveal=true;render();return}
+  if(reviewReveal&&/^[1-4]$/.test(e.key)&&document.querySelector("[data-rating]")){e.preventDefault();rating(RATINGS[Number(e.key)-1]);return}
+ }
  if(e.key==="Enter"&&e.target.id?.startsWith("answer-")){e.preventDefault();answer(Number(e.target.id.slice(7)),e.target.value)}
  if(e.key==="Enter"&&e.target.id==="clozeInput"){e.preventDefault();clozeCheck()}
  if((e.key==="ArrowLeft"||e.key==="ArrowRight")&&e.target.matches?.(".word")){
