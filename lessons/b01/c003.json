@@ -843,7 +843,7 @@
         },
         {
           "id": "b01-c003-s018",
-          "text_la": "Ubi est Tītus? Tītus in hortō nōn est; Tītus iam in vīllā est!",
+          "text_la": "Ubi est Titus? Titus in hortō nōn est; Titus iam in vīllā est!",
           "source_line": 217,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -864,7 +864,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 8,
               "end": 13,
               "lx": null,
@@ -872,7 +872,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 15,
               "end": 20,
               "lx": null,
@@ -912,7 +912,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 39,
               "end": 44,
               "lx": null,
@@ -957,17 +957,17 @@
     },
     {
       "id": "b01-c003-l2",
-      "title_la": "Lēctiō 2 — Tītus et pānis",
+      "title_la": "Lēctiō 2 — Titus et pānis",
       "source_line": 219,
       "sentences": [
         {
           "id": "b01-c003-s019",
-          "text_la": "Tītus mēnsam spectat.",
+          "text_la": "Titus mēnsam spectat.",
           "source_line": 221,
           "annotation_status": "draft_unverified",
           "tokens": [
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 0,
               "end": 5,
               "lx": null,
@@ -994,12 +994,12 @@
         },
         {
           "id": "b01-c003-s020",
-          "text_la": "Tītus pānem in mēnsā spectat.",
+          "text_la": "Titus pānem in mēnsā spectat.",
           "source_line": 222,
           "annotation_status": "draft_unverified",
           "tokens": [
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 0,
               "end": 5,
               "lx": null,
@@ -1042,7 +1042,7 @@
         },
         {
           "id": "b01-c003-s021",
-          "text_la": "Pānis Tītī nōn est; pānis familiae est.",
+          "text_la": "Pānis Titī nōn est; pānis familiae est.",
           "source_line": 223,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1055,7 +1055,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītī",
+              "t": "Titī",
               "start": 6,
               "end": 10,
               "lx": null,
@@ -1106,7 +1106,7 @@
         },
         {
           "id": "b01-c003-s022",
-          "text_la": "Sed Tītus pānem capit.",
+          "text_la": "Sed Titus pānem capit.",
           "source_line": 224,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1119,7 +1119,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 4,
               "end": 9,
               "lx": null,
@@ -1146,7 +1146,7 @@
         },
         {
           "id": "b01-c003-s023",
-          "text_la": "Quid Tītus capit? Tītus pānem capit!",
+          "text_la": "Quid Titus capit? Titus pānem capit!",
           "source_line": 225,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1159,7 +1159,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 5,
               "end": 10,
               "lx": null,
@@ -1175,7 +1175,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 18,
               "end": 23,
               "lx": null,
@@ -1202,12 +1202,12 @@
         },
         {
           "id": "b01-c003-s024",
-          "text_la": "Tītus pānem edit.",
+          "text_la": "Titus pānem edit.",
           "source_line": 226,
           "annotation_status": "draft_unverified",
           "tokens": [
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 0,
               "end": 5,
               "lx": null,
@@ -1234,7 +1234,7 @@
         },
         {
           "id": "b01-c003-s025",
-          "text_la": "Flāvia Tītum spectat.",
+          "text_la": "Flāvia Titum spectat.",
           "source_line": 227,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1247,7 +1247,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītum",
+              "t": "Titum",
               "start": 7,
               "end": 12,
               "lx": null,
@@ -1306,12 +1306,12 @@
         },
         {
           "id": "b01-c003-s027",
-          "text_la": "Tītus nōn respondet; Tītus pānem edit.",
+          "text_la": "Titus nōn respondet; Titus pānem edit.",
           "source_line": 229,
           "annotation_status": "draft_unverified",
           "tokens": [
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 0,
               "end": 5,
               "lx": null,
@@ -1335,7 +1335,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 21,
               "end": 26,
               "lx": null,
@@ -1466,7 +1466,7 @@
         },
         {
           "id": "b01-c003-s030",
-          "text_la": "Quid Tītus edit? Pānem edit.",
+          "text_la": "Quid Titus edit? Pānem edit.",
           "source_line": 232,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1479,7 +1479,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 5,
               "end": 10,
               "lx": null,
@@ -1746,12 +1746,12 @@
         },
         {
           "id": "b01-c003-s036",
-          "text_la": "Tītus pānem nōn iam habet, sed Tītus cibum habet.",
+          "text_la": "Titus pānem nōn iam habet, sed Titus cibum habet.",
           "source_line": 238,
           "annotation_status": "draft_unverified",
           "tokens": [
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 0,
               "end": 5,
               "lx": null,
@@ -1799,7 +1799,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 31,
               "end": 36,
               "lx": null,
@@ -2194,7 +2194,7 @@
         },
         {
           "id": "b01-c003-s042",
-          "text_la": "Sed ubi est Tītus? Tītus nōn legit; Tītus in arbore est.",
+          "text_la": "Sed ubi est Titus? Titus nōn legit; Titus in arbore est.",
           "source_line": 244,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -2223,7 +2223,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 12,
               "end": 17,
               "lx": null,
@@ -2231,7 +2231,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 19,
               "end": 24,
               "lx": null,
@@ -2255,7 +2255,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 36,
               "end": 41,
               "lx": null,
@@ -2290,7 +2290,7 @@
         },
         {
           "id": "b01-c003-s043",
-          "text_la": "Flāvia Tītum in arbore spectat.",
+          "text_la": "Flāvia Titum in arbore spectat.",
           "source_line": 245,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -2303,7 +2303,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītum",
+              "t": "Titum",
               "start": 7,
               "end": 12,
               "lx": null,
@@ -2338,12 +2338,12 @@
         },
         {
           "id": "b01-c003-s044",
-          "text_la": "Tītus in arbore est, et Tītus pānem habet!",
+          "text_la": "Titus in arbore est, et Titus pānem habet!",
           "source_line": 246,
           "annotation_status": "draft_unverified",
           "tokens": [
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 0,
               "end": 5,
               "lx": null,
@@ -2383,7 +2383,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 24,
               "end": 29,
               "lx": null,
@@ -2505,9 +2505,9 @@
       "type": "proposed_ungraded",
       "status": "proposed_ungraded",
       "source_line": 257,
-      "text_original": "5. Quid Tītus capit? — Tītus pānem capit.",
-      "prompt_text": "Quid Tītus capit?",
-      "model_answer_raw": "Tītus pānem capit.",
+      "text_original": "5. Quid Titus capit? — Titus pānem capit.",
+      "prompt_text": "Quid Titus capit?",
+      "model_answer_raw": "Titus pānem capit.",
       "reviewed_by": null,
       "reviewed_at": null,
       "scoring_enabled": false
@@ -2617,8 +2617,8 @@
       "type": "proposed_ungraded",
       "status": "proposed_ungraded",
       "source_line": 263,
-      "text_original": "- Answer aloud: `Quid Tītus edit?`",
-      "prompt_text": "Answer aloud: `Quid Tītus edit?`",
+      "text_original": "- Answer aloud: `Quid Titus edit?`",
+      "prompt_text": "Answer aloud: `Quid Titus edit?`",
       "reviewed_by": null,
       "reviewed_at": null,
       "scoring_enabled": false

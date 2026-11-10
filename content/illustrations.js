@@ -35,7 +35,7 @@ globalThis.TablinumIllustrationsData={
         "notes": "Daughter ~9, braided hair, tunic"
       },
       {
-        "id": "Tītus",
+        "id": "Titus",
         "notes": "Son ~7, tunic and bulla pendant"
       },
       {
@@ -61,7 +61,7 @@ globalThis.TablinumIllustrationsData={
       "Mārcus": "warm-white knee-length tunic with thin red border, brown belt; short dark beard and curly hair; no cloak",
       "Flāvia": "long ivory stola with terracotta palla over one shoulder; dark hair pinned up with gold band",
       "Līvia": "olive-green tunic; long dark-brown hair in two braids",
-      "Tītus": "faded-blue tunic with golden bulla on cord; light-brown short curly hair",
+      "Titus": "faded-blue tunic with golden bulla on cord; light-brown short curly hair",
       "Gāius": "clean-shaven ~40, same age as Mārcus; grey at temples; blue-grey tunic and brown mantle",
       "Gāiī-fīlius": "ochre tunic, straight short black hair, slimmer face than Tītus; about 10",
       "canis": "medium-sized white dog with chestnut patches, brown leather collar, sitting"
@@ -231,10 +231,10 @@ globalThis.TablinumIllustrationsData={
         "rosa",
         "vīlla",
         "Līvia",
-        "Tītus"
+        "Titus"
       ],
       "polygons": {
-        "Tītus": [
+        "Titus": [
           [
             18,
             6
@@ -443,7 +443,7 @@ globalThis.TablinumIllustrationsData={
         "Mārcus",
         "Flāvia",
         "Līvia",
-        "Tītus",
+        "Titus",
         "vīlla"
       ],
       "polygons": {
@@ -673,7 +673,7 @@ globalThis.TablinumIllustrationsData={
             24
           ]
         ],
-        "Tītus": [
+        "Titus": [
           [
             64,
             22
@@ -829,7 +829,7 @@ globalThis.TablinumIllustrationsData={
             55,
             47
           ],
-          "Tītus": [
+          "Titus": [
             66,
             47
           ],
@@ -1198,7 +1198,7 @@ globalThis.TablinumIllustrationsData={
         "Mārcus",
         "Flāvia",
         "Līvia",
-        "Tītus"
+        "Titus"
       ],
       "polygons": {
         "Mārcus": [
@@ -1423,7 +1423,7 @@ globalThis.TablinumIllustrationsData={
             34
           ]
         ],
-        "Tītus": [
+        "Titus": [
           [
             65,
             38
@@ -1548,7 +1548,7 @@ globalThis.TablinumIllustrationsData={
             46,
             65
           ],
-          "Tītus": [
+          "Titus": [
             70,
             63
           ],

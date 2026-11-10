@@ -23,7 +23,7 @@
   "grammar_new": [],
   "proposed_new_lemmas_raw": "**New (proposed, unsigned):** tempestās, ventus, pluvia, fenestra, sōl, caelum, audit (audiō), videt (videō), movet (moveō), timet (timeō), lūcet (lūceō), dēnique.",
   "proposed_grammar_raw": "**Grammar (new):** third-person present plural in `-nt` (sunt, audiunt, vident, movent, currunt, stant, spectant, timent), contrasted with singular `-t`. Plurals are used only with `X et Y` subjects.",
-  "proposed_margin_raw": "**Margin:** Tītus audit ↔ Tītus et Līvia audiunt · videt ↔ vident · -t = ūnus · -nt = duo et plūrēs · ventus = 🌬 · pluvia = 🌧 · sōl = ☀ · [pictūra: duae fenestrae; vīlla in tempestāte]",
+  "proposed_margin_raw": "**Margin:** Titus audit ↔ Titus et Līvia audiunt · videt ↔ vident · -t = ūnus · -nt = duo et plūrēs · ventus = 🌬 · pluvia = 🌧 · sōl = ☀ · [pictūra: duae fenestrae; vīlla in tempestāte]",
   "reviewer_notes": [
     "> Note for the reviewer: `Timentne` puts the ch 1 `-ne` question on a ch 8 plural verb. `tempestātem` and `sōlem` are 3rd-declension accusatives, a pattern taught in ch 3 (`pānem`). `in caelō` is a new place chunk."
   ],
@@ -227,12 +227,12 @@
         },
         {
           "id": "b01-c008-s006",
-          "text_la": "Tītus quoque ventum audit.",
+          "text_la": "Titus quoque ventum audit.",
           "source_line": 597,
           "annotation_status": "draft_unverified",
           "tokens": [
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 0,
               "end": 5,
               "lx": null,
@@ -267,7 +267,7 @@
         },
         {
           "id": "b01-c008-s007",
-          "text_la": "Līvia et Tītus ventum audiunt.",
+          "text_la": "Līvia et Titus ventum audiunt.",
           "source_line": 598,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -288,7 +288,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 9,
               "end": 14,
               "lx": null,
@@ -315,7 +315,7 @@
         },
         {
           "id": "b01-c008-s008",
-          "text_la": "Quid Līvia et Tītus audiunt? Ventum audiunt.",
+          "text_la": "Quid Līvia et Titus audiunt? Ventum audiunt.",
           "source_line": 599,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -344,7 +344,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 14,
               "end": 19,
               "lx": null,
@@ -419,12 +419,12 @@
         },
         {
           "id": "b01-c008-s010",
-          "text_la": "Tītus quoque ad fenestram currit.",
+          "text_la": "Titus quoque ad fenestram currit.",
           "source_line": 601,
           "annotation_status": "draft_unverified",
           "tokens": [
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 0,
               "end": 5,
               "lx": null,
@@ -467,7 +467,7 @@
         },
         {
           "id": "b01-c008-s011",
-          "text_la": "Līvia et Tītus ad fenestram currunt.",
+          "text_la": "Līvia et Titus ad fenestram currunt.",
           "source_line": 602,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -488,7 +488,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 9,
               "end": 14,
               "lx": null,
@@ -523,7 +523,7 @@
         },
         {
           "id": "b01-c008-s012",
-          "text_la": "Līvia arborem videt; Tītus arborem videt.",
+          "text_la": "Līvia arborem videt; Titus arborem videt.",
           "source_line": 603,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -552,7 +552,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 21,
               "end": 26,
               "lx": null,
@@ -579,7 +579,7 @@
         },
         {
           "id": "b01-c008-s013",
-          "text_la": "Līvia et Tītus arborem magnam vident.",
+          "text_la": "Līvia et Titus arborem magnam vident.",
           "source_line": 604,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -600,7 +600,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 9,
               "end": 14,
               "lx": null,
@@ -739,7 +739,7 @@
         },
         {
           "id": "b01-c008-s016",
-          "text_la": "Līvia et Tītus canem audiunt.",
+          "text_la": "Līvia et Titus canem audiunt.",
           "source_line": 607,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -760,7 +760,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 9,
               "end": 14,
               "lx": null,
@@ -1474,12 +1474,12 @@
         },
         {
           "id": "b01-c008-s029",
-          "text_la": "Tītus tempestātem timet.",
+          "text_la": "Titus tempestātem timet.",
           "source_line": 623,
           "annotation_status": "draft_unverified",
           "tokens": [
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 0,
               "end": 5,
               "lx": null,
@@ -1546,7 +1546,7 @@
         },
         {
           "id": "b01-c008-s031",
-          "text_la": "Quis tempestātem timet? Tītus timet.",
+          "text_la": "Quis tempestātem timet? Titus timet.",
           "source_line": 625,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1575,7 +1575,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 24,
               "end": 29,
               "lx": null,
@@ -1650,7 +1650,7 @@
         },
         {
           "id": "b01-c008-s033",
-          "text_la": "Flāvia Tītum spectat et Tītō librum dat.",
+          "text_la": "Flāvia Titum spectat et Titō librum dat.",
           "source_line": 627,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1663,7 +1663,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītum",
+              "t": "Titum",
               "start": 7,
               "end": 12,
               "lx": null,
@@ -1687,7 +1687,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītō",
+              "t": "Titō",
               "start": 24,
               "end": 28,
               "lx": null,
@@ -1714,12 +1714,12 @@
         },
         {
           "id": "b01-c008-s034",
-          "text_la": "Tītus librum accipit et legit.",
+          "text_la": "Titus librum accipit et legit.",
           "source_line": 628,
           "annotation_status": "draft_unverified",
           "tokens": [
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 0,
               "end": 5,
               "lx": null,
@@ -1961,7 +1961,7 @@
         },
         {
           "id": "b01-c008-s040",
-          "text_la": "Līvia et Tītus sōlem vident.",
+          "text_la": "Līvia et Titus sōlem vident.",
           "source_line": 637,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1982,7 +1982,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 9,
               "end": 14,
               "lx": null,
@@ -2065,7 +2065,7 @@
         },
         {
           "id": "b01-c008-s042",
-          "text_la": "Līvia et Tītus ad hortum currunt.",
+          "text_la": "Līvia et Titus ad hortum currunt.",
           "source_line": 639,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -2086,7 +2086,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 9,
               "end": 14,
               "lx": null,
@@ -2177,7 +2177,7 @@
         },
         {
           "id": "b01-c008-s044",
-          "text_la": "Līvia et Tītus in hortō stant.",
+          "text_la": "Līvia et Titus in hortō stant.",
           "source_line": 641,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -2198,7 +2198,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 9,
               "end": 14,
               "lx": null,
@@ -2233,12 +2233,12 @@
         },
         {
           "id": "b01-c008-s045",
-          "text_la": "Tītus nōn iam timet.",
+          "text_la": "Titus nōn iam timet.",
           "source_line": 642,
           "annotation_status": "draft_unverified",
           "tokens": [
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 0,
               "end": 5,
               "lx": null,
@@ -2273,12 +2273,12 @@
         },
         {
           "id": "b01-c008-s046",
-          "text_la": "Tītus et Līvia arborem et rosam spectant.",
+          "text_la": "Titus et Līvia arborem et rosam spectant.",
           "source_line": 643,
           "annotation_status": "draft_unverified",
           "tokens": [
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 0,
               "end": 5,
               "lx": null,
@@ -2337,7 +2337,7 @@
         },
         {
           "id": "b01-c008-s047",
-          "text_la": "In hortō Līvia et Tītus ventum nōn audiunt.",
+          "text_la": "In hortō Līvia et Titus ventum nōn audiunt.",
           "source_line": 644,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -2374,7 +2374,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 18,
               "end": 23,
               "lx": null,
@@ -2521,7 +2521,7 @@
         },
         {
           "id": "b01-c008-s050",
-          "text_la": "Quid Līvia et Tītus in hortō vident? Arborem et rosam vident.",
+          "text_la": "Quid Līvia et Titus in hortō vident? Arborem et rosam vident.",
           "source_line": 647,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -2550,7 +2550,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 14,
               "end": 19,
               "lx": null,
@@ -2944,8 +2944,8 @@
       "type": "proposed_ungraded",
       "status": "proposed_ungraded",
       "source_line": 658,
-      "text_original": "1. Quid Līvia et Tītus audiunt? — Ventum audiunt.",
-      "prompt_text": "Quid Līvia et Tītus audiunt?",
+      "text_original": "1. Quid Līvia et Titus audiunt? — Ventum audiunt.",
+      "prompt_text": "Quid Līvia et Titus audiunt?",
       "model_answer_raw": "Ventum audiunt.",
       "reviewed_by": null,
       "reviewed_at": null,
@@ -2956,8 +2956,8 @@
       "type": "proposed_ungraded",
       "status": "proposed_ungraded",
       "source_line": 659,
-      "text_original": "2. Quō Līvia et Tītus currunt? — Ad fenestram currunt.",
-      "prompt_text": "Quō Līvia et Tītus currunt?",
+      "text_original": "2. Quō Līvia et Titus currunt? — Ad fenestram currunt.",
+      "prompt_text": "Quō Līvia et Titus currunt?",
       "model_answer_raw": "Ad fenestram currunt.",
       "reviewed_by": null,
       "reviewed_at": null,
@@ -2980,9 +2980,9 @@
       "type": "proposed_ungraded",
       "status": "proposed_ungraded",
       "source_line": 661,
-      "text_original": "4. Quis tempestātem timet? — Tītus tempestātem timet.",
+      "text_original": "4. Quis tempestātem timet? — Titus tempestātem timet.",
       "prompt_text": "Quis tempestātem timet?",
-      "model_answer_raw": "Tītus tempestātem timet.",
+      "model_answer_raw": "Titus tempestātem timet.",
       "reviewed_by": null,
       "reviewed_at": null,
       "scoring_enabled": false
@@ -3004,9 +3004,9 @@
       "type": "proposed_ungraded",
       "status": "proposed_ungraded",
       "source_line": 663,
-      "text_original": "6. Ending: Līvia et Tītus ventum audi___. — audiunt. / Tītus ventum audi___. — audit.",
-      "prompt_text": "Ending: Līvia et Tītus ventum audi___.",
-      "model_answer_raw": "audiunt. / Tītus ventum audi___. — audit.",
+      "text_original": "6. Ending: Līvia et Titus ventum audi___. — audiunt. / Titus ventum audi___. — audit.",
+      "prompt_text": "Ending: Līvia et Titus ventum audi___.",
+      "model_answer_raw": "audiunt. / Titus ventum audi___. — audit.",
       "reviewed_by": null,
       "reviewed_at": null,
       "scoring_enabled": false
@@ -3134,8 +3134,8 @@
       "type": "proposed_ungraded",
       "status": "proposed_ungraded",
       "source_line": 668,
-      "text_original": "- Answer aloud: `Quid Līvia et Tītus vident?`",
-      "prompt_text": "Answer aloud: `Quid Līvia et Tītus vident?`",
+      "text_original": "- Answer aloud: `Quid Līvia et Titus vident?`",
+      "prompt_text": "Answer aloud: `Quid Līvia et Titus vident?`",
       "reviewed_by": null,
       "reviewed_at": null,
       "scoring_enabled": false

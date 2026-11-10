@@ -35,7 +35,7 @@
       "sentences": [
         {
           "id": "b01-c005-s001",
-          "text_la": "Nunc Līvia in vīllā est, et Tītus quoque.",
+          "text_la": "Nunc Līvia in vīllā est, et Titus quoque.",
           "source_line": 356,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -88,7 +88,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 28,
               "end": 33,
               "lx": null,
@@ -507,7 +507,7 @@
         },
         {
           "id": "b01-c005-s008",
-          "text_la": "Cuius est arbor magna? Arbor magna est Tītī.",
+          "text_la": "Cuius est arbor magna? Arbor magna est Titī.",
           "source_line": 363,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -568,7 +568,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītī",
+              "t": "Titī",
               "start": 39,
               "end": 43,
               "lx": null,
@@ -579,12 +579,12 @@
         },
         {
           "id": "b01-c005-s009",
-          "text_la": "Tītus in arbore magnā nōn est; Tītus in vīllā est.",
+          "text_la": "Titus in arbore magnā nōn est; Titus in vīllā est.",
           "source_line": 364,
           "annotation_status": "draft_unverified",
           "tokens": [
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 0,
               "end": 5,
               "lx": null,
@@ -632,7 +632,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 31,
               "end": 36,
               "lx": null,
@@ -667,12 +667,12 @@
         },
         {
           "id": "b01-c005-s010",
-          "text_la": "Tītus pōculum rubrum habet.",
+          "text_la": "Titus pōculum rubrum habet.",
           "source_line": 365,
           "annotation_status": "draft_unverified",
           "tokens": [
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 0,
               "end": 5,
               "lx": null,
@@ -707,7 +707,7 @@
         },
         {
           "id": "b01-c005-s011",
-          "text_la": "Pōculum Tītī parvum est, sed pulchrum.",
+          "text_la": "Pōculum Titī parvum est, sed pulchrum.",
           "source_line": 366,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -720,7 +720,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītī",
+              "t": "Titī",
               "start": 8,
               "end": 12,
               "lx": null,
@@ -763,7 +763,7 @@
         },
         {
           "id": "b01-c005-s012",
-          "text_la": "Estne Tītus in hortō? Nōn, Tītus in vīllā est, et Līvia quoque.",
+          "text_la": "Estne Titus in hortō? Nōn, Titus in vīllā est, et Līvia quoque.",
           "source_line": 367,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -776,7 +776,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 6,
               "end": 11,
               "lx": null,
@@ -808,7 +808,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 27,
               "end": 32,
               "lx": null,
@@ -986,7 +986,7 @@
         },
         {
           "id": "b01-c005-s015",
-          "text_la": "Līvia pōculum Tītī capit.",
+          "text_la": "Līvia pōculum Titī capit.",
           "source_line": 373,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1007,7 +1007,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītī",
+              "t": "Titī",
               "start": 14,
               "end": 18,
               "lx": null,
@@ -1026,12 +1026,12 @@
         },
         {
           "id": "b01-c005-s016",
-          "text_la": "Tītus: «Pōculum nōn est Līviae! Pōculum est Tītī!»",
+          "text_la": "Titus: «Pōculum nōn est Līviae! Pōculum est Titī!»",
           "source_line": 374,
           "annotation_status": "draft_unverified",
           "tokens": [
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 0,
               "end": 5,
               "lx": null,
@@ -1087,7 +1087,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītī",
+              "t": "Titī",
               "start": 44,
               "end": 48,
               "lx": null,
@@ -1098,7 +1098,7 @@
         },
         {
           "id": "b01-c005-s017",
-          "text_la": "Līvia Tītō pōculum dat.",
+          "text_la": "Līvia Titō pōculum dat.",
           "source_line": 375,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1111,7 +1111,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītō",
+              "t": "Titō",
               "start": 6,
               "end": 10,
               "lx": null,
@@ -1138,12 +1138,12 @@
         },
         {
           "id": "b01-c005-s018",
-          "text_la": "Tītus pōculum accipit et aquam bibit.",
+          "text_la": "Titus pōculum accipit et aquam bibit.",
           "source_line": 376,
           "annotation_status": "draft_unverified",
           "tokens": [
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 0,
               "end": 5,
               "lx": null,
@@ -1674,12 +1674,12 @@
         },
         {
           "id": "b01-c005-s027",
-          "text_la": "Tītus pōculum rubrum in mēnsā pōnit.",
+          "text_la": "Titus pōculum rubrum in mēnsā pōnit.",
           "source_line": 385,
           "annotation_status": "draft_unverified",
           "tokens": [
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 0,
               "end": 5,
               "lx": null,
@@ -2049,12 +2049,12 @@
         },
         {
           "id": "b01-c005-s032",
-          "text_la": "Tītus pōculum habet; Gāius puerō pōculum dat.",
+          "text_la": "Titus pōculum habet; Gāius puerō pōculum dat.",
           "source_line": 393,
           "annotation_status": "draft_unverified",
           "tokens": [
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 0,
               "end": 5,
               "lx": null,
@@ -2209,7 +2209,7 @@
         },
         {
           "id": "b01-c005-s035",
-          "text_la": "Cui Gāius pōculum dat? Tītō.",
+          "text_la": "Cui Gāius pōculum dat? Titō.",
           "source_line": 396,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -2246,7 +2246,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītō",
+              "t": "Titō",
               "start": 23,
               "end": 27,
               "lx": null,
@@ -2716,9 +2716,9 @@
       "type": "proposed_ungraded",
       "status": "proposed_ungraded",
       "source_line": 411,
-      "text_original": "2. Cuius est pōculum? — Pōculum est Tītī.",
+      "text_original": "2. Cuius est pōculum? — Pōculum est Titī.",
       "prompt_text": "Cuius est pōculum?",
-      "model_answer_raw": "Pōculum est Tītī.",
+      "model_answer_raw": "Pōculum est Titī.",
       "reviewed_by": null,
       "reviewed_at": null,
       "scoring_enabled": false
@@ -2728,9 +2728,9 @@
       "type": "proposed_ungraded",
       "status": "proposed_ungraded",
       "source_line": 412,
-      "text_original": "3. Cui Līvia pōculum dat? — Līvia Tītō pōculum dat.",
+      "text_original": "3. Cui Līvia pōculum dat? — Līvia Titō pōculum dat.",
       "prompt_text": "Cui Līvia pōculum dat?",
-      "model_answer_raw": "Līvia Tītō pōculum dat.",
+      "model_answer_raw": "Līvia Titō pōculum dat.",
       "reviewed_by": null,
       "reviewed_at": null,
       "scoring_enabled": false
@@ -2836,10 +2836,10 @@
       "type": "pic",
       "status": "proposed_ungraded",
       "scoring_enabled": false,
-      "prompt_la": "Ubi est Tītus?",
+      "prompt_la": "Ubi est Titus?",
       "scene_id": "b01-c005-scene",
-      "region_id": "Tītus",
-      "answer": "Tītus",
+      "region_id": "Titus",
+      "answer": "Titus",
       "review": {
         "by": null,
         "at": null
@@ -2853,8 +2853,8 @@
       "type": "proposed_ungraded",
       "status": "proposed_ungraded",
       "source_line": 419,
-      "text_original": "- Retell one gift in a single sentence: `Gāius Tītō pōculum dat.`",
-      "prompt_text": "Retell one gift in a single sentence: `Gāius Tītō pōculum dat.`",
+      "text_original": "- Retell one gift in a single sentence: `Gāius Titō pōculum dat.`",
+      "prompt_text": "Retell one gift in a single sentence: `Gāius Titō pōculum dat.`",
       "reviewed_by": null,
       "reviewed_at": null,
       "scoring_enabled": false
