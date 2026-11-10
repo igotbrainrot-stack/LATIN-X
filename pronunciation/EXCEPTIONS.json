@@ -1,0 +1,68 @@
+{
+ "standard": "LATIN-X-RCL-v1",
+ "purpose": "Words whose syllables or stress the general rules in scripts/lib/latin-phonology.cjs would get wrong. Each entry gives the analysis explicitly, the evidence and a status. form is the macron-free lowercase spelling.",
+ "words": [
+  {
+   "form": "gaius",
+   "syllables": [
+    "ɡaː",
+    "ɪ",
+    "ʊs"
+   ],
+   "weights": "HLH",
+   "stress": 0,
+   "status": "AMBIGUOUS",
+   "note": "Trisyllabic Gāĭus, as L&S marks it (Catullus 10.30). Some teaching texts treat it as Gāj-jus, like māior. The TTS prompt 'GAH-yoos' is disyllabic. See LATIN_UNRESOLVED.md U-05. The earlier IPA draft (docs/audio/latin-ipa-pilot-lexicon.json) has the disyllabic ˈɡaː.jʊs.",
+   "source": "Lewis & Short s.v. Gāĭus; A&G §11.d Note"
+  },
+  {
+   "form": "gaium",
+   "syllables": [
+    "ɡaː",
+    "ɪ",
+    "ʊm"
+   ],
+   "weights": "HLH",
+   "stress": 0,
+   "status": "AMBIGUOUS",
+   "note": "As gaius.",
+   "source": "Lewis & Short s.v. Gāĭus"
+  },
+  {
+   "form": "gaio",
+   "syllables": [
+    "ɡaː",
+    "ɪ",
+    "oː"
+   ],
+   "weights": "HLH",
+   "stress": 0,
+   "status": "AMBIGUOUS",
+   "note": "As gaius.",
+   "source": "Lewis & Short s.v. Gāĭus"
+  },
+  {
+   "form": "cui",
+   "syllables": [
+    "kui̯"
+   ],
+   "weights": "H",
+   "stress": 0,
+   "status": "VERIFIED",
+   "note": "ui is a diphthong in cui (one syllable).",
+   "source": "A&G §2; §603.b"
+  },
+  {
+   "form": "deinde",
+   "syllables": [
+    "dei̯n",
+    "dɛ"
+   ],
+   "weights": "HL",
+   "stress": 0,
+   "status": "VERIFIED",
+   "note": "Two syllables by synizesis, not de-in-de.",
+   "source": "A&G §603.c Note"
+  }
+ ]
+}
