@@ -359,9 +359,21 @@ function isSaved(entry){return Object.prototype.hasOwnProperty.call(S.vocab,norm
 function saveButton(entry,cls,label,extra=""){
  return isSaved(entry)?'<button class="'+cls+'" disabled'+extra+'>Saved ✓</button>':'<button class="'+cls+'" data-save="'+esc(norm(entry.head))+'"'+extra+'>'+label+'</button>';
 }
+/* Possible grammatical forms of a clicked word, from content/form-notes.js (draft data).
+ * With macrons hidden, forms that differ only by a macron (mēnsa, mēnsā) are listed together. */
+const formNotes=globalThis.TablinumFormNotes?.forms||{},formNotesPlain=Object.create(null);
+for(const [k,v]of Object.entries(formNotes))(formNotesPlain[norm(k)]??=[]).push(v);
+function formNote(word){
+ const exact=formNotes[String(word).normalize("NFC").toLowerCase()],all=exact?[exact]:(formNotesPlain[norm(word)]||[]);
+ if(!all.length)return "";
+ const draft=' <span class="subtle">Draft note, not yet reviewed.</span>';
+ if(all.every(x=>x.inv))return '<small class="form-note" style="display:block;margin-top:4px">This word does not change its form ('+esc(all[0].inv)+').</small>';
+ const is=[...new Set(all.flatMap(x=>x.is||[]))],of=all.find(x=>x.of).of;
+ return '<small class="form-note" style="display:block;margin-top:4px">Form of <span lang="la">'+esc(spell(of))+'</span>: '+(is.length===1?esc(is[0])+'.':'one of '+esc(is.join("; "))+'. The sentence shows which.')+draft+'</small>';
+}
 function help(){
  const w=Object.prototype.hasOwnProperty.call(dict,norm(chosenWord))?dict[norm(chosenWord)]:undefined;
- $("help").innerHTML='<div class="mini">Dux discendī</div><h3>Learn through context</h3><p class="subtle" style="font-size:12px">Read Latin first, then choose how much guidance you need.</p><div class="mini" style="margin-top:18px">Verbum ēlēctum</div><div class="panel">'+(chosenWord?'<h3 lang="la">'+esc(spell(chosenWord))+'</h3>'+(w?'<p>'+esc(w.meaning)+'</p><small>Headword: <span lang="la">'+esc(spell(w.head))+'</span></small><div class="tools">'+saveButton(w,"btn primary","Save vocabulary")+wordButton()+'</div>':'<small>This word is not in the starter glossary.</small>'+(wordButton()?'<div class="tools">'+wordButton()+'</div>':"")):'<small>Click a Latin word to look it up.</small>')+'</div><div class="tools"><button class="btn" data-action="macrons">'+(S.macrons?"Āā Macrons":"Aa No macrons")+'</button><button class="btn" data-action="guide">'+(S.guided?"Guidance on":"Guidance off")+'</button></div>'+(S.guided?'<details><summary>Explain the grammar</summary><p style="font-size:12px">'+esc(current().explain)+'</p></details>':"")+'<div class="mini" style="margin-top:19px">Notae meae</div><textarea class="field" id="notes" placeholder="Personal notes..." maxlength="5000">'+esc(S.notes[chapterKey()]||"")+'</textarea><small>Notes are stored locally when browser storage is available.</small>';
+ $("help").innerHTML='<div class="mini">Dux discendī</div><h3>Learn through context</h3><p class="subtle" style="font-size:12px">Read Latin first, then choose how much guidance you need.</p><div class="mini" style="margin-top:18px">Verbum ēlēctum</div><div class="panel">'+(chosenWord?'<h3 lang="la">'+esc(spell(chosenWord))+'</h3>'+(w?'<p>'+esc(w.meaning)+'</p><small>Headword: <span lang="la">'+esc(spell(w.head))+'</span></small>'+formNote(chosenWord)+'<div class="tools">'+saveButton(w,"btn primary","Save vocabulary")+wordButton()+'</div>':'<small>This word is not in the starter glossary.</small>'+(wordButton()?'<div class="tools">'+wordButton()+'</div>':"")):'<small>Click a Latin word to look it up.</small>')+'</div><div class="tools"><button class="btn" data-action="macrons">'+(S.macrons?"Āā Macrons":"Aa No macrons")+'</button><button class="btn" data-action="guide">'+(S.guided?"Guidance on":"Guidance off")+'</button></div>'+(S.guided?'<details><summary>Explain the grammar</summary><p style="font-size:12px">'+esc(current().explain)+'</p></details>':"")+'<div class="mini" style="margin-top:19px">Notae meae</div><textarea class="field" id="notes" placeholder="Personal notes..." maxlength="5000">'+esc(S.notes[chapterKey()]||"")+'</textarea><small>Notes are stored locally when browser storage is available.</small>';
 }
 function guidedHint(i,level){
  const c=current(),s=c.sent[i];if(!s||level<=0)return"";
@@ -400,7 +412,7 @@ let h='<div class="mini">Lēctiō '+esc(activeCourse?activeCourse.chapter:S.ch==
  if(activeCourse&&activeCourse.status==="approved"){
   h+='<div class="tools"><button class="btn" data-action="courseFinished">Mark approved chapter read · add reviewed lexemes</button></div>';
  }
-  h+='<div class="tools"><button class="btn" data-action="prevChapter"'+(S.ch===0?" disabled":"")+'>← '+(S.ch==="custom"?"First chapter":"Previous chapter")+'</button><button class="btn primary" data-tab="quiz">Check understanding →</button></div>';
+  h+='<div class="tools"><button class="btn" data-action="prevChapter"'+(S.ch===0?" disabled":"")+'>← '+(S.ch==="custom"?"First chapter":"Previous chapter")+'</button><button class="btn primary" data-tab="quiz">Check understanding →</button>'+(S.ch==="custom"?"":'<button class="btn" data-action="nextChapter"'+(S.ch>=L.length-1?" disabled":"")+'>Next chapter →</button>')+'</div>';
  return h;
 }
 function answer(index,value){
@@ -830,7 +842,8 @@ document.addEventListener("click",e=>{
  case"narrationTake":if(narration){const sid=currentSentenceId();narration.setAlternative(sid,!narration.usingAlternative(sid));clearVoice();updateDock();updateBanner("Alternative take selected. Click the sentence to listen.")}break;
  case"previous":selectSentence(S.sel-1);break;
  case"forward":selectSentence(S.sel+1);break;
- case"prevChapter":setChapter(S.ch==="custom"?0:Math.max(0,S.ch-1));break;
+ case"nextChapter":if(S.ch!=="custom")setChapter(Math.min(L.length-1,S.ch+1));break;
+  case"prevChapter":setChapter(S.ch==="custom"?0:Math.max(0,S.ch-1));break;
  case"nextChapter":setChapter(Math.min(L.length-1,Number(S.ch||0)+1));break;
  case"courseFinished":{
   if(!activeCourse||activeCourse.status!=="approved")break;

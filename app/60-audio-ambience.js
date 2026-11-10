@@ -28,7 +28,7 @@ function romanStop(){if(romanTimer){clearInterval(romanTimer);romanTimer=null}
  if(romanCurrent)romanCurrent.pause();if(romanNext)romanNext.pause();romanVolume()}
 function romanCreate(i){
  const a=new root.Audio(romanTracks[i]);a.preload="auto";a.volume=0;
- a.addEventListener("error",()=>{romanFailed=true;romanStop();if(activated&&settings.music)resumeLoop()});
+ a.addEventListener("error",()=>{romanFailed=true;romanStop();if(activated&&settings.music&&!recording&&displayed())resumeLoop()});
  a.addEventListener("ended",()=>{if(romanFading||romanCurrent!==a)return;
   romanIndex=(romanIndex+1)%romanTracks.length;romanCurrent=romanCreate(romanIndex);
   if(activated&&settings.music&&!recording&&displayed()){romanVolume();romanCurrent.play().catch(()=>{})}
@@ -209,7 +209,7 @@ if(typeof document==="object"){
  document.addEventListener("keydown",activate,{capture:true});
  document.addEventListener("visibilitychange",()=>{
   if(document.hidden){stopLoop();if(ctx&&ctx.state==="running")ctx.suspend().catch(()=>{})}
-  else if(activated&&settings.music)resumeLoop();
+  else if(activated&&settings.music&&!recording)resumeLoop();
  });
 }
 root.TablinumAmbience=Object.freeze({defaults:defs,configure,set,activate,sound,duck,setRecording,

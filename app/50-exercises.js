@@ -75,7 +75,13 @@ function legacyAdapter(chapterIndex,questionIndex,q){
 function gradeLegacy(q,value){
  if(!Array.isArray(q))return false;
  const accepted=[...(Array.isArray(q[2])?q[2]:[q[2]]),q[3]].filter(x=>typeof x==="string");
- return accepted.some(a=>legacyNorm(a)===legacyNorm(value));
+ const given=legacyNorm(value);
+ if(accepted.some(a=>legacyNorm(a)===given))return true;
+ /* Latin word order is free in these short clauses, so the same words of an accepted
+  * answer in another order are also accepted (Magna est arbor = Arbor magna est).
+  * Every word must still match an accepted answer; macrons stay optional, as before. */
+ const bag=x=>legacyNorm(x).split(" ").sort().join(" ");
+ return given.includes(" ")&&accepted.some(a=>bag(a)===bag(given));
 }
 root.TablinumExercises=Object.freeze({TYPES,registry,norm,escapeHTML,approved,visible,gradable,valid,grade,gradeLegacy,legacyAdapter});
 if(typeof module!=="undefined"&&module.exports)module.exports=root.TablinumExercises;
