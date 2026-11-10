@@ -4,7 +4,7 @@
   "legacy": true,
   "status": "legacy_unreviewed",
   "original_zero_based_index": 2,
-  "legacy_source_fingerprint_fnv32": "7f84f366",
+  "legacy_source_fingerprint_fnv32": "645a9a40",
   "title": "Dōnum",
   "legacy_source": {
     "name": "Dōnum",
@@ -18,7 +18,7 @@
         "Livia has a red rose."
       ],
       [
-        "Tītus librum habet.",
+        "Titus librum habet.",
         "Titus has a book."
       ],
       [
@@ -42,7 +42,7 @@
         "Marcus reads the book."
       ],
       [
-        "Tītus patrem spectat.",
+        "Titus patrem spectat.",
         "Titus watches his father."
       ],
       [
@@ -128,7 +128,7 @@
         [
           "patrī",
           "mātrī",
-          "Tītō"
+          "Titō"
         ],
         "mātrī",
         "Līvia mātrī dat."
@@ -139,7 +139,8 @@
         [
           "librum",
           "librum legit",
-          "Mārcus legit librum"
+          "Mārcus legit librum",
+          "legit librum"
         ],
         "Mārcus librum legit."
       ]
@@ -206,11 +207,11 @@
     },
     {
       "id": "legacy-ch03-s002",
-      "text_la": "Tītus librum habet.",
+      "text_la": "Titus librum habet.",
       "en": "Titus has a book.",
       "tokens": [
         {
-          "t": "Tītus",
+          "t": "Titus",
           "start": 0,
           "end": 5,
           "lx": null,
@@ -460,11 +461,11 @@
     },
     {
       "id": "legacy-ch03-s008",
-      "text_la": "Tītus patrem spectat.",
+      "text_la": "Titus patrem spectat.",
       "en": "Titus watches his father.",
       "tokens": [
         {
-          "t": "Tītus",
+          "t": "Titus",
           "start": 0,
           "end": 5,
           "lx": null,
@@ -578,7 +579,7 @@
         [
           "patrī",
           "mātrī",
-          "Tītō"
+          "Titō"
         ],
         "mātrī",
         "Līvia mātrī dat."
@@ -592,7 +593,8 @@
         [
           "librum",
           "librum legit",
-          "Mārcus legit librum"
+          "Mārcus legit librum",
+          "legit librum"
         ],
         "Mārcus librum legit."
       ]

@@ -11,6 +11,7 @@ const {checkCoverage}=require('./lib/coverage.cjs');
 const {recurrenceReport}=require('./lib/recurrence.cjs');
 const {validateRegistry,validDate}=require('./lib/schema.cjs');
 const {extractLessons,extractArray,readLegacySource}=require('./lib/extract-legacy.cjs');
+const {effectiveLessons,effectiveCloze}=require('./lib/legacy-errata.cjs');
 const ROOT=path.resolve(__dirname,'..');
 const json=v=>JSON.stringify(v,null,2)+'\n';
 const sha=s=>crypto.createHash('sha256').update(s).digest('hex');
@@ -68,7 +69,7 @@ function compile(opts={}){
  const sources=opts.lessons||listing(path.join(root,'lessons')).map(p=>({path:path.relative(root,p).split(path.sep).join('/'),data:JSON.parse(fs.readFileSync(p,'utf8'))}));
  const seen=new Map(),retiredSet=new Set(retired.ids);const legacy=[],course=[],errors=[],warnings=[];
  const html=opts.legacyHTML===undefined?(fs.existsSync(path.join(root,'index.html'))?readLegacySource(root):null):opts.legacyHTML;
- const original=html?extractLessons(html):[],originalCloze=html?extractArray(html,'const guidedCloze=','\n];\n// Contextual hints'):[];
+ const original=html?effectiveLessons(extractLessons(html)):[],originalCloze=html?effectiveCloze(extractArray(html,'const guidedCloze=','\n];\n// Contextual hints')):[];
  for(const src of sources){const l=src.data,where=src.path||'fixture';must(l.schema==='tablinum-lesson-v1',`${where}: schema invalid`);addId(l.id,where,seen,retiredSet);
   if(l.legacy){
    must(/^legacy-ch\d{2}$/.test(l.id)&&l.status==='legacy_unreviewed',`${where}: invalid legacy status/id`);

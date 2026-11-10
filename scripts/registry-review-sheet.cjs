@@ -11,6 +11,7 @@ const fs=require("node:fs");
 const path=require("node:path");
 const assert=require("node:assert/strict");
 const {extractArray,readLegacySource}=require("./lib/extract-legacy.cjs");
+const {effectiveLessons,effectiveShared}=require("./lib/legacy-errata.cjs");
 const {parseCsv,writeCsv}=require("./lib/review-csv.cjs");
 const {HEADERS,reviewRows,reviewImport}=require("./lib/review-workflow.cjs");
 const {validateRegistry,validateCandidateMap,validateVocabMap}=require("./lib/schema.cjs");
@@ -43,8 +44,8 @@ const audit=JSON.parse(fs.readFileSync(files.audit,"utf8"));
 const candidates=JSON.parse(fs.readFileSync(files.candidates,"utf8"));
 const registry=JSON.parse(fs.readFileSync(files.registry,"utf8"));
 const src=readLegacySource(root);
-const lessons=extractArray(src,"const L=","\n];\n\nconst shared=");
-const shared=extractArray(src,"const shared=",";\nfunction norm(",0);
+const lessons=effectiveLessons(extractArray(src,"const L=","\n];\n\nconst shared="));
+const shared=effectiveShared(extractArray(src,"const shared=",";\nfunction norm(",0));
 validateCandidateMap(candidates,audit,validateRegistry(registry));
 const cleanRow=r=>Object.fromEntries(HEADERS.map(h=>[h,r[h]||""]));
 if(mode==="--export"){

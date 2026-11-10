@@ -4,7 +4,7 @@
   "legacy": true,
   "status": "legacy_unreviewed",
   "original_zero_based_index": 7,
-  "legacy_source_fingerprint_fnv32": "f2fb8c63",
+  "legacy_source_fingerprint_fnv32": "852a503f",
   "title": "Crās",
   "legacy_source": {
     "name": "Crās",
@@ -22,7 +22,7 @@
         "Livia will carry roses."
       ],
       [
-        "Tītus librum feret.",
+        "Titus librum feret.",
         "Titus will bring a book."
       ],
       [
@@ -130,14 +130,14 @@
         "Crās familia amīcum vīsitābit."
       ],
       [
-        "Quid Tītus feret?",
+        "Quid Titus feret?",
         [
           "librum",
           "canem",
           "pānem"
         ],
         "librum",
-        "Tītus librum feret."
+        "Titus librum feret."
       ],
       [
         "Quid Līvia portābit?",
@@ -145,7 +145,8 @@
         [
           "rosās",
           "rosās portābit",
-          "Līvia portābit rosās"
+          "Līvia portābit rosās",
+          "rosās Līvia portābit"
         ],
         "Līvia rosās portābit."
       ]
@@ -251,11 +252,11 @@
     },
     {
       "id": "legacy-ch08-s003",
-      "text_la": "Tītus librum feret.",
+      "text_la": "Titus librum feret.",
       "en": "Titus will bring a book.",
       "tokens": [
         {
-          "t": "Tītus",
+          "t": "Titus",
           "start": 0,
           "end": 5,
           "lx": null,
@@ -567,14 +568,14 @@
     {
       "id": "legacy-ch08-q002",
       "legacy_source": [
-        "Quid Tītus feret?",
+        "Quid Titus feret?",
         [
           "librum",
           "canem",
           "pānem"
         ],
         "librum",
-        "Tītus librum feret."
+        "Titus librum feret."
       ]
     },
     {
@@ -585,7 +586,8 @@
         [
           "rosās",
           "rosās portābit",
-          "Līvia portābit rosās"
+          "Līvia portābit rosās",
+          "rosās Līvia portābit"
         ],
         "Līvia rosās portābit."
       ]

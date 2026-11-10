@@ -5,7 +5,7 @@
   "sentenceCount": 67,
   "questionCount": 24,
   "clozeCount": 8,
-  "sharedGlossaryFnv32": "9d3b413b",
+  "sharedGlossaryFnv32": "4ffabde9",
   "chapters": [
     {
       "legacyId": "legacy-ch01",
@@ -15,45 +15,180 @@
     },
     {
       "legacyId": "legacy-ch02",
-      "allLessonDataFnv32": "62d138c8",
-      "questionDataFnv32": "251b13c9",
-      "clozeDataFnv32": "982375f9"
+      "allLessonDataFnv32": "383a057f",
+      "questionDataFnv32": "8b54a13e",
+      "clozeDataFnv32": "d263fb29"
     },
     {
       "legacyId": "legacy-ch03",
-      "allLessonDataFnv32": "7f84f366",
-      "questionDataFnv32": "7ce14a19",
+      "allLessonDataFnv32": "645a9a40",
+      "questionDataFnv32": "07b7bef3",
       "clozeDataFnv32": "905bd51a"
     },
     {
       "legacyId": "legacy-ch04",
-      "allLessonDataFnv32": "4e3d6fc6",
-      "questionDataFnv32": "e8758235",
-      "clozeDataFnv32": "bd753c1e"
+      "allLessonDataFnv32": "c45fcb56",
+      "questionDataFnv32": "4bf7c35d",
+      "clozeDataFnv32": "27fe2f2c"
     },
     {
       "legacyId": "legacy-ch05",
-      "allLessonDataFnv32": "1178ea02",
+      "allLessonDataFnv32": "ffe679b8",
       "questionDataFnv32": "d3ada3a1",
-      "clozeDataFnv32": "b2f3d817"
+      "clozeDataFnv32": "df5c885d"
     },
     {
       "legacyId": "legacy-ch06",
-      "allLessonDataFnv32": "32792e21",
-      "questionDataFnv32": "c23eace2",
-      "clozeDataFnv32": "94183a2a"
+      "allLessonDataFnv32": "24fecce3",
+      "questionDataFnv32": "3cf6d0b8",
+      "clozeDataFnv32": "a461f4b6"
     },
     {
       "legacyId": "legacy-ch07",
-      "allLessonDataFnv32": "91aa1b37",
-      "questionDataFnv32": "67bc6ce1",
+      "allLessonDataFnv32": "fa6addbd",
+      "questionDataFnv32": "4d1225cf",
       "clozeDataFnv32": "0e0c36ba"
     },
     {
       "legacyId": "legacy-ch08",
-      "allLessonDataFnv32": "f2fb8c63",
-      "questionDataFnv32": "136fcdcc",
+      "allLessonDataFnv32": "852a503f",
+      "questionDataFnv32": "05ff101e",
       "clozeDataFnv32": "867d07aa"
+    }
+  ],
+  "errata_applied": [
+    {
+      "approved_by": "owner",
+      "approved_at": "2026-11-10",
+      "findings": [
+        "LX-001",
+        "LX-017",
+        "LX-018"
+      ],
+      "archive_unchanged": true,
+      "priorSharedGlossaryFnv32": "9d3b413b",
+      "newSharedGlossaryFnv32": "4ffabde9",
+      "changedChapters": [
+        {
+          "chapter": 2,
+          "old": {
+            "legacyId": "legacy-ch02",
+            "allLessonDataFnv32": "62d138c8",
+            "questionDataFnv32": "251b13c9",
+            "clozeDataFnv32": "982375f9"
+          },
+          "new": {
+            "legacyId": "legacy-ch02",
+            "allLessonDataFnv32": "383a057f",
+            "questionDataFnv32": "8b54a13e",
+            "clozeDataFnv32": "d263fb29"
+          },
+          "fingerprintOld": "eaac64d1",
+          "fingerprintNew": "aa13fd81"
+        },
+        {
+          "chapter": 3,
+          "old": {
+            "legacyId": "legacy-ch03",
+            "allLessonDataFnv32": "7f84f366",
+            "questionDataFnv32": "7ce14a19",
+            "clozeDataFnv32": "905bd51a"
+          },
+          "new": {
+            "legacyId": "legacy-ch03",
+            "allLessonDataFnv32": "645a9a40",
+            "questionDataFnv32": "07b7bef3",
+            "clozeDataFnv32": "905bd51a"
+          },
+          "fingerprintOld": "86b1cbae",
+          "fingerprintNew": "5ce2a8b2"
+        },
+        {
+          "chapter": 4,
+          "old": {
+            "legacyId": "legacy-ch04",
+            "allLessonDataFnv32": "4e3d6fc6",
+            "questionDataFnv32": "e8758235",
+            "clozeDataFnv32": "bd753c1e"
+          },
+          "new": {
+            "legacyId": "legacy-ch04",
+            "allLessonDataFnv32": "c45fcb56",
+            "questionDataFnv32": "4bf7c35d",
+            "clozeDataFnv32": "27fe2f2c"
+          },
+          "fingerprintOld": "27f0fe73",
+          "fingerprintNew": "e1b9ceb9"
+        },
+        {
+          "chapter": 5,
+          "old": {
+            "legacyId": "legacy-ch05",
+            "allLessonDataFnv32": "1178ea02",
+            "questionDataFnv32": "d3ada3a1",
+            "clozeDataFnv32": "b2f3d817"
+          },
+          "new": {
+            "legacyId": "legacy-ch05",
+            "allLessonDataFnv32": "ffe679b8",
+            "questionDataFnv32": "d3ada3a1",
+            "clozeDataFnv32": "df5c885d"
+          },
+          "fingerprintOld": "51e429cb",
+          "fingerprintNew": "8e30e611"
+        },
+        {
+          "chapter": 6,
+          "old": {
+            "legacyId": "legacy-ch06",
+            "allLessonDataFnv32": "32792e21",
+            "questionDataFnv32": "c23eace2",
+            "clozeDataFnv32": "94183a2a"
+          },
+          "new": {
+            "legacyId": "legacy-ch06",
+            "allLessonDataFnv32": "24fecce3",
+            "questionDataFnv32": "3cf6d0b8",
+            "clozeDataFnv32": "a461f4b6"
+          },
+          "fingerprintOld": "078122ee",
+          "fingerprintNew": "078122ee"
+        },
+        {
+          "chapter": 7,
+          "old": {
+            "legacyId": "legacy-ch07",
+            "allLessonDataFnv32": "91aa1b37",
+            "questionDataFnv32": "67bc6ce1",
+            "clozeDataFnv32": "0e0c36ba"
+          },
+          "new": {
+            "legacyId": "legacy-ch07",
+            "allLessonDataFnv32": "fa6addbd",
+            "questionDataFnv32": "4d1225cf",
+            "clozeDataFnv32": "0e0c36ba"
+          },
+          "fingerprintOld": "9d6df6d1",
+          "fingerprintNew": "17129449"
+        },
+        {
+          "chapter": 8,
+          "old": {
+            "legacyId": "legacy-ch08",
+            "allLessonDataFnv32": "f2fb8c63",
+            "questionDataFnv32": "136fcdcc",
+            "clozeDataFnv32": "867d07aa"
+          },
+          "new": {
+            "legacyId": "legacy-ch08",
+            "allLessonDataFnv32": "852a503f",
+            "questionDataFnv32": "05ff101e",
+            "clozeDataFnv32": "867d07aa"
+          },
+          "fingerprintOld": "c3b4d1fd",
+          "fingerprintNew": "e10ea4ef"
+        }
+      ]
     }
   ]
 }

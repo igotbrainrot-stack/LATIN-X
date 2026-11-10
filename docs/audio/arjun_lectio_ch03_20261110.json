@@ -15,7 +15,7 @@
     },
     {
       "sentence_id": "legacy-ch03-s002",
-      "canonical_text": "Tītus librum habet.",
+      "canonical_text": "Titus librum habet.",
       "tts_input": "Tītus librum habet.",
       "runway_task_id": "e50bd073-8757-4fea-8e64-4b343bf6bba5",
       "status": "task_pending"
@@ -57,7 +57,7 @@
     },
     {
       "sentence_id": "legacy-ch03-s008",
-      "canonical_text": "Tītus patrem spectat.",
+      "canonical_text": "Titus patrem spectat.",
       "tts_input": "Tītus patrem spectat.",
       "runway_task_id": "08a29f01-1b9f-4993-b418-7b8f29c49d1d",
       "status": "task_pending"

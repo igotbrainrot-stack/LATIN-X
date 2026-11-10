@@ -13,6 +13,7 @@
 const fs=require("node:fs");
 const path=require("node:path");
 const {extractArray,readLegacySource}=require("./lib/extract-legacy.cjs");
+const {effectiveLessons,effectiveShared}=require("./lib/legacy-errata.cjs");
 const assert=require("node:assert/strict");
 const root=path.resolve(__dirname,"..");
 const appPath=path.join(root,"index.html");
@@ -20,8 +21,8 @@ const outputPath=path.join(root,"curriculum","lexicon","legacy-token-audit.json"
 const idMapPath=path.join(root,"curriculum","lexicon","legacy-id-map.json");
 
 const source=readLegacySource(root);
-const L=extractArray(source,"const L=","\n];\n\nconst shared=");
-const shared=extractArray(source,"const shared=",";\nfunction norm(",0);
+const L=effectiveLessons(extractArray(source,"const L=","\n];\n\nconst shared="));
+const shared=effectiveShared(extractArray(source,"const shared=",";\nfunction norm(",0));
 assert.equal(L.length,8,"Legacy lesson count must remain 8; do not silently map plan chapters");
 assert.equal(shared.length>10,true);
 const normalize=s=>String(s).normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();

@@ -3,7 +3,7 @@
 "use strict";
 const L=Array.from({length:8},(_,index)=>globalThis.Tablinum.legacySourceAt(index));
 
-const shared=[["in","in",""],["et","and",""],["haec","this (feminine)",""],["hic","this (masculine)",""],["quis","who",""],["quid","what",""],["ubi","where",""],["quō","where to",""],["cui","to whom",""],["cuius","whose",""],["an","or (in a question)",""],["est","is",""],["sunt","are",""],["sed","but",""],["nōn","not",""],["quoque","also",""],["cum","with",""],["ad","to, toward",""],["ē","from",""],["sub","under",""],["habet","has",""],["habēmus","we have",""],["nunc","now",""],["omnēs","everyone",""],["prope","near",""],["homō","person","hominēs"],["māter","mother","mātrem mātrī"],["pater","father","patrem patrī"],["grātiās","thanks",""],["agere","to do, drive; express thanks","agō"],["respondēre","to answer","respondet"],["nōlī","do not (singular command)",""],["timēre","to fear",""],["parāre","to prepare","parāmus"],["rosa","rose","rosās"],["sē","himself/herself/themselves",""],["Tītus","Titus","Tītō Tītum"],["Mārcus","Marcus","Mārcum"],["quam","whom/which (feminine accusative)",""],["per","through",""]];
+const shared=[["in","in",""],["et","and",""],["haec","this (feminine)",""],["hic","this (masculine)",""],["quis","who",""],["quid","what",""],["ubi","where",""],["quō","where to",""],["cui","to whom",""],["cuius","whose",""],["an","or (in a question)",""],["est","is",""],["sunt","are",""],["sed","but",""],["nōn","not",""],["quoque","also",""],["cum","with",""],["ad","to, toward",""],["ē","from",""],["sub","under",""],["habet","has",""],["habēmus","we have",""],["nunc","now",""],["omnēs","everyone",""],["prope","near",""],["homō","person","hominēs"],["māter","mother","mātrem mātrī"],["pater","father","patrem patrī"],["grātiās","thanks",""],["agere","to do, drive; express thanks","agō"],["respondēre","to answer","respondet"],["nōlī","do not (singular command)",""],["timēre","to fear",""],["parāre","to prepare","parāmus"],["rosa","rose","rosās"],["sē","himself/herself/themselves",""],["Titus","Titus","Titō Titum"],["Mārcus","Marcus","Mārcum"],["quam","whom/which (feminine accusative)",""],["per","through",""]];
 function norm(s){return String(s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().replace(/[^a-z0-9 ]/g,"").trim().replace(/\s+/g," ")}
 const dict=Object.create(null);
 for(const w of [...shared,...L.flatMap(c=>c.v)]){
@@ -25,11 +25,11 @@ if(publishedLexicon&&publishedLexicon.schema==="tablinum-content-lexicon-v1"&&Ar
 }
 const guidedCloze=[
  {text:"Arbor magna est. In hortō est ____ magna.",answers:["arbor"],clue:"Arbor est magna; puella parva est.",proof:"In hortō est arbor magna."},
- {text:"Līvia soror ____ est.",answers:["Tītī"],clue:"Quis est frāter Līviae?",proof:"Līvia soror Tītī est."},
+ {text:"Līvia soror ____ est.",answers:["Titī"],clue:"Quis est frāter Līviae?",proof:"Līvia soror Titī est."},
  {text:"Līvia rosam mātrī ____.",answers:["dat"],clue:"Quid Līvia facit?",proof:"Līvia rosam mātrī dat."},
- {text:"Tītus pānem ____.",answers:["edit"],clue:"Quid Tītus facit?",proof:"Tītus pānem edit."},
- {text:"Mārcus duo māla ____.",answers:["emit"],clue:"Quid in forō Mārcus facit?",proof:"Mārcus duo māla emit."},
- {text:"Canis in viā ____.",answers:["currit"],clue:"Canis nōn sedet.",proof:"Canis in viā currit."},
+ {text:"Titus pānem ____.",answers:["edit"],clue:"Quid Titus facit?",proof:"Titus pānem edit."},
+ {text:"Mārcus duo māla ____.",answers:["emit","habet"],clue:"Quid in forō Mārcus facit?",proof:"Mārcus duo māla emit."},
+ {text:"Canis in viā ____.",answers:["currit","est"],clue:"Canis nōn sedet.",proof:"Canis in viā currit."},
  {text:"Herī pluvia ____.",answers:["erat"],clue:"Herī, nōn hodiē.",proof:"Herī pluvia erat."},
  {text:"Crās familia amīcum ____.",answers:["vīsitābit"],clue:"Quid familia crās faciet?",proof:"Crās familia amīcum vīsitābit."}
 ];

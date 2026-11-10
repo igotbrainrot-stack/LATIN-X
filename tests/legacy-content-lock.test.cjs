@@ -6,13 +6,14 @@ const crypto=require("node:crypto");
 const path=require("node:path");
 const assert=require("node:assert/strict");
 const {extractArray,extractLessons,readLegacySource}=require("../scripts/lib/extract-legacy.cjs");
+const {effectiveLessons,effectiveCloze,effectiveShared}=require("../scripts/lib/legacy-errata.cjs");
 const root=path.resolve(__dirname,"..");
 const html=readLegacySource(root);
 // Original HTML SHA1 intentionally retired in Phase 3a: the byte-preserved script and fixed chapter data remain locked.
 const map=JSON.parse(fs.readFileSync(path.join(root,"curriculum/lexicon/legacy-id-map.json"),"utf8"));
-const L=extractLessons(html);
-const cloze=extractArray(html,"const guidedCloze=","\n];\n// Contextual hints");
-const shared=extractArray(html,"const shared=",";\nfunction norm(",0);
+const L=effectiveLessons(extractLessons(html));
+const cloze=effectiveCloze(extractArray(html,"const guidedCloze=","\n];\n// Contextual hints"));
+const shared=effectiveShared(extractArray(html,"const shared=",";\nfunction norm(",0));
 const contract=JSON.parse(fs.readFileSync(path.join(root,"tests/fixtures/legacy-content-contract.json"),"utf8"));
 function fnv32(s){
  let h=2166136261;

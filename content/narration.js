@@ -250,7 +250,7 @@ root.TablinumNarrationCatalogue=freeze({
     },
     {
       "sentence_id": "legacy-ch02-s006",
-      "canonical_text": "Tītus frāter Līviae est.",
+      "canonical_text": "Titus frāter Līviae est.",
       "takes": [
         {
           "clip_id": "arjun-legacy-ch02-s006",
@@ -266,7 +266,7 @@ root.TablinumNarrationCatalogue=freeze({
     },
     {
       "sentence_id": "legacy-ch02-s007",
-      "canonical_text": "Līvia soror Tītī est.",
+      "canonical_text": "Līvia soror Titī est.",
       "takes": [
         {
           "clip_id": "arjun-legacy-ch02-s007",
@@ -330,7 +330,7 @@ root.TablinumNarrationCatalogue=freeze({
     },
     {
       "sentence_id": "legacy-ch03-s002",
-      "canonical_text": "Tītus librum habet.",
+      "canonical_text": "Titus librum habet.",
       "takes": [
         {
           "clip_id": "arjun-legacy-ch03-s002",
@@ -426,7 +426,7 @@ root.TablinumNarrationCatalogue=freeze({
     },
     {
       "sentence_id": "legacy-ch03-s008",
-      "canonical_text": "Tītus patrem spectat.",
+      "canonical_text": "Titus patrem spectat.",
       "takes": [
         {
           "clip_id": "arjun-legacy-ch03-s008",
@@ -490,7 +490,7 @@ root.TablinumNarrationCatalogue=freeze({
     },
     {
       "sentence_id": "legacy-ch04-s003",
-      "canonical_text": "Tītus pānem edit.",
+      "canonical_text": "Titus pānem edit.",
       "takes": [
         {
           "clip_id": "arjun-legacy-ch04-s003",
@@ -666,7 +666,7 @@ root.TablinumNarrationCatalogue=freeze({
     },
     {
       "sentence_id": "legacy-ch05-s006",
-      "canonical_text": "Tītus interrogat: «Quot māla habēmus?»",
+      "canonical_text": "Titus interrogat: «Quot māla habēmus?»",
       "takes": [
         {
           "clip_id": "arjun-legacy-ch05-s006",
@@ -890,7 +890,7 @@ root.TablinumNarrationCatalogue=freeze({
     },
     {
       "sentence_id": "legacy-ch07-s004",
-      "canonical_text": "Tītus per fenestram spectābat.",
+      "canonical_text": "Titus per fenestram spectābat.",
       "takes": [
         {
           "clip_id": "arjun-legacy-ch07-s004",
@@ -922,7 +922,7 @@ root.TablinumNarrationCatalogue=freeze({
     },
     {
       "sentence_id": "legacy-ch07-s006",
-      "canonical_text": "Tītus timēbat.",
+      "canonical_text": "Titus timēbat.",
       "takes": [
         {
           "clip_id": "arjun-legacy-ch07-s006",
@@ -1002,7 +1002,7 @@ root.TablinumNarrationCatalogue=freeze({
     },
     {
       "sentence_id": "legacy-ch08-s003",
-      "canonical_text": "Tītus librum feret.",
+      "canonical_text": "Titus librum feret.",
       "takes": [
         {
           "clip_id": "arjun-legacy-ch08-s003",

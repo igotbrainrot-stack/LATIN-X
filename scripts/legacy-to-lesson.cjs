@@ -4,11 +4,12 @@ const fs=require('node:fs'),path=require('node:path');
 const {extractArray,extractLessons,readLegacySource}=require('./lib/extract-legacy.cjs');
 const {tokenize,checkTokens}=require('./lib/tokens.cjs');
 const {fnv32}=require('./lib/ids.cjs');
+const {effectiveLessons,effectiveCloze}=require('./lib/legacy-errata.cjs');
 const root=path.resolve(__dirname,'..');
 const audit=require('../curriculum/lexicon/legacy-token-audit.json');
 const idmap=require('../curriculum/lexicon/legacy-id-map.json');
 const html=readLegacySource(root);
-const lessons=extractLessons(html),clozes=extractArray(html,'const guidedCloze=','\n];\n// Contextual hints');
+const lessons=effectiveLessons(extractLessons(html)),clozes=effectiveCloze(extractArray(html,'const guidedCloze=','\n];\n// Contextual hints'));
 function make(index){
  const ch=lessons[index],lid=`legacy-ch${String(index+1).padStart(2,'0')}`;
  const sourceAudit=audit.chapters[index];

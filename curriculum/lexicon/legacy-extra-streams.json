@@ -3,11 +3,11 @@
   "source": "index.html / chapter.context, chapter.q, guidedCloze; original order",
   "policy": "Exercises, contexts and cloze are NEVER first-introduction evidence. Text may be mixed English/Latin; all tokens require language and morphology review.",
   "verified_introductions": 0,
-  "total_records": 177,
+  "total_records": 184,
   "by_stream": {
     "context": 8,
-    "exercise": 137,
-    "cloze": 32
+    "exercise": 142,
+    "cloze": 34
   },
   "unglossed_tokens": [
     {
@@ -1093,7 +1093,7 @@
       "stream": "context",
       "part": "context",
       "ref": "legacy-ch02-context",
-      "raw_text": "Mārcus, Flāvia, Līvia et Tītus familia sunt.",
+      "raw_text": "Mārcus, Flāvia, Līvia et Titus familia sunt.",
       "contains_latin": "requires_review",
       "counted_as_new_introduction": false,
       "tokens": [
@@ -1148,7 +1148,7 @@
         {
           "token_id": "legacy-ch02-context-t005",
           "ordinal": 5,
-          "surface": "Tītus",
+          "surface": "Titus",
           "source_candidate_ids": [
             "legacy-lex-titus-0ec305e6"
           ],
@@ -1247,14 +1247,14 @@
       "stream": "exercise",
       "part": "choice",
       "ref": "legacy-ch02-q001-choice01",
-      "raw_text": "Tītus",
+      "raw_text": "Titus",
       "contains_latin": "requires_review",
       "counted_as_new_introduction": false,
       "tokens": [
         {
           "token_id": "legacy-ch02-q001-choice01-t001",
           "ordinal": 1,
-          "surface": "Tītus",
+          "surface": "Titus",
           "source_candidate_ids": [
             "legacy-lex-titus-0ec305e6"
           ],
@@ -1398,7 +1398,7 @@
       "stream": "exercise",
       "part": "prompt",
       "ref": "legacy-ch02-q002-prompt",
-      "raw_text": "Cuius frāter est Tītus?",
+      "raw_text": "Cuius frāter est Titus?",
       "contains_latin": "requires_review",
       "counted_as_new_introduction": false,
       "tokens": [
@@ -1441,7 +1441,7 @@
         {
           "token_id": "legacy-ch02-q002-prompt-t004",
           "ordinal": 4,
-          "surface": "Tītus",
+          "surface": "Titus",
           "source_candidate_ids": [
             "legacy-lex-titus-0ec305e6"
           ],
@@ -1527,14 +1527,14 @@
       "stream": "exercise",
       "part": "answer",
       "ref": "legacy-ch02-q002-answer03",
-      "raw_text": "Tītus est frāter Līviae",
+      "raw_text": "Titus est frāter Līviae",
       "contains_latin": "requires_review",
       "counted_as_new_introduction": false,
       "tokens": [
         {
           "token_id": "legacy-ch02-q002-answer03-t001",
           "ordinal": 1,
-          "surface": "Tītus",
+          "surface": "Titus",
           "source_candidate_ids": [
             "legacy-lex-titus-0ec305e6"
           ],
@@ -1584,16 +1584,75 @@
     {
       "chapter_id": "legacy-ch02",
       "stream": "exercise",
+      "part": "answer",
+      "ref": "legacy-ch02-q002-answer04",
+      "raw_text": "Titus Līviae frāter est",
+      "contains_latin": "requires_review",
+      "counted_as_new_introduction": false,
+      "tokens": [
+        {
+          "token_id": "legacy-ch02-q002-answer04-t001",
+          "ordinal": 1,
+          "surface": "Titus",
+          "source_candidate_ids": [
+            "legacy-lex-titus-0ec305e6"
+          ],
+          "candidate_match_status": "proper_name_candidate",
+          "lexeme_id": null,
+          "linguistic_status": "unreviewed",
+          "counted_as_new_introduction": false
+        },
+        {
+          "token_id": "legacy-ch02-q002-answer04-t002",
+          "ordinal": 2,
+          "surface": "Līviae",
+          "source_candidate_ids": [
+            "legacy-lex-livia-0abb9e0e"
+          ],
+          "candidate_match_status": "proper_name_candidate",
+          "lexeme_id": null,
+          "linguistic_status": "unreviewed",
+          "counted_as_new_introduction": false
+        },
+        {
+          "token_id": "legacy-ch02-q002-answer04-t003",
+          "ordinal": 3,
+          "surface": "frāter",
+          "source_candidate_ids": [
+            "legacy-lex-frater-35bc1205"
+          ],
+          "candidate_match_status": "single_glossary_candidate",
+          "lexeme_id": null,
+          "linguistic_status": "unreviewed",
+          "counted_as_new_introduction": false
+        },
+        {
+          "token_id": "legacy-ch02-q002-answer04-t004",
+          "ordinal": 4,
+          "surface": "est",
+          "source_candidate_ids": [
+            "legacy-lex-est-4e388f15"
+          ],
+          "candidate_match_status": "single_glossary_candidate",
+          "lexeme_id": null,
+          "linguistic_status": "unreviewed",
+          "counted_as_new_introduction": false
+        }
+      ]
+    },
+    {
+      "chapter_id": "legacy-ch02",
+      "stream": "exercise",
       "part": "model",
       "ref": "legacy-ch02-q002-model",
-      "raw_text": "Tītus frāter Līviae est.",
+      "raw_text": "Titus frāter Līviae est.",
       "contains_latin": "requires_review",
       "counted_as_new_introduction": false,
       "tokens": [
         {
           "token_id": "legacy-ch02-q002-model-t001",
           "ordinal": 1,
-          "surface": "Tītus",
+          "surface": "Titus",
           "source_candidate_ids": [
             "legacy-lex-titus-0ec305e6"
           ],
@@ -2032,7 +2091,7 @@
       "stream": "cloze",
       "part": "proof",
       "ref": "legacy-ch02-cloze-proof",
-      "raw_text": "Līvia soror Tītī est.",
+      "raw_text": "Līvia soror Titī est.",
       "contains_latin": "requires_review",
       "counted_as_new_introduction": false,
       "tokens": [
@@ -2063,7 +2122,7 @@
         {
           "token_id": "legacy-ch02-cloze-proof-t003",
           "ordinal": 3,
-          "surface": "Tītī",
+          "surface": "Titī",
           "source_candidate_ids": [
             "legacy-lex-titus-0ec305e6"
           ],
@@ -2091,14 +2150,14 @@
       "stream": "cloze",
       "part": "answer",
       "ref": "legacy-ch02-cloze-answer01",
-      "raw_text": "Tītī",
+      "raw_text": "Titī",
       "contains_latin": "requires_review",
       "counted_as_new_introduction": false,
       "tokens": [
         {
           "token_id": "legacy-ch02-cloze-answer01-t001",
           "ordinal": 1,
-          "surface": "Tītī",
+          "surface": "Titī",
           "source_candidate_ids": [
             "legacy-lex-titus-0ec305e6"
           ],
@@ -2478,14 +2537,14 @@
       "stream": "exercise",
       "part": "choice",
       "ref": "legacy-ch03-q002-choice03",
-      "raw_text": "Tītō",
+      "raw_text": "Titō",
       "contains_latin": "requires_review",
       "counted_as_new_introduction": false,
       "tokens": [
         {
           "token_id": "legacy-ch03-q002-choice03-t001",
           "ordinal": 1,
-          "surface": "Tītō",
+          "surface": "Titō",
           "source_candidate_ids": [
             "legacy-lex-titus-0ec305e6"
           ],
@@ -2707,6 +2766,41 @@
         {
           "token_id": "legacy-ch03-q003-answer03-t003",
           "ordinal": 3,
+          "surface": "librum",
+          "source_candidate_ids": [
+            "legacy-lex-liber-c1948a38"
+          ],
+          "candidate_match_status": "single_glossary_candidate",
+          "lexeme_id": null,
+          "linguistic_status": "unreviewed",
+          "counted_as_new_introduction": false
+        }
+      ]
+    },
+    {
+      "chapter_id": "legacy-ch03",
+      "stream": "exercise",
+      "part": "answer",
+      "ref": "legacy-ch03-q003-answer04",
+      "raw_text": "legit librum",
+      "contains_latin": "requires_review",
+      "counted_as_new_introduction": false,
+      "tokens": [
+        {
+          "token_id": "legacy-ch03-q003-answer04-t001",
+          "ordinal": 1,
+          "surface": "legit",
+          "source_candidate_ids": [
+            "legacy-lex-legere-68034180"
+          ],
+          "candidate_match_status": "single_glossary_candidate",
+          "lexeme_id": null,
+          "linguistic_status": "unreviewed",
+          "counted_as_new_introduction": false
+        },
+        {
+          "token_id": "legacy-ch03-q003-answer04-t002",
+          "ordinal": 2,
           "surface": "librum",
           "source_candidate_ids": [
             "legacy-lex-liber-c1948a38"
@@ -2944,14 +3038,14 @@
       "stream": "context",
       "part": "context",
       "ref": "legacy-ch04-context",
-      "raw_text": "Tītus pānem edit. Līvia aquam bibit.",
+      "raw_text": "Titus pānem edit. Līvia aquam bibit.",
       "contains_latin": "requires_review",
       "counted_as_new_introduction": false,
       "tokens": [
         {
           "token_id": "legacy-ch04-context-t001",
           "ordinal": 1,
-          "surface": "Tītus",
+          "surface": "Titus",
           "source_candidate_ids": [
             "legacy-lex-titus-0ec305e6"
           ],
@@ -3027,7 +3121,7 @@
       "stream": "exercise",
       "part": "prompt",
       "ref": "legacy-ch04-q001-prompt",
-      "raw_text": "Quid Tītus edit?",
+      "raw_text": "Quid Titus edit?",
       "contains_latin": "requires_review",
       "counted_as_new_introduction": false,
       "tokens": [
@@ -3046,7 +3140,7 @@
         {
           "token_id": "legacy-ch04-q001-prompt-t002",
           "ordinal": 2,
-          "surface": "Tītus",
+          "surface": "Titus",
           "source_candidate_ids": [
             "legacy-lex-titus-0ec305e6"
           ],
@@ -3166,14 +3260,14 @@
       "stream": "exercise",
       "part": "model",
       "ref": "legacy-ch04-q001-model",
-      "raw_text": "Tītus pānem edit.",
+      "raw_text": "Titus pānem edit.",
       "contains_latin": "requires_review",
       "counted_as_new_introduction": false,
       "tokens": [
         {
           "token_id": "legacy-ch04-q001-model-t001",
           "ordinal": 1,
-          "surface": "Tītus",
+          "surface": "Titus",
           "source_candidate_ids": [
             "legacy-lex-titus-0ec305e6"
           ],
@@ -3525,6 +3619,53 @@
     {
       "chapter_id": "legacy-ch04",
       "stream": "exercise",
+      "part": "answer",
+      "ref": "legacy-ch04-q003-answer04",
+      "raw_text": "māter aquam portat",
+      "contains_latin": "requires_review",
+      "counted_as_new_introduction": false,
+      "tokens": [
+        {
+          "token_id": "legacy-ch04-q003-answer04-t001",
+          "ordinal": 1,
+          "surface": "māter",
+          "source_candidate_ids": [
+            "legacy-lex-mater-23e3d71a"
+          ],
+          "candidate_match_status": "single_glossary_candidate",
+          "lexeme_id": null,
+          "linguistic_status": "unreviewed",
+          "counted_as_new_introduction": false
+        },
+        {
+          "token_id": "legacy-ch04-q003-answer04-t002",
+          "ordinal": 2,
+          "surface": "aquam",
+          "source_candidate_ids": [
+            "legacy-lex-aqua-49c69a10"
+          ],
+          "candidate_match_status": "single_glossary_candidate",
+          "lexeme_id": null,
+          "linguistic_status": "unreviewed",
+          "counted_as_new_introduction": false
+        },
+        {
+          "token_id": "legacy-ch04-q003-answer04-t003",
+          "ordinal": 3,
+          "surface": "portat",
+          "source_candidate_ids": [
+            "legacy-lex-portare-b922f51b"
+          ],
+          "candidate_match_status": "single_glossary_candidate",
+          "lexeme_id": null,
+          "linguistic_status": "unreviewed",
+          "counted_as_new_introduction": false
+        }
+      ]
+    },
+    {
+      "chapter_id": "legacy-ch04",
+      "stream": "exercise",
       "part": "model",
       "ref": "legacy-ch04-q003-model",
       "raw_text": "Flāvia aquam portat.",
@@ -3574,14 +3715,14 @@
       "stream": "cloze",
       "part": "text",
       "ref": "legacy-ch04-cloze-text",
-      "raw_text": "Tītus pānem ____.",
+      "raw_text": "Titus pānem ____.",
       "contains_latin": "requires_review",
       "counted_as_new_introduction": false,
       "tokens": [
         {
           "token_id": "legacy-ch04-cloze-text-t001",
           "ordinal": 1,
-          "surface": "Tītus",
+          "surface": "Titus",
           "source_candidate_ids": [
             "legacy-lex-titus-0ec305e6"
           ],
@@ -3609,7 +3750,7 @@
       "stream": "cloze",
       "part": "clue",
       "ref": "legacy-ch04-cloze-clue",
-      "raw_text": "Quid Tītus facit?",
+      "raw_text": "Quid Titus facit?",
       "contains_latin": "requires_review",
       "counted_as_new_introduction": false,
       "tokens": [
@@ -3628,7 +3769,7 @@
         {
           "token_id": "legacy-ch04-cloze-clue-t002",
           "ordinal": 2,
-          "surface": "Tītus",
+          "surface": "Titus",
           "source_candidate_ids": [
             "legacy-lex-titus-0ec305e6"
           ],
@@ -3654,14 +3795,14 @@
       "stream": "cloze",
       "part": "proof",
       "ref": "legacy-ch04-cloze-proof",
-      "raw_text": "Tītus pānem edit.",
+      "raw_text": "Titus pānem edit.",
       "contains_latin": "requires_review",
       "counted_as_new_introduction": false,
       "tokens": [
         {
           "token_id": "legacy-ch04-cloze-proof-t001",
           "ordinal": 1,
-          "surface": "Tītus",
+          "surface": "Titus",
           "source_candidate_ids": [
             "legacy-lex-titus-0ec305e6"
           ],
@@ -4668,6 +4809,30 @@
       ]
     },
     {
+      "chapter_id": "legacy-ch05",
+      "stream": "cloze",
+      "part": "answer",
+      "ref": "legacy-ch05-cloze-answer02",
+      "raw_text": "habet",
+      "contains_latin": "requires_review",
+      "counted_as_new_introduction": false,
+      "tokens": [
+        {
+          "token_id": "legacy-ch05-cloze-answer02-t001",
+          "ordinal": 1,
+          "surface": "habet",
+          "source_candidate_ids": [
+            "legacy-lex-habere-b846d382",
+            "legacy-lex-habet-edbf0fe3"
+          ],
+          "candidate_match_status": "ambiguous_candidates",
+          "lexeme_id": null,
+          "linguistic_status": "unreviewed",
+          "counted_as_new_introduction": false
+        }
+      ]
+    },
+    {
       "chapter_id": "legacy-ch06",
       "stream": "context",
       "part": "context",
@@ -5072,7 +5237,7 @@
       "stream": "exercise",
       "part": "choice",
       "ref": "legacy-ch06-q002-choice03",
-      "raw_text": "ad Tītum",
+      "raw_text": "ad Titum",
       "contains_latin": "requires_review",
       "counted_as_new_introduction": false,
       "tokens": [
@@ -5092,7 +5257,7 @@
         {
           "token_id": "legacy-ch06-q002-choice03-t002",
           "ordinal": 2,
-          "surface": "Tītum",
+          "surface": "Titum",
           "source_candidate_ids": [
             "legacy-lex-titus-0ec305e6"
           ],
@@ -5623,6 +5788,29 @@
       ]
     },
     {
+      "chapter_id": "legacy-ch06",
+      "stream": "cloze",
+      "part": "answer",
+      "ref": "legacy-ch06-cloze-answer02",
+      "raw_text": "est",
+      "contains_latin": "requires_review",
+      "counted_as_new_introduction": false,
+      "tokens": [
+        {
+          "token_id": "legacy-ch06-cloze-answer02-t001",
+          "ordinal": 1,
+          "surface": "est",
+          "source_candidate_ids": [
+            "legacy-lex-est-4e388f15"
+          ],
+          "candidate_match_status": "single_glossary_candidate",
+          "lexeme_id": null,
+          "linguistic_status": "unreviewed",
+          "counted_as_new_introduction": false
+        }
+      ]
+    },
+    {
       "chapter_id": "legacy-ch07",
       "stream": "context",
       "part": "context",
@@ -5966,14 +6154,14 @@
       "stream": "exercise",
       "part": "choice",
       "ref": "legacy-ch07-q002-choice02",
-      "raw_text": "Tītus",
+      "raw_text": "Titus",
       "contains_latin": "requires_review",
       "counted_as_new_introduction": false,
       "tokens": [
         {
           "token_id": "legacy-ch07-q002-choice02-t001",
           "ordinal": 1,
-          "surface": "Tītus",
+          "surface": "Titus",
           "source_candidate_ids": [
             "legacy-lex-titus-0ec305e6"
           ],
@@ -6209,6 +6397,53 @@
           "surface": "sōl",
           "source_candidate_ids": [
             "legacy-lex-sol-e04e3f61"
+          ],
+          "candidate_match_status": "single_glossary_candidate",
+          "lexeme_id": null,
+          "linguistic_status": "unreviewed",
+          "counted_as_new_introduction": false
+        }
+      ]
+    },
+    {
+      "chapter_id": "legacy-ch07",
+      "stream": "exercise",
+      "part": "answer",
+      "ref": "legacy-ch07-q003-answer04",
+      "raw_text": "sōl hodiē lūcet",
+      "contains_latin": "requires_review",
+      "counted_as_new_introduction": false,
+      "tokens": [
+        {
+          "token_id": "legacy-ch07-q003-answer04-t001",
+          "ordinal": 1,
+          "surface": "sōl",
+          "source_candidate_ids": [
+            "legacy-lex-sol-e04e3f61"
+          ],
+          "candidate_match_status": "single_glossary_candidate",
+          "lexeme_id": null,
+          "linguistic_status": "unreviewed",
+          "counted_as_new_introduction": false
+        },
+        {
+          "token_id": "legacy-ch07-q003-answer04-t002",
+          "ordinal": 2,
+          "surface": "hodiē",
+          "source_candidate_ids": [
+            "legacy-lex-hodie-420372be"
+          ],
+          "candidate_match_status": "single_glossary_candidate",
+          "lexeme_id": null,
+          "linguistic_status": "unreviewed",
+          "counted_as_new_introduction": false
+        },
+        {
+          "token_id": "legacy-ch07-q003-answer04-t003",
+          "ordinal": 3,
+          "surface": "lūcet",
+          "source_candidate_ids": [
+            "legacy-lex-lucere-0e0a5ef3"
           ],
           "candidate_match_status": "single_glossary_candidate",
           "lexeme_id": null,
@@ -6688,7 +6923,7 @@
       "stream": "exercise",
       "part": "prompt",
       "ref": "legacy-ch08-q002-prompt",
-      "raw_text": "Quid Tītus feret?",
+      "raw_text": "Quid Titus feret?",
       "contains_latin": "requires_review",
       "counted_as_new_introduction": false,
       "tokens": [
@@ -6707,7 +6942,7 @@
         {
           "token_id": "legacy-ch08-q002-prompt-t002",
           "ordinal": 2,
-          "surface": "Tītus",
+          "surface": "Titus",
           "source_candidate_ids": [
             "legacy-lex-titus-0ec305e6"
           ],
@@ -6827,14 +7062,14 @@
       "stream": "exercise",
       "part": "model",
       "ref": "legacy-ch08-q002-model",
-      "raw_text": "Tītus librum feret.",
+      "raw_text": "Titus librum feret.",
       "contains_latin": "requires_review",
       "counted_as_new_introduction": false,
       "tokens": [
         {
           "token_id": "legacy-ch08-q002-model-t001",
           "ordinal": 1,
-          "surface": "Tītus",
+          "surface": "Titus",
           "source_candidate_ids": [
             "legacy-lex-titus-0ec305e6"
           ],
@@ -7013,6 +7248,53 @@
           "surface": "rosās",
           "source_candidate_ids": [
             "legacy-lex-rosa-10421806"
+          ],
+          "candidate_match_status": "single_glossary_candidate",
+          "lexeme_id": null,
+          "linguistic_status": "unreviewed",
+          "counted_as_new_introduction": false
+        }
+      ]
+    },
+    {
+      "chapter_id": "legacy-ch08",
+      "stream": "exercise",
+      "part": "answer",
+      "ref": "legacy-ch08-q003-answer04",
+      "raw_text": "rosās Līvia portābit",
+      "contains_latin": "requires_review",
+      "counted_as_new_introduction": false,
+      "tokens": [
+        {
+          "token_id": "legacy-ch08-q003-answer04-t001",
+          "ordinal": 1,
+          "surface": "rosās",
+          "source_candidate_ids": [
+            "legacy-lex-rosa-10421806"
+          ],
+          "candidate_match_status": "single_glossary_candidate",
+          "lexeme_id": null,
+          "linguistic_status": "unreviewed",
+          "counted_as_new_introduction": false
+        },
+        {
+          "token_id": "legacy-ch08-q003-answer04-t002",
+          "ordinal": 2,
+          "surface": "Līvia",
+          "source_candidate_ids": [
+            "legacy-lex-livia-0abb9e0e"
+          ],
+          "candidate_match_status": "proper_name_candidate",
+          "lexeme_id": null,
+          "linguistic_status": "unreviewed",
+          "counted_as_new_introduction": false
+        },
+        {
+          "token_id": "legacy-ch08-q003-answer04-t003",
+          "ordinal": 3,
+          "surface": "portābit",
+          "source_candidate_ids": [
+            "legacy-lex-portabit-6495bbba"
           ],
           "candidate_match_status": "single_glossary_candidate",
           "lexeme_id": null,
