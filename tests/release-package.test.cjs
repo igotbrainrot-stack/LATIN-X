@@ -49,8 +49,8 @@ function extract(entries,dir){
 (async()=>{
  const temp=fs.mkdtempSync(path.join(os.tmpdir(),"tablinum release "));
  const out=path.join(temp,"dist");
- const [winZip,linuxTar]=release.build({out});
- const win=readZip(fs.readFileSync(winZip)),lin=readTarGz(fs.readFileSync(linuxTar));
+ const [winZip,linuxTar,sourceZip]=release.build({out});
+ const win=readZip(fs.readFileSync(winZip)),lin=readTarGz(fs.readFileSync(linuxTar)),source=readZip(fs.readFileSync(sourceZip));
  const top=release.TOP+"/";
  for(const [label,entries] of [["windows",win],["linux",lin]]){
   const names=[...entries.keys()];
@@ -67,6 +67,17 @@ function extract(entries,dir){
   for(const media of requiredAudio)assert(entries.has(top+media.path),label+": missing verified media "+media.path);
   assert(names.filter(n=>n.endsWith(".mp3")).length>=78,label+": all 75 narrator files and 3 Roman music tracks ship");
  }
+ // The source archive is a distribution, not permission to expose local
+ // historical audition media or owner-private listening reviews.
+ const sourceNames=[...source.keys()];
+ assert(sourceNames.every(name=>name.startsWith(top)),"Source ZIP has a single folder");
+ for(const media of JSON.parse(fs.readFileSync(path.join(__dirname,"..","docs/audio/ARJUN_OFFLINE_MEDIA_CHECKSUMS_20261110.json"),"utf8")).files){
+  assert(source.has(top+media.path),"Source ZIP missing authorised audio "+media.path);
+ }
+ assert.equal(sourceNames.filter(name=>name.endsWith(".mp3")).length,78,"Source ZIP must have exactly 78 owner-authorised MP3s");
+ assert(!sourceNames.some(name=>name.includes("audio-audition/")&&name.endsWith(".mp3")),"Historical audition binaries must not ship");
+ assert(!sourceNames.some(name=>name.includes("owner-original-review-2026-11-07.json")),"Private historical owner review must not ship");
+ assert(!sourceNames.some(name=>/PRIVATE_|_jwt=|cloudfront\\.net/.test(name)),"No signed links or private artifacts");
  assert(win.get(top+"Start Tablinum.cmd").data.toString().includes("\r\n"),"Windows .cmd keeps CRLF");
  assert(!lin.has(top+"Start Tablinum.cmd"),"Linux package has no .cmd files");
  assert.equal(lin.get(top+"linux/install-launcher.sh").mode&0o755,0o755,"Linux installer is executable");
