@@ -921,7 +921,7 @@
     },
     {
       "candidate_id": "legacy-lex-magnus-53cacdb9",
-      "headword_as_in_app": "magnus",
+      "headword_as_in_app": "māgnus",
       "original_gloss": "big",
       "editorial_status": "unverified_provisional_glossary_headword",
       "is_proper_name": false,
@@ -929,8 +929,8 @@
         "legacy-ch01-v005"
       ],
       "documented_forms": [
-        "magnus",
-        "magna"
+        "māgnus",
+        "māgna"
       ],
       "note": "Candidate from app glossary, not independently lemmatized or reviewed."
     },
@@ -2137,7 +2137,7 @@
         {
           "sentence_id": "legacy-ch01-s005",
           "legacy_sentence_index": 4,
-          "latin_text": "Arbor magna est.",
+          "latin_text": "Arbor māgna est.",
           "english_translation_in_legacy_app": "The tree is large.",
           "tokens": [
             {
@@ -2158,7 +2158,7 @@
               "token_id": "legacy-ch01-s005-t002",
               "sentence_id": "legacy-ch01-s005",
               "word_position": 2,
-              "surface": "magna",
+              "surface": "māgna",
               "folded_surface": "magna",
               "source_candidate_ids": [
                 "legacy-lex-magnus-53cacdb9"
