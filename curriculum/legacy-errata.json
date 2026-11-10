@@ -48,5 +48,13 @@
       "target": "legacy-ch08-q003",
       "add_answer": "rosās Līvia portābit"
     }
-  ]
+  ],
+  "quantity_convention": {
+    "approved_by": "owner",
+    "approved_at": "2026-11-10",
+    "reference": "Allen & Greenough §603.d",
+    "rule": "Long vowel before gn in māgnus forms; all stable lesson/answer/storage IDs unchanged",
+    "applies_after": "Titus source errata",
+    "exceptions": "Do not rewrite art-region keys or archived source"
+  }
 }
