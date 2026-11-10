@@ -71,7 +71,7 @@ function mount(){
   let storage=null;try{storage=root.localStorage}catch(error){}
   const result=evaluate(ex,selected.regionId,chapter,storage,selected.point);
   feedback.textContent=result.status==="graded"?
-   (result.correct?"Rectē! Reviewed answer.":"Nōndum. Try again.")+(result.saved?" Saved in v5.":" Could not save progress."):
+   (result.correct?"Rēctē! Reviewed answer.":"Nōndum. Try again.")+(result.saved?" Saved in v5.":" Could not save progress."):
    "Region selected: "+selected.regionId+". This answer key is unsigned; no score or saved answer was created.";
  });
  render();
