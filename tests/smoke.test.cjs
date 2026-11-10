@@ -27,7 +27,7 @@ assert.equal(api.chapterCount(),8);assert.equal(api.questions(),24);assert.equal
 for(let chapter=0;chapter<api.chapterCount();chapter++){
  const short=api.lessonAt(chapter).q.find(q=>q[1]===null);
  assert(short,"Each introductory chapter should have a written question");
- assert(Array.isArray(short[2])&&short[2].length===3,"Short-answer variants expected");
+ assert(Array.isArray(short[2])&&short[2].length>=3,"Existing three correct written answers must remain, with approved additions allowed");
  for(const answer of short[2])assert(api.correctAnswer(short,answer),"Explicit correct answer should be accepted");
  assert(!api.correctAnswer(short,"nōn "+short[2][0]),"Incorrect negation must not pass");
 }

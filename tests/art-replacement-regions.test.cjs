@@ -57,8 +57,11 @@ for(const witness of previousRecord){
  // Earlier SHA remains a historical fact; it must not be falsified to say it was the new generation.
  assert.equal(scene.art_replacement_20261107.new_webp_sha256,witness.new_webp_sha256);
  for(const [region,point] of Object.entries(witness.region_anchors_pct)){
-  assert.equal(art.regionAt(witness.scene_id,...point),region,`Coordinate witness must still select ${region}`);
-  assert(art.regionHit(scene.polygons[region],...point),`${region} must contain its witness`);
+  // Historical art witness retains the original label; approved LX-001 only
+  // changes the live region ID spelling, never the polygon geometry or source art.
+  const liveRegion=region==="Tītus"?"Titus":region;
+  assert.equal(art.regionAt(witness.scene_id,...point),liveRegion,`Coordinate witness must still select ${liveRegion}`);
+  assert(art.regionHit(scene.polygons[liveRegion],...point),`${liveRegion} must contain its historical witness`);
  }
 }
 assert(!file("app/64-art-scenes.js").toString("utf8").includes("border:1px solid #d5c8b4"),"Reader border must stay removed");

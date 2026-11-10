@@ -4,7 +4,7 @@
   "legacy": true,
   "status": "legacy_unreviewed",
   "original_zero_based_index": 6,
-  "legacy_source_fingerprint_fnv32": "91aa1b37",
+  "legacy_source_fingerprint_fnv32": "fa6addbd",
   "title": "Tempestās",
   "legacy_source": {
     "name": "Tempestās",
@@ -26,7 +26,7 @@
         "Livia was reading a book."
       ],
       [
-        "Tītus per fenestram spectābat.",
+        "Titus per fenestram spectābat.",
         "Titus was looking through the window."
       ],
       [
@@ -34,7 +34,7 @@
         "Suddenly thunder sounded."
       ],
       [
-        "Tītus timēbat.",
+        "Titus timēbat.",
         "Titus was afraid."
       ],
       [
@@ -133,7 +133,7 @@
         "Quis librum legēbat?",
         [
           "Līvia",
-          "Tītus",
+          "Titus",
           "Flāvia"
         ],
         "Līvia",
@@ -145,7 +145,8 @@
         [
           "sōl",
           "sōl lūcet",
-          "hodiē sōl"
+          "hodiē sōl",
+          "sōl hodiē lūcet"
         ],
         "Hodiē sōl lūcet."
       ]
@@ -291,11 +292,11 @@
     },
     {
       "id": "legacy-ch07-s004",
-      "text_la": "Tītus per fenestram spectābat.",
+      "text_la": "Titus per fenestram spectābat.",
       "en": "Titus was looking through the window.",
       "tokens": [
         {
-          "t": "Tītus",
+          "t": "Titus",
           "start": 0,
           "end": 5,
           "lx": null,
@@ -380,11 +381,11 @@
     },
     {
       "id": "legacy-ch07-s006",
-      "text_la": "Tītus timēbat.",
+      "text_la": "Titus timēbat.",
       "en": "Titus was afraid.",
       "tokens": [
         {
-          "t": "Tītus",
+          "t": "Titus",
           "start": 0,
           "end": 5,
           "lx": null,
@@ -515,7 +516,7 @@
         "Quis librum legēbat?",
         [
           "Līvia",
-          "Tītus",
+          "Titus",
           "Flāvia"
         ],
         "Līvia",
@@ -530,7 +531,8 @@
         [
           "sōl",
           "sōl lūcet",
-          "hodiē sōl"
+          "hodiē sōl",
+          "sōl hodiē lūcet"
         ],
         "Hodiē sōl lūcet."
       ]

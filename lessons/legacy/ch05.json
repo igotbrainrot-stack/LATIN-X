@@ -4,7 +4,7 @@
   "legacy": true,
   "status": "legacy_unreviewed",
   "original_zero_based_index": 4,
-  "legacy_source_fingerprint_fnv32": "1178ea02",
+  "legacy_source_fingerprint_fnv32": "ffe679b8",
   "title": "Forum",
   "legacy_source": {
     "name": "Forum",
@@ -34,7 +34,7 @@
         "Marcus buys two apples."
       ],
       [
-        "Tītus interrogat: «Quot māla habēmus?»",
+        "Titus interrogat: «Quot māla habēmus?»",
         "Titus asks: How many apples do we have?"
       ],
       [
@@ -149,7 +149,8 @@
   "cloze_source": {
     "text": "Mārcus duo māla ____.",
     "answers": [
-      "emit"
+      "emit",
+      "habet"
     ],
     "clue": "Quid in forō Mārcus facit?",
     "proof": "Mārcus duo māla emit."
@@ -420,11 +421,11 @@
     },
     {
       "id": "legacy-ch05-s006",
-      "text_la": "Tītus interrogat: «Quot māla habēmus?»",
+      "text_la": "Titus interrogat: «Quot māla habēmus?»",
       "en": "Titus asks: How many apples do we have?",
       "tokens": [
         {
-          "t": "Tītus",
+          "t": "Titus",
           "start": 0,
           "end": 5,
           "lx": null,

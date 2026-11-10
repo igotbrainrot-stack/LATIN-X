@@ -1733,7 +1733,7 @@
     },
     {
       "candidate_id": "legacy-lex-titus-0ec305e6",
-      "headword_as_in_app": "Tītus",
+      "headword_as_in_app": "Titus",
       "original_gloss": "Titus",
       "editorial_status": "unverified_provisional_glossary_headword",
       "is_proper_name": true,
@@ -1742,10 +1742,10 @@
         "legacy-ch02-v005"
       ],
       "documented_forms": [
-        "Tītus",
-        "Tītō",
-        "Tītum",
-        "Tītī"
+        "Titus",
+        "Titō",
+        "Titum",
+        "Titī"
       ],
       "note": "Candidate from app glossary, not independently lemmatized or reviewed."
     },
@@ -2737,14 +2737,14 @@
         {
           "sentence_id": "legacy-ch02-s006",
           "legacy_sentence_index": 5,
-          "latin_text": "Tītus frāter Līviae est.",
+          "latin_text": "Titus frāter Līviae est.",
           "english_translation_in_legacy_app": "Titus is Livia's brother.",
           "tokens": [
             {
               "token_id": "legacy-ch02-s006-t001",
               "sentence_id": "legacy-ch02-s006",
               "word_position": 1,
-              "surface": "Tītus",
+              "surface": "Titus",
               "folded_surface": "titus",
               "source_candidate_ids": [],
               "status": "proper_name_not_counted",
@@ -2797,7 +2797,7 @@
         {
           "sentence_id": "legacy-ch02-s007",
           "legacy_sentence_index": 6,
-          "latin_text": "Līvia soror Tītī est.",
+          "latin_text": "Līvia soror Titī est.",
           "english_translation_in_legacy_app": "Livia is Titus's sister.",
           "tokens": [
             {
@@ -2830,7 +2830,7 @@
               "token_id": "legacy-ch02-s007-t003",
               "sentence_id": "legacy-ch02-s007",
               "word_position": 3,
-              "surface": "Tītī",
+              "surface": "Titī",
               "folded_surface": "titi",
               "source_candidate_ids": [],
               "status": "proper_name_not_counted",
@@ -3094,14 +3094,14 @@
         {
           "sentence_id": "legacy-ch03-s002",
           "legacy_sentence_index": 1,
-          "latin_text": "Tītus librum habet.",
+          "latin_text": "Titus librum habet.",
           "english_translation_in_legacy_app": "Titus has a book.",
           "tokens": [
             {
               "token_id": "legacy-ch03-s002-t001",
               "sentence_id": "legacy-ch03-s002",
               "word_position": 1,
-              "surface": "Tītus",
+              "surface": "Titus",
               "folded_surface": "titus",
               "source_candidate_ids": [],
               "status": "proper_name_not_counted",
@@ -3414,14 +3414,14 @@
         {
           "sentence_id": "legacy-ch03-s008",
           "legacy_sentence_index": 7,
-          "latin_text": "Tītus patrem spectat.",
+          "latin_text": "Titus patrem spectat.",
           "english_translation_in_legacy_app": "Titus watches his father.",
           "tokens": [
             {
               "token_id": "legacy-ch03-s008-t001",
               "sentence_id": "legacy-ch03-s008",
               "word_position": 1,
-              "surface": "Tītus",
+              "surface": "Titus",
               "folded_surface": "titus",
               "source_candidate_ids": [],
               "status": "proper_name_not_counted",
@@ -3672,14 +3672,14 @@
         {
           "sentence_id": "legacy-ch04-s003",
           "legacy_sentence_index": 2,
-          "latin_text": "Tītus pānem edit.",
+          "latin_text": "Titus pānem edit.",
           "english_translation_in_legacy_app": "Titus eats bread.",
           "tokens": [
             {
               "token_id": "legacy-ch04-s003-t001",
               "sentence_id": "legacy-ch04-s003",
               "word_position": 1,
-              "surface": "Tītus",
+              "surface": "Titus",
               "folded_surface": "titus",
               "source_candidate_ids": [],
               "status": "proper_name_not_counted",
@@ -4371,14 +4371,14 @@
         {
           "sentence_id": "legacy-ch05-s006",
           "legacy_sentence_index": 5,
-          "latin_text": "Tītus interrogat: «Quot māla habēmus?»",
+          "latin_text": "Titus interrogat: «Quot māla habēmus?»",
           "english_translation_in_legacy_app": "Titus asks: How many apples do we have?",
           "tokens": [
             {
               "token_id": "legacy-ch05-s006-t001",
               "sentence_id": "legacy-ch05-s006",
               "word_position": 1,
-              "surface": "Tītus",
+              "surface": "Titus",
               "folded_surface": "titus",
               "source_candidate_ids": [],
               "status": "proper_name_not_counted",
@@ -5314,14 +5314,14 @@
         {
           "sentence_id": "legacy-ch07-s004",
           "legacy_sentence_index": 3,
-          "latin_text": "Tītus per fenestram spectābat.",
+          "latin_text": "Titus per fenestram spectābat.",
           "english_translation_in_legacy_app": "Titus was looking through the window.",
           "tokens": [
             {
               "token_id": "legacy-ch07-s004-t001",
               "sentence_id": "legacy-ch07-s004",
               "word_position": 1,
-              "surface": "Tītus",
+              "surface": "Titus",
               "folded_surface": "titus",
               "source_candidate_ids": [],
               "status": "proper_name_not_counted",
@@ -5426,14 +5426,14 @@
         {
           "sentence_id": "legacy-ch07-s006",
           "legacy_sentence_index": 5,
-          "latin_text": "Tītus timēbat.",
+          "latin_text": "Titus timēbat.",
           "english_translation_in_legacy_app": "Titus was afraid.",
           "tokens": [
             {
               "token_id": "legacy-ch07-s006-t001",
               "sentence_id": "legacy-ch07-s006",
               "word_position": 1,
-              "surface": "Tītus",
+              "surface": "Titus",
               "folded_surface": "titus",
               "source_candidate_ids": [],
               "status": "proper_name_not_counted",
@@ -5706,14 +5706,14 @@
         {
           "sentence_id": "legacy-ch08-s003",
           "legacy_sentence_index": 2,
-          "latin_text": "Tītus librum feret.",
+          "latin_text": "Titus librum feret.",
           "english_translation_in_legacy_app": "Titus will bring a book.",
           "tokens": [
             {
               "token_id": "legacy-ch08-s003-t001",
               "sentence_id": "legacy-ch08-s003",
               "word_position": 1,
-              "surface": "Tītus",
+              "surface": "Titus",
               "folded_surface": "titus",
               "source_candidate_ids": [],
               "status": "proper_name_not_counted",

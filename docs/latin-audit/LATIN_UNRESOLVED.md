@@ -1,0 +1,25 @@
+# LATIN X — Unresolved Latin questions (10 November 2026)
+
+These items could not be settled with the evidence available in this audit. None of them is reported as an error, and none should be "fixed" without the decision or evidence listed.
+
+| ID | Item | Location | Why it is unresolved | What would resolve it |
+|---|---|---|---|---|
+| U-01 | **Pronunciation in the recordings** | 75 narration takes (`content/narration.js`; 17 Chapter I takes owner-passed, 58 Chapter II–VIII takes pending) | No recording was listened to. The MP3s are private and are not in the repository; checksum verification is not pronunciation verification. In particular, the 9 sentences containing *Tītus* (LX-001) were generated from text with a long ī, so the TTS may have produced [iː]. | Owner or Latinist listening review of each take, recording the verdict per clip; re-generate the Titus sentences after LX-001 is approved if a long vowel is audible. |
+| U-02 | **Effect of TTS respellings** (LX-020) | `docs/audio/arjun_lectio_ch0*_20261110.json`, `docs/audio/ARJUN_CH1_REGENERATION_20261109.json` | The respellings ("wee-det", "Flah-wee-ah", "GAH-yoos") spell short vowels as long, but whether the voice model actually lengthened them is unknown without listening. | Listening review (U-01). |
+| U-03 | *Verbum dēest* (UI heading) | `app/legacy-runtime.js:505` | L&S writes *dē-sum* and notes that *deest* is usually one syllable in verse (synaeresis); a vowel before a vowel is normally short, but many teaching texts print *dēest*. Convention, not a settled error. | Owner choice of macron convention (*deest* or *dēest*), applied consistently. |
+| U-04 | *Pecūnia est pretium* | `lessons/b01/c006.json` (Lēctiō 2) | The drafter flagged it. It is grammatical; whether it reads naturally as "the money is the price" is a stylistic judgement. | Latinist reading of the draft. |
+| U-05 | *Gāius* syllabification in audio | narration word clip `arjun-word-gaius` | L&S marks *Gāĭus* as trisyllabic (Catullus 10.30). The TTS prompt "GAH-yoos" is disyllabic. The owner passed the clip; I did not hear it. | Listening review against a trisyllabic model. |
+| U-06 | Latin wording for "recording started" | `app/legacy-runtime.js:815` | *Recordātiō* is confirmed wrong in sense (LX-015), but there is no Classical word for audio recording; any replacement is Neo-Latin and a style choice. | Owner decision: drop the Latin label, or pick a Neo-Latin phrase. |
+| U-07 | Source fidelity to an "authorised textbook" | whole course | The brief's top authority does not exist for this project: the legacy chapters come from the owner's own v0.2 app and the pilot is original. I compared all eight legacy chapters with `archive/index-v02-original.html`. Every difference is a deliberate later correction (for example *Cānis* → *Canis*, *panem* → *pānem*, *Ad quam cānis currit?* → *Quō canis currit?*); none is a transcription slip. *Tītus* is already in the v0.2 original, so LX-001 is an error in the source, not in transcription. | Owner confirmation that v0.2 is the reference source. |
+| U-08 | Art regions and scene content | `curriculum/illustrations.json` (9 scenes) | I checked Latin alt text against the lessons and viewed one scene (c005). I did not audit every polygon against every prompt. | Owner art review already exists; repeat only if picture scoring is enabled. |
+| U-09 | Planning documents | `curriculum/*.md`, `curriculum/reviews/*`, `docs/**` handovers | Not learner-facing. Lemma heads in `curriculum/vocabulary-budgets-130.json` (143 seed lemmas) were checked and found correct, but prose in handover and review documents was not reviewed line by line. | Review when a chapter is drafted from the plan. |
+
+## Disagreements with earlier reviews, resolved by evidence
+
+| Earlier statement | Source | This audit | Evidence |
+|---|---|---|---|
+| "No specific Latin spelling, grammar or translation defect has been independently established." | `LATIN_CONTENT_REVIEW.md` | Superseded: 21 confirmed errors (4 major, 17 minor). The earlier note was a software audit and explicitly did not attempt a linguistic review, so this is a gap rather than a contradiction. | See `LATIN_FINDINGS.csv`. |
+| Picture prompts "approved" with `Quō canis currit?` keyed to *porta* only | `docs/claude/PICTURE_EXERCISES_REVIEW_FOR_GPT.md` | Keep the prompt, but *Līvia* is also a correct click (LX-019). | b01-c007-s019 "Ad portam currit, ad Līviam!" |
+| Pilot drafter: "*Gāī* is the classical genitive … (*Gāiī* is the later spelling)" | pilot reviewer note, c007 | Agree; the model answer q003 still uses *Gāiī* (LX-016). | A&G §49.b |
+| Paradigm samples "awaiting owner verification"; tests pass | `docs/owner/PARADIGM_SAMPLES.md`, `tests/paradigms.test.cjs` | Three generator rules are wrong (LX-003 to LX-006) and the fixture asserts *diēm*. Do not sign noun-5 or noun-3-i patterns as they stand. | A&G §49.c, §76, §96 |
+| `AUDIT_REPORT.md` (engineering audit) | repository root | No Latin claims to reconcile. Its recommendation that canonical Latin must not change during software cleanup is followed: this audit changes no source file. | — |

@@ -29,7 +29,7 @@
     },
     {
       "sentence_id": "legacy-ch07-s004",
-      "canonical_text": "Tītus per fenestram spectābat.",
+      "canonical_text": "Titus per fenestram spectābat.",
       "tts_input": "Tītus per fenestram spectābat.",
       "runway_task_id": "9d46a61f-c5f7-4adf-a478-fb489e0e0c1b",
       "status": "task_pending"
@@ -43,7 +43,7 @@
     },
     {
       "sentence_id": "legacy-ch07-s006",
-      "canonical_text": "Tītus timēbat.",
+      "canonical_text": "Titus timēbat.",
       "tts_input": "Tītus timēbat.",
       "runway_task_id": "82dd5d97-6f77-4bd8-badc-e6bc9e40e40a",
       "status": "task_pending"

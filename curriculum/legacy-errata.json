@@ -1,0 +1,52 @@
+{
+  "schema": "latin-x-approved-legacy-errata-v1",
+  "approved_by": "owner",
+  "approved_at": "2026-11-10",
+  "archive_policy": "frozen_historical_source_unchanged",
+  "entries": [
+    {
+      "finding": "LX-001",
+      "target": "legacy Latin text and glossary",
+      "from": "Tīt",
+      "to": "Tit",
+      "note": "Short first i only; preserve all other macrons, IDs and save mappings"
+    },
+    {
+      "finding": "LX-017",
+      "target": "legacy-ch05 cloze",
+      "add_answer": "habet",
+      "existing": "emit"
+    },
+    {
+      "finding": "LX-017",
+      "target": "legacy-ch06 cloze",
+      "add_answer": "est",
+      "existing": "currit"
+    },
+    {
+      "finding": "LX-018",
+      "target": "legacy-ch02-q002",
+      "add_answer": "Titus Līviae frāter est"
+    },
+    {
+      "finding": "LX-018",
+      "target": "legacy-ch03-q003",
+      "add_answer": "legit librum"
+    },
+    {
+      "finding": "LX-018",
+      "target": "legacy-ch04-q003",
+      "add_answer": "māter aquam portat"
+    },
+    {
+      "finding": "LX-018",
+      "target": "legacy-ch07-q003",
+      "add_answer": "sōl hodiē lūcet"
+    },
+    {
+      "finding": "LX-018",
+      "target": "legacy-ch08-q003",
+      "add_answer": "rosās Līvia portābit"
+    }
+  ]
+}

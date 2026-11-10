@@ -4,13 +4,13 @@
   "legacy": true,
   "status": "legacy_unreviewed",
   "original_zero_based_index": 1,
-  "legacy_source_fingerprint_fnv32": "62d138c8",
+  "legacy_source_fingerprint_fnv32": "383a057f",
   "title": "Familia",
   "legacy_source": {
     "name": "Familia",
     "sub": "In vīllā",
     "scene": "family",
-    "context": "Mārcus, Flāvia, Līvia et Tītus familia sunt.",
+    "context": "Mārcus, Flāvia, Līvia et Titus familia sunt.",
     "explain": "The ending -ae in Līviae can mean 'of Livia'. This is the genitive case. Sunt means 'are'.",
     "sent": [
       [
@@ -34,11 +34,11 @@
         "Flavia is Livia's mother."
       ],
       [
-        "Tītus frāter Līviae est.",
+        "Titus frāter Līviae est.",
         "Titus is Livia's brother."
       ],
       [
-        "Līvia soror Tītī est.",
+        "Līvia soror Titī est.",
         "Livia is Titus's sister."
       ],
       [
@@ -72,9 +72,9 @@
         "Flāviae"
       ],
       [
-        "Tītus",
         "Titus",
-        "Tītī"
+        "Titus",
+        "Titī"
       ],
       [
         "pater",
@@ -121,7 +121,7 @@
       [
         "Quis pater Līviae est?",
         [
-          "Tītus",
+          "Titus",
           "Mārcus",
           "Flāvia"
         ],
@@ -129,14 +129,15 @@
         "Mārcus pater Līviae est."
       ],
       [
-        "Cuius frāter est Tītus?",
+        "Cuius frāter est Titus?",
         null,
         [
           "Līviae",
           "frāter Līviae est",
-          "Tītus est frāter Līviae"
+          "Titus est frāter Līviae",
+          "Titus Līviae frāter est"
         ],
-        "Tītus frāter Līviae est."
+        "Titus frāter Līviae est."
       ],
       [
         "Quot hominēs in vīllā habitant?",
@@ -156,10 +157,10 @@
   "cloze_source": {
     "text": "Līvia soror ____ est.",
     "answers": [
-      "Tītī"
+      "Titī"
     ],
     "clue": "Quis est frāter Līviae?",
-    "proof": "Līvia soror Tītī est."
+    "proof": "Līvia soror Titī est."
   },
   "sentences": [
     {
@@ -418,11 +419,11 @@
     },
     {
       "id": "legacy-ch02-s006",
-      "text_la": "Tītus frāter Līviae est.",
+      "text_la": "Titus frāter Līviae est.",
       "en": "Titus is Livia's brother.",
       "tokens": [
         {
-          "t": "Tītus",
+          "t": "Titus",
           "start": 0,
           "end": 5,
           "lx": null,
@@ -465,7 +466,7 @@
     },
     {
       "id": "legacy-ch02-s007",
-      "text_la": "Līvia soror Tītī est.",
+      "text_la": "Līvia soror Titī est.",
       "en": "Livia is Titus's sister.",
       "tokens": [
         {
@@ -489,7 +490,7 @@
           "review_status": "unreviewed"
         },
         {
-          "t": "Tītī",
+          "t": "Titī",
           "start": 12,
           "end": 16,
           "lx": null,
@@ -637,7 +638,7 @@
       "legacy_source": [
         "Quis pater Līviae est?",
         [
-          "Tītus",
+          "Titus",
           "Mārcus",
           "Flāvia"
         ],
@@ -648,14 +649,15 @@
     {
       "id": "legacy-ch02-q002",
       "legacy_source": [
-        "Cuius frāter est Tītus?",
+        "Cuius frāter est Titus?",
         null,
         [
           "Līviae",
           "frāter Līviae est",
-          "Tītus est frāter Līviae"
+          "Titus est frāter Līviae",
+          "Titus Līviae frāter est"
         ],
-        "Tītus frāter Līviae est."
+        "Titus frāter Līviae est."
       ]
     },
     {

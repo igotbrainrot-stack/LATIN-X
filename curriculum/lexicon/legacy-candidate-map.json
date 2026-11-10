@@ -1526,10 +1526,10 @@
     },
     {
       "candidate_id": "legacy-lex-titus-0ec305e6",
-      "head_as_in_app": "Tītus",
+      "head_as_in_app": "Titus",
       "original_gloss": "Titus",
       "is_proper_name": true,
-      "proposed_lemma": "Tītus",
+      "proposed_lemma": "Titus",
       "proposed_id": null,
       "review_state": "pending",
       "approved_lexeme_id": null,

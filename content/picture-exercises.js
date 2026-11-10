@@ -90,10 +90,10 @@ globalThis.TablinumPicturePracticeData={
           "type": "pic",
           "status": "proposed_ungraded",
           "scoring_enabled": false,
-          "prompt_la": "Ubi est Tītus?",
+          "prompt_la": "Ubi est Titus?",
           "scene_id": "b01-c001-scene",
-          "region_id": "Tītus",
-          "answer": "Tītus",
+          "region_id": "Titus",
+          "answer": "Titus",
           "review": {
             "by": null,
             "at": null
@@ -158,10 +158,10 @@ globalThis.TablinumPicturePracticeData={
           "type": "pic",
           "status": "proposed_ungraded",
           "scoring_enabled": false,
-          "prompt_la": "Ubi est Tītus?",
+          "prompt_la": "Ubi est Titus?",
           "scene_id": "b01-c002-scene",
-          "region_id": "Tītus",
-          "answer": "Tītus",
+          "region_id": "Titus",
+          "answer": "Titus",
           "review": {
             "by": null,
             "at": null
@@ -407,10 +407,10 @@ globalThis.TablinumPicturePracticeData={
           "type": "pic",
           "status": "proposed_ungraded",
           "scoring_enabled": false,
-          "prompt_la": "Ubi est Tītus?",
+          "prompt_la": "Ubi est Titus?",
           "scene_id": "b01-c005-scene",
-          "region_id": "Tītus",
-          "answer": "Tītus",
+          "region_id": "Titus",
+          "answer": "Titus",
           "review": {
             "by": null,
             "at": null
@@ -566,7 +566,11 @@ globalThis.TablinumPicturePracticeData={
             "by": null,
             "at": null
           },
-          "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+          "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review.",
+          "accept_regions": [
+            "porta",
+            "Līvia"
+          ]
         },
         {
           "id": "b01-c007-q009",

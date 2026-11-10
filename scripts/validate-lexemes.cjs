@@ -6,15 +6,16 @@ const assert=require("node:assert/strict");
 const fs=require("node:fs");
 const path=require("node:path");
 const {extractArray,readLegacySource}=require("./lib/extract-legacy.cjs");
+const {effectiveLessons,effectiveCloze,effectiveShared}=require("./lib/legacy-errata.cjs");
 const {validateRegistry,validateCandidateMap,validateVocabMap,normalizeLegacyKey}=require("./lib/schema.cjs");
 const {buildVocabMap,buildExtraStreams,serialise}=require("./lib/phase1-legacy.cjs");
 const root=path.resolve(__dirname,"..");
 const l=path.join(root,"curriculum","lexicon");
 const load=p=>JSON.parse(fs.readFileSync(path.join(l,p),"utf8"));
 const source=readLegacySource(root);
-const chapters=extractArray(source,"const L=","\n];\n\nconst shared=");
-const globalGlossary=extractArray(source,"const shared=",";\nfunction norm(",0);
-const guidedCloze=extractArray(source,"const guidedCloze=","\n];\n// Contextual hints");
+const chapters=effectiveLessons(extractArray(source,"const L=","\n];\n\nconst shared="));
+const globalGlossary=effectiveShared(extractArray(source,"const shared=",";\nfunction norm(",0));
+const guidedCloze=effectiveCloze(extractArray(source,"const guidedCloze=","\n];\n// Contextual hints"));
 const audit=load("legacy-token-audit.json");
 const registry=load("lexemes.json");
 const candidateDoc=load("legacy-candidate-map.json");
@@ -30,7 +31,7 @@ const currentExtras=buildExtraStreams(chapters,guidedCloze,audit);
 assert.equal(serialise(vocabDoc),serialise(currentVocab),"Vocab map must reflect exactly the current app first-wins dictionary");
 assert.equal(serialise(extras),serialise(currentExtras),"Additional text streams must match the eight legacy chapters");
 assert.equal(vocabDoc.total_keys,keys.size);
-assert.equal(extras.total_records,177);
+assert.equal(extras.total_records,184);
 assert.equal(extras.verified_introductions,0);
 assert(extras.records.every(r=>r.counted_as_new_introduction===false&&r.tokens.every(t=>t.lexeme_id===null)));
 const reviewed=[...lexemes.values()].filter(x=>x.status==="approved");
@@ -65,7 +66,7 @@ const result={
  context_exercise_cloze_records:extras.total_records,
  certified_new_course_introductions:ledger.introduced_lexemes.length
 };
-console.log("PASS: Phase 1 source integrity, signed-review mapping policy, all 204 legacy vocabulary keys and 177 non-introduction streams.");
+console.log("PASS: Phase 1 source integrity, signed-review mapping policy, all 204 legacy vocabulary keys and 184 non-introduction streams.");
 console.log(JSON.stringify(result,null,2));
 if(process.argv.includes("--require-review-ready")){
  assert.equal(unresolved.length,0,"Human review still needed for "+unresolved.length+" glossary candidates");

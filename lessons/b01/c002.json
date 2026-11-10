@@ -23,7 +23,7 @@
   "grammar_new": [],
   "proposed_new_lemmas_raw": "**New (proposed, unsigned):** familia, pater, māter, fīlius, fīlia, frāter, soror, Mārcus, Flāvia, vir, fēmina, nōmen, cuius, Rōmānus.",
   "proposed_grammar_raw": "**Grammar (new):** genitive singular `-ae`/`-ī`, showing possession and relationship; the question `Cuius?`",
-  "proposed_margin_raw": "**Margin:** pater ♂ + māter ♀ → fīlius ♂, fīlia ♀ · frāter ↔ soror · [pictūra: arbor familiae, the family tree] · Mārcus → Mārcī · Flāvia → Flāviae · Līvia → Līviae · Tītus → Tītī",
+  "proposed_margin_raw": "**Margin:** pater ♂ + māter ♀ → fīlius ♂, fīlia ♀ · frāter ↔ soror · [pictūra: arbor familiae, the family tree] · Mārcus → Mārcī · Flāvia → Flāviae · Līvia → Līviae · Titus → Titī",
   "reviewer_notes": [
     "> Note for the reviewer: there are 14 new lemmas, against a budget of 8. The extras are `vir`, `fēmina`, `nōmen` and `Rōmānus`; `vir` and `fēmina` are there so that pater and māter can be inferred from the picture. The owner should keep them or cut them. There are no 3rd-declension genitives (`patris`, `mātris`) on purpose."
   ],
@@ -459,12 +459,12 @@
         },
         {
           "id": "b01-c002-s011",
-          "text_la": "Tītus fīlius Mārcī et Flāviae est.",
+          "text_la": "Titus fīlius Mārcī et Flāviae est.",
           "source_line": 140,
           "annotation_status": "draft_unverified",
           "tokens": [
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 0,
               "end": 5,
               "lx": null,
@@ -515,7 +515,7 @@
         },
         {
           "id": "b01-c002-s012",
-          "text_la": "Quis est Tītus? Tītus frāter Līviae est.",
+          "text_la": "Quis est Titus? Titus frāter Līviae est.",
           "source_line": 141,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -536,7 +536,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 9,
               "end": 14,
               "lx": null,
@@ -544,7 +544,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 16,
               "end": 21,
               "lx": null,
@@ -579,7 +579,7 @@
         },
         {
           "id": "b01-c002-s013",
-          "text_la": "Quis est Līvia? Līvia soror Tītī est.",
+          "text_la": "Quis est Līvia? Līvia soror Titī est.",
           "source_line": 142,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -624,7 +624,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītī",
+              "t": "Titī",
               "start": 28,
               "end": 32,
               "lx": null,
@@ -643,7 +643,7 @@
         },
         {
           "id": "b01-c002-s014",
-          "text_la": "Cuius frāter est Tītus? Tītus est frāter Līviae.",
+          "text_la": "Cuius frāter est Titus? Titus est frāter Līviae.",
           "source_line": 143,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -672,7 +672,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 17,
               "end": 22,
               "lx": null,
@@ -680,7 +680,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 24,
               "end": 29,
               "lx": null,
@@ -715,7 +715,7 @@
         },
         {
           "id": "b01-c002-s015",
-          "text_la": "Cuius soror est Līvia? Līvia est soror Tītī.",
+          "text_la": "Cuius soror est Līvia? Līvia est soror Titī.",
           "source_line": 144,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -776,7 +776,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītī",
+              "t": "Titī",
               "start": 39,
               "end": 43,
               "lx": null,
@@ -787,7 +787,7 @@
         },
         {
           "id": "b01-c002-s016",
-          "text_la": "Cuius fīlius est Tītus? Tītus est fīlius Mārcī.",
+          "text_la": "Cuius fīlius est Titus? Titus est fīlius Mārcī.",
           "source_line": 145,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -816,7 +816,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 17,
               "end": 22,
               "lx": null,
@@ -824,7 +824,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 24,
               "end": 29,
               "lx": null,
@@ -1154,12 +1154,12 @@
         },
         {
           "id": "b01-c002-s021",
-          "text_la": "Tītus: «Rosa est rosa Līviae.»",
+          "text_la": "Titus: «Rosa est rosa Līviae.»",
           "source_line": 153,
           "annotation_status": "draft_unverified",
           "tokens": [
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 0,
               "end": 5,
               "lx": null,
@@ -1298,7 +1298,7 @@
         },
         {
           "id": "b01-c002-s024",
-          "text_la": "Arbor nōn est Līviae; arbor est Tītī.",
+          "text_la": "Arbor nōn est Līviae; arbor est Titī.",
           "source_line": 156,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1351,7 +1351,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītī",
+              "t": "Titī",
               "start": 32,
               "end": 36,
               "lx": null,
@@ -1362,7 +1362,7 @@
         },
         {
           "id": "b01-c002-s025",
-          "text_la": "Arbor Tītī magna est, sed rosa Līviae parva est.",
+          "text_la": "Arbor Titī magna est, sed rosa Līviae parva est.",
           "source_line": 157,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1375,7 +1375,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītī",
+              "t": "Titī",
               "start": 6,
               "end": 10,
               "lx": null,
@@ -1826,7 +1826,7 @@
         },
         {
           "id": "b01-c002-s031",
-          "text_la": "Ita est: puer in arbore est Tītus, fīlius Mārcī.",
+          "text_la": "Ita est: puer in arbore est Titus, fīlius Mārcī.",
           "source_line": 163,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1879,7 +1879,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 28,
               "end": 33,
               "lx": null,
@@ -1906,7 +1906,7 @@
         },
         {
           "id": "b01-c002-s032",
-          "text_la": "Mārcus et Tītus in hortō sunt.",
+          "text_la": "Mārcus et Titus in hortō sunt.",
           "source_line": 164,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1927,7 +1927,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 10,
               "end": 15,
               "lx": null,
@@ -2090,7 +2090,7 @@
         },
         {
           "id": "b01-c002-s035",
-          "text_la": "Nōmen puellae est Līvia; nōmen puerī est Tītus.",
+          "text_la": "Nōmen puellae est Līvia; nōmen puerī est Titus.",
           "source_line": 167,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -2151,7 +2151,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 41,
               "end": 46,
               "lx": null,
@@ -2242,7 +2242,7 @@
         },
         {
           "id": "b01-c002-s037",
-          "text_la": "Estne Flāvia soror Tītī? Nōn: Flāvia māter Tītī est.",
+          "text_la": "Estne Flāvia soror Titī? Nōn: Flāvia māter Titī est.",
           "source_line": 169,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -2271,7 +2271,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītī",
+              "t": "Titī",
               "start": 19,
               "end": 23,
               "lx": null,
@@ -2303,7 +2303,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītī",
+              "t": "Titī",
               "start": 43,
               "end": 47,
               "lx": null,
@@ -2418,7 +2418,7 @@
         },
         {
           "id": "b01-c002-s039",
-          "text_la": "Vir et fēmina nōn in hortō sunt: vir in hortō est, fēmina in vīllā.",
+          "text_la": "Vir in hortō est, sed fēmina in vīllā est.",
           "source_line": 171,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -2431,7 +2431,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "et",
+              "t": "in",
               "start": 4,
               "end": 6,
               "lx": null,
@@ -2439,97 +2439,57 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "fēmina",
+              "t": "hortō",
               "start": 7,
-              "end": 13,
-              "lx": null,
-              "morph": null,
-              "annotation_status": "draft_unverified"
-            },
-            {
-              "t": "nōn",
-              "start": 14,
-              "end": 17,
-              "lx": null,
-              "morph": null,
-              "annotation_status": "draft_unverified"
-            },
-            {
-              "t": "in",
-              "start": 18,
-              "end": 20,
-              "lx": null,
-              "morph": null,
-              "annotation_status": "draft_unverified"
-            },
-            {
-              "t": "hortō",
-              "start": 21,
-              "end": 26,
-              "lx": null,
-              "morph": null,
-              "annotation_status": "draft_unverified"
-            },
-            {
-              "t": "sunt",
-              "start": 27,
-              "end": 31,
-              "lx": null,
-              "morph": null,
-              "annotation_status": "draft_unverified"
-            },
-            {
-              "t": "vir",
-              "start": 33,
-              "end": 36,
-              "lx": null,
-              "morph": null,
-              "annotation_status": "draft_unverified"
-            },
-            {
-              "t": "in",
-              "start": 37,
-              "end": 39,
-              "lx": null,
-              "morph": null,
-              "annotation_status": "draft_unverified"
-            },
-            {
-              "t": "hortō",
-              "start": 40,
-              "end": 45,
+              "end": 12,
               "lx": null,
               "morph": null,
               "annotation_status": "draft_unverified"
             },
             {
               "t": "est",
-              "start": 46,
-              "end": 49,
+              "start": 13,
+              "end": 16,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "sed",
+              "start": 18,
+              "end": 21,
               "lx": null,
               "morph": null,
               "annotation_status": "draft_unverified"
             },
             {
               "t": "fēmina",
-              "start": 51,
-              "end": 57,
+              "start": 22,
+              "end": 28,
               "lx": null,
               "morph": null,
               "annotation_status": "draft_unverified"
             },
             {
               "t": "in",
-              "start": 58,
-              "end": 60,
+              "start": 29,
+              "end": 31,
               "lx": null,
               "morph": null,
               "annotation_status": "draft_unverified"
             },
             {
               "t": "vīllā",
-              "start": 61,
-              "end": 66,
+              "start": 32,
+              "end": 37,
+              "lx": null,
+              "morph": null,
+              "annotation_status": "draft_unverified"
+            },
+            {
+              "t": "est",
+              "start": 38,
+              "end": 41,
               "lx": null,
               "morph": null,
               "annotation_status": "draft_unverified"
@@ -2665,9 +2625,9 @@
       "type": "proposed_ungraded",
       "status": "proposed_ungraded",
       "source_line": 180,
-      "text_original": "3. Cuius frāter est Tītus? — Tītus frāter Līviae est.",
-      "prompt_text": "Cuius frāter est Tītus?",
-      "model_answer_raw": "Tītus frāter Līviae est.",
+      "text_original": "3. Cuius frāter est Titus? — Titus frāter Līviae est.",
+      "prompt_text": "Cuius frāter est Titus?",
+      "model_answer_raw": "Titus frāter Līviae est.",
       "reviewed_by": null,
       "reviewed_at": null,
       "scoring_enabled": false
@@ -2689,9 +2649,9 @@
       "type": "proposed_ungraded",
       "status": "proposed_ungraded",
       "source_line": 182,
-      "text_original": "5. Cuius est arbor? — Arbor est Tītī.",
+      "text_original": "5. Cuius est arbor? — Arbor est Titī.",
       "prompt_text": "Cuius est arbor?",
-      "model_answer_raw": "Arbor est Tītī.",
+      "model_answer_raw": "Arbor est Titī.",
       "reviewed_by": null,
       "reviewed_at": null,
       "scoring_enabled": false
@@ -2758,10 +2718,10 @@
       "type": "pic",
       "status": "proposed_ungraded",
       "scoring_enabled": false,
-      "prompt_la": "Ubi est Tītus?",
+      "prompt_la": "Ubi est Titus?",
       "scene_id": "b01-c002-scene",
-      "region_id": "Tītus",
-      "answer": "Tītus",
+      "region_id": "Titus",
+      "answer": "Titus",
       "review": {
         "by": null,
         "at": null
@@ -2801,8 +2761,8 @@
       "type": "proposed_ungraded",
       "status": "proposed_ungraded",
       "source_line": 188,
-      "text_original": "- Say who owns what: `Rosa est Līviae. Arbor est Tītī.`",
-      "prompt_text": "Say who owns what: `Rosa est Līviae. Arbor est Tītī.`",
+      "text_original": "- Say who owns what: `Rosa est Līviae. Arbor est Titī.`",
+      "prompt_text": "Say who owns what: `Rosa est Līviae. Arbor est Titī.`",
       "reviewed_by": null,
       "reviewed_at": null,
       "scoring_enabled": false
@@ -2817,6 +2777,6 @@
     370
   ],
   "reading_sentence_count": 40,
-  "reading_token_count": 284,
+  "reading_token_count": 279,
   "notes_for_reviewer": "UNSIGNED DRAFT. All lexical and grammar annotations remain unverified. Proposed word budget: 8\n> Note for the reviewer: there are 14 new lemmas, against a budget of 8. The extras are `vir`, `fēmina`, `nōmen` and `Rōmānus`; `vir` and `fēmina` are there so that pater and māter can be inferred from the picture. The owner should keep them or cut them. There are no 3rd-declension genitives (`patris`, `mātris`) on purpose."
 }

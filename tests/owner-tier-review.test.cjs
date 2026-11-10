@@ -126,7 +126,7 @@ try{
 }finally{fs.rmSync(tmp,{recursive:true,force:true});}
 // The context/exercise/cloze audit derives source IDs and flags precisely the missing words.
 const extras=read("legacy-extra-streams.json");
-assert.equal(extras.total_records,177);
+assert.equal(extras.total_records,184,"Two approved cloze and five short-answer alternatives remain unsigned audit records");
 assert(extras.records.every(x=>x.tokens.every(t=>Array.isArray(t.source_candidate_ids))));
 assert.deepEqual([...new Set(extras.unglossed_tokens.map(t=>t.surface.toLowerCase()))].sort(),
  ["faciet","facit","quandō"]);

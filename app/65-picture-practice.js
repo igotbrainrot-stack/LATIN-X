@@ -21,7 +21,10 @@ function evaluate(ex,region,chapter,storage,point=null){
  const answeredByClick=validPoint&&art.regionAt(scene.id,point.x,point.y)===region&&
   art.regionHit(scene.polygons?.[ex.answer],point.x,point.y);
  const gradedRegion=answeredByClick?ex.answer:region;
- const result=engine.grade(ex,gradedRegion,chapter);
+ // An approved picture question may explicitly accept multiple regions.
+ // Drafts remain ungraded by the existing approval gate in engine.grade.
+ const accepted=Array.isArray(ex.accept_regions)&&ex.accept_regions.includes(gradedRegion);
+ const result=engine.grade(accepted?{...ex,answer:gradedRegion}:ex,gradedRegion,chapter);
  if(result.status!=="graded")return {status:"ungraded",correct:null};
  // Never bootstrap or write to the historical v4 key, even when v5 is absent.
  if(!stateApi||!storage)return {...result,saved:false};
@@ -71,7 +74,7 @@ function mount(){
   let storage=null;try{storage=root.localStorage}catch(error){}
   const result=evaluate(ex,selected.regionId,chapter,storage,selected.point);
   feedback.textContent=result.status==="graded"?
-   (result.correct?"Rectē! Reviewed answer.":"Nōndum. Try again.")+(result.saved?" Saved in v5.":" Could not save progress."):
+   (result.correct?"Rēctē! Reviewed answer.":"Nōndum. Try again.")+(result.saved?" Saved in v5.":" Could not save progress."):
    "Region selected: "+selected.regionId+". This answer key is unsigned; no score or saved answer was created.";
  });
  render();

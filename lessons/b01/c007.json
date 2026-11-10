@@ -1369,12 +1369,12 @@
       "sentences": [
         {
           "id": "b01-c007-s028",
-          "text_la": "Tītus ad portam ambulat.",
+          "text_la": "Titus ad portam ambulat.",
           "source_line": 546,
           "annotation_status": "draft_unverified",
           "tokens": [
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 0,
               "end": 5,
               "lx": null,
@@ -1409,12 +1409,12 @@
         },
         {
           "id": "b01-c007-s029",
-          "text_la": "Tītus Līviam et puerum et canem spectat.",
+          "text_la": "Titus Līviam et puerum et canem spectat.",
           "source_line": 547,
           "annotation_status": "draft_unverified",
           "tokens": [
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 0,
               "end": 5,
               "lx": null,
@@ -1473,12 +1473,12 @@
         },
         {
           "id": "b01-c007-s030",
-          "text_la": "Tītus: «Quis est puer?» Līvia Tītō respondet: «Puer est fīlius Gāī.»",
+          "text_la": "Titus: «Quis est puer?» Līvia Titō respondet: «Puer est fīlius Gāī.»",
           "source_line": 548,
           "annotation_status": "draft_unverified",
           "tokens": [
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 0,
               "end": 5,
               "lx": null,
@@ -1518,7 +1518,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītō",
+              "t": "Titō",
               "start": 30,
               "end": 34,
               "lx": null,
@@ -1569,7 +1569,7 @@
         },
         {
           "id": "b01-c007-s031",
-          "text_la": "Fīlius Gāī Tītō ūnum mālum dat.",
+          "text_la": "Fīlius Gāī Titō ūnum mālum dat.",
           "source_line": 549,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1590,7 +1590,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītō",
+              "t": "Titō",
               "start": 11,
               "end": 15,
               "lx": null,
@@ -1625,12 +1625,12 @@
         },
         {
           "id": "b01-c007-s032",
-          "text_la": "Tītus mālum capit et canī dat.",
+          "text_la": "Titus mālum capit et canī dat.",
           "source_line": 550,
           "annotation_status": "draft_unverified",
           "tokens": [
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 0,
               "end": 5,
               "lx": null,
@@ -1721,7 +1721,7 @@
         },
         {
           "id": "b01-c007-s034",
-          "text_la": "Canis ad Tītum currit, et Tītus ad viam currit.",
+          "text_la": "Canis ad Titum currit, et Titus ad viam currit.",
           "source_line": 552,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1742,7 +1742,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītum",
+              "t": "Titum",
               "start": 9,
               "end": 14,
               "lx": null,
@@ -1766,7 +1766,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 26,
               "end": 31,
               "lx": null,
@@ -1801,7 +1801,7 @@
         },
         {
           "id": "b01-c007-s035",
-          "text_la": "Nunc Tītus et canis in viā sunt.",
+          "text_la": "Nunc Titus et canis in viā sunt.",
           "source_line": 553,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1814,7 +1814,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 5,
               "end": 10,
               "lx": null,
@@ -1905,7 +1905,7 @@
         },
         {
           "id": "b01-c007-s037",
-          "text_la": "Ubi est Tītus? Tītus in viā est.",
+          "text_la": "Ubi est Titus? Titus in viā est.",
           "source_line": 555,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1926,7 +1926,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 8,
               "end": 13,
               "lx": null,
@@ -1934,7 +1934,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 15,
               "end": 20,
               "lx": null,
@@ -1969,7 +1969,7 @@
         },
         {
           "id": "b01-c007-s038",
-          "text_la": "Flāvia Tītum vocat.",
+          "text_la": "Flāvia Titum vocat.",
           "source_line": 556,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1982,7 +1982,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītum",
+              "t": "Titum",
               "start": 7,
               "end": 12,
               "lx": null,
@@ -2001,12 +2001,12 @@
         },
         {
           "id": "b01-c007-s039",
-          "text_la": "Tītus statim ad portam currit; canis quoque currit.",
+          "text_la": "Titus statim ad portam currit; canis quoque currit.",
           "source_line": 557,
           "annotation_status": "draft_unverified",
           "tokens": [
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 0,
               "end": 5,
               "lx": null,
@@ -2233,12 +2233,12 @@
         },
         {
           "id": "b01-c007-s042",
-          "text_la": "Tītus prope portam stat et canem spectat.",
+          "text_la": "Titus prope portam stat et canem spectat.",
           "source_line": 560,
           "annotation_status": "draft_unverified",
           "tokens": [
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 0,
               "end": 5,
               "lx": null,
@@ -2425,7 +2425,7 @@
         },
         {
           "id": "b01-c007-s045",
-          "text_la": "Et Tītus? Tītus nōn iam in viā, sed in vīllā est.",
+          "text_la": "Et Titus? Titus nōn iam in viā, sed in vīllā est.",
           "source_line": 563,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -2438,7 +2438,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 3,
               "end": 8,
               "lx": null,
@@ -2446,7 +2446,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 10,
               "end": 15,
               "lx": null,
@@ -2521,7 +2521,7 @@
         },
         {
           "id": "b01-c007-s046",
-          "text_la": "Flāvia Tītō pānem dat, et Tītus edit.",
+          "text_la": "Flāvia Titō pānem dat, et Titus edit.",
           "source_line": 564,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -2534,7 +2534,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītō",
+              "t": "Titō",
               "start": 7,
               "end": 11,
               "lx": null,
@@ -2566,7 +2566,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 26,
               "end": 31,
               "lx": null,
@@ -2616,9 +2616,9 @@
       "type": "proposed_ungraded",
       "status": "proposed_ungraded",
       "source_line": 572,
-      "text_original": "3. Quis canem vocat? — Puer (fīlius Gāiī) canem vocat.",
+      "text_original": "3. Quis canem vocat? — Puer (fīlius Gāī) canem vocat.",
       "prompt_text": "Quis canem vocat?",
-      "model_answer_raw": "Puer (fīlius Gāiī) canem vocat.",
+      "model_answer_raw": "Puer (fīlius Gāī) canem vocat.",
       "reviewed_by": null,
       "reviewed_at": null,
       "scoring_enabled": false
@@ -2640,9 +2640,9 @@
       "type": "proposed_ungraded",
       "status": "proposed_ungraded",
       "source_line": 574,
-      "text_original": "5. Quō Tītus currit? — Tītus ad viam currit; tum ad portam.",
-      "prompt_text": "Quō Tītus currit?",
-      "model_answer_raw": "Tītus ad viam currit; tum ad portam.",
+      "text_original": "5. Quō Titus currit? — Titus ad viam currit; tum ad portam.",
+      "prompt_text": "Quō Titus currit?",
+      "model_answer_raw": "Titus ad viam currit; tum ad portam.",
       "reviewed_by": null,
       "reviewed_at": null,
       "scoring_enabled": false
@@ -2687,7 +2687,11 @@
         "by": null,
         "at": null
       },
-      "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review."
+      "notes_for_claude": "Draft Latin and unsigned answer key; check against original manuscript and approved image before owner review.",
+      "accept_regions": [
+        "porta",
+        "Līvia"
+      ]
     },
     {
       "id": "b01-c007-q009",
@@ -2752,8 +2756,8 @@
       "type": "proposed_ungraded",
       "status": "proposed_ungraded",
       "source_line": 580,
-      "text_original": "- Answer aloud: `Quō Tītus currit?`",
-      "prompt_text": "Answer aloud: `Quō Tītus currit?`",
+      "text_original": "- Answer aloud: `Quō Titus currit?`",
+      "prompt_text": "Answer aloud: `Quō Titus currit?`",
       "reviewed_by": null,
       "reviewed_at": null,
       "scoring_enabled": false

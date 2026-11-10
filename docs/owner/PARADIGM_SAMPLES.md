@@ -129,7 +129,7 @@ Lexeme: cīvis
 | n.gen.sg | cīvis |
 | n.dat.sg | cīvī |
 | n.acc.sg | cīvem |
-| n.abl.sg | cīvī |
+| n.abl.sg | cīve |
 | n.voc.sg | cīvis |
 | n.nom.pl | cīvēs |
 | n.gen.pl | cīvium |
@@ -203,7 +203,7 @@ Lexeme: diēs
 | n.nom.sg | diēs |
 | n.gen.sg | diēī |
 | n.dat.sg | diēī |
-| n.acc.sg | diēm |
+| n.acc.sg | diem |
 | n.abl.sg | diē |
 | n.voc.sg | diēs |
 | n.nom.pl | diēs |
