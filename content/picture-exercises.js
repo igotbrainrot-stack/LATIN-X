@@ -15,7 +15,7 @@ globalThis.TablinumPicturePracticeData={
           "type": "pic",
           "status": "proposed_ungraded",
           "scoring_enabled": false,
-          "prompt_la": "Ubi est arbor magna?",
+          "prompt_la": "Ubi est arbor māgna?",
           "scene_id": "b01-c001-scene",
           "region_id": "arbor-magna",
           "answer": "arbor-magna",
