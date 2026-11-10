@@ -59,7 +59,7 @@
         },
         {
           "id": "b01-c007-s002",
-          "text_la": "Via magna est.",
+          "text_la": "Via māgna est.",
           "source_line": 514,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -72,7 +72,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "magna",
+              "t": "māgna",
               "start": 4,
               "end": 9,
               "lx": null,

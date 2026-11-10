@@ -13,7 +13,7 @@ const IGNORE=new Set(["aqu","dōn","audi","Flāvi","choice","choose","Choose","e
 /* Latin strings in the interface (after LX-007 to LX-014). Each must occur in
  * one of the listed files; tests/latin-pronunciation.test.cjs checks this. */
 const UI_LATIN=[
- ["app/legacy-runtime.js",["Legō","Lēctiō","Exercitia","Memoria","Prōgressus","Liber prīmus","Dux discendī","Verbum ēlēctum","Rēctē","Relege sententiam","Bene respondistī","Nōndum","Relege narrātiōnem","Vērum","Falsum","Respondē Latīnē","Servāta","Hodiē","Posteā","Ēlige verbum Latīnum in lēctiōne","Ostende significātiōnem","Mūsica ex fontibus Graecīs et Rōmānīs īnspīrāta est","reconstrūctiō incerta est","Vōx mea","Lēctiō lēcta","Recordātiō incepta","Intellege et respondē","propria","Verbum dēest"]],
+ ["app/legacy-runtime.js",["Legō","Lēctiō","Exercitia","Memoria","Prōgressus","Liber prīmus","Dux discendī","Verbum ēlēctum","Rēctē","Relege sententiam","Bene respondistī","Nōndum","Relege narrātiōnem","Vērum","Falsum","Respondē Latīnē","Servāta","Hodiē","Posteā","Ēlige verbum Latīnum in lēctiōne","Ostende sīgnificātiōnem","Mūsica ex fontibus Graecīs et Rōmānīs īnspīrāta est","recōnstrūctiō incerta est","Vōx mea","Lēctiō lēcta","Recordātiō incepta","Intellege et respondē","propria","Verbum dēest"]],
  ["index.html",["Prīma Via","Discere legendō","Hortus","Familia","Dōnum","Cēna","Forum","Canis","Tempestās","Crās"]],
  ["app/65-picture-practice.js",["Quaestiōnēs pictae","Caput","Rēctē"]],
  ["content/music.js",["Hortus serēnus","Sub columnīs","Vesper in vīllā"]]

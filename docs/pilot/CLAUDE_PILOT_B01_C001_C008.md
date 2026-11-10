@@ -42,31 +42,31 @@ Chapters 3–8 fall slightly below their minimum, by 2–38 tokens each. I chose
 # Caput I — In hortō
 
 **Grammar:** nominative subjects; `est`/`sunt`; the questions `Quis?`, `Ubi?` and `-ne?`; `in hortō`/`in vīllā`/`in arbore` as pictured place chunks.
-**New (proposed, unsigned):** hortus, arbor, rosa, vīlla, puella, puer, Līvia, Titus, magnus, parvus, pulcher, sum, in, et, sed, nōn, quoque, ecce, quis, ubi, ita, nunc, hīc, ibi.
-**Margin:** magnus ↔ parvus · puella ♀ = Līvia · puer ♂ = Titus · hīc ↔ ibi · ita ↔ nōn · [pictūra: hortus, arbor magna, arbor parva, rosa, vīlla]
+**New (proposed, unsigned):** hortus, arbor, rosa, vīlla, puella, puer, Līvia, Titus, māgnus, parvus, pulcher, sum, in, et, sed, nōn, quoque, ecce, quis, ubi, ita, nunc, hīc, ibi.
+**Margin:** māgnus ↔ parvus · puella ♀ = Līvia · puer ♂ = Titus · hīc ↔ ibi · ita ↔ nōn · [pictūra: hortus, arbor māgna, arbor parva, rosa, vīlla]
 
 ## Lēctiō 1 — Hortus
 
 Ecce hortus.
-Hortus magnus est.
+Hortus māgnus est.
 In hortō est arbor.
-Arbor magna est.
+Arbor māgna est.
 In hortō est quoque rosa.
 Rosa parva est.
-Arbor magna est, sed rosa parva est.
-Rosa nōn magna est.
+Arbor māgna est, sed rosa parva est.
+Rosa nōn māgna est.
 Arbor nōn parva est.
 Rosa pulchra est.
 Ecce puella.
 Puella in hortō est.
 Quis est puella?
 Puella est Līvia.
-Līvia nōn magna est; Līvia parva est.
+Līvia nōn māgna est; Līvia parva est.
 Ubi est Līvia?
 Līvia in hortō est.
 Līvia et rosa in hortō sunt.
 Ecce vīlla.
-Vīlla quoque magna est.
+Vīlla quoque māgna est.
 Hortus est hīc; vīlla est ibi.
 Ecce puer.
 Puer quoque parvus est.
@@ -83,38 +83,38 @@ Nōn, Titus nōn in hortō est.
 Nunc Titus nōn in vīllā est.
 Ubi est puer?
 Līvia: «Ubi est puer Titus? Estne Titus in vīllā?»
-Nōn est. Vīlla magna est, sed Titus ibi nōn est.
+Nōn est. Vīlla māgna est, sed Titus ibi nōn est.
 «Estne puer in hortō?»
 Ita, Titus in hortō est.
 Sed ubi in hortō?
 Rosa hīc est, sed puer hīc nōn est.
-In hortō sunt arbor magna et arbor parva.
+In hortō sunt arbor māgna et arbor parva.
 Estne Titus in arbore parvā?
-Nōn: arbor parva nōn magna est, et puer ibi nōn est.
-Ecce! In arbore magnā est puer!
+Nōn: arbor parva nōn māgna est, et puer ibi nōn est.
+Ecce! In arbore māgnā est puer!
 Quis est puer in arbore?
 Puer in arbore est Titus!
-Titus parvus est, sed arbor magna est.
+Titus parvus est, sed arbor māgna est.
 Līvia: «Ecce Titus! Titus in arbore est!»
 Nunc Līvia et Titus in hortō sunt.
 Līvia est hīc, et Titus est ibi.
 Et ubi est Līvia? Līvia in hortō est, et rosa quoque.
 Et Titus? Titus nōn in vīllā, sed in arbore est.
-Hortus magnus et pulcher est.
-Arbor magna est, rosa parva est, puella parva est, puer parvus est.
+Hortus māgnus et pulcher est.
+Arbor māgna est, rosa parva est, puella parva est, puer parvus est.
 
 ## Quaestiōnēs (model answers, ungraded)
 
 1. Quis est puella? — Puella est Līvia.
-2. Estne rosa magna? — Nōn, rosa parva est.
+2. Estne rosa māgna? — Nōn, rosa parva est.
 3. Ubi est vīlla? — Vīlla ibi est. / Vīlla nōn in hortō est.
 4. Estne Titus in vīllā? (Lēctiō 2) — Nōn, Titus in hortō est.
-5. Ubi est Titus? — Titus in arbore magnā est.
-6. Estne arbor magna an parva? *(picture choice)* — Arbor magna est.
+5. Ubi est Titus? — Titus in arbore māgnā est.
+6. Estne arbor māgna an parva? *(picture choice)* — Arbor māgna est.
 
 ## Loquere (speaking, ungraded)
 
-- Point to the picture and say what is big and what is small: `Arbor magna est. Rosa parva est.`
+- Point to the picture and say what is big and what is small: `Arbor māgna est. Rosa parva est.`
 - Answer aloud: `Ubi est Līvia?` `Ubi est Titus?`
 
 ---
@@ -127,7 +127,7 @@ Arbor magna est, rosa parva est, puella parva est, puer parvus est.
 
 ## Lēctiō 1 — Ecce familia
 
-Ecce vīlla magna.
+Ecce vīlla māgna.
 In vīllā est familia Rōmāna.
 Ecce vir: nōmen virī est Mārcus.
 Mārcus pater est.
@@ -143,8 +143,8 @@ Quis est Līvia? Līvia soror Titī est.
 Cuius frāter est Titus? Titus est frāter Līviae.
 Cuius soror est Līvia? Līvia est soror Titī.
 Cuius fīlius est Titus? Titus est fīlius Mārcī.
-Familia Mārcī nōn magna est: pater, māter, fīlius, fīlia.
-Vīlla familiae magna est, et hortus vīllae quoque magnus est.
+Familia Mārcī nōn māgna est: pater, māter, fīlius, fīlia.
+Vīlla familiae māgna est, et hortus vīllae quoque māgnus est.
 
 ## Lēctiō 2 — Cuius est hortus?
 
@@ -152,9 +152,9 @@ Hortus est hortus familiae.
 Sed in hortō est rosa pulchra. Cuius est rosa?
 Titus: «Rosa est rosa Līviae.»
 Ita, rosa Līviae est.
-Ecce arbor magna. Cuius est arbor?
+Ecce arbor māgna. Cuius est arbor?
 Arbor nōn est Līviae; arbor est Titī.
-Arbor Titī magna est, sed rosa Līviae parva est.
+Arbor Titī māgna est, sed rosa Līviae parva est.
 Ubi est Mārcus? Mārcus in hortō est.
 Ubi est Flāvia? Flāvia nōn in hortō, sed in vīllā est.
 Ecce puella in vīllā: estne puella fīlia Flāviae?
@@ -169,7 +169,7 @@ Estne Mārcus frāter Līviae? Nōn: Mārcus pater Līviae est.
 Estne Flāvia soror Titī? Nōn: Flāvia māter Titī est.
 Estne Līvia fīlia Mārcī? Ita, Līvia est fīlia Mārcī et Flāviae.
 Vir in hortō est, sed fēmina in vīllā est.
-Familia Rōmāna parva est, sed vīlla familiae magna et pulchra est.
+Familia Rōmāna parva est, sed vīlla familiae māgna et pulchra est.
 
 > Note for the reviewer: there are 14 new lemmas, against a budget of 8. The extras are `vir`, `fēmina`, `nōmen` and `Rōmānus`; `vir` and `fēmina` are there so that pater and māter can be inferred from the picture. The owner should keep them or cut them. There are no 3rd-declension genitives (`patris`, `mātris`) on purpose.
 
@@ -198,12 +198,12 @@ Familia Rōmāna parva est, sed vīlla familiae magna et pulchra est.
 ## Lēctiō 1 — Mēnsa
 
 Nunc est cēna in vīllā.
-In vīllā est mēnsa magna.
+In vīllā est mēnsa māgna.
 Flāvia cibum portat.
 Quid Flāvia portat? Cibum portat.
 Flāvia cibum in mēnsā pōnit.
 Tum Flāvia pānem portat.
-Pānis magnus est.
+Pānis māgnus est.
 Flāvia pānem quoque in mēnsā pōnit.
 Ecce pōculum. In pōculō est aqua.
 Līvia pōculum portat.
@@ -294,7 +294,7 @@ Estne rosa Titī? Nōn, rosa Flāviae est.
 Ecce, Gāius venit.
 Quis est Gāius? Gāius amīcus Mārcī est.
 Gāius dōnum habet.
-Dōnum nōn magnum est; dōnum parvum est.
+Dōnum nōn māgnum est; dōnum parvum est.
 Cui Gāius dōnum dat?
 Gāius Mārcō dōnum dat.
 Mārcus dōnum accipit.
@@ -321,7 +321,7 @@ Tum Titus aquam in pōculō habet et bibit.
 Flāvia laeta est, Mārcus laetus est, Titus laetus est.
 Et Līvia? Līvia quoque laeta est.
 Līvia dōnum nōn habet, sed laeta est.
-Flāvia rosam rubram in pōculō magnō pōnit.
+Flāvia rosam rubram in pōculō māgnō pōnit.
 Nunc rosa in pōculō est, et pōculum in mēnsā est.
 Cui Flāvia cibum dat? Flāvia Gāiō cibum dat.
 Gāius cibum accipit et Flāviae grātiās agit.
@@ -356,12 +356,12 @@ Cēna bona est, et Gāius laetus est.
 Nunc Līvia in vīllā est, et Titus quoque.
 Līvia librum Mārcī habet, sed librum nōn legit.
 Līvia hortum spectat.
-Hortus vīllae magnus et pulcher est.
-In hortō est arbor magna; ibi est quoque arbor parva.
+Hortus vīllae māgnus et pulcher est.
+In hortō est arbor māgna; ibi est quoque arbor parva.
 Ubi est rosa Līviae? Rosa nōn iam in hortō est.
 Rosa in vīllā est, in mēnsā Flāviae.
-Cuius est arbor magna? Arbor magna est Titī.
-Titus in arbore magnā nōn est; Titus in vīllā est.
+Cuius est arbor māgna? Arbor māgna est Titī.
+Titus in arbore māgnā nōn est; Titus in vīllā est.
 Titus pōculum rubrum habet.
 Pōculum Titī parvum est, sed pulchrum.
 Estne Titus in hortō? Nōn, Titus in vīllā est, et Līvia quoque.
@@ -429,7 +429,7 @@ Nunc familia Mārcī in vīllā est, et Līvia laeta est.
 ## Lēctiō 1 — In forō
 
 Ecce forum.
-Forum magnum est.
+Forum māgnum est.
 Mārcus et Līvia in forō sunt.
 In forō est mercātor.
 Mercātor mēnsam habet.
@@ -444,19 +444,19 @@ In forō nōn est arbor, nōn est rosa.
 Sed in forō sunt multa māla et multa ōva.
 Mārcus mercātōrem spectat; Līvia māla spectat.
 Estne mālum rubrum? Ita: māla rubra sunt.
-Ōva parva sunt, sed māla magna sunt.
+Ōva parva sunt, sed māla māgna sunt.
 
 ## Lēctiō 2 — Quot māla?
 
 Līvia māla numerat.
 «Ūnum, duo, tria…»
-Līvia tria māla magna spectat.
-Tria māla magna sunt; alia māla parva sunt.
+Līvia tria māla māgna spectat.
+Tria māla māgna sunt; alia māla parva sunt.
 Mārcus māla emit.
 Quot māla Mārcus emit? Mārcus duo māla emit.
 Mārcus nōn tria, sed duo māla capit.
-Līvia: «Estne pretium magnum?»
-Mercātor: «Pretium nōn magnum est.»
+Līvia: «Estne pretium māgnum?»
+Mercātor: «Pretium nōn māgnum est.»
 Mārcus mercātōrī pecūniam dat.
 Pecūnia est pretium.
 Mercātor pecūniam accipit.
@@ -511,7 +511,7 @@ Quot pōcula in mēnsā sunt? Tria pōcula in mēnsā sunt.
 ## Lēctiō 1 — Canis
 
 Ecce via.
-Via magna est.
+Via māgna est.
 In viā est canis.
 Canis parvus est.
 Ubi est canis? Canis in viā est.
@@ -590,7 +590,7 @@ Flāvia Titō pānem dat, et Titus edit.
 ## Lēctiō 1 — Ventus
 
 Familia in vīllā est.
-Subitō ventus magnus est.
+Subitō ventus māgnus est.
 Ventus arborem movet.
 Līvia ventum audit.
 Quid Līvia audit? Ventum audit.
@@ -601,7 +601,7 @@ Līvia ad fenestram currit.
 Titus quoque ad fenestram currit.
 Līvia et Titus ad fenestram currunt.
 Līvia arborem videt; Titus arborem videt.
-Līvia et Titus arborem magnam vident.
+Līvia et Titus arborem māgnam vident.
 Ventus portam quoque movet.
 Canis in viā ventum audit et lātrat.
 Līvia et Titus canem audiunt.
@@ -637,7 +637,7 @@ Sōl lūcet.
 Līvia et Titus sōlem vident.
 Mārcus et Flāvia ad portam ambulant.
 Līvia et Titus ad hortum currunt.
-Arbor magna stat; rosa quoque stat.
+Arbor māgna stat; rosa quoque stat.
 Līvia et Titus in hortō stant.
 Titus nōn iam timet.
 Titus et Līvia arborem et rosam spectant.

@@ -9,9 +9,9 @@
   "chapters": [
     {
       "legacyId": "legacy-ch01",
-      "allLessonDataFnv32": "014641a9",
-      "questionDataFnv32": "a903a64b",
-      "clozeDataFnv32": "2f35cf8c"
+      "allLessonDataFnv32": "b54e6109",
+      "questionDataFnv32": "2cce64eb",
+      "clozeDataFnv32": "d4ab9b4c"
     },
     {
       "legacyId": "legacy-ch02",
@@ -190,5 +190,25 @@
         }
       ]
     }
-  ]
+  ],
+  "quantity_convention_20261110": {
+    "approved_by": "owner",
+    "reference": "A&G §603.d",
+    "untouched_archive": true,
+    "chapter": 1,
+    "oldHashes": {
+      "legacyId": "legacy-ch01",
+      "allLessonDataFnv32": "014641a9",
+      "questionDataFnv32": "a903a64b",
+      "clozeDataFnv32": "2f35cf8c"
+    },
+    "newHashes": {
+      "legacyId": "legacy-ch01",
+      "allLessonDataFnv32": "b54e6109",
+      "questionDataFnv32": "2cce64eb",
+      "clozeDataFnv32": "d4ab9b4c"
+    },
+    "oldSentenceHash": "61c210d0",
+    "newSentenceHash": "4d7f1ff0"
+  }
 }

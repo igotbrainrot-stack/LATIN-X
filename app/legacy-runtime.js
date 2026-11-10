@@ -24,7 +24,7 @@ if(publishedLexicon&&publishedLexicon.schema==="tablinum-content-lexicon-v1"&&Ar
  }
 }
 const guidedCloze=[
- {text:"Arbor magna est. In hortō est ____ magna.",answers:["arbor"],clue:"Arbor est magna; puella parva est.",proof:"In hortō est arbor magna."},
+ {text:"Arbor māgna est. In hortō est ____ māgna.",answers:["arbor"],clue:"Arbor est māgna; puella parva est.",proof:"In hortō est arbor māgna."},
  {text:"Līvia soror ____ est.",answers:["Titī"],clue:"Quis est frāter Līviae?",proof:"Līvia soror Titī est."},
  {text:"Līvia rosam mātrī ____.",answers:["dat"],clue:"Quid Līvia facit?",proof:"Līvia rosam mātrī dat."},
  {text:"Titus pānem ____.",answers:["edit"],clue:"Quid Titus facit?",proof:"Titus pānem edit."},
@@ -541,7 +541,7 @@ function review(){
  h+='<div class="panel" style="text-align:center;padding:25px"><div class="mini">'+(entry.group==="legacyCards"?"Verbum vetus · Not owner-reviewed":"Verbum recognitum · "+esc(item.direction))+'</div>';
  h+='<h1 lang="la">'+esc(spell(item.head||entry.key))+'</h1>';
  if(item.sourceText)h+='<p lang="la">'+highlightReviewSentence(item)+'</p>';
- h+=reviewReveal?'<h2>'+esc(item.meaning||"No gloss available")+'</h2><div class="tools" style="justify-content:center">'+["again","hard","good","easy"].map(x=>'<button class="btn '+(x==="good"?"primary":"")+'" data-rating="'+x+'">'+x+'</button>').join("")+'</div>':'<button class="btn primary" data-action="revealCard">Ostende significātiōnem · Reveal</button>';
+ h+=reviewReveal?'<h2>'+esc(item.meaning||"No gloss available")+'</h2><div class="tools" style="justify-content:center">'+["again","hard","good","easy"].map(x=>'<button class="btn '+(x==="good"?"primary":"")+'" data-rating="'+x+'">'+x+'</button>').join("")+'</div>':'<button class="btn primary" data-action="revealCard">Ostende sīgnificātiōnem · Reveal</button>';
  return h+'</div>';
 }
 function progress(chapters=L){
@@ -555,7 +555,7 @@ function progress(chapters=L){
  '<div class="stat"><b>'+indicators.encountered+'</b><small>Encountered</small></div>'+
  '<div class="stat"><b>'+indicators.recognised+'</b><small>Recognised</small></div>'+
  '<div class="stat"><b>'+indicators.productive+'</b><small>Productive</small></div>'+
- '</div><p class="subtle">Legacy saved words: '+indicators.legacySaved+' (not automatically owner-approved).</p><p class="subtle">Mūsica ex fontibus Graecīs et Rōmānīs īnspīrāta est; reconstrūctiō incerta est. Music inspired by ancient Greek and Roman sources; reconstruction is uncertain. Source details: <a href="curriculum/music.json">music provenance</a>.</p><h2>Course map</h2>';
+ '</div><p class="subtle">Legacy saved words: '+indicators.legacySaved+' (not automatically owner-approved).</p><p class="subtle">Mūsica ex fontibus Graecīs et Rōmānīs īnspīrāta est; recōnstrūctiō incerta est. Music inspired by ancient Greek and Roman sources; reconstruction is uncertain. Source details: <a href="curriculum/music.json">music provenance</a>.</p><h2>Course map</h2>';
  chapters.forEach((c,i)=>{const n=c.q.filter((q,j)=>S.correct[i+":"+j]).length;h+='<div style="padding:8px 0;border-bottom:1px solid #dfe7db"><button class="link" data-ch="'+i+'">'+(i+1)+". "+esc(c.name)+'</button><small style="float:right">'+n+'/'+c.q.length+'</small><div class="bar"><div style="width:'+(n/c.q.length*100)+'%"></div></div></div>'});
  if(storageMode==="blocked")h+='<div class="note" role="alert">'+esc(boot.warning||'Saved progress needs recovery; your old data has not been overwritten.')+' <button class="btn" data-action="remigrateV4">Re-migrate from original v4</button> or restore a backup below.</div>';
  h+='<div class="panel"><h2>Vōx mea · Your recordings</h2><p class="subtle">Practice recordings from Lēctiō stay on this computer and are not part of the backup below. Export them separately.</p><div class="tools"><button class="btn" data-action="exportRecordings">Export my recordings ZIP</button>'+(S.custom?'<button class="btn" data-action="clearText">Remove imported text</button>':'')+(media()?'<button class="btn" data-action="clearAudio">Remove local audio for this chapter</button>':'')+'</div><small>Storage: '+esc(userMedia?.status?.()||"unsupported")+' (temporary data may disappear when this tab closes).</small></div>';

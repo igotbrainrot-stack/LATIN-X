@@ -47,7 +47,7 @@
       "stream": "context",
       "part": "context",
       "ref": "legacy-ch01-context",
-      "raw_text": "Līvia in hortō est. Arbor magna est.",
+      "raw_text": "Līvia in hortō est. Arbor māgna est.",
       "contains_latin": "requires_review",
       "counted_as_new_introduction": false,
       "tokens": [
@@ -114,7 +114,7 @@
         {
           "token_id": "legacy-ch01-context-t006",
           "ordinal": 6,
-          "surface": "magna",
+          "surface": "māgna",
           "source_candidate_ids": [
             "legacy-lex-magnus-53cacdb9"
           ],
@@ -598,7 +598,7 @@
       "stream": "exercise",
       "part": "prompt",
       "ref": "legacy-ch01-q003-prompt",
-      "raw_text": "Arbor magna est an parva?",
+      "raw_text": "Arbor māgna est an parva?",
       "contains_latin": "requires_review",
       "counted_as_new_introduction": false,
       "tokens": [
@@ -617,7 +617,7 @@
         {
           "token_id": "legacy-ch01-q003-prompt-t002",
           "ordinal": 2,
-          "surface": "magna",
+          "surface": "māgna",
           "source_candidate_ids": [
             "legacy-lex-magnus-53cacdb9"
           ],
@@ -669,14 +669,14 @@
       "stream": "exercise",
       "part": "answer",
       "ref": "legacy-ch01-q003-answer01",
-      "raw_text": "magna",
+      "raw_text": "māgna",
       "contains_latin": "requires_review",
       "counted_as_new_introduction": false,
       "tokens": [
         {
           "token_id": "legacy-ch01-q003-answer01-t001",
           "ordinal": 1,
-          "surface": "magna",
+          "surface": "māgna",
           "source_candidate_ids": [
             "legacy-lex-magnus-53cacdb9"
           ],
@@ -692,14 +692,14 @@
       "stream": "exercise",
       "part": "answer",
       "ref": "legacy-ch01-q003-answer02",
-      "raw_text": "magna est",
+      "raw_text": "māgna est",
       "contains_latin": "requires_review",
       "counted_as_new_introduction": false,
       "tokens": [
         {
           "token_id": "legacy-ch01-q003-answer02-t001",
           "ordinal": 1,
-          "surface": "magna",
+          "surface": "māgna",
           "source_candidate_ids": [
             "legacy-lex-magnus-53cacdb9"
           ],
@@ -727,7 +727,7 @@
       "stream": "exercise",
       "part": "answer",
       "ref": "legacy-ch01-q003-answer03",
-      "raw_text": "arbor est magna",
+      "raw_text": "arbor est māgna",
       "contains_latin": "requires_review",
       "counted_as_new_introduction": false,
       "tokens": [
@@ -758,7 +758,7 @@
         {
           "token_id": "legacy-ch01-q003-answer03-t003",
           "ordinal": 3,
-          "surface": "magna",
+          "surface": "māgna",
           "source_candidate_ids": [
             "legacy-lex-magnus-53cacdb9"
           ],
@@ -774,7 +774,7 @@
       "stream": "exercise",
       "part": "model",
       "ref": "legacy-ch01-q003-model",
-      "raw_text": "Arbor magna est.",
+      "raw_text": "Arbor māgna est.",
       "contains_latin": "requires_review",
       "counted_as_new_introduction": false,
       "tokens": [
@@ -793,7 +793,7 @@
         {
           "token_id": "legacy-ch01-q003-model-t002",
           "ordinal": 2,
-          "surface": "magna",
+          "surface": "māgna",
           "source_candidate_ids": [
             "legacy-lex-magnus-53cacdb9"
           ],
@@ -821,7 +821,7 @@
       "stream": "cloze",
       "part": "text",
       "ref": "legacy-ch01-cloze-text",
-      "raw_text": "Arbor magna est. In hortō est ____ magna.",
+      "raw_text": "Arbor māgna est. In hortō est ____ māgna.",
       "contains_latin": "requires_review",
       "counted_as_new_introduction": false,
       "tokens": [
@@ -840,7 +840,7 @@
         {
           "token_id": "legacy-ch01-cloze-text-t002",
           "ordinal": 2,
-          "surface": "magna",
+          "surface": "māgna",
           "source_candidate_ids": [
             "legacy-lex-magnus-53cacdb9"
           ],
@@ -900,7 +900,7 @@
         {
           "token_id": "legacy-ch01-cloze-text-t007",
           "ordinal": 7,
-          "surface": "magna",
+          "surface": "māgna",
           "source_candidate_ids": [
             "legacy-lex-magnus-53cacdb9"
           ],
@@ -916,7 +916,7 @@
       "stream": "cloze",
       "part": "clue",
       "ref": "legacy-ch01-cloze-clue",
-      "raw_text": "Arbor est magna; puella parva est.",
+      "raw_text": "Arbor est māgna; puella parva est.",
       "contains_latin": "requires_review",
       "counted_as_new_introduction": false,
       "tokens": [
@@ -947,7 +947,7 @@
         {
           "token_id": "legacy-ch01-cloze-clue-t003",
           "ordinal": 3,
-          "surface": "magna",
+          "surface": "māgna",
           "source_candidate_ids": [
             "legacy-lex-magnus-53cacdb9"
           ],
@@ -999,7 +999,7 @@
       "stream": "cloze",
       "part": "proof",
       "ref": "legacy-ch01-cloze-proof",
-      "raw_text": "In hortō est arbor magna.",
+      "raw_text": "In hortō est arbor māgna.",
       "contains_latin": "requires_review",
       "counted_as_new_introduction": false,
       "tokens": [
@@ -1054,7 +1054,7 @@
         {
           "token_id": "legacy-ch01-cloze-proof-t005",
           "ordinal": 5,
-          "surface": "magna",
+          "surface": "māgna",
           "source_candidate_ids": [
             "legacy-lex-magnus-53cacdb9"
           ],

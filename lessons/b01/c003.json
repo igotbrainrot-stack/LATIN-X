@@ -83,7 +83,7 @@
         },
         {
           "id": "b01-c003-s002",
-          "text_la": "In vīllā est mēnsa magna.",
+          "text_la": "In vīllā est mēnsa māgna.",
           "source_line": 201,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -120,7 +120,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "magna",
+              "t": "māgna",
               "start": 19,
               "end": 24,
               "lx": null,
@@ -299,7 +299,7 @@
         },
         {
           "id": "b01-c003-s007",
-          "text_la": "Pānis magnus est.",
+          "text_la": "Pānis māgnus est.",
           "source_line": 206,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -312,7 +312,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "magnus",
+              "t": "māgnus",
               "start": 6,
               "end": 12,
               "lx": null,

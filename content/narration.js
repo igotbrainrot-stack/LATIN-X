@@ -85,7 +85,7 @@ root.TablinumNarrationCatalogue=freeze({
     },
     {
       "sentence_id": "legacy-ch01-s005",
-      "canonical_text": "Arbor magna est.",
+      "canonical_text": "Arbor māgna est.",
       "takes": [
         {
           "clip_id": "arjun-s005",
@@ -1167,7 +1167,7 @@ root.TablinumNarrationCatalogue=freeze({
       "owner_listening": "pass",
       "owner_listening_review_date": "2026-11-09",
       "owner_decision": "accept",
-      "canonical_text": "magna",
+      "canonical_text": "māgna",
       "sha256": "15e5817a5b30985a202a2a936069e30be89425681cb649cc05acfb0f7c7a81d4"
     },
     {

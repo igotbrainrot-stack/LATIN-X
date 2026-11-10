@@ -21,9 +21,9 @@
   },
   "new_lexemes_declared": [],
   "grammar_new": [],
-  "proposed_new_lemmas_raw": "**New (proposed, unsigned):** hortus, arbor, rosa, vīlla, puella, puer, Līvia, Titus, magnus, parvus, pulcher, sum, in, et, sed, nōn, quoque, ecce, quis, ubi, ita, nunc, hīc, ibi.",
+  "proposed_new_lemmas_raw": "**New (proposed, unsigned):** hortus, arbor, rosa, vīlla, puella, puer, Līvia, Titus, māgnus, parvus, pulcher, sum, in, et, sed, nōn, quoque, ecce, quis, ubi, ita, nunc, hīc, ibi.",
   "proposed_grammar_raw": "**Grammar:** nominative subjects; `est`/`sunt`; the questions `Quis?`, `Ubi?` and `-ne?`; `in hortō`/`in vīllā`/`in arbore` as pictured place chunks.",
-  "proposed_margin_raw": "**Margin:** magnus ↔ parvus · puella ♀ = Līvia · puer ♂ = Titus · hīc ↔ ibi · ita ↔ nōn · [pictūra: hortus, arbor magna, arbor parva, rosa, vīlla]",
+  "proposed_margin_raw": "**Margin:** māgnus ↔ parvus · puella ♀ = Līvia · puer ♂ = Titus · hīc ↔ ibi · ita ↔ nōn · [pictūra: hortus, arbor māgna, arbor parva, rosa, vīlla]",
   "reviewer_notes": [],
   "segments": [
     {
@@ -57,7 +57,7 @@
         },
         {
           "id": "b01-c001-s002",
-          "text_la": "Hortus magnus est.",
+          "text_la": "Hortus māgnus est.",
           "source_line": 51,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -70,7 +70,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "magnus",
+              "t": "māgnus",
               "start": 7,
               "end": 13,
               "lx": null,
@@ -129,7 +129,7 @@
         },
         {
           "id": "b01-c001-s004",
-          "text_la": "Arbor magna est.",
+          "text_la": "Arbor māgna est.",
           "source_line": 53,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -142,7 +142,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "magna",
+              "t": "māgna",
               "start": 6,
               "end": 11,
               "lx": null,
@@ -241,7 +241,7 @@
         },
         {
           "id": "b01-c001-s007",
-          "text_la": "Arbor magna est, sed rosa parva est.",
+          "text_la": "Arbor māgna est, sed rosa parva est.",
           "source_line": 56,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -254,7 +254,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "magna",
+              "t": "māgna",
               "start": 6,
               "end": 11,
               "lx": null,
@@ -305,7 +305,7 @@
         },
         {
           "id": "b01-c001-s008",
-          "text_la": "Rosa nōn magna est.",
+          "text_la": "Rosa nōn māgna est.",
           "source_line": 57,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -326,7 +326,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "magna",
+              "t": "māgna",
               "start": 9,
               "end": 14,
               "lx": null,
@@ -545,7 +545,7 @@
         },
         {
           "id": "b01-c001-s015",
-          "text_la": "Līvia nōn magna est; Līvia parva est.",
+          "text_la": "Līvia nōn māgna est; Līvia parva est.",
           "source_line": 64,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -566,7 +566,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "magna",
+              "t": "māgna",
               "start": 10,
               "end": 15,
               "lx": null,
@@ -761,7 +761,7 @@
         },
         {
           "id": "b01-c001-s020",
-          "text_la": "Vīlla quoque magna est.",
+          "text_la": "Vīlla quoque māgna est.",
           "source_line": 69,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -782,7 +782,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "magna",
+              "t": "māgna",
               "start": 13,
               "end": 18,
               "lx": null,
@@ -1408,7 +1408,7 @@
         },
         {
           "id": "b01-c001-s034",
-          "text_la": "Nōn est. Vīlla magna est, sed Titus ibi nōn est.",
+          "text_la": "Nōn est. Vīlla māgna est, sed Titus ibi nōn est.",
           "source_line": 86,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1437,7 +1437,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "magna",
+              "t": "māgna",
               "start": 15,
               "end": 20,
               "lx": null,
@@ -1696,7 +1696,7 @@
         },
         {
           "id": "b01-c001-s039",
-          "text_la": "In hortō sunt arbor magna et arbor parva.",
+          "text_la": "In hortō sunt arbor māgna et arbor parva.",
           "source_line": 91,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1733,7 +1733,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "magna",
+              "t": "māgna",
               "start": 20,
               "end": 25,
               "lx": null,
@@ -1816,7 +1816,7 @@
         },
         {
           "id": "b01-c001-s041",
-          "text_la": "Nōn: arbor parva nōn magna est, et puer ibi nōn est.",
+          "text_la": "Nōn: arbor parva nōn māgna est, et puer ibi nōn est.",
           "source_line": 93,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1853,7 +1853,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "magna",
+              "t": "māgna",
               "start": 21,
               "end": 26,
               "lx": null,
@@ -1912,7 +1912,7 @@
         },
         {
           "id": "b01-c001-s042",
-          "text_la": "Ecce! In arbore magnā est puer!",
+          "text_la": "Ecce! In arbore māgnā est puer!",
           "source_line": 94,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1941,7 +1941,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "magnā",
+              "t": "māgnā",
               "start": 16,
               "end": 21,
               "lx": null,
@@ -2064,7 +2064,7 @@
         },
         {
           "id": "b01-c001-s045",
-          "text_la": "Titus parvus est, sed arbor magna est.",
+          "text_la": "Titus parvus est, sed arbor māgna est.",
           "source_line": 97,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -2109,7 +2109,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "magna",
+              "t": "māgna",
               "start": 28,
               "end": 33,
               "lx": null,
@@ -2504,7 +2504,7 @@
         },
         {
           "id": "b01-c001-s051",
-          "text_la": "Hortus magnus et pulcher est.",
+          "text_la": "Hortus māgnus et pulcher est.",
           "source_line": 103,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -2517,7 +2517,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "magnus",
+              "t": "māgnus",
               "start": 7,
               "end": 13,
               "lx": null,
@@ -2552,7 +2552,7 @@
         },
         {
           "id": "b01-c001-s052",
-          "text_la": "Arbor magna est, rosa parva est, puella parva est, puer parvus est.",
+          "text_la": "Arbor māgna est, rosa parva est, puella parva est, puer parvus est.",
           "source_line": 104,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -2565,7 +2565,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "magna",
+              "t": "māgna",
               "start": 6,
               "end": 11,
               "lx": null,
@@ -2675,8 +2675,8 @@
       "type": "proposed_ungraded",
       "status": "proposed_ungraded",
       "source_line": 109,
-      "text_original": "2. Estne rosa magna? — Nōn, rosa parva est.",
-      "prompt_text": "Estne rosa magna?",
+      "text_original": "2. Estne rosa māgna? — Nōn, rosa parva est.",
+      "prompt_text": "Estne rosa māgna?",
       "model_answer_raw": "Nōn, rosa parva est.",
       "reviewed_by": null,
       "reviewed_at": null,
@@ -2711,9 +2711,9 @@
       "type": "proposed_ungraded",
       "status": "proposed_ungraded",
       "source_line": 112,
-      "text_original": "5. Ubi est Titus? — Titus in arbore magnā est.",
+      "text_original": "5. Ubi est Titus? — Titus in arbore māgnā est.",
       "prompt_text": "Ubi est Titus?",
-      "model_answer_raw": "Titus in arbore magnā est.",
+      "model_answer_raw": "Titus in arbore māgnā est.",
       "reviewed_by": null,
       "reviewed_at": null,
       "scoring_enabled": false
@@ -2723,9 +2723,9 @@
       "type": "proposed_ungraded",
       "status": "proposed_ungraded",
       "source_line": 113,
-      "text_original": "6. Estne arbor magna an parva? *(picture choice)* — Arbor magna est.",
-      "prompt_text": "Estne arbor magna an parva? *(picture choice)*",
-      "model_answer_raw": "Arbor magna est.",
+      "text_original": "6. Estne arbor māgna an parva? *(picture choice)* — Arbor māgna est.",
+      "prompt_text": "Estne arbor māgna an parva? *(picture choice)*",
+      "model_answer_raw": "Arbor māgna est.",
       "reviewed_by": null,
       "reviewed_at": null,
       "scoring_enabled": false
@@ -2735,7 +2735,7 @@
       "type": "pic",
       "status": "proposed_ungraded",
       "scoring_enabled": false,
-      "prompt_la": "Ubi est arbor magna?",
+      "prompt_la": "Ubi est arbor māgna?",
       "scene_id": "b01-c001-scene",
       "region_id": "arbor-magna",
       "answer": "arbor-magna",
@@ -2827,8 +2827,8 @@
       "type": "proposed_ungraded",
       "status": "proposed_ungraded",
       "source_line": 117,
-      "text_original": "- Point to the picture and say what is big and what is small: `Arbor magna est. Rosa parva est.`",
-      "prompt_text": "Point to the picture and say what is big and what is small: `Arbor magna est. Rosa parva est.`",
+      "text_original": "- Point to the picture and say what is big and what is small: `Arbor māgna est. Rosa parva est.`",
+      "prompt_text": "Point to the picture and say what is big and what is small: `Arbor māgna est. Rosa parva est.`",
       "reviewed_by": null,
       "reviewed_at": null,
       "scoring_enabled": false

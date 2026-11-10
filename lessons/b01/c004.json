@@ -898,7 +898,7 @@
         },
         {
           "id": "b01-c004-s020",
-          "text_la": "Dōnum nōn magnum est; dōnum parvum est.",
+          "text_la": "Dōnum nōn māgnum est; dōnum parvum est.",
           "source_line": 297,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -919,7 +919,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "magnum",
+              "t": "māgnum",
               "start": 10,
               "end": 16,
               "lx": null,
@@ -2161,7 +2161,7 @@
         },
         {
           "id": "b01-c004-s044",
-          "text_la": "Flāvia rosam rubram in pōculō magnō pōnit.",
+          "text_la": "Flāvia rosam rubram in pōculō māgnō pōnit.",
           "source_line": 324,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -2206,7 +2206,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "magnō",
+              "t": "māgnō",
               "start": 30,
               "end": 35,
               "lx": null,

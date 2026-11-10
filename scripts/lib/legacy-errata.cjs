@@ -5,7 +5,10 @@
 const corrections=require("../../curriculum/legacy-errata.json");
 if(corrections.schema!=="latin-x-approved-legacy-errata-v1"||corrections.approved_by!=="owner"||
  corrections.approved_at!=="2026-11-10")throw Error("Legacy errata approval provenance missing");
-const revised=s=>typeof s==="string"?s.replace(/Tīt/g,"Tit"):s;
+// Owner-selected A&G §603.d convention. Restrict to complete Latin forms;
+// never rewrite stable image-region IDs or ordinary English words.
+const quantity=s=>s.replace(/\b([Mm])agn(?=us(?!\p{L})|a(?!\p{L})|ā(?!\p{L})|am(?!\p{L})|um(?!\p{L})|ō(?!\p{L}))/gu,(_,first)=>first==="M"?"Māgn":"māgn");
+const revised=s=>typeof s==="string"?quantity(s.replace(/Tīt/g,"Tit")):s;
 const mapLatin=v=>Array.isArray(v)?v.map(mapLatin):v&&typeof v==="object"
  ?Object.fromEntries(Object.entries(v).map(([k,x])=>[k,mapLatin(x)])):revised(v);
 const answerAdds={"legacy-ch02-q002":"Titus Līviae frāter est",

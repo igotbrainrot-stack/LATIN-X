@@ -219,7 +219,7 @@ globalThis.TablinumIllustrationsData={
       "id": "b01-c001-scene",
       "chapter": 1,
       "title": "Hortus et arbor",
-      "alt_la_draft": "Līvia in hortō est; Tītus in arbore magnā est.",
+      "alt_la_draft": "Līvia in hortō est; Tītus in arbore māgnā est.",
       "alt_en_draft": "Livia is in the garden; Titus is in the big tree.",
       "status": "approved",
       "asset": "assets/art/b01/b01-c001-scene.webp",
