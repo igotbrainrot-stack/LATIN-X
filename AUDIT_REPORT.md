@@ -27,6 +27,9 @@
 | Approved art/WebPs, `vendor/ts-fsrs.umd.js` | PRESERVE | No image or dependency conversions |
 | Inactive legacy handlers | REQUIRES REGRESSION TESTING | No deletion pending coverage |
 
+## Historical embedded-audio privacy caveat
+The existing public source includes large historical audition/review HTML pages, including `Audio Audition.html` (~1.37 MB), with base64-embedded audio validated by `tests/audio-audition-standalone.test.cjs`. Filtering loose `audio-audition/*.mp3` files from the new release does **not** undo or erase these previously tracked embedded recordings. The revised source ZIP still includes tracked historical review HTML as part of the full source tree. Do not claim that all old audition audio has been removed from public Git. Changing these review pages could invalidate provenance or tests; handle as a separate owner-authorised privacy audit without rewriting Git history casually.
+
 ## Remaining verification and risks
 - No **complete offline Windows/Linux archive** was produced in this workspace because the environment cannot resolve `github.com` to retrieve the full repository; GitHub connector supplies metadata/text but cannot place the whole working tree here. Private audio was verified independently. A full source checkout with private media remains necessary.
 - Need run `npm test`, `npm run test:narration`, `npm run test:browser-all`, `npm run build:release`, and the extracted-package smoke test on the new branch; record OS, browser and results.
