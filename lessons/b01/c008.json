@@ -75,7 +75,7 @@
         },
         {
           "id": "b01-c008-s002",
-          "text_la": "Subitō ventus magnus est.",
+          "text_la": "Subitō ventus māgnus est.",
           "source_line": 593,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -96,7 +96,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "magnus",
+              "t": "māgnus",
               "start": 14,
               "end": 20,
               "lx": null,
@@ -579,7 +579,7 @@
         },
         {
           "id": "b01-c008-s013",
-          "text_la": "Līvia et Titus arborem magnam vident.",
+          "text_la": "Līvia et Titus arborem māgnam vident.",
           "source_line": 604,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -616,7 +616,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "magnam",
+              "t": "māgnam",
               "start": 23,
               "end": 29,
               "lx": null,
@@ -2121,7 +2121,7 @@
         },
         {
           "id": "b01-c008-s043",
-          "text_la": "Arbor magna stat; rosa quoque stat.",
+          "text_la": "Arbor māgna stat; rosa quoque stat.",
           "source_line": 640,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -2134,7 +2134,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "magna",
+              "t": "māgna",
               "start": 6,
               "end": 11,
               "lx": null,
