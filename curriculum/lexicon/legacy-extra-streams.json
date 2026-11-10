@@ -3,11 +3,11 @@
   "source": "index.html / chapter.context, chapter.q, guidedCloze; original order",
   "policy": "Exercises, contexts and cloze are NEVER first-introduction evidence. Text may be mixed English/Latin; all tokens require language and morphology review.",
   "verified_introductions": 0,
-  "total_records": 177,
+  "total_records": 179,
   "by_stream": {
     "context": 8,
     "exercise": 137,
-    "cloze": 32
+    "cloze": 34
   },
   "unglossed_tokens": [
     {
@@ -4668,6 +4668,30 @@
       ]
     },
     {
+      "chapter_id": "legacy-ch05",
+      "stream": "cloze",
+      "part": "answer",
+      "ref": "legacy-ch05-cloze-answer02",
+      "raw_text": "habet",
+      "contains_latin": "requires_review",
+      "counted_as_new_introduction": false,
+      "tokens": [
+        {
+          "token_id": "legacy-ch05-cloze-answer02-t001",
+          "ordinal": 1,
+          "surface": "habet",
+          "source_candidate_ids": [
+            "legacy-lex-habere-b846d382",
+            "legacy-lex-habet-edbf0fe3"
+          ],
+          "candidate_match_status": "ambiguous_candidates",
+          "lexeme_id": null,
+          "linguistic_status": "unreviewed",
+          "counted_as_new_introduction": false
+        }
+      ]
+    },
+    {
       "chapter_id": "legacy-ch06",
       "stream": "context",
       "part": "context",
@@ -5614,6 +5638,29 @@
           "surface": "currit",
           "source_candidate_ids": [
             "legacy-lex-currere-5837bda9"
+          ],
+          "candidate_match_status": "single_glossary_candidate",
+          "lexeme_id": null,
+          "linguistic_status": "unreviewed",
+          "counted_as_new_introduction": false
+        }
+      ]
+    },
+    {
+      "chapter_id": "legacy-ch06",
+      "stream": "cloze",
+      "part": "answer",
+      "ref": "legacy-ch06-cloze-answer02",
+      "raw_text": "est",
+      "contains_latin": "requires_review",
+      "counted_as_new_introduction": false,
+      "tokens": [
+        {
+          "token_id": "legacy-ch06-cloze-answer02-t001",
+          "ordinal": 1,
+          "surface": "est",
+          "source_candidate_ids": [
+            "legacy-lex-est-4e388f15"
           ],
           "candidate_match_status": "single_glossary_candidate",
           "lexeme_id": null,
