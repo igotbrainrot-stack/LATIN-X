@@ -4,7 +4,7 @@
   "legacy": true,
   "status": "legacy_unreviewed",
   "original_zero_based_index": 5,
-  "legacy_source_fingerprint_fnv32": "32792e21",
+  "legacy_source_fingerprint_fnv32": "24fecce3",
   "title": "Canis",
   "legacy_source": {
     "name": "Canis",
@@ -129,7 +129,7 @@
         [
           "ad Mārcum",
           "ad Līviam",
-          "ad Tītum"
+          "ad Titum"
         ],
         "ad Līviam",
         "Canis ad Līviam currit."
@@ -149,7 +149,8 @@
   "cloze_source": {
     "text": "Canis in viā ____.",
     "answers": [
-      "currit"
+      "currit",
+      "est"
     ],
     "clue": "Canis nōn sedet.",
     "proof": "Canis in viā currit."
@@ -580,7 +581,7 @@
         [
           "ad Mārcum",
           "ad Līviam",
-          "ad Tītum"
+          "ad Titum"
         ],
         "ad Līviam",
         "Canis ad Līviam currit."
