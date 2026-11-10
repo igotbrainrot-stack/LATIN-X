@@ -126,6 +126,10 @@
         [
           "n.gen.pl",
           "cīvium"
+        ],
+        [
+          "n.abl.sg",
+          "cīve"
         ]
       ]
     },
@@ -186,7 +190,7 @@
         ],
         [
           "n.acc.sg",
-          "diēm"
+          "diem"
         ],
         [
           "n.dat.pl",
