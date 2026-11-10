@@ -59,7 +59,7 @@
         },
         {
           "id": "b01-c006-s002",
-          "text_la": "Forum magnum est.",
+          "text_la": "Forum māgnum est.",
           "source_line": 432,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -72,7 +72,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "magnum",
+              "t": "māgnum",
               "start": 6,
               "end": 12,
               "lx": null,
@@ -851,7 +851,7 @@
         },
         {
           "id": "b01-c006-s017",
-          "text_la": "Ōva parva sunt, sed māla magna sunt.",
+          "text_la": "Ōva parva sunt, sed māla māgna sunt.",
           "source_line": 447,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -896,7 +896,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "magna",
+              "t": "māgna",
               "start": 25,
               "end": 30,
               "lx": null,
@@ -986,7 +986,7 @@
         },
         {
           "id": "b01-c006-s020",
-          "text_la": "Līvia tria māla magna spectat.",
+          "text_la": "Līvia tria māla māgna spectat.",
           "source_line": 453,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1015,7 +1015,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "magna",
+              "t": "māgna",
               "start": 16,
               "end": 21,
               "lx": null,
@@ -1034,7 +1034,7 @@
         },
         {
           "id": "b01-c006-s021",
-          "text_la": "Tria māla magna sunt; alia māla parva sunt.",
+          "text_la": "Tria māla māgna sunt; alia māla parva sunt.",
           "source_line": 454,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1055,7 +1055,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "magna",
+              "t": "māgna",
               "start": 10,
               "end": 15,
               "lx": null,
@@ -1274,7 +1274,7 @@
         },
         {
           "id": "b01-c006-s025",
-          "text_la": "Līvia: «Estne pretium magnum?»",
+          "text_la": "Līvia: «Estne pretium māgnum?»",
           "source_line": 458,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1303,7 +1303,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "magnum",
+              "t": "māgnum",
               "start": 22,
               "end": 28,
               "lx": null,
@@ -1314,7 +1314,7 @@
         },
         {
           "id": "b01-c006-s026",
-          "text_la": "Mercātor: «Pretium nōn magnum est.»",
+          "text_la": "Mercātor: «Pretium nōn māgnum est.»",
           "source_line": 459,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1343,7 +1343,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "magnum",
+              "t": "māgnum",
               "start": 23,
               "end": 29,
               "lx": null,
