@@ -301,7 +301,7 @@ function correctAnswer(q,response){
  return globalThis.TablinumExercises.gradeLegacy(q,response);
 }
 function tabs(){
- const list=[["read","Lectiō"],["quiz","Exercitia"],["review","Memoria"],["progress","Progressus"]];
+ const list=[["read","Lēctiō"],["quiz","Exercitia"],["review","Memoria"],["progress","Prōgressus"]];
  $("tabs").innerHTML=list.map(([id,n])=>'<button class="'+(S.tab===id?"active":"")+'" data-tab="'+id+'" aria-current="'+(S.tab===id?"page":"false")+'">'+n+"</button>").join("");
  $("chapters").innerHTML='<div class="mini" style="margin:5px 9px 14px">Liber prīmus</div>'+L.map((c,i)=>'<button class="ch '+(S.ch===i&&!activeCourse?"active":"")+'" data-ch="'+i+'" aria-current="'+(S.ch===i&&!activeCourse?"true":"false")+'"><strong>'+(i+1)+'</strong><span><strong>'+esc(c.name)+'</strong><small>'+esc(c.sub)+'</small></span></button>').join("")+(S.custom?'<button class="ch '+(S.ch==="custom"&&!activeCourse?"active":"")+'" data-ch="custom">✧ Textus meus</button>':"")+
  [...globalThis.Tablinum.catalogue.values()].filter(entry=>!entry.legacy).map(entry=>
@@ -354,7 +354,7 @@ function hearWord(){
 }
 function help(){
  const w=Object.prototype.hasOwnProperty.call(dict,norm(chosenWord))?dict[norm(chosenWord)]:undefined;
- $("help").innerHTML='<div class="mini">Dux discendī</div><h3>Learn through context</h3><p class="subtle" style="font-size:12px">Read Latin first, then choose how much guidance you need.</p><div class="mini" style="margin-top:18px">Verbum electum</div><div class="panel">'+(chosenWord?'<h3 lang="la">'+esc(spell(chosenWord))+'</h3>'+(w?'<p>'+esc(w.meaning)+'</p><small>Headword: <span lang="la">'+esc(spell(w.head))+'</span></small><div class="tools"><button class="btn primary" data-save="'+esc(norm(w.head))+'">Save vocabulary</button>'+wordButton()+'</div>':'<small>This word is not in the starter glossary.</small>'+(wordButton()?'<div class="tools">'+wordButton()+'</div>':"")):'<small>Click a Latin word to look it up.</small>')+'</div><div class="tools"><button class="btn" data-action="macrons">'+(S.macrons?"Āā Macrons":"Aa No macrons")+'</button><button class="btn" data-action="guide">'+(S.guided?"Guidance on":"Guidance off")+'</button></div>'+(S.guided?'<details><summary>Explain the grammar</summary><p style="font-size:12px">'+esc(current().explain)+'</p></details>':"")+'<div class="mini" style="margin-top:19px">Notae meae</div><textarea class="field" id="notes" placeholder="Personal notes..." maxlength="5000">'+esc(S.notes[chapterKey()]||"")+'</textarea><small>Notes are stored locally when browser storage is available.</small>';
+ $("help").innerHTML='<div class="mini">Dux discendī</div><h3>Learn through context</h3><p class="subtle" style="font-size:12px">Read Latin first, then choose how much guidance you need.</p><div class="mini" style="margin-top:18px">Verbum ēlēctum</div><div class="panel">'+(chosenWord?'<h3 lang="la">'+esc(spell(chosenWord))+'</h3>'+(w?'<p>'+esc(w.meaning)+'</p><small>Headword: <span lang="la">'+esc(spell(w.head))+'</span></small><div class="tools"><button class="btn primary" data-save="'+esc(norm(w.head))+'">Save vocabulary</button>'+wordButton()+'</div>':'<small>This word is not in the starter glossary.</small>'+(wordButton()?'<div class="tools">'+wordButton()+'</div>':"")):'<small>Click a Latin word to look it up.</small>')+'</div><div class="tools"><button class="btn" data-action="macrons">'+(S.macrons?"Āā Macrons":"Aa No macrons")+'</button><button class="btn" data-action="guide">'+(S.guided?"Guidance on":"Guidance off")+'</button></div>'+(S.guided?'<details><summary>Explain the grammar</summary><p style="font-size:12px">'+esc(current().explain)+'</p></details>':"")+'<div class="mini" style="margin-top:19px">Notae meae</div><textarea class="field" id="notes" placeholder="Personal notes..." maxlength="5000">'+esc(S.notes[chapterKey()]||"")+'</textarea><small>Notes are stored locally when browser storage is available.</small>';
 }
 function guidedHint(i,level){
  const c=current(),s=c.sent[i];if(!s||level<=0)return"";
@@ -379,7 +379,7 @@ function reader(c=current()){
  if(c.unavailable)return '<h1>Chapter unavailable</h1><div class="note" role="alert">'+esc(c.sub)+'</div><p>Restore the missing local content file from the full Tablinum ZIP; no progress has been erased.</p>';
 const fallbackScene=scene(c.scene);
  const picture=globalThis.TablinumArtScenes?.renderChapter(activeCourse?.id,fallbackScene)||fallbackScene;
-let h='<div class="mini">Lectiō '+esc(activeCourse?activeCourse.chapter:S.ch==="custom"?"propria":S.ch+1)+'</div><h1>'+esc(c.name)+'</h1><div class="subtle">'+esc(c.sub)+'</div>'+picture;
+let h='<div class="mini">Lēctiō '+esc(activeCourse?activeCourse.chapter:S.ch==="custom"?"propria":S.ch+1)+'</div><h1>'+esc(c.name)+'</h1><div class="subtle">'+esc(c.sub)+'</div>'+picture;
 
  h+='<div class="note">Read Latin first. Click a sentence to hear it; ask for clues when needed.</div><div class="tools"><button class="btn primary" '+(mode()==="voice"?"hidden ":"")+'data-action="play">'+(mode()==="voice"?"▶ Listen":mode()==="timed"?"▶ Play timed sentence":"▶ Play recording (untimed)")+'</button><button class="btn" data-tab="quiz">Exercises →</button></div>';
  c.sent.forEach(([latin,en],i)=>{
@@ -403,7 +403,7 @@ function answer(index,value){
  S.answers[k]=String(value||"").slice(0,500);
  if(correctAnswer(q,value))S.correct[k]=true;
  if(ambience)ambience.sound(S.correct[k]?"correct":"wrong");
- save();render();updateBanner(S.correct[k]?"Rectē! Correct.":"Not quite. Rēlege sententiam.");
+ save();render();updateBanner(S.correct[k]?"Rēctē! Correct.":"Not quite. Relege sententiam.");
 }
 // Phase 5: only explicitly signed, compiled course exercises can be graded.
 // Legacy questions retain their exact previous IDs and the original UI.
@@ -435,11 +435,11 @@ function courseAnswer(id,value){
  v5State.questions[id]={...old,answer:String(value??""),correct:old.correct===true||out.correct===true,
   attempts:(Number(old.attempts)||0)+1,graded_by:"phase5-reviewed-exercise",evidence:out.evidence||null};
  if(ambience)ambience.sound(out.correct?"correct":"wrong");
- save();render();updateBanner(out.correct?"Rectē! Bene respondistī. (Correct.)":"Nōndum. Rēlege narrātiōnem. (Not yet; reread the story.)");
+ save();render();updateBanner(out.correct?"Rēctē! Bene respondistī. (Correct.)":"Nōndum. Relege narrātiōnem. (Not yet; reread the story.)");
 }
 function courseQuiz(){
  const api=globalThis.TablinumExercises,ch=activeCourse;
- let html='<div class="mini">Intellege et responde</div><h1>Exercitia</h1>';
+ let html='<div class="mini">Intellege et respondē</div><h1>Exercitia</h1>';
  if(!api||!ch||ch.status!=="approved")return html+'<div class="note">No approved exercise keys. Automatic grading is disabled.</div>';
  const published=(ch.exercises||[]).filter(ex=>api.visible(ex,ch));
  if(!published.length)return html+'<div class="note">No reviewed automatic answer keys for this chapter. Automatic grading is disabled.</div>';
@@ -482,28 +482,28 @@ function courseQuiz(){
    html+='<div class="tools"><input class="field" lang="la" id="exercise-'+esc(ex.id)+'" aria-label="Latin answer" value="'+esc(rec.answer||"")+'" '+(done?"disabled":"")+'><button class="btn primary" data-ex-check="'+esc(ex.id)+'" '+(done?"disabled":"")+'>Check</button></div>';
   }
   if(rec.attempts){
-   html+='<p role="status" class="'+(done?"good":"bad")+'">'+(done?"Rectē! Verified answer.":"Nōndum. Try again.")+'</p>';
+   html+='<p role="status" class="'+(done?"good":"bad")+'">'+(done?"Rēctē! Verified answer.":"Nōndum. Try again.")+'</p>';
    if(done&&ex.evidence)html+='<button class="btn" data-ex-evidence="'+esc(ex.evidence)+'">Read evidence sentence</button>';
   }
   html+='</section>';
  }
  return html+'<div class="tools"><button class="btn" data-tab="read">Read the chapter again</button></div>';
 }
-function quiz(c=current()){if(activeCourse)return courseQuiz();let h='<div class="mini">Intellege et responde</div><h1>Exercitia</h1><p class="subtle">Use the story as evidence. Short answers accept the expected word or the full model sentence.</p>';
+function quiz(c=current()){if(activeCourse)return courseQuiz();let h='<div class="mini">Intellege et respondē</div><h1>Exercitia</h1><p class="subtle">Use the story as evidence. Short answers accept the expected word or the full model sentence.</p>';
  if(!c.q.length)return h+'<div class="note">No reviewed automatic answer keys for this chapter. Automatic grading is disabled.</div>';
  c.q.forEach((q,i)=>{
   const k=chapterKey()+":"+i,correct=!!S.correct[k],value=S.answers[k]||"";
   h+='<section class="quiz"><div class="mini">'+(q[1]?"Elige":"Scribe")+' · '+(i+1)+' / '+c.q.length+'</div><div class="question" lang="la">'+esc(spell(q[0]))+'</div>';
   if(q[1])h+=q[1].map(o=>'<button class="option '+(correct&&correctAnswer(q,o)?"is-correct":!correct&&o===value?"is-wrong":"")+'" data-choice="'+i+'" data-value="'+esc(o)+'" aria-pressed="'+(o===value?"true":"false")+'" '+(correct?"disabled":"")+' lang="la">'+esc(spell(o))+'</button>').join("");
   else h+='<div class="tools"><input class="field" id="answer-'+i+'" lang="la" aria-label="Latin answer" value="'+esc(value)+'" '+(correct?"disabled":"")+' placeholder="Respondē Latīnē…"><button class="btn primary" data-check="'+i+'" '+(correct?"disabled":"")+'>Check</button></div>';
-  if(value||correct)h+='<div role="status" class="'+(correct?"good":"bad")+'">'+esc(correct?"Rectē! "+q[3]:"Nōndum. Re-read the relevant sentence and try again.")+'</div>';
+  if(value||correct)h+='<div role="status" class="'+(correct?"good":"bad")+'">'+esc(correct?"Rēctē! "+q[3]:"Nōndum. Re-read the relevant sentence and try again.")+'</div>';
   h+='</section>';
  });
  const i=Number(S.ch),item=guidedCloze[i],key=chapterKey();
  if(item){
   const complete=!!S.clozeCorrect[key],value=S.clozeAnswers[key]||"";
   h+='<section class="quiz"><div class="mini">Verbum dēest · Guided completion</div><div class="question" lang="la">'+esc(spell(item.text))+'</div><div class="tools"><input class="field" lang="la" id="clozeInput" aria-label="Missing Latin word" value="'+esc(value)+'" '+(complete?"disabled":"")+'><button class="btn primary" data-action="clozeCheck" '+(complete?"disabled":"")+'>Check</button></div>';
-  if(complete||value)h+='<div role="status" class="'+(complete?"good":"bad")+'">'+esc(complete?"Rectē! "+item.proof:"Nōndum. "+item.clue)+'</div>';
+  if(complete||value)h+='<div role="status" class="'+(complete?"good":"bad")+'">'+esc(complete?"Rēctē! "+item.proof:"Nōndum. "+item.clue)+'</div>';
   h+='</section>';
  }
  return h+'<div class="tools"><button class="btn" data-tab="read">Read again</button>'+(S.ch===L.length-1?'<span class="note">Liber prīmus complete — review or revisit earlier lessons.</span>':'<button class="btn primary" data-action="nextChapter">Next chapter →</button>')+'</div>';
@@ -513,7 +513,7 @@ function clozeCheck(){
  const k=chapterKey();if(S.clozeCorrect[k])return;
  S.clozeAnswers[k]=value;if(item.answers.some(v=>norm(v)===norm(value)))S.clozeCorrect[k]=true;
  if(ambience)ambience.sound(S.clozeCorrect[k]?"correct":"wrong");
- save();render();updateBanner(S.clozeCorrect[k]?"Rectē! Correct cloze.":"Try again with the story as a clue.");
+ save();render();updateBanner(S.clozeCorrect[k]?"Rēctē! Correct cloze.":"Try again with the story as a clue.");
 }
 function dueEntries(){return Object.entries(S.vocab).filter(([,v])=>v&&v.due<=Date.now())}
 function highlightReviewSentence(card){
@@ -533,7 +533,7 @@ function review(){
  const total=Object.keys(v5State.deck.cards).length+Object.keys(v5State.deck.legacyCards).length;
  let h='<div class="mini">Memoria</div><h1>Memoria: verba repetenda</h1><p class="subtle">Offline FSRS scheduling. Reviewed course words are separated from unsigned legacy free cards.</p>';
  h+='<div class="stats"><div class="stat"><b>'+total+'</b><small>Servāta · Saved</small></div><div class="stat"><b>'+items.length+'</b><small>Hodiē · Due</small></div><div class="stat"><b>'+(total-items.length)+'</b><small>Posteā · Later</small></div></div>';
- if(!total)return h+'<div class="panel">Elige verbum Latīnum in lēctiōne. Select a Latin word in a lesson, then save it. Original and new-course words retain distinct approval statuses.</div>';
+ if(!total)return h+'<div class="panel">Ēlige verbum Latīnum in lēctiōne. Select a Latin word in a lesson, then save it. Original and new-course words retain distinct approval statuses.</div>';
  if(!items.length)return h+'<div class="panel">Omnia bene! No reviews are due.</div>';
  const entry=items.find(x=>x.group+"|"+x.key===reviewKey)||items[0];
  reviewKey=entry.group+"|"+entry.key;
@@ -550,15 +550,15 @@ function progress(chapters=L){
  const completed=Object.keys(v5State.completedCourse||{}).filter(k=>v5State.completedCourse[k]===true);
  const reached=completed.reduce((n,k)=>Math.max(n,globalThis.Tablinum.catalogue.get(k)?.chapter||0),0);
  const indicators=globalThis.TablinumReviewDeck.metrics(v5State,lexemes,reached);
- let h='<div class="mini">Progressus</div><h1>Learning progress</h1><div class="stats"><div class="stat"><b>'+finished+'/'+chapters.length+'</b><small>Finished lessons</small></div><div class="stat"><b>'+done+'/'+total+'</b><small>Original questions</small></div><div class="stat"><b>'+Object.keys(S.vocab).length+'</b><small>Saved words</small></div></div><div class="panel"><h2>Guided progress</h2><p>'+Object.values(S.clozeCorrect).filter(Boolean).length+'/'+guidedCloze.length+' contextual cloze exercises</p><p>'+Object.keys(S.readingConfidence).length+'/'+chapters.length+' self-assessed lessons</p></div><h2>Verba discenda · Four separate measures</h2><div class="stats">'+
+ let h='<div class="mini">Prōgressus</div><h1>Learning progress</h1><div class="stats"><div class="stat"><b>'+finished+'/'+chapters.length+'</b><small>Finished lessons</small></div><div class="stat"><b>'+done+'/'+total+'</b><small>Original questions</small></div><div class="stat"><b>'+Object.keys(S.vocab).length+'</b><small>Saved words</small></div></div><div class="panel"><h2>Guided progress</h2><p>'+Object.values(S.clozeCorrect).filter(Boolean).length+'/'+guidedCloze.length+' contextual cloze exercises</p><p>'+Object.keys(S.readingConfidence).length+'/'+chapters.length+' self-assessed lessons</p></div><h2>Verba discenda · Four separate measures</h2><div class="stats">'+
  '<div class="stat"><b>'+indicators.introduced+'</b><small>Introduced (approved)</small></div>'+
  '<div class="stat"><b>'+indicators.encountered+'</b><small>Encountered</small></div>'+
  '<div class="stat"><b>'+indicators.recognised+'</b><small>Recognised</small></div>'+
  '<div class="stat"><b>'+indicators.productive+'</b><small>Productive</small></div>'+
- '</div><p class="subtle">Legacy saved words: '+indicators.legacySaved+' (not automatically owner-approved).</p><p class="subtle">Musica ex fontibus Graecīs et Rōmānīs īnspīrāta est; reconstrūctiō incerta est. Music inspired by ancient Greek and Roman sources; reconstruction is uncertain. Source details: <a href="curriculum/music.json">music provenance</a>.</p><h2>Course map</h2>';
+ '</div><p class="subtle">Legacy saved words: '+indicators.legacySaved+' (not automatically owner-approved).</p><p class="subtle">Mūsica ex fontibus Graecīs et Rōmānīs īnspīrāta est; reconstrūctiō incerta est. Music inspired by ancient Greek and Roman sources; reconstruction is uncertain. Source details: <a href="curriculum/music.json">music provenance</a>.</p><h2>Course map</h2>';
  chapters.forEach((c,i)=>{const n=c.q.filter((q,j)=>S.correct[i+":"+j]).length;h+='<div style="padding:8px 0;border-bottom:1px solid #dfe7db"><button class="link" data-ch="'+i+'">'+(i+1)+". "+esc(c.name)+'</button><small style="float:right">'+n+'/'+c.q.length+'</small><div class="bar"><div style="width:'+(n/c.q.length*100)+'%"></div></div></div>'});
  if(storageMode==="blocked")h+='<div class="note" role="alert">'+esc(boot.warning||'Saved progress needs recovery; your old data has not been overwritten.')+' <button class="btn" data-action="remigrateV4">Re-migrate from original v4</button> or restore a backup below.</div>';
- h+='<div class="panel"><h2>Vōx mea · Your recordings</h2><p class="subtle">Practice recordings from Lectiō stay on this computer and are not part of the backup below. Export them separately.</p><div class="tools"><button class="btn" data-action="exportRecordings">Export my recordings ZIP</button>'+(S.custom?'<button class="btn" data-action="clearText">Remove imported text</button>':'')+(media()?'<button class="btn" data-action="clearAudio">Remove local audio for this chapter</button>':'')+'</div><small>Storage: '+esc(userMedia?.status?.()||"unsupported")+' (temporary data may disappear when this tab closes).</small></div>';
+ h+='<div class="panel"><h2>Vōx mea · Your recordings</h2><p class="subtle">Practice recordings from Lēctiō stay on this computer and are not part of the backup below. Export them separately.</p><div class="tools"><button class="btn" data-action="exportRecordings">Export my recordings ZIP</button>'+(S.custom?'<button class="btn" data-action="clearText">Remove imported text</button>':'')+(media()?'<button class="btn" data-action="clearAudio">Remove local audio for this chapter</button>':'')+'</div><small>Storage: '+esc(userMedia?.status?.()||"unsupported")+' (temporary data may disappear when this tab closes).</small></div>';
  h+='<div class="panel"><h2>Backup and recovery</h2><p class="subtle">Audio is not stored in backups. Restored fields are validated. Current schema v4 also accepts v0.2 backup envelopes.</p><div class="tools"><button class="btn primary" data-action="export">Export backup JSON</button></div><label for="restoreFile">Restore a JSON backup (under 12 MB)</label><input class="field" type="file" id="restoreFile" accept=".json,application/json"><details><summary>Reset exercise and vocabulary progress</summary><button class="btn" data-action="reset">Reset progress (keep notes and imported text)</button></details></div>';
  return h;
 }
@@ -789,7 +789,7 @@ document.addEventListener("click",e=>{
   const added=globalThis.TablinumReviewDeck.createApprovedCards(v5State,activeCourse,
    globalThis.TablinumCompiledContent?.lexicon||{},true,Date.now());
   if(ambience)ambience.sound("complete");
-  save();render();updateBanner("Lectiō lecta. "+added+" reviewed cards added.");break;
+  save();render();updateBanner("Lēctiō lēcta. "+added+" reviewed cards added.");break;
  }
   case"revealCard":reviewReveal=true;render();break;
  case"clozeCheck":clozeCheck();break;
