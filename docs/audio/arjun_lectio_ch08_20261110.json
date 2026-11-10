@@ -22,7 +22,7 @@
     },
     {
       "sentence_id": "legacy-ch08-s003",
-      "canonical_text": "Tītus librum feret.",
+      "canonical_text": "Titus librum feret.",
       "tts_input": "Tītus librum feret.",
       "runway_task_id": "a602f3b5-34a2-4cfb-a10b-204996cd3619",
       "status": "task_pending"
