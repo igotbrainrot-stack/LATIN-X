@@ -54,8 +54,21 @@ function walk(rel){
  return fs.readdirSync(abs,{withFileTypes:true}).sort((a,b)=>a.name.localeCompare(b.name))
   .flatMap(d=>walk(posix(path.join(rel,d.name))));
 }
+/* Only manifest-pinned media belongs in learner and source distributions.
+ * Historical/private takes can remain on a developer's disk without leaking. */
+const OWNER_MEDIA_MANIFEST="docs/audio/ARJUN_OFFLINE_MEDIA_CHECKSUMS_20261110.json";
+function ownerMediaFiles(){
+ const m=JSON.parse(fs.readFileSync(path.join(root,OWNER_MEDIA_MANIFEST),"utf8"));
+ if(!Array.isArray(m.files)||m.files.length!==78)throw Error("Expected 78 owner-media entries");
+ const paths=m.files.map(x=>x.path);
+ if(new Set(paths).size!==78)throw Error("Duplicate media filename in manifest");
+ return paths;
+}
 function runtimeFiles(){
- const list=[...RUNTIME.files,...RUNTIME.dirs.flatMap(walk)].filter(f=>!RUNTIME.exclude.some(r=>r.test(f)));
+ const allowedAudio=new Set(ownerMediaFiles());
+ const list=[...RUNTIME.files,...RUNTIME.dirs.flatMap(walk)]
+  .filter(f=>!RUNTIME.exclude.some(r=>r.test(f)))
+  .filter(f=>!f.toLowerCase().endsWith(".mp3")||allowedAudio.has(f));
  return [...new Set(list)];
 }
 function textFor(src,dest,platform){
@@ -76,13 +89,11 @@ function sourceEntries(){
  let tracked;
  try{tracked=execFileSync("git",["ls-files","-z"],{cwd:root}).toString("utf8").split("\0").filter(Boolean)}
  catch(e){throw Error("The source package is built from Git-tracked files; run inside the repository.")}
- // Git-ignored but part of the program or of the owner's audit trail (the tests verify them):
- // approved narration, the original audition MP3s and the owner's own review record.
- // PRIVATE_* signed-link files are never packaged (see RUNTIME.exclude).
- const optional=p=>fs.existsSync(path.join(root,p))?walk(p):[];
- const audio=[...optional("audio/narration"),...optional("assets/audio/roman"),...optional("audio-audition")].filter(f=>/\.mp3$/i.test(f))
-  .concat(fs.existsSync(path.join(root,"docs/audio/owner-original-review-2026-11-07.json"))?["docs/audio/owner-original-review-2026-11-07.json"]:[]);
- const names=[...new Set([...tracked,...audio])].filter(f=>fs.existsSync(path.join(root,f))&&!RUNTIME.exclude.some(r=>r.test(f))).sort();
+ // Source archives include only the manifest-pinned owner media; historical
+ // private audition MP3s and private owner-review records remain local.
+ const audio=ownerMediaFiles();
+ const names=[...new Set([...tracked,...audio])]
+  .filter(f=>fs.existsSync(path.join(root,f))&&!RUNTIME.exclude.some(r=>r.test(f))).sort();
  return names.map(f=>{const abs=path.join(root,f);return {name:f,data:fs.readFileSync(abs),mode:(fs.statSync(abs).mode&0o111)?0o755:0o644}});
 }
 
@@ -143,7 +154,7 @@ function tarGz(entries){
 }
 
 function verifyOwnerMedia(){
- const manifest=path.join(root,"docs/audio/ARJUN_OFFLINE_MEDIA_CHECKSUMS_20261110.json");
+ const manifest=path.join(root,OWNER_MEDIA_MANIFEST);
  if(!fs.existsSync(manifest))throw Error("Missing offline owner-media checksum manifest");
  const files=JSON.parse(fs.readFileSync(manifest,"utf8")).files;
  if(!Array.isArray(files)||files.length!==78)throw Error("Expected exactly 75 narration and 3 music files");
