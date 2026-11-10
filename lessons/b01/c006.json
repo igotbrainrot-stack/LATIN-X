@@ -2041,7 +2041,7 @@
         },
         {
           "id": "b01-c006-s040",
-          "text_la": "Māla et ōva sunt dōna: dōna Flāviae et Tītī.",
+          "text_la": "Māla et ōva sunt dōna: dōna Flāviae et Titī.",
           "source_line": 476,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -2110,7 +2110,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītī",
+              "t": "Titī",
               "start": 39,
               "end": 43,
               "lx": null,
@@ -2121,7 +2121,7 @@
         },
         {
           "id": "b01-c006-s041",
-          "text_la": "In vīllā Līvia Flāviae ōva dat, et Tītō ūnum mālum dat.",
+          "text_la": "In vīllā Līvia Flāviae ōva dat, et Titō ūnum mālum dat.",
           "source_line": 477,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -2182,7 +2182,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītō",
+              "t": "Titō",
               "start": 35,
               "end": 39,
               "lx": null,
@@ -2217,12 +2217,12 @@
         },
         {
           "id": "b01-c006-s042",
-          "text_la": "Tītus mālum accipit et edit.",
+          "text_la": "Titus mālum accipit et edit.",
           "source_line": 478,
           "annotation_status": "draft_unverified",
           "tokens": [
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 0,
               "end": 5,
               "lx": null,
