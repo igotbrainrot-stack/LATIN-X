@@ -19,7 +19,7 @@ Companion files in this folder: `LATIN_FINDINGS.csv` (every finding with file, r
 | Checked and found correct (recorded so nobody "fixes" them) | 2 |
 | Unresolved | 9 (see `LATIN_UNRESOLVED.md`) |
 | Existing test suite (`npm test`, plus `test:pilot`, `test:phase2`, `test:illustrations`, `test:paradigms`, `test:grammar`) | all pass on the baseline |
-| New gold tests | 137: **110 preservation tests pass**; 27 correction tests are pending until fixes are approved |
+| New gold tests | 138: **110 preservation tests pass**; 28 correction tests are pending until fixes are approved |
 
 The published course is in good shape grammatically. Every legacy sentence, translation, question and model answer was checked and the Latin is correct apart from one systematic vowel-length error. **This does not mean the program is entirely accurate**: audio was not listened to, and several items need a Latinist's or the owner's judgement (see section 6).
 

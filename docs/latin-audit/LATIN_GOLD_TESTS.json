@@ -1134,10 +1134,20 @@
    "kind": "text_absent",
    "finding": "LX-003",
    "files": [
-    "tests/fixtures/paradigms/REGULAR_PATTERN_SAMPLES.json",
+    "tests/fixtures/paradigms/REGULAR_PATTERN_SAMPLES.json"
+   ],
+   "text": "\"diēm\"",
+   "expect": true,
+   "phase": "correction"
+  },
+  {
+   "id": "G-LX-003-samples",
+   "kind": "text_absent",
+   "finding": "LX-003",
+   "files": [
     "docs/owner/PARADIGM_SAMPLES.md"
    ],
-   "text": "diēm",
+   "text": "| diēm |",
    "expect": true,
    "phase": "correction"
   },
