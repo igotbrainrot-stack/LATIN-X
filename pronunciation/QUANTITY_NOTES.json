@@ -1,172 +1,172 @@
 {
- "purpose": "Hand decisions that override the automatic status in QUANTITY_LEXICON.tsv. Each entry says why. A status here is still subject to owner or Latinist review; it is not a Latinist's verdict.",
- "entries": [
-  {
-   "forms": [
-    "Gāius",
-    "Gāium",
-    "Gāiō",
-    "Gāī"
-   ],
-   "status": "AMBIGUOUS",
-   "note": "Long ā before a vowel is an exception to A&G §603.a. L&S writes Gāĭus and notes it is trisyllabic in Catullus 10.30; some teaching texts say Gāj-jus. Syllables and stress follow L&S here. Listen for two versus three syllables (LATIN_UNRESOLVED.md U-05)",
-   "source": "Lewis & Short s.v. Gāĭus"
-  },
-  {
-   "forms": [
-    "reconstrūctiō"
-   ],
-   "status": "AMBIGUOUS",
-   "note": "Post-classical word (LX-028). A vowel before ns is long (A&G §603.d), so the con- should be printed recōnstrūctiō. Owner decision: correct the macron or drop the Latin word",
-   "source": "A&G §603.d"
-  },
-  {
-   "forms": [
-    "magna",
-    "magnā",
-    "magnam",
-    "magnō",
-    "magnum",
-    "magnus"
-   ],
-   "status": "AMBIGUOUS",
-   "note": "Hidden quantity before gn. A&G §603.d says a vowel before gn is long (māgnus); the course prints magnus, as many modern texts do. Stress is unaffected because the syllable is heavy either way. Owner choice of convention",
-   "source": "A&G §603.d"
-  },
-  {
-   "forms": [
-    "significātiōnem"
-   ],
-   "status": "AMBIGUOUS",
-   "note": "First i stands before gn: long by A&G §603.d (sīgnificātiō), printed short. Same convention choice as magnus. Other vowels agree with L&S",
-   "source": "A&G §603.d; Lewis & Short s.v. significatio"
-  },
-  {
-   "forms": [
-    "tonitrus"
-   ],
-   "status": "AMBIGUOUS",
-   "note": "L&S marks the second vowel as common (tŏnī̆trus). Printed short, the stress is TO-ni-trus; long, it would be to-NĪ-trus. Check the recording against the printed form",
-   "source": "Lewis & Short s.v. tonitrus"
-  },
-  {
-   "forms": [
-    "hic"
-   ],
-   "status": "VERIFIED",
-   "note": "Pronoun hic with short i (the adverb hīc is a different word, also in the course). The automatic check matched the adverb. Checked in the Latin audit (LX-029)",
-   "source": "Lewis & Short s.v. hic"
-  },
-  {
-   "forms": [
-    "virī"
-   ],
-   "status": "VERIFIED",
-   "note": "vĭr, vĭri in L&S. Collatinus matched vīrus (poison)",
-   "source": "Lewis & Short s.v. vir"
-  },
-  {
-   "forms": [
-    "tria"
-   ],
-   "status": "VERIFIED",
-   "note": "Short i before a vowel (A&G §603.a). The automatic check compared the nominative trēs/trīs",
-   "source": "A&G §603.a"
-  },
-  {
-   "forms": [
-    "stāre"
-   ],
-   "status": "VERIFIED",
-   "note": "Infinitive stāre with long ā (1st conjugation, A&G §184). The supine stătum has a short a and does not apply",
-   "source": "A&G §184; Lewis & Short s.v. sto"
-  },
-  {
-   "forms": [
-    "audit"
-   ],
-   "status": "VERIFIED",
-   "note": "Present audit with short final i (A&G §167). Collatinus compared the supine stem audīt-",
-   "source": "A&G §167; Lewis & Short s.v. audio"
-  },
-  {
-   "forms": [
-    "Mārcus",
-    "Mārcum",
-    "Mārcī",
-    "Mārcō",
-    "Mārce"
-   ],
-   "status": "VERIFIED",
-   "note": "Hidden long ā. L&S records the inscriptional spelling MAARCVS, where the doubled vowel marks length",
-   "source": "Lewis & Short s.v. Marcus"
-  },
-  {
-   "forms": [
-    "lēctiō",
-    "lēctiōne",
-    "lēcta",
-    "ēlēctum",
-    "rēctē"
-   ],
-   "status": "SUPPORTED",
-   "note": "Hidden long vowel in lēctus, rēctus (from legō, regō), following the usual modern marking (Lachmann's law). L&S does not mark these vowels. Stress is unaffected",
-   "source": "A&G §603 (quantity of stem syllables learned from usage)"
-  },
-  {
-   "forms": [
-    "mēnsa",
-    "mēnsā",
-    "mēnsam",
-    "īnspīrāta",
-    "recēnsiō"
-   ],
-   "status": "SUPPORTED",
-   "note": "Long vowel before ns, as printed",
-   "source": "A&G §603.d"
-  },
-  {
-   "forms": [
-    "fontibus"
-   ],
-   "status": "SUPPORTED",
-   "note": "Short i in -ibus (3rd declension). Stress FON-ti-bus. The o is short in the oblique stem font-; only the nominative fōns has the long vowel before ns",
-   "source": "A&G §603.d; Lewis & Short s.v. fons"
-  },
-  {
-   "forms": [
-    "edere",
-    "emere"
-   ],
-   "status": "SUPPORTED",
-   "note": "3rd-conjugation infinitive in short -ere, so the stress is on the first syllable. Collatinus also offers ēmereō and ēdō, which do not apply",
-   "source": "A&G §186"
-  },
-  {
-   "forms": [
-    "dēest"
-   ],
-   "status": "AMBIGUOUS",
-   "note": "A vowel before a vowel is normally short (A&G §603.a), so dĕest; many teaching texts print dēest. Convention choice (LATIN_UNRESOLVED.md U-03)",
-   "source": "A&G §603.a; Lewis & Short s.v. desum"
-  },
-  {
-   "forms": [
-    "cui",
-    "deinde"
-   ],
-   "status": "VERIFIED",
-   "note": "Diphthong (cui) or synizesis (deinde); see EXCEPTIONS.json",
-   "source": "A&G §603.b–c"
-  },
-  {
-   "forms": [
-    "legēbat",
-    "rīdēre"
-   ],
-   "status": "VERIFIED",
-   "note": "Stem vowels agree with L&S. The long penult is the regular ending: imperfect -ēbat (A&G §168.b) and 2nd-conjugation infinitive -ēre (A&G §185)",
-   "source": "A&G §168.b, §185"
-  }
- ]
+  "purpose": "Hand decisions that override the automatic status in QUANTITY_LEXICON.tsv. Each entry says why. A status here is still subject to owner or Latinist review; it is not a Latinist's verdict.",
+  "entries": [
+    {
+      "forms": [
+        "Gāius",
+        "Gāium",
+        "Gāiō",
+        "Gāī"
+      ],
+      "status": "AMBIGUOUS",
+      "note": "Long ā before a vowel is an exception to A&G §603.a. L&S writes Gāĭus and notes it is trisyllabic in Catullus 10.30; some teaching texts say Gāj-jus. Syllables and stress follow L&S here. Listen for two versus three syllables (LATIN_UNRESOLVED.md U-05) Owner chose the attested three-syllable representation for this course on 2026-11-10; this does not certify the existing two-syllable TTS take.",
+      "source": "Lewis & Short s.v. Gāĭus"
+    },
+    {
+      "forms": [
+        "recōnstrūctiō"
+      ],
+      "status": "SUPPORTED",
+      "note": "Owner chose recōnstrūctiō on 2026-11-10: long ō before ns under A&G §603.d. The term remains post-classical/Neo-Latin, not Classical lexical evidence.",
+      "source": "A&G §603.d"
+    },
+    {
+      "forms": [
+        "māgna",
+        "māgnā",
+        "māgnam",
+        "māgnō",
+        "māgnum",
+        "māgnus"
+      ],
+      "status": "SUPPORTED",
+      "note": "Owner chose the A&G §603.d long-vowel-before-gn notation on 2026-11-10. Long ā is phonemic although the syllable was already heavy; old MP3s require renewed listening against the revised target. L&S does not independently mark this hidden quantity.",
+      "source": "A&G §603.d"
+    },
+    {
+      "forms": [
+        "sīgnificātiōnem"
+      ],
+      "status": "SUPPORTED",
+      "note": "Owner chose long ī before gn, following A&G §603.d, on 2026-11-10. This is a course convention, not a new dictionary-verification claim.",
+      "source": "A&G §603.d; Lewis & Short s.v. significatio"
+    },
+    {
+      "forms": [
+        "tonitrus"
+      ],
+      "status": "AMBIGUOUS",
+      "note": "L&S marks the second vowel as common (tŏnī̆trus). Printed short, the stress is TO-ni-trus; long, it would be to-NĪ-trus. Check the recording against the printed form Owner chose to KEEP the printed short-i form on 2026-11-10; source allows variation.",
+      "source": "Lewis & Short s.v. tonitrus"
+    },
+    {
+      "forms": [
+        "hic"
+      ],
+      "status": "VERIFIED",
+      "note": "Pronoun hic with short i (the adverb hīc is a different word, also in the course). The automatic check matched the adverb. Checked in the Latin audit (LX-029)",
+      "source": "Lewis & Short s.v. hic"
+    },
+    {
+      "forms": [
+        "virī"
+      ],
+      "status": "VERIFIED",
+      "note": "vĭr, vĭri in L&S. Collatinus matched vīrus (poison)",
+      "source": "Lewis & Short s.v. vir"
+    },
+    {
+      "forms": [
+        "tria"
+      ],
+      "status": "VERIFIED",
+      "note": "Short i before a vowel (A&G §603.a). The automatic check compared the nominative trēs/trīs",
+      "source": "A&G §603.a"
+    },
+    {
+      "forms": [
+        "stāre"
+      ],
+      "status": "VERIFIED",
+      "note": "Infinitive stāre with long ā (1st conjugation, A&G §184). The supine stătum has a short a and does not apply",
+      "source": "A&G §184; Lewis & Short s.v. sto"
+    },
+    {
+      "forms": [
+        "audit"
+      ],
+      "status": "VERIFIED",
+      "note": "Present audit with short final i (A&G §167). Collatinus compared the supine stem audīt-",
+      "source": "A&G §167; Lewis & Short s.v. audio"
+    },
+    {
+      "forms": [
+        "Mārcus",
+        "Mārcum",
+        "Mārcī",
+        "Mārcō",
+        "Mārce"
+      ],
+      "status": "VERIFIED",
+      "note": "Hidden long ā. L&S records the inscriptional spelling MAARCVS, where the doubled vowel marks length",
+      "source": "Lewis & Short s.v. Marcus"
+    },
+    {
+      "forms": [
+        "lēctiō",
+        "lēctiōne",
+        "lēcta",
+        "ēlēctum",
+        "rēctē"
+      ],
+      "status": "SUPPORTED",
+      "note": "Hidden long vowel in lēctus, rēctus (from legō, regō), following the usual modern marking (Lachmann's law). L&S does not mark these vowels. Stress is unaffected",
+      "source": "A&G §603 (quantity of stem syllables learned from usage)"
+    },
+    {
+      "forms": [
+        "mēnsa",
+        "mēnsā",
+        "mēnsam",
+        "īnspīrāta",
+        "recēnsiō"
+      ],
+      "status": "SUPPORTED",
+      "note": "Long vowel before ns, as printed",
+      "source": "A&G §603.d"
+    },
+    {
+      "forms": [
+        "fontibus"
+      ],
+      "status": "SUPPORTED",
+      "note": "Short i in -ibus (3rd declension). Stress FON-ti-bus. The o is short in the oblique stem font-; only the nominative fōns has the long vowel before ns",
+      "source": "A&G §603.d; Lewis & Short s.v. fons"
+    },
+    {
+      "forms": [
+        "edere",
+        "emere"
+      ],
+      "status": "SUPPORTED",
+      "note": "3rd-conjugation infinitive in short -ere, so the stress is on the first syllable. Collatinus also offers ēmereō and ēdō, which do not apply",
+      "source": "A&G §186"
+    },
+    {
+      "forms": [
+        "dēest"
+      ],
+      "status": "AMBIGUOUS",
+      "note": "A vowel before a vowel is normally short (A&G §603.a), so dĕest; many teaching texts print dēest. Convention choice (LATIN_UNRESOLVED.md U-03) Owner chose to KEEP the course spelling dēest on 2026-11-10; source quantity remains convention-dependent.",
+      "source": "A&G §603.a; Lewis & Short s.v. desum"
+    },
+    {
+      "forms": [
+        "cui",
+        "deinde"
+      ],
+      "status": "VERIFIED",
+      "note": "Diphthong (cui) or synizesis (deinde); see EXCEPTIONS.json",
+      "source": "A&G §603.b–c"
+    },
+    {
+      "forms": [
+        "legēbat",
+        "rīdēre"
+      ],
+      "status": "VERIFIED",
+      "note": "Stem vowels agree with L&S. The long penult is the regular ending: imperfect -ēbat (A&G §168.b) and 2nd-conjugation infinitive -ēre (A&G §185)",
+      "source": "A&G §168.b, §185"
+    }
+  ]
 }
