@@ -667,12 +667,12 @@
         },
         {
           "id": "b01-c004-s015",
-          "text_la": "Tītus rosam spectat.",
+          "text_la": "Titus rosam spectat.",
           "source_line": 289,
           "annotation_status": "draft_unverified",
           "tokens": [
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 0,
               "end": 5,
               "lx": null,
@@ -699,7 +699,7 @@
         },
         {
           "id": "b01-c004-s016",
-          "text_la": "Estne rosa Tītī? Nōn, rosa Flāviae est.",
+          "text_la": "Estne rosa Titī? Nōn, rosa Flāviae est.",
           "source_line": 290,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -720,7 +720,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītī",
+              "t": "Titī",
               "start": 11,
               "end": 15,
               "lx": null,
@@ -1273,7 +1273,7 @@
       "sentences": [
         {
           "id": "b01-c004-s028",
-          "text_la": "Sed Tītus nōn laetus est.",
+          "text_la": "Sed Titus nōn laetus est.",
           "source_line": 308,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1286,7 +1286,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 4,
               "end": 9,
               "lx": null,
@@ -1321,12 +1321,12 @@
         },
         {
           "id": "b01-c004-s029",
-          "text_la": "Tītus dōnum nōn habet.",
+          "text_la": "Titus dōnum nōn habet.",
           "source_line": 309,
           "annotation_status": "draft_unverified",
           "tokens": [
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 0,
               "end": 5,
               "lx": null,
@@ -1361,7 +1361,7 @@
         },
         {
           "id": "b01-c004-s030",
-          "text_la": "Līvia Flāviae rosam dat; Gāius Mārcō librum dat; sed Tītus dōnum nōn accipit.",
+          "text_la": "Līvia Flāviae rosam dat; Gāius Mārcō librum dat; sed Titus dōnum nōn accipit.",
           "source_line": 310,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1438,7 +1438,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 53,
               "end": 58,
               "lx": null,
@@ -1473,7 +1473,7 @@
         },
         {
           "id": "b01-c004-s031",
-          "text_la": "Gāius Tītum spectat.",
+          "text_la": "Gāius Titum spectat.",
           "source_line": 311,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1486,7 +1486,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītum",
+              "t": "Titum",
               "start": 6,
               "end": 11,
               "lx": null,
@@ -1657,7 +1657,7 @@
         },
         {
           "id": "b01-c004-s035",
-          "text_la": "Gāius Tītō pōculum rubrum dat.",
+          "text_la": "Gāius Titō pōculum rubrum dat.",
           "source_line": 315,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1670,7 +1670,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītō",
+              "t": "Titō",
               "start": 6,
               "end": 10,
               "lx": null,
@@ -1777,12 +1777,12 @@
         },
         {
           "id": "b01-c004-s037",
-          "text_la": "Tītus pōculum accipit.",
+          "text_la": "Titus pōculum accipit.",
           "source_line": 317,
           "annotation_status": "draft_unverified",
           "tokens": [
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 0,
               "end": 5,
               "lx": null,
@@ -1809,7 +1809,7 @@
         },
         {
           "id": "b01-c004-s038",
-          "text_la": "Nunc Tītus laetus est!",
+          "text_la": "Nunc Titus laetus est!",
           "source_line": 318,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1822,7 +1822,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 5,
               "end": 10,
               "lx": null,
@@ -1849,12 +1849,12 @@
         },
         {
           "id": "b01-c004-s039",
-          "text_la": "Tītus Gāiō grātiās agit.",
+          "text_la": "Titus Gāiō grātiās agit.",
           "source_line": 319,
           "annotation_status": "draft_unverified",
           "tokens": [
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 0,
               "end": 5,
               "lx": null,
@@ -1889,7 +1889,7 @@
         },
         {
           "id": "b01-c004-s040",
-          "text_la": "Tum Tītus aquam in pōculō habet et bibit.",
+          "text_la": "Tum Titus aquam in pōculō habet et bibit.",
           "source_line": 320,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1902,7 +1902,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 4,
               "end": 9,
               "lx": null,
@@ -1961,7 +1961,7 @@
         },
         {
           "id": "b01-c004-s041",
-          "text_la": "Flāvia laeta est, Mārcus laetus est, Tītus laetus est.",
+          "text_la": "Flāvia laeta est, Mārcus laetus est, Titus laetus est.",
           "source_line": 321,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -2014,7 +2014,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 37,
               "end": 42,
               "lx": null,
@@ -2632,9 +2632,9 @@
       "type": "proposed_ungraded",
       "status": "proposed_ungraded",
       "source_line": 339,
-      "text_original": "5. Cui Gāius pōculum dat? — Gāius Tītō pōculum dat.",
+      "text_original": "5. Cui Gāius pōculum dat? — Gāius Titō pōculum dat.",
       "prompt_text": "Cui Gāius pōculum dat?",
-      "model_answer_raw": "Gāius Tītō pōculum dat.",
+      "model_answer_raw": "Gāius Titō pōculum dat.",
       "reviewed_by": null,
       "reviewed_at": null,
       "scoring_enabled": false
@@ -2718,8 +2718,8 @@
       "type": "proposed_ungraded",
       "status": "proposed_ungraded",
       "source_line": 344,
-      "text_original": "- Act out giving with objects, naming the giver and the receiver: `Līvia Tītō librum dat.`",
-      "prompt_text": "Act out giving with objects, naming the giver and the receiver: `Līvia Tītō librum dat.`",
+      "text_original": "- Act out giving with objects, naming the giver and the receiver: `Līvia Titō librum dat.`",
+      "prompt_text": "Act out giving with objects, naming the giver and the receiver: `Līvia Titō librum dat.`",
       "reviewed_by": null,
       "reviewed_at": null,
       "scoring_enabled": false
