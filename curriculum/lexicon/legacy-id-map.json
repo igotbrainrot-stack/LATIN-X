@@ -10,7 +10,7 @@
       "legacy_id": "legacy-ch01",
       "original_zero_based_index": 0,
       "title": "In hortō",
-      "latin_sentence_fingerprint_fnv32": "61c210d0",
+      "latin_sentence_fingerprint_fnv32": "4d7f1ff0",
       "planned_new_course_chapter_id": null,
       "migration_review_status": "unmapped_do_not_guess",
       "old_storage_keys": {
@@ -30,7 +30,7 @@
           {
             "id": "legacy-ch01-q003",
             "old_key": "0:2",
-            "question_text": "Arbor magna est an parva?"
+            "question_text": "Arbor māgna est an parva?"
           }
         ],
         "hint_levels": [
