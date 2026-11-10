@@ -59,7 +59,7 @@ npm run checksums                # regenerate root SHA256SUMS.txt after any chan
 ## 5. Important assets
 
 - `assets/art/b01/*.webp` — nine owner-approved scenes (+ thumbs). SHA/size/polygon gates in `tests/art-replacement-regions.test.cjs`. Never replace without owner sign-off.
-- `audio/narration/miriam/*.mp3` — 12 approved clips, Git-ignored (ship in ZIPs). `AUDIO_MANIFEST.json` holds SHA-256s.
+- `audio/narration/arjun/*.mp3` — 75 current local narrator files (74 Arjun including 67 sentence clips, plus labelled Miriam `laeta` word fallback), Git-ignored. `docs/audio/ARJUN_OFFLINE_MEDIA_CHECKSUMS_20261110.json` pins every included MP3; historical Miriam variants and approvals are preserved separately but do not automatically ship.
 - `assets/fonts/gentium-book-plus/` — OFL fallback face; `assets/icons/` — app icon.
 - `vendor/ts-fsrs.umd.js` — pinned, verified by `npm run test:vendor-fsrs`.
 
@@ -69,7 +69,7 @@ npm run checksums                # regenerate root SHA256SUMS.txt after any chan
 - Pilot chapters, 44 picture questions and all lexemes are **unsigned**. Never mark anything approved; only the owner signs.
 - Storage: never overwrite `tablinum-source-review-v02` (v4); v5 is `tablinum-state-v5`.
 - Narration: show canonical Latin only (`Līvia`, `quoque`); TTS aliases (`Lii-wia`, `Lee-wee-ah`, `Kwoh-kweh`) must never be learner-visible. Owner approval tier is `owner_not_latinist`. Sentence 7 default = V6b. Don't fabricate word timings.
-- Don't merge to `main`, publish releases or change historical art reviews. GitHub access was suspended at last check.
+- Don't merge to `main`, publish releases or change historical art reviews. GitHub PR #2 merged on 10 Nov 2026; the audit branch has separate pending work. Do not merge or publish without owner approval.
 
 ## 7. What the 8 Nov 2026 pass changed / removed
 
@@ -81,7 +81,7 @@ The Library tab and page were removed from `legacy-runtime.js`. Recordings expor
 
 ## 8. Unresolved
 
-- All 21 Miriam takes now ship. Five (s007 V6b/V6a, s009 V5a, quoque V4, aqua V3) were regenerated on 2026-11-08 at the owner's request because the original bytes were unrecoverable; their owner re-listen is pending (`owner_listening: "pending"` in `content/narration.js`). See `docs/audio/APPROVED_NARRATION.md`.
+- Current chapter I Arjun sentence takes are owner-approved; the 58 Chapter II–VIII Arjun takes remain pending owner listening. Historical Miriam audition and review decisions still exist in `docs/audio/` and Git history but do **not** override the active narration catalogue.
 - Not tested on real Windows 11, Linux Mint, Firefox or Edge in this pass (Chromium/Linux container only).
 - Region chip labels show IDs with hyphens (`arbor-magna`); changing them touches approved region data.
 
@@ -91,3 +91,7 @@ The Library tab and page were removed from `legacy-runtime.js`. Recordings expor
 2. Owner listens to the five regenerated takes; on approval, set `owner_listening` to `"accepted"` in `content/narration.js` and `AUDIO_MANIFEST.json`.
 3. Move the remaining root-level phase handovers into `docs/history/` together with updating the CI workflows and `scripts/verify-claude-package.cjs` that reference them.
 4. Add Firefox to the browser suite (`TABLINUM_BROWSER_NAME=firefox` is already supported by the axe test).
+
+## 10 November conservative offline audit
+
+See `AUDIT_REPORT.md`, `VERIFICATION_REPORT.md`, `PROJECT_STRUCTURE.md`, `LATIN_CONTENT_REVIEW.md`, and `docs/history/ARCHIVE_CANDIDATES_20261110.md`. The older online-first startup ZIP is not the offline release. Release packages must be built from the complete repo with exactly 78 manifest-pinned owner media files. The builder excludes extra ignored historical auditions and private original review records; the public CI can test source contracts without these files, but the final release builder strictly requires them. Learner storage keys and legacy library-tab save compatibility are protected. Do not treat technical checks as linguistic approval.
