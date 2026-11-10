@@ -26,7 +26,7 @@ for(const specimen of fixture.specimens){
 const irregular={pos:"verb",forms_policy:"irregular",forms:[{surface:"est",morph:"v.sum.pres.3sg",reviewed:false}]};
 assert.equal(checkForm({t:"est",morph:"v.sum.pres.3sg"},irregular,{}).reason,"irregular_form_not_reviewed");
 assert.throws(()=>generateNounForms({head:"rēs",genitive:"rei",declension:5}),/genitive must end/);
-const morph=(lexeme,tag)=>generateForms(lexeme).filter(f=>f.morph===tag).map(f=>f.surface);
+const morph=(lexeme,tag)=>(lexeme.pos?generateForms(lexeme):generateNounForms(lexeme)).filter(f=>f.morph===tag).map(f=>f.surface);
 assert.deepEqual(morph({head:"diēs",genitive:"diēī",declension:5},"n.acc.sg"),["diem"]);
 assert.deepEqual(morph({head:"rēs",genitive:"reī",declension:5},"n.gen.sg"),["reī"]);
 assert.deepEqual(morph({head:"rēs",genitive:"reī",declension:5},"n.acc.sg"),["rem"]);
