@@ -21,9 +21,9 @@
   },
   "new_lexemes_declared": [],
   "grammar_new": [],
-  "proposed_new_lemmas_raw": "**New (proposed, unsigned):** hortus, arbor, rosa, vīlla, puella, puer, Līvia, Tītus, magnus, parvus, pulcher, sum, in, et, sed, nōn, quoque, ecce, quis, ubi, ita, nunc, hīc, ibi.",
+  "proposed_new_lemmas_raw": "**New (proposed, unsigned):** hortus, arbor, rosa, vīlla, puella, puer, Līvia, Titus, magnus, parvus, pulcher, sum, in, et, sed, nōn, quoque, ecce, quis, ubi, ita, nunc, hīc, ibi.",
   "proposed_grammar_raw": "**Grammar:** nominative subjects; `est`/`sunt`; the questions `Quis?`, `Ubi?` and `-ne?`; `in hortō`/`in vīllā`/`in arbore` as pictured place chunks.",
-  "proposed_margin_raw": "**Margin:** magnus ↔ parvus · puella ♀ = Līvia · puer ♂ = Tītus · hīc ↔ ibi · ita ↔ nōn · [pictūra: hortus, arbor magna, arbor parva, rosa, vīlla]",
+  "proposed_margin_raw": "**Margin:** magnus ↔ parvus · puella ♀ = Līvia · puer ♂ = Titus · hīc ↔ ibi · ita ↔ nōn · [pictūra: hortus, arbor magna, arbor parva, rosa, vīlla]",
   "reviewer_notes": [],
   "segments": [
     {
@@ -953,7 +953,7 @@
         },
         {
           "id": "b01-c001-s025",
-          "text_la": "Puer est Tītus.",
+          "text_la": "Puer est Titus.",
           "source_line": 74,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -974,7 +974,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 9,
               "end": 14,
               "lx": null,
@@ -985,7 +985,7 @@
         },
         {
           "id": "b01-c001-s026",
-          "text_la": "Ubi est Tītus?",
+          "text_la": "Ubi est Titus?",
           "source_line": 75,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1006,7 +1006,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 8,
               "end": 13,
               "lx": null,
@@ -1017,12 +1017,12 @@
         },
         {
           "id": "b01-c001-s027",
-          "text_la": "Tītus in vīllā est.",
+          "text_la": "Titus in vīllā est.",
           "source_line": 76,
           "annotation_status": "draft_unverified",
           "tokens": [
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 0,
               "end": 5,
               "lx": null,
@@ -1057,7 +1057,7 @@
         },
         {
           "id": "b01-c001-s028",
-          "text_la": "Līvia in hortō est, sed Tītus in vīllā est.",
+          "text_la": "Līvia in hortō est, sed Titus in vīllā est.",
           "source_line": 77,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1102,7 +1102,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 24,
               "end": 29,
               "lx": null,
@@ -1137,7 +1137,7 @@
         },
         {
           "id": "b01-c001-s029",
-          "text_la": "Estne Tītus in hortō?",
+          "text_la": "Estne Titus in hortō?",
           "source_line": 78,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1150,7 +1150,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 6,
               "end": 11,
               "lx": null,
@@ -1177,7 +1177,7 @@
         },
         {
           "id": "b01-c001-s030",
-          "text_la": "Nōn, Tītus nōn in hortō est.",
+          "text_la": "Nōn, Titus nōn in hortō est.",
           "source_line": 79,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1190,7 +1190,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 5,
               "end": 10,
               "lx": null,
@@ -1235,12 +1235,12 @@
     },
     {
       "id": "b01-c001-l2",
-      "title_la": "Lēctiō 2 — Ubi est Tītus?",
+      "title_la": "Lēctiō 2 — Ubi est Titus?",
       "source_line": 81,
       "sentences": [
         {
           "id": "b01-c001-s031",
-          "text_la": "Nunc Tītus nōn in vīllā est.",
+          "text_la": "Nunc Titus nōn in vīllā est.",
           "source_line": 83,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1253,7 +1253,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 5,
               "end": 10,
               "lx": null,
@@ -1328,7 +1328,7 @@
         },
         {
           "id": "b01-c001-s033",
-          "text_la": "Līvia: «Ubi est puer Tītus? Estne Tītus in vīllā?»",
+          "text_la": "Līvia: «Ubi est puer Titus? Estne Titus in vīllā?»",
           "source_line": 85,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1365,7 +1365,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 21,
               "end": 26,
               "lx": null,
@@ -1381,7 +1381,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 34,
               "end": 39,
               "lx": null,
@@ -1408,7 +1408,7 @@
         },
         {
           "id": "b01-c001-s034",
-          "text_la": "Nōn est. Vīlla magna est, sed Tītus ibi nōn est.",
+          "text_la": "Nōn est. Vīlla magna est, sed Titus ibi nōn est.",
           "source_line": 86,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1461,7 +1461,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 30,
               "end": 35,
               "lx": null,
@@ -1536,7 +1536,7 @@
         },
         {
           "id": "b01-c001-s036",
-          "text_la": "Ita, Tītus in hortō est.",
+          "text_la": "Ita, Titus in hortō est.",
           "source_line": 88,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1549,7 +1549,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 5,
               "end": 10,
               "lx": null,
@@ -1768,7 +1768,7 @@
         },
         {
           "id": "b01-c001-s040",
-          "text_la": "Estne Tītus in arbore parvā?",
+          "text_la": "Estne Titus in arbore parvā?",
           "source_line": 92,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -1781,7 +1781,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 6,
               "end": 11,
               "lx": null,
@@ -2016,7 +2016,7 @@
         },
         {
           "id": "b01-c001-s044",
-          "text_la": "Puer in arbore est Tītus!",
+          "text_la": "Puer in arbore est Titus!",
           "source_line": 96,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -2053,7 +2053,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 19,
               "end": 24,
               "lx": null,
@@ -2064,12 +2064,12 @@
         },
         {
           "id": "b01-c001-s045",
-          "text_la": "Tītus parvus est, sed arbor magna est.",
+          "text_la": "Titus parvus est, sed arbor magna est.",
           "source_line": 97,
           "annotation_status": "draft_unverified",
           "tokens": [
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 0,
               "end": 5,
               "lx": null,
@@ -2128,7 +2128,7 @@
         },
         {
           "id": "b01-c001-s046",
-          "text_la": "Līvia: «Ecce Tītus! Tītus in arbore est!»",
+          "text_la": "Līvia: «Ecce Titus! Titus in arbore est!»",
           "source_line": 98,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -2149,7 +2149,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 13,
               "end": 18,
               "lx": null,
@@ -2157,7 +2157,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 20,
               "end": 25,
               "lx": null,
@@ -2192,7 +2192,7 @@
         },
         {
           "id": "b01-c001-s047",
-          "text_la": "Nunc Līvia et Tītus in hortō sunt.",
+          "text_la": "Nunc Līvia et Titus in hortō sunt.",
           "source_line": 99,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -2221,7 +2221,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 14,
               "end": 19,
               "lx": null,
@@ -2256,7 +2256,7 @@
         },
         {
           "id": "b01-c001-s048",
-          "text_la": "Līvia est hīc, et Tītus est ibi.",
+          "text_la": "Līvia est hīc, et Titus est ibi.",
           "source_line": 100,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -2293,7 +2293,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 18,
               "end": 23,
               "lx": null,
@@ -2416,7 +2416,7 @@
         },
         {
           "id": "b01-c001-s050",
-          "text_la": "Et Tītus? Tītus nōn in vīllā, sed in arbore est.",
+          "text_la": "Et Titus? Titus nōn in vīllā, sed in arbore est.",
           "source_line": 102,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -2429,7 +2429,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 3,
               "end": 8,
               "lx": null,
@@ -2437,7 +2437,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "Tītus",
+              "t": "Titus",
               "start": 10,
               "end": 15,
               "lx": null,
@@ -2699,9 +2699,9 @@
       "type": "proposed_ungraded",
       "status": "proposed_ungraded",
       "source_line": 111,
-      "text_original": "4. Estne Tītus in vīllā? (Lēctiō 2) — Nōn, Tītus in hortō est.",
-      "prompt_text": "Estne Tītus in vīllā? (Lēctiō 2)",
-      "model_answer_raw": "Nōn, Tītus in hortō est.",
+      "text_original": "4. Estne Titus in vīllā? (Lēctiō 2) — Nōn, Titus in hortō est.",
+      "prompt_text": "Estne Titus in vīllā? (Lēctiō 2)",
+      "model_answer_raw": "Nōn, Titus in hortō est.",
       "reviewed_by": null,
       "reviewed_at": null,
       "scoring_enabled": false
@@ -2711,9 +2711,9 @@
       "type": "proposed_ungraded",
       "status": "proposed_ungraded",
       "source_line": 112,
-      "text_original": "5. Ubi est Tītus? — Tītus in arbore magnā est.",
-      "prompt_text": "Ubi est Tītus?",
-      "model_answer_raw": "Tītus in arbore magnā est.",
+      "text_original": "5. Ubi est Titus? — Titus in arbore magnā est.",
+      "prompt_text": "Ubi est Titus?",
+      "model_answer_raw": "Titus in arbore magnā est.",
       "reviewed_by": null,
       "reviewed_at": null,
       "scoring_enabled": false
@@ -2810,10 +2810,10 @@
       "type": "pic",
       "status": "proposed_ungraded",
       "scoring_enabled": false,
-      "prompt_la": "Ubi est Tītus?",
+      "prompt_la": "Ubi est Titus?",
       "scene_id": "b01-c001-scene",
-      "region_id": "Tītus",
-      "answer": "Tītus",
+      "region_id": "Titus",
+      "answer": "Titus",
       "review": {
         "by": null,
         "at": null
@@ -2838,8 +2838,8 @@
       "type": "proposed_ungraded",
       "status": "proposed_ungraded",
       "source_line": 118,
-      "text_original": "- Answer aloud: `Ubi est Līvia?` `Ubi est Tītus?`",
-      "prompt_text": "Answer aloud: `Ubi est Līvia?` `Ubi est Tītus?`",
+      "text_original": "- Answer aloud: `Ubi est Līvia?` `Ubi est Titus?`",
+      "prompt_text": "Answer aloud: `Ubi est Līvia?` `Ubi est Titus?`",
       "reviewed_by": null,
       "reviewed_at": null,
       "scoring_enabled": false
