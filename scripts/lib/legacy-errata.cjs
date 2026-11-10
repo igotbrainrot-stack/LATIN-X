@@ -15,7 +15,7 @@ function effectiveLessons(original){
  const result=mapLatin(original);
  if(!Array.isArray(result)||result.length!==8)throw Error("Legacy lesson count changed");
  for(const [key,answer] of Object.entries(answerAdds)){
-  const match=/^legacy-ch(\\d{2})-q(\\d{3})$/.exec(key);
+  const match=/^legacy-ch(\d{2})-q(\d{3})$/.exec(key);
   const q=result[Number(match[1])-1].q[Number(match[2])-1];
   if(!Array.isArray(q[2]))throw Error("Expected short-answer variants "+key);
   if(!q[2].includes(answer))q[2].push(answer);
