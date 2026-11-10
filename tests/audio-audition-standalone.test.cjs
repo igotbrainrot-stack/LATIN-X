@@ -16,12 +16,21 @@ for(const clip of manifest.clips){
  const url=embedded[clip.clip_id];
  assert(url&&url.startsWith('data:audio/mpeg;base64,'),'Missing directly playable MP3 source: '+clip.clip_id);
  const bytes=Buffer.from(url.slice('data:audio/mpeg;base64,'.length),'base64');
- const file=fs.readFileSync(path.join(root,clip.recording_file));
- assert.equal(Buffer.compare(bytes,file),0,'Embedded and original bytes must match: '+clip.clip_id);
+ // Historical standalone auditions embed the original MP3 bytes. The private
+ // source MP3s are deliberately not committed; clean CI must validate the
+ // embedded bytes against the committed SHA256 rather than require missing files.
+ const original=path.join(root,clip.recording_file);
+ if(fs.existsSync(original)){
+  const file=fs.readFileSync(original);
+  assert.equal(Buffer.compare(bytes,file),0,'Embedded and original bytes must match when the private original is present: '+clip.clip_id);
+ }
+ assert(bytes.length>1000,'Embedded recording must contain real audio bytes: '+clip.clip_id);
+ assert(bytes.subarray(0,3).toString('latin1')==='ID3'||(bytes[0]===255&&(bytes[1]&224)===224),
+  'Embedded recording must contain an MP3 header: '+clip.clip_id);
  assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),clip.sha256,'SHA-256 mismatch: '+clip.clip_id);
  assert.equal(clip.pronunciation_approved,false,'Unreviewed audio must remain unapproved');
 }
 assert(page.includes('id="test-audio"'),'Visible user-triggered sound diagnostic required');
 assert(page.includes("audio.src=window.LATIN_X_EMBEDDED_AUDIO[clip.clip_id]"),'Every playback control must use embedded audio');
 assert(fs.existsSync(path.join(root,'Start Audio Audition.cmd')),'Windows audition launcher required');
-console.log('Standalone Runway audition PASS: 34 real MP3s byte-for-byte embedded, 34 SHA-256 matched, reader remains unmodified');
+console.log('Standalone Runway audition PASS: 34 embedded MP3s validated against pinned SHA-256; optional private originals compared when present');
