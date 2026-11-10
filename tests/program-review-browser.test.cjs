@@ -51,6 +51,20 @@ const close=()=>new Promise(resolve=>server.close(resolve));
   assert.equal(await page.locator("#help [data-save]").count(),0,"Save button must not stay active for a saved word");
   assert(await page.locator("#help button:has-text('Saved ✓')").isDisabled());
 
+  // The clicked word shows its possible forms, labelled as a draft.
+  assert.match(await page.locator("#help .form-note").innerText(),/Draft note, not yet reviewed|does not change its form/);
+  await page.locator("#main .word",{hasText:/^hortō$/}).first().click();
+  assert.match(await page.locator("#help .form-note").innerText(),/Form of hortus, hortī: one of dative singular; ablative singular\. The sentence shows which\./);
+
+  // Next chapter moves on and back; it is disabled on the last chapter.
+  await page.locator("[data-action='nextChapter']").click();
+  assert.equal(await page.locator("#chapters .ch.active").getAttribute("data-ch"),"1");
+  await page.locator("[data-action='prevChapter']").click();
+  assert.equal(await page.locator("#chapters .ch.active").getAttribute("data-ch"),"0");
+  await page.locator("#chapters [data-ch='7']").click();
+  assert(await page.locator("[data-action='nextChapter']").isDisabled(),"Next chapter must be disabled on the last chapter");
+  await page.locator("#chapters [data-ch='0']").click();
+
   // Exercitia: the audio strip is hidden; a wrong typed answer keeps the focus.
   await page.locator("[data-tab='quiz']").first().click();
   assert(await page.locator(".dock").isHidden(),"audio strip must be hidden outside the reader");

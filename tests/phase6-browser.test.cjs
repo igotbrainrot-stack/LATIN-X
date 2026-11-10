@@ -7,8 +7,11 @@ const {chromium}=require("playwright"),{pathToFileURL}=require("node:url");
   const context=await browser.newContext(),page=await context.newPage(),errors=[];
   page.on("pageerror",error=>errors.push(error.message));
   const old=JSON.stringify({version:4,ch:0,vocab:{hortus:{head:"hortus",meaning:"garden",days:1,due:0,reps:3}}});
-  await page.addInitScript(raw=>{localStorage.setItem("tablinum-source-review-v02",raw)},old);
   const url=pathToFileURL(path.resolve(__dirname,"..","index.html")).href;
+  await page.goto(url);
+  // Seeded from the page, not from an init script: an init script that touches localStorage on a file:// page
+  // sometimes leaves Chromium with an empty storage area after a reload, which made this test fail now and then.
+  await page.evaluate(raw=>{localStorage.removeItem("tablinum-state-v5");localStorage.removeItem("tablinum-v4-snapshot");localStorage.setItem("tablinum-source-review-v02",raw)},old);
   await page.goto(url);
   if(await page.locator("#lx-welcome:not([hidden])").count()){
    await page.locator("#lx-welcome-skip").check();

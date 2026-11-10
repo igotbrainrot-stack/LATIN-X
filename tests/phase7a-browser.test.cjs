@@ -5,12 +5,16 @@ const {chromium}=require("playwright"),{pathToFileURL}=require("node:url");
  const browser=await chromium.launch({headless:true,channel:process.env.TABLINUM_BROWSER_CHANNEL||undefined});
  try{
   const context=await browser.newContext();
-  // Skip the first-run guide via its stored preference: clicking "Enter" would be a user gesture and unlock audio.
-  await context.addInitScript(()=>{try{localStorage.setItem("latin-x-welcome-skip-v1","yes")}catch(e){}});
   const page=await context.newPage(),errors=[],requests=[];
   page.on("pageerror",error=>errors.push(error.message));
   page.on("request",request=>{if(/^https?:\/\//.test(request.url()))requests.push(request.url())});
   const url=pathToFileURL(path.resolve(__dirname,"..","index.html")).href;
+  await page.goto(url);
+  // Skip the first-run guide via its stored preference: clicking "Enter" would be a user gesture and unlock audio.
+  // The preference is written once from the page and the page is loaded again. It is not written from an
+  // init script: an init script that touches localStorage on a file:// page sometimes leaves Chromium with an
+  // empty storage area after a reload, which made the saved-settings check below fail about one run in five.
+  await page.evaluate(()=>localStorage.setItem("latin-x-welcome-skip-v1","yes"));
   await page.goto(url);
   assert.equal(await page.locator("#lx-welcome:not([hidden])").count(),0,"Stored preference skips the guide");
   await page.locator(".sentence").first().waitFor();
