@@ -4,13 +4,13 @@
   "legacy": true,
   "status": "legacy_unreviewed",
   "original_zero_based_index": 0,
-  "legacy_source_fingerprint_fnv32": "014641a9",
+  "legacy_source_fingerprint_fnv32": "b54e6109",
   "title": "In hortō",
   "legacy_source": {
     "name": "In hortō",
     "sub": "Līvia et arbor",
     "scene": "garden",
-    "context": "Līvia in hortō est. Arbor magna est.",
+    "context": "Līvia in hortō est. Arbor māgna est.",
     "explain": "Est means is. The form hortō after in describes a location. Endings are clues to meaning.",
     "sent": [
       [
@@ -30,7 +30,7 @@
         "The girl is Livia."
       ],
       [
-        "Arbor magna est.",
+        "Arbor māgna est.",
         "The tree is large."
       ],
       [
@@ -72,9 +72,9 @@
         "Līviam Līviae"
       ],
       [
-        "magnus",
+        "māgnus",
         "big",
-        "magna"
+        "māgna"
       ],
       [
         "parvus",
@@ -129,24 +129,24 @@
         "Līvia sub arbore sedet."
       ],
       [
-        "Arbor magna est an parva?",
+        "Arbor māgna est an parva?",
         null,
         [
-          "magna",
-          "magna est",
-          "arbor est magna"
+          "māgna",
+          "māgna est",
+          "arbor est māgna"
         ],
-        "Arbor magna est."
+        "Arbor māgna est."
       ]
     ]
   },
   "cloze_source": {
-    "text": "Arbor magna est. In hortō est ____ magna.",
+    "text": "Arbor māgna est. In hortō est ____ māgna.",
     "answers": [
       "arbor"
     ],
-    "clue": "Arbor est magna; puella parva est.",
-    "proof": "In hortō est arbor magna."
+    "clue": "Arbor est māgna; puella parva est.",
+    "proof": "In hortō est arbor māgna."
   },
   "sentences": [
     {
@@ -331,7 +331,7 @@
     },
     {
       "id": "legacy-ch01-s005",
-      "text_la": "Arbor magna est.",
+      "text_la": "Arbor māgna est.",
       "en": "The tree is large.",
       "tokens": [
         {
@@ -346,7 +346,7 @@
           "review_status": "unreviewed"
         },
         {
-          "t": "magna",
+          "t": "māgna",
           "start": 6,
           "end": 11,
           "lx": null,
@@ -563,14 +563,14 @@
     {
       "id": "legacy-ch01-q003",
       "legacy_source": [
-        "Arbor magna est an parva?",
+        "Arbor māgna est an parva?",
         null,
         [
-          "magna",
-          "magna est",
-          "arbor est magna"
+          "māgna",
+          "māgna est",
+          "arbor est māgna"
         ],
-        "Arbor magna est."
+        "Arbor māgna est."
       ]
     }
   ]
