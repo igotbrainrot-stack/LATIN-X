@@ -12,10 +12,17 @@
 | Release builder modified JavaScript | PASS syntax parse | Confirms parseability, not runtime correctness |
 | Prior GitHub PR #2 CI | PASS (baseline only) | Ubuntu compiler, Windows compiler, Node smoke, browser smoke, Windows offline; before audit branch modifications |
 
+## GitHub Actions verification of audit branch
+The audit changes at `d4fc0d3859` were checked by two workflows, both **completed successfully**:
+- [Tablinum Phase 2 offline lesson compiler](https://github.com/igotbrainrot-stack/LATIN-X/actions/runs/42745230031) — Ubuntu and Windows compiler jobs passed.
+- [Tablinum source and visual checks](https://github.com/igotbrainrot-stack/LATIN-X/actions/runs/42745229665) — Node tests, Chromium browser smoke, and Windows offline/browser jobs passed.
+
+These are clean **public checkout** CI jobs. They do not contain the 78 private owner MP3s, and do not constitute an extracted release-package verification. The full private-media checks remain listed below.
+
 ## Required, not yet executed for this branch
 | Command/check | Status / reason |
 |---|---|
-| `npm test` | Pending: full repository checkout unavailable to this workspace |
+| `npm test` | PASS in GitHub Actions clean checkout (Linux/Windows); not rerun locally in this workspace |
 | `npm run test:narration` | Pending: requires complete source; strict private-media run should set `LATIN_X_REQUIRE_PRIVATE_AUDIO=1` |
 | `npm run test:browser-all` | Pending: Playwright/Chromium with full source and private audio |
 | `node scripts/build-release.cjs --out dist` | Pending: complete checkout plus 78 supplied MP3s needed |
