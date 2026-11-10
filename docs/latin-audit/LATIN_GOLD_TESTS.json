@@ -1,0 +1,1417 @@
+{
+ "schema": "latin-x-gold-tests-v1",
+ "created": "2026-11-10",
+ "runner": "node scripts/run-latin-gold-tests.cjs",
+ "policy": "preserve tests must always pass; correction tests are expected to fail until the owner approves and applies the matching finding",
+ "tests": [
+  {
+   "id": "G-PRES-legacy-ch01-q001-acc-in hortō",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch01-q001",
+   "response": "in hortō",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch01-q001-acc-In hortō est arbor.",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch01-q001",
+   "response": "In hortō est arbor.",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch01-q001-rej-in forō",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch01-q001",
+   "response": "in forō",
+   "expect": false,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch01-q001-rej-in aquā",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch01-q001",
+   "response": "in aquā",
+   "expect": false,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch01-q002-acc-Līvia",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch01-q002",
+   "response": "Līvia",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch01-q002-acc-Livia",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch01-q002",
+   "response": "Livia",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch01-q002-acc-Līvia sub arbore sedet.",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch01-q002",
+   "response": "Līvia sub arbore sedet.",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch01-q002-rej-hortus",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch01-q002",
+   "response": "hortus",
+   "expect": false,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch01-q002-rej-arbor",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch01-q002",
+   "response": "arbor",
+   "expect": false,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch01-q003-acc-magna",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch01-q003",
+   "response": "magna",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch01-q003-acc-magna est",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch01-q003",
+   "response": "magna est",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch01-q003-acc-arbor est magna",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch01-q003",
+   "response": "arbor est magna",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch01-q003-acc-Arbor magna est.",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch01-q003",
+   "response": "Arbor magna est.",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch01-q003-rej-parva",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch01-q003",
+   "response": "parva",
+   "expect": false,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch02-q001-acc-Mārcus",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch02-q001",
+   "response": "Mārcus",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch02-q001-acc-Marcus",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch02-q001",
+   "response": "Marcus",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch02-q001-rej-Flāvia",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch02-q001",
+   "response": "Flāvia",
+   "expect": false,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch02-q002-acc-Līviae",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch02-q002",
+   "response": "Līviae",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch02-q002-acc-liviae",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch02-q002",
+   "response": "liviae",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch02-q002-acc-frāter Līviae est",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch02-q002",
+   "response": "frāter Līviae est",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch02-q002-rej-Mārcī",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch02-q002",
+   "response": "Mārcī",
+   "expect": false,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch02-q003-acc-quattuor",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch02-q003",
+   "response": "quattuor",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch02-q003-acc-Quattuor hominēs in vīllā habitant.",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch02-q003",
+   "response": "Quattuor hominēs in vīllā habitant.",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch02-q003-acc-Quattuor hominēs habitant.",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch02-q003",
+   "response": "Quattuor hominēs habitant.",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch02-q003-rej-duo",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch02-q003",
+   "response": "duo",
+   "expect": false,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch02-q003-rej-trēs",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch02-q003",
+   "response": "trēs",
+   "expect": false,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch03-q001-acc-rosam",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch03-q001",
+   "response": "rosam",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch03-q001-rej-pānem",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch03-q001",
+   "response": "pānem",
+   "expect": false,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch03-q001-rej-canem",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch03-q001",
+   "response": "canem",
+   "expect": false,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch03-q002-acc-mātrī",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch03-q002",
+   "response": "mātrī",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch03-q002-acc-matri",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch03-q002",
+   "response": "matri",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch03-q002-rej-patrī",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch03-q002",
+   "response": "patrī",
+   "expect": false,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch03-q003-acc-librum",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch03-q003",
+   "response": "librum",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch03-q003-acc-librum legit",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch03-q003",
+   "response": "librum legit",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch03-q003-acc-Mārcus legit librum",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch03-q003",
+   "response": "Mārcus legit librum",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch03-q003-acc-Mārcus librum legit.",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch03-q003",
+   "response": "Mārcus librum legit.",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch03-q003-rej-rosam",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch03-q003",
+   "response": "rosam",
+   "expect": false,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch04-q001-acc-pānem",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch04-q001",
+   "response": "pānem",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch04-q001-rej-rosam",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch04-q001",
+   "response": "rosam",
+   "expect": false,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch04-q001-rej-librum",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch04-q001",
+   "response": "librum",
+   "expect": false,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch04-q002-acc-aquam",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch04-q002",
+   "response": "aquam",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch04-q002-rej-pānem",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch04-q002",
+   "response": "pānem",
+   "expect": false,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch04-q003-acc-Flāvia",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch04-q003",
+   "response": "Flāvia",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch04-q003-acc-Flāvia portat",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch04-q003",
+   "response": "Flāvia portat",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch04-q003-acc-māter",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch04-q003",
+   "response": "māter",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch04-q003-acc-Flāvia aquam portat.",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch04-q003",
+   "response": "Flāvia aquam portat.",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch04-q003-rej-Līvia",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch04-q003",
+   "response": "Līvia",
+   "expect": false,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch05-q001-acc-duo",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch05-q001",
+   "response": "duo",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch05-q001-rej-tria",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch05-q001",
+   "response": "tria",
+   "expect": false,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch05-q001-rej-quattuor",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch05-q001",
+   "response": "quattuor",
+   "expect": false,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch05-q002-acc-in forō",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch05-q002",
+   "response": "in forō",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch05-q002-rej-in hortō",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch05-q002",
+   "response": "in hortō",
+   "expect": false,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch05-q002-rej-in vīllā",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch05-q002",
+   "response": "in vīllā",
+   "expect": false,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch05-q003-acc-māla",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch05-q003",
+   "response": "māla",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch05-q003-acc-māla vendit",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch05-q003",
+   "response": "māla vendit",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch05-q003-acc-mercātor vendit māla",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch05-q003",
+   "response": "mercātor vendit māla",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch05-q003-acc-Mercātor māla vendit.",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch05-q003",
+   "response": "Mercātor māla vendit.",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch05-q003-rej-pānem",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch05-q003",
+   "response": "pānem",
+   "expect": false,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch06-q001-acc-canis",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch06-q001",
+   "response": "canis",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch06-q001-rej-Mārcus",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch06-q001",
+   "response": "Mārcus",
+   "expect": false,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch06-q002-acc-ad Līviam",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch06-q002",
+   "response": "ad Līviam",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch06-q002-rej-ad Mārcum",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch06-q002",
+   "response": "ad Mārcum",
+   "expect": false,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch06-q003-acc-prope portam",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch06-q003",
+   "response": "prope portam",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch06-q003-acc-prope portam stat",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch06-q003",
+   "response": "prope portam stat",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch06-q003-acc-Līvia stat prope portam",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch06-q003",
+   "response": "Līvia stat prope portam",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch06-q003-acc-Līvia prope portam stat.",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch06-q003",
+   "response": "Līvia prope portam stat.",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch06-q003-rej-in viā",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch06-q003",
+   "response": "in viā",
+   "expect": false,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch07-q001-acc-pluvia",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch07-q001",
+   "response": "pluvia",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch07-q001-rej-sōl",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch07-q001",
+   "response": "sōl",
+   "expect": false,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch07-q001-rej-mālum",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch07-q001",
+   "response": "mālum",
+   "expect": false,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch07-q002-acc-Līvia",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch07-q002",
+   "response": "Līvia",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch07-q002-rej-Flāvia",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch07-q002",
+   "response": "Flāvia",
+   "expect": false,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch07-q003-acc-sōl",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch07-q003",
+   "response": "sōl",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch07-q003-acc-sōl lūcet",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch07-q003",
+   "response": "sōl lūcet",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch07-q003-acc-Hodiē sōl lūcet.",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch07-q003",
+   "response": "Hodiē sōl lūcet.",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch07-q003-rej-pluvia",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch07-q003",
+   "response": "pluvia",
+   "expect": false,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch08-q001-acc-crās",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch08-q001",
+   "response": "crās",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch08-q001-rej-herī",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch08-q001",
+   "response": "herī",
+   "expect": false,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch08-q001-rej-hodiē",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch08-q001",
+   "response": "hodiē",
+   "expect": false,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch08-q002-acc-librum",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch08-q002",
+   "response": "librum",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch08-q002-rej-canem",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch08-q002",
+   "response": "canem",
+   "expect": false,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch08-q002-rej-pānem",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch08-q002",
+   "response": "pānem",
+   "expect": false,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch08-q003-acc-rosās",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch08-q003",
+   "response": "rosās",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch08-q003-acc-rosās portābit",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch08-q003",
+   "response": "rosās portābit",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch08-q003-acc-Līvia portābit rosās",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch08-q003",
+   "response": "Līvia portābit rosās",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch08-q003-acc-Līvia rosās portābit.",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch08-q003",
+   "response": "Līvia rosās portābit.",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-legacy-ch08-q003-rej-librum",
+   "kind": "grade_accepts",
+   "finding": "preservation",
+   "question": "legacy-ch08-q003",
+   "response": "librum",
+   "expect": false,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-text-ch02.json-Mārcus pater Līviae est.",
+   "kind": "text_present",
+   "finding": "preservation",
+   "file": "lessons/legacy/ch02.json",
+   "text": "Mārcus pater Līviae est.",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-text-c004.json-Gāius",
+   "kind": "text_present",
+   "finding": "preservation",
+   "file": "lessons/b01/c004.json",
+   "text": "Gāius",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-text-ch01.json-Puella Līvia est.",
+   "kind": "text_present",
+   "finding": "preservation",
+   "file": "lessons/legacy/ch01.json",
+   "text": "Puella Līvia est.",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-text-ch02.json-Flāvia māter Līviae est.",
+   "kind": "text_present",
+   "finding": "preservation",
+   "file": "lessons/legacy/ch02.json",
+   "text": "Flāvia māter Līviae est.",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-text-ch07.json-Herī pluvia erat.",
+   "kind": "text_present",
+   "finding": "preservation",
+   "file": "lessons/legacy/ch07.json",
+   "text": "Herī pluvia erat.",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-text-ch05.json-Hodiē familia ad forum i",
+   "kind": "text_present",
+   "finding": "preservation",
+   "file": "lessons/legacy/ch05.json",
+   "text": "Hodiē familia ad forum it.",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-text-ch01.json-Hic est hortus.",
+   "kind": "text_present",
+   "finding": "preservation",
+   "file": "lessons/legacy/ch01.json",
+   "text": "Hic est hortus.",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-text-c001.json-Hortus est hīc; vīlla es",
+   "kind": "text_present",
+   "finding": "preservation",
+   "file": "lessons/b01/c001.json",
+   "text": "Hortus est hīc; vīlla est ibi.",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-text-c007.json-Puer est fīlius Gāī.",
+   "kind": "text_present",
+   "finding": "preservation",
+   "file": "lessons/b01/c007.json",
+   "text": "Puer est fīlius Gāī.",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-text-ch05.json-Mercātor māla vendit.",
+   "kind": "text_present",
+   "finding": "preservation",
+   "file": "lessons/legacy/ch05.json",
+   "text": "Mercātor māla vendit.",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-text-ch05.json-Familia ē forō domum red",
+   "kind": "text_present",
+   "finding": "preservation",
+   "file": "lessons/legacy/ch05.json",
+   "text": "Familia ē forō domum redit.",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-eat-edit",
+   "kind": "text_absent",
+   "finding": "preservation",
+   "files": [
+    "lessons/legacy/ch04.json"
+   ],
+   "text": "ēdit",
+   "expect": true,
+   "phase": "preserve",
+   "note": "Present 'edit' (ĕdo) is correct; 'ēdit' would be the perfect or ē-dō 'give out' (L&S edo1/edo2)."
+  },
+  {
+   "id": "G-PRES-narration-sync",
+   "kind": "narration_matches_lessons",
+   "finding": "preservation",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-paradigm-puella-n.abl.sg",
+   "kind": "paradigm_form",
+   "finding": "preservation",
+   "lexeme": {
+    "pos": "noun",
+    "head": "puella",
+    "genitive": "puellae",
+    "declension": 1,
+    "gender": "f"
+   },
+   "morph": "n.abl.sg",
+   "expected": "puellā",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-paradigm-rēx-n.abl.sg",
+   "kind": "paradigm_form",
+   "finding": "preservation",
+   "lexeme": {
+    "pos": "noun",
+    "head": "rēx",
+    "genitive": "rēgis",
+    "declension": 3,
+    "gender": "m"
+   },
+   "morph": "n.abl.sg",
+   "expected": "rēge",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-paradigm-mare-n.abl.sg",
+   "kind": "paradigm_form",
+   "finding": "preservation",
+   "lexeme": {
+    "pos": "noun",
+    "head": "mare",
+    "genitive": "maris",
+    "declension": 3,
+    "gender": "n",
+    "i_stem": true
+   },
+   "morph": "n.abl.sg",
+   "expected": "marī",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-paradigm-manus-n.abl.sg",
+   "kind": "paradigm_form",
+   "finding": "preservation",
+   "lexeme": {
+    "pos": "noun",
+    "head": "manus",
+    "genitive": "manūs",
+    "declension": 4,
+    "gender": "f"
+   },
+   "morph": "n.abl.sg",
+   "expected": "manū",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-paradigm-diēs-n.gen.sg",
+   "kind": "paradigm_form",
+   "finding": "preservation",
+   "lexeme": {
+    "pos": "noun",
+    "head": "diēs",
+    "genitive": "diēī",
+    "declension": 5,
+    "gender": "m"
+   },
+   "morph": "n.gen.sg",
+   "expected": "diēī",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-paradigm-diēs-n.abl.sg",
+   "kind": "paradigm_form",
+   "finding": "preservation",
+   "lexeme": {
+    "pos": "noun",
+    "head": "diēs",
+    "genitive": "diēī",
+    "declension": 5,
+    "gender": "m"
+   },
+   "morph": "n.abl.sg",
+   "expected": "diē",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-paradigm-fīlius-n.voc.sg",
+   "kind": "paradigm_form",
+   "finding": "preservation",
+   "lexeme": {
+    "pos": "noun",
+    "head": "fīlius",
+    "genitive": "fīlī",
+    "declension": 2,
+    "gender": "m"
+   },
+   "morph": "n.voc.sg",
+   "expected": "fīlī",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-paradigm-fortis-adj.abl.sg",
+   "kind": "paradigm_form",
+   "finding": "preservation",
+   "lexeme": {
+    "pos": "adj",
+    "head": "fortis",
+    "feminine": "fortis",
+    "neuter": "forte",
+    "genitive": "fortis",
+    "pattern": "adj-3-two"
+   },
+   "morph": "adj.abl.sg",
+   "expected": "fortī",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-paradigm-regō-v.ind.fut.act.3sg",
+   "kind": "paradigm_form",
+   "finding": "preservation",
+   "lexeme": {
+    "pos": "verb",
+    "conjugation": "3",
+    "principal_parts": "regō, regere, rēxī, rēctum"
+   },
+   "morph": "v.ind.fut.act.3sg",
+   "expected": "reget",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-PRES-paradigm-capiō-v.inf.pres.pass",
+   "kind": "paradigm_form",
+   "finding": "preservation",
+   "lexeme": {
+    "pos": "verb",
+    "conjugation": "3io",
+    "principal_parts": "capiō, capere, cēpī, captum"
+   },
+   "morph": "v.inf.pres.pass",
+   "expected": "capī",
+   "expect": true,
+   "phase": "preserve"
+  },
+  {
+   "id": "G-LX-001-titus",
+   "kind": "text_absent",
+   "finding": "LX-001",
+   "files": [
+    "lessons/legacy/ch01.json",
+    "lessons/legacy/ch02.json",
+    "lessons/legacy/ch03.json",
+    "lessons/legacy/ch04.json",
+    "lessons/legacy/ch05.json",
+    "lessons/legacy/ch06.json",
+    "lessons/legacy/ch07.json",
+    "lessons/legacy/ch08.json",
+    "content/legacy/ch02.js",
+    "content/legacy/ch03.js",
+    "content/legacy/ch04.js",
+    "content/legacy/ch05.js",
+    "content/legacy/ch06.js",
+    "content/legacy/ch07.js",
+    "content/legacy/ch08.js",
+    "app/legacy-runtime.js",
+    "content/narration.js",
+    "content/picture-exercises.js",
+    "curriculum/picture-exercises-b01.json",
+    "lessons/b01/c001.json",
+    "lessons/b01/c002.json",
+    "lessons/b01/c003.json",
+    "lessons/b01/c004.json",
+    "lessons/b01/c005.json",
+    "lessons/b01/c006.json",
+    "lessons/b01/c007.json",
+    "lessons/b01/c008.json"
+   ],
+   "text": "Tīt",
+   "expect": true,
+   "phase": "correction",
+   "note": "Titus has short i (L&S 'Tĭtus'; Martial 1.17.1, 1.17.3, 7.59.1 scansion)."
+  },
+  {
+   "id": "G-LX-002-contradiction",
+   "kind": "text_absent",
+   "finding": "LX-002",
+   "files": [
+    "lessons/b01/c002.json"
+   ],
+   "text": "Vir et fēmina nōn in hortō sunt: vir in hortō est",
+   "expect": true,
+   "phase": "correction"
+  },
+  {
+   "id": "G-LX-003-diem",
+   "kind": "paradigm_form",
+   "finding": "LX-003",
+   "lexeme": {
+    "pos": "noun",
+    "head": "diēs",
+    "genitive": "diēī",
+    "declension": 5,
+    "gender": "m"
+   },
+   "morph": "n.acc.sg",
+   "expected": "diem",
+   "expect": true,
+   "phase": "correction",
+   "note": "A&G §96 Note: in the accusative singular e is always short."
+  },
+  {
+   "id": "G-LX-003-fixture",
+   "kind": "text_absent",
+   "finding": "LX-003",
+   "files": [
+    "tests/fixtures/paradigms/REGULAR_PATTERN_SAMPLES.json",
+    "docs/owner/PARADIGM_SAMPLES.md"
+   ],
+   "text": "diēm",
+   "expect": true,
+   "phase": "correction"
+  },
+  {
+   "id": "G-LX-004-rei",
+   "kind": "paradigm_form",
+   "finding": "LX-004",
+   "lexeme": {
+    "pos": "noun",
+    "head": "rēs",
+    "genitive": "reī",
+    "declension": 5,
+    "gender": "f"
+   },
+   "morph": "n.gen.sg",
+   "expected": "reī",
+   "expect": true,
+   "phase": "correction",
+   "note": "A&G §96 Note: ē shortened in gen./dat. sg. of fidēs, spēs, rēs."
+  },
+  {
+   "id": "G-LX-004-rem",
+   "kind": "paradigm_form",
+   "finding": "LX-004",
+   "lexeme": {
+    "pos": "noun",
+    "head": "rēs",
+    "genitive": "reī",
+    "declension": 5,
+    "gender": "f"
+   },
+   "morph": "n.acc.sg",
+   "expected": "rem",
+   "expect": true,
+   "phase": "correction"
+  },
+  {
+   "id": "G-LX-005-urbe",
+   "kind": "paradigm_form",
+   "finding": "LX-005",
+   "lexeme": {
+    "pos": "noun",
+    "head": "urbs",
+    "genitive": "urbis",
+    "declension": 3,
+    "gender": "f",
+    "i_stem": true
+   },
+   "morph": "n.abl.sg",
+   "expected": "urbe",
+   "expect": true,
+   "phase": "correction",
+   "note": "A&G §76: in most i-stem nouns the ablative -ī is changed to -e."
+  },
+  {
+   "id": "G-LX-006-pie",
+   "kind": "paradigm_form",
+   "finding": "LX-006",
+   "lexeme": {
+    "pos": "adj",
+    "head": "pius",
+    "feminine": "pia",
+    "neuter": "pium",
+    "pattern": "adj-12"
+   },
+   "morph": "adj.voc.sg",
+   "expected": "pie",
+   "expect": true,
+   "phase": "correction",
+   "note": "A&G §49.c: adjectives in -ius form the vocative in -ie."
+  },
+  {
+   "id": "G-LX-007-Rēlege",
+   "kind": "text_absent",
+   "finding": "LX-007",
+   "files": [
+    "app/legacy-runtime.js"
+   ],
+   "text": "Rēlege",
+   "expect": true,
+   "phase": "correction"
+  },
+  {
+   "id": "G-LX-008-Rectē",
+   "kind": "text_absent",
+   "finding": "LX-008",
+   "files": [
+    "app/legacy-runtime.js",
+    "app/65-picture-practice.js"
+   ],
+   "text": "Rectē",
+   "expect": true,
+   "phase": "correction"
+  },
+  {
+   "id": "G-LX-009-Lectiō",
+   "kind": "text_absent",
+   "finding": "LX-009",
+   "files": [
+    "app/legacy-runtime.js",
+    "index.html"
+   ],
+   "text": "Lectiō",
+   "expect": true,
+   "phase": "correction"
+  },
+  {
+   "id": "G-LX-010-Progressus",
+   "kind": "text_absent",
+   "finding": "LX-010",
+   "files": [
+    "app/legacy-runtime.js",
+    "index.html"
+   ],
+   "text": "Progressus",
+   "expect": true,
+   "phase": "correction"
+  },
+  {
+   "id": "G-LX-011-Elige_verbum",
+   "kind": "text_absent",
+   "finding": "LX-011",
+   "files": [
+    "app/legacy-runtime.js"
+   ],
+   "text": "Elige verbum",
+   "expect": true,
+   "phase": "correction"
+  },
+  {
+   "id": "G-LX-011-Verbum_electum",
+   "kind": "text_absent",
+   "finding": "LX-011",
+   "files": [
+    "app/legacy-runtime.js"
+   ],
+   "text": "Verbum electum",
+   "expect": true,
+   "phase": "correction"
+  },
+  {
+   "id": "G-LX-012-Musica_ex",
+   "kind": "text_absent",
+   "finding": "LX-012",
+   "files": [
+    "app/legacy-runtime.js"
+   ],
+   "text": "Musica ex",
+   "expect": true,
+   "phase": "correction"
+  },
+  {
+   "id": "G-LX-013-Prima_Via",
+   "kind": "text_absent",
+   "finding": "LX-013",
+   "files": [
+    "index.html"
+   ],
+   "text": "Prima Via",
+   "expect": true,
+   "phase": "correction"
+  },
+  {
+   "id": "G-LX-013-Discere_legendo",
+   "kind": "text_absent",
+   "finding": "LX-013",
+   "files": [
+    "index.html"
+   ],
+   "text": "Discere legendo<",
+   "expect": true,
+   "phase": "correction"
+  },
+  {
+   "id": "G-LX-014-Intellege_et_responde",
+   "kind": "text_absent",
+   "finding": "LX-014",
+   "files": [
+    "app/legacy-runtime.js"
+   ],
+   "text": "Intellege et responde<",
+   "expect": true,
+   "phase": "correction"
+  },
+  {
+   "id": "G-LX-016-fīlius_Gāiī",
+   "kind": "text_absent",
+   "finding": "LX-016",
+   "files": [
+    "lessons/b01/c007.json",
+    "docs/pilot/CLAUDE_PILOT_B01_C001_C008.md"
+   ],
+   "text": "fīlius Gāiī",
+   "expect": true,
+   "phase": "correction"
+  },
+  {
+   "id": "G-LX-018-legacy-ch02-q002",
+   "kind": "grade_accepts",
+   "finding": "LX-018",
+   "question": "legacy-ch02-q002",
+   "response": "Tītus Līviae frāter est",
+   "expect": true,
+   "phase": "correction",
+   "note": "Grammatical, story-consistent answer currently rejected (proposed addition to accept list; needs owner approval)."
+  },
+  {
+   "id": "G-LX-018-legacy-ch03-q003",
+   "kind": "grade_accepts",
+   "finding": "LX-018",
+   "question": "legacy-ch03-q003",
+   "response": "legit librum",
+   "expect": true,
+   "phase": "correction",
+   "note": "Grammatical, story-consistent answer currently rejected (proposed addition to accept list; needs owner approval)."
+  },
+  {
+   "id": "G-LX-018-legacy-ch04-q003",
+   "kind": "grade_accepts",
+   "finding": "LX-018",
+   "question": "legacy-ch04-q003",
+   "response": "Māter aquam portat.",
+   "expect": true,
+   "phase": "correction",
+   "note": "Grammatical, story-consistent answer currently rejected (proposed addition to accept list; needs owner approval)."
+  },
+  {
+   "id": "G-LX-018-legacy-ch07-q003",
+   "kind": "grade_accepts",
+   "finding": "LX-018",
+   "question": "legacy-ch07-q003",
+   "response": "Sōl hodiē lūcet.",
+   "expect": true,
+   "phase": "correction",
+   "note": "Grammatical, story-consistent answer currently rejected (proposed addition to accept list; needs owner approval)."
+  },
+  {
+   "id": "G-LX-018-legacy-ch08-q003",
+   "kind": "grade_accepts",
+   "finding": "LX-018",
+   "question": "legacy-ch08-q003",
+   "response": "Rosās Līvia portābit.",
+   "expect": true,
+   "phase": "correction",
+   "note": "Grammatical, story-consistent answer currently rejected (proposed addition to accept list; needs owner approval)."
+  },
+  {
+   "id": "G-LX-017-legacy-ch05",
+   "kind": "cloze_accepts",
+   "finding": "LX-017",
+   "lesson": "legacy-ch05",
+   "response": "habet",
+   "expect": true,
+   "phase": "correction",
+   "note": "Story-consistent and grammatical completion currently rejected (owner may instead tighten the clue)."
+  },
+  {
+   "id": "G-LX-017-legacy-ch06",
+   "kind": "cloze_accepts",
+   "finding": "LX-017",
+   "lesson": "legacy-ch06",
+   "response": "est",
+   "expect": true,
+   "phase": "correction",
+   "note": "Story-consistent and grammatical completion currently rejected (owner may instead tighten the clue)."
+  },
+  {
+   "id": "G-LX-019-pic",
+   "kind": "picture_answer_includes",
+   "finding": "LX-019",
+   "exercise": "b01-c007-q008",
+   "region": "Līvia",
+   "expect": true,
+   "phase": "correction"
+  }
+ ]
+}
