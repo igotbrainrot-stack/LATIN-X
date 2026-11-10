@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 "use strict";
 /* Runs docs/latin-audit/LATIN_GOLD_TESTS.json against the working tree. Read-only.
- * Exit 1 only if a "preserve" test fails. "correction" tests are reported as
- * pending until the owner approves and applies the matching audit finding. */
+ * Exit 1 if a "preserve" test fails. "correction" tests are reported as pending
+ * until the owner approves and applies the matching audit finding; with --strict
+ * (used by npm test once all approved corrections are applied) they must pass too. */
 const fs=require("fs"),path=require("path");
 const root=path.resolve(__dirname,"..");
 const gold=JSON.parse(fs.readFileSync(path.join(root,"docs/latin-audit/LATIN_GOLD_TESTS.json"),"utf8"));
@@ -37,4 +38,5 @@ console.log("Preserve: "+res.preserve.pass+" pass, "+res.preserve.fail.length+" 
 res.preserve.fail.forEach(x=>console.log("  FAIL "+x));
 console.log("Correction (awaiting approved fixes): "+res.correction.pass+" pass, "+res.correction.fail.length+" pending");
 res.correction.fail.forEach(x=>console.log("  PENDING "+x));
-process.exit(res.preserve.fail.length?1:0);
+const strict=process.argv.includes("--strict");
+process.exit(res.preserve.fail.length||(strict&&res.correction.fail.length)?1:0);
