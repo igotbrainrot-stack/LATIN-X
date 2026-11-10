@@ -211,7 +211,7 @@
         },
         {
           "id": "b01-c005-s004",
-          "text_la": "Hortus vīllae magnus et pulcher est.",
+          "text_la": "Hortus vīllae māgnus et pulcher est.",
           "source_line": 359,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -232,7 +232,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "magnus",
+              "t": "māgnus",
               "start": 14,
               "end": 20,
               "lx": null,
@@ -267,7 +267,7 @@
         },
         {
           "id": "b01-c005-s005",
-          "text_la": "In hortō est arbor magna; ibi est quoque arbor parva.",
+          "text_la": "In hortō est arbor māgna; ibi est quoque arbor parva.",
           "source_line": 360,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -304,7 +304,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "magna",
+              "t": "māgna",
               "start": 19,
               "end": 24,
               "lx": null,
@@ -507,7 +507,7 @@
         },
         {
           "id": "b01-c005-s008",
-          "text_la": "Cuius est arbor magna? Arbor magna est Titī.",
+          "text_la": "Cuius est arbor māgna? Arbor māgna est Titī.",
           "source_line": 363,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -536,7 +536,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "magna",
+              "t": "māgna",
               "start": 16,
               "end": 21,
               "lx": null,
@@ -552,7 +552,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "magna",
+              "t": "māgna",
               "start": 29,
               "end": 34,
               "lx": null,
@@ -579,7 +579,7 @@
         },
         {
           "id": "b01-c005-s009",
-          "text_la": "Titus in arbore magnā nōn est; Titus in vīllā est.",
+          "text_la": "Titus in arbore māgnā nōn est; Titus in vīllā est.",
           "source_line": 364,
           "annotation_status": "draft_unverified",
           "tokens": [
@@ -608,7 +608,7 @@
               "annotation_status": "draft_unverified"
             },
             {
-              "t": "magnā",
+              "t": "māgnā",
               "start": 16,
               "end": 21,
               "lx": null,
