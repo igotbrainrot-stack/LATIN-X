@@ -11,7 +11,7 @@ const nounRules={
  "noun-2-n":{sg:[null,"ī","ō",null,"ō",null],pl:["a","ōrum","īs","a","īs","a"]},
  "noun-3":{sg:[null,"is","ī","em","e",null],pl:["ēs","um","ibus","ēs","ibus","ēs"]},
  "noun-3-n":{sg:[null,"is","ī",null,"e",null],pl:["a","um","ibus","a","ibus","a"]},
- "noun-3-i":{sg:[null,"is","ī","em","ī",null],pl:["ēs","ium","ibus","ēs","ibus","ēs"]},
+ "noun-3-i":{sg:[null,"is","ī","em","e",null],pl:["ēs","ium","ibus","ēs","ibus","ēs"]},
  "noun-3-i-n":{sg:[null,"is","ī",null,"ī",null],pl:["ia","ium","ibus","ia","ibus","ia"]},
  "noun-4":{sg:[null,"ūs","uī","um","ū",null],pl:["ūs","uum","ibus","ūs","ibus","ūs"]},
  "noun-4-n":{sg:[null,"ūs","ū",null,"ū",null],pl:["ua","uum","ibus","ua","ibus","ua"]},
@@ -32,12 +32,27 @@ function generateNounForms(x){
  const head=String(x.head||x.nominative||"").normalize("NFC"),gen=String(x.genitive||"").normalize("NFC");
  const end=p==="noun-1"?"ae":p.startsWith("noun-2")?"ī":p.startsWith("noun-3")?"is":p.startsWith("noun-4")?"ūs":"ī";
  const stem=cut(gen,end,"genitive");if(x.stem)assert.equal(x.stem,stem);
- if(p==="noun-5"&&!stem.endsWith("ē"))throw Error("5th-declension quantity requires explicit long-vowel stem");
+ if(p==="noun-5"&&!stem.endsWith("ē")&&!stem.endsWith("e"))throw Error("5th-declension stem must end in e or ē");
  const result=[];
  for(const num of numbers)for(let i=0;i<cases.length;i++){
-  const cas=cases[i],ending=rule[num][i];let surface=ending===null?head:stem+ending;
-  if(num==="sg"&&cas==="voc"&&p==="noun-2-m")surface=head.endsWith("ius")?head.slice(0,-3)+"ī":head.endsWith("us")?head.slice(0,-2)+"e":head;
+  const cas=cases[i],ending=rule[num][i];
+  // The genitive identifies short-vowel forms (rēī is not interchangeable
+  // with reī); fifth-declension long ē returns in the plural and ablative.
+  const endingStem=p==="noun-5"&&stem.endsWith("e")&&(num==="pl"||cas==="abl")?stem.slice(0,-1)+"ē":stem;
+  let surface=ending===null?head:endingStem+ending;
+  if(p==="noun-5"&&num==="sg"&&cas==="acc"&&stem.endsWith("ē"))
+   surface=stem.slice(0,-1)+"e"+"m";
+  if(p==="noun-3-i"&&num==="sg"&&cas==="abl"&&x.abl_i===true)
+   surface=stem+"ī";
+  if(num==="sg"&&cas==="voc"&&p==="noun-2-m")
+   surface=head.endsWith("ius")
+    ?head.slice(0,-3)+(x.adjective===true?"ie":"ī")
+    :head.endsWith("us")?head.slice(0,-2)+"e":head;
   result.push(form(surface,"n."+cas+"."+num,{number:num,case:cas,pattern:p}));
+  // Optional documented ablative variant for suitable nouns only; the
+  // default is -e. Never change the neuter or adjective i-stem endings.
+  if(p==="noun-3-i"&&num==="sg"&&cas==="abl"&&x.abl_both===true)
+   result.push(form(stem+(x.abl_i===true?"e":"ī"),"n.abl.sg",{number:num,case:cas,pattern:p}));
  }
  return result;
 }
@@ -46,13 +61,13 @@ function generateAdjectiveForms(x){
  let variants;
  if(p==="adj-12"){
   const m=x.head,f=x.feminine,n=x.neuter;assert(m&&f&&n,"First/second adjective needs three nominatives");
-  variants=[{head:m,genitive:x.genitive_m||m.replace(/us$/,"ī"),pattern:"noun-2-m",gender:"m"},
+  variants=[{head:m,genitive:x.genitive_m||m.replace(/us$/,"ī"),pattern:"noun-2-m",gender:"m",adjective:true},
    {head:f,genitive:x.genitive_f||f.replace(/a$/,"ae"),pattern:"noun-1",gender:"f"},
    {head:n,genitive:x.genitive_n||n.replace(/um$/,"ī"),pattern:"noun-2-n",gender:"n"}];
  }else if(["adj-3-one","adj-3-two","adj-3-three"].includes(p)){
   assert(x.genitive,"Third-declension adjective requires genitive");
-  variants=[{head:x.head,genitive:x.genitive,pattern:"noun-3-i",gender:"m"},
-   {head:x.feminine||x.head,genitive:x.genitive,pattern:"noun-3-i",gender:"f"},
+  variants=[{head:x.head,genitive:x.genitive,pattern:"noun-3-i",gender:"m",abl_i:true},
+   {head:x.feminine||x.head,genitive:x.genitive,pattern:"noun-3-i",gender:"f",abl_i:true},
    {head:x.neuter||x.head,genitive:x.genitive,pattern:"noun-3-i-n",gender:"n"}];
  }else throw Error("Unsupported adjective pattern "+p);
  return variants.flatMap(v=>generateNounForms(v).map(y=>({...y,morph:y.morph.replace(/^n\./,"adj."),gender:v.gender,pattern:p})));
