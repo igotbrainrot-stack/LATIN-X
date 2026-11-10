@@ -26,10 +26,14 @@ Content status: the eight legacy chapters are the playable course. The eight Boo
 
 ## Offline owner-media releases (November 2026)
 
-This branch directly integrates the Arjun catalogue, Roman MP3 player, cloth-paper CSS texture and first-run welcome into source, without startup-time downloads or modifications. The 78 owner media files are **not committed**: unpack the owner's private audio bundle into the source tree before building. The release builder enforces `docs/audio/ARJUN_OFFLINE_MEDIA_CHECKSUMS_20261110.json` (75 narration files, including one Miriam *laeta* word fallback, and 3 Roman music MP3s); it fails if a file is absent or mismatched. Use `npm test`, `npm run test:narration`, `npm run test:browser-all`, then `npm run build:release` from a complete checkout. The learner ZIP/tar.gz runs offline on first launch with no Python bootstrap. Chapter II–VIII recordings are new and not yet owner-approved. No copyrighted source textbook is included.
+The repository integrates the Arjun catalogue, Roman MP3 player, cloth-paper CSS texture and first-run welcome into source, without startup-time downloads or modifications. The 78 owner media files are **not committed**: unpack the owner's private audio bundle into the source tree before building. The release builder enforces `docs/audio/ARJUN_OFFLINE_MEDIA_CHECKSUMS_20261110.json` (75 narration files, including one Miriam *laeta* word fallback, and 3 Roman music MP3s); it fails if a file is absent or mismatched. From a complete checkout, run `npm test`, `LATIN_X_REQUIRE_PRIVATE_AUDIO=1 npm run test:narration`, `npm run test:browser-all`, `npm run test:release`, then `npm run build:release`. The release builder requires all 78 local private files. The learner ZIP/tar.gz runs offline on first launch with no Python bootstrap. Chapter II–VIII recordings are new and not yet owner-approved. No copyrighted source textbook is included.
+
+**Distribution warning:** The older `LATIN_X_LATEST_MAIN_5b1ca7d_LINUX_MINT_20261110.zip` contains a first-launch source downloader, not the complete offline app. For a genuine offline release, use the output of `scripts/build-release.cjs` with the 78 manifest-pinned MP3s. The source is never changed on launch. Move folders only after exporting a Progressus backup because browser `file://` storage may be path-scoped.
 
 ## Documentation
 
+- [AUDIT_REPORT.md](AUDIT_REPORT.md), [VERIFICATION_REPORT.md](VERIFICATION_REPORT.md), [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md), [LATIN_CONTENT_REVIEW.md](LATIN_CONTENT_REVIEW.md) — current audit and protection reports.
+- [docs/history/ARCHIVE_CANDIDATES_20261110.md](docs/history/ARCHIVE_CANDIDATES_20261110.md) — conservative historical-document archive map.
 - [HANDOVER.md](HANDOVER.md) — architecture, build, tests, constraints, open issues (start here as a developer or AI agent).
 - [docs/REFINEMENT_REPORT_20261108.md](docs/REFINEMENT_REPORT_20261108.md) — the November 2026 polish and audit pass.
 - [docs/FEATURE_INVENTORY.md](docs/FEATURE_INVENTORY.md) — every feature with its regression coverage.
