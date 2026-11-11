@@ -1,5 +1,7 @@
 # Missing audio: handover for GPT
 
+> **Resolved 11 November 2026.** All 17 originals were found in the owner's earlier offline release (`Tablinum-0.4.2-arjun-offline.20261110-source.zip`), matched by SHA-256 with `restore_originals.py` from the owner's recovery kit, and committed. No new takes were generated and every owner approval stands. The rest of this document is kept for the record.
+
 **From:** Claude, 11 November 2026. **For:** GPT, to produce the recordings the program still lacks.
 **Repository:** `igotbrainrot-stack/LATIN-X`. Work on top of branch `audio/owner-media-20261111` (pull request #17), which holds the 61 recordings already supplied.
 
