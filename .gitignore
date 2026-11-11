@@ -5,8 +5,8 @@
 /audio-audition/MIRIAM_IPA_V2_LOCAL_SHA256.json
 /docs/audio/owner-original-review-2026-11-07.json
 
-# Approved narration: local install record. The MP3s ship in the owner ZIP; keep them out of public Git.
-audio/narration/**/*.mp3
+# Narration MP3s were published by the owner's decision on 11 November 2026, so they are no
+# longer ignored. The local install record stays out of Git.
 audio/narration/**/LOCAL_INSTALL_RECORD.json
 **/PRIVATE_AUDIO_LINKS.json
 
@@ -18,5 +18,4 @@ node_modules/
 # Owner-private Runway signed links (temporary tokens): never commit.
 /audio-audition/PRIVATE_*.json
 
-# Owner-supplied original Roman reading music stays out of the public repository.
-/assets/audio/roman/*.mp3
+# Roman reading music MP3s were published by the owner's decision on 11 November 2026.
