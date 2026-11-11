@@ -128,8 +128,12 @@ const close=()=>new Promise(resolve=>server.close(resolve));
   assert.match(await page.locator(".lesson-next").innerText(),/Lesson complete/);
   assert(await page.locator(".ch").first().evaluate(el=>el.classList.contains("is-done")),"the chapter list marks the lesson complete");
 
-  // 7. Next chapter; its word check brings back words from chapter 1.
-  await page.locator(".lesson-next .btn").click();
+  // 7. Finishing the lesson opens the wreath; its button goes on to the next chapter,
+  //    whose word check brings back words from chapter 1.
+  assert.match(await page.locator("dialog.play-dialog[open] #playTitle").innerText(),/Lesson 1 complete/);
+  assert.equal(await page.locator("dialog.play-dialog .wreath-leaf").count(),20);
+  await page.locator("dialog.play-dialog [data-g=next]").click();
+  assert.equal(await page.locator("dialog.play-dialog[open]").count(),0);
   assert.match(await page.locator("#main h1").innerText(),/./);
   assert.equal(await page.locator(".ch.active").getAttribute("data-ch"),"1");
   assert.equal(await page.locator(".lesson-path li.is-done").count(),0);
