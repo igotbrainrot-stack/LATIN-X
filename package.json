@@ -60,6 +60,8 @@
     "test:play-browser": "node tests/play-browser.test.cjs",
     "test:browser-all": "node tests/browser-smoke.cjs && node tests/ui-modern-browser.test.cjs && node tests/program-review-browser.test.cjs && node tests/guided-lessons-browser.test.cjs && node tests/browser-voice-fallback-browser.test.cjs && node tests/play-browser.test.cjs && node tests/file-url-smoke.cjs && node tests/review-file-url.test.cjs && node tests/phase3b-browser.test.cjs && node tests/phase3c-browser.test.cjs && node tests/phase3c-review-browser.test.cjs && node tests/phase5-keyboard-browser.test.cjs && node tests/phase6-browser.test.cjs && node tests/phase7a-browser.test.cjs && node tests/phase7b-browser.test.cjs && node tests/phase8-art-browser.test.cjs && node tests/phase12-accessibility-browser.test.cjs && node tests/phase8-picture-practice-browser.test.cjs && node tests/phase12-axe-browser.test.cjs && node tests/legacy-main-art-browser.test.cjs && node tests/release-package.test.cjs",
     "test:release": "node tests/release-package.test.cjs",
+    "test:easy-install": "node tests/easy-install.test.cjs",
+    "build:setup": "node scripts/build-easy-install.cjs",
     "build:release": "node scripts/build-release.cjs",
     "checksums": "node scripts/write-checksums.cjs",
     "test:offline-media": "node tests/approved-narration.test.cjs && node tests/roman-playlist.test.cjs",
