@@ -857,17 +857,37 @@ function speak(){
  speakWithBrowser(line,id);
 }
 /* Click-to-play only: completing a sentence never advances or starts another. */
-function speakWithBrowser(line,id){
+/* The browser voice is a fallback for sentences with no recording in this copy.
+ * Most computers have no Latin voice, and some browsers then refuse a sentence marked as
+ * Latin; Chrome also drops an utterance queued straight after cancel(). So the first try
+ * waits a moment after the last cancel, and a failed try is repeated once with a stand-in
+ * voice (Italian, then Spanish, then the system default) before the learner is told. */
+let liveUtterance=null; // held so the browser cannot discard it before it ends
+function standInVoice(){
+ const list=typeof speechSynthesis==="undefined"?[]:speechSynthesis.getVoices();
+ for(const lang of ["it","es"]){const v=list.find(x=>(x.lang||"").toLowerCase().startsWith(lang));if(v)return v}
+ return list.find(x=>x.default)||null;
+}
+function speakWithBrowser(line,id,attempt=0){
  if(!("speechSynthesis" in window)){readingIndex=null;if(ambience)ambience.duck(!audio.paused);return updateBanner("Browser voice unavailable.")}
- const utterance=new SpeechSynthesisUtterance(line[0]),v=availableVoice();
- utterance.lang="la";utterance.rate=.82;
+ const latin=availableVoice(),v=attempt===0?latin:latin||standInVoice();
+ const utterance=new SpeechSynthesisUtterance(line[0]);
+ utterance.lang=v&&!(v.lang||"").toLowerCase().startsWith("la")?v.lang:"la";utterance.rate=.82;
  if(v)utterance.voice=v;
- spokenVoice=v?v.name:"system default (not Latin-verified)";
+ spokenVoice=v?v.name+(latin?"":" (stand-in, not a Latin voice)"):"system default (not Latin-verified)";
  if(ambience)ambience.duck(true);
  updateDock();
- utterance.onend=()=>{if(id!==speechRequest)return;readingIndex=null;if(ambience)ambience.duck(!audio.paused)};
- utterance.onerror=()=>{if(id===speechRequest){if(ambience)ambience.duck(!audio.paused);updateBanner("Browser voice could not read this sentence.")}};
- readingIndex=S.sel;speechSynthesis.speak(utterance);
+ utterance.onend=()=>{if(id!==speechRequest)return;liveUtterance=null;readingIndex=null;if(ambience)ambience.duck(!audio.paused);updateDock()};
+ utterance.onerror=event=>{
+  if(id!==speechRequest)return;
+  const code=String(event&&event.error||"");
+  if(attempt===0&&code!=="not-allowed")return speakWithBrowser(line,id,1);
+  liveUtterance=null;readingIndex=null;if(ambience)ambience.duck(!audio.paused);updateDock();
+  updateBanner(code==="not-allowed"?"The browser blocked its voice. Click the sentence again to hear it.":
+   "The browser voice could not read this sentence"+(code?" ("+code+")":"")+". This computer may have no voice installed for reading aloud.");
+ };
+ readingIndex=S.sel;liveUtterance=utterance;
+ setTimeout(()=>{if(id===speechRequest&&liveUtterance===utterance)speechSynthesis.speak(utterance)},attempt?250:60);
 }
 function play(){
  if(!current().sent.length)return updateBanner("No readable sentences in this chapter. Restore the missing content file.");
