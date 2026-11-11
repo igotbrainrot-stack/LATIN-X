@@ -100,6 +100,7 @@ let S=normalizeState(stateApi.legacyView(v5State,legacyIdMap));
 /* Guided lessons: answers to word checks. Kept beside the v5 fields, so it is saved,
  * exported and restored with them. */
 const WC=globalThis.TablinumWordChecks;
+const games=globalThis.TablinumPlay; // side games and flourishes; optional
 let learning=WC?WC.normalise(v5State.learning):null;
 function save(){
  if(globalThis.Tablinum.errors.length){
@@ -334,6 +335,7 @@ function tabs(){
  $("chapters").innerHTML='<div class="mini" style="margin:5px 9px 14px">Liber prīmus</div>'+L.map((c,i)=>'<button class="ch '+(S.ch===i&&!activeCourse?"active":"")+(chapterDone(c,i)>=1?" is-done":"")+'" data-ch="'+i+'" aria-current="'+(S.ch===i&&!activeCourse?"true":"false")+'"><strong>'+(i+1)+'</strong><span><strong>'+esc(c.name)+'</strong><small>'+esc(c.sub)+'</small></span><i class="ch-progress" aria-hidden="true" style="--p:'+chapterDone(c,i).toFixed(3)+'"></i>'+(chapterDone(c,i)>=1?'<span class="sr-only"> (lesson complete)</span>':"")+'</button>').join("")+(S.custom?'<button class="ch '+(S.ch==="custom"&&!activeCourse?"active":"")+'" data-ch="custom">✧ Textus meus</button>':"")+
  [...globalThis.Tablinum.catalogue.values()].filter(entry=>!entry.legacy).map(entry=>
  '<button class="ch '+(activeCourse&&activeCourse.id===entry.id?"active":"")+'" data-course="'+esc(entry.id)+'"><strong>'+esc(String(entry.chapter||"•"))+'</strong><span><strong>'+esc(entry.title)+'</strong><small>Original course · approved</small></span></button>').join("");
+ mountPlay();
  updateDock();
 }
 function updateDock(){
@@ -399,6 +401,7 @@ function formNote(word){
 function help(){
  const w=Object.prototype.hasOwnProperty.call(dict,norm(chosenWord))?dict[norm(chosenWord)]:undefined;
  $("help").innerHTML='<div class="mini">Dux discendī</div><h3>Learn through context</h3><p class="subtle" style="font-size:12px">Read Latin first, then choose how much guidance you need.</p><div class="mini" style="margin-top:18px">Verbum ēlēctum</div><div class="panel">'+(chosenWord?'<h3 lang="la">'+esc(spell(chosenWord))+'</h3>'+(w?'<p>'+esc(w.meaning)+'</p><small>Headword: <span lang="la">'+esc(spell(w.head))+'</span></small>'+formNote(chosenWord)+'<div class="tools">'+saveButton(w,"btn primary","Save vocabulary")+wordButton()+'</div>':'<small>This word is not in the starter glossary.</small>'+(wordButton()?'<div class="tools">'+wordButton()+'</div>':"")):'<small>Click a Latin word to look it up.</small>')+'</div><div class="tools"><button class="btn" data-action="macrons">'+(S.macrons?"Āā Macrons":"Aa No macrons")+'</button><button class="btn" data-action="guide">'+(S.guided?"Guidance on":"Guidance off")+'</button></div>'+(S.guided?'<details><summary>Explain the grammar</summary><p style="font-size:12px">'+esc(current().explain)+'</p></details>':"")+'<div class="mini" style="margin-top:19px">Notae meae</div><textarea class="field" id="notes" placeholder="Personal notes..." maxlength="5000">'+esc(S.notes[chapterKey()]||"")+'</textarea><small>Notes are stored locally when browser storage is available.</small>';
+ mountPlay();
 }
 function guidedHint(i,level){
  const c=current(),s=c.sent[i];if(!s||level<=0)return"";
@@ -445,10 +448,12 @@ function answer(index,value){
  const q=current().q[index];if(!q)return;
  const k=chapterKey()+":"+index;
  if(S.correct[k])return;
+ const was=lessonWas();
  S.answers[k]=String(value||"").slice(0,500);
  if(correctAnswer(q,value))S.correct[k]=true;else miss("q:"+k);
  if(ambience)ambience.sound(S.correct[k]?"correct":"wrong");
  fresh="q:"+k;save();render();updateBanner(S.correct[k]?"Rēctē! Correct.":"Not quite. Relege sententiam.");
+ flourish(!!S.correct[k]);lessonNow(was);
 }
 // Phase 5: only explicitly signed, compiled course exercises can be graded.
 // Legacy questions retain their exact previous IDs and the original UI.
@@ -547,6 +552,29 @@ function courseQuiz(){
  * answer the questions on the story, and take the chapter word check. The path bar
  * always names the next step. Only the eight chapters of Liber prīmus take part. */
 function lessonOn(){return !!WC&&!activeCourse&&S.ch!=="custom"}
+/* The games card sits under the chapter list on a wide window and under the word panel on a
+ * narrow one. Both panels are rebuilt on every render, so the card is handed back each time. */
+function mountPlay(){
+ if(!games||!games.ready||!WC)return;
+ const wide=!!globalThis.matchMedia&&globalThis.matchMedia("(min-width: 721px)").matches;
+ games.mount($(wide?"chapters":"help"),{chapters:L,upto:typeof S.ch==="number"?S.ch:L.length-1,formNotes,spell});
+}
+/* The page answers an action: a light along the top edge, and leaves for a right answer. */
+function flourish(ok){
+ if(!games||!games.ready)return;
+ games.edge(ok?"good":"bad");
+ if(ok)games.burst(document.querySelector('#main [data-fresh="good"] .option.is-correct, #main [data-fresh="good"] .field'));
+}
+const lessonWas=()=>lessonOn()&&lessonSteps(S.ch).complete;
+function lessonNow(was){
+ if(was||!games||!games.ready||!lessonOn())return;
+ const p=lessonSteps(S.ch);if(!p.complete)return;
+ const i=S.ch,last=i>=L.length-1;
+ games.celebrate({number:i+1,name:spell(L[i].name),best:p.s.best,last,
+  known:WC.knowledge(learning,L,formNotes).filter(r=>r.status==="known").length,
+  onNext:last?null:()=>setChapter(i+1)});
+}
+const stepsSeen=new Map(); // chapter -> which steps were done at the last render
 function lessonSteps(i){
  const c=L[i],s=WC.summary(learning,L,i,formNotes);
  const qTotal=c.q.length+(guidedCloze[i]?1:0);
@@ -568,10 +596,11 @@ function lessonPath(where){
   questions:"Answer the questions on the story.",
   words:"Take the chapter word check to finish this lesson.",
   next:last?"Liber prīmus complete — review or revisit earlier lessons.":"Lesson complete. Go on to the next chapter."}[p.next];
+ const mark=[p.read,p.questions,p.words].map(Boolean),before=stepsSeen.get(i);stepsSeen.set(i,mark);
  const here=where==="read"&&p.next==="read";
  const label={read:"Continue reading",questions:"Go to the questions →",words:s.testStarted&&!s.testFinished?"Continue the word check →":"Start the word check →",next:"Next chapter →"}[p.next];
  return '<nav class="lesson-path" aria-label="Steps of this lesson"><ol>'+steps.map(([id,name,done,detail],n)=>
-  '<li class="'+(done?"is-done":"")+(p.next===id?" is-current":"")+'"><button data-path="'+id+'"'+(p.next===id?' aria-current="step"':"")+'><b aria-hidden="true">'+(done?"✓":n+1)+'</b><span><strong>'+name+'</strong><small>'+esc(detail)+'</small></span>'+(done?'<span class="sr-only"> (done)</span>':"")+'</button></li>').join("")+
+  '<li class="'+(done?"is-done":"")+(done&&before&&!before[n]?" just-done":"")+(p.next===id?" is-current":"")+'"><button data-path="'+id+'"'+(p.next===id?' aria-current="step"':"")+'><b aria-hidden="true">'+(done?"✓":n+1)+'</b><span><strong>'+name+'</strong><small>'+esc(detail)+'</small></span>'+(done?'<span class="sr-only"> (done)</span>':"")+'</button></li>').join("")+
   '</ol><p class="lesson-next"><span><strong>'+(p.next==="next"?"Done.":"Next step.")+'</strong> '+esc(advice)+'</span>'+(here||p.next==="next"&&last?"":'<button class="btn primary" data-path="'+p.next+'">'+label+'</button>')+'</p></nav>';
 }
 function markWord(text,surface){
@@ -607,11 +636,13 @@ function inlineWordChecks(after){
 }
 function wordCheckAnswer(head,value){
  if(!lessonOn())return;
+ const was=lessonWas();
  const result=WC.answerInline(learning,L,S.ch,head,value,formNotes);if(!result)return;
  if(ambience)ambience.sound(result.ok?"correct":"wrong");
  fresh="wc:"+head;save();render();
  const p=lessonSteps(S.ch);
  updateBanner(result.ok?(p.read?"Rēctē! Story read. Next: the questions.":"Rēctē! Read on."):"Not this time. The word will come back later.");
+ flourish(result.ok);lessonNow(was);
 }
 /* The chapter word check, at the end of Exercitia. */
 function wordTest(){
@@ -641,11 +672,13 @@ function startWordTest(){
 }
 function wordTestAnswer(key,value){
  if(!lessonOn())return;
+ const was=lessonWas();
  const result=WC.answerTest(learning,L,S.ch,key,value,formNotes);if(!result)return;
  if(ambience)ambience.sound(result.ok?"correct":"wrong");
  fresh="wt:"+key;save();render();
  const s=WC.summary(learning,L,S.ch,formNotes);
  updateBanner(s.testFinished?s.testRight+" of "+s.testTotal+" correct.":result.ok?"Rēctē!":"Not this time.");
+ flourish(result.ok);lessonNow(was);
 }
 function showElement(id){const el=typeof id==="string"?$(id):id;if(el&&typeof el.scrollIntoView==="function")el.scrollIntoView({block:"start"})}
 function goPath(step){
@@ -703,9 +736,11 @@ function quiz(c=current()){if(activeCourse)return courseQuiz();let h='<div class
 function clozeCheck(){
  if(S.ch==="custom")return;const item=guidedCloze[S.ch],value=String($("clozeInput")?.value||"").slice(0,300);
  const k=chapterKey();if(S.clozeCorrect[k])return;
+ const was=lessonWas();
  S.clozeAnswers[k]=value;if(item.answers.some(v=>norm(v)===norm(value)))S.clozeCorrect[k]=true;else miss("c:"+k);
  if(ambience)ambience.sound(S.clozeCorrect[k]?"correct":"wrong");
  fresh="c:"+k;save();render();updateBanner(S.clozeCorrect[k]?"Rēctē! Correct cloze.":"Try again with the story as a clue.");
+ flourish(!!S.clozeCorrect[k]);lessonNow(was);
 }
 function dueEntries(){return Object.entries(S.vocab).filter(([,v])=>v&&v.due<=Date.now())}
 function highlightReviewSentence(card){
