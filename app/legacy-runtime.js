@@ -785,6 +785,16 @@ function syncAudioElement(){
  el.max=Number.isFinite(audio.duration)&&audio.duration>0?String(audio.duration):"0";
  el.value=String(Number.isFinite(audio.currentTime)?audio.currentTime:0);
 }
+/* A new section or chapter starts at its top. Without this the window kept its old scroll
+ * offset, so the new page appeared part-way down, or jumped when it was shorter. The page
+ * only ever moves up, to where the new view begins directly under the section tabs. */
+function settleView(main){
+ const bar=$("tabs");
+ if(!bar||typeof main.getBoundingClientRect!=="function"||typeof globalThis.scrollTo!=="function")return;
+ const stuck=globalThis.getComputedStyle?.(bar).position==="sticky"?bar.offsetHeight:0;
+ const top=Math.max(0,Math.round(main.getBoundingClientRect().top+globalThis.scrollY-stuck));
+ if(globalThis.scrollY>top)globalThis.scrollTo(0,top);
+}
 function render(){
  if(S.tab==="library")S.tab="read"; // Bibliothēca removed (Nov 2026); a saved library tab opens the reader
  const old=stableFocus(),chapter=current();tabs();help();
@@ -792,7 +802,7 @@ function render(){
  main.innerHTML=S.tab==="read"?reader(chapter):S.tab==="quiz"?quiz(chapter):S.tab==="review"?review():progress(L);
  if(main.dataset)main.dataset.fresh=fresh;
  const helpEl=$("help");if(helpEl&&helpEl.dataset)helpEl.dataset.fresh=fresh;
- if(view!==lastView)replay(main,"view-enter");
+ if(view!==lastView){replay(main,"view-enter");if(lastView)settleView(main)}
  lastView=view;fresh="";
  const dock=document.querySelector(".dock");if(dock)dock.hidden=S.tab!=="read";
  syncAudioElement();restoreFocus(old);updateBanner();
