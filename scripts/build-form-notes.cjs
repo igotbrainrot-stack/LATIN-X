@@ -1,0 +1,103 @@
+#!/usr/bin/env node
+"use strict";
+/* Builds content/form-notes.js: for each word form in the legacy glossary, the
+ * grammatical forms it could be (case and number, or person and tense).
+ *   node scripts/build-form-notes.cjs          write the file and the review sheet
+ *   node scripts/build-form-notes.cjs --check  fail if either is stale
+ * Inputs: the glossary forms in curriculum/lexicon/legacy-token-audit.json and the
+ * draft dictionary data in curriculum/lexicon/legacy-form-lexemes.json. Regular
+ * forms come from scripts/lib/paradigms.cjs. Every possible reading is listed;
+ * the script never picks one from context. The output is unreviewed draft data
+ * and the app labels it so. */
+const fs=require("node:fs"),path=require("node:path");
+const paradigms=require("./lib/paradigms.cjs");
+const root=path.resolve(__dirname,"..");
+const read=f=>JSON.parse(fs.readFileSync(path.join(root,f),"utf8"));
+const CASE={nom:"nominative",gen:"genitive",dat:"dative",acc:"accusative",abl:"ablative",voc:"vocative"};
+const NUM={sg:"singular",pl:"plural"},GEN={m:"masculine",f:"feminine",n:"neuter"};
+const TENSE={pres:"present",impf:"imperfect",fut:"future",perf:"perfect",plup:"pluperfect",futperf:"future perfect"};
+const PERSON={"1sg":"1st person singular","2sg":"2nd person singular","3sg":"3rd person singular","1pl":"1st person plural","2pl":"2nd person plural","3pl":"3rd person plural"};
+const key=s=>String(s).normalize("NFC").toLowerCase();
+const list=a=>a.length<2?a.join(""):a.slice(0,-1).join(", ")+" or "+a[a.length-1];
+
+function resolve(lexemes,head,seen=new Set()){
+ const x=lexemes[head];
+ if(!x)return null;
+ if(x.same_as){if(seen.has(head))throw Error("same_as loop at "+head);seen.add(head);return resolve(lexemes,x.same_as,seen);}
+ return {id:head,...x};
+}
+/* All regular forms of a lexeme, as {surface, label} rows. */
+function regular(x){
+ if(x.pos==="noun")return paradigms.generateNounForms(x).map(f=>({surface:f.surface,cas:f.case,label:CASE[f.case]+" "+NUM[f.number]}));
+ if(x.pos==="adj")return paradigms.generateAdjectiveForms(x).map(f=>({surface:f.surface,cas:f.case,group:CASE[f.case]+" "+NUM[f.number],gender:f.gender}));
+ if(x.pos==="verb"){
+  const pp=x.principal_parts.slice();const noSupine=pp.length<4;
+  if(noSupine)pp.push("xum"); // placeholder so the generator runs; supine-based forms are dropped below
+  return paradigms.generateVerbForms({...x,principal_parts:pp})
+   .filter(f=>!(noSupine&&/^v\.(supine|inf\.fut)/.test(f.morph)))
+   .map(f=>{
+    const m=f.morph.split(".");
+    if(m[1]==="ind")return {surface:f.surface,label:PERSON[m[4]]+", "+TENSE[m[2]]+(m[3]==="pass"?" passive":"")};
+    if(f.morph==="v.inf.pres.act")return {surface:f.surface,label:"infinitive"};
+    return null; // other infinitives, supine and gerund are not offered to beginners
+   }).filter(Boolean);
+ }
+ return [];
+}
+function readings(x,surface){
+ const want=key(surface);
+ if(x.pos==="invariable")return {invariable:x.kind,readings:[]};
+ if(x.pos==="irregular"){
+  const hit=Object.entries(x.forms).find(([f])=>key(f)===want);
+  return {readings:hit?hit[1].slice():[]};
+ }
+ const extra=Object.entries(x.extra||{}).filter(([f])=>key(f)===want).flatMap(([,v])=>v);
+ let rows=regular(x).filter(r=>key(r.surface)===want);
+ if(rows.some(r=>r.cas&&r.cas!=="voc"))rows=rows.filter(r=>r.cas!=="voc"); // the vocative is listed only where it has its own form
+ let out;
+ if(x.pos==="adj"){
+  const groups=new Map();
+  for(const r of rows){if(!groups.has(r.group))groups.set(r.group,[]);if(!groups.get(r.group).includes(r.gender))groups.get(r.group).push(r.gender);}
+  out=[...groups].map(([g,gs])=>g+" "+(gs.length===3?"(any gender)":list(gs.map(z=>GEN[z]))));
+ }else out=[...new Set(rows.map(r=>r.label))];
+ return {readings:[...out,...extra]};
+}
+
+function build(){
+ const audit=read("curriculum/lexicon/legacy-token-audit.json");
+ const data=read("curriculum/lexicon/legacy-form-lexemes.json");
+ const forms={},rows=[],missing=[];
+ for(const g of audit.glossary_candidates){
+  const x=resolve(data.lexemes,g.headword_as_in_app);
+  if(!x){missing.push(g.headword_as_in_app);continue;}
+  for(const surface of new Set([g.headword_as_in_app,...g.documented_forms])){
+   const k=key(surface);if(forms[k])continue;
+   const r=readings(x,surface);
+   const lemma=x.pos==="irregular"?x.lemma:x.pos==="verb"?x.principal_parts.slice(0,2).join(", "):x.pos==="noun"?x.head+", "+x.genitive:x.pos==="adj"?[x.head,x.feminine,x.neuter].filter(Boolean).join(", "):x.id;
+   if(!r.invariable&&!r.readings.length){missing.push(surface+" (no reading from "+x.id+")");continue;}
+   forms[k]=r.invariable?{inv:r.invariable}:{of:lemma,is:r.readings};
+   rows.push([surface,lemma,r.invariable?"does not change ("+r.invariable+")":r.readings.join("; ")]);
+  }
+ }
+ if(missing.length)throw Error("No form data for: "+missing.join(", "));
+ const sorted=Object.fromEntries(Object.keys(forms).sort().map(k=>[k,forms[k]]));
+ const js="/* Generated by scripts/build-form-notes.cjs. Do not edit.\n * Draft data, not reviewed by a Latinist: possible grammatical forms of each glossary word. */\n"+
+  "globalThis.TablinumFormNotes="+JSON.stringify({schema:"tablinum-form-notes-v1",status:data.status,forms:sorted})+";\n";
+ const csvCell=s=>/[",\n]/.test(s)?'"'+s.replace(/"/g,'""')+'"':s;
+ const csv=[["form","dictionary_entry","possible_forms","reviewer_verdict","reviewer_note"],
+  ...rows.sort((a,b)=>key(a[0])<key(b[0])?-1:key(a[0])>key(b[0])?1:0).map(r=>[...r,"",""])].map(r=>r.map(csvCell).join(",")).join("\n")+"\n";
+ return {js,csv,count:rows.length};
+}
+const OUT_JS="content/form-notes.js",OUT_CSV="curriculum/lexicon/review-sheets/legacy-form-notes.csv";
+if(require.main===module){
+ const {js,csv,count}=build();
+ if(process.argv.includes("--check")){
+  for(const [f,text] of [[OUT_JS,js],[OUT_CSV,csv]])
+   if(!fs.existsSync(path.join(root,f))||fs.readFileSync(path.join(root,f),"utf8")!==text){console.error("STALE: "+f+" (run node scripts/build-form-notes.cjs)");process.exit(1);}
+  console.log("PASS form notes current: "+count+" forms");
+ }else{
+  fs.writeFileSync(path.join(root,OUT_JS),js);fs.writeFileSync(path.join(root,OUT_CSV),csv);
+  console.log("Wrote "+count+" forms to "+OUT_JS+" and "+OUT_CSV);
+ }
+}
+module.exports={build,key};

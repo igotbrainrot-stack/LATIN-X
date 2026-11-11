@@ -181,9 +181,22 @@ function timed(){
  const m=media();return !!m&&m.ranges.length===current().sent.length&&m.ranges.length>0;
 }
 function mode(){return !media()?"voice":timed()?"timed":"untimed"}
+/* `fresh` names the thing that has just changed (an answered question, a revealed card, a new
+ * view), so the stylesheet can animate it once instead of on every re-render. */
+let fresh="",lastView="",transientText="";
+/* Restart a one-shot CSS animation class on an element. */
+function replay(el,cls,on=true){
+ if(!el||!el.classList||typeof el.classList.remove!=="function")return;
+ el.classList.remove(cls);void el.offsetWidth;if(on)el.classList.add(cls);
+}
 function updateBanner(msg){
- if(msg)warning=msg;
- const el=$("appStatus");if(el)el.textContent=warning||"";
+ if(msg){warning=msg;transientText=msg}
+ const el=$("appStatus");if(!el)return;
+ const text=warning||"";
+ if(el.textContent!==text||msg){
+  el.textContent=text;
+  replay(el,"is-new",!!text);
+ }
 }
 function clearVoice(){
  if(ambience)ambience.duck(!audio.paused);
@@ -254,6 +267,7 @@ function setCourseChapter(id){
 }
 function switchTab(id){
  if(!tabsList.includes(id))return;
+ if(warning&&warning===transientText)warning=""; // a passing message does not follow the learner to another section
  clearVoice();S.tab=id;save();render();
 }
 function stableFocus(){
@@ -297,16 +311,19 @@ function renderWords(t){
  return words.map(w=>{
   if(!/^[\p{L}\p{M}]/u.test(w))return esc(w);
   const tabbable=first;first=false;
-  return '<button class="word" lang="la" tabindex="'+(tabbable?0:-1)+'" data-word="'+esc(w)+'" data-word-index="'+(wordIndex++)+'" aria-label="Look up '+esc(w)+'">'+esc(w)+'</button>';
+  return '<button class="word'+(chosenWord&&norm(w)===norm(chosenWord)?" is-chosen":"")+'" lang="la" tabindex="'+(tabbable?0:-1)+'" data-word="'+esc(w)+'" data-word-index="'+(wordIndex++)+'" aria-label="Look up '+esc(w)+'">'+esc(w)+'</button>';
  }).join("");
 }
 function correctAnswer(q,response){
  return globalThis.TablinumExercises.gradeLegacy(q,response);
 }
 function tabs(){
- const list=[["read","Lēctiō"],["quiz","Exercitia"],["review","Memoria"],["progress","Prōgressus"]];
- $("tabs").innerHTML=list.map(([id,n])=>'<button class="'+(S.tab===id?"active":"")+'" data-tab="'+id+'" aria-current="'+(S.tab===id?"page":"false")+'">'+n+"</button>").join("");
- $("chapters").innerHTML='<div class="mini" style="margin:5px 9px 14px">Liber prīmus</div>'+L.map((c,i)=>'<button class="ch '+(S.ch===i&&!activeCourse?"active":"")+'" data-ch="'+i+'" aria-current="'+(S.ch===i&&!activeCourse?"true":"false")+'"><strong>'+(i+1)+'</strong><span><strong>'+esc(c.name)+'</strong><small>'+esc(c.sub)+'</small></span></button>').join("")+(S.custom?'<button class="ch '+(S.ch==="custom"&&!activeCourse?"active":"")+'" data-ch="custom">✧ Textus meus</button>':"")+
+ const list=[["read","Lēctiō","Read"],["quiz","Exercitia","Practise"],["review","Memoria","Review"],["progress","Prōgressus","Progress"]];
+ $("tabs").innerHTML=list.map(([id,n,en])=>'<button class="'+(S.tab===id?"active":"")+'" data-tab="'+id+'" aria-current="'+(S.tab===id?"page":"false")+'"><span lang="la">'+n+'</span><small>'+en+"</small></button>").join("");
+ const layout=document.querySelector(".layout");if(layout&&layout.dataset)layout.dataset.tab=S.tab;
+ /* Share of a chapter's questions answered correctly, for the progress mark in the chapter list. */
+ const chapterDone=(c,i)=>c.q&&c.q.length?c.q.filter((q,j)=>S.correct[i+":"+j]).length/c.q.length:0;
+ $("chapters").innerHTML='<div class="mini" style="margin:5px 9px 14px">Liber prīmus</div>'+L.map((c,i)=>'<button class="ch '+(S.ch===i&&!activeCourse?"active":"")+(chapterDone(c,i)>=1?" is-done":"")+'" data-ch="'+i+'" aria-current="'+(S.ch===i&&!activeCourse?"true":"false")+'"><strong>'+(i+1)+'</strong><span><strong>'+esc(c.name)+'</strong><small>'+esc(c.sub)+'</small></span><i class="ch-progress" aria-hidden="true" style="--p:'+chapterDone(c,i).toFixed(3)+'"></i>'+(chapterDone(c,i)>=1?'<span class="sr-only"> (exercises complete)</span>':"")+'</button>').join("")+(S.custom?'<button class="ch '+(S.ch==="custom"&&!activeCourse?"active":"")+'" data-ch="custom">✧ Textus meus</button>':"")+
  [...globalThis.Tablinum.catalogue.values()].filter(entry=>!entry.legacy).map(entry=>
  '<button class="ch '+(activeCourse&&activeCourse.id===entry.id?"active":"")+'" data-course="'+esc(entry.id)+'"><strong>'+esc(String(entry.chapter||"•"))+'</strong><span><strong>'+esc(entry.title)+'</strong><small>Original course · approved</small></span></button>').join("");
  updateDock();
@@ -359,9 +376,21 @@ function isSaved(entry){return Object.prototype.hasOwnProperty.call(S.vocab,norm
 function saveButton(entry,cls,label,extra=""){
  return isSaved(entry)?'<button class="'+cls+'" disabled'+extra+'>Saved ✓</button>':'<button class="'+cls+'" data-save="'+esc(norm(entry.head))+'"'+extra+'>'+label+'</button>';
 }
+/* Possible grammatical forms of a clicked word, from content/form-notes.js (draft data).
+ * With macrons hidden, forms that differ only by a macron (mēnsa, mēnsā) are listed together. */
+const formNotes=globalThis.TablinumFormNotes?.forms||{},formNotesPlain=Object.create(null);
+for(const [k,v]of Object.entries(formNotes))(formNotesPlain[norm(k)]??=[]).push(v);
+function formNote(word){
+ const exact=formNotes[String(word).normalize("NFC").toLowerCase()],all=exact?[exact]:(formNotesPlain[norm(word)]||[]);
+ if(!all.length)return "";
+ const draft=' <span class="subtle">Draft note, not yet reviewed.</span>';
+ if(all.every(x=>x.inv))return '<small class="form-note" style="display:block;margin-top:4px">This word does not change its form ('+esc(all[0].inv)+').</small>';
+ const is=[...new Set(all.flatMap(x=>x.is||[]))],of=all.find(x=>x.of).of;
+ return '<small class="form-note" style="display:block;margin-top:4px">Form of <span lang="la">'+esc(spell(of))+'</span>: '+(is.length===1?esc(is[0])+'.':'one of '+esc(is.join("; "))+'. The sentence shows which.')+draft+'</small>';
+}
 function help(){
  const w=Object.prototype.hasOwnProperty.call(dict,norm(chosenWord))?dict[norm(chosenWord)]:undefined;
- $("help").innerHTML='<div class="mini">Dux discendī</div><h3>Learn through context</h3><p class="subtle" style="font-size:12px">Read Latin first, then choose how much guidance you need.</p><div class="mini" style="margin-top:18px">Verbum ēlēctum</div><div class="panel">'+(chosenWord?'<h3 lang="la">'+esc(spell(chosenWord))+'</h3>'+(w?'<p>'+esc(w.meaning)+'</p><small>Headword: <span lang="la">'+esc(spell(w.head))+'</span></small><div class="tools">'+saveButton(w,"btn primary","Save vocabulary")+wordButton()+'</div>':'<small>This word is not in the starter glossary.</small>'+(wordButton()?'<div class="tools">'+wordButton()+'</div>':"")):'<small>Click a Latin word to look it up.</small>')+'</div><div class="tools"><button class="btn" data-action="macrons">'+(S.macrons?"Āā Macrons":"Aa No macrons")+'</button><button class="btn" data-action="guide">'+(S.guided?"Guidance on":"Guidance off")+'</button></div>'+(S.guided?'<details><summary>Explain the grammar</summary><p style="font-size:12px">'+esc(current().explain)+'</p></details>':"")+'<div class="mini" style="margin-top:19px">Notae meae</div><textarea class="field" id="notes" placeholder="Personal notes..." maxlength="5000">'+esc(S.notes[chapterKey()]||"")+'</textarea><small>Notes are stored locally when browser storage is available.</small>';
+ $("help").innerHTML='<div class="mini">Dux discendī</div><h3>Learn through context</h3><p class="subtle" style="font-size:12px">Read Latin first, then choose how much guidance you need.</p><div class="mini" style="margin-top:18px">Verbum ēlēctum</div><div class="panel">'+(chosenWord?'<h3 lang="la">'+esc(spell(chosenWord))+'</h3>'+(w?'<p>'+esc(w.meaning)+'</p><small>Headword: <span lang="la">'+esc(spell(w.head))+'</span></small>'+formNote(chosenWord)+'<div class="tools">'+saveButton(w,"btn primary","Save vocabulary")+wordButton()+'</div>':'<small>This word is not in the starter glossary.</small>'+(wordButton()?'<div class="tools">'+wordButton()+'</div>':"")):'<small>Click a Latin word to look it up.</small>')+'</div><div class="tools"><button class="btn" data-action="macrons">'+(S.macrons?"Āā Macrons":"Aa No macrons")+'</button><button class="btn" data-action="guide">'+(S.guided?"Guidance on":"Guidance off")+'</button></div>'+(S.guided?'<details><summary>Explain the grammar</summary><p style="font-size:12px">'+esc(current().explain)+'</p></details>':"")+'<div class="mini" style="margin-top:19px">Notae meae</div><textarea class="field" id="notes" placeholder="Personal notes..." maxlength="5000">'+esc(S.notes[chapterKey()]||"")+'</textarea><small>Notes are stored locally when browser storage is available.</small>';
 }
 function guidedHint(i,level){
  const c=current(),s=c.sent[i];if(!s||level<=0)return"";
@@ -400,7 +429,7 @@ let h='<div class="mini">Lēctiō '+esc(activeCourse?activeCourse.chapter:S.ch==
  if(activeCourse&&activeCourse.status==="approved"){
   h+='<div class="tools"><button class="btn" data-action="courseFinished">Mark approved chapter read · add reviewed lexemes</button></div>';
  }
-  h+='<div class="tools"><button class="btn" data-action="prevChapter"'+(S.ch===0?" disabled":"")+'>← '+(S.ch==="custom"?"First chapter":"Previous chapter")+'</button><button class="btn primary" data-tab="quiz">Check understanding →</button></div>';
+  h+='<div class="tools"><button class="btn" data-action="prevChapter"'+(S.ch===0?" disabled":"")+'>← '+(S.ch==="custom"?"First chapter":"Previous chapter")+'</button><button class="btn primary" data-tab="quiz">Check understanding →</button>'+(S.ch==="custom"?"":'<button class="btn" data-action="nextChapter"'+(S.ch>=L.length-1?" disabled":"")+'>Next chapter →</button>')+'</div>';
  return h;
 }
 function answer(index,value){
@@ -410,7 +439,7 @@ function answer(index,value){
  S.answers[k]=String(value||"").slice(0,500);
  if(correctAnswer(q,value))S.correct[k]=true;else miss("q:"+k);
  if(ambience)ambience.sound(S.correct[k]?"correct":"wrong");
- save();render();updateBanner(S.correct[k]?"Rēctē! Correct.":"Not quite. Relege sententiam.");
+ fresh="q:"+k;save();render();updateBanner(S.correct[k]?"Rēctē! Correct.":"Not quite. Relege sententiam.");
 }
 // Phase 5: only explicitly signed, compiled course exercises can be graded.
 // Legacy questions retain their exact previous IDs and the original UI.
@@ -508,7 +537,7 @@ function quiz(c=current()){if(activeCourse)return courseQuiz();let h='<div class
  if(!c.q.length)return h+'<div class="note">No reviewed automatic answer keys for this chapter. Automatic grading is disabled.</div>';
  c.q.forEach((q,i)=>{
   const k=chapterKey()+":"+i,correct=!!S.correct[k],value=S.answers[k]||"";
-  h+='<section class="quiz"><div class="mini">'+(q[1]?"Elige":"Scribe")+' · '+(i+1)+' / '+c.q.length+'</div><div class="question" lang="la">'+esc(spell(q[0]))+'</div>';
+  h+='<section class="quiz'+(correct?" is-complete":"")+'"'+(fresh==="q:"+k?' data-fresh="'+(correct?"good":"bad")+'"':"")+'><div class="mini">'+(q[1]?"Elige":"Scribe")+' · '+(i+1)+' / '+c.q.length+'</div><div class="question" lang="la">'+esc(spell(q[0]))+'</div>';
   if(q[1])h+=q[1].map(o=>'<button class="option '+(correct&&correctAnswer(q,o)?"is-correct":!correct&&o===value?"is-wrong":"")+'" data-choice="'+i+'" data-value="'+esc(o)+'" aria-pressed="'+(o===value?"true":"false")+'" '+(correct?"disabled":"")+' lang="la">'+esc(spell(o))+'</button>').join("");
   else h+='<div class="tools"><input class="field" id="answer-'+i+'" lang="la" aria-label="Latin answer" value="'+esc(value)+'" '+(correct?"disabled":"")+' placeholder="Respondē Latīnē…"><button class="btn primary" data-check="'+i+'" '+(correct?"disabled":"")+'>Check</button></div>';
   if(value||correct)h+='<div role="status" class="'+(correct?"good":"bad")+'">'+esc(correct?"Rēctē! "+q[3]:"Nōndum. Re-read the relevant sentence and try again.")+'</div>';
@@ -518,7 +547,7 @@ function quiz(c=current()){if(activeCourse)return courseQuiz();let h='<div class
  const i=Number(S.ch),item=guidedCloze[i],key=chapterKey();
  if(item){
   const complete=!!S.clozeCorrect[key],value=S.clozeAnswers[key]||"";
-  h+='<section class="quiz"><div class="mini">Verbum dēest · Guided completion</div><div class="question" lang="la">'+esc(spell(item.text))+'</div><div class="tools"><input class="field" lang="la" id="clozeInput" aria-label="Missing Latin word" value="'+esc(value)+'" '+(complete?"disabled":"")+'><button class="btn primary" data-action="clozeCheck" '+(complete?"disabled":"")+'>Check</button></div>';
+  h+='<section class="quiz'+(complete?" is-complete":"")+'"'+(fresh==="c:"+key?' data-fresh="'+(complete?"good":"bad")+'"':"")+'><div class="mini">Verbum dēest · Guided completion</div><div class="question" lang="la">'+esc(spell(item.text))+'</div><div class="tools"><input class="field" lang="la" id="clozeInput" aria-label="Missing Latin word" value="'+esc(value)+'" '+(complete?"disabled":"")+'><button class="btn primary" data-action="clozeCheck" '+(complete?"disabled":"")+'>Check</button></div>';
   if(complete||value)h+='<div role="status" class="'+(complete?"good":"bad")+'">'+esc(complete?"Rēctē! "+item.proof:"Nōndum. "+item.clue)+'</div>';
   if(!complete)h+=modelHelp("c:"+key,item.proof,"Complete sentence");
   h+='</section>';
@@ -530,7 +559,7 @@ function clozeCheck(){
  const k=chapterKey();if(S.clozeCorrect[k])return;
  S.clozeAnswers[k]=value;if(item.answers.some(v=>norm(v)===norm(value)))S.clozeCorrect[k]=true;else miss("c:"+k);
  if(ambience)ambience.sound(S.clozeCorrect[k]?"correct":"wrong");
- save();render();updateBanner(S.clozeCorrect[k]?"Rēctē! Correct cloze.":"Try again with the story as a clue.");
+ fresh="c:"+k;save();render();updateBanner(S.clozeCorrect[k]?"Rēctē! Correct cloze.":"Try again with the story as a clue.");
 }
 function dueEntries(){return Object.entries(S.vocab).filter(([,v])=>v&&v.due<=Date.now())}
 function highlightReviewSentence(card){
@@ -575,10 +604,10 @@ function review(){
  const entry=items.find(x=>x.group+"|"+x.key===reviewKey)||items[0];
  reviewKey=entry.group+"|"+entry.key;
  const item=entry.v;
- h+='<div class="panel" style="text-align:center;padding:25px"><div class="mini">'+(entry.group==="legacyCards"?"Verbum vetus · Not owner-reviewed":"Verbum recognitum · "+esc(item.direction))+'</div>';
+ h+='<div class="panel review-card" style="text-align:center;padding:25px"><div class="mini">'+(entry.group==="legacyCards"?"Verbum vetus · Not owner-reviewed":"Verbum recognitum · "+esc(item.direction))+'</div>';
  h+='<h1 lang="la">'+esc(spell(item.head||entry.key))+'</h1>';
  if(item.sourceText)h+='<p lang="la">'+highlightReviewSentence(item)+'</p>';
- h+=reviewReveal?'<h2>'+esc(item.meaning||"No gloss available")+'</h2><div class="tools" style="justify-content:center">'+RATINGS.map((x,i)=>'<button class="btn '+(x==="good"?"primary":"")+'" data-rating="'+x+'" aria-keyshortcuts="'+(i+1)+'">'+(i+1)+' · '+x[0].toUpperCase()+x.slice(1)+'</button>').join("")+'</div><small>Keys 1 to 4 rate the card.</small>':'<button class="btn primary" data-action="revealCard" aria-keyshortcuts="Space">Ostende significātiōnem · Reveal</button><br><small>Space or Enter reveals the meaning.</small>';
+ h+=reviewReveal?'<h2 class="review-meaning">'+esc(item.meaning||"No gloss available")+'</h2><div class="tools" style="justify-content:center">'+RATINGS.map((x,i)=>'<button class="btn '+(x==="good"?"primary":"")+'" data-rating="'+x+'" aria-keyshortcuts="'+(i+1)+'">'+(i+1)+' · '+x[0].toUpperCase()+x.slice(1)+'</button>').join("")+'</div><small>Keys 1 to 4 rate the card.</small>':'<button class="btn primary" data-action="revealCard" aria-keyshortcuts="Space">Ostende significātiōnem · Reveal</button><br><small>Space or Enter reveals the meaning.</small>';
  return h+'</div>'+savedWordsList();
 }
 function storageLabel(status){
@@ -613,7 +642,12 @@ function syncAudioElement(){
 function render(){
  if(S.tab==="library")S.tab="read"; // Bibliothēca removed (Nov 2026); a saved library tab opens the reader
  const old=stableFocus(),chapter=current();tabs();help();
- $("main").innerHTML=S.tab==="read"?reader(chapter):S.tab==="quiz"?quiz(chapter):S.tab==="review"?review():progress(L);
+ const main=$("main"),view=S.tab+"|"+(activeCourse?activeCourse.id:S.ch);
+ main.innerHTML=S.tab==="read"?reader(chapter):S.tab==="quiz"?quiz(chapter):S.tab==="review"?review():progress(L);
+ if(main.dataset)main.dataset.fresh=fresh;
+ const helpEl=$("help");if(helpEl&&helpEl.dataset)helpEl.dataset.fresh=fresh;
+ if(view!==lastView)replay(main,"view-enter");
+ lastView=view;fresh="";
  const dock=document.querySelector(".dock");if(dock)dock.hidden=S.tab!=="read";
  syncAudioElement();restoreFocus(old);updateBanner();
 }
@@ -778,7 +812,7 @@ document.addEventListener("click",e=>{
  if(b.dataset.tab){switchTab(b.dataset.tab);return}
  if(b.dataset.ch){setChapter(b.dataset.ch==="custom"?"custom":Number(b.dataset.ch));return}
  if(b.dataset.course){setCourseChapter(b.dataset.course);return}
- if(b.dataset.word){chosenWord=b.dataset.word;const container=b.closest("[data-sentence-container]");if(container&&Number(container.dataset.sentenceContainer)!==S.sel){clearVoice();if(!audio.paused)audio.pause();S.sel=Number(container.dataset.sentenceContainer)}save();render();return}
+ if(b.dataset.word){chosenWord=b.dataset.word;const container=b.closest("[data-sentence-container]");if(container&&Number(container.dataset.sentenceContainer)!==S.sel){clearVoice();if(!audio.paused)audio.pause();S.sel=Number(container.dataset.sentenceContainer)}fresh="word";save();render();return}
  if(b.dataset.sentence!==undefined){selectSentence(Number(b.dataset.sentence),true);return}
  if(b.dataset.guided!==undefined){if(!S.guided)return;
   if(activeCourse&&activeCourse.status==="approved"){
@@ -830,7 +864,8 @@ document.addEventListener("click",e=>{
  case"narrationTake":if(narration){const sid=currentSentenceId();narration.setAlternative(sid,!narration.usingAlternative(sid));clearVoice();updateDock();updateBanner("Alternative take selected. Click the sentence to listen.")}break;
  case"previous":selectSentence(S.sel-1);break;
  case"forward":selectSentence(S.sel+1);break;
- case"prevChapter":setChapter(S.ch==="custom"?0:Math.max(0,S.ch-1));break;
+ case"nextChapter":if(S.ch!=="custom")setChapter(Math.min(L.length-1,S.ch+1));break;
+  case"prevChapter":setChapter(S.ch==="custom"?0:Math.max(0,S.ch-1));break;
  case"nextChapter":setChapter(Math.min(L.length-1,Number(S.ch||0)+1));break;
  case"courseFinished":{
   if(!activeCourse||activeCourse.status!=="approved")break;
@@ -843,7 +878,7 @@ document.addEventListener("click",e=>{
   if(ambience)ambience.sound("complete");
   save();render();updateBanner("Lēctiō lēcta. "+added+" reviewed cards added.");break;
  }
-  case"revealCard":reviewReveal=true;render();break;
+  case"revealCard":reviewReveal=true;fresh="reveal";render();break;
  case"clozeCheck":clozeCheck();break;
  case"importText":{
   const t=String($("customText")?.value||"");if(!t.trim())return updateBanner("Paste some Latin text first.");
@@ -941,7 +976,7 @@ document.addEventListener("keydown",e=>{
   /* Space and Enter keep their normal job on a focused control, except on the Memoria tab itself,
    * where focus rests after the learner opens the tab. */
   const control=e.target.closest?.("button,a,summary"),free=!control||control.dataset?.tab==="review";
-  if(!reviewReveal&&free&&(e.key===" "||e.key==="Enter")&&document.querySelector("[data-action='revealCard']")){e.preventDefault();reviewReveal=true;render();return}
+  if(!reviewReveal&&free&&(e.key===" "||e.key==="Enter")&&document.querySelector("[data-action='revealCard']")){e.preventDefault();reviewReveal=true;fresh="reveal";render();return}
   if(reviewReveal&&/^[1-4]$/.test(e.key)&&document.querySelector("[data-rating]")){e.preventDefault();rating(RATINGS[Number(e.key)-1]);return}
  }
  if(e.key==="Enter"&&e.target.id?.startsWith("answer-")){e.preventDefault();answer(Number(e.target.id.slice(7)),e.target.value)}
