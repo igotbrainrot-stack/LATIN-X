@@ -97,6 +97,10 @@ if(!warning&&storageMode==="ready"){
  if(!Number.isFinite(last)||Date.now()-last>=days*86400000)warning="It is time to export a progress backup.";
 }
 let S=normalizeState(stateApi.legacyView(v5State,legacyIdMap));
+/* Guided lessons: answers to word checks. Kept beside the v5 fields, so it is saved,
+ * exported and restored with them. */
+const WC=globalThis.TablinumWordChecks;
+let learning=WC?WC.normalise(v5State.learning):null;
 function save(){
  if(globalThis.Tablinum.errors.length){
   warning="Chapter file missing. Stored progress has NOT been changed. Re-extract the complete ZIP.";
@@ -107,6 +111,7 @@ function save(){
   return false;
  }
  v5State=stateApi.updateFromLegacy(v5State,S,legacyIdMap,legacyVocabMap);
+ if(learning)v5State.learning=learning;
  if(activeCourse){
   v5State.ui.chapterId=activeCourse.id;
   v5State.ui.sel=activeCourse.id+"-s"+String(S.sel+1).padStart(3,"0");
@@ -322,8 +327,11 @@ function tabs(){
  $("tabs").innerHTML=list.map(([id,n,en])=>'<button class="'+(S.tab===id?"active":"")+'" data-tab="'+id+'" aria-current="'+(S.tab===id?"page":"false")+'"><span lang="la">'+n+'</span><small>'+en+"</small></button>").join("");
  const layout=document.querySelector(".layout");if(layout&&layout.dataset)layout.dataset.tab=S.tab;
  /* Share of a chapter's questions answered correctly, for the progress mark in the chapter list. */
- const chapterDone=(c,i)=>c.q&&c.q.length?c.q.filter((q,j)=>S.correct[i+":"+j]).length/c.q.length:0;
- $("chapters").innerHTML='<div class="mini" style="margin:5px 9px 14px">Liber prīmus</div>'+L.map((c,i)=>'<button class="ch '+(S.ch===i&&!activeCourse?"active":"")+(chapterDone(c,i)>=1?" is-done":"")+'" data-ch="'+i+'" aria-current="'+(S.ch===i&&!activeCourse?"true":"false")+'"><strong>'+(i+1)+'</strong><span><strong>'+esc(c.name)+'</strong><small>'+esc(c.sub)+'</small></span><i class="ch-progress" aria-hidden="true" style="--p:'+chapterDone(c,i).toFixed(3)+'"></i>'+(chapterDone(c,i)>=1?'<span class="sr-only"> (exercises complete)</span>':"")+'</button>').join("")+(S.custom?'<button class="ch '+(S.ch==="custom"&&!activeCourse?"active":"")+'" data-ch="custom">✧ Textus meus</button>':"")+
+ const chapterDone=(c,i)=>{
+  if(WC){const p=lessonSteps(i);return p.fraction}
+  return c.q&&c.q.length?c.q.filter((q,j)=>S.correct[i+":"+j]).length/c.q.length:0;
+ };
+ $("chapters").innerHTML='<div class="mini" style="margin:5px 9px 14px">Liber prīmus</div>'+L.map((c,i)=>'<button class="ch '+(S.ch===i&&!activeCourse?"active":"")+(chapterDone(c,i)>=1?" is-done":"")+'" data-ch="'+i+'" aria-current="'+(S.ch===i&&!activeCourse?"true":"false")+'"><strong>'+(i+1)+'</strong><span><strong>'+esc(c.name)+'</strong><small>'+esc(c.sub)+'</small></span><i class="ch-progress" aria-hidden="true" style="--p:'+chapterDone(c,i).toFixed(3)+'"></i>'+(chapterDone(c,i)>=1?'<span class="sr-only"> (lesson complete)</span>':"")+'</button>').join("")+(S.custom?'<button class="ch '+(S.ch==="custom"&&!activeCourse?"active":"")+'" data-ch="custom">✧ Textus meus</button>':"")+
  [...globalThis.Tablinum.catalogue.values()].filter(entry=>!entry.legacy).map(entry=>
  '<button class="ch '+(activeCourse&&activeCourse.id===entry.id?"active":"")+'" data-course="'+esc(entry.id)+'"><strong>'+esc(String(entry.chapter||"•"))+'</strong><span><strong>'+esc(entry.title)+'</strong><small>Original course · approved</small></span></button>').join("");
  updateDock();
@@ -415,7 +423,7 @@ function reader(c=current()){
  if(c.unavailable)return '<h1>Chapter unavailable</h1><div class="note" role="alert">'+esc(c.sub)+'</div><p>Restore the missing local content file from the full Tablinum ZIP; no progress has been erased.</p>';
 const fallbackScene=scene(c.scene);
  const picture=globalThis.TablinumArtScenes?.renderChapter(activeCourse?.id,fallbackScene)||fallbackScene;
-let h='<div class="mini">Lēctiō '+esc(activeCourse?activeCourse.chapter:S.ch==="custom"?"propria":S.ch+1)+'</div><h1>'+esc(c.name)+'</h1><div class="subtle">'+esc(c.sub)+'</div>'+picture;
+let h='<div class="mini">Lēctiō '+esc(activeCourse?activeCourse.chapter:S.ch==="custom"?"propria":S.ch+1)+'</div><h1>'+esc(c.name)+'</h1><div class="subtle">'+esc(c.sub)+'</div>'+lessonPath("read")+picture;
 
  h+='<div class="note">Read Latin first. Click a sentence to hear it; ask for clues when needed.</div><div class="tools"><button class="btn primary" '+(mode()==="voice"?"hidden ":"")+'data-action="play">'+(mode()==="voice"?"▶ Listen":mode()==="timed"?"▶ Play timed sentence":"▶ Play recording (untimed)")+'</button><button class="btn" data-tab="quiz">Exercises →</button></div>';
  c.sent.forEach(([latin,en],i)=>{
@@ -423,6 +431,7 @@ let h='<div class="mini">Lēctiō '+esc(activeCourse?activeCourse.chapter:S.ch==
   h+='<article class="sentence '+(selected?"selected":"")+'" data-sentence-container="'+i+'" aria-current="'+(selected?"true":"false")+'"><div class="mini">Sententia '+(i+1)+'</div><div class="words" lang="la" data-sentence="'+i+'">'+renderWords(latin)+'</div><div class="tools"><button class="link" data-sentence="'+i+'">▶ Listen to sentence</button><button class="btn" '+(S.guided?"":"hidden ")+'data-guided="'+i+'">'+(level===0?"Latin clue":level===1?"Word clues":level===2?"English meaning":"Hide hints")+' ('+level+'/3)</button></div>';
   if(S.guided&&level>0)h+='<div class="help"><strong>'+(level===1?"Previously in the story":level===2?"Important words":"Optional English")+'</strong><div>'+(level===1?'<span lang="la" class="hint-words">'+renderWords(guidedHint(i,level))+'</span>':esc(guidedHint(i,level)))+'</div></div>';
   if(selected)h+=inlineGloss();h+='</article>';
+  h+=inlineWordChecks(i);
  });
  h+='<div class="panel"><div class="mini">Vōx mea · Listen and compare</div><div class="tools"><button class="btn" data-action="recordSpeak">🎙 Record this sentence</button><button class="btn" data-action="stopSpeak">■ Stop recording</button><button class="btn" data-action="compareSpeak">▶ Compare my voice</button></div><small>No grading, speech transcription or fabricated pronunciation assessment. Microphone permission is optional.</small></div>';
  if(S.ch!=="custom")h+='<div class="panel"><div class="mini">Quam bene intellegis?</div><p class="subtle">Did you understand the story? Self-assessment, not a grade.</p><div class="tools">'+[["difficult","Need support"],["developing","Getting there"],["confident","Understood"]].map(([value,label])=>'<button class="btn '+(S.readingConfidence[chapterKey()]===value?"primary":"")+'" data-confidence="'+value+'">'+label+'</button>').join("")+'</div></div>';
@@ -533,7 +542,143 @@ function courseQuiz(){
  }
  return html+'<div class="tools"><button class="btn" data-tab="read">Read the chapter again</button></div>';
 }
-function quiz(c=current()){if(activeCourse)return courseQuiz();let h='<div class="mini">Intellege et respondē</div><h1>Exercitia</h1><p class="subtle">Use the story as evidence. Short answers accept the expected word or the full model sentence.</p>';
+/* ---- Guided lessons ---------------------------------------------------------------
+ * A lesson has three steps: read the story (with a word check every few sentences),
+ * answer the questions on the story, and take the chapter word check. The path bar
+ * always names the next step. Only the eight chapters of Liber prīmus take part. */
+function lessonOn(){return !!WC&&!activeCourse&&S.ch!=="custom"}
+function lessonSteps(i){
+ const c=L[i],s=WC.summary(learning,L,i,formNotes);
+ const qTotal=c.q.length+(guidedCloze[i]?1:0);
+ const qDone=c.q.filter((q,j)=>S.correct[i+":"+j]).length+(guidedCloze[i]&&S.clozeCorrect[String(i)]?1:0);
+ const read=s.inlineTotal===0||s.inlineDone>=s.inlineTotal,questions=qDone>=qTotal,words=s.testPassed||s.testTotal===0&&s.testStarted;
+ const fraction=((s.inlineTotal?s.inlineDone/s.inlineTotal:1)+(qTotal?qDone/qTotal:1)+(words?1:0))/3;
+ return {s,qDone,qTotal,read,questions,words,complete:read&&questions&&words,fraction,
+  next:!read?"read":!questions?"questions":!words?"words":"next"};
+}
+function lessonPath(where){
+ if(!lessonOn())return "";
+ const i=S.ch,p=lessonSteps(i),s=p.s,last=i>=L.length-1;
+ const steps=[
+  ["read","Read the story",p.read,s.inlineDone+" of "+s.inlineTotal+" word checks"],
+  ["questions","Answer the questions",p.questions,p.qDone+" of "+p.qTotal+" correct"],
+  ["words","Chapter word check",p.words,p.words?"Passed, best "+Math.round(s.best*100)+"%":s.testStarted?"Best so far "+Math.round(s.best*100)+"%":"Not started"]];
+ const advice={
+  read:where==="read"?"Read the story below. A short word check follows every few sentences.":"Go back to the story and finish its word checks.",
+  questions:"Answer the questions on the story.",
+  words:"Take the chapter word check to finish this lesson.",
+  next:last?"Liber prīmus complete — review or revisit earlier lessons.":"Lesson complete. Go on to the next chapter."}[p.next];
+ const here=where==="read"&&p.next==="read";
+ const label={read:"Continue reading",questions:"Go to the questions →",words:s.testStarted&&!s.testFinished?"Continue the word check →":"Start the word check →",next:"Next chapter →"}[p.next];
+ return '<nav class="lesson-path" aria-label="Steps of this lesson"><ol>'+steps.map(([id,name,done,detail],n)=>
+  '<li class="'+(done?"is-done":"")+(p.next===id?" is-current":"")+'"><button data-path="'+id+'"'+(p.next===id?' aria-current="step"':"")+'><b aria-hidden="true">'+(done?"✓":n+1)+'</b><span><strong>'+name+'</strong><small>'+esc(detail)+'</small></span>'+(done?'<span class="sr-only"> (done)</span>':"")+'</button></li>').join("")+
+  '</ol><p class="lesson-next"><span><strong>'+(p.next==="next"?"Done.":"Next step.")+'</strong> '+esc(advice)+'</span>'+(here||p.next==="next"&&last?"":'<button class="btn primary" data-path="'+p.next+'">'+label+'</button>')+'</p></nav>';
+}
+function markWord(text,surface){
+ let done=false;
+ return (spell(text).match(/[\p{L}\p{M}]+|[^\p{L}\p{M}]+/gu)||[]).map(w=>!done&&norm(w)===norm(surface)?(done=true,"<mark>"+esc(w)+"</mark>"):esc(w)).join("");
+}
+function wordQuestion(item){
+ if(item.kind==="latin")return 'Which Latin word means “'+esc(item.meaning)+'”?';
+ const same=norm(item.surface)===norm(item.head);
+ return (same?"":'<span lang="la"><strong>'+esc(spell(item.surface))+'</strong></span> is a form of <span lang="la">'+esc(spell(item.head))+'</span>. ')+'What does <strong lang="la">'+esc(spell(item.head))+'</strong> mean?';
+}
+function wordOptions(item,given,attr){
+ return item.options.map(o=>{
+  const cls=given?(o===item.answer?"is-correct":o===given.value?"is-wrong":""):"";
+  return '<button class="option '+cls+'" '+attr+' data-value="'+esc(o)+'" aria-pressed="'+(given&&o===given.value?"true":"false")+'" '+(given?"disabled":"")+(item.kind==="latin"?' lang="la"':"")+'>'+esc(item.kind==="latin"?spell(o):o)+'</button>';
+ }).join("");
+}
+function wordFeedback(item,given,later){
+ if(!given)return "";
+ const fact='<span lang="la">'+esc(spell(item.head))+'</span> means “'+esc(item.meaning)+'”.';
+ return '<div role="status" class="'+(given.ok?"good":"bad")+'">'+(given.ok?"Rēctē! ":"Nōndum. ")+fact+(given.ok?"":" "+later)+'</div>';
+}
+/* Word checks placed in the story after sentence `after`. */
+function inlineWordChecks(after){
+ if(!lessonOn())return "";
+ const i=S.ch,c=L[i],state=learning.chapters[WC.chapterId(i)]||{inline:{}};
+ return WC.inlineChecks(L,i,formNotes).filter(item=>item.after===after).map(item=>{
+  const given=state.inline[item.head];
+  return '<section class="quiz word-check'+(given?given.ok?" is-complete":" is-missed":"")+'"'+(fresh==="wc:"+item.head?' data-fresh="'+(given&&given.ok?"good":"bad")+'"':"")+' data-word-check="'+esc(item.head)+'"><div class="mini">Word check · from the story so far</div>'+
+   '<p class="wc-context" lang="la">'+markWord(c.sent[item.sentence][0],item.surface)+'</p><div class="question">'+wordQuestion(item)+'</div>'+
+   wordOptions(item,given,'data-wc="'+esc(item.head)+'"')+wordFeedback(item,given,"It will come back in the chapter word check.")+'</section>';
+ }).join("");
+}
+function wordCheckAnswer(head,value){
+ if(!lessonOn())return;
+ const result=WC.answerInline(learning,L,S.ch,head,value,formNotes);if(!result)return;
+ if(ambience)ambience.sound(result.ok?"correct":"wrong");
+ fresh="wc:"+head;save();render();
+ const p=lessonSteps(S.ch);
+ updateBanner(result.ok?(p.read?"Rēctē! Story read. Next: the questions.":"Rēctē! Read on."):"Not this time. The word will come back later.");
+}
+/* The chapter word check, at the end of Exercitia. */
+function wordTest(){
+ if(!lessonOn())return "";
+ const i=S.ch,s=WC.summary(learning,L,i,formNotes),state=learning.chapters[WC.chapterId(i)];
+ let h='<section class="panel word-test" id="wordTest"><div class="mini">Step 3 of the lesson</div><h2>Chapter word check</h2>';
+ if(!s.testStarted)return h+'<p>A short test on the words of this chapter, with a few from earlier chapters. Words you missed while reading are asked first. '+Math.round(WC.PASS*100)+'% completes the lesson, and you can try again as often as you like.</p><div class="tools"><button class="btn primary" data-action="startWordTest">Start the word check</button></div></section>';
+ const items=WC.testItems(learning,L,i,formNotes);
+ h+='<p class="subtle">Question '+Math.min(s.testAnswered+1,s.testTotal)+' of '+s.testTotal+' · attempt '+s.attempt+'. Each question takes one answer.</p>';
+ items.forEach((item,n)=>{
+  const given=state.test.answers[item.key];
+  h+='<section class="quiz word-check'+(given?given.ok?" is-complete":" is-missed":"")+'"'+(fresh==="wt:"+item.key?' data-fresh="'+(given&&given.ok?"good":"bad")+'"':"")+'><div class="mini">'+(n+1)+' / '+items.length+(item.chapter!==i?" · from chapter "+(item.chapter+1):"")+'</div><div class="question">'+wordQuestion({...item,surface:item.head})+'</div>'+
+   wordOptions(item,given,'data-wt="'+esc(item.key)+'"')+wordFeedback(item,given,"")+'</section>';
+ });
+ if(s.testFinished){
+  const need=Math.ceil(WC.PASS*s.testTotal-1e-9),passed=s.testRight>=need,missed=items.filter(item=>!state.test.answers[item.key].ok);
+  h+='<div class="word-result '+(passed?"good":"bad")+'" role="status" id="wordResult"><strong>'+s.testRight+' of '+s.testTotal+' correct.</strong> '+(passed?"This word check is passed.":"You need "+need+" to pass. Look at the words below, read the story again if it helps, then try a new set.")+'</div>';
+  if(missed.length)h+='<div class="help"><strong>Words to look at again</strong><ul class="word-list">'+missed.map(item=>'<li><span lang="la">'+esc(spell(item.head))+'</span> · '+esc(item.meaning)+'</li>').join("")+'</ul></div>';
+  h+='<div class="tools"><button class="btn'+(passed?"":" primary")+'" data-action="startWordTest">'+(passed?"Try another set":"Try again with a new set")+'</button></div>';
+ }
+ return h+'</section>';
+}
+function startWordTest(){
+ if(!lessonOn())return;
+ WC.startTest(learning,L,S.ch,formNotes);
+ S.tab="quiz";save();render();showElement("wordTest");
+}
+function wordTestAnswer(key,value){
+ if(!lessonOn())return;
+ const result=WC.answerTest(learning,L,S.ch,key,value,formNotes);if(!result)return;
+ if(ambience)ambience.sound(result.ok?"correct":"wrong");
+ fresh="wt:"+key;save();render();
+ const s=WC.summary(learning,L,S.ch,formNotes);
+ updateBanner(s.testFinished?s.testRight+" of "+s.testTotal+" correct.":result.ok?"Rēctē!":"Not this time.");
+}
+function showElement(id){const el=typeof id==="string"?$(id):id;if(el&&typeof el.scrollIntoView==="function")el.scrollIntoView({block:"start"})}
+function goPath(step){
+ if(!lessonOn())return;
+ if(step==="next"){if(S.ch<L.length-1)setChapter(S.ch+1);return}
+ if(step==="read"){
+  if(S.tab!=="read")switchTab("read");
+  const open=WC.inlineChecks(L,S.ch,formNotes).find(item=>!(learning.chapters[WC.chapterId(S.ch)]||{inline:{}}).inline[item.head]);
+  if(open)showElement(document.querySelector('[data-sentence-container="'+Math.max(0,open.after-2)+'"]'));
+  return;
+ }
+ if(S.tab!=="quiz")switchTab("quiz");
+ if(step==="words"){
+  const s=WC.summary(learning,L,S.ch,formNotes);
+  if(!s.testStarted||s.testFinished&&!s.testPassed)return startWordTest();
+  showElement("wordTest");
+ }
+}
+/* Prōgressus: where to carry on, and what the word checks have shown so far. */
+function continueLearning(){
+ if(!WC)return "";
+ const i=L.findIndex((c,n)=>!lessonSteps(n).complete);
+ if(i<0)return '<div class="panel continue"><h2>Continue learning</h2><p>All eight lessons are complete. Revisit any chapter from the course map.</p></div>';
+ const p=lessonSteps(i),what={read:"read the story",questions:"answer the questions on the story",words:"take the chapter word check"}[p.next];
+ return '<div class="panel continue"><h2>Continue learning</h2><p>Chapter '+(i+1)+', <span lang="la">'+esc(L[i].name)+'</span>: next, '+what+'.</p><div class="tools"><button class="btn primary" data-ch="'+i+'">Open chapter '+(i+1)+' →</button></div></div>';
+}
+function wordKnowledge(){
+ if(!WC)return "";
+ const rows=WC.knowledge(learning,L,formNotes),count=k=>rows.filter(r=>r.status===k).length,revisit=rows.filter(r=>r.status==="revisit");
+ return '<div class="panel word-knowledge"><h2>Word knowledge</h2><p class="subtle">From the word checks in the stories and at the end of each chapter. A word counts as known when your latest answer on it was right.</p><div class="stats"><div class="stat"><b>'+count("known")+'</b><small>Known</small></div><div class="stat"><b>'+count("revisit")+'</b><small>To revisit</small></div><div class="stat"><b>'+count("new")+'</b><small>Not yet tested</small></div></div>'+
+  (revisit.length?'<strong>Words to revisit</strong><ul class="word-list">'+revisit.map(r=>'<li><span lang="la">'+esc(spell(r.head))+'</span> · '+esc(r.meaning)+' <button class="link" data-ch="'+r.chapter+'">chapter '+(r.chapter+1)+'</button></li>').join("")+'</ul><small>They are asked again in the next chapter word check you take.</small>':"")+'</div>';
+}
+function quiz(c=current()){if(activeCourse)return courseQuiz();let h='<div class="mini">Intellege et respondē</div><h1>Exercitia</h1>'+lessonPath("quiz")+'<p class="subtle">Use the story as evidence. Short answers accept the expected word or the full model sentence.</p>';
  if(!c.q.length)return h+'<div class="note">No reviewed automatic answer keys for this chapter. Automatic grading is disabled.</div>';
  c.q.forEach((q,i)=>{
   const k=chapterKey()+":"+i,correct=!!S.correct[k],value=S.answers[k]||"";
@@ -552,6 +697,7 @@ function quiz(c=current()){if(activeCourse)return courseQuiz();let h='<div class
   if(!complete)h+=modelHelp("c:"+key,item.proof,"Complete sentence");
   h+='</section>';
  }
+ h+=wordTest();
  return h+'<div class="tools"><button class="btn" data-tab="read">Read again</button>'+(S.ch===L.length-1?'<span class="note">Liber prīmus complete — review or revisit earlier lessons.</span>':'<button class="btn primary" data-action="nextChapter">Next chapter →</button>')+'</div>';
 }
 function clozeCheck(){
@@ -617,12 +763,12 @@ function storageLabel(status){
   :"Recording storage: not available in this browser.";
 }
 function progress(chapters=L){
- const total=chapters.reduce((n,c)=>n+c.q.length,0),done=Object.values(S.correct).filter(Boolean).length,finished=chapters.filter((c,i)=>c.q.every((q,j)=>S.correct[i+":"+j])).length;
+ const total=chapters.reduce((n,c)=>n+c.q.length,0),done=Object.values(S.correct).filter(Boolean).length,finished=chapters.filter((c,i)=>WC&&chapters===L?lessonSteps(i).complete:c.q.every((q,j)=>S.correct[i+":"+j])).length;
  const lexemes=globalThis.TablinumCompiledContent?.lexicon?.lexemes||[];
  const completed=Object.keys(v5State.completedCourse||{}).filter(k=>v5State.completedCourse[k]===true);
  const reached=completed.reduce((n,k)=>Math.max(n,globalThis.Tablinum.catalogue.get(k)?.chapter||0),0);
  const indicators=globalThis.TablinumReviewDeck.metrics(v5State,lexemes,reached);
- let h='<div class="mini">Prōgressus</div><h1>Learning progress</h1><div class="stats"><div class="stat"><b>'+finished+'/'+chapters.length+'</b><small>Finished lessons</small></div><div class="stat"><b>'+done+'/'+total+'</b><small>Original questions</small></div><div class="stat"><b>'+Object.keys(S.vocab).length+'</b><small>Saved words</small></div></div><div class="panel"><h2>Guided progress</h2><p>'+Object.values(S.clozeCorrect).filter(Boolean).length+'/'+guidedCloze.length+' contextual cloze exercises</p><p>'+Object.keys(S.readingConfidence).length+'/'+chapters.length+' self-assessed lessons</p></div>'+(lexemes.some(l=>l.status==="approved")?'<h2>Verba discenda · Four separate measures</h2><div class="stats">'+
+ let h='<div class="mini">Prōgressus</div><h1>Learning progress</h1><div class="stats"><div class="stat"><b>'+finished+'/'+chapters.length+'</b><small>Finished lessons</small></div><div class="stat"><b>'+done+'/'+total+'</b><small>Original questions</small></div><div class="stat"><b>'+Object.keys(S.vocab).length+'</b><small>Saved words</small></div></div>'+(chapters===L?continueLearning()+wordKnowledge():"")+'<div class="panel"><h2>Guided progress</h2><p>'+Object.values(S.clozeCorrect).filter(Boolean).length+'/'+guidedCloze.length+' contextual cloze exercises</p><p>'+Object.keys(S.readingConfidence).length+'/'+chapters.length+' self-assessed lessons</p></div>'+(lexemes.some(l=>l.status==="approved")?'<h2>Verba discenda · Four separate measures</h2><div class="stats">'+
  '<div class="stat"><b>'+indicators.introduced+'</b><small>Introduced (approved)</small></div>'+
  '<div class="stat"><b>'+indicators.encountered+'</b><small>Encountered</small></div>'+
  '<div class="stat"><b>'+indicators.recognised+'</b><small>Recognised</small></div>'+
@@ -639,6 +785,16 @@ function syncAudioElement(){
  el.max=Number.isFinite(audio.duration)&&audio.duration>0?String(audio.duration):"0";
  el.value=String(Number.isFinite(audio.currentTime)?audio.currentTime:0);
 }
+/* A new section or chapter starts at its top. Without this the window kept its old scroll
+ * offset, so the new page appeared part-way down, or jumped when it was shorter. The page
+ * only ever moves up, to where the new view begins directly under the section tabs. */
+function settleView(main){
+ const bar=$("tabs");
+ if(!bar||typeof main.getBoundingClientRect!=="function"||typeof globalThis.scrollTo!=="function")return;
+ const stuck=globalThis.getComputedStyle?.(bar).position==="sticky"?bar.offsetHeight:0;
+ const top=Math.max(0,Math.round(main.getBoundingClientRect().top+globalThis.scrollY-stuck));
+ if(globalThis.scrollY>top)globalThis.scrollTo(0,top);
+}
 function render(){
  if(S.tab==="library")S.tab="read"; // Bibliothēca removed (Nov 2026); a saved library tab opens the reader
  const old=stableFocus(),chapter=current();tabs();help();
@@ -646,7 +802,7 @@ function render(){
  main.innerHTML=S.tab==="read"?reader(chapter):S.tab==="quiz"?quiz(chapter):S.tab==="review"?review():progress(L);
  if(main.dataset)main.dataset.fresh=fresh;
  const helpEl=$("help");if(helpEl&&helpEl.dataset)helpEl.dataset.fresh=fresh;
- if(view!==lastView)replay(main,"view-enter");
+ if(view!==lastView){replay(main,"view-enter");if(lastView)settleView(main)}
  lastView=view;fresh="";
  const dock=document.querySelector(".dock");if(dock)dock.hidden=S.tab!=="read";
  syncAudioElement();restoreFocus(old);updateBanner();
@@ -701,17 +857,37 @@ function speak(){
  speakWithBrowser(line,id);
 }
 /* Click-to-play only: completing a sentence never advances or starts another. */
-function speakWithBrowser(line,id){
+/* The browser voice is a fallback for sentences with no recording in this copy.
+ * Most computers have no Latin voice, and some browsers then refuse a sentence marked as
+ * Latin; Chrome also drops an utterance queued straight after cancel(). So the first try
+ * waits a moment after the last cancel, and a failed try is repeated once with a stand-in
+ * voice (Italian, then Spanish, then the system default) before the learner is told. */
+let liveUtterance=null; // held so the browser cannot discard it before it ends
+function standInVoice(){
+ const list=typeof speechSynthesis==="undefined"?[]:speechSynthesis.getVoices();
+ for(const lang of ["it","es"]){const v=list.find(x=>(x.lang||"").toLowerCase().startsWith(lang));if(v)return v}
+ return list.find(x=>x.default)||null;
+}
+function speakWithBrowser(line,id,attempt=0){
  if(!("speechSynthesis" in window)){readingIndex=null;if(ambience)ambience.duck(!audio.paused);return updateBanner("Browser voice unavailable.")}
- const utterance=new SpeechSynthesisUtterance(line[0]),v=availableVoice();
- utterance.lang="la";utterance.rate=.82;
+ const latin=availableVoice(),v=attempt===0?latin:latin||standInVoice();
+ const utterance=new SpeechSynthesisUtterance(line[0]);
+ utterance.lang=v&&!(v.lang||"").toLowerCase().startsWith("la")?v.lang:"la";utterance.rate=.82;
  if(v)utterance.voice=v;
- spokenVoice=v?v.name:"system default (not Latin-verified)";
+ spokenVoice=v?v.name+(latin?"":" (stand-in, not a Latin voice)"):"system default (not Latin-verified)";
  if(ambience)ambience.duck(true);
  updateDock();
- utterance.onend=()=>{if(id!==speechRequest)return;readingIndex=null;if(ambience)ambience.duck(!audio.paused)};
- utterance.onerror=()=>{if(id===speechRequest){if(ambience)ambience.duck(!audio.paused);updateBanner("Browser voice could not read this sentence.")}};
- readingIndex=S.sel;speechSynthesis.speak(utterance);
+ utterance.onend=()=>{if(id!==speechRequest)return;liveUtterance=null;readingIndex=null;if(ambience)ambience.duck(!audio.paused);updateDock()};
+ utterance.onerror=event=>{
+  if(id!==speechRequest)return;
+  const code=String(event&&event.error||"");
+  if(attempt===0&&code!=="not-allowed")return speakWithBrowser(line,id,1);
+  liveUtterance=null;readingIndex=null;if(ambience)ambience.duck(!audio.paused);updateDock();
+  updateBanner(code==="not-allowed"?"The browser blocked its voice. Click the sentence again to hear it.":
+   "The browser voice could not read this sentence"+(code?" ("+code+")":"")+". This computer may have no voice installed for reading aloud.");
+ };
+ readingIndex=S.sel;liveUtterance=utterance;
+ setTimeout(()=>{if(id===speechRequest&&liveUtterance===utterance)speechSynthesis.speak(utterance)},attempt?250:60);
 }
 function play(){
  if(!current().sent.length)return updateBanner("No readable sentences in this chapter. Restore the missing content file.");
@@ -766,6 +942,7 @@ function restoreBackup(content){
  if(globalThis.Tablinum.errors.length)throw Error("Restore is paused until missing chapter files are repaired.");
  clearVoice();stopAudio();activeCourse=null;courseRequest++;
  v5State=next;S=normalizeState(stateApi.legacyView(v5State,legacyIdMap));
+ if(WC)learning=WC.normalise(v5State.learning);
  storageMode="ready";
  const result=stateApi.persist(storage,v5State);
  v5State=result.state;
@@ -807,8 +984,11 @@ document.addEventListener("click",e=>{
  if(b.dataset.audioSfx!==undefined){if(ambience)ambience.set({sfx:!v5State.ui.audio.sfx});return}
  const scoring=b.dataset.exChoice!==undefined||b.dataset.exCheck!==undefined||
   b.dataset.choice!==undefined||b.dataset.check!==undefined||b.dataset.rating!==undefined||
-  b.dataset.action==="clozeCheck"||b.dataset.action==="courseFinished";
+  b.dataset.action==="clozeCheck"||b.dataset.action==="courseFinished"||b.dataset.wc!==undefined||b.dataset.wt!==undefined;
  if(ambience&&!scoring)ambience.sound("tick");
+ if(b.dataset.path){goPath(b.dataset.path);return}
+ if(b.dataset.wc!==undefined){wordCheckAnswer(b.dataset.wc,b.dataset.value);return}
+ if(b.dataset.wt!==undefined){wordTestAnswer(b.dataset.wt,b.dataset.value);return}
  if(b.dataset.tab){switchTab(b.dataset.tab);return}
  if(b.dataset.ch){setChapter(b.dataset.ch==="custom"?"custom":Number(b.dataset.ch));return}
  if(b.dataset.course){setCourseChapter(b.dataset.course);return}
@@ -951,7 +1131,8 @@ document.addEventListener("click",e=>{
   }
   break;
  }
- case"reset":if(confirm("Reset completed exercises, hints, confidence and saved vocabulary? Keep notes and text?")){S.correct={};S.answers={};S.vocab={};S.clozeAnswers={};S.clozeCorrect={};S.hintLevels={};S.readingConfidence={};save();render()}break;
+ case"startWordTest":startWordTest();break;
+ case"reset":if(confirm("Reset completed exercises, hints, confidence and saved vocabulary? Keep notes and text?")){S.correct={};S.answers={};S.vocab={};S.clozeAnswers={};S.clozeCorrect={};S.hintLevels={};S.readingConfidence={};if(WC)learning=WC.normalise({});save();render()}break;
  }
 });
 document.addEventListener("change",e=>{

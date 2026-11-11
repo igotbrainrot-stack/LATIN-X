@@ -12,6 +12,9 @@ assert.equal(axeVersion,"4.10.3","Pin axe-core in CI rather than taking latest s
  const root=path.resolve(__dirname,".."),failures=[];
  try{
   async function audit(label){
+   /* Audit the settled page: a view fades in over about half a second, and text measured
+      part-way through that fade reads as low contrast. */
+   await page.evaluate(()=>Promise.all(document.getAnimations().filter(a=>a.effect&&Number.isFinite(a.effect.getComputedTiming().endTime)).map(a=>a.finished.catch(()=>{}))));
    await page.addScriptTag({path:require.resolve("axe-core/axe.min.js")});
    const results=await page.evaluate(()=>window.axe.run(document,{reporter:"v2"}));
    const violations=results.violations.filter(v=>["serious","critical"].includes(v.impact));

@@ -86,6 +86,22 @@ const close=()=>new Promise(resolve=>server.close(resolve));
   assert(motion<=0.001,"reduced motion must switch animation off, found "+motion+"s");
 
   // Phone: nothing scrolls sideways on any section.
+  // A new section starts at its top: from part-way down a page, every other section opens
+  // with its heading directly under the tabs, and going back and forth does not move it.
+  // The clicks are sent at the pointer position, so the test tool does not scroll the page itself.
+  const press=async selector=>{const box=await page.evaluate(q=>{const r=document.querySelector(q).getBoundingClientRect();return [r.x+r.width/2,r.y+r.height/2]},selector);await page.mouse.click(box[0],box[1])};
+  const place=()=>page.evaluate(()=>({tabs:Math.round(document.querySelector("#tabs").getBoundingClientRect().bottom),main:Math.round(document.querySelector("#main").getBoundingClientRect().top)}));
+  await press("#tabs [data-tab='read']");
+  await page.evaluate(()=>scrollTo(0,900));
+  for(const tab of ["quiz","review","progress","read","quiz"]){
+   await press("#tabs [data-tab='"+tab+"']");
+   const at=await place();
+   assert.equal(at.main,at.tabs,tab+" must open at its top, directly under the tabs: "+JSON.stringify(at));
+  }
+  await page.evaluate(()=>scrollTo(0,0));
+  await press("#tabs [data-tab='review']");
+  assert.equal(await page.evaluate(()=>scrollY),0,"a section change at the top of the page does not scroll");
+  await press("#tabs [data-tab='read']");
   const phone=await browser.newPage({viewport:{width:360,height:740}});
   phone.on("pageerror",e=>errors.push(e.message));
   await phone.goto(root,{waitUntil:"load"});await enter(phone);
