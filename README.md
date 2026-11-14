@@ -1,5 +1,7 @@
 # Tablinum — Prima Via
 
+> **Latest setup build (14 November 2026):** The newest integrated work is on `release/easy-install-20261111` ([PR #19](https://github.com/igotbrainrot-stack/LATIN-X/pull/19)), **not yet merged to `main`**. Run `npm run build:setup` from that branch to produce `dist/Tablinum-Setup-20261111.zip`, with a Windows installer, Linux Mint installer and portable launcher. Read [setup instructions](docs/EASY_INSTALL.md) and [latest-build handover](docs/LATEST_BUILD_20261114.md). The generated ZIP is not stored in Git.
+
 An offline Latin reading course that runs in any modern browser straight from its folder (`file://`). No server, installation or Internet connection.
 
 ## Start
@@ -26,7 +28,7 @@ Content status: the eight legacy chapters are the playable course. The eight Boo
 
 ## Offline owner-media releases (November 2026)
 
-The repository integrates the Arjun catalogue, Roman MP3 player, cloth-paper CSS texture and first-run welcome into source, without startup-time downloads or modifications. The 78 owner media files are **not committed**: unpack the owner's private audio bundle into the source tree before building. The release builder enforces `docs/audio/ARJUN_OFFLINE_MEDIA_CHECKSUMS_20261110.json` (75 narration files, including one Miriam *laeta* word fallback, and 3 Roman music MP3s); it fails if a file is absent or mismatched. From a complete checkout, run `npm test`, `LATIN_X_REQUIRE_PRIVATE_AUDIO=1 npm run test:narration`, `npm run test:browser-all`, `npm run test:release`, then `npm run build:release`. The release builder requires all 78 local private files. The learner ZIP/tar.gz runs offline on first launch with no Python bootstrap. Chapter II–VIII recordings are new and not yet owner-approved. No copyrighted source textbook is included.
+The repository integrates the Arjun catalogue, Roman MP3 player, cloth-paper CSS texture and first-run welcome into source, without startup-time downloads or modifications. Since 11 November 2026, by the owner's decision, all 78 owner media files are committed: 75 narration files (including one Miriam *laeta* word fallback) and 3 Roman music MP3s. The release builder enforces `docs/audio/ARJUN_OFFLINE_MEDIA_CHECKSUMS_20261110.json` (75 narration files, including one Miriam *laeta* word fallback, and 3 Roman music MP3s); it fails if a file is absent or mismatched. From a complete checkout, run `npm test`, `LATIN_X_REQUIRE_PRIVATE_AUDIO=1 npm run test:narration`, `npm run test:browser-all`, `npm run test:release`, then `npm run build:release`. The release builder requires all 78 local private files. The learner ZIP/tar.gz runs offline on first launch with no Python bootstrap. Chapter II–VIII recordings are new and not yet owner-approved. No copyrighted source textbook is included.
 
 **Distribution warning:** The older `LATIN_X_LATEST_MAIN_5b1ca7d_LINUX_MINT_20261110.zip` contains a first-launch source downloader, not the complete offline app. For a genuine offline release, use the output of `scripts/build-release.cjs` with the 78 manifest-pinned MP3s. The source is never changed on launch. Move folders only after exporting a Progressus backup because browser `file://` storage may be path-scoped.
 

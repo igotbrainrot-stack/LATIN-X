@@ -189,7 +189,7 @@ function timed(){
 function mode(){return !media()?"voice":timed()?"timed":"untimed"}
 /* `fresh` names the thing that has just changed (an answered question, a revealed card, a new
  * view), so the stylesheet can animate it once instead of on every re-render. */
-let fresh="",lastView="",transientText="";
+let fresh="",lastView="",transientText="",pressed=null;
 /* Restart a one-shot CSS animation class on an element. */
 function replay(el,cls,on=true){
  if(!el||!el.classList||typeof el.classList.remove!=="function")return;
@@ -830,14 +830,35 @@ function settleView(main){
  const top=Math.max(0,Math.round(main.getBoundingClientRect().top+globalThis.scrollY-stuck));
  if(globalThis.scrollY>top)globalThis.scrollTo(0,top);
 }
+/* Answering re-renders the view. Keep the card that was pressed where it was on screen,
+ * even when something above it (the lesson steps, a result) changes height. */
+const PLACE="section,article,.panel,.quiz";
+function holdPlace(main){
+ const b=pressed;
+ if(!b||!b.isConnected||!main.contains?.(b)||typeof b.getBoundingClientRect!=="function")return null;
+ const box=b.closest(PLACE)||b;
+ return {data:{...b.dataset},top:box.getBoundingClientRect().top};
+}
+function keepPlace(main,anchor){
+ if(!anchor||typeof globalThis.scrollBy!=="function")return;
+ const keys=Object.keys(anchor.data);if(!keys.length)return;
+ const b=[...main.querySelectorAll("button")].find(x=>{const d=x.dataset;return Object.keys(d).length===keys.length&&keys.every(k=>d[k]===anchor.data[k])});
+ if(!b)return;
+ const shift=Math.round((b.closest(PLACE)||b).getBoundingClientRect().top-anchor.top);
+ if(shift)globalThis.scrollBy(0,shift);
+}
 function render(){
  if(S.tab==="library")S.tab="read"; // Bibliothēca removed (Nov 2026); a saved library tab opens the reader
  const old=stableFocus(),chapter=current();tabs();help();
  const main=$("main"),view=S.tab+"|"+(activeCourse?activeCourse.id:S.ch);
+ const anchor=view===lastView?holdPlace(main):null;pressed=null;
  main.innerHTML=S.tab==="read"?reader(chapter):S.tab==="quiz"?quiz(chapter):S.tab==="review"?review():progress(L);
  if(main.dataset)main.dataset.fresh=fresh;
  const helpEl=$("help");if(helpEl&&helpEl.dataset)helpEl.dataset.fresh=fresh;
+ // The entrance animation is for a new view only. Left on, it re-ran on every answer,
+ // so the whole page faded in and rose 10px each time a button was pressed.
  if(view!==lastView){replay(main,"view-enter");if(lastView)settleView(main)}
+ else{replay(main,"view-enter",false);keepPlace(main,anchor)}
  lastView=view;fresh="";
  const dock=document.querySelector(".dock");if(dock)dock.hidden=S.tab!=="read";
  syncAudioElement();restoreFocus(old);updateBanner();
@@ -1015,6 +1036,7 @@ document.addEventListener("keydown",event=>{
 });
 document.addEventListener("click",e=>{
  const b=e.target.closest("button");if(!b)return;
+ pressed=b;
  if(b.dataset.audioMusic!==undefined){if(ambience)ambience.set({music:!v5State.ui.audio.music});return}
  if(b.dataset.audioSfx!==undefined){if(ambience)ambience.set({sfx:!v5State.ui.audio.sfx});return}
  const scoring=b.dataset.exChoice!==undefined||b.dataset.exCheck!==undefined||
