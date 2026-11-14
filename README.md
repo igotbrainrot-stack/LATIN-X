@@ -1,5 +1,7 @@
 # Tablinum — Prima Via
 
+> **Latest setup build (14 November 2026):** The newest integrated work is on `release/easy-install-20261111` ([PR #19](https://github.com/igotbrainrot-stack/LATIN-X/pull/19)), **not yet merged to `main`**. Run `npm run build:setup` from that branch to produce `dist/Tablinum-Setup-20261111.zip`, with a Windows installer, Linux Mint installer and portable launcher. Read [setup instructions](docs/EASY_INSTALL.md) and [latest-build handover](docs/LATEST_BUILD_20261114.md). The generated ZIP is not stored in Git.
+
 An offline Latin reading course that runs in any modern browser straight from its folder (`file://`). No server, installation or Internet connection.
 
 ## Start
