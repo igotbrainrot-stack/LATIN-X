@@ -19,7 +19,9 @@ const headLinks=['<link rel="icon" href="assets/icons/tablinum.svg" type="image/
  '<link rel="icon" href="assets/icons/tablinum-48.png" sizes="48x48" type="image/png">',
  '<link rel="stylesheet" href="app/styles/tablinum-fonts.css">',
  '<link rel="stylesheet" href="app/styles/tablinum-polish.css">',
- '<link rel="stylesheet" href="app/welcome/welcome.css">'];
+ '<link rel="stylesheet" href="app/welcome/welcome.css">',
+ // Interface modernisation (Nov 2026): layout, surfaces and motion. Presentation only.
+ '<link rel="stylesheet" href="app/styles/tablinum-modern.css">'];
 for(const link of headLinks){const target=link.match(/href="([^"]+)"/)[1];assert(fs.existsSync(path.join(root,target)),"Missing linked presentation asset "+target)}
 // Preserve the exact legacy reading sources, but allow explicitly approved presentation additions.
 const paths=[...html.matchAll(/<script src="([^"]+)"\s*><\/script>/g)].map(m=>m[1]);

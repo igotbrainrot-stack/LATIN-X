@@ -54,3 +54,21 @@ The illustrations are the same authored SVG scenes with their original semantic 
 
 ## Workflow discipline
 This branch intentionally stacks **code history** on the approved/latest review version but does not open a stacked pull request or merge either branch. Review or download this branch directly. If the team decides to merge v0.4.2 first, the design diff can then be reviewed against that merged baseline.
+
+## Interface modernisation (11 November 2026)
+
+Added in `app/styles/tablinum-modern.css`, which loads last. The palette, typefaces and square 2px controls above are unchanged; `index.html` keeps its original stylesheet. Small hooks were added to `app/legacy-runtime.js` so animations run once.
+
+What changed for the learner:
+
+- The section tabs stay at the top of the window and carry an English label under the Latin (*Lēctiō* · Read).
+- The chapter list and the word panel follow the reader down the page, so a looked-up word is always in view. Memoria and Prōgressus use the full width.
+- The chapter list shows a numbered mark per chapter, filled when its exercises are complete, with a hairline for partial progress.
+- Sentences are separate surfaces; the one being read is raised, and the chosen word is highlighted wherever it occurs.
+- Multiple-choice options carry A, B, C marks that turn into a tick or cross. A completed question shows a tick.
+- Status messages appear as a small notice above the audio strip, then step aside after six seconds. The text stays in the live region. A passing message is cleared when the learner changes section.
+- The audio strip floats above the page with a blurred backing.
+
+Motion: hover and focus use short transitions. Entrance and feedback animations (a new view rising in, a correct answer's small pop, a wrong answer's shake, the Memoria answer turning over, progress bars filling) run once, tied to markers the runtime sets only when something is new: `#main.view-enter`, `[data-fresh]` and `.app-status.is-new`. Under `prefers-reduced-motion` all animation and transition time is zero and messages stay in place. `tests/ui-modern-browser.test.cjs` checks this.
+
+Not done: a dark theme. The original stylesheet hard-codes many light gradients, so it needs its own pass.

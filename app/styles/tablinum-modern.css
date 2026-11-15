@@ -1,0 +1,449 @@
+/* TABLINVM — interface modernisation layer (November 2026).
+ *
+ * Loads last. It keeps the manuscript palette, typefaces and square controls and
+ * changes how the page is laid out, how surfaces sit on the paper, and how the
+ * page responds: navigation that stays in reach, softer raised surfaces, clearer
+ * states, and short one-shot animations.
+ *
+ * Motion rules
+ *   - Hover and focus use transitions.
+ *   - Entrance and feedback animations run once. The runtime re-renders the page on
+ *     most clicks, so they are tied to markers it sets only when something is new:
+ *     #main.view-enter (a new tab or chapter), [data-fresh] (an answer just checked,
+ *     a card just revealed, a word just chosen) and .app-status.is-new (a new message).
+ *   - Everything is switched off under prefers-reduced-motion (section 14).
+ *
+ * Sections
+ *   1. Tokens and helpers        8. Exercises
+ *   2. Page and header           9. Memoria
+ *   3. Folio and navigation     10. Prōgressus
+ *   4. Chapter list             11. Audio strip
+ *   5. Side panels              12. Messages
+ *   6. Reader                   13. Welcome guide
+ *   7. Buttons and fields       14. Small screens, reduced motion, print
+ */
+
+/* 1. Tokens and helpers ----------------------------------------------------- */
+:root {
+  --surface-radius: 4px;
+  --shadow-1: 0 1px 2px rgba(57,41,28,.05), 0 3px 10px rgba(57,41,28,.06);
+  --shadow-2: 0 2px 5px rgba(57,41,28,.07), 0 14px 34px rgba(57,41,28,.13);
+  --ease-out: cubic-bezier(.2,.7,.2,1);
+  --spring: cubic-bezier(.34,1.45,.64,1);
+  --wash: rgba(165,92,69,.08);
+  --tabs-h: 58px;
+}
+.sr-only {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+  overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0;
+}
+/* Scrolling stays instant: scripted scrolls (focus moves, audio follow-along) must land at once. */
+html { scroll-padding-top: calc(var(--tabs-h) + 12px); }
+
+@keyframes lx-rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@keyframes lx-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes lx-pop { 0% { transform: scale(1); } 40% { transform: scale(1.025); } 100% { transform: scale(1); } }
+@keyframes lx-shake { 0%,100% { transform: translateX(0); } 20% { transform: translateX(-5px); } 40% { transform: translateX(4px); } 60% { transform: translateX(-3px); } 80% { transform: translateX(2px); } }
+@keyframes lx-grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@keyframes lx-turn { from { opacity: 0; transform: perspective(700px) rotateX(-55deg); } to { opacity: 1; transform: none; } }
+@keyframes lx-toast { from { opacity: 0; transform: translate(-50%, 14px); } to { opacity: 1; transform: translate(-50%, 0); } }
+@keyframes lx-toast-out { to { opacity: 0; transform: translate(-50%, 8px); visibility: hidden; } }
+@keyframes lx-glow { from { box-shadow: 0 0 0 0 rgba(88,99,66,.45); } to { box-shadow: 0 0 0 12px rgba(88,99,66,0); } }
+
+/* 2. Page and header -------------------------------------------------------- */
+header {
+  grid-template-areas: "title controls" "note guide";
+  padding: 22px 34px 24px;
+  row-gap: 6px;
+}
+header .edition-note { justify-self: start; text-align: left; padding-bottom: 6px; }
+.logo { font-size: clamp(30px, 3.4vw, 42px); }
+#lx-guide-button {
+  grid-area: guide;
+  justify-self: end;
+  min-height: 32px;
+  padding: 6px 12px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  background: transparent;
+  color: var(--burgundy);
+  font: 600 12px/1.3 var(--serif);
+  transition: background .18s ease, border-color .18s ease, transform .18s var(--ease-out);
+}
+#lx-guide-button:hover { background: var(--paper-bright); border-color: var(--terracotta); transform: translateY(-1px); }
+
+/* 3. Folio and navigation --------------------------------------------------- */
+.codex {
+  border-radius: var(--surface-radius);
+  box-shadow: 0 1px 0 rgba(255,255,255,.65) inset, var(--shadow-2);
+  animation: lx-fade .5s ease both;
+}
+/* The section tabs stay at the top of the window while the page scrolls. */
+#tabs {
+  position: sticky;
+  top: 0;
+  z-index: 6;
+  min-height: var(--tabs-h);
+  gap: 2px;
+  background: linear-gradient(#f5ecdc, #ecdfc8);
+  border-bottom: 1px solid var(--rule);
+  box-shadow: 0 6px 14px -10px rgba(57,41,28,.35);
+}
+#tabs button {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1px;
+  padding: 10px 20px 9px;
+  border-bottom: 0;
+}
+#tabs button small {
+  color: var(--ink-muted);
+  font-size: 11px;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: .02em;
+  text-transform: none;
+}
+#tabs button::after {
+  content: "";
+  position: absolute;
+  left: 14px; right: 14px; bottom: 0;
+  height: 3px;
+  background: var(--burgundy);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .28s var(--ease-out);
+}
+#tabs button:hover::after { transform: scaleX(.35); }
+#tabs button.active::after, #tabs button[aria-current="page"]::after { transform: scaleX(1); }
+#tabs button.active small, #tabs button[aria-current="page"] small { color: var(--burgundy); }
+
+/* 4. Chapter list ----------------------------------------------------------- */
+.ch {
+  position: relative;
+  align-items: center;
+  padding: 9px 8px 11px;
+  border-left: 0;
+  border-radius: var(--surface-radius);
+  transition: background .18s ease, transform .2s var(--ease-out);
+}
+.ch > strong {
+  display: grid;
+  place-items: center;
+  width: 26px; height: 26px;
+  min-width: 26px;
+  border: 1px solid var(--rule);
+  border-radius: 50%;
+  background: var(--paper);
+  font-size: 13px;
+  line-height: 1;
+  font-variant-numeric: lining-nums;
+  transition: background .2s ease, color .2s ease, border-color .2s ease;
+}
+.ch:hover { transform: translateX(2px); }
+.ch.active, .ch[aria-current="true"] { background: var(--paper-bright); box-shadow: var(--shadow-1); }
+.ch.active > strong, .ch[aria-current="true"] > strong { background: var(--burgundy); border-color: var(--burgundy); color: #fff8e9; }
+.ch.is-done > strong { border-color: var(--olive); color: var(--good-ink); background: var(--good-paper); }
+.ch.is-done.active > strong { background: var(--olive); border-color: var(--olive); color: #fff8e9; }
+/* A hairline under each chapter shows the share of its questions answered. */
+.ch-progress {
+  position: absolute;
+  left: 46px; right: 8px; bottom: 4px;
+  height: 2px;
+  overflow: hidden;
+}
+.ch-progress::after {
+  content: "";
+  position: absolute; inset: 0;
+  background: var(--olive);
+  transform: scaleX(var(--p, 0));
+  transform-origin: left;
+  transition: transform .5s var(--ease-out);
+}
+
+/* 5. Side panels ------------------------------------------------------------ */
+@media (min-width: 721px) {
+  /* The chapter list follows the reader down the page. */
+  aside.chapters {
+    position: sticky;
+    top: var(--tabs-h);
+    align-self: start;
+    max-height: calc(100vh - var(--tabs-h));
+    overflow-y: auto;
+    background: transparent;
+    scrollbar-width: thin;
+  }
+  .layout { background: linear-gradient(90deg, var(--vellum) 0, #efe3cd 190px, var(--rule-light) 190px, var(--rule-light) 191px, var(--paper) 191px); }
+}
+@media (min-width: 1121px) {
+  /* The word panel does too, so a looked-up word is in view wherever the reader is. */
+  aside.help-aside {
+    position: sticky;
+    top: var(--tabs-h);
+    align-self: start;
+    max-height: calc(100vh - var(--tabs-h) - 76px);
+    overflow-y: auto;
+    border-left: 0;
+    background: transparent;
+    scrollbar-width: thin;
+  }
+  .layout {
+    background:
+      linear-gradient(270deg, #ecdec5 0, #f2e7d4 244px, var(--rule-light) 244px, var(--rule-light) 245px, transparent 245px),
+      linear-gradient(90deg, var(--vellum) 0, #efe3cd 201px, var(--rule-light) 201px, var(--rule-light) 202px, var(--paper) 202px);
+  }
+  aside.chapters { border-right: 0; }
+  /* Memoria and Prōgressus have no word to look up: the page gets the full width. */
+  .layout[data-tab="review"], .layout[data-tab="progress"] {
+    grid-template-columns: 202px minmax(0, 1fr);
+    background: linear-gradient(90deg, var(--vellum) 0, #efe3cd 201px, var(--rule-light) 201px, var(--rule-light) 202px, var(--paper) 202px);
+  }
+}
+.layout[data-tab="review"] > .help-aside, .layout[data-tab="progress"] > .help-aside { display: none; }
+#help .panel { border-radius: var(--surface-radius); background: var(--paper-bright); box-shadow: var(--shadow-1); }
+#help[data-fresh="word"] .panel { animation: lx-rise .32s var(--ease-out) both; }
+.form-note { line-height: 1.5; }
+
+/* 6. Reader ----------------------------------------------------------------- */
+#main > * { max-width: 880px; margin-left: auto; margin-right: auto; }
+#main.view-enter > * { animation: lx-rise .42s var(--ease-out) both; }
+#main.view-enter > :nth-child(2) { animation-delay: .03s; }
+#main.view-enter > :nth-child(3) { animation-delay: .06s; }
+#main.view-enter > :nth-child(4) { animation-delay: .09s; }
+#main.view-enter > :nth-child(5) { animation-delay: .12s; }
+#main.view-enter > :nth-child(6) { animation-delay: .15s; }
+#main.view-enter > :nth-child(7) { animation-delay: .18s; }
+#main.view-enter > :nth-child(n+8) { animation-delay: .21s; }
+
+.art-figure img { border-radius: var(--surface-radius); }
+.note { border-radius: var(--surface-radius); }
+
+/* Sentences are separate surfaces: the one being read is raised. */
+.sentence {
+  margin: 8px auto;
+  padding: 14px 18px 16px;
+  border: 1px solid transparent;
+  border-radius: var(--surface-radius);
+  transition: background .2s ease, border-color .2s ease, box-shadow .25s ease;
+}
+.sentence:hover { background: rgba(255,250,239,.75); border-color: var(--rule-light); }
+.sentence.selected {
+  background: var(--paper-bright);
+  border-color: var(--rule-light);
+  box-shadow: inset 3px 0 0 var(--burgundy), var(--shadow-1);
+}
+.word {
+  border-radius: 2px;
+  transition: background .15s ease, color .15s ease, border-color .15s ease;
+}
+.word.is-chosen {
+  color: var(--burgundy);
+  background: rgba(165,92,69,.14);
+  border-bottom: 2px solid var(--burgundy);
+}
+.sentence .link[data-sentence] {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 5px 11px;
+  border: 1px solid var(--rule-light);
+  border-radius: var(--radius);
+  background: var(--paper);
+  text-decoration: none;
+  transition: background .18s ease, border-color .18s ease, transform .18s var(--ease-out);
+}
+.sentence .link[data-sentence]:hover { border-color: var(--terracotta); background: var(--paper-bright); transform: translateY(-1px); }
+.help { border-radius: var(--surface-radius); }
+#main[data-fresh="word"] .sentence .help[aria-live] { animation: lx-rise .3s var(--ease-out) both; }
+.panel, details { border-radius: var(--surface-radius); }
+summary { transition: color .15s ease; }
+summary:hover { color: #4c2626; }
+
+/* 7. Buttons and fields ----------------------------------------------------- */
+.btn { transition: background .18s ease, border-color .18s ease, box-shadow .18s ease, transform .18s var(--ease-out); }
+.btn:hover:not(:disabled) { transform: translateY(-1px); box-shadow: inset 0 1px 0 rgba(255,255,255,.62), 0 3px 8px rgba(57,41,28,.12); }
+.btn:active:not(:disabled) { transform: translateY(0); }
+.btn.primary:hover:not(:disabled), .primary:hover:not(:disabled) { box-shadow: 0 4px 12px rgba(114,60,58,.3); }
+.field, input[type="text"], textarea, select { transition: border-color .18s ease, box-shadow .18s ease, background .18s ease; }
+.field:focus, input[type="text"]:focus, textarea:focus, select:focus { border-color: var(--olive); box-shadow: 0 0 0 3px rgba(88,99,66,.16); }
+.field:disabled { background: var(--paper-inset); color: var(--ink-soft); }
+
+/* 8. Exercises -------------------------------------------------------------- */
+.quiz {
+  position: relative;
+  counter-reset: option;
+  border-radius: var(--surface-radius);
+  background: var(--paper-bright);
+  box-shadow: var(--shadow-1);
+  transition: border-color .3s ease;
+}
+.quiz.is-complete { border-top-color: var(--olive); }
+.quiz.is-complete::after {
+  content: "✓";
+  position: absolute;
+  top: 14px; right: 16px;
+  display: grid; place-items: center;
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  background: var(--olive);
+  color: #fff8e9;
+  font-size: 13px; line-height: 1;
+}
+.quiz[data-fresh="good"]::after { animation: lx-glow .7s ease-out both; }
+.option {
+  counter-increment: option;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: background .18s ease, border-color .18s ease, transform .18s var(--ease-out), box-shadow .18s ease;
+}
+.option::before {
+  content: counter(option, upper-alpha);
+  flex: 0 0 auto;
+  display: grid; place-items: center;
+  width: 24px; height: 24px;
+  border: 1px solid var(--rule);
+  border-radius: 50%;
+  color: var(--ochre);
+  font: 600 12px/1 var(--display);
+  transition: background .18s ease, color .18s ease, border-color .18s ease;
+}
+.option:hover:not(:disabled) { transform: translateX(3px); box-shadow: var(--shadow-1); }
+.option:hover:not(:disabled)::before { border-color: var(--ochre); background: var(--paper); }
+.option.is-correct::before { content: "✓"; background: var(--olive); border-color: var(--olive); color: #fff8e9; }
+.option.is-wrong::before { content: "✕"; background: var(--bad-ink); border-color: var(--bad-ink); color: #fff8e9; }
+.good, .bad { border-radius: var(--surface-radius); }
+.quiz[data-fresh="good"] .option.is-correct, .quiz[data-fresh="good"] .field { animation: lx-pop .4s var(--spring) both; }
+.quiz[data-fresh="bad"] .option.is-wrong, .quiz[data-fresh="bad"] .field { animation: lx-shake .38s ease both; }
+.quiz[data-fresh] .good, .quiz[data-fresh] .bad { animation: lx-rise .3s var(--ease-out) both; }
+.model-answer { animation: lx-rise .3s var(--ease-out) both; }
+
+/* 9. Memoria ---------------------------------------------------------------- */
+.review-card {
+  padding: 34px 24px 30px !important;
+  border-radius: var(--surface-radius);
+  background: var(--paper-bright);
+  box-shadow: var(--shadow-2);
+}
+.review-card h1 { font-size: clamp(34px, 4vw, 46px); margin: 10px 0 8px; }
+.review-meaning { transform-origin: top center; }
+#main[data-fresh="reveal"] .review-meaning { animation: lx-turn .45s var(--ease-out) both; }
+#main[data-fresh="reveal"] .review-card .tools .btn { animation: lx-rise .3s var(--ease-out) both; }
+#main[data-fresh="reveal"] .review-card .tools .btn:nth-child(2) { animation-delay: .04s; }
+#main[data-fresh="reveal"] .review-card .tools .btn:nth-child(3) { animation-delay: .08s; }
+#main[data-fresh="reveal"] .review-card .tools .btn:nth-child(4) { animation-delay: .12s; }
+.review-card [data-rating] { min-width: 92px; border-bottom-width: 3px; }
+.review-card [data-rating="again"] { border-bottom-color: var(--bad-ink); }
+.review-card [data-rating="hard"] { border-bottom-color: var(--terracotta); }
+.review-card [data-rating="good"] { border-bottom-color: #4c2626; }
+.review-card [data-rating="easy"] { border-bottom-color: var(--olive); }
+#savedWords li { transition: background .15s ease; }
+#savedWords li:hover { background: var(--wash); }
+
+/* 10. Prōgressus ------------------------------------------------------------ */
+.stat {
+  border-radius: var(--surface-radius);
+  background: var(--paper-bright);
+  box-shadow: var(--shadow-1);
+  transition: transform .2s var(--ease-out), box-shadow .2s ease;
+}
+.stat:hover { transform: translateY(-2px); box-shadow: var(--shadow-2); }
+.stat b { font-size: 32px; }
+.bar { height: 6px; border-radius: 3px; }
+.bar > div { border-radius: 3px; transform-origin: left; }
+#main.view-enter .bar > div { animation: lx-grow .8s var(--ease-out) .2s both; }
+
+/* 11. Audio strip ----------------------------------------------------------- */
+.dock {
+  bottom: 12px;
+  width: min(820px, calc(100% - 32px));
+  margin-top: 12px;
+  padding: 10px 18px;
+  border: 1px solid var(--rule);
+  border-radius: var(--surface-radius);
+  background: rgba(244,234,216,.9);
+  -webkit-backdrop-filter: blur(10px) saturate(1.1);
+  backdrop-filter: blur(10px) saturate(1.1);
+  box-shadow: var(--shadow-2);
+  animation: lx-rise .4s var(--ease-out) both;
+}
+
+/* 12. Messages -------------------------------------------------------------- */
+/* Status messages appear as a small notice above the audio strip, where the eye is,
+   instead of in a bar below the page. The live region itself is unchanged. */
+.app-status {
+  position: fixed;
+  left: 50%;
+  bottom: 92px;
+  z-index: 8;
+  width: max-content;
+  max-width: min(560px, calc(100% - 32px));
+  min-height: 0;
+  margin: 0;
+  padding: 10px 16px;
+  transform: translateX(-50%);
+  border: 0;
+  border-radius: var(--surface-radius);
+  background: #382b21;
+  color: #fff8ea;
+  font-size: 13px;
+  line-height: 1.45;
+  box-shadow: var(--shadow-2);
+  pointer-events: none;
+}
+.app-status:empty { box-shadow: none; background: transparent; }
+/* A message shows for a few seconds and then steps aside; its text stays in the live region. */
+.app-status.is-new { animation: lx-toast .32s var(--ease-out) both, lx-toast-out .4s ease 6s forwards; }
+body:has(.dock[hidden]) .app-status { bottom: 24px; }
+
+/* 13. Welcome guide --------------------------------------------------------- */
+#lx-welcome { -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px); animation: lx-fade .3s ease both; }
+.lx-welcome-folio { border-radius: var(--surface-radius); animation: lx-rise .5s var(--ease-out) .05s both; }
+.lx-welcome-panel, .lx-welcome-progress { border-radius: var(--surface-radius); }
+.lx-welcome-panel { transition: transform .2s var(--ease-out), box-shadow .2s ease; }
+.lx-welcome-panel:hover { transform: translateY(-2px); box-shadow: var(--shadow-1); }
+.lx-welcome-steps span { border-radius: var(--radius); }
+#lx-welcome-enter { border-radius: var(--radius); transition: background .18s ease, transform .18s var(--ease-out), box-shadow .18s ease; }
+#lx-welcome-enter:hover { background: #563a29; transform: translateY(-1px); box-shadow: 0 6px 16px rgba(57,41,28,.3); }
+
+/* 14. Small screens, reduced motion, print ---------------------------------- */
+@media (max-width: 1120px) {
+  aside.help-aside { background: var(--paper-inset); }
+}
+@media (max-width: 720px) {
+  :root { --tabs-h: 46px; }
+  header { grid-template-areas: "title" "controls"; padding: 10px 14px 14px; }
+  #lx-guide-button { position: absolute; top: 9px; right: 14px; min-height: 30px; padding: 4px 10px; }
+  #tabs button { flex: 1 1 0; align-items: center; padding: 6px 6px 7px; }
+  #tabs button small { font-size: 10px; }
+  #tabs button::after { left: 8px; right: 8px; }
+  .layout { background: var(--paper); }
+  .chapters .ch { flex: 0 0 148px; padding: 6px 8px 9px; }
+  .ch > strong { width: 22px; height: 22px; min-width: 22px; font-size: 12px; }
+  .ch-progress { left: 38px; bottom: 3px; }
+  .ch:hover { transform: none; }
+  .sentence { margin: 6px auto; padding: 10px 11px 12px; }
+  .dock { bottom: 6px; width: calc(100% - 12px); padding: 5px 8px; }
+  .app-status { bottom: 96px; }
+  .review-card { padding: 24px 14px 22px !important; }
+  .review-card [data-rating] { min-width: 0; flex: 1 1 40%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-delay: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0s !important;
+  }
+  .app-status.is-new { animation: none; } /* stays in place rather than vanishing at once */
+  .btn:hover:not(:disabled), .option:hover:not(:disabled), .stat:hover, .ch:hover, .lx-welcome-panel:hover, #lx-guide-button:hover, #lx-welcome-enter:hover { transform: none; }
+}
+@media print {
+  .app-status, #lx-guide-button { display: none !important; }
+  #tabs { position: static; box-shadow: none; }
+  aside.chapters, aside.help-aside { position: static; max-height: none; }
+  .codex { animation: none; box-shadow: none; }
+}
