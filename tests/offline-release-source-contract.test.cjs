@@ -25,7 +25,7 @@ assert.equal(cataloguePaths.length,75);
 for(const p of cataloguePaths)assert(listed.includes(p),"Audio manifest must include every narrator clip: "+p);
 const builder=require("../scripts/build-release.cjs");
 const runtime=builder.runtimeFiles();
-for(const asset of ["index.html","app/legacy-runtime.js","content/narration.js","app/welcome/welcome.js","app/welcome/welcome.css","app/60-audio-ambience.js"])assert(runtime.includes(asset),"Offline source runtime missing "+asset);
+for(const asset of ["index.html","app/legacy-runtime.js","content/narration.js","app/welcome/welcome.js","app/styles/tablinum-fonts.css","app/styles/lx-tokens.css","app/styles/lx-app.css","assets/fonts/source-sans-3/source-sans-3-latin-wght-normal.woff2","assets/fonts/source-sans-3/OFL.txt","app/60-audio-ambience.js"])assert(runtime.includes(asset),"Offline source runtime missing "+asset);
 for(const p of runtime.filter(x=>x.endsWith(".mp3")))assert(listed.includes(p),"Orphaned private recording in release: "+p);
 for(const p of runtime)assert(!p.includes("PRIVATE_")&&!p.includes("LOCAL_INSTALL_RECORD")&&!p.startsWith("audio-audition/"),"Private or development artifact leaked: "+p);
 assert(!runtime.some(p=>p.endsWith("START_LATIN_X.py")||p.includes("INSTALL_THEME.py")),"No patch-on-launch code in learner release");

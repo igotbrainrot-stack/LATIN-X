@@ -11,7 +11,7 @@ START
 
 KEEP YOUR PROGRESS
   Progress is saved in the browser for this folder. Before moving or replacing
-  the folder, open Progressus > Export backup JSON, then restore it in the new
+  the folder, open Settings > Export backup JSON, then restore it in the new
   copy. Extract new versions to a new folder; do not mix old and new files.
 
 AUDIO

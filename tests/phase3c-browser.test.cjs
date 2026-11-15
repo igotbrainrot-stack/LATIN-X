@@ -1,4 +1,5 @@
 "use strict";
+const {toReader,toSettings}=require("./helpers/open-reader.cjs");
 /* Real file:// recovery tests, not mocked. Source folders are copied to a
  * disposable temp path so a missing chapter can be simulated safely. */
 const fs=require("node:fs"),path=require("node:path"),os=require("node:os"),assert=require("node:assert/strict");
@@ -24,7 +25,7 @@ async function run(){
   if(await page.locator("#lx-welcome:not([hidden])").count()){
    await page.locator("#lx-welcome-skip").check();
    await page.locator("#lx-welcome-enter").click();
-  }await page.locator(".sentence").first().waitFor();
+  }await toReader(page);await page.locator(".sentence").first().waitFor();
   const full=await page.evaluate(()=>({
    original:localStorage.getItem("tablinum-source-review-v02"),
    snapshot:localStorage.getItem("tablinum-v4-snapshot"),
@@ -41,7 +42,7 @@ async function run(){
   if(await missing.locator("#lx-welcome:not([hidden])").count()){
    await missing.locator("#lx-welcome-skip").check();
    await missing.locator("#lx-welcome-enter").click();
-  }await missing.locator("#appStatus").waitFor();
+  }await toReader(missing);await missing.locator("#appStatus").waitFor();
   const failed=await missing.evaluate(()=>({
    original:localStorage.getItem("tablinum-source-review-v02"),
    snapshot:localStorage.getItem("tablinum-v4-snapshot"),
@@ -64,7 +65,7 @@ async function run(){
   if(await corrupt.locator("#lx-welcome:not([hidden])").count()){
    await corrupt.locator("#lx-welcome-skip").check();
    await corrupt.locator("#lx-welcome-enter").click();
-  }await corrupt.locator(".sentence").first().waitFor();
+  }await toReader(corrupt);await corrupt.locator(".sentence").first().waitFor();
   assert.equal(await corrupt.evaluate(()=>localStorage.getItem("tablinum-state-v5")),"{corrupt");
   assert.equal(await corrupt.evaluate(()=>localStorage.getItem("tablinum-source-review-v02")),oldRaw);
   await corrupt.locator('#tabs [data-tab="progress"]').click();

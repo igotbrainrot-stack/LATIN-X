@@ -1,4 +1,5 @@
 "use strict";
+const {toReader,toSettings}=require("./helpers/open-reader.cjs");
 /* Windows local file:// reader integration: the old lessons' SVG artwork should be
  * replaced by approved Book I visual PREVIEWS, never by unsigned lessons. */
 const assert=require('node:assert/strict');
@@ -20,6 +21,7 @@ const {chromium,firefox}=require('playwright');
    await page.locator("#lx-welcome-skip").check();
    await page.locator("#lx-welcome-enter").click();
   }
+  await toReader(page);
   for(let i=0;i<8;i++){
    await page.locator(`button.ch[data-ch="${i}"]`).click();
    const marker=page.locator(`[data-legacy-art-preview="${bookIds[i]}"]`);

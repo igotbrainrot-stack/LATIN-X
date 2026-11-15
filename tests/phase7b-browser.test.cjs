@@ -1,4 +1,5 @@
 "use strict";
+const {toReader,toSettings}=require("./helpers/open-reader.cjs");
 const assert=require("node:assert/strict"),path=require("node:path");
 const {chromium}=require("playwright"),{pathToFileURL}=require("node:url");
 (async()=>{
@@ -18,15 +19,15 @@ const {chromium}=require("playwright"),{pathToFileURL}=require("node:url");
   if(await page.locator("#lx-welcome:not([hidden])").count()){
    await page.locator("#lx-welcome-skip").check();
    await page.locator("#lx-welcome-enter").click();
-  }await page.locator(".sentence").first().waitFor();
+  }await toReader(page);await page.locator(".sentence").first().waitFor();
   const prefix=await page.evaluate(()=>({id:globalThis.TablinumAudit.currentChapter().name,sent:globalThis.TablinumAudit.currentChapter().sent.length}));
   assert(prefix.sent>0);
   // Bibliothēca (chapter audio + timing import UI) was removed in Nov 2026. The local media
-  // store still backs Vōx mea; its export now lives on the Progress page.
+  // store still backs Vōx mea; its export lives in Settings (moved from Progress in the Nov 2026 redesign).
   assert.equal(await page.locator('#tabs [data-tab="library"]').count(),0,"Library tab removed");
-  await page.locator('#tabs [data-tab="progress"]').click();
+  await toSettings(page);
   assert.match(await page.locator("#main").textContent(),/Vōx mea/);
-  assert.equal(await page.locator('#main [data-action="exportRecordings"]').count(),1,"Recordings export kept on Progress");
+  assert.equal(await page.locator('#main [data-action="exportRecordings"]').count(),1,"Recordings export kept, now in Settings");
   await page.evaluate(async()=>globalThis.TablinumUserMedia.put("record:legacy-ch01:legacy-ch01-s001",{
    kind:"recording",blob:new Blob([new Uint8Array(128).fill(5)],{type:"audio/webm"})
   }));
@@ -51,6 +52,6 @@ const {chromium}=require("playwright"),{pathToFileURL}=require("node:url");
   assert.equal(await page.evaluate(()=>localStorage.getItem("tablinum-source-review-v02")),raw);
   assert.deepEqual(network,[],"No external fetch/CDN in offline media suite");
   assert.deepEqual(errors,[],"No browser JS errors in local media suite");
-  console.log("PASS Phase7b Windows file:// (Library tab removed): recordings export on Progress, non-graded recorded ZIP, actual IDB/fallback, silent v4 key and no network.");
+  console.log("PASS Phase7b Windows file:// (Library tab removed): recordings export in Settings, non-graded recorded ZIP, actual IDB/fallback, silent v4 key and no network.");
  }finally{await browser.close()}
 })().catch(e=>{console.error(e);process.exitCode=1});

@@ -142,12 +142,11 @@ function decorateLegacyReader(doc){
  const wrapper=doc.createElement("section");
  wrapper.setAttribute("data-legacy-art-preview",topic.bookId);
  wrapper.className="legacy-art-preview";
- wrapper.innerHTML='<p class="subtle" style="margin:9px 0 0;font-size:12px">'+
+ wrapper.innerHTML=illustrated+'<p class="art-note">'+
   '<strong>Approved Book I artwork</strong> · '+esc(topic.description)+
   (topic.related?' · related illustration (not a literal depiction of this chapter)':' · matching subject')+
-  '. This is a visual preview alongside the original legacy lesson; its Latin text and grades are unchanged. '+
-  '<a href="Picture Practice.html">See all illustrations in Picture Practice</a>.</p>'+
-  illustrated;
+  '. '+
+  '<a href="Picture Practice.html">See all illustrations in Picture Practice</a>.</p>';
  old.replaceWith(wrapper);
  return true;
 }

@@ -1,4 +1,5 @@
 "use strict";
+const {toReader,toSettings}=require("./helpers/open-reader.cjs");
 const http=require("node:http");
 const fs=require("node:fs");
 const path=require("node:path");
@@ -31,6 +32,7 @@ const close=()=>new Promise(resolve=>server.close(resolve));
  let browser;const errors=[];
  const enter=async page=>{
   if(await page.locator("#lx-welcome:not([hidden])").count()){await page.locator("#lx-welcome-skip").check();await page.locator("#lx-welcome-enter").click();}
+  await toReader(page);
  };
  /* The right and a wrong option of a rendered word-check section, read from the engine. */
  const answers=(page,section)=>section.evaluate(el=>{
@@ -153,9 +155,10 @@ const close=()=>new Promise(resolve=>server.close(resolve));
   await page.locator(".ch").first().click();
   assert.equal(await page.locator(".lesson-path li.is-done").count(),3,"lesson progress survives a reload");
   assert.equal(await page.locator("#main .word-check .option:disabled").count(),9);
-  await page.locator('#tabs [data-tab="progress"]').click();
+  await toSettings(page);
   await page.locator("details summary",{hasText:"Reset"}).click();
   await page.locator("[data-action=reset]").click();
+  await page.locator('#tabs [data-tab="read"]').click();
   await page.locator(".ch").first().click();
   assert.equal(await page.locator(".lesson-path li.is-done").count(),0,"reset clears lesson progress");
   assert.equal(await page.locator("#main .word-check .option:disabled").count(),0);

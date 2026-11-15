@@ -1,4 +1,5 @@
 "use strict";
+const {toReader,toSettings}=require("./helpers/open-reader.cjs");
 /* Test the actual Windows-style double-click route: file:///.../index.html.
  * Chromium by default; set TABLINUM_BROWSER_CHANNEL=msedge to use Edge.
  * The HTTP smoke test remains separate. */
@@ -30,6 +31,7 @@ assert(!(type===firefox&&channel),"Firefox cannot be combined with a Chromium ch
    await page.locator("#lx-welcome-skip").check();
    await page.locator("#lx-welcome-enter").click();
   }
+  await toReader(page);
   await page.locator('img[data-art-image="b01-c001-scene"]').waitFor({state:"visible"});
   await page.waitForFunction(()=>{const image=document.querySelector('img[data-art-image="b01-c001-scene"]');return image?.complete&&image.naturalWidth>0});
   assert.equal(await page.locator(".sentence").count(),9,"Chapter I must have exactly nine original sentences");
@@ -39,7 +41,8 @@ assert(!(type===firefox&&channel),"Firefox cannot be combined with a Chromium ch
   let stored=await page.evaluate(()=>JSON.parse(localStorage.getItem("tablinum-state-v5")));
   assert.equal(stored.questions["legacy-ch01-q001"].correct,true,"Correct answer must persist to v5 state");
   await page.reload({waitUntil:"load"});
-  await page.locator("#tabs [data-tab='quiz']").waitFor();
+  // The program opens on Home; the saved section is one click away.
+  await page.locator("#tabs [data-tab='quiz']").click();
   assert.equal(await page.locator(".quiz .is-correct").count()>0,true,"Correct question needs visible post-reload styling");
   stored=await page.evaluate(()=>JSON.parse(localStorage.getItem("tablinum-state-v5")));
   assert.equal(stored.questions["legacy-ch01-q001"].correct,true,"Answer vanished on file:// reload");
@@ -61,6 +64,7 @@ assert(!(type===firefox&&channel),"Firefox cannot be combined with a Chromium ch
   assert.equal(await page.evaluate(()=>localStorage.getItem("tablinum-source-review-v02")),rawFixture,"Raw v4 profile must never be rewritten");
   assert.equal(await page.evaluate(()=>localStorage.getItem("tablinum-v4-snapshot")),rawFixture,"Snapshot must be byte-identical");
   // Export the exact fixture data through a real browser download.
+  await toSettings(page);
   const [download]=await Promise.all([
    page.waitForEvent("download"),
    page.locator("[data-action='export']").click()

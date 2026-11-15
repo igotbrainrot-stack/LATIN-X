@@ -17,8 +17,10 @@ modal.addEventListener("keydown",e=>{
  if(e.shiftKey&&document.activeElement===items[0]){e.preventDefault();items[items.length-1].focus()}
  else if(!e.shiftKey&&document.activeElement===items[items.length-1]){e.preventDefault();items[0].focus()}
 });
-const header=document.querySelector("header");
-if(header){const btn=document.createElement("button");btn.id="lx-guide-button";btn.type="button";btn.textContent="? Course guide";btn.setAttribute("aria-label","Open course introduction");btn.addEventListener("click",show);header.appendChild(btn)}
+/* The app bar carries the guide button; older pages without one get it added to the header. */
+const header=document.querySelector("header");let guide=document.getElementById("lx-guide-button");
+if(!guide&&header){guide=document.createElement("button");guide.id="lx-guide-button";guide.type="button";guide.textContent="? Course guide";guide.setAttribute("aria-label","Open course introduction");header.appendChild(guide)}
+if(guide)guide.addEventListener("click",show);
 const skip=document.getElementById("lx-welcome-skip");if(skip)skip.checked=readSkip();
 if(readSkip())modal.hidden=true;else show();
 })();

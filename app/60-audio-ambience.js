@@ -190,18 +190,51 @@ function syncControls(){
  if(sfx){sfx.textContent=settings.sfx?"Clicks on":"Clicks off";sfx.setAttribute("aria-pressed",String(settings.sfx))}
  const v=document.getElementById("music-volume"),f=document.getElementById("sfx-volume");
  if(v)v.value=String(settings.musicVolume);if(f)f.value=String(settings.sfxVolume);
+ const button=document.getElementById("sound-button");
+ if(button)button.dataset.music=settings.music?"on":"off";
+ syncTrack();
+}
+/* Sound controls live in a small panel opened from the app bar's sound button. On a page
+ * without that button (older shells, tests) they are added to the header as before. */
+function trackName(offset=0){return romanAvailable()?"Track "+((romanIndex+offset)%romanTracks.length+1)+" of "+romanTracks.length:"Built-in lyre"}
+function nextRoman(){
+ if(!romanAvailable()||!activated||!settings.music||!romanCurrent)return false;
+ /* Skip without waiting for the long crossfade: a short fade keeps the change gentle. */
+ if(romanFading)return false;
+ romanCrossfade();romanFadeStart=romanClock()-(romanFadeSeconds-1.5)*1000;
+ return true;
+}
+function syncTrack(){
+ if(typeof document!=="object")return;
+ const el=document.getElementById("music-track");
+ if(el)el.textContent=settings.music?trackName(romanFading?1:0):"Music is off";
+ const next=document.getElementById("music-next");if(next)next.disabled=!settings.music||!romanAvailable();
 }
 function installControls(){
  if(typeof document!=="object"||!document.querySelector)return;
- const header=document.querySelector("header");if(!header||document.getElementById("music-toggle"))return;
+ const host=document.getElementById("sound"),header=document.querySelector("header");
+ if(!(host||header)||document.getElementById("music-toggle"))return;
  const div=document.createElement("div");div.id="ambience-controls";
- div.style.cssText="display:flex;align-items:center;flex-wrap:wrap;gap:5px;max-width:510px;font-size:11px";
- div.innerHTML='<button id="music-toggle" type="button" class="btn" data-audio-music aria-label="Toggle background music">♪ Music on</button>'+
- '<label for="music-volume">Music</label><input type="range" id="music-volume" min="0" max="1" step=".05" value=".2" style="width:65px" aria-label="Background music volume">'+
- '<button id="sfx-toggle" type="button" class="btn" data-audio-sfx aria-label="Toggle click sounds">Clicks on</button>'+
- '<label for="sfx-volume">Clicks</label><input type="range" id="sfx-volume" min="0" max="1" step=".05" value=".4" style="width:65px" aria-label="Click sound volume">'+
- '';
- header.appendChild(div);syncControls();
+ div.innerHTML='<div class="sound-row"><button id="music-toggle" type="button" class="btn" data-audio-music aria-label="Toggle background music">♪ Music on</button>'+
+ '<label for="music-volume">Music</label><input type="range" id="music-volume" min="0" max="1" step=".05" value=".2" aria-label="Background music volume"></div>'+
+ '<div class="sound-row"><button id="sfx-toggle" type="button" class="btn" data-audio-sfx aria-label="Toggle click sounds">Clicks on</button>'+
+ '<label for="sfx-volume">Clicks</label><input type="range" id="sfx-volume" min="0" max="1" step=".05" value=".4" aria-label="Click sound volume"></div>'+
+ '<div class="sound-row sound-track"><small id="music-track" role="status"></small><button id="music-next" type="button" class="btn" aria-label="Next music track">Next track</button></div>';
+ if(host){
+  const button=document.getElementById("sound-button");
+  div.setAttribute("role","group");div.setAttribute("aria-label","Sound");div.hidden=true;
+  host.appendChild(div);
+  const open=on=>{div.hidden=!on;if(button)button.setAttribute("aria-expanded",String(on));if(on)syncTrack()};
+  if(button)button.addEventListener("click",()=>open(div.hidden));
+  document.addEventListener("click",event=>{if(!div.hidden&&!host.contains(event.target))open(false)});
+  document.addEventListener("keydown",event=>{if(event.key==="Escape"&&!div.hidden){open(false);if(button)button.focus()}});
+ }else{
+  div.style.cssText="display:flex;align-items:center;flex-wrap:wrap;gap:5px;max-width:510px;font-size:11px";
+  header.appendChild(div);
+ }
+ const next=document.getElementById("music-next");
+ if(next&&next.addEventListener)next.addEventListener("click",()=>{nextRoman();setTimeout(syncTrack,60)});
+ syncControls();
 }
 if(typeof document==="object"){
  installControls();
@@ -212,6 +245,6 @@ if(typeof document==="object"){
   else if(activated&&settings.music&&!recording)resumeLoop();
  });
 }
-root.TablinumAmbience=Object.freeze({defaults:defs,configure,set,activate,sound,duck,setRecording,
+root.TablinumAmbience=Object.freeze({defaults:defs,configure,set,activate,sound,duck,setRecording,nextTrack:nextRoman,trackName,
  debug:()=>({activated,hasAudioContext:!!ctx,playing:!!timer,ducked:narrating,recording,settings:{...settings}})});
 })(globalThis);

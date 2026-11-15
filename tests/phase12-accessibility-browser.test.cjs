@@ -1,4 +1,5 @@
 "use strict";
+const {toReader,toSettings}=require("./helpers/open-reader.cjs");
 /* Real browser follow-up for the separate offline a11y module.
  * Matrix on Windows: Chromium, installed Chrome, installed Edge, Playwright Firefox. */
 const assert=require("node:assert/strict");
@@ -20,6 +21,7 @@ const {chromium,firefox}=require("playwright");
    await page.locator("#lx-welcome-skip").check();
    await page.locator("#lx-welcome-enter").click();
   }
+  await toReader(page);
   await page.locator(".sentence").first().waitFor();
   assert.equal(await page.locator('#chapters').getAttribute('aria-label'),"Chapter navigation");
   assert.equal(await page.locator('#help').getAttribute('aria-label'),"Learning guidance and personal notes");
@@ -27,7 +29,11 @@ const {chromium,firefox}=require("playwright");
   // Bibliothēca (text/audio import) was removed from the learner app in Nov 2026.
   assert.equal(await page.locator('#tabs [data-tab="library"]').count(),0,"Library tab removed");
   await page.locator('#tabs [data-tab="progress"]').focus();await page.keyboard.press("Enter");
+  await page.getByRole("heading",{name:"Learning progress"}).waitFor();
+  // Backups and recording export moved to Settings; both are reachable by keyboard.
+  await page.locator('.appbar [data-tab="settings"]').focus();await page.keyboard.press("Enter");
   await page.locator('[data-action="exportRecordings"]').waitFor();
+  await page.locator('#tabs [data-tab="read"]').focus();await page.keyboard.press("Enter");
   await page.locator('#chapters [data-ch="0"]').click();
   await page.locator('#tabs [data-tab="quiz"]').click();
   assert(await page.locator('#main [lang="la"]').count()>0,"Latin prompts need lang=la");

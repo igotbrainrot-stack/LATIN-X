@@ -1,4 +1,5 @@
 "use strict";
+const {toReader,toSettings}=require("./helpers/open-reader.cjs");
 const assert=require("node:assert/strict"),path=require("node:path");
 const {pathToFileURL}=require("node:url"),{chromium}=require("playwright");
 (async()=>{
@@ -11,6 +12,7 @@ const {pathToFileURL}=require("node:url"),{chromium}=require("playwright");
    await page.locator("#lx-welcome-skip").check();
    await page.locator("#lx-welcome-enter").click();
   }
+  await toReader(page);
   await page.locator(".sentence").first().waitFor();
   const old=await page.evaluate(()=>localStorage.getItem("tablinum-source-review-v02"));
   await page.evaluate(()=>{
@@ -29,7 +31,7 @@ const {pathToFileURL}=require("node:url"),{chromium}=require("playwright");
     script:"content/b01/c001.js",source_hash:"0".repeat(64)});
    t.registerChapter(chapter);
   });
-  await page.locator("#tabs [data-tab='progress']").focus();
+  await page.locator("#tabs [data-tab='read']").focus();
   await page.keyboard.press("Enter");
   await page.locator('[data-course="b01-c001"]').focus();await page.keyboard.press("Enter");
   await page.locator("#tabs [data-tab='quiz']").focus();await page.keyboard.press("Enter");

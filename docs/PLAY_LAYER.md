@@ -1,6 +1,6 @@
 # Play layer: word games and flourishes
 
-Added 11 November 2026. Code: `app/57-play.js`, `app/styles/tablinum-play.css`. Test: `tests/play-browser.test.cjs` (`npm run test:play-browser`, part of `test:browser-all`).
+Added 11 November 2026. Code: `app/57-play.js`, `app/styles/lx-app.css` section 19 (was `tablinum-play.css` until the 15 November redesign). Test: `tests/play-browser.test.cjs` (`npm run test:play-browser`, part of `test:browser-all`).
 
 ## Word games
 
