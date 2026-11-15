@@ -19,7 +19,7 @@
  *   3. Folio and navigation     10. Prōgressus
  *   4. Chapter list             11. Audio strip
  *   5. Side panels              12. Messages
- *   6. Reader                   13. Welcome guide
+ *   6. Reader                   13. Welcome guide, 13b. Guided lessons
  *   7. Buttons and fields       14. Small screens, reduced motion, print
  */
 
@@ -409,6 +409,58 @@ body:has(.dock[hidden]) .app-status { bottom: 24px; }
 #lx-welcome-enter { border-radius: var(--radius); transition: background .18s ease, transform .18s var(--ease-out), box-shadow .18s ease; }
 #lx-welcome-enter:hover { background: #563a29; transform: translateY(-1px); box-shadow: 0 6px 16px rgba(57,41,28,.3); }
 
+/* 13b. Guided lessons ------------------------------------------------------- */
+/* The path bar names the three steps of a lesson and the one to do next. */
+.lesson-path {
+  margin: 14px 0 18px;
+  border: 1px solid var(--rule-light);
+  border-radius: var(--surface-radius);
+  background: var(--paper-bright);
+  box-shadow: var(--shadow-1);
+}
+.lesson-path ol { display: flex; margin: 0; padding: 0; list-style: none; }
+.lesson-path li { flex: 1 1 0; min-width: 0; border-right: 1px solid var(--rule-light); }
+.lesson-path li:last-child { border-right: 0; }
+.lesson-path li button {
+  display: flex; align-items: center; gap: 10px;
+  width: 100%; min-height: 56px; padding: 9px 12px;
+  border: 0; border-bottom: 3px solid transparent; border-radius: 0;
+  background: none; color: var(--ink-soft);
+  font: inherit; text-align: left; cursor: pointer;
+  transition: background-color .2s ease, border-color .2s ease;
+}
+.lesson-path li button:hover { background: var(--wash); }
+.lesson-path li b {
+  display: grid; place-items: center; flex: 0 0 26px;
+  width: 26px; height: 26px; border-radius: 50%;
+  border: 1px solid var(--rule); font-size: 13px; line-height: 1;
+}
+.lesson-path li span { display: grid; min-width: 0; }
+.lesson-path li strong { font-weight: 600; color: var(--ink); }
+.lesson-path li small { color: var(--ink-muted); }
+.lesson-path li.is-current button { border-bottom-color: var(--ochre); background: var(--wash); }
+.lesson-path li.is-current b { border-color: var(--ochre); background: var(--ochre); color: #fff8e9; }
+.lesson-path li.is-done b { border-color: var(--olive); background: var(--olive); color: #fff8e9; }
+.lesson-next {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px;
+  margin: 0; padding: 10px 12px; border-top: 1px solid var(--rule-light);
+}
+.lesson-next span { flex: 1 1 240px; }
+#main.view-enter .lesson-path { animation: lx-rise .4s var(--ease-out) both; }
+
+/* A word check sits between sentences; the left rule sets it apart from the story. */
+.word-check { border-left: 3px solid var(--ochre); }
+.word-check.is-complete { border-left-color: var(--olive); }
+.word-check.is-missed { border-left-color: var(--bad-ink); }
+.wc-context { margin: 4px 0 8px; font-size: 1.1em; color: var(--ink-soft); }
+.wc-context mark { padding: 0 3px; border-bottom: 2px solid var(--ochre); background: var(--wash); color: var(--ink); }
+.word-test h2, .word-knowledge h2, .continue h2 { margin-top: 2px; }
+.word-result { margin: 12px 0; padding: 10px 12px; border-radius: var(--surface-radius); }
+.word-test[data-done] .word-result, .quiz[data-fresh] ~ .word-result { animation: lx-rise .35s var(--ease-out) both; }
+.word-list { margin: 8px 0; padding-left: 20px; }
+.word-list li { margin: 3px 0; }
+.continue { border-left: 3px solid var(--ochre); }
+
 /* 14. Small screens, reduced motion, print ---------------------------------- */
 @media (max-width: 1120px) {
   aside.help-aside { background: var(--paper-inset); }
@@ -430,6 +482,9 @@ body:has(.dock[hidden]) .app-status { bottom: 24px; }
   .app-status { bottom: 96px; }
   .review-card { padding: 24px 14px 22px !important; }
   .review-card [data-rating] { min-width: 0; flex: 1 1 40%; }
+  .lesson-path li button { flex-direction: column; align-items: flex-start; gap: 4px; min-height: 0; padding: 8px; }
+  .lesson-path li small { font-size: 11px; }
+  .lesson-next .btn { flex: 1 1 100%; }
 }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
