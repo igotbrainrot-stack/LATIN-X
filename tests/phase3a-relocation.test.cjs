@@ -10,7 +10,7 @@ assert.equal(crypto.createHash("sha1").update(original).digest("hex"),
 const inline=original.match(/<script>([\s\S]*?)<\/script>/);
 assert(inline,"Archived v0.4.2 inline script missing");
 // content/form-notes.js (Nov 2026): generated draft form notes shown beside a clicked word; data only.
-const files=["content/catalogue.js","content/lexicon.js","content/form-notes.js",...Array.from({length:8},(_,i)=>"content/legacy/ch"+String(i+1).padStart(2,"0")+".js"),"content/migration-maps.js","app/20-state-v5.js","app/30-content-loader.js","app/50-exercises.js","vendor/ts-fsrs.umd.js","app/55-review-deck.js","app/56-word-checks.js","content/illustrations.js","app/64-art-scenes.js","content/music.js","app/58-music-score.js","app/60-audio-ambience.js","content/narration.js","app/62-narration.js","app/70-user-media.js","app/legacy-runtime.js","app/80-accessibility.js"];
+const files=["content/catalogue.js","content/lexicon.js","content/form-notes.js",...Array.from({length:8},(_,i)=>"content/legacy/ch"+String(i+1).padStart(2,"0")+".js"),"content/migration-maps.js","app/20-state-v5.js","app/30-content-loader.js","app/50-exercises.js","vendor/ts-fsrs.umd.js","app/55-review-deck.js","app/56-word-checks.js","app/57-play.js","content/illustrations.js","app/64-art-scenes.js","content/music.js","app/58-music-score.js","app/60-audio-ambience.js","content/narration.js","app/62-narration.js","app/70-user-media.js","app/legacy-runtime.js","app/80-accessibility.js"];
 const welcomeScript="app/welcome/welcome.js";
 const scriptTags=[...files,welcomeScript].map(file=>'<script src="'+file+'"></script>').join("\n");
 // Polish pass (Nov 2026): presentation-only <link> tags may follow the original
@@ -21,7 +21,8 @@ const headLinks=['<link rel="icon" href="assets/icons/tablinum.svg" type="image/
  '<link rel="stylesheet" href="app/styles/tablinum-polish.css">',
  '<link rel="stylesheet" href="app/welcome/welcome.css">',
  // Interface modernisation (Nov 2026): layout, surfaces and motion. Presentation only.
- '<link rel="stylesheet" href="app/styles/tablinum-modern.css">'];
+ '<link rel="stylesheet" href="app/styles/tablinum-modern.css">',
+ '<link rel="stylesheet" href="app/styles/tablinum-play.css">'];
 for(const link of headLinks){const target=link.match(/href="([^"]+)"/)[1];assert(fs.existsSync(path.join(root,target)),"Missing linked presentation asset "+target)}
 // Preserve the exact legacy reading sources, but allow explicitly approved presentation additions.
 const paths=[...html.matchAll(/<script src="([^"]+)"\s*><\/script>/g)].map(m=>m[1]);
