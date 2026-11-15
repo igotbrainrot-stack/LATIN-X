@@ -1,4 +1,5 @@
 "use strict";
+const {toReader,toSettings}=require("./helpers/open-reader.cjs");
 /* Browser checks for the November 2026 program review fixes: focus after a wrong answer,
    saved-word feedback and removal, the answer reveal, Memoria keys and messages, and the audio strip. */
 const http=require("node:http");
@@ -37,6 +38,7 @@ const close=()=>new Promise(resolve=>server.close(resolve));
    await page.locator("#lx-welcome-skip").check();
    await page.locator("#lx-welcome-enter").click();
   }
+  await toReader(page);
   const status=()=>page.locator("#appStatus").innerText();
 
   // Reader: audio strip shown, no dead "Previous chapter" on chapter 1.
@@ -84,7 +86,7 @@ const close=()=>new Promise(resolve=>server.close(resolve));
   assert.equal(await score(),before,"revealing an answer must not score the question");
 
   // Memoria: keys, labels, an honest idle message, and removal.
-  await page.locator("[data-tab='review']").click();
+  await page.locator("#tabs [data-tab='review']").click();
   assert(await page.locator(".dock").isHidden());
   assert.equal(await page.locator("#savedWords li").count(),1);
   await page.keyboard.press("Space");
@@ -103,7 +105,11 @@ const close=()=>new Promise(resolve=>server.close(resolve));
   const text=await page.locator("#main").innerText();
   assert(!/schema v4|not_checked|unsupported/.test(text),"stale or raw status text in Prōgressus");
   assert(!/Four separate measures/.test(text),"the four measures are hidden until approved lexemes exist");
-  assert.match(text,/Recording storage: /);
+  // Recording storage is reported with the data tools, which moved to Settings.
+  await toSettings(page);
+  const settingsText=await page.locator("#main").innerText();
+  assert.match(settingsText,/Recording storage: /);
+  assert(!/schema v4|not_checked|unsupported/.test(settingsText),"stale or raw status text in Settings");
 
   // Daily limit: cards held back are reported, not hidden behind "Omnia bene".
   await page.evaluate(()=>{
@@ -113,7 +119,7 @@ const close=()=>new Promise(resolve=>server.close(resolve));
    localStorage.setItem("tablinum-state-v5",JSON.stringify(s));
   });
   await page.reload({waitUntil:"load"});
-  await page.locator("[data-tab='review']").click();
+  await page.locator("#tabs [data-tab='review']").click();
   assert.match(await page.locator("#main").innerText(),/Today's review limit is reached\. 1 more card is ready/);
 
   assert.deepEqual(errors,[]);

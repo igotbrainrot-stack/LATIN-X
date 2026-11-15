@@ -1,4 +1,5 @@
 "use strict";
+const {toReader,toSettings}=require("./helpers/open-reader.cjs");
 /* file:// browser integration using synthetic in-memory course data ONLY.
  * No actual vocabulary or chapter approval is written to Git or localStorage. */
 const assert=require("node:assert/strict"),path=require("node:path");
@@ -14,6 +15,7 @@ const {pathToFileURL}=require("node:url"),{chromium}=require("playwright");
    await page.locator("#lx-welcome-skip").check();
    await page.locator("#lx-welcome-enter").click();
   }
+  await toReader(page);
   await page.locator(".sentence").first().waitFor();
   assert.equal(await page.locator(".sentence").count(),9,"Original chapter must render");
   await page.evaluate(()=>{
@@ -30,7 +32,8 @@ const {pathToFileURL}=require("node:url"),{chromium}=require("playwright");
     }]}],exercises:[],speaking:[]
    });
   });
-  await page.locator("#tabs [data-tab='progress']").click();
+  // Course lessons are listed in the lesson rail, which is shown beside the reader (not on Progress).
+  await page.locator("#tabs [data-tab='read']").click();
   await page.locator('[data-course="b01-c001"]').click();
   await page.getByRole("heading",{name:"Synthetic course test"}).waitFor();
   assert.equal(await page.locator(".sentence").count(),1);
@@ -49,6 +52,7 @@ const {pathToFileURL}=require("node:url"),{chromium}=require("playwright");
    });
   });
   await page.locator("#tabs [data-tab='progress']").click();
+  await page.locator("#tabs [data-tab='read']").click();
   await page.locator('[data-course="b01-c002"]').click();
   await page.locator('#main [role="alert"]').waitFor();
   assert.match(await page.locator('#main [role="alert"]').textContent(),/Missing content file content\/b01\/c002.js/);

@@ -13,16 +13,14 @@ assert(inline,"Archived v0.4.2 inline script missing");
 const files=["content/catalogue.js","content/lexicon.js","content/form-notes.js",...Array.from({length:8},(_,i)=>"content/legacy/ch"+String(i+1).padStart(2,"0")+".js"),"content/migration-maps.js","app/20-state-v5.js","app/30-content-loader.js","app/50-exercises.js","vendor/ts-fsrs.umd.js","app/55-review-deck.js","app/56-word-checks.js","app/57-play.js","content/illustrations.js","app/64-art-scenes.js","content/music.js","app/58-music-score.js","app/60-audio-ambience.js","content/narration.js","app/62-narration.js","app/70-user-media.js","app/legacy-runtime.js","app/80-accessibility.js"];
 const welcomeScript="app/welcome/welcome.js";
 const scriptTags=[...files,welcomeScript].map(file=>'<script src="'+file+'"></script>').join("\n");
-// Polish pass (Nov 2026): presentation-only <link> tags may follow the original
-// inline stylesheet. They are enumerated here; no script, logic or data may change.
+// Premium redesign (Nov 2026): the interface CSS lives in three bundled stylesheets
+// (fonts, design tokens, application). They are enumerated here; presentation only.
 const headLinks=['<link rel="icon" href="assets/icons/tablinum.svg" type="image/svg+xml">',
  '<link rel="icon" href="assets/icons/tablinum-48.png" sizes="48x48" type="image/png">',
  '<link rel="stylesheet" href="app/styles/tablinum-fonts.css">',
- '<link rel="stylesheet" href="app/styles/tablinum-polish.css">',
- '<link rel="stylesheet" href="app/welcome/welcome.css">',
- // Interface modernisation (Nov 2026): layout, surfaces and motion. Presentation only.
- '<link rel="stylesheet" href="app/styles/tablinum-modern.css">',
- '<link rel="stylesheet" href="app/styles/tablinum-play.css">'];
+ '<link rel="stylesheet" href="app/styles/lx-tokens.css">',
+ '<link rel="stylesheet" href="app/styles/lx-app.css">'];
+const appCss=read("app/styles/lx-app.css");
 for(const link of headLinks){const target=link.match(/href="([^"]+)"/)[1];assert(fs.existsSync(path.join(root,target)),"Missing linked presentation asset "+target)}
 // Preserve the exact legacy reading sources, but allow explicitly approved presentation additions.
 const paths=[...html.matchAll(/<script src="([^"]+)"\s*><\/script>/g)].map(m=>m[1]);
@@ -31,8 +29,9 @@ for(const link of headLinks)assert(html.includes(link),"Approved stylesheet/icon
 assert.equal(html.split("<link ").length-1,headLinks.length,"Only the approved stylesheet and icon links");
 assert.equal(html.split("<script ").length-1,files.length+1,"Only explicitly enumerated scripts");
 assert(!html.includes("<script>"),"No new inline startup logic");
-assert(html.includes("body::before"),"Keep approved CSS paper texture");
-assert(!html.includes("body::after"),"Do not stack a second page texture");
+assert(!html.includes("<style"),"index.html carries no inline stylesheet");
+assert(appCss.includes("body::before"),"Keep approved CSS paper texture");
+assert(!appCss.includes("body::after"),"Do not stack a second page texture");
 assert(html.includes('id="lx-welcome"')&&html.includes('id="lx-welcome-enter"'),"First-run guide and enter button must be present");
 assert(html.includes('aria-modal="true"')&&html.includes('id="lx-welcome-skip"'),"Welcome accessibility and persistence controls");
 assert(fs.existsSync(path.join(root,welcomeScript)),"Welcome controller must be bundled");

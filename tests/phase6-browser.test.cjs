@@ -1,4 +1,5 @@
 "use strict";
+const {toReader,toSettings}=require("./helpers/open-reader.cjs");
 const assert=require("node:assert/strict"),path=require("node:path");
 const {chromium}=require("playwright"),{pathToFileURL}=require("node:url");
 (async()=>{
@@ -17,6 +18,7 @@ const {chromium}=require("playwright"),{pathToFileURL}=require("node:url");
    await page.locator("#lx-welcome-skip").check();
    await page.locator("#lx-welcome-enter").click();
   }
+  await toReader(page);
   try{await page.locator(".sentence").first().waitFor({timeout:5000})}
   catch(e){
    const snapshot=await page.evaluate(()=>({body:document.body?.innerText?.slice(0,1400),
@@ -25,7 +27,7 @@ const {chromium}=require("playwright"),{pathToFileURL}=require("node:url");
    throw Error("Phase6 browser boot failed: "+JSON.stringify({errors,snapshot}));
   }
   await page.locator('#tabs [data-tab="review"]').click();
-  assert.match(await page.locator("#main").textContent(),/Offline FSRS/);
+  assert.match(await page.locator("#main").textContent(),/offline FSRS/i);
   assert.match(await page.locator("#main").textContent(),/Verbum vetus/);
   await page.locator('[data-action="revealCard"]').click();
   await page.locator('[data-rating="good"]').click();
@@ -57,6 +59,8 @@ const {chromium}=require("playwright"),{pathToFileURL}=require("node:url");
    t.registerChapter(c);
   });
   await page.locator('#tabs [data-tab="progress"]').click();
+  // Course lessons are listed in the lesson rail beside the reader.
+  await page.locator('#tabs [data-tab="read"]').click();
   await page.locator('[data-course="b01-c001"]').click();
   await page.locator('[data-action="courseFinished"]').click();
   state=await page.evaluate(()=>JSON.parse(localStorage.getItem("tablinum-state-v5")));

@@ -57,7 +57,7 @@ function extract(entries,dir){
   assert(names.every(n=>n.startsWith(top)),label+": single top-level folder");
   for(const need of ["index.html","Tablinum.html","README.txt","Picture Practice.html","Art Review.html",
    "app/legacy-runtime.js","app/62-narration.js","content/narration.js","vendor/ts-fsrs.umd.js",
-   "app/styles/tablinum-polish.css","app/styles/tablinum-fonts.css","app/welcome/welcome.js","app/welcome/welcome.css","assets/fonts/gentium-book-plus/OFL.txt",
+   "app/styles/lx-tokens.css","app/styles/lx-app.css","app/styles/tablinum-fonts.css","app/welcome/welcome.js","assets/fonts/source-sans-3/OFL.txt","assets/fonts/source-sans-3/source-sans-3-latin-wght-normal.woff2","assets/fonts/gentium-book-plus/OFL.txt",
    "assets/icons/tablinum.svg","curriculum/music.json"])
    assert(entries.has(top+need),label+": missing "+need);
   const clutter=names.filter(n=>/(^|\/)(tests|scripts\/lib|archive|docs|CLAUDE_|PHASE|GPT_|audio-audition|node_modules|artifacts)|\.md$/.test(n.slice(top.length))&&!/ATTRIBUTION\.md$|assets\/art\/b01\/README\.md$/.test(n));
@@ -104,16 +104,25 @@ function extract(entries,dir){
    assert.equal(await page.locator("#lx-welcome:not([hidden])").count(),1,label+": guide can be reopened");
    await page.keyboard.press("Escape");
    assert.equal(await page.locator("#lx-welcome:not([hidden])").count(),0,label+": Escape closes guide");
+   // The program opens on Home; the reader is one click away.
+   await page.locator("#main .home-head").waitFor();
+   assert.equal(await page.locator(".lesson-card").count(),8,label+": Home lists the eight lessons");
+   await page.locator('#tabs [data-tab="read"]').click();
    await page.locator(".sentence").first().waitFor();
+   const sansOk=await page.evaluate(async()=>(await document.fonts.load('600 16px "Tablinum Sans"',"aā")).length>0);
+   assert(sansOk,label+": bundled interface face loads from file://");
    const fontOk=await page.evaluate(async()=>{await document.fonts.ready;return document.fonts.check('16px "Tablinum Book"',"ā")});
    assert(fontOk,label+": bundled book face loads from file://");
    for(let ch=0;ch<8;ch++){
     await page.locator('#chapters [data-ch="'+ch+'"]').first().click();
     await page.locator(".sentence").first().waitFor();
    }
-   for(const tab of ["quiz","review","progress","read"]){
+   for(const tab of ["home","quiz","review","progress","read"]){
     await page.locator('#tabs [data-tab="'+tab+'"]').click();await page.waitForTimeout(80);
    }
+   await page.locator('.appbar [data-tab="settings"]').click();
+   await page.locator('#main [data-action="export"]').waitFor();
+   await page.locator('#tabs [data-tab="read"]').click();
    await page.goto(pathToFileURL(path.join(appDir,"Picture Practice.html")).href);
    await page.locator("img[data-art-image]").first().waitFor();
    await page.goto(pathToFileURL(path.join(appDir,"Art Review.html")).href);

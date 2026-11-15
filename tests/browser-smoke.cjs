@@ -1,4 +1,5 @@
 "use strict";
+const {toReader,toSettings}=require("./helpers/open-reader.cjs");
 /* Real Chromium smoke test, invoked only after installing Playwright.
    Runs locally, makes no network calls, and saves screenshot artifacts. */
 const http=require("node:http");
@@ -38,6 +39,7 @@ const close=()=>new Promise(resolve=>server.close(resolve));
    await desktop.locator("#lx-welcome-skip").check();
    await desktop.locator("#lx-welcome-enter").click();
   }
+  await toReader(desktop);
   await desktop.locator('img[data-art-image="b01-c001-scene"]').waitFor({state:"visible"});
   await desktop.waitForFunction(()=>{const image=document.querySelector('img[data-art-image="b01-c001-scene"]');return image?.complete&&image.naturalWidth>0});
   assert.equal(await desktop.locator(".sentence").count(),9,"Chapter I must still contain nine original sentences");
@@ -48,9 +50,10 @@ const close=()=>new Promise(resolve=>server.close(resolve));
    const button=getComputedStyle(document.querySelector(".btn"));
    return{parchment:style.getPropertyValue("--parchment").trim(),borderRadius:nav.borderRadius,buttonRadius:button.borderRadius};
   });
-  assert.equal(baseline.parchment,"#eee1c9");
-  assert.equal(baseline.borderRadius,"0px");
-  assert(["2px","0px"].includes(baseline.buttonRadius),"Controls should not use pill corners");
+  // Premium redesign (Nov 2026): the legacy --parchment name is kept as an alias of the page colour token.
+  assert.equal(baseline.parchment,"#f5f0e6");
+  assert(parseFloat(baseline.buttonRadius)<=12,"Controls should not use pill corners: "+baseline.buttonRadius);
+  assert.equal(await desktop.locator('#tabs [data-tab="read"][aria-current="page"]').count(),1,"The open section is marked in the navigation");
   await desktop.locator(".sentence [data-guided='0']").click();
   await desktop.locator(".hint-words .word").first().waitFor();
   await desktop.locator(".hint-words .word").first().focus();
@@ -77,6 +80,7 @@ const close=()=>new Promise(resolve=>server.close(resolve));
    await mobile.locator("#lx-welcome-skip").check();
    await mobile.locator("#lx-welcome-enter").click();
   }
+  await toReader(mobile);
   await mobile.locator('img[data-art-image="b01-c001-scene"]').waitFor({state:"visible"});
   const sizes=await mobile.evaluate(()=>({scroll:document.documentElement.scrollWidth,viewport:window.innerWidth}));
   assert(sizes.scroll<=sizes.viewport+2,JSON.stringify(sizes)+" — unexpected body-level horizontal overflow");

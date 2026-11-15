@@ -1,4 +1,5 @@
 "use strict";
+const {toReader,toSettings}=require("./helpers/open-reader.cjs");
 /* Browser voice fallback: a sentence with no recording in this copy is read by the browser
    voice. When the browser refuses it (no Latin voice, or an utterance dropped after
    cancel), the program tries once more with a stand-in voice before it reports a failure,
@@ -33,6 +34,7 @@ const fake=`(()=>{
   await page.addInitScript(fake);
   await page.goto(pathToFileURL(path.join(root,"index.html")).href);
   if(await page.locator("#lx-welcome:not([hidden])").count()){await page.locator("#lx-welcome-skip").check();await page.locator("#lx-welcome-enter").click();}
+  await toReader(page);
   await page.locator(".sentence").first().waitFor();
   const status=()=>page.locator("#appStatus").textContent();
   const listen=async i=>{await page.evaluate(()=>{window.__speech.log.length=0});await page.locator('button.link[data-sentence="'+i+'"]').click();await page.waitForTimeout(700)};

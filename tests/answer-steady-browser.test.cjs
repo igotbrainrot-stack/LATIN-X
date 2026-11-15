@@ -1,4 +1,5 @@
 "use strict";
+const {toReader,toSettings}=require("./helpers/open-reader.cjs");
 /* Pressing an answer must not move the page. Each answer re-renders the view; before the
  * fix the entrance animation re-ran on every render (the whole page faded in and rose
  * 10px), and a change in height above the pressed card pushed it down the screen. */
@@ -13,6 +14,7 @@ const {chromium}=require("playwright");
    await page.goto(pathToFileURL(path.resolve(__dirname,"..","index.html")).href);
    await page.waitForTimeout(800);
    if(await page.locator("#lx-welcome:not([hidden])").count())await page.locator("#lx-welcome-enter").click();
+   await toReader(page);
    await page.locator(".sentence").first().waitFor();
    await page.waitForTimeout(600);
    const press=async(label,selector)=>{

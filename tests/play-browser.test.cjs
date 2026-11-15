@@ -1,4 +1,5 @@
 "use strict";
+const {toReader,toSettings}=require("./helpers/open-reader.cjs");
 const http=require("node:http");
 const fs=require("node:fs");
 const path=require("node:path");
@@ -30,6 +31,7 @@ const close=()=>new Promise(resolve=>server.close(resolve));
  let browser;const errors=[];
  const enter=async page=>{
   if(await page.locator("#lx-welcome:not([hidden])").count()){await page.locator("#lx-welcome-skip").check();await page.locator("#lx-welcome-enter").click();}
+  await toReader(page);
  };
  /* Glossary of the words the games may use, read from the page: head <-> meaning. */
  const glossary=page=>page.evaluate(()=>{
@@ -43,7 +45,8 @@ const close=()=>new Promise(resolve=>server.close(resolve));
   const page=await browser.newPage({viewport:{width:1366,height:800}});
   page.on("pageerror",e=>errors.push(e.message));
   await page.goto(root,{waitUntil:"load"});await enter(page);
-  assert(await page.evaluate(()=>[...document.styleSheets].some(s=>(s.href||"").endsWith("app/styles/tablinum-play.css"))),"play stylesheet must load");
+  assert(await page.evaluate(()=>[...document.styleSheets].some(s=>(s.href||"").endsWith("app/styles/lx-app.css"))),"interface stylesheet (which styles the games) must load");
+  assert(await page.evaluate(()=>getComputedStyle(document.querySelector(".play-card")).display!=="inline"),"the games card is styled");
   const words=await glossary(page),heads=Object.keys(words);
 
   // 1. The card sits under the chapter list and survives re-renders.

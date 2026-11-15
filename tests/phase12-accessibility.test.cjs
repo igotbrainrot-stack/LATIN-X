@@ -21,9 +21,16 @@ assert(app.includes('role="status"'),"answer results must be announced");
 assert(app.includes('setAttribute("aria-live","polite")'),"status updates need a live region");
 assert(app.includes('lang="la"'),"Latin passages require language identification");
 assert(art.includes('alt="'),"published images require a text alternative");
-for(const selector of ["button:focus-visible","input:focus-visible","textarea:focus-visible","a:focus-visible"])
- assert(html.includes(selector),"Visible keyboard focus: "+selector);
-assert(html.includes('prefers-reduced-motion: reduce'));
+// Premium redesign (Nov 2026): CSS lives in bundled stylesheets; one global :focus-visible
+// rule covers every control, with a field-specific ring for inputs.
+const css=["app/styles/lx-tokens.css","app/styles/lx-app.css"].map(f=>fs.readFileSync(path.join(root,f),"utf8")).join("\n");
+assert(/(^|\n):focus-visible\s*\{[^}]*outline:\s*2px solid var\(--focus\)/.test(css),"Visible keyboard focus on every control");
+for(const selector of ["textarea:focus-visible","select:focus-visible",".word:focus-visible"])
+ assert(css.includes(selector),"Visible keyboard focus: "+selector);
+for(const rule of css.match(/[^{}]+\{[^{}]*outline:\s*(?:none|0)\b[^{}]*\}/g)||[])
+ assert(/:focus:not\(:focus-visible\)/.test(rule)||/box-shadow:/.test(rule),"A rule drops the focus outline without a replacement ring: "+rule.trim().slice(0,80));
+assert(css.includes('prefers-reduced-motion: reduce'));
+assert(html.includes('class="skip-link" href="#main"'),"Skip link to the main content");
 // DOM stubs exercise the additive label upgrade without launching a browser.
 const {enhance}=require("../app/80-accessibility.js");
 const appended=[],landmarks={};
@@ -34,15 +41,22 @@ const fake={getElementById:id=>fields[id]||landmarks[id]||null,
  querySelector:()=>null,createElement:()=>{const props={};return {setAttribute:(k,v)=>props[k]=v,getAttribute:k=>props[k],set textContent(t){this.text=t},get textContent(){return this.text}}}};
 enhance(fake);assert.equal(appended.length,3);
 assert.equal(landmarks.chapters.label,"Chapter navigation");
-const css=html.match(/<style>([\s\S]*?)<\/style>/)?.[1];assert(css);
-const get=name=>css.match(new RegExp("--"+name+":\\s*(#[0-9a-fA-F]{6})"))?.[1];
+const tokens=fs.readFileSync(path.join(root,"app/styles/lx-tokens.css"),"utf8");
+const light=tokens.match(/:root\s*\{([\s\S]*?)\n\}/)[1];
+const dark=tokens.match(/:root\[data-theme="dark"\]\s*\{([\s\S]*?)\n\}/)[1];
 function lum(c){const v=[1,3,5].map(i=>parseInt(c.slice(i,i+2),16)/255)
  .map(n=>n<=.04045?n/12.92:((n+.055)/1.055)**2.4);
  return .2126*v[0]+.7152*v[1]+.0722*v[2]}
 function contrast(a,b){const x=lum(a),y=lum(b);return (Math.max(x,y)+.05)/(Math.min(x,y)+.05)}
-for(const fg of ["ink","ink-soft","ink-muted","ochre","olive","burgundy","good-ink","bad-ink"]){
- const ground=fg==="good-ink"?"good-paper":fg==="bad-ink"?"bad-paper":"parchment";
- const ratio=contrast(get(fg),get(ground));
- assert(ratio>=4.5,`Body text ${fg} / ${ground} fails WCAG AA: ${ratio.toFixed(2)}:1`);
+let pairs=0;
+for(const [theme,block] of [["light",light],["dark",dark]]){
+ const get=name=>{const m=block.match(new RegExp("--"+name+":\\s*(#[0-9a-fA-F]{6})"));assert(m,theme+" theme lacks --"+name);return m[1]};
+ const check=(fg,bg,min)=>{const ratio=contrast(get(fg),get(bg));pairs++;
+  assert(ratio>=min,`${theme}: ${fg} on ${bg} fails WCAG AA (${ratio.toFixed(2)}:1, needs ${min}:1)`)};
+ for(const bg of ["bg","surface","surface-2"])for(const fg of ["ink","ink-2","ink-3","accent","good","bad"])check(fg,bg,4.5);
+ check("ink","surface-3",4.5);check("ink-2","surface-3",4.5);
+ check("on-primary","primary",4.5);check("ink","accent-soft",4.5);check("good","good-soft",4.5);check("bad","bad-soft",4.5);
+ // Non-text: focus ring and control borders against the page (WCAG 1.4.11)
+ check("focus","bg",3);check("focus","surface",3);
 }
-console.log("PASS Phase 12 static A11y: landmarks, input labels, Latin lang, results, focus, reduced motion and 8 manuscript palette contrasts >= 4.5:1.");
+console.log("PASS Phase 12 static A11y: landmarks, skip link, input labels, Latin lang, results, focus, reduced motion and "+pairs+" light/dark palette contrasts at WCAG AA.");

@@ -1,4 +1,5 @@
 "use strict";
+const {toReader,toSettings}=require("./helpers/open-reader.cjs");
 const assert=require("node:assert/strict"),path=require("node:path"),{pathToFileURL}=require("node:url"),{chromium}=require("playwright");
 (async()=>{
  const browser=await chromium.launch({headless:true});
@@ -20,11 +21,14 @@ const assert=require("node:assert/strict"),path=require("node:path"),{pathToFile
    await page.locator("#lx-welcome-skip").check();
    await page.locator("#lx-welcome-enter").click();
   }
-  await page.locator("#tabs [data-tab='progress']").click();
+  await toReader(page);
+  // Course lessons are listed in the lesson rail, which is shown beside the reader (not on Progress).
+  await page.locator("#tabs [data-tab='read']").click();
   await page.locator('[data-course="b01-c001"]').click();
   await page.getByRole("heading",{name:"Synthetic reload fixture"}).waitFor();
   assert.equal(await page.evaluate(()=>JSON.parse(localStorage.getItem("tablinum-state-v5")).ui.chapterId),"b01-c001");
   await page.reload();
+  await page.locator("#tabs [data-tab='read']").click();
   await page.getByRole("heading",{name:"Synthetic reload fixture"}).waitFor({timeout:10000});
   assert.equal(await page.evaluate(()=>localStorage.getItem("tablinum-source-review-v02")),null);
   await context.close();
@@ -38,7 +42,7 @@ const assert=require("node:assert/strict"),path=require("node:path"),{pathToFile
   if(await bad.locator("#lx-welcome:not([hidden])").count()){
    await bad.locator("#lx-welcome-skip").check();
    await bad.locator("#lx-welcome-enter").click();
-  }await bad.locator("#tabs [data-tab='progress']").click();
+  }await toReader(bad);await bad.locator("#tabs [data-tab='progress']").click();
   await bad.locator('[data-action="remigrateV4"]').waitFor();
   assert.match(await bad.locator("#main").textContent(),/Original v4 data is unreadable/);
   bad.on("dialog",dialog=>dialog.accept());
