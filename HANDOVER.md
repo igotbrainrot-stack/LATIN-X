@@ -1,5 +1,7 @@
 # HANDOVER — Tablinum (LATIN X)
 
+> **Update, 14 November 2026:** This document contains some historical instructions (including a now-outdated statement that all MP3s are gitignored). For the current integrated branch, public audio status, installer process, testing and PR dependencies, read [docs/LATEST_BUILD_20261114.md](docs/LATEST_BUILD_20261114.md) first. Do not use the historical release steps below as a current release checklist.
+
 For the next developer or AI agent. Read this first, then [docs/REFINEMENT_REPORT_20261108.md](docs/REFINEMENT_REPORT_20261108.md) for what the latest pass changed and [docs/FEATURE_INVENTORY.md](docs/FEATURE_INVENTORY.md) for the regression checklist.
 
 ## 1. What it is

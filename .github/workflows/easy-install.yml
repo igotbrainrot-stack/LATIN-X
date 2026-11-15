@@ -1,0 +1,113 @@
+name: Tablinum one-click Setup (Windows and Linux)
+on:
+  push:
+    branches:
+      - release/easy-install-20261111
+  pull_request:
+    paths:
+      - 'packaging/easy-install/**'
+      - 'scripts/build-easy-install.cjs'
+      - 'scripts/build-release.cjs'
+      - 'tests/easy-install.test.cjs'
+      - '.github/workflows/easy-install.yml'
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Package structure check
+        run: node tests/easy-install.test.cjs
+      - name: Build Setup ZIP
+        run: node scripts/build-easy-install.cjs --out dist
+      - name: Install, reinstall and remove on Linux
+        shell: bash
+        run: |
+          set -eu
+          work="$RUNNER_TEMP/setup test"; mkdir -p "$work/home dir/Desktop"
+          cd "$work" && unzip -q "$GITHUB_WORKSPACE/dist/Tablinum-Setup-20261111.zip"
+          test -x "Tablinum/Install Tablinum (Linux Mint).sh"
+          export HOME="$work/home dir"; unset XDG_DATA_HOME
+          d="$HOME/.local/share"
+          "./Tablinum/Install Tablinum (Linux Mint).sh" --no-launch --quiet
+          test "$(find "$d/tablinum" -name '*.mp3' | wc -l)" -eq 78
+          grep -q 'installed by Tablinum Setup' "$d/tablinum/tablinum-install.txt"
+          test -x "$d/applications/tablinum.desktop"
+          test -x "$HOME/Desktop/tablinum.desktop"
+          sudo apt-get install -y -qq desktop-file-utils >/dev/null
+          desktop-file-validate "$d/applications/tablinum.desktop"
+          "./Tablinum/Install Tablinum (Linux Mint).sh" --no-launch --quiet
+          sh "$d/tablinum/install/tablinum-setup.sh" --uninstall --quiet
+          test ! -e "$d/tablinum"; test ! -e "$d/applications/tablinum.desktop"; test ! -e "$HOME/Desktop/tablinum.desktop"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Tablinum-Setup
+          path: dist/Tablinum-Setup-20261111.zip
+          if-no-files-found: error
+          retention-days: 14
+
+  windows:
+    needs: build
+    runs-on: windows-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: Tablinum-Setup
+      - name: Install with the double-click file, check, reinstall and remove
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $work = Join-Path $env:RUNNER_TEMP 'setup test'
+          Expand-Archive -LiteralPath 'Tablinum-Setup-20261111.zip' -DestinationPath $work
+          $pkg = Join-Path $work 'Tablinum'
+          $cmd = Join-Path $pkg 'Install Tablinum (Windows).cmd'
+          $enter = Join-Path $env:RUNNER_TEMP 'enter.txt'
+          Set-Content $enter "`r`n`r`n"
+          # Runs a program the way Explorer would, with Enter ready for any "pause".
+          function Run([string]$File, [string]$Arguments) {
+            $p = Start-Process -FilePath $File -ArgumentList $Arguments -Wait -PassThru -NoNewWindow -RedirectStandardInput $enter
+            return $p.ExitCode
+          }
+          $rc = Run $cmd '-NoLaunch -Quiet'
+          if ($rc -ne 0) { throw "Setup exited with $rc" }
+          $dir = Join-Path $env:LOCALAPPDATA 'Tablinum'
+          if (-not (Test-Path (Join-Path $dir 'index.html'))) { throw 'index.html missing' }
+          $mp3 = @(Get-ChildItem $dir -Recurse -Filter *.mp3 -File).Count
+          if ($mp3 -ne 78) { throw "Expected 78 MP3 files, found $mp3" }
+          $info = Get-Content (Join-Path $dir 'tablinum-install.json') -Raw | ConvertFrom-Json
+          if ($info.audioFiles -ne 78) { throw 'Marker has the wrong audio count' }
+          $desk = Join-Path ([Environment]::GetFolderPath('Desktop')) 'Tablinum.lnk'
+          $start = Join-Path ([Environment]::GetFolderPath('Programs')) 'Tablinum.lnk'
+          $unin = Join-Path ([Environment]::GetFolderPath('Programs')) 'Uninstall Tablinum.lnk'
+          foreach ($l in @($desk, $start, $unin)) { if (-not (Test-Path $l)) { throw "Missing shortcut $l" } }
+          $target = (New-Object -ComObject WScript.Shell).CreateShortcut($desk).TargetPath
+          if ($target -ne (Join-Path $dir 'index.html')) { throw "Desktop shortcut points to $target" }
+          $reg = Get-ItemProperty 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\Tablinum'
+          if ($reg.DisplayName -ne 'Tablinum') { throw 'Uninstall entry missing' }
+          Write-Host "Installed $mp3 media files, version $($reg.DisplayVersion)"
+          # A second run updates in place.
+          $rc = Run $cmd '-NoLaunch -Quiet'
+          if ($rc -ne 0) { throw "Reinstall exited with $rc" }
+          # Remove using the command registered with Windows.
+          if ($reg.UninstallString -notmatch '^"([^"]+)" (.+)$') { throw "Unexpected UninstallString $($reg.UninstallString)" }
+          $rc = Run $Matches[1] ($Matches[2] + ' -Quiet')
+          if ($rc -ne 0) { throw "Uninstall exited with $rc" }
+          foreach ($p in @($dir, $desk, $start, $unin, 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\Tablinum')) {
+            if (Test-Path $p) { throw "Still present after uninstall: $p" }
+          }
+          # Refuses to overwrite a folder Setup did not create.
+          New-Item -ItemType Directory -Force $dir | Out-Null
+          Set-Content (Join-Path $dir 'mine.txt') 'keep'
+          $rc = Run $cmd '-NoLaunch -Quiet'
+          if ($rc -eq 0) { throw 'Setup overwrote a foreign folder' }
+          if (-not (Test-Path (Join-Path $dir 'mine.txt'))) { throw 'Foreign file was removed' }
+          Write-Host 'Windows Setup checks passed.'

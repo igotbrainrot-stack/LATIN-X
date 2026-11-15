@@ -1,0 +1,50 @@
+TABLINUM  -  Latin reading course  -  Setup package
+
+INSTALL
+
+  Windows
+    1. Right-click the ZIP file and choose "Extract All...".
+    2. Open the extracted folder and double-click
+         Install Tablinum (Windows)
+    3. If Windows shows "Windows protected your PC", choose
+       "More info" and then "Run anyway". The installer is a plain text
+       script, and you can open it in Notepad to read it.
+    Tablinum opens, and a Tablinum icon is added to your desktop and Start menu.
+
+  Linux Mint
+    1. Right-click the ZIP file and choose "Extract Here".
+    2. Open the extracted folder and double-click
+         Install Tablinum (Linux Mint).sh
+       and choose "Run".
+    Tablinum opens, and is added to your applications menu (Education) and desktop.
+    If the file opens as text instead: right-click it, Properties, Permissions,
+    tick "Allow executing file as program", then double-click it again.
+
+  After installing you can delete the ZIP and the extracted folder.
+
+WHAT IS INSTALLED
+
+  The whole program with all 78 recordings and music tracks. Nothing else is needed:
+  Tablinum runs in the web browser that is already on your computer, and it works
+  without an internet connection. Setup does not need an administrator password
+  and does not download anything.
+
+    Windows:     %LOCALAPPDATA%\Tablinum
+    Linux Mint:  ~/.local/share/tablinum
+
+WITHOUT INSTALLING
+
+  Double-click "Open without installing.html" to use Tablinum straight from this folder.
+
+YOUR PROGRESS
+
+  Progress is saved by your web browser for the place Tablinum is installed. Installing
+  a newer package over an old one keeps it. Always use the same browser. To move
+  progress to another computer or browser, open the Progress tab and
+  use "Export backup JSON", then restore it on the other side.
+
+REMOVE
+
+  Windows:     Start menu > "Uninstall Tablinum", or Settings > Apps > Installed apps.
+  Linux Mint:  right-click Tablinum in the applications menu and choose
+               "Remove Tablinum", or double-click the installer again.

@@ -19,6 +19,10 @@ const fake=`(()=>{
   addEventListener(){},speak(u){const step=plan.length?plan.shift():"ok";log.push({text:u.text,lang:u.lang,voice:u.voice&&u.voice.name,step});
    setTimeout(()=>{if(step==="ok")u.onend&&u.onend({});else u.onerror&&u.onerror({error:step})},20)}};
  Object.defineProperty(window,"speechSynthesis",{value:engine,configurable:true});
+ // This copy behaves as if it had no sentence recordings, so the browser voice reads them.
+ const src=Object.getOwnPropertyDescriptor(HTMLMediaElement.prototype,"src");
+ Object.defineProperty(HTMLMediaElement.prototype,"src",{configurable:true,get(){return src.get.call(this)},
+  set(v){src.set.call(this,String(v).replace("audio/narration/","audio/narration/not-in-this-copy/"))}});
 })();`;
 (async()=>{
  const browser=await chromium.launch({headless:true});
