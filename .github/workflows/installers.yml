@@ -49,6 +49,7 @@ jobs:
           set -eu
           deb="$(ls "$GITHUB_WORKSPACE"/dist/tablinum_*_all.deb)"
           sudo apt-get update -qq
+          sudo apt-get install -y -qq desktop-file-utils >/dev/null
           sudo apt-get install -y -qq "$deb" >/dev/null
           test "$(find /opt/tablinum -name '*.mp3' | wc -l)" -eq 78
           test -f /opt/tablinum/index.html
