@@ -2,6 +2,18 @@
 
 Dates are 2026. The program version shown to learners is unchanged at 0.4.2 (the owner sets versions).
 
+## Unreleased — packaging layout (15 November, branch `build/installer-layout-20261115`)
+
+Based on `ui/premium-redesign-20261115` (PR #20). Not merged, not released. No program file, saved-data format, content or media changed, and no runtime file moved.
+
+### Added
+- `packaging/manifest.json`: one description of what ships (runtime files, exclusions, media count, icons, names, release label, install locations). `build-release.cjs` and `build-easy-install.cjs` now read it. The Setup ZIP they produce is byte-identical to before.
+- `npm run build:stage`: writes the exact installer tree to `dist/stage/Tablinum/` with `payload.json` (every file, size and SHA-256), for any installer tool.
+- `packaging/windows/tablinum-setup.iss` and `npm run build:windows-exe`: a single per-user Windows `.exe` (Inno Setup 6) that runs the existing `install-windows.ps1`.
+- `packaging/linux/` and `npm run build:linux-installers`: a single-file per-user `.run` that runs the existing Mint installer, and a system-wide `.deb`.
+- `tests/packaging-layout.test.cjs` (in `npm test`) and `.github/workflows/installers.yml`, which builds and really installs the `.exe`, `.run` and `.deb`.
+- `packaging/README.md`.
+
 ## Unreleased — interface redesign (15 November, branch `ui/premium-redesign-20261115`)
 
 Based on `release/easy-install-20261111` (PR #19). Not merged, not released.

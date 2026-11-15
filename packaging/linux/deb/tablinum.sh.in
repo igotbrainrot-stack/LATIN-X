@@ -1,0 +1,8 @@
+#!/bin/sh
+# Opens Tablinum in the default web browser.
+page="@INSTALL_DIR@/@ENTRY@"
+for opener in xdg-open sensible-browser firefox chromium chromium-browser google-chrome; do
+  if command -v "$opener" >/dev/null 2>&1; then exec "$opener" "$page"; fi
+done
+printf 'No web browser was found. Open this file in a browser: %s\n' "$page" >&2
+exit 1

@@ -1,0 +1,140 @@
+name: Tablinum single-file installers (Windows .exe, Linux .run and .deb)
+# Builds the installers from packaging/manifest.json and installs each one for real.
+# Nothing is published: the files are kept as workflow artifacts for 14 days.
+on:
+  pull_request:
+    paths:
+      - 'packaging/**'
+      - 'scripts/build-release.cjs'
+      - 'scripts/build-easy-install.cjs'
+      - 'scripts/build-stage.cjs'
+      - 'scripts/build-linux-installers.cjs'
+      - 'scripts/build-windows-exe.cjs'
+      - 'tests/packaging-layout.test.cjs'
+      - '.github/workflows/installers.yml'
+  workflow_dispatch:
+jobs:
+  linux:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Layout check
+        run: node tests/packaging-layout.test.cjs
+      - name: Build .run and .deb
+        run: node scripts/build-linux-installers.cjs --out dist
+      - name: Per-user .run, install, reinstall and remove
+        shell: bash
+        run: |
+          set -eu
+          run="$GITHUB_WORKSPACE/dist/Tablinum-Setup-20261111.run"
+          test -x "$run"
+          export HOME="$RUNNER_TEMP/home dir"; mkdir -p "$HOME/Desktop"; unset XDG_DATA_HOME
+          d="$HOME/.local/share"
+          "$run" --no-launch --quiet
+          test "$(find "$d/tablinum" -name '*.mp3' | wc -l)" -eq 78
+          grep -q 'installed by Tablinum Setup' "$d/tablinum/tablinum-install.txt"
+          test -x "$d/applications/tablinum.desktop"
+          "$run" --no-launch --quiet
+          "$run" --uninstall --quiet
+          test ! -e "$d/tablinum"; test ! -e "$d/applications/tablinum.desktop"
+      - name: System .deb, install, check and remove
+        shell: bash
+        run: |
+          set -eu
+          deb="$(ls "$GITHUB_WORKSPACE"/dist/tablinum_*_all.deb)"
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq desktop-file-utils >/dev/null
+          sudo apt-get install -y -qq "$deb" >/dev/null
+          test "$(find /opt/tablinum -name '*.mp3' | wc -l)" -eq 78
+          test -f /opt/tablinum/index.html
+          test -x /usr/bin/tablinum
+          desktop-file-validate /usr/share/applications/tablinum.desktop
+          test -f /usr/share/icons/hicolor/256x256/apps/tablinum.png
+          dpkg -s tablinum | grep -q '^Status: install ok installed'
+          sudo apt-get remove -y -qq tablinum >/dev/null
+          test ! -e /opt/tablinum; test ! -e /usr/bin/tablinum; test ! -e /usr/share/applications/tablinum.desktop
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Tablinum-Linux-installers
+          path: |
+            dist/Tablinum-Setup-*.run
+            dist/tablinum_*_all.deb
+          if-no-files-found: error
+          retention-days: 14
+
+  windows-exe:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Make sure Inno Setup 6 is present
+        shell: powershell
+        run: |
+          $iscc = Join-Path ${env:ProgramFiles(x86)} 'Inno Setup 6\ISCC.exe'
+          if (-not (Test-Path $iscc)) { choco install innosetup -y --no-progress }
+          if (-not (Test-Path $iscc)) { throw 'Inno Setup 6 was not installed' }
+      - name: Build Tablinum-Setup .exe
+        run: node scripts/build-windows-exe.cjs --require --out dist
+      - name: Install silently, check, reinstall and remove
+        shell: powershell
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $exe = Join-Path $env:GITHUB_WORKSPACE 'dist\Tablinum-Setup-20261111.exe'
+          if (-not (Test-Path $exe)) { throw 'The .exe was not built' }
+          function Run([string]$File, [string]$Arguments) {
+            $p = Start-Process -FilePath $File -ArgumentList $Arguments -Wait -PassThru
+            return $p.ExitCode
+          }
+          $silent = '/VERYSILENT /SUPPRESSMSGBOXES /NOLAUNCH'
+          $rc = Run $exe $silent
+          if ($rc -ne 0) { throw "Setup exited with $rc" }
+          $dir = Join-Path $env:LOCALAPPDATA 'Tablinum'
+          if (-not (Test-Path (Join-Path $dir 'index.html'))) { throw 'index.html missing' }
+          $mp3 = @(Get-ChildItem $dir -Recurse -Filter *.mp3 -File).Count
+          if ($mp3 -ne 78) { throw "Expected 78 MP3 files, found $mp3" }
+          $info = Get-Content (Join-Path $dir 'tablinum-install.json') -Raw | ConvertFrom-Json
+          if ($info.audioFiles -ne 78) { throw 'Marker has the wrong audio count' }
+          $desk = Join-Path ([Environment]::GetFolderPath('Desktop')) 'Tablinum.lnk'
+          $start = Join-Path ([Environment]::GetFolderPath('Programs')) 'Tablinum.lnk'
+          $unin = Join-Path ([Environment]::GetFolderPath('Programs')) 'Uninstall Tablinum.lnk'
+          foreach ($l in @($desk, $start, $unin)) { if (-not (Test-Path $l)) { throw "Missing shortcut $l" } }
+          $target = (New-Object -ComObject WScript.Shell).CreateShortcut($desk).TargetPath
+          if ($target -ne (Join-Path $dir 'index.html')) { throw "Desktop shortcut points to $target" }
+          $regPath = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\Tablinum'
+          $reg = Get-ItemProperty $regPath
+          if ($reg.DisplayName -ne 'Tablinum') { throw 'Uninstall entry missing' }
+          Write-Host "Installed $mp3 media files, version $($reg.DisplayVersion)"
+          # A second run updates in place.
+          $rc = Run $exe $silent
+          if ($rc -ne 0) { throw "Reinstall exited with $rc" }
+          # Remove using the command registered with Windows.
+          if ($reg.UninstallString -notmatch '^"([^"]+)" (.+)$') { throw "Unexpected UninstallString $($reg.UninstallString)" }
+          $rc = Run $Matches[1] ($Matches[2] + ' -Quiet')
+          if ($rc -ne 0) { throw "Uninstall exited with $rc" }
+          foreach ($p in @($dir, $desk, $start, $unin, $regPath)) {
+            if (Test-Path $p) { throw "Still present after uninstall: $p" }
+          }
+          # Refuses to overwrite a folder Setup did not create, and says so with exit code 1.
+          New-Item -ItemType Directory -Force $dir | Out-Null
+          Set-Content (Join-Path $dir 'mine.txt') 'keep'
+          $rc = Run $exe $silent
+          if ($rc -eq 0) { throw 'Setup overwrote a foreign folder' }
+          if (-not (Test-Path (Join-Path $dir 'mine.txt'))) { throw 'Foreign file was removed' }
+          Write-Host 'Windows .exe checks passed.'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Tablinum-Windows-exe
+          path: dist/Tablinum-Setup-*.exe
+          if-no-files-found: error
+          retention-days: 14

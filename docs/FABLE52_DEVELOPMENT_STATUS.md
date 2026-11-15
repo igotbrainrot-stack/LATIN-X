@@ -24,6 +24,15 @@ at the point the pull request was opened.
 - The interface typeface is Source Sans 3, bundled under the OFL.
 - Work was done in one session without sub-agents.
 
+## Follow-up: packaging layout (15 November)
+
+Asked for: "re organise files for easy integration into an exe and linux installer file once it is
+ready to be shipped in later builds". Done on `build/installer-layout-20261115` as a stacked PR:
+one packaging manifest, a staging step, a Windows `.exe` definition (Inno Setup), a Linux `.run`
+and `.deb`, a layout test in `npm test`, and an `installers` workflow that builds and installs all
+three. The `.run` and `.deb` were built and installed in a Linux container. The `.exe` cannot be
+built here (Inno Setup is a Windows program); the workflow builds it on `windows-latest`.
+
 ## Not done, and why
 
 - Real-device testing on Windows 11 and Linux Mint: not possible from this environment.

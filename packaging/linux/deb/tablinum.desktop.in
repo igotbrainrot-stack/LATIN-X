@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=Tablinum
+GenericName=Latin reader
+Comment=@SUMMARY@
+Exec=/usr/bin/tablinum
+Icon=tablinum
+Terminal=false
+Categories=Education;Languages;
+Keywords=Latin;reader;course;
+StartupNotify=false

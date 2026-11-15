@@ -1,0 +1,13 @@
+Package: @PACKAGE@
+Version: @VERSION@
+Section: @SECTION@
+Priority: optional
+Architecture: @ARCH@
+Depends: @DEPENDS@
+Installed-Size: @INSTALLED_KB@
+Maintainer: @MAINTAINER@
+Description: @SUMMARY@
+ Tablinum is an offline Latin reading course that runs in the web browser
+ already installed on the computer. Eight illustrated lessons with recorded
+ sentences, exercises, word review and a glossary. Nothing is downloaded and
+ no account is needed. Progress is kept in the browser of each user.
