@@ -12,7 +12,7 @@ A static, offline Latin reader. Plain HTML + classic `<script>` files, opened di
 
 ```
 index.html                 reader shell; inline manuscript CSS (byte-locked) + <link>s + ordered <script>s
-app/styles/                tablinum-fonts.css (bundled fallback face), tablinum-polish.css (refinement layer)
+app/styles/                tablinum-fonts.css (two bundled faces), lx-tokens.css (design tokens), lx-app.css (all components); see DESIGN_SYSTEM.md
 app/20-state-v5.js         storage: immutable v4 key, v5 key, snapshot, backup parse/validate, migration
 app/30-content-loader.js   on-demand chapter scripts from content/catalogue.js
 app/50-exercises.js        signed-only exercise engine (15 types)
@@ -62,12 +62,12 @@ npm run checksums                # regenerate root SHA256SUMS.txt after any chan
 
 - `assets/art/b01/*.webp` — nine owner-approved scenes (+ thumbs). SHA/size/polygon gates in `tests/art-replacement-regions.test.cjs`. Never replace without owner sign-off.
 - `audio/narration/arjun/*.mp3` — 75 current local narrator files (74 Arjun including 67 sentence clips, plus labelled Miriam `laeta` word fallback), Git-ignored. `docs/audio/ARJUN_OFFLINE_MEDIA_CHECKSUMS_20261110.json` pins every included MP3; historical Miriam variants and approvals are preserved separately but do not automatically ship.
-- `assets/fonts/gentium-book-plus/` — OFL fallback face; `assets/icons/` — app icon.
+- `assets/fonts/gentium-book-plus/` — OFL reading face; `assets/fonts/source-sans-3/` — OFL interface face; `assets/icons/` — app icon.
 - `vendor/ts-fsrs.umd.js` — pinned, verified by `npm run test:vendor-fsrs`.
 
 ## 6. Constraints you must keep
 
-- `app/legacy-runtime.js` lesson data, questions, answers and cloze are locked (`legacy-content-lock`, `phase3a-relocation`). `index.html` may change only in the enumerated `<script>`/`<link>` tags. Put visual changes in `app/styles/tablinum-polish.css`.
+- `app/legacy-runtime.js` lesson data, questions, answers and cloze are locked (`legacy-content-lock`, `phase3a-relocation`). Since the 15 Nov 2026 redesign, `index.html` carries the app-bar shell and no inline style or script; its script list and order, and its five `<link>` tags, are pinned by `phase3a-relocation`. Put visual changes in `app/styles/lx-app.css` using tokens from `lx-tokens.css` (see `DESIGN_SYSTEM.md` and `DEVELOPMENT_HANDOVER.md`).
 - Pilot chapters, 44 picture questions and all lexemes are **unsigned**. Never mark anything approved; only the owner signs.
 - Storage: never overwrite `tablinum-source-review-v02` (v4); v5 is `tablinum-state-v5`.
 - Narration: show canonical Latin only (`Līvia`, `quoque`); TTS aliases (`Lii-wia`, `Lee-wee-ah`, `Kwoh-kweh`) must never be learner-visible. Owner approval tier is `owner_not_latinist`. Sentence 7 default = V6b. Don't fabricate word timings.

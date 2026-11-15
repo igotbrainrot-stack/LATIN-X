@@ -1,5 +1,7 @@
 # Tablinum — Classical Roman Manuscript Edition
 
+> **Superseded on 15 November 2026.** This describes the earlier manuscript look. The current interface is specified in [DESIGN_SYSTEM.md](../DESIGN_SYSTEM.md). Kept for history.
+
 ## Status
 Design-only branch: `design/classical-manuscript-20261104`, based on the existing v0.4.2 review branch `fix/tablinum-v04-review-20261104`. No merge has been performed. `index.html` continues to be a single-file, offline-capable application.
 

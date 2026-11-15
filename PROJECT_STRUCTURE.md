@@ -4,7 +4,7 @@
 
 | Path | Responsibility |
 |---|---|
-| `index.html` | Manuscript shell, explicit script order, approved CSS texture, welcome dialogue |
+| `index.html` | App shell (skip link, app bar, layout hosts, audio strip), explicit script order, welcome dialogue. No inline CSS: see `app/styles/` and `DESIGN_SYSTEM.md` |
 | `app/20-state-v5.js` | State, immutable original v4 key, v5 storage, migration, backups |
 | `app/30-content-loader.js` | Dynamic local chapter scripts, no network fetch |
 | `app/50-exercises.js` | Signed-only newer-course exercises |
