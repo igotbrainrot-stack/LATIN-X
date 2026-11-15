@@ -44,7 +44,9 @@ assert(!(type===firefox&&channel),"Firefox cannot be combined with a Chromium ch
   stored=await page.evaluate(()=>JSON.parse(localStorage.getItem("tablinum-state-v5")));
   assert.equal(stored.questions["legacy-ch01-q001"].correct,true,"Answer vanished on file:// reload");
   // Seed a realistic raw v4 profile before the next reload; verify Progress.
-  await page.addInitScript(({key,value})=>{
+  // Seeded from the page, not from an init script: an init script that touches localStorage on a file:// page
+  // sometimes leaves Chromium with an empty storage area after a reload, which made this test fail now and then.
+  await page.evaluate(({key,value})=>{
    localStorage.removeItem("tablinum-state-v5");
    localStorage.removeItem("tablinum-v4-snapshot");
    localStorage.setItem(key,value);

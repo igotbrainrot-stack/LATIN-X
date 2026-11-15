@@ -27,14 +27,26 @@ Reviewed by Claude on `main` at 8de337b. The review ran the existing test suites
 
 Test: `tests/program-review-browser.test.cjs` (`npm run test:program-review-browser`, also part of `npm run test:browser-all`).
 
-## Gaps not fixed here
+## Follow-up change (same day)
 
-These need reviewed Latin data or an owner decision, so they are listed and left alone.
+The owner asked for the remaining gaps to be completed. This second change does what can be done without a Latinist or a pair of ears.
 
-- **Glosses ignore the inflected form.** Clicking *it* shows "to go" and *mātrī* shows "mother". A learner is not told the person, number or case. This needs a reviewed form-level table; it should not be generated unreviewed.
-- **Typed answers accept only the listed variants.** A correct sentence in another word order (*Magna est arbor*) is rejected. Item 4 softens this. A real fix needs an agreed list of accepted answers per question.
+| # | Gap | What was done |
+|---|---|---|
+| 12 | Glosses ignored the inflected form. | Clicking a word now also shows its possible forms, for example *hortō*: "one of dative singular; ablative singular. The sentence shows which." All 207 glossary forms are covered. Regular forms come from `scripts/lib/paradigms.cjs` applied to draft dictionary data in `curriculum/lexicon/legacy-form-lexemes.json`; irregular words list only the forms the course uses. Every possible reading is listed and the program never picks one from context. The note is labelled "Draft note, not yet reviewed" in the app. |
+| 13 | Typed answers accepted only the listed variants. | The words of an accepted answer in another order are now accepted (*Magna est arbor*). A different word or ending is still wrong. |
+| 14 | The reader had no "next chapter" button. | Added; disabled on the last chapter. |
+| 15 | `tests/phase7a-browser.test.cjs` failed about one run in five. | Two causes. First, a real bug: when a music file failed to load, the fallback music loop could restart while a microphone recording was in progress, or while the page was hidden. Fixed in `app/60-audio-ambience.js`. Second, a test fault: the test wrote a preference from a Playwright init script, and Chromium then sometimes presented an empty storage area after a reload of a `file://` page. Reproduced outside the app's own code paths; the test now writes the preference from the page. 25 consecutive runs pass. |
+
+**Review needed.** The form notes are Claude's draft, not checked by a Latinist and not copied from a dictionary. The review sheet is `curriculum/lexicon/review-sheets/legacy-form-notes.csv` (one row per form, with verdict and note columns). Rebuild with `npm run build:form-notes`; `tests/form-notes.test.cjs` runs in `npm test`.
+
+The same test fault was then found in `file-url-smoke`, `phase6-browser` and `phase7b-browser`, which failed in 1 to 3 of 8 runs on unchanged `main`. They received the same fix and each passed 12 consecutive runs. `phase3c-review-browser` and `phase3c-browser` also use init scripts; they did not fail here and were left alone.
+
+## Gaps still open
+
+These need a Latinist, a listener or an owner decision.
+
+- **Form notes are unreviewed** (item 12) and list possible readings only; they do not say which reading a given sentence uses.
 - **No approved lexemes.** `content/lexicon.js` is empty, so the four vocabulary measures and reviewed cards are dormant. All saved words are "legacy, not owner-reviewed".
-- **The reader has no "next chapter" button**; the learner moves on through Exercitia or the chapter list.
-- **One browser test is unreliable.** `tests/phase7a-browser.test.cjs` ("No autoplay on reload") failed in 2 of 4 runs on unchanged `main` and 1 of 4 runs with this change. It was not investigated here, so it is not known whether the test or the ambience code is at fault.
 - **Recordings.** None of the 75 recordings has been checked by ear against `pronunciation/LISTENING_SHEET.csv`. `npm run test:release` needs the private MP3s and cannot run in a clean checkout.
 - **Open owner decisions from the Latin audit:** LX-015 wording; *reconstrūctiō* or *recōnstrūctiō*; *magnus* or *māgnus*; *dēest*; *Gāius*; *tonitrus*.
