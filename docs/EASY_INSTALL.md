@@ -20,6 +20,14 @@ fresh folder first, so a failed copy never leaves half a program.
 Sources live in `packaging/easy-install/`. The builder sets CRLF on the `.cmd` and
 readme, LF and mode 0755 on the `.sh`, and a UTF-8 BOM on the PowerShell script.
 
+## Single-file installers
+
+The same Setup tree is also packed as one file per system: a Windows `.exe`
+(Inno Setup), a Linux `.run`, and a system-wide `.deb`. They reuse the installers
+above. See `packaging/README.md` for the layout, the build commands and the caveats
+(the `.exe` is unsigned; the `.deb` uses a different folder, so progress does not carry
+over from a per-user install without a backup).
+
 ## Checks
 
 - `npm run test:easy-install` checks the layout, line endings, executable bit and

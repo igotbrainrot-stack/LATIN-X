@@ -72,6 +72,16 @@ Running the browser suites rewrites the tracked screenshots in `artifacts/`.
 6. Whether to bump the version for this interface.
 7. Merge order for the PR stack.
 
+## Packaging for an .exe and a Linux installer
+
+Branch `build/installer-layout-20261115`, stacked on this one. `packaging/manifest.json` now
+describes what ships; every builder reads it. `npm run build:installers` makes the Setup ZIP,
+a Linux `.run`, a `.deb` and, where Inno Setup 6 is installed, a Windows `.exe`. The `.exe` and
+`.run` run the existing installers from PR #19 rather than duplicating them. Runtime files were
+not moved, because `file://` progress, the tests and the open PRs all depend on their paths.
+See `packaging/README.md`. Before shipping: code-sign the `.exe`, and decide whether to offer the
+`.deb` (it installs to `/opt/tablinum`, so progress from a per-user install needs a backup).
+
 ## Suggested next work
 
 - Run the program and both installers on a real Windows 11 machine and a real Linux Mint machine. This has not been done.

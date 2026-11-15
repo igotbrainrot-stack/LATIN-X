@@ -22,7 +22,10 @@
 | `assets/audio/roman/` | Three Roman instrumentals (ignored by Git) |
 | `docs/audio/ARJUN_OFFLINE_MEDIA_CHECKSUMS_20261110.json` | Authoritative 78-file paths, lengths and SHA256 hashes |
 | `launchers/` | Windows/Linux browser launcher and optional Linux desktop-menu installer |
+| `packaging/manifest.json` | Single description of what ships: runtime files, names, version label, install locations. Every builder reads it |
+| `packaging/easy-install/`, `packaging/windows/`, `packaging/linux/` | Installer sources: the per-user Setup scripts, the Inno Setup `.exe` definition, the `.run` header and `.deb` templates. See `packaging/README.md` |
 | `scripts/build-release.cjs` | Build full Windows ZIP, Linux tar.gz, source ZIP and SHA256SUMS |
+| `scripts/build-easy-install.cjs`, `build-stage.cjs`, `build-linux-installers.cjs`, `build-windows-exe.cjs` | Setup ZIP, staged installer folder, Linux `.run` and `.deb`, Windows `.exe` |
 | `tests/` | Content/progress/approval locks, release extraction/browser verification |
 | `docs/history/`, `CLAUDE_HANDOVER/`, `CLAUDE_REVIEW_PACKAGE/` | Historical records; retain while references and approval history are audited |
 

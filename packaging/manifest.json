@@ -1,0 +1,63 @@
+{
+  "$comment": "Single source of truth for what ships and how it is named. Read by scripts/build-release.cjs, build-easy-install.cjs, build-stage.cjs, build-linux-installers.cjs and by packaging/windows/tablinum-setup.iss (through the staged payload). Change values here, not in the scripts.",
+  "product": {
+    "name": "Tablinum",
+    "id": "tablinum",
+    "publisher": "LATIN X",
+    "summary": "Offline Latin reading course (Prima Via)",
+    "versionFrom": "package.json",
+    "label": "20261111",
+    "homepage": ""
+  },
+  "runtime": {
+    "entry": "index.html",
+    "files": ["index.html", "Picture Practice.html", "Art Review.html", "ATTRIBUTION.md", "curriculum/music.json"],
+    "dirs": ["app", "content", "vendor", "assets", "audio/narration"],
+    "exclude": ["(^|/)PRIVATE_", "LOCAL_INSTALL_RECORD\\.json$", "(^|/)\\.DS_Store$", "(^|/)Thumbs\\.db$"],
+    "excludeFlags": ["i", "", "", ""],
+    "mediaManifest": "docs/audio/ARJUN_OFFLINE_MEDIA_CHECKSUMS_20261110.json",
+    "mediaCount": 78
+  },
+  "icons": {
+    "ico": "assets/icons/tablinum.ico",
+    "png256": "assets/icons/tablinum-256.png",
+    "png48": "assets/icons/tablinum-48.png",
+    "svg": "assets/icons/tablinum.svg"
+  },
+  "setupPackage": {
+    "source": "packaging/easy-install",
+    "top": "Tablinum",
+    "programDir": "program",
+    "windowsInstaller": "Install Tablinum (Windows).cmd",
+    "windowsScript": "install-windows.ps1",
+    "linuxInstaller": "Install Tablinum (Linux Mint).sh",
+    "portablePage": "Open without installing.html",
+    "readme": "READ ME FIRST.txt"
+  },
+  "windows": {
+    "installDir": "%LOCALAPPDATA%\\Tablinum",
+    "uninstallKey": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Tablinum",
+    "exeScript": "packaging/windows/tablinum-setup.iss",
+    "exeName": "Tablinum-Setup-{label}.exe",
+    "requiresAdmin": false
+  },
+  "linux": {
+    "userInstallDir": "~/.local/share/tablinum",
+    "runHeader": "packaging/linux/run-header.sh",
+    "runName": "Tablinum-Setup-{label}.run",
+    "deb": {
+      "template": "packaging/linux/deb",
+      "package": "tablinum",
+      "architecture": "all",
+      "installDir": "/opt/tablinum",
+      "section": "education",
+      "depends": "xdg-utils",
+      "maintainer": "LATIN X <noreply@example.invalid>",
+      "debName": "tablinum_{version}_all.deb"
+    }
+  },
+  "stage": {
+    "dir": "dist/stage",
+    "payloadIndex": "payload.json"
+  }
+}

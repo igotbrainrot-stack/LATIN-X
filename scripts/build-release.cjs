@@ -22,12 +22,14 @@ const root=path.resolve(__dirname,"..");
 const arg=(name,fallback)=>{const i=process.argv.indexOf(name);return i>0&&process.argv[i+1]?process.argv[i+1]:fallback};
 const TOP="Tablinum";
 
-/* Runtime set: pages, their scripts/styles/assets and every file a page links to. */
+/* Runtime set: pages, their scripts/styles/assets and every file a page links to.
+ * Declared once in packaging/manifest.json so every builder and installer agrees. */
+const MANIFEST=JSON.parse(fs.readFileSync(path.join(root,"packaging","manifest.json"),"utf8"));
 const RUNTIME={
- files:["index.html","Picture Practice.html","Art Review.html","ATTRIBUTION.md","curriculum/music.json"],
- dirs:["app","content","vendor","assets","audio/narration"],
+ files:[...MANIFEST.runtime.files],
+ dirs:[...MANIFEST.runtime.dirs],
  // generated or private material that must never ship
- exclude:[/(^|\/)PRIVATE_/i,/LOCAL_INSTALL_RECORD\.json$/,/(^|\/)\.DS_Store$/,/(^|\/)Thumbs\.db$/]
+ exclude:MANIFEST.runtime.exclude.map((source,i)=>new RegExp(source,MANIFEST.runtime.excludeFlags[i]||""))
 };
 const PLATFORM={
  windows:[
@@ -56,7 +58,7 @@ function walk(rel){
 }
 /* Only manifest-pinned media belongs in learner and source distributions.
  * Historical/private takes can remain on a developer's disk without leaking. */
-const OWNER_MEDIA_MANIFEST="docs/audio/ARJUN_OFFLINE_MEDIA_CHECKSUMS_20261110.json";
+const OWNER_MEDIA_MANIFEST=MANIFEST.runtime.mediaManifest;
 function ownerMediaFiles(){
  const m=JSON.parse(fs.readFileSync(path.join(root,OWNER_MEDIA_MANIFEST),"utf8"));
  if(!Array.isArray(m.files)||m.files.length!==78)throw Error("Expected 78 owner-media entries");
@@ -186,4 +188,4 @@ function build(options={}){
  return outputs.map(([name])=>path.join(OUT,name));
 }
 if(require.main===module)build();
-module.exports={build,runtimeFiles,entriesFor,sourceEntries,zip,tarGz,TOP,RUNTIME};
+module.exports={build,runtimeFiles,entriesFor,sourceEntries,zip,tarGz,TOP,RUNTIME,MANIFEST};
