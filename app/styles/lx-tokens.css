@@ -1,0 +1,164 @@
+/* TABLINVM design tokens (November 2026 redesign).
+ *
+ * One source for colour, type, space, radius, shadow and motion. Every component in
+ * lx-app.css, and the Picture Practice page, reads these variables; nothing else in the
+ * program sets a raw colour for interface chrome. See DESIGN_SYSTEM.md.
+ *
+ * Themes: light is the default. Dark applies when the learner chooses it
+ * (html[data-theme="dark"]) or, with the "System" setting, when the computer asks for it.
+ * No remote fonts or images: the program must run offline from file://. */
+:root {
+  color-scheme: light;
+
+  /* Surfaces: warm ivory page, lighter cards, parchment insets */
+  --bg: #f5f0e6;
+  --bg-tint: #eee7d9;
+  --surface: #fffdf9;
+  --surface-2: #f8f3e9;
+  --surface-3: #ece4d3;
+  /* Ink */
+  --ink: #201c17;
+  --ink-2: #4a4339;
+  --ink-3: #675e52;
+  /* Rules */
+  --line: #e3d9c7;
+  --line-strong: #c8bba2;
+  /* Primary: midnight. One primary action per view. */
+  --primary: #27344f;
+  --primary-hover: #1b2640;
+  --on-primary: #fbf8f1;
+  /* Accent: bronze. Selection, progress, small ornaments. */
+  --accent: #7c5c2b;
+  --accent-soft: #f1e6cf;
+  --accent-line: #c7a66a;
+  /* Feedback: sage for right, terracotta for wrong */
+  --good: #3c6045;
+  --good-soft: #e7f0e4;
+  --good-line: #9dbb9f;
+  --bad: #963a2b;
+  --bad-soft: #f9e9e3;
+  --bad-line: #d8a295;
+  --focus: #2b5cb0;
+  --scrim: rgba(24, 21, 16, .52);
+  /* Illustration mount: the watercolours are painted on pale paper in both themes */
+  --plate: #f6efdf;
+  --plate-ink: #4a4339;
+
+  --shadow-1: 0 1px 2px rgba(32, 28, 23, .06), 0 1px 1px rgba(32, 28, 23, .04);
+  --shadow-2: 0 8px 24px rgba(32, 28, 23, .09), 0 2px 6px rgba(32, 28, 23, .05);
+  --shadow-3: 0 24px 60px rgba(20, 18, 14, .22);
+
+  --radius-s: 6px;
+  --radius: 10px;
+  --radius-l: 16px;
+  --radius-pill: 999px;
+
+  /* Type: a book face for Latin and headings, a sans for the interface */
+  --font-serif: "Tablinum Book", "Gentium Book Plus", "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --font-sans: "Tablinum Sans", "Source Sans 3", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --text-xs: 12px;
+  --text-s: 13.5px;
+  --text-m: 15.5px;
+  --text-l: 18px;
+
+  /* Space: a 4px scale */
+  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px; --s6: 32px; --s7: 48px; --s8: 64px;
+
+  --bar-h: 64px;
+  --measure: 720px;
+  --ease: cubic-bezier(.2, .7, .2, 1);
+  --fast: .14s;
+  --slow: .28s;
+
+  /* Reader preferences (Settings, or the toolbar above a story) */
+  --reader-size: 22px;
+  --reader-leading: 1.75;
+
+  /* Names used by earlier stylesheets and tools; kept so nothing that reads them breaks */
+  --parchment: var(--bg);
+  --paper: var(--surface);
+  --paper-bright: var(--surface);
+  --paper-inset: var(--surface-2);
+  --ink-soft: var(--ink-2);
+  --ink-muted: var(--ink-3);
+  --rule: var(--line-strong);
+  --rule-light: var(--line);
+  --terracotta: var(--bad);
+  --burgundy: var(--bad);
+  --ochre: var(--accent);
+  --olive: var(--good);
+  --serif: var(--font-serif);
+  --display: var(--font-serif);
+}
+:root[data-reader-size="0"] { --reader-size: 18px; }
+:root[data-reader-size="1"] { --reader-size: 20px; }
+:root[data-reader-size="3"] { --reader-size: 25px; }
+:root[data-reader-size="4"] { --reader-size: 29px; }
+:root[data-reader-leading="0"] { --reader-leading: 1.5; }
+:root[data-reader-leading="2"] { --reader-leading: 2.05; }
+
+/* Dark theme: midnight surfaces, ivory ink, bronze-gold primary. Written out twice because
+ * CSS cannot share a block between a media query and an attribute selector. Keep the two
+ * blocks identical (tests/redesign.test.cjs compares them). */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #12151c;
+    --bg-tint: #171b24;
+    --surface: #1c212c;
+    --surface-2: #222836;
+    --surface-3: #2b3243;
+    --ink: #ece6d9;
+    --ink-2: #c5beb0;
+    --ink-3: #a09a8e;
+    --line: #2d3545;
+    --line-strong: #414b60;
+    --primary: #d9b36c;
+    --primary-hover: #e7c68a;
+    --on-primary: #1b1609;
+    --accent: #d9b36c;
+    --accent-soft: #2f2a1b;
+    --accent-line: #7d6737;
+    --good: #a3d0a8;
+    --good-soft: #1d2c24;
+    --good-line: #47694f;
+    --bad: #f2a896;
+    --bad-soft: #35211d;
+    --bad-line: #8d4738;
+    --focus: #8fb7ff;
+    --scrim: rgba(4, 6, 10, .68);
+    --shadow-1: 0 1px 2px rgba(0, 0, 0, .35);
+    --shadow-2: 0 8px 24px rgba(0, 0, 0, .38), 0 2px 6px rgba(0, 0, 0, .3);
+    --shadow-3: 0 24px 60px rgba(0, 0, 0, .6);
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #12151c;
+  --bg-tint: #171b24;
+  --surface: #1c212c;
+  --surface-2: #222836;
+  --surface-3: #2b3243;
+  --ink: #ece6d9;
+  --ink-2: #c5beb0;
+  --ink-3: #a09a8e;
+  --line: #2d3545;
+  --line-strong: #414b60;
+  --primary: #d9b36c;
+  --primary-hover: #e7c68a;
+  --on-primary: #1b1609;
+  --accent: #d9b36c;
+  --accent-soft: #2f2a1b;
+  --accent-line: #7d6737;
+  --good: #a3d0a8;
+  --good-soft: #1d2c24;
+  --good-line: #47694f;
+  --bad: #f2a896;
+  --bad-soft: #35211d;
+  --bad-line: #8d4738;
+  --focus: #8fb7ff;
+  --scrim: rgba(4, 6, 10, .68);
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, .35);
+  --shadow-2: 0 8px 24px rgba(0, 0, 0, .38), 0 2px 6px rgba(0, 0, 0, .3);
+  --shadow-3: 0 24px 60px rgba(0, 0, 0, .6);
+}

@@ -21,3 +21,10 @@ Every **approved** lexeme must carry `sources:[{source_id,locator,license_id}]`,
 The CSV tools leave those approval fields blank until signed by a qualified reviewer. An independent second reviewer should spot-check at least 20 entries before Phase 1 is declared complete.
 
 **Public repository caution:** source rights and licence terms must be reviewed whenever new data is committed. Keep source PDFs, MP3s, model weights, private progress and dictionaries out of Git.
+
+## Bundled typefaces
+
+| Typeface | Files | Licence | Source | Notes |
+| --- | --- | --- | --- | --- |
+| Gentium Book Plus (SIL International) | `assets/fonts/gentium-book-plus/` | SIL Open Font License 1.1 | `@fontsource/gentium-book-plus` 5.3.0 | Reading and heading face, CSS family "Tablinum Book". |
+| Source Sans 3 (Adobe) | `assets/fonts/source-sans-3/` | SIL Open Font License 1.1 | `@fontsource-variable/source-sans-3` 5.3.1, files unmodified | Interface face added in the November 2026 redesign, CSS family "Tablinum Sans". The licence file in the npm package names "Google Inc." in its first line while the upstream notice names Adobe; see `ATTRIBUTION.md`. Not independently confirmed with the rights holder. |
