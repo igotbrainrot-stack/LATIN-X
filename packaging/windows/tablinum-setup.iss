@@ -26,10 +26,10 @@
   #define AppPublisher "LATIN X"
 #endif
 #ifndef AppVersion
-  #define AppVersion "0.4.2-20261111"
+  #define AppVersion "0.5.0-20261111"
 #endif
 #ifndef ProgramVersion
-  #define ProgramVersion "0.4.2"
+  #define ProgramVersion "0.5.0"
 #endif
 #ifndef RepoRoot
   #define RepoRoot AddBackslash(SourcePath) + "..\.."

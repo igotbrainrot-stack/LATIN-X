@@ -49,11 +49,11 @@ function mount(){
  const any=()=>chapter.exercises.find(e=>e.id===activeId)||chapter.exercises[0];
  function render(){
   chapterHost.innerHTML=chapters.map(c=>'<button type="button" data-picture-chapter="'+esc(c.id)+'" aria-current="'+(c.id===chapter.id?'page':'false')+'">'+esc(c.chapter)+'. '+esc(c.title)+'</button>').join("");
-  const intro='<h2>Caput '+chapter.chapter+' — '+esc(chapter.title)+'</h2><p class="notice">Original Latin picture prompts are awaiting Claude’s review and the owner’s sign-off. Choosing a region is practice only; <strong>no grades or saved answers</strong> are created.</p>';
+  const intro='<h2>Caput '+chapter.chapter+' — '+esc(chapter.title)+'</h2><p class="notice">These picture prompts are a draft and have not been checked yet. Choosing a region is practice only; <strong>no grades or saved answers</strong> are created.</p>';
   const figures=art.renderChapter(chapter.id,'<div class="notice">Approved image unavailable. Restore the full ZIP.</div>');
   const questions=chapter.exercises.map((ex,i)=>'<button type="button" class="question-link" data-picture-ex="'+esc(ex.id)+'" aria-pressed="'+(ex.id===activeId)+'"><span>'+(i+1)+'.</span> <span lang="la">'+esc(ex.prompt_la)+'</span></button>').join("");
   main.innerHTML=intro+'<div class="practice-grid"><section aria-label="Chapter illustration"><p class="intro">Click an object in the illustration, or choose its named region button underneath. Selection is not grading.</p>'+figures+'</section><section class="question-panel" aria-label="Original Latin picture questions"><h3>Quaestiōnēs pictae</h3><div class="question-list">'+questions+'</div><div class="selected-prompt" id="current-picture-question" lang="la">'+esc(any().prompt_la)+'</div><p class="mini">The currently selected question applies to '+esc(any().scene_id)+'.</p></section></div>';
-  feedback.textContent="Select a region to practise. Every answer key is unsigned; no score will be saved.";
+  feedback.textContent="Select a region to practise. The answers are a draft and not yet checked; no score is saved.";
  }
  document.addEventListener("click",e=>{
   const ch=e.target.closest?.("[data-picture-chapter]");

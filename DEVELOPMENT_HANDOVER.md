@@ -64,6 +64,8 @@ Running the browser suites rewrites the tracked screenshots in `artifacts/`.
 
 ## Open decisions for the owner
 
+Update, 15 November: the owner asked for best-judgment decisions on all of these. They are recorded, with reasons, in `docs/OWNER_DECISIONS_20261115.md`. Still open after that: listening approval of the 58 recordings, and a code-signing certificate.
+
 1. Approve or reject the 58 Chapter II–VIII Arjun recordings (U-01, U-02, U-05).
 2. Choose the replacement for "Recordātiō incepta" (LX-015 / U-06).
 3. Apply or decline wording fixes LX-020 to LX-025.

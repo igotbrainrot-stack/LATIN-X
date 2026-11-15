@@ -99,6 +99,8 @@ async function enter(page){
   assert.equal(await page.locator(".sentence.is-playing").count(),0,"playback stops after one sentence: no automatic advance");
   assert.match(await page.locator("#audioState").innerText(),/Sentence 2 of 9$/i);
   await page.locator('#chapters [data-ch="1"]').click();
+  // The label follows the chapter change after the previous clip has finished stopping, so wait for it.
+  await page.waitForFunction(()=>/awaiting|pending|not yet/i.test(document.querySelector("#audioMode")?.innerText||""),null,{timeout:5000}).catch(()=>{});
   assert.match(await page.locator("#audioMode").innerText(),/awaiting|pending|not yet/i,"Chapter II recordings are labelled as awaiting the owner's approval");
   assert.equal(await page.locator(".dock").getAttribute("data-source"),"pending");
   await page.locator('#chapters [data-ch="0"]').click();

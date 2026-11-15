@@ -91,7 +91,7 @@ function single(c,svgFallback){
  const inner=shapes.map(x=>'<polygon data-art-inner-glow="'+esc(x.id)+'" points="'+x.points+'" fill="none" stroke="#ffe3ab" stroke-width="2.6" opacity="0" filter="url(#'+esc(softId)+')"/>').join("");
  const areas=shapes.map(x=>'<polygon data-art-poly="'+esc(x.id)+'" points="'+x.points+'" stroke="none" fill="none"/>').join("");
  const links=(c.required_region_ids||[]).map(k=>
-  '<button type="button" data-art-scene="'+esc(c.id)+'" data-art-region="'+esc(k)+'" aria-pressed="false">'+esc(k)+'</button>').join("");
+  '<button type="button" data-art-scene="'+esc(c.id)+'" data-art-region="'+esc(k)+'" aria-pressed="false" lang="la">'+esc(String(k).replace(/-/g," "))+'</button>').join("");
  return '<figure class="art-figure" '+attrs+' style="position:relative;margin:1rem 0;border:none;background:transparent;padding:0">'+
   '<div class="art-media" style="position:relative">'+
   '<div class="art-fallback">'+svgFallback+'</div>'+
