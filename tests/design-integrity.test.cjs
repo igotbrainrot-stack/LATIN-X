@@ -32,6 +32,6 @@ for(const m of css.matchAll(/url\(\s*["']?([^"')]+)/g))assert(/^data:|^\.\.\/\.\
 assert(/filter:\s*none/.test(css),"Colour-bearing illustrations must keep their source SVG colours");
 assert(!/filter:\s*grayscale\(|filter:\s*sepia\(/.test(css),"Do not desaturate pedagogical SVG colours");
 assert(!/\.app-status:empty\s*\{\s*display:\s*none/.test(css),"ARIA live region must stay mounted");
-assert(html.includes("Version 0.4.2 Manuscript Edition review build"),"Footer must show current edition");
+assert(html.includes("Version 0.5.0 review build"),"Footer must show current edition");
 assert(css.includes(".dock .tools { display: grid;"),"Compact mobile control strip is required");
 console.log("PASS: Visual-only contract — original script/data unchanged; classical styles, landmarks and offline assets retained.");

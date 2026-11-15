@@ -958,7 +958,7 @@ function review(){
  const deck=globalThis.TablinumReviewDeck,items=reviewItems();
  const total=Object.keys(v5State.deck.cards).length+Object.keys(v5State.deck.legacyCards).length;
  if(hasShell&&wordsView==="glossary")return wordsHead(items.length)+glossary();
- let h=(hasShell?wordsHead(items.length):'<div class="mini">Memoria</div><h1>Memoria: verba repetenda</h1>')+'<p class="subtle">Saved words come back for review at growing intervals (offline FSRS scheduling). Reviewed course words are separated from unsigned legacy free cards.</p>';
+ let h=(hasShell?wordsHead(items.length):'<div class="mini">Memoria</div><h1>Memoria: verba repetenda</h1>')+'<p class="subtle">Saved words come back for review at growing intervals (offline FSRS scheduling). Words you saved in the eight lessons are kept apart from reviewed course words, because their entries have not been checked by the course owner yet.</p>';
  h+='<div class="stats"><div class="stat"><b>'+total+'</b><small><span lang="la">Servāta</span> · Saved</small></div><div class="stat"><b>'+items.length+'</b><small><span lang="la">Hodiē</span> · Due</small></div><div class="stat"><b>'+(total-items.length)+'</b><small><span lang="la">Posteā</span> · Later</small></div></div>';
  if(!total)return h+'<div class="panel empty-state"><p><span lang="la">Ēlige verbum Latīnum in lēctiōne.</span> Select a Latin word in a lesson, then save it. Original and new-course words retain distinct approval statuses.</p>'+(hasShell?'<div class="tools"><button class="btn primary" data-tab="read">Open the story</button><button class="btn" data-words="glossary">Browse the glossary</button></div>':"")+'</div>';
  if(!items.length)return h+'<div class="panel empty-state">'+reviewIdleMessage()+'</div>'+savedWordsList();
@@ -988,7 +988,7 @@ function progress(chapters=L){
  '<div class="stat"><b>'+indicators.encountered+'</b><small>Encountered</small></div>'+
  '<div class="stat"><b>'+indicators.recognised+'</b><small>Recognised</small></div>'+
  '<div class="stat"><b>'+indicators.productive+'</b><small>Productive</small></div>'+
- '</div>':'')+'<p class="subtle">Legacy saved words: '+indicators.legacySaved+' (not automatically owner-approved).</p><h2>Course map</h2><div class="course-map">';
+ '</div>':'')+'<p class="subtle">Words you saved in the lessons: '+indicators.legacySaved+' (their entries are not yet checked by the course owner).</p><h2>Course map</h2><div class="course-map">';
  chapters.forEach((c,i)=>{const n=c.q.filter((q,j)=>S.correct[i+":"+j]).length;h+='<div class="map-row"><button class="link" data-ch="'+i+'">'+(i+1)+". "+esc(c.name)+'</button><small>'+n+'/'+c.q.length+'</small><div class="bar"><div style="width:'+(c.q.length?n/c.q.length*100:0)+'%"></div></div></div>'});
  h+='</div>';
  if(storageMode==="blocked")h+='<div class="note" role="alert">'+esc(boot.warning||'Saved progress needs recovery; your old data has not been overwritten.')+' <button class="btn" data-action="remigrateV4">Re-migrate from original v4</button> or restore a backup'+(hasShell?' in Settings.':' below.')+'</div>';
@@ -1033,7 +1033,7 @@ function settingsView(){
  h+='<section class="set-group" aria-labelledby="setData"><h2 id="setData">Your data</h2><p class="subtle">Progress is kept in this browser, for this copy of the program. '+(last&&!Number.isNaN(last.getTime())?"Last backup exported on "+esc(last.toLocaleDateString())+".":"No backup has been exported yet.")+'</p>'+
   (storageMode==="blocked"?'<div class="note" role="alert">'+esc(boot.warning||'Saved progress needs recovery; your old data has not been overwritten.')+' <button class="btn" data-action="remigrateV4">Re-migrate from original v4</button> or restore a backup below.</div>':"")+
   dataPanels()+'</section>';
- h+='<section class="panel set-group" aria-labelledby="setAbout"><h2 id="setAbout">About</h2><dl class="about"><dt>Program</dt><dd>Tablinum (LATIN X), version 0.4.2. Works offline; nothing is sent over the internet.</dd><dt>Course</dt><dd><span lang="la">Prīma Via</span>: eight original lessons. The Latin content is unreviewed original draft material. No copyrighted textbook is included.</dd><dt>Narration</dt><dd>Recorded sentences are labelled as approved or awaiting review where they play. A browser voice is used only when a recording is not included, and is always named as such.</dd><dt>Music</dt><dd><span lang="la">Mūsica ex fontibus Graecīs et Rōmānīs īnspīrāta est; reconstrūctiō incerta est.</span> Music inspired by ancient Greek and Roman sources; reconstruction is uncertain. Source details: <a href="curriculum/music.json">music provenance</a>.</dd><dt>Typefaces</dt><dd>Gentium Book Plus and Source Sans 3, both under the SIL Open Font License, bundled with the program.</dd><dt>Storage</dt><dd>'+esc(storageMode==="ready"?"Progress is being saved in this browser.":storageMode==="memory"?"Browser storage is unavailable; progress lasts only until the window closes.":"Saved progress needs recovery; see Your data above.")+'</dd></dl></section>';
+ h+='<section class="panel set-group" aria-labelledby="setAbout"><h2 id="setAbout">About</h2><dl class="about"><dt>Program</dt><dd>Tablinum (LATIN X), version 0.5.0. Works offline; nothing is sent over the internet.</dd><dt>Course</dt><dd><span lang="la">Prīma Via</span>: eight original lessons. The Latin content is unreviewed original draft material. No copyrighted textbook is included.</dd><dt>Narration</dt><dd>Recorded sentences are labelled as approved or awaiting review where they play. A browser voice is used only when a recording is not included, and is always named as such.</dd><dt>Music</dt><dd><span lang="la">Mūsica ex fontibus Graecīs et Rōmānīs īnspīrāta est; reconstrūctiō incerta est.</span> Music inspired by ancient Greek and Roman sources; reconstruction is uncertain. Source details: <a href="curriculum/music.json">music provenance</a>.</dd><dt>Typefaces</dt><dd>Gentium Book Plus and Source Sans 3, both under the SIL Open Font License, bundled with the program.</dd><dt>Storage</dt><dd>'+esc(storageMode==="ready"?"Progress is being saved in this browser.":storageMode==="memory"?"Browser storage is unavailable; progress lasts only until the window closes.":"Saved progress needs recovery; see Your data above.")+'</dd></dl></section>';
  return h;
 }
 /* ---- Home ---------------------------------------------------------------------------- */
@@ -1444,7 +1444,7 @@ document.addEventListener("click",e=>{
  case"recordSpeak":{
   if(!userMedia)return updateBanner("Local recording module unavailable.");
   userMedia.startRecording(chapterKey(),currentSentenceId(),ambience)
-   .then(()=>updateBanner("Recordātiō incepta. Recording started; no scoring."))
+   .then(()=>updateBanner("Recording started; no scoring."))
    .catch(e=>updateBanner("Microphone unavailable: "+e.message));break;
  }
  case"stopSpeak":{

@@ -1,6 +1,6 @@
 {
   "name": "latin-x-tablinum-review",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "private": true,
   "description": "Tablinum stabilization review source",
   "scripts": {

@@ -26,6 +26,8 @@ Severity: **High** blocks or misleads a learner; **Medium** degrades a normal se
 
 These need the owner or a Latinist. Nothing here was settled by this branch.
 
+Update, 15 November: the owner then asked for best-judgment decisions on these. They are recorded in `docs/OWNER_DECISIONS_20261115.md`. O-01, O-04, O-05 and O-06 were changed; O-02 stays pending; O-03 was partly applied.
+
 | ID | Sev. | Observation | Why it was left |
 | --- | --- | --- | --- |
 | O-01 | Medium | Region chips under each picture show internal identifiers with hyphens (`arbor-magna`, `arbor-parva`). | The labels are the approved region ids. Showing "arbor magna" would be new learner-facing Latin. Needs the owner's wording. |

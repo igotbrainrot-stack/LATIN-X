@@ -2,6 +2,17 @@
 
 Dates are 2026. The program version shown to learners is unchanged at 0.4.2 (the owner sets versions).
 
+## 0.5.0 — owner decisions (15 November, branch `chore/owner-decisions-20261115`)
+
+The owner asked for best-judgment decisions on the open items. Full record: `docs/OWNER_DECISIONS_20261115.md`.
+
+- Version 0.4.2 → 0.5.0. Footer reads "Version 0.5.0 review build".
+- "Recordātiō incepta." removed from the recording message (LX-015); the English stays.
+- Course guide lists Chapter I as "I · In hortō" (LX-025).
+- Picture labels show spaces in place of hyphens ("arbor magna").
+- Plain-English wording for the unchecked-material notices in Words, Progress and Picture Practice.
+- Not changed: the 58 Chapter II–VIII recordings stay "awaiting review"; LX-020 to LX-024 declined.
+
 ## Unreleased — packaging layout (15 November, branch `build/installer-layout-20261115`)
 
 Based on `ui/premium-redesign-20261115` (PR #20). Not merged, not released. No program file, saved-data format, content or media changed, and no runtime file moved.
